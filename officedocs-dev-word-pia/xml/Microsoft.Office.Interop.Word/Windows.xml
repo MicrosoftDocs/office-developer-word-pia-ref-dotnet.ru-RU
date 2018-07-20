@@ -1,0 +1,399 @@
+<Type Name="Windows" FullName="Microsoft.Office.Interop.Word.Windows">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="aa5d387f914422cf8c79854703cd4dd7eb61e181" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20673435" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Windows : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Windows implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Windows" />
+  <TypeSignature Language="VB.NET" Value="Public Interface Windows&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public interface class Windows : System::Collections::IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00020961-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Window" /> объекты, которые представляют все доступные windows.</summary>
+    <remarks>
+      <para>Используйте свойство <b>Windows</b><see cref="T:Microsoft.Office.Interop.Word.Application" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, который требуется вернуть семейства <b>Windows</b> . Семейство <b>Windows</b> для объекта <b>Application</b> содержит все окна в приложении, в то время как windows, в которых отображаются указанный документ содержит коллекцию <b>Windows</b> для объекта <b>Document</b> .</para>
+      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Window.NewWindow" /> метод, чтобы добавить новое окно к коллекции окон.</para>
+      <para>Использовать <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — окно имя или номер индекса для возврата объекта <b>Window</b> .</para>
+      <para>Номер индекса — номер слева от имени окно, в меню окно.</para>
+      <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
+      <para>При переключении представления в режим предварительного просмотра, создается новое окно. Это окно удаляется из коллекции <b>Windows</b> при закрытии предварительного.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Window Add (ref object Window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Window Add([in]object&amp; Window) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Window</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Window" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Window">Необязательный элемент <b>Object</b>. Чтобы открыть другое окно для объекта <b>Window</b> . Если этот аргумент задан, открывается новое окно для активных документов.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект, который представляет новое окно документа.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arrange">
+      <MemberSignature Language="C#" Value="public void Arrange (ref object ArrangeStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Arrange([in]object&amp; ArrangeStyle) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.Arrange(System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Arrange (Optional ByRef ArrangeStyle As Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ArrangeStyle" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="ArrangeStyle">Необязательный элемент <b>Object</b>. Расположение окон. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdArrangeStyle" /> констант: <b>wdIcons</b> или <b>wdTiled</b>.</param>
+        <summary>Упорядочивает все окна открытых документов в рабочей области приложения. Так как Microsoft Word с помощью интерфейса одного документа (SDI), этот метод больше не имеет никакого влияния.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakSideBySide">
+      <MemberSignature Language="C#" Value="public bool BreakSideBySide ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BreakSideBySide() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.BreakSideBySide" />
+      <MemberSignature Language="VB.NET" Value="Public Function BreakSideBySide () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool BreakSideBySide();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Заканчивается рядом друг с другом режиме, если два windows находятся в режиме рядом друг с другом. Возвращает значение <b>типа Boolean</b> , указывающий ли метод прошла успешно.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareSideBySideWith">
+      <MemberSignature Language="C#" Value="public bool CompareSideBySideWith (ref object Document);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CompareSideBySideWith([in]object&amp; Document) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.CompareSideBySideWith(System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CompareSideBySideWith (ByRef Document As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool CompareSideBySideWith(System::Object ^ % Document);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Document" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Document">Требуется <b>объект</b>. Документ для просмотра в windows рядом друг с другом.</param>
+        <summary>Открывает два windows в режиме рядом друг с другом.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Нельзя использовать метод <b>CompareSideBySideWith</b> с <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект или <see cref="P:Microsoft.Office.Interop.Word._Application.ActiveDocument" /> свойство.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
+          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Window this[ref object Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Window Item(object)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.Item(System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As Window" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Window ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::Window ^ get(System::Object ^ % Index); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Window</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Index">
+          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetPositionsSideBySide">
+      <MemberSignature Language="C#" Value="public void ResetPositionsSideBySide ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetPositionsSideBySide() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Windows.ResetPositionsSideBySide" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetPositionsSideBySide ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ResetPositionsSideBySide();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Сбрасывает два окна документов, которые находятся в Сравнить рядом с режим просмотра.</summary>
+        <remarks>
+          <para>Метод <b>ResetPositionsSideBySide</b> соответствует восстановить расположение окна кнопки на панели инструментов Сравнить рядом друг с другом.</para> Метод 
+          <para>использования <b>ResetPositionsSideBySide</b> для сброса отображения двух документов. Например, если пользователь сворачивает или разворачивает один из двух сравниваемые мозаики, метод <b>ResetPositionsSideBySide</b> сбрасывается отображение, что два окна, отображаемого рядом друг с другом еще раз.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncScrollingSideBySide">
+      <MemberSignature Language="C#" Value="public bool SyncScrollingSideBySide { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SyncScrollingSideBySide" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Windows.SyncScrollingSideBySide" />
+      <MemberSignature Language="VB.NET" Value="Public Property SyncScrollingSideBySide As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SyncScrollingSideBySide { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1003)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1003)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(1003)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <b>Значение true</b> включает прокрутки содержимого windows, в то же время. <b>False</b> отключает прокрутки windows в то же время.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

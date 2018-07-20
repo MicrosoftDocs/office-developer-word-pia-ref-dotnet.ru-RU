@@ -1,0 +1,455 @@
+<Type Name="Indexes" FullName="Microsoft.Office.Interop.Word.Indexes">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="c47d895ce1ab76c08d23df7218a98cbdbcccf8ed" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20674032" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Indexes : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Indexes implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Indexes" />
+  <TypeSignature Language="VB.NET" Value="Public Interface Indexes&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public interface class Indexes : System::Collections::IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0002097C-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Index" /> объекты, которые представляют все индексы в указанный документ.</summary>
+    <remarks>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.Indexes" /> свойство для возвращения коллекции <b>индексов</b> .</para>
+      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для создания индекса и добавить его в коллекцию <b>индексов</b> .</para>
+      <para>Использования <b>индексов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>индекса</b> . Номер индекса представляет позиции объекта <b>индекса</b> в документе.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Index Add (Microsoft.Office.Interop.Word.Range Range, ref object HeadingSeparator, ref object RightAlignPageNumbers, ref object Type, ref object NumberOfColumns, ref object AccentedLetters, ref object SortBy, ref object IndexLanguage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Index Add([in]class Microsoft.Office.Interop.Word.Range Range, [in]object&amp; HeadingSeparator, [in]object&amp; RightAlignPageNumbers, [in]object&amp; Type, [in]object&amp; NumberOfColumns, [in]object&amp; AccentedLetters, [in]object&amp; SortBy, [in]object&amp; IndexLanguage) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(104)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Index</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="HeadingSeparator" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="RightAlignPageNumbers" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Type" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="NumberOfColumns" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="AccentedLetters" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="SortBy" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="IndexLanguage" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Range">Требуется объект <b>Range</b> . Диапазон, место индекса для отображения. Индекс заменяет диапазона, если не будет свернуть в диапазоне.</param>
+        <param name="HeadingSeparator">Необязательный элемент <b>Object</b>. Текст между группами буквам и цифрам (записи, которые начинаются с буквы же) в индексе. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdHeadingSeparator" /> констант: <b>wdHeadingSeparatorBlankLine</b>, <b>wdHeadingSeparatorLetter</b>, <b>wdHeadingSeparatorLetterFull</b>, <b>wdHeadingSeparatorLetterLow</b>или <b>wdHeadingSeparatorNone</b>.</param>
+        <param name="RightAlignPageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы выровнять номера страниц с правого поля.</param>
+        <param name="Type">Необязательный элемент <b>Object</b>. Указывает, являются ли дополнительные элементы в той же строке (run-in), что и основные элементы или на отдельной строке (с отступом) из основной записи. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexType" /> констант: <b>wdIndexIndent</b> или <b>wdIndexRunin</b>.</param>
+        <param name="NumberOfColumns">Необязательный элемент <b>Object</b>. Число столбцов для каждой страницы индекса. Указать значение 0 (ноль) задает число столбцов в индексе на тот же номер, как и в документе.</param>
+        <param name="AccentedLetters">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы включить отдельные заголовки для букв с надстрочными знаками в индексе (для отдельных заголовкам указаны пример, слова, начинающиеся с «А» и слова, начинающиеся с «A»).</param>
+        <param name="SortBy">Необязательный элемент <b>Object</b>. Критерии сортировки, которое будет использоваться для указанного индекса. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexSortBy" /> констант: <b>wdIndexSortByStroke</b> или <b>wdIndexSortBySyllable</b>.</param>
+        <param name="IndexLanguage">Необязательный элемент <b>Object</b>. Сортировки язык, используемый в указанном индексе. Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Index" /> объект, представляющий новый индекс добавлен в документ.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Индекс построен из индекса запись () полями в документе. Использование <see cref="M:Microsoft.Office.Interop.Word.Indexes.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы отметить элементы указателя, включаемых в индекс.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOld">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Index AddOld (Microsoft.Office.Interop.Word.Range Range, ref object HeadingSeparator, ref object RightAlignPageNumbers, ref object Type, ref object NumberOfColumns, ref object AccentedLetters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Index AddOld([in]class Microsoft.Office.Interop.Word.Range Range, [in]object&amp; HeadingSeparator, [in]object&amp; RightAlignPageNumbers, [in]object&amp; Type, [in]object&amp; NumberOfColumns, [in]object&amp; AccentedLetters) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.AddOld(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.TypeLibFunc(64)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Index</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="HeadingSeparator" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="RightAlignPageNumbers" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Type" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="NumberOfColumns" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="AccentedLetters" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Range">To be added.</param>
+        <param name="HeadingSeparator">To be added.</param>
+        <param name="RightAlignPageNumbers">To be added.</param>
+        <param name="Type">To be added.</param>
+        <param name="NumberOfColumns">To be added.</param>
+        <param name="AccentedLetters">To be added.</param>
+        <summary>Зарезервировано для внутреннего использования.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoMarkEntries">
+      <MemberSignature Language="C#" Value="public void AutoMarkEntries (string ConcordanceFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AutoMarkEntries([in]string ConcordanceFileName) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.AutoMarkEntries(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AutoMarkEntries (ConcordanceFileName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AutoMarkEntries(System::String ^ ConcordanceFileName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(103)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ConcordanceFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ConcordanceFileName">
+          <b>Строковое значение.</b> Имя файла словаря, который содержит список элементов для индексирования.</param>
+        <summary>Автоматически добавляет полями (запись в индекс) в указанный документ, с помощью сведений из файла словаря.</summary>
+        <remarks>
+          <para>Файл словаря является документ Microsoft Word, содержащий таблицу два столбца с условиями индекс, в первый столбец и индекс записи во втором столбце.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
+          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdIndexFormat Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdIndexFormat Format" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Format" />
+      <MemberSignature Language="VB.NET" Value="Public Property Format As WdIndexFormat" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdIndexFormat Format { Microsoft::Office::Interop::Word::WdIndexFormat get(); void set(Microsoft::Office::Interop::Word::WdIndexFormat value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdIndexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает форматирование для индексов в указанный документ.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Свойство <b>Format</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdIndexFormat" /> константы.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-4)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Index this[int Index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Index Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Index" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Index ^ default[int] { Microsoft::Office::Interop::Word::Index ^ get(int Index); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Index</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">
+          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
+        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkAllEntries">
+      <MemberSignature Language="C#" Value="public void MarkAllEntries (Microsoft.Office.Interop.Word.Range Range, ref object Entry, ref object EntryAutoText, ref object CrossReference, ref object CrossReferenceAutoText, ref object BookmarkName, ref object Bold, ref object Italic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MarkAllEntries([in]class Microsoft.Office.Interop.Word.Range Range, [in]object&amp; Entry, [in]object&amp; EntryAutoText, [in]object&amp; CrossReference, [in]object&amp; CrossReferenceAutoText, [in]object&amp; BookmarkName, [in]object&amp; Bold, [in]object&amp; Italic) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.MarkAllEntries(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(102)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="Entry" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="EntryAutoText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="CrossReference" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="CrossReferenceAutoText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="BookmarkName" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Bold" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Italic" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Range">Требуется объект <b>Range</b> . Диапазон, чьи текст помечается поля XE в документе.</param>
+        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, которое будет отображаться в индексе, <paramref name="MainEntry[:Subentry]" />.</param>
+        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Автотекста, который содержит текст, которое будет отображаться в индексе (Если этот параметр задан, <paramref name="Entry" /> игнорируется).</param>
+        <param name="CrossReference">Необязательный элемент <b>Object</b>. Перекрестная ссылка, которое будет отображаться в индексе.</param>
+        <param name="CrossReferenceAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, содержащая текст для перекрестная ссылка (Если этот параметр задан, <paramref name="CrossReference" /> игнорируется).</param>
+        <param name="BookmarkName">Необязательный элемент <b>Object</b>. Имя закладки, обозначающий диапазон страниц, которое будет отображаться в индексе. Если этот аргумент указан, номер страницы, которая содержит поле XE отображается в индексе.</param>
+        <param name="Bold">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить полужирным шрифтом на странице номера для записи индекса.</param>
+        <param name="Italic">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить курсивом номеров страниц для записи индекса.</param>
+        <summary>Вставка поля XE (запись в индекс) после все вхождения текста в <paramref name="Range" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkEntry">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Field MarkEntry (Microsoft.Office.Interop.Word.Range Range, ref object Entry, ref object EntryAutoText, ref object CrossReference, ref object CrossReferenceAutoText, ref object BookmarkName, ref object Bold, ref object Italic, ref object Reading);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Field MarkEntry([in]class Microsoft.Office.Interop.Word.Range Range, [in]object&amp; Entry, [in]object&amp; EntryAutoText, [in]object&amp; CrossReference, [in]object&amp; CrossReferenceAutoText, [in]object&amp; BookmarkName, [in]object&amp; Bold, [in]object&amp; Italic, [in]object&amp; Reading) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Indexes.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(101)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Field</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
+        <Parameter Name="Entry" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="EntryAutoText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="CrossReference" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="CrossReferenceAutoText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="BookmarkName" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Bold" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Italic" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Reading" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="Range">Требуется объект <b>Range</b> . Расположение записи. Чтобы вставить поле XE после <paramref name="Range" />.</param>
+        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, отображаемый в индексе. Чтобы указать дополнительный элемент, включают текст основного элемента, а затем текст, разделенных точкой с запятой (:) (например, «введение: продукт»).</param>
+        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, который включает в себя текст для индекса, иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
+        <param name="CrossReference">Необязательный элемент <b>Object</b>. Перекрестная ссылка, которое будет отображаться в индексе (например, «просмотреть "apples"»).</param>
+        <param name="CrossReferenceAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, содержащая текст для перекрестная ссылка (<paramref name="CrossReference" /> игнорируется).</param>
+        <param name="BookmarkName">Необязательный элемент <b>Object</b>. Имя закладки, обозначающий диапазон страниц будет отображаться в индексе. Если этот аргумент указан, номер страницы, содержащей поле XE отображается в индексе.</param>
+        <param name="Bold">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить полужирным шрифтом на номера страницы входа в индексе.</param>
+        <param name="Italic">Необязательный элемент <b>Object</b>. <b>Значение true</b> для добавления курсивом номера страницы операций в индексе.</param>
+        <param name="Reading">Необязательный элемент <b>Object</b>. <b>Значение true</b> показывает запись индекса в определенного расположения при индексы сортируются произношении (только для восточно-азиатских языков).</param>
+        <summary>Вставка поля XE (запись в индекс) после указанного диапазона. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекта, представляющего поле XE.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Indexes.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

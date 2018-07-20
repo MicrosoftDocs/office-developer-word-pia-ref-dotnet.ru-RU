@@ -1,0 +1,164 @@
+<Type Name="CoAuthUpdate" FullName="Microsoft.Office.Interop.Word.CoAuthUpdate">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="8afbe4cb2bb4043cbb3dcabbe8ea7903fb2ee981" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20673830" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface CoAuthUpdate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthUpdate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthUpdate" />
+  <TypeSignature Language="VB.NET" Value="Public Interface CoAuthUpdate" />
+  <TypeSignature Language="C++ CLI" Value="public interface class CoAuthUpdate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("9E6B5EC5-E8E4-40AF-9540-6203F71E2823")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Представляет текст, которая была обновлена с совместное редактирование.</summary>
+    <remarks>
+      <para>При редактировании документа с поддержкой совместной работы одновременно, изменения, внесенные с одной совместно редактировать доступны в авторами совместного как обновлений. Объект <b>CoAuthUpdate</b> представлены каждого изменения. Когда совместное редактирование сохраняет свою версию документа, изменения, внесенные другими авторами совместного объединяются в версии данного ко автора документа. До момента, когда совместное редактирование сохраняет версию документа, изменения, внесенные другими авторами совместного доступны в виде обновлений.</para>
+      <para>, Например когда двумя пользователями редактировании документа, который изначально содержит один абзац с текстом «Рыжая лиса». При первом совместное редактирование редактирует предложение для чтения, «выпей перескакивает через журнал» и затем сохраняет документ, слова «быстрый» и «через журнал» доступны для второй совместное редактирование как два обновляется в документ. Эти два обновления представлены в объектной модели Microsoft Word 2010 как два объекта <b>CoAuthUpdate</b> . При второй совместное редактирование сохраняет документ, обновлений из первого совместное редактирование объединяются в документе.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CoAuthUpdate.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
+        <value>
+          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks>
+          <para>Только для чтения.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CoAuthUpdate.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
+        <remarks>
+          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+          <para>
+            <b>Осторожность</b>:</para>
+          <para>Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CoAuthUpdate.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</summary>
+        <value>
+          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CoAuthUpdate.Range" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Range As Range" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ Range { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <value>A <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</value>
+        <remarks>
+          <para>Только для чтения.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

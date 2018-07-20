@@ -1,0 +1,440 @@
+<Type Name="Language" FullName="Microsoft.Office.Interop.Word.Language">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="040fc6fe1bbe3d61841dfc8c2ab0322e89c441c7" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20673251" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Language" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Language" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Language" />
+  <TypeSignature Language="VB.NET" Value="Public Interface Language" />
+  <TypeSignature Language="C++ CLI" Value="public interface class Language" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0002096D-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Представляет язык, используемый для проверки правописания или форматирования в Microsoft Word.</summary>
+    <remarks>
+      <para>Объект <b>языка</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Languages" /> семейства.</para>
+      <para>Использования <b>языков</b>(<paramref name="index" />) для возврата объекта <b>языка</b> , где <paramref name="index" /> может быть значение <see cref="P:Microsoft.Office.Interop.Word.Language.Name" /> свойства, значение <see cref="P:Microsoft.Office.Interop.Word.Language.NameLocal" /> свойства, один из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы или один из <see cref="T:Microsoft.Office.Core.MsoLanguageID" /> константы.</para>
+      <para>
+        <see cref="P:Microsoft.Office.Interop.Word.Language.Name" /> Свойство возвращает название языка, тогда как <see cref="P:Microsoft.Office.Interop.Word.Language.NameLocal" /> свойство возвращает имя языка в разделе Язык пользователя.</para>
+      <para>Для каждого языка, для которых установлены средства проверки правописания, можно использовать <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />, и <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" /> свойства, возвращаемые соответствующий <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект.</para>
+      <para>Стиль записи — это набор правил, используемых при проверке грамматики. <see cref="P:Microsoft.Office.Interop.Word.Language.WritingStyleList" /> Свойство возвращает массив строк, представляющих стили доступные записи для указанного языка.</para>
+      <para>Использовать <see cref="P:Microsoft.Office.Interop.Word.Language.DefaultWritingStyle" /> свойство написание стилей требуется использовать по умолчанию.</para>
+      <para>Может переопределять значение по умолчанию, написание стилей с помощью <see cref="P:Microsoft.Office.Interop.Word._Document.ActiveWritingStyle(System.Object@)" /> свойство. Это свойство применяется к указанный документ для текста, помеченные в указанный язык.</para>
+      <para>Должен иметь средств проверки правописания, установленные для каждого языка, который требуется проверить.</para>
+      <para>Если пометить текст как <b>wdNoProofing</b>Word пропускает текст, помеченный проверки правописания.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveGrammarDictionary">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Dictionary ActiveGrammarDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Dictionary ActiveGrammarDictionary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveGrammarDictionary As Dictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Dictionary ^ ActiveGrammarDictionary { Microsoft::Office::Interop::Word::Dictionary ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(13)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Dictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект, представляющий словарь active грамматики для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если не установлен для указанного языка словарь грамматики, данное свойство возвращает <b>значение Nothing</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveHyphenationDictionary">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Dictionary ActiveHyphenationDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Dictionary ActiveHyphenationDictionary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveHyphenationDictionary As Dictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Dictionary ^ ActiveHyphenationDictionary { Microsoft::Office::Interop::Word::Dictionary ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(14)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Dictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект, представляющий словарь active переносов для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если не установлен для указанного языка словарь переносов, данное свойство возвращает <b>значение Nothing</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveSpellingDictionary">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Dictionary ActiveSpellingDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Dictionary ActiveSpellingDictionary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveSpellingDictionary As Dictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Dictionary ^ ActiveSpellingDictionary { Microsoft::Office::Interop::Word::Dictionary ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(15)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Dictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект, представляющий active орфографического словаря для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если не установлен для указанного языка орфографического словаря, данное свойство возвращает <b>значение Nothing</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveThesaurusDictionary">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Dictionary ActiveThesaurusDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Dictionary ActiveThesaurusDictionary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveThesaurusDictionary As Dictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Dictionary ^ ActiveThesaurusDictionary { Microsoft::Office::Interop::Word::Dictionary ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(16)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Dictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект, представляющий словарь тезауруса active для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если не установлен для указанного языка словарь тезауруса, данное свойство возвращает <b>значение Nothing</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
+          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultWritingStyle">
+      <MemberSignature Language="C#" Value="public string DefaultWritingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultWritingStyle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.DefaultWritingStyle" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultWritingStyle As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultWritingStyle { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(17)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(17)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(17)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает значение по умолчанию, написание стиль, используемый при проверке грамматики для указанного языка. Стиль записи называется локализованное имя для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Это свойство определяет глобальный параметр для набора правил. При установке этого свойства, необходимо использовать точное имя в поле стиль записи орфографии &amp; вкладка "Грамматика" в диалоговое окно "Параметры" (меню "Сервис").</para>
+          <para>
+            <see cref="P:Microsoft.Office.Interop.Word._Document.ActiveWritingStyle(System.Object@)" /> Свойство задает стиль записи для каждого языка в документе. Параметр <b>ActiveWritingStyle</b> переопределяет параметр <b>DefaultWritingStyle</b> .</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdLanguageID ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdLanguageID ID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.ID" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ID As WdLanguageID" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdLanguageID ID { Microsoft::Office::Interop::Word::WdLanguageID get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает номер, идентифицирующий указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Свойство <b>ID</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(12)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает имя указанного объекта.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameLocal">
+      <MemberSignature Language="C#" Value="public string this { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameLocal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.NameLocal" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property NameLocal As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает имя языка средства проверки правописания в разделе Язык пользователя.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1002)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpellingDictionaryType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.WdDictionaryType SpellingDictionaryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Word.WdDictionaryType SpellingDictionaryType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.SpellingDictionaryType" />
+      <MemberSignature Language="VB.NET" Value="Public Property SpellingDictionaryType As WdDictionaryType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdDictionaryType SpellingDictionaryType { Microsoft::Office::Interop::Word::WdDictionaryType get(); void set(Microsoft::Office::Interop::Word::WdDictionaryType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(19)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(19)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(19)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.WdDictionaryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает тип средства проверки правописания. Для чтения и записи.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Это свойство можно использовать для изменения active орфографического словаря к одному из словарей доступных надстроек, которые работают с Microsoft Word. Например, существует юридических медицинского обслуживания и завершения орфографические словари можно использовать вместо стандартного словаря.</para> Свойство 
+          <para><b>SpellingDictionaryType</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingStyleList">
+      <MemberSignature Language="C#" Value="public object WritingStyleList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WritingStyleList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Language.WritingStyleList" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WritingStyleList As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ WritingStyleList { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(18)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(18)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает массив строк, содержащий имена всех доступных стилей письма для указанного языка.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

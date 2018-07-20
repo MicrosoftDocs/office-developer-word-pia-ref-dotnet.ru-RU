@@ -1,0 +1,208 @@
+<Type Name="Adjustments" FullName="Microsoft.Office.Interop.Word.Adjustments">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="04d00f5197d85b4aee3912704a4c99c46098e504" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20673116" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface Adjustments" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Adjustments" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Adjustments" />
+  <TypeSignature Language="VB.NET" Value="Public Interface Adjustments" />
+  <TypeSignature Language="C++ CLI" Value="public interface class Adjustments" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("000209C4-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Содержит коллекцию значений корректировка для указанного объекта автофигуры или WordArt.</summary>
+    <remarks>
+      <para>Представляет значение каждого корректировка одним из способов приведения маркер настройки можно изменить. Так как некоторые регулировщики формы можно настроить двумя способами — например, можно изменить некоторые дескрипторы по горизонтали и по вертикали — фигура может иметь несколько значений корректировка не имеет регулировщики формы. Фигура может иметь до восьми корректировки.</para>
+      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Adjustments" /> свойство возвращает объект <b>корректировки</b> . Используйте <b>корректировки</b>(<paramref name="index" />), где <paramref name="index" /> — это индекс для возврата значения одного набора значение корректировки.</para>
+      <para>Различных фигур указано различное корректировка значения, различные виды корректировки изменение геометрии фигуры различными способами, а различные виды корректировки различных диапазонов допустимые значения.</para>
+      <para>Так, как у каждого регулировка фигуры на другой набор дополнительной настройки, лучший способ проверки корректировка поведения для конкретных фигуры, чтобы вручную создать экземпляра фигуры, настроив с включенным записи макроса, а затем записанные код.</para>
+      <para>Следующей таблице обобщаются диапазоны значений допустимый корректировки для разных типов корректировки. В большинстве случаев, если указать значение, которое выходит за диапазон допустимых значений ближайших допустимое значение будет назначен корректировки.</para>
+      <list type="table">
+        <item>
+          <description>Линейный (горизонтальный или вертикальный)</description>
+          <description>обычно значение 0.0 представляет левого или верхнего края фигуры, а значение 1.0 представляет правому или нижнему краю фигуры. Допустимые значения соответствуют допустимый корректировки можно внести фигуру вручную. Например если вы можно только по запросу маркер настройки половины способ через форму вручную, максимальное значение для соответствующего корректировки будет 0,5. Для фигур такие как выноски, где значения 0.0 и 1.0 представляют ограничения прямоугольник, определяемый начальная и конечная точки линии выноски, отрицательные числа и числа больше, чем 1.0 допустимыми значениями являются.</description>
+        </item>
+        <description>Радиальное</description>
+        <description>Значение Корректировка 1.0 
+        <item>соответствует ширину фигуры. Максимальное значение — это способ 0,5 или наполовину через фигуру. 
+        </item></description>
+        <item>
+          <description>Угол</description>
+          <description>значения выражаются в градусов. Если указать значение вне диапазона — 180 180 он будет преобразовываться находиться в этот диапазон.</description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Word.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Adjustments.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1000)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Adjustments.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает значение, указывающее количество элементов в указанном <see cref="T:Microsoft.Office.Interop.Word.Adjustments" /> семейства сайтов.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public int Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Adjustments.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1001)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
+          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh версия</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public float this[int Index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Adjustments.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(Index As Integer) As Single" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property float default[int] { float get(int Index); void set(int Index, float value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Index">Номер индекса корректировки.</param>
+        <summary>Возвращает или задает значение указанного корректировки.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Для линейная дополнительной настройки, значение корректировка 0.0 как правило, соответствует левого или верхнего края фигуры, а значение 1.0 обычно соответствует правому или нижнему краю фигуры. Тем не менее корректировки можно передать за границы фигуры для некоторых фигур. Для Радиальное корректировки значение корректировка 1.0 соответствует ширину фигуры. Угловые дополнительной настройки необходимо указать значение корректировки в градусов. Свойство <b>Item</b> применяется только к фигуры, которые имеют корректировки.</para>
+          <para>Автофигуры и объекты WordArt объекты имеют до восьми корректировки.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Adjustments.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Adjustments" /> семейства сайтов.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,49 @@
+<Type Name="DocumentEvents2_XMLAfterInsertEventHandler" FullName="Microsoft.Office.Interop.Word.DocumentEvents2_XMLAfterInsertEventHandler">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="fd74ca73aa41f3d0754567778bd410aade2b2f6b" />
+    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20673346" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public delegate void DocumentEvents2_XMLAfterInsertEventHandler(XMLNode NewXMLNode, bool InUndoRedo);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DocumentEvents2_XMLAfterInsertEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DocumentEvents2_XMLAfterInsertEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub DocumentEvents2_XMLAfterInsertEventHandler(NewXMLNode As XMLNode, InUndoRedo As Boolean)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void DocumentEvents2_XMLAfterInsertEventHandler(XMLNode ^ NewXMLNode, bool InUndoRedo);" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(16)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="NewXMLNode" Type="Microsoft.Office.Interop.Word.XMLNode" />
+    <Parameter Name="InUndoRedo" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="NewXMLNode">
+      <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />. Только что добавленный узел XML.</param>
+    <param name="InUndoRedo">
+      <b>Boolean</b>. <b>Значение true,</b> указывает, что действие было выполнено с помощью функции отмены или повтора действия в Microsoft Word.</param>
+    <summary>Тип <b>делегата</b> , используемый для добавления обработчика события для <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLAfterInsert" /> события. Событие <b>XMLAfterInsert</b> возникает, когда пользователь добавляет новый элемент XML в документ.</summary>
+    <remarks>
+      <para>Если <paramref name="InUndoRedo" /> параметр имеет <b>значение True</b>, никогда не изменяется XML в документе во время выполнения события XMLAfterInsert и XMLBeforeDelete. </para>
+      <para>Если параметр InUndoRedo имеет значение False, можно вставить и удалить XML в документе, но необходимо проявить осторожность, <b>XMLAfterInsert</b> и <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLBeforeDelete" /> события не пытается отменить друг с другом, к бесконечный цикл. Можно запретить бесконечного цикла с помощью глобального <b>логической</b> переменной и поиск, в начале обработчик ошибок.</para>
+      <para />
+    </remarks>
+  </Docs>
+</Type>
