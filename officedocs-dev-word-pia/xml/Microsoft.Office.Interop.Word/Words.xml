@@ -1,13 +1,5 @@
 <Type Name="Words" FullName="Microsoft.Office.Interop.Word.Words">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d48de7da434ab165907e297c39bfe4ff1b969693" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672520" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Words : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d236676b440e6d795d3c1717b83df235a2ae0ef2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142656" /></Metadata><TypeSignature Language="C#" Value="public interface Words : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Words implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Words" />
   <TypeSignature Language="VB.NET" Value="Public Interface Words&#xA;Implements IEnumerable" />
@@ -30,30 +22,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <span data-ttu-id="251ca-101">Коллекция слов в выделение, диапазон или документа.</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="251ca-101">A collection of words in a selection, range, or document.</span>
-      </span>
-    </summary>
-    <remarks>
-      <span data-ttu-id="251ca-102">
-        <para>Каждый элемент в коллекции <b>слова</b> отображается <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет одно слово. Нет объекта Word.</para>
-        <para>Воспользуйтесь свойством <b>слова</b> для возврата объекта <b>слова</b> .</para>
-        <para>Использования <b>слова</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>Range</b> , который представляет одно слово. Номер индекса представляет положение слова в коллекции <b>слова</b> .</para> Коллекция 
-      <para>элемента в <b>слова</b> включает слово и пробелы после слова. Если это точку вставки и сразу же следуют пробел, Selection.Words(1) ссылается на слова предыдущих выделение. Если выделение — точка вставки и сразу же следуют знак, Selection.Words(1) ссылается на слово после выбора.</para><para><see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте коллекции с помощью объекта <b>Range</b> . Кроме того свойство <b>Count</b> включает в себя знаки пунктуации и абзацев в целом. Количество фактических слов в документе, используйте диалоговое окно Статистика.</para> Метод <b>Add</b><para>недоступен для коллекции <b>слова</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> метод для добавления текста в объект <b>Range</b> .</para><para /></span>
-      <span class="sxs-lookup">
-        <span data-stu-id="251ca-102">
-          <para>Each item in the <b>Words</b> collection is a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents one word. There is no Word object.</para>
-          <para>Use the <b>Words</b> property to return the <b>Words</b> object.</para>
-          <para>Use <b>Words</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a <b>Range</b> object that represents one word. The index number represents the position of the word in the <b>Words</b> collection.</para>
-          <para>The item in the <b>Words</b> collection includes both the word and the spaces after the word. If the selection is the insertion point and it is immediately followed by a space, Selection.Words(1) refers to the word preceding the selection. If the selection is the insertion point and is immediately followed by a character, Selection.Words(1) refers to the word following the selection.</para>
-          <para>The <see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> property for this collection in a document returns the number of items in the main story only. To count items in other stories use the collection with the <b>Range</b> object. Also, the <b>Count</b> property includes punctuation and paragraph marks in the total. If you need a count of the actual words in a document, use the Word Count dialog box.</para>
-          <para>The <b>Add</b> method isn't available for the <b>Words</b> collection. Instead, use the <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> method or the <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> method to add text to a <b>Range</b> object.</para>
-          <para />
-        </span>
-      </span>
-    </remarks>
+    <summary><span data-ttu-id="adc7f-101">Коллекция слов в выделенном фрагменте, диапазоне или документе.</span><span class="sxs-lookup"><span data-stu-id="adc7f-101">A collection of words in a selection, range, or document.</span></span></summary>
+    <remarks><para><span data-ttu-id="adc7f-102">Каждый элемент в коллекции <b>Words</b> — это <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий одно слово.</span><span class="sxs-lookup"><span data-stu-id="adc7f-102">Each item in the <b>Words</b> collection is a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents one word.</span></span> <span data-ttu-id="adc7f-103">Отсутствует объект Word.</span><span class="sxs-lookup"><span data-stu-id="adc7f-103">There is no Word object.</span></span></para>
+      <para><span data-ttu-id="adc7f-104">Чтобы получить объект Words, используйте <b></b> свойство <b>Words</b> .</span><span class="sxs-lookup"><span data-stu-id="adc7f-104">Use the <b>Words</b> property to return the <b>Words</b> object.</span></span></para>
+      <para><span data-ttu-id="adc7f-105">Используйте <b>слова</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Range</b> , представляющий одно слово.</span><span class="sxs-lookup"><span data-stu-id="adc7f-105">Use <b>Words</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a <b>Range</b> object that represents one word.</span></span> <span data-ttu-id="adc7f-106">Номер индекса представляет положение слова в коллекции <b>слов</b> .</span><span class="sxs-lookup"><span data-stu-id="adc7f-106">The index number represents the position of the word in the <b>Words</b> collection.</span></span></para>
+      <para><span data-ttu-id="adc7f-107">Элемент в коллекции <b>слов</b> содержит как слово, так и пробелы после слова.</span><span class="sxs-lookup"><span data-stu-id="adc7f-107">The item in the <b>Words</b> collection includes both the word and the spaces after the word.</span></span> <span data-ttu-id="adc7f-108">Если выделенный фрагмент является точкой вставки и сразу за ним следует пробел, выделение. слова (1) — это слово, предшествующее выделенному фрагменту.</span><span class="sxs-lookup"><span data-stu-id="adc7f-108">If the selection is the insertion point and it is immediately followed by a space, Selection.Words(1) refers to the word preceding the selection.</span></span> <span data-ttu-id="adc7f-109">Если выделенный фрагмент является точкой вставки и сразу за ним следует символ, выделение. слова (1) относится к слову, следующему за выделенным фрагментом.</span><span class="sxs-lookup"><span data-stu-id="adc7f-109">If the selection is the insertion point and is immediately followed by a character, Selection.Words(1) refers to the word following the selection.</span></span></para>
+      <para><span data-ttu-id="adc7f-110"><see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье.</span><span class="sxs-lookup"><span data-stu-id="adc7f-110">The <see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> property for this collection in a document returns the number of items in the main story only.</span></span> <span data-ttu-id="adc7f-111">Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</span><span class="sxs-lookup"><span data-stu-id="adc7f-111">To count items in other stories use the collection with the <b>Range</b> object.</span></span> <span data-ttu-id="adc7f-112">Кроме того, свойство <b>Count</b> включает знаки пунктуации и знаки абзаца в общей сумме.</span><span class="sxs-lookup"><span data-stu-id="adc7f-112">Also, the <b>Count</b> property includes punctuation and paragraph marks in the total.</span></span> <span data-ttu-id="adc7f-113">Чтобы получить количество фактических слов в документе, используйте диалоговое окно "Статистика".</span><span class="sxs-lookup"><span data-stu-id="adc7f-113">If you need a count of the actual words in a document, use the Word Count dialog box.</span></span></para>
+      <para><span data-ttu-id="adc7f-114">Метод <b>Add</b> недоступен для коллекции <b>Words</b> .</span><span class="sxs-lookup"><span data-stu-id="adc7f-114">The <b>Add</b> method isn't available for the <b>Words</b> collection.</span></span> <span data-ttu-id="adc7f-115">Вместо этого используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> метод, чтобы добавить текст в объект <b>Range</b> .</span><span class="sxs-lookup"><span data-stu-id="adc7f-115">Instead, use the <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> method or the <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> method to add text to a <b>Range</b> object.</span></span></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -79,12 +55,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-103">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-103">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-116">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="adc7f-116">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -112,12 +83,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-104">Возвращает число элементов в указанном семействе сайтов.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-104">Returns the number of items in the specified collection.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-117">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="adc7f-117">Returns the number of items in the specified collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,25 +111,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-105">Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-105">Returns a 32-bit integer that indicates the application in which the specified object was created.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-118">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="adc7f-118">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks>
-          <span data-ttu-id="251ca-106">
-            <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-106">
-              <para>If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD." This value can also be represented by the constant <b>wdCreatorCode</b>.</para>
-              <para>The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code. For example, Microsoft Word has the creator code MSWD. For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <remarks><para><span data-ttu-id="adc7f-119">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="adc7f-119">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="adc7f-120">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="adc7f-120">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="adc7f-121">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="adc7f-121">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="adc7f-122">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="adc7f-122">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="adc7f-123">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="adc7f-123">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="First">
@@ -189,12 +141,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-107">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий первое слово в документе, выделения или диапазона.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-107">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the first word in a document, selection or range.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-124">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий первое слово в документе, выделенном фрагменте или диапазоне.</span><span class="sxs-lookup"><span data-stu-id="adc7f-124">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the first word in a document, selection or range.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,19 +204,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <span data-ttu-id="251ca-108">
-            <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-108">An <b>Object</b> indicating the ordinal position or a string representing the name of the individual object.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="251ca-109">Возвращает отдельный объект в коллекцию.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-109">Returns an individual object in a collection.</span>
-          </span>
-        </summary>
+        <param name="Index"><span data-ttu-id="adc7f-125"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="adc7f-125">An <b>Object</b> indicating the ordinal position or a string representing the name of the individual object.</span></span></param>
+        <summary><span data-ttu-id="adc7f-126">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="adc7f-126">Returns an individual object in a collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -297,12 +233,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-110">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта, представляющего последнего слова в документ, выделения или диапазона.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-110">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the last word in a document, selection, or range.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-127">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий Последнее слово в документе, выделенном фрагменте или диапазоне.</span><span class="sxs-lookup"><span data-stu-id="adc7f-127">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the last word in a document, selection, or range.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -330,12 +261,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="251ca-111">Возвращает объект, представляющий родительский объект для указанного объекта.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="251ca-111">Returns an object that represents the parent object of the specified object.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="adc7f-128">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="adc7f-128">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
