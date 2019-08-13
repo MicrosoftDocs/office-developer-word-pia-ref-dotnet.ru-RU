@@ -1,13 +1,5 @@
 <Type Name="RevisionsFilter" FullName="Microsoft.Office.Interop.Word.RevisionsFilter">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="397df7212315245a8efa52af3cc6208d5c0956b1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672549" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface RevisionsFilter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7a0d895b614b60a8d0c5fa9ac1b6302c0b7f7db1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144024" /></Metadata><TypeSignature Language="C#" Value="public interface RevisionsFilter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RevisionsFilter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.RevisionsFilter" />
   <TypeSignature Language="VB.NET" Value="Public Interface RevisionsFilter" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет текущие параметры, связанные с отображением рецензентов комментариев и исправлений в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.View.RevisionsFilter" /> свойство возвращает объект <b>RevisionsFilter</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет текущие параметры, связанные с отображением комментариев рецензентов и меток исправлений в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.View.RevisionsFilter" /> свойство, чтобы возвратить объект <b>RevisionsFilter</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Markup">
@@ -59,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsMarkup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMarkup" /> константа, определяет объем рецензент разметки, отображаемых в документе. Для чтения и записи.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMarkup" /> константу, определяющую степень разметки рецензента, отображаемой в документе. Для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -87,15 +77,12 @@
         <ReturnType>Microsoft.Office.Interop.Word.Reviewers</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Reviewers" /> объект, представляющий коллекцию рецензентов одним или несколькими документами.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Reviewers" /> объект, представляющий коллекцию рецензентов одного или нескольких документов.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>Коллекция <b>рецензентов</b> , возвращенных <b>рецензентами</b> , содержит имена всех рецензентов, получивших рецензирование документов, открытых или измененных на компьютере.</para>
           <para>
-            <b>Проверяющие</b> коллекции, возвращаемой <b>рецензентов</b> содержит имена всех рецензентов, просмотра документов открывать и редактировать на компьютере.</para>
-          <para>
-            <b>Примечание</b>: свойство <b>рецензентов</b> заменяет свойство <b>View.Reviewers</b> , найденные в предыдущих версиях Word, который является теперь устаревшим.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: свойство <b>рецензентов</b> заменяет свойство <b>View. рецензентов</b> в предыдущих версиях Word, которое теперь является устаревшим.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ToggleShowAllReviewers">
@@ -119,11 +106,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает и скрывает всех редакций документа, который содержит записанные исправления и комментарии.</summary>
-        <remarks>
-          <para>В предыдущих версиях Word метод <b>ToggleShowAllReviewers</b> был на объекте <b>Window</b> . По состоянию на Word 2013 этот метод является скрытым.</para>
-          <para />
-        </remarks>
+        <summary>Отображает или скрывает все изменения в документе, содержащие комментарии и отслеживаемые изменения.</summary>
+        <remarks><para>В предыдущих версиях Word метод <b>тогглешоваллревиеверс</b> находился на объекте <b>Window</b> . В Word 2013 этот метод скрыт.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="View">
@@ -152,12 +137,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsView</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsView" /> константа, которая представляет глобальный параметр, указывающее, является ли Word отображает первоначальной версии документа или окончательной версии, который может содержать исправлений и изменения форматирования применяется. Для чтения и записи.</summary>
+        <summary>Задает или возвращает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsView" /> константу, которая представляет глобальный параметр, указывающий, отображается ли в Word исходную версию документа или последнюю версию, которая может содержать исправления и изменения форматирования. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>RevisionsFilter.View</b> заменяет свойство <b>View.RevisionsView</b> , которое было в предыдущих версий Microsoft Word.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>RevisionsFilter. View</b> заменяет свойство <b>View. ревисионсвиев</b> , которое было задано в предыдущей версии Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

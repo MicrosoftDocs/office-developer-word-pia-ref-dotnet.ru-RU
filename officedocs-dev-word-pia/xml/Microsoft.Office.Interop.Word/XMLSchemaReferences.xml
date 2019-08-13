@@ -1,13 +1,5 @@
 <Type Name="XMLSchemaReferences" FullName="Microsoft.Office.Interop.Word.XMLSchemaReferences">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d73115d0737a9a8813cc10517309d5891eb13c07" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674213" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLSchemaReferences : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="94efe895c3428319116ab8be0f25073c91b0326b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142616" /></Metadata><TypeSignature Language="C#" Value="public interface XMLSchemaReferences : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLSchemaReferences implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLSchemaReferences" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLSchemaReferences&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.XMLSchemaReference" /> объекты, которые представляют уникальные пространства имен, присоединенного к документу.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaReferences" /> свойство для возвращения коллекции схем, присоединенного к документу.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.XMLSchemaReference" /> объектов, представляющих уникальные пространства имен, вложенные в документ.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaReferences" /> свойство, чтобы возвратить коллекцию схем, вложенных в документ.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -62,11 +52,11 @@
         <Parameter Name="InstallForAllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="NamespaceURI">Необязательный атрибут типа <b>String</b>.  Имя схемы, заданное в схеме. <paramref name="Namespace" /> Параметр задается с учетом регистра и не должны иметь написание так, как указано в схеме. Если не удается найти указанного пространства имен в любом из схем, присоединенный к документу, выводится сообщение об ошибке.</param>
-        <param name="Alias">Необязательный атрибут типа <b>String</b>.  Имя схемы, как оно отображается на вкладке схем в диалоговом окне Шаблоны и надстройки.</param>
-        <param name="FileName">Необязательный атрибут типа <b>String</b>.  Путь и имя схемы. Это может быть локальный путь, сетевой путь или адрес в Интернете.</param>
-        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> Если все пользователи, выполните вход компьютер доступ и использование новой схемой. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLSchemaReference" /> , который представляет схема, примененная к документу.</summary>
+        <param name="NamespaceURI">Необязательная <b>строка</b>. Имя схемы, как определено в схеме. Параметр <paramref name="Namespace" /> чувствителен к регистру и должен быть задан в точности так, как он отображается в схеме. Если указанное пространство имен не удается найти ни в одной из схем, вложенных в документ, отображается сообщение об ошибке.</param>
+        <param name="Alias">Необязательная <b>строка</b>. Имя схемы, отображаемое на вкладке схемы в диалоговом окне Шаблоны и надстройки.</param>
+        <param name="FileName">Необязательная <b>строка</b>. Путь и имя файла схемы. Это может быть локальный путь к файлу, сетевой путь или адрес в Интернете.</param>
+        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. По умолчанию используется значение <b>False</b>.</param>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.XMLSchemaReference" /> , представляющий схему, примененную к документу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,7 +186,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -224,11 +214,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -289,8 +279,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Чтобы скрыть нарушение схем после проверки XML в документе Microsoft Word.</summary>
+        <summary><b>Значение true</b> , чтобы скрыть нарушения схемы, когда Microsoft Word проверяет XML-код в документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -321,13 +310,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающий ли Microsoft Word выполняет проверку текстовых узлов, имеющих элементы одного уровня элемента и определяет, будет ли эти текстовые узлы сохраняются в формате XML при <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSaveDataOnly" /> свойство имеет <b>значение True</b>.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, выполняет ли Microsoft Word проверку для текстовых узлов, имеющих родственные элементы элементов, и указывает, сохраняются ли эти текстовые узлы <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSaveDataOnly" /> в XML, если свойство имеет <b>значение true</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Значение true,</b> приводит к Word игнорировать нарушение схемы, возникающие при текстовых узлов, имеющих элементы одного уровня элемента; Он также не позволяет эти текстовые узлы были сохранены в XML, если свойство <b>XMLSaveDataOnly</b> имеет <b>значение True</b>, что помогает предотвратить текст, который был вставлен с расширяемой таблицы стилей языковых преобразования (XLST) Сохранить как часть данных. <b>Значение false,</b> вызывает ошибки проверки текстовых узлов со одноуровневых элементов.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Значение true</b> приводит к тому, что Word игнорирует нарушения схемы, вызванные текстовыми узлами, имеющими одноуровневые элементы. Это также предотвращает сохранение этих текстовых узлов в XML, если свойство <b>XMLSaveDataOnly</b> имеет <b>значение true</b>, что помогает предотвратить сохранение текста, вставленного с помощью расширяемого преобразования языка таблиц стилей (кслст), в составе данных. <b>False</b> вызывает ошибки проверки на текстовых узлах с одноуровневыми элементами одного уровня.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -356,9 +343,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -386,7 +372,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -417,7 +403,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающий ли автоматическое замещающий текст отображается для XML-элементы в документе. <b>Значение true,</b> отображает замещающий текст. <b>False</b> скрывает замещающий текст.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, отображается ли автоматически замещающий текст для элементов XML в документе. <b>True</b> — отображает замещающий текст. <b>False</b> — скрывает замещающий текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -443,12 +429,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Проверяет отдельных XML-элемент или весь документ от вложенные схемы XML и схемы.</summary>
-        <remarks>
-          <para>Используйте метод <b>Validate</b> с <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> свойства, чтобы определить допустимость XML-элемент с примененной схемы и какие текст ошибки, который отображается для пользователя. Использование <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод для переопределения нарушение схемы с ошибками настраиваемую проверку.</para>
-          <para>При выполнении метод <b>Validate</b> , Microsoft Word заполняет <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations" /> семейства сайтов с помощью XML-узлов с ошибками проверки подлинности.</para>
-          <para />
-        </remarks>
+        <summary>Проверяет отдельный элемент XML или весь документ по отношению к присоединенной схеме XML или схемам.</summary>
+        <remarks><para>Используйте метод <b>проверки</b> с свойствами <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> , чтобы определить, является ли элемент XML допустимым для примененной схемы, а также какой текст ошибки отобразить для пользователя. Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод, чтобы переопределить нарушения схемы с пользовательскими ошибками проверки.</para>
+          <para>При запуске метода <b>проверки</b> Microsoft Word заполняет <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations" /> коллекцию узлами XML с ошибками проверки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

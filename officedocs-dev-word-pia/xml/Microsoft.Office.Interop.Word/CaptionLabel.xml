@@ -1,13 +1,5 @@
 <Type Name="CaptionLabel" FullName="Microsoft.Office.Interop.Word.CaptionLabel">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3910a1d1780d4a134f92e6516dde30d553dd761c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672808" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CaptionLabel" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9c27d8bb814948f3d36bbc6c5dfd5bf35bef5652" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142350" /></Metadata><TypeSignature Language="C#" Value="public interface CaptionLabel" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CaptionLabel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CaptionLabel" />
   <TypeSignature Language="VB.NET" Value="Public Interface CaptionLabel" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один название.</summary>
-    <remarks>
-      <para>Объект <b>CaptionLabel</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.CaptionLabels" /> семейства сайтов. В поле подпись в диалоговое окно "подпись" (меню "Вставка") перечислены элементы в коллекции <b>CaptionLabels</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.CaptionLabels" />(<paramref name="index" />), где <paramref name="index" /> — заголовок метки имя или номер индекса, чтобы возвратить объект <b>CaptionLabel</b> .</para>
-      <para>Значение индекса указывает на расположение подписи caption в коллекции <b>CaptionLabels</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.CaptionLabels.Add(System.String)" /> метод для добавления настраиваемых названия.</para>
-      <para />
-    </remarks>
+    <summary>Представляет один заголовок.</summary>
+    <remarks><para>Объект <b>CaptionLabel</b> является членом <see cref="T:Microsoft.Office.Interop.Word.CaptionLabels" /> коллекции. Элементы коллекции <b>CaptionLabels</b> отображаются в поле Метка в диалоговом окне заголовка (меню "Вставка").</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.CaptionLabels" />(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса подписи заголовка, чтобы вернуть один объект <b>CaptionLabel</b> .</para>
+      <para>Номер индекса представляет положение метки заголовка в коллекции <b>CaptionLabels</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CaptionLabels.Add(System.String)" /> метод, чтобы добавить настраиваемую подпись заголовка.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,12 +77,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, если указанный объект является одной из встроенных стилей или названиями в Microsoft Word.</summary>
+        <summary>Возвращает значение, которое указывает, является ли указанный объект одним из встроенных стилей или меток заголовков в Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Вы можете указать встроенных стилей для всех языков, с помощью <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константы или в пределах языка с помощью имени стиля языковой версии Word.</para>
-          <para />
-        </remarks>
+        <remarks><para>Встроенные стили можно задать для всех языков с помощью <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> констант или на языке с помощью имени стиля для языковой версии Word. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChapterStyleLevel">
@@ -121,14 +109,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль заголовка, обозначающий новые главы при номеров главу включены в указанный текст названия.</summary>
+        <summary>Возвращает или задает стиль заголовка, который отмечает новую главу при включении номеров глав с указанными метками заголовков.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Возвращенный номер 1 соответствует Heading 1, 2 соответствует Заголовок 2 и т. д.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.CaptionLabel.IncludeChapterNumber" /> Свойство должно иметь значение <b>True</b> для номеров главы должны быть включены названия.</para>
-          <para />
-        </remarks>
+        <remarks><para>Возвращенное число 1 соответствует заголовку 1, 2 соответствует заголовку 2 и т. д.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Word.CaptionLabel.IncludeChapterNumber" /> Свойство должно иметь значение <b>true</b> для номеров глав, включаемых в метки заголовков.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -154,11 +139,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -209,7 +194,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCaptionLabelID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, представляющее тип для указанный текст названия, если <see cref="P:Microsoft.Office.Interop.Word.CaptionLabel.BuiltIn" /> свойства <see cref="T:Microsoft.Office.Interop.Word.CaptionLabel" /> объекта имеет <b>значение True</b>.</summary>
+        <summary>Возвращает значение, представляющее тип указанной метки заголовка, если <see cref="P:Microsoft.Office.Interop.Word.CaptionLabel.BuiltIn" /> свойство <see cref="T:Microsoft.Office.Interop.Word.CaptionLabel" /> объекта имеет значение <b>true</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,7 +225,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если номер главы входит в состав номера страниц или задано название.</summary>
+        <summary>Возвращает или задает значение, которое указывает, включен ли номер главы с номерами страниц или подписью заголовка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -299,7 +284,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCaptionNumberStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число стилей для <see cref="T:Microsoft.Office.Interop.Word.CaptionLabel" /> объекта.</summary>
+        <summary>Возвращает или задает стиль чисел для <see cref="T:Microsoft.Office.Interop.Word.CaptionLabel" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -327,7 +312,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -358,7 +343,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCaptionPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее положение метки текст заголовка.</summary>
+        <summary>Возвращает или задает значение, указывающее положение текста метки подписи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -389,7 +374,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSeparatorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, символ между числом главы и порядковый номер.</summary>
+        <summary>Возвращает или задает значение, указывающее символ между номером главы и порядковым номером.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

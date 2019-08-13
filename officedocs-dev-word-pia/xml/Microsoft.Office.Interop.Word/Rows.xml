@@ -1,13 +1,5 @@
 <Type Name="Rows" FullName="Microsoft.Office.Interop.Word.Rows">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c032ac142ab5f86099a7cac58f78d136a83ef5c6" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672577" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Rows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="692ba17be6d8254b9f6cc3026ef3363c48d90ec8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144045" /></Metadata><TypeSignature Language="C#" Value="public interface Rows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Rows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Rows" />
   <TypeSignature Language="VB.NET" Value="Public Interface Rows&#xA;Implements IEnumerable" />
@@ -30,10 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Row" /> объекты, которые представляют строк таблицы в указанном выбора, диапазон или таблицу.</summary>
-    <remarks>
-      <para>Используйте свойство <b>строки</b> для возврата коллекции <b>строк</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Rows.Add(System.Object@)" /> метод для добавления строки в таблицу.</para> Использование <b>строк</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>строки</b> . Номер индекса представляет положение строки в выделение, диапазон или таблицу.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Row" /> объектов, представляющих строки таблицы в указанном выделении, диапазоне или таблице.</summary>
+    <remarks><para>Используйте свойство <b>Rows</b> , чтобы возвратить коллекцию <b>Rows</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Rows.Add(System.Object@)" /> метод, чтобы добавить строку в таблицу.</para>
+      <para>Используйте <b>строки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Row</b> . Номер индекса представляет положение строки в выделенном фрагменте, диапазоне или таблице.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -58,8 +51,8 @@
         <Parameter Name="BeforeRow" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="BeforeRow">Необязательный элемент <b>Object</b>. Объект <b>строки</b> , который представляет строку, в которой отображается сразу под новую строку.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, который представляет добавляются в таблицу строк.</summary>
+        <param name="BeforeRow">Необязательный <b>объект</b>. Объект <b>Row</b> , представляющий строку, которая будет отображаться сразу после новой строки.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, представляющий строку, добавленную в таблицу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -90,22 +83,20 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRowAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRowAlignment" /> константа, которая представляет выравнивание для указанной строки.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRowAlignment" /> константу, представляющую выравнивание для указанных строк.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <b>Вдровалигнмент</b> может быть одной из следующих констант:</para>
           <para>
-            <b>WdRowAlignment</b> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdAlignRowCenter</b>
+            <b>вдалигнровлефт</b>
           </para>
           <para>
-            <b>wdAlignRowLeft</b>
+            <b>вдалигнровцентер</b>
           </para>
           <para>
-            <b>wdAlignRowRight</b>
+            <b>вдалигнровригхт</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AllowBreakAcrossPages">
@@ -134,13 +125,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определите, если текст в таблице строку или строки разрешается, разделены на разрыв страницы.</summary>
+        <summary>Определите, разрешается ли разделить текст в строке или строках таблицы по разрыву страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если текст в таблице строку или строки разрешено, разделены на новой страницы и <b>значение False</b> в противном случае.</para>
-          <para>Возвращаемое значение может быть <b>значение True</b>, <b>False</b> или <b>wdUndefined</b> (только некоторые из указанный текст может разделение).</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если текст в строке или строках таблицы может быть разделен по разрыву страницы, а в противном случае — <b>значение false</b> .</para>
+          <para>Возвращаемое значение может быть <b>равно true</b>, <b>false</b> или <b>вдундефинед</b> (разрешается разделить только часть указанного текста).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AllowOverlap">
@@ -169,15 +158,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, может ли указанный строк пересекаются других строк.</summary>
+        <summary>Возвращает или задает значение, указывающее, могут ли указанные строки пересекаться с другими строками.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если указанной строки содержат перекрывающиеся строк и без перекрытия строк.</para>
-          <para>Значение свойства может быть присвоено значение <b>True</b> или <b>False</b>.</para>
-          <para>Параметр <b>AllowOverlap</b> значение <b>True,</b> также задает <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> значение <b>True</b>. Установка <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> значение <b>False</b> также задает <b>AllowOverlap</b> значение <b>False</b>.</para>
-          <para>HTML, так как не поддерживает повторяющейся таблицы или фигуры, в этом режиме игнорируется <b>AllowOverlap</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>вдундефинед</b> , если указанные строки включают в себя перекрывающиеся строки и неперекрывающиеся строки.</para>
+          <para>Для свойства можно задать значение <b>true</b> или <b>false</b>.</para>
+          <para>Если для параметра <b></b> <b>аллововерлап</b> задано <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> значение true, устанавливается <b>значение true</b>. <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> Значение <b>false</b> также задает для <b>аллововерлап</b> <b>значение false</b>.</para>
+          <para>Так как HTML не поддерживает перекрывающиеся таблицы или фигуры, <b>аллововерлап</b> игнорируется в режиме веб-документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -234,7 +221,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -262,14 +249,12 @@
         <Parameter Name="NestedTables" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Separator">Необязательный элемент <b>Object</b>. Знак, ограничивающий преобразованные столбцы (знаков абзацев отделить преобразованные строк). Может быть любой ниже <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> констант:<b>wdSeparateByCommas</b><b>wdSeparateByDefaultListSeparator</b><b>wdSeparateByParagraphs</b><b>wdSeparateByTabs</b> (по умолчанию)</param>
-        <param name="NestedTables">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если вложенные таблицы преобразуются в текст. Этот аргумент игнорируется, если <paramref name="Separator" /> не является <b>wdSeparateByParagraphs</b>. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Преобразование таблицы в текст и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текста с разделителями.</summary>
+        <param name="Separator">Необязательный <b>объект</b>. Символ, ограничивающий преобразуемые столбцы (знаки абзаца разделяют преобразованные строки). Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> следующих констант:<b>вдсепаратебикоммас</b><b>вдсепаратебидефаултлистсепаратор</b><b>вдсепаратебипараграфс</b><b>вдсепаратебитабс</b> (по умолчанию)</param>
+        <param name="NestedTables">Необязательный <b>объект</b>. <b>Имеет значение true</b> , если вложенные таблицы преобразуются в текст. Этот аргумент игнорируется, <paramref name="Separator" /> если не <b>вдсепаратебипараграфс</b>. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Преобразует таблицу в текст и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст с разделителями.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>При применении метода <b>ConvertToText</b><see cref="T:Microsoft.Office.Interop.Word.Table" /> объекта, объект будет удален. Чтобы сохранить ссылку на преобразованное содержимое таблицы, необходимо назначить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, возвращенный методом <b>ConvertToText</b> к новой объектной переменной.</para>
-          <para />
-        </remarks>
+        <remarks><para>Когда вы применяете метод <b>конверттотекст</b> к <see cref="T:Microsoft.Office.Interop.Word.Table" /> объекту, объект удаляется. Чтобы сохранить ссылку на преобразованное содержимое таблицы, необходимо присвоить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, возвращаемый методом <b>конверттотекст</b> , новой переменной объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConvertToTextOld">
@@ -326,7 +311,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,11 +339,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -412,12 +397,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние между текст документа и нижний край указанную таблицу (в точках).</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и нижним краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не оказывает никакого влияния, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceLeft">
@@ -446,12 +429,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и левой границей указанную таблицу.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и левым краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не оказывает никакого влияния, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceRight">
@@ -480,12 +461,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и правого края указанную таблицу.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и правым краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не оказывает никакого влияния, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceTop">
@@ -514,12 +493,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние между текст документа и верхнего края указанную таблицу (в точках).</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и верхним краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не оказывает никакого влияния, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistributeHeight">
@@ -543,7 +520,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Изменяет высоту указанной строки, чтобы они были равны.</summary>
+        <summary>Настраивает высоту указанных строк, чтобы они были равны.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -570,7 +547,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Row</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> семейства сайтов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -633,14 +610,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определите, если указанный строку или строки, отформатированные в заголовок таблицы.</summary>
+        <summary>Определяет, форматируется ли указанная строка или строки как заголовок таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает значение true, если указанный строку или строки, форматируются как таблицы заголовок и значение false, если это не так.</para>
-          <para>Строк в формате заголовки таблицы повторяются, если таблица занимает несколько страниц.</para>
-          <para>Являются этого значения этого свойства может быть присвоено <b>значение True</b>, <b>False</b> и <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает значение true, если указанная строка или строки отформатированы как заголовок таблицы, и false, если нет.</para>
+          <para>Строки, отформатированные в виде заголовков таблиц, повторяются, если таблица охватывает более одной страницы.</para>
+          <para>Для этих значений этому свойству можно присвоить <b>значение true</b>, <b>false</b> и <b>вдундефинед</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -671,10 +646,8 @@
       <Docs>
         <summary>Возвращает или задает высоту указанной строки или строк в таблице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.Rows.HeightRule" /><b>wdRowHeightAuto</b>— это свойство из указанной строки, <b>Высота</b> возвращает <b>wdUndefined</b>; Установка свойства <b>Height</b> задается <b>HeightRule</b><b>wdRowHeightAtLeast</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Rows.HeightRule" /> свойство указанных строк имеет значение <b>вдровхеигхтауто</b>, <b>Height</b> возвращает <b>вдундефинед</b>; Установка свойства <b>Height</b> устанавливает для <b>хеигхтруле</b> значение <b>вдровхеигхтатлеаст</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HeightRule">
@@ -703,22 +676,20 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRowHeightRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает правила для определения высоты указанной строки.</summary>
+        <summary>Возвращает или задает правило для определения высоты указанных строк.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdRowHeightAtLeast</b>
+            <b>вдровхеигхтатлеаст</b>
           </para>
           <para>
-            <b>wdRowHeightExactly</b>
+            <b>вдровхеигхтексактли</b>
           </para>
           <para>
-            <b>wdRowHeightAuto</b>
+            <b>вдровхеигхтауто</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HorizontalPosition">
@@ -747,13 +718,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает горизонтальную расстояние между границей строк и элемента, заданного параметром <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeHorizontalPosition" /> свойство.</summary>
+        <summary>Возвращает или задает расстояние по горизонтали между краем строк и элементом, указанным <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeHorizontalPosition" /> свойством.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>HorizonalPosition</b> может быть число, указывающее измерения в точках или может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdTablePosition" /> констант: <b>wdTableLeft</b>, <b>wdTableRight</b>, <b>wdTableCenter</b>, <b>wdTableInside</b>или <b> wdTableOutside</b>.</para>
-          <para>Это свойство не оказывает никакого влияния, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>хоризоналпоситион</b> может быть числом, указывающим единицу измерения в пунктах, или может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdTablePosition" /> констант: <b>вдтаблелефт</b>, <b>вдтаблеригхт</b>, <b>вдтаблецентер</b>, <b>вдтаблеинсиде</b>или <b> Вдтаблеаутсиде</b>.</para>
+          <para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -782,9 +751,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -812,7 +780,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Row</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает последнего элемента в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> семейство сайтов, что <see cref="T:Microsoft.Office.Interop.Word.Row" /> объекта.</summary>
+        <summary>Возвращает последний элемент в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> коллекции в качестве <see cref="T:Microsoft.Office.Interop.Word.Row" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -843,7 +811,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>один</b> , который представляет значение отступа (в пунктах) для указанной таблицы строк.</summary>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее значение отступа слева для заданных строк таблицы (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -871,12 +839,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень вложения из указанной строки.</summary>
+        <summary>Возвращает уровень вложенности указанных строк.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Внешняя таблица имеет вложения уровня 1. Уровень вложенности каждой последовательно вложенные таблицы — это один выше, чем в предыдущей таблице.</para>
-          <para />
-        </remarks>
+        <remarks><para>Внешняя таблица имеет уровень вложения 1. Уровень вложенности каждой последующей вложенной таблицы — это на один уровень выше предыдущей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -902,7 +868,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -933,25 +899,23 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeHorizontalPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает на необходимость возможности относительный горизонтальную позицию группы строк.</summary>
+        <summary>Указывает, как горизонтальное положение группы строк является относительным.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalPosition" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalPosition" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdRelativeHorizontalPositionCharacter</b>
+            <b>вдрелативехоризонталпоситиончарактер</b>
           </para>
           <para>
-            <b>wdRelativeHorizontalPositionColumn</b>
+            <b>вдрелативехоризонталпоситионколумн</b>
           </para>
           <para>
-            <b>wdRelativeHorizontalPositionMargin</b>
+            <b>вдрелативехоризонталпоситионмаргин</b>
           </para>
           <para>
-            <b>wdRelativeHorizontalPositionPage</b>
+            <b>вдрелативехоризонталпоситионпаже</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelativeVerticalPosition">
@@ -980,25 +944,23 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeVerticalPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает на необходимость возможности относительный вертикальную позицию группы строк.</summary>
+        <summary>Задает относительное расположение группы строк по вертикали.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalPosition" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalPosition" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdRelativeVerticalPositionLine</b>
+            <b>вдрелативевертикалпоситионлине</b>
           </para>
           <para>
-            <b>wdRelativeVerticalPositionMargin</b>
+            <b>вдрелативевертикалпоситионмаргин</b>
           </para>
           <para>
-            <b>wdRelativeVerticalPositionPage</b>
+            <b>вдрелативевертикалпоситионпаже</b>
           </para>
           <para>
-            <b>wdRelativeVerticalPositionParagraph</b>
+            <b>вдрелативевертикалпоситионпараграф</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -1023,10 +985,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetHeight">
@@ -1053,8 +1013,8 @@
         <Parameter Name="HeightRule" Type="Microsoft.Office.Interop.Word.WdRowHeightRule" />
       </Parameters>
       <Docs>
-        <param name="RowHeight">Требуется <b>один</b>. Высота строку или строки в пунктах.</param>
-        <param name="HeightRule">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" />. Правила для определения высоты указанной строки. Может иметь одно из следующих констант <b>WdRowHeightRule</b> :<b>wdRowHeightExactly</b><b>wdRowHeightAtLeast</b><b>wdRowHeightAuto</b></param>
+        <param name="RowHeight">Обязательное <b>одно</b>. Высота строки или строк в пунктах.</param>
+        <param name="HeightRule">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" />. Правило для определения высоты указанных строк. Может быть одной из следующих констант <b>вдровхеигхтруле</b> : <b>вдровхеигхтатлеаст</b><b>вдровхеигхтексактли</b><b>вдровхеигхтауто</b></param>
         <summary>Задает высоту строк таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1083,13 +1043,11 @@
         <Parameter Name="RulerStyle" Type="Microsoft.Office.Interop.Word.WdRulerStyle" />
       </Parameters>
       <Docs>
-        <param name="LeftIndent">Требуется <b>один</b>. Расстояние между текущей левого края указанной строки или строк и желаемую левой границей (в точках).</param>
-        <param name="RulerStyle">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" />. Управляет Microsoft Word изменяет таблицы при изменении отступа слева. Может иметь одно из следующих констант <b>WdRulerStyle</b> : <b>wdAdjustNone</b> — регулировка левого края строку или строки, сохраняя ширину всех столбцов с сдвига влево или вправо. Это значение по умолчанию. <b>wdAdjustSameWidth</b> – Adjusts левого края первый столбец, сохраняя положение правого края таблицы по настройке ширины всем ячейкам в указанной строки или строк, то же значение. <b>wdAdjustFirstColumn</b> — регулировка левого края первый столбец, сохраняя положения других столбцов и правому краю таблицы. <b>wdAdjustProportional</b> – Adjusts левого края первый столбец, сохраняя положение правого края таблицы, пропорционально настраивая ширина всех ячеек в указанной строки или строк.</param>
-        <summary>Задает отступ для строку или строки в таблице.</summary>
-        <remarks>
-          <para>Поведение <b>WdRulerStyle</b> , описанных выше применяется к по левому краю таблицы. Поведение <b>WdRulerStyle</b> для центр и по правому краю таблиц может быть непредвиденным; в таких случаях метод <b>SetLeftIndent</b> должен использоваться с осторожностью.</para>
-          <para />
-        </remarks>
+        <param name="LeftIndent">Обязательное <b>одно</b>. Расстояние (в пунктах) между текущим левым краем заданных строк или строк и требуемым левым краем.</param>
+        <param name="RulerStyle">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" />. Управляет тем, как Microsoft Word настраивает таблицу при изменении отступа слева. Может быть одной из следующих констант <b>вдрулерстиле</b> : <b>вдаджустноне</b> — регулирует левый край строки или строк, сохраняя ширину всех столбцов путем их сдвига влево или вправо. Это значение используется по умолчанию. <b>вдаджустсамевидс</b> — настраивает левую границу первого столбца, сохраняя положение правого края таблицы, устанавливая ширину всех ячеек в заданных строках или строках с одинаковым значением. <b>вдаджустфирстколумн</b> — настраивает левый край только первого столбца, сохраняя позиции других столбцов и правого края таблицы. <b>вдаджустпропортионал</b> — настраивает левый край первого столбца, сохраняя положение правого края таблицы пропорционально, пропорционально изменив ширину всех ячеек в указанной строке или строках.</param>
+        <summary>Задает отступ для строки или строк в таблице.</summary>
+        <remarks><para>Описанное выше поведение <b>вдрулерстиле</b> относится к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в таких случаях метод <b>сетлефтиндент</b> следует использовать с осторожностью.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shading">
@@ -1115,7 +1073,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1146,7 +1104,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст в соседних столбцов из указанной строки или строк.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом в смежных столбцах указанной строки или строк.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1177,20 +1135,18 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTableDirection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает направление в ячеек, которые Microsoft Word заказов в указанной таблице или строке.</summary>
+        <summary>Возвращает или задает направление, в котором Microsoft Word упорядочивает ячейки в указанной таблице или строке.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTableDirection" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTableDirection" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdTableDirectionLtr</b>
+            <b>вдтабледиректионлтр</b>
           </para>
           <para>
-            <b>wdTableDirectionRtl</b>
+            <b>вдтабледиректионртл</b>
           </para>
-          <para>Если <b>TableDirection</b> задано значение <b>wdTableDirectionLtr</b>, с первого столбца в позицию левого упорядочение выбранных строк. Если свойство <b>TableDirection</b><b>wdTableDirectionRtl</b>, выделенные строки располагаются с первого столбца справа.</para>
-          <para />
-        </remarks>
+          <para>Если для свойства <b>табледиректион</b> задано значение <b>вдтабледиректионлтр</b>, выбранные строки упорядочиваются с первым столбцом в крайнем левом положении. Если для свойства <b>табледиректион</b> задано значение <b>вдтабледиректионртл</b>, выбранные строки упорядочиваются с первым столбцом в крайнем правом положении.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalPosition">
@@ -1219,12 +1175,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние по вертикали между границей строк и элемента, заданного параметром <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeVerticalPosition" /> свойство.</summary>
+        <summary>Возвращает или задает расстояние по вертикали между краем строк и элементом, указанным <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeVerticalPosition" /> свойством.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Возвращаемое значение может быть число, указывающее измерения в точках или может быть любым допустимым <see cref="T:Microsoft.Office.Interop.Word.WdFramePosition" /> константу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Возвращаемое значение может быть числом, указывающим единицу измерения в пунктах, или может быть <see cref="T:Microsoft.Office.Interop.Word.WdFramePosition" /> любой допустимой константы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WrapAroundText">
@@ -1253,14 +1207,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, следует ли переносить текст вокруг указанной строки.</summary>
+        <summary>Определяет, должен ли текст обходить заданные строки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Возвращает <b>wdUndefined</b> , если только некоторые из указанных строк имеют перенос включен.</para>
-          <para>Свойство может быть присвоено <b>значение True</b> или <b>False</b>.</para>
-          <para>Свойства <b>WrapAroundText</b> значение <b>False</b> также наборы <see cref="P:Microsoft.Office.Interop.Word.Rows.AllowOverlap" /> значение <b>False</b>. Также для свойства <b>AllowOverlap</b> значение <b>True,</b> устанавливает для свойства <b>WrapAroundText</b> значение <b>True</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Возвращает <b>вдундефинед</b> , если для некоторых из указанных строк включена функция переноса.</para>
+          <para>Для свойства можно задать значение <b>true</b> или <b>false</b>.</para>
+          <para>Если задать <b></b> для свойства Врапараундтекст <b>значение false</b> , <see cref="P:Microsoft.Office.Interop.Word.Rows.AllowOverlap" /> свойству также присваивается <b>значение false</b>. Если задать <b></b> для свойства Аллововерлап <b>значение true</b> , свойство <b>врапараундтекст</b> также будет установлено равным <b>true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

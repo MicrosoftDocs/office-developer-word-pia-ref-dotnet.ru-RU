@@ -1,13 +1,5 @@
 <Type Name="RecentFiles" FullName="Microsoft.Office.Interop.Word.RecentFiles">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="68c5a0e1fbcd245eba8883440686f818351a23f1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673649" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface RecentFiles : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dbecbe85386c489b7ea85c8fdd7d013d03d7c878" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144115" /></Metadata><TypeSignature Language="C#" Value="public interface RecentFiles : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RecentFiles implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.RecentFiles" />
   <TypeSignature Language="VB.NET" Value="Public Interface RecentFiles&#xA;Implements IEnumerable" />
@@ -30,10 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.RecentFile" /> объекты, которые представляют файлы, которые недавно использовались. Элементы в коллекции <b>RecentFiles</b> отображаются в нижней части меню "файл".</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.RecentFiles" /> свойство для возврата коллекции <b>RecentFiles</b> .</para>
-      <para>Метод Add используется для добавления файла в коллекцию <b>RecentFiles</b> .</para> Использование <b>RecentFiles</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>последних</b> . Номер индекса представляет положение файла в меню файл.</para><para><see cref="M:Microsoft.Office.Interop.Word._Document.SaveAs(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> И <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> используются следующие методы <paramref name="AddToRecentFiles" /> аргумент, который управляет ли файл добавляется в список недавно использованных файлов после открытия или сохранения файла.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.RecentFile" /> объектов, представляющих файлы, которые использовались недавно. Элементы коллекции <b>RecentFiles</b> отображаются в нижней части меню файл.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.RecentFiles" /> свойство, чтобы возвратить коллекцию <b>RecentFiles</b> .</para>
+      <para>Используйте метод Add, чтобы добавить файл в коллекцию <b>RecentFiles</b> .</para>
+      <para>Используйте <b>RecentFiles</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>RecentFile</b> . Номер индекса представляет положение файла в меню файл.</para>
+      <para>Методы <see cref="M:Microsoft.Office.Interop.Word._Document.SaveAs(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> содержат <paramref name="AddToRecentFiles" /> аргумент, который определяет, добавляется ли файл в список недавно использовавшихся файлов при его открытии или сохранении.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -59,9 +53,9 @@
         <Parameter Name="ReadOnly" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Document">Требуется <b>объект</b>. Документ, который требуется добавить в список недавно использовавшихся файлов. Вы можете указать этот аргумент, используя строковое имя для документа или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта.</param>
-        <param name="ReadOnly">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы сделать документ только для чтения.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.RecentFile" /> объект, представляющий файл, добавленного в список недавно использовавшихся файлов.</summary>
+        <param name="Document">Обязательный <b>объект</b>. Документ, который необходимо добавить в список недавно использовавшихся файлов. Этот аргумент можно указать с помощью имени строки для документа или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта.</param>
+        <param name="ReadOnly">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы сделать документ предназначенным только для чтения.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.RecentFile" /> объект, представляющий файл, добавленный в список недавно использовавшихся файлов.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,7 +111,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,11 +139,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -210,9 +204,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -243,7 +236,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает максимальное число недавно использовавшихся файлов, которые могут появляться в меню файл. Может быть числом между 0 (ноль) до 9.</summary>
+        <summary>Возвращает или задает максимальное количество недавно использовавшихся файлов, которые могут отображаться в меню "файл". Может быть числом от 0 (нуля) до 9.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,7 +264,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

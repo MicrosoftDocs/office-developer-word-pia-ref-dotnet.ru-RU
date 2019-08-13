@@ -1,13 +1,5 @@
 <Type Name="Point" FullName="Microsoft.Office.Interop.Word.Point">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="6463b2ec96c5facea5e267d5e29a17385680b063" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672569" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Point" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e59e39b44825c3b2a985f05858eb282283053524" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144150" /></Metadata><TypeSignature Language="C#" Value="public interface Point" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Point" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Point" />
   <TypeSignature Language="VB.NET" Value="Public Interface Point" />
@@ -26,12 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одну точку в серии на диаграмме.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Word.Point" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Points" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.Points" /> Коллекция содержит все точки в одной серии.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одну точку в ряду на диаграмме.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.Point" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Points" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.Points" /> Коллекция содержит все точки в одном ряду.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,9 +46,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Application (приложение</b> ) (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,27 +82,21 @@
         <Parameter Name="Separator" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Тип подписи данных.</param>
-        <param name="LegendKey">
-          <b>Значение true</b> для отображения ключа легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AutoText">
-          <b>Значение true,</b> Если объект автоматически создает текст, исходя из содержимого.</param>
-        <param name="HasLeaderLines">Для <see cref="T:Microsoft.Office.Interop.Word.Chart" /> и <see cref="T:Microsoft.Office.Interop.Word.Series" /> объекты, <b>значение True,</b> Если для серии линии заполнителей.</param>
-        <param name="ShowSeriesName">Передайте логическое значение для включения или отключения имени ряда для подписи данных.</param>
-        <param name="ShowCategoryName">Передайте логическое значение для включения или отключения имя категории для подписи данных.</param>
-        <param name="ShowValue">Передайте логическое значение для включения или отключения значение для подписи данных.</param>
-        <param name="ShowPercentage">Передайте логическое значение для включения или отключения процентную долю для метки данных.</param>
-        <param name="ShowBubbleSize">Передайте логическое значение для включения или отключения пузырьковой размер метки данных.</param>
+        <param name="Type">Тип применяемой метки данных.</param>
+        <param name="LegendKey"><b>Значение true</b> , чтобы показать ключ легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AutoText"><b>Значение true</b> , если объект автоматически создает соответствующий текст на основе контента.</param>
+        <param name="HasLeaderLines">Для объектов <see cref="T:Microsoft.Office.Interop.Word.Chart" /> and <see cref="T:Microsoft.Office.Interop.Word.Series" /> <b>значение true</b> , если ряды имеют линии выноски.</param>
+        <param name="ShowSeriesName">Передайте логическое значение, чтобы включить или отключить имя ряда для метки данных.</param>
+        <param name="ShowCategoryName">Передайте логическое значение, чтобы включить или отключить имя категории для метки данных.</param>
+        <param name="ShowValue">Передайте логическое значение, чтобы включить или отключить значение для метки данных.</param>
+        <param name="ShowPercentage">Передайте логическое значение, чтобы включить или отключить процентное отношение для метки данных.</param>
+        <param name="ShowBubbleSize">Передайте логическое значение, чтобы включить или отключить размер пузырька для метки данных.</param>
         <param name="Separator">Разделитель для подписи данных.</param>
-        <summary>Применяет метки данных до момента.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
-        <remarks>
-          <para>
-            <paramref name="Type" />может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.XlDataLabelsType" /> константы.</para>
-          <para />
-        </remarks>
+        <summary>Применяет метки данных к точке.</summary>
+        <returns><b>Object</b></returns>
+        <remarks><para>
+            <paramref name="Type" />может быть одной из <see cref="T:Microsoft.Office.Interop.Word.XlDataLabelsType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplyPictToEnd">
@@ -143,11 +125,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если изображение применяется в конец точку или все точки в серии. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>True</b> , если изображение применяется к концу точки или ко всем точкам в ряду. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -177,11 +156,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если применяется изображение на передний план точки или все точки в серии. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>True</b> , если изображение применяется к передней части точки или ко всем точкам в ряду. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,11 +187,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если изображение применяется к сторон точку или все точки в серии. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>True</b> , если изображение применяется к сторонам точки или ко всем точкам в ряду. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,10 +218,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Border" /> объект, представляющий границы объекта.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Border" /> объект, представляющий границу объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -274,9 +245,7 @@
       <Parameters />
       <Docs>
         <summary>Очищает форматирование объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -301,10 +270,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Если точка заливка рисунком, этот метод копирует изображение в буфер обмена.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Если точка имеет заливку рисунков, то этот метод копирует изображение в буфер обмена.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -331,14 +298,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Point.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Point.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataLabel">
@@ -364,10 +327,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.DataLabel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект, представляющий метки данных, связанный с точкой. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.DataLabel" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект, представляющий метку данных, связанную с точкой. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.DataLabel" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -393,13 +354,9 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
-        <remarks>
-          <para>Удаление <see cref="T:Microsoft.Office.Interop.Word.Point" /> объект удаляется весь ряд.</para>
-          <para />
-        </remarks>
+        <returns><b>Object</b></returns>
+        <remarks><para>При удалении <see cref="T:Microsoft.Office.Interop.Word.Point" /> объекта удаляется весь ряд.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Explosion">
@@ -428,10 +385,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение развертывание круговой диаграммы или кольцевая фрагмента. Возвращает нуль (0), если нет без развертывания (Совет фрагмент — в центре круговой диаграммы). Чтение и запись <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает значение развертывания для сектора круговой или кольцевой диаграммы. Возвращает нуль (0) при отсутствии развертывания (верхушка сектора — в центре круговой диаграммы). Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -461,10 +416,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект для указанного фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, содержащий заливки параметры форматирования для фигуры или диаграммы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект указанной фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, который содержит свойства форматирования заливки для фигуры или диаграммы.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -491,11 +444,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
-Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
+Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -525,15 +476,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если точки трехмерную внешний вид. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство применяется только к пузырьковых диаграмм.</para>
-          <para />
-        </remarks>
+        <summary><b>Значение true</b> , если точка имеет трехмерное представление. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство применяется только к пузырьковой диаграмме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasDataLabel">
@@ -562,11 +508,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если точка метки данных. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>Значение true</b> , если точка имеет метку данных. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -593,12 +536,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает высоту, в пунктах объекта.</summary>
-        <value>Высота в пунктах объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает высоту объекта (в пунктах).</summary>
+        <value>Высота объекта (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Interior">
@@ -627,10 +568,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутренней указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Interior" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Interior" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -660,11 +599,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Word инвертирует шаблон в объекте, когда он соответствует отрицательное значение. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>Значение true</b> , если Microsoft Word инвертирует шаблон в объекте, если он соответствует отрицательному числу. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -691,12 +627,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
-        <value>Расстояние в пунктах от левого края объекта по левому краю области диаграммы.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, представляющее расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
+        <value>Расстояние от левого края объекта до левого края области диаграммы (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MarkerBackgroundColor">
@@ -725,10 +659,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает цвет фона маркера как значение RGB или возвращает соответствующее значение индекса цвета. Применяется только к строку, точечные и лепестковые диаграммы. Чтение и запись <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Задает цвет фона маркера в виде значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к линейным, дискретным и лепесткским диаграммам. Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -758,10 +690,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет фона маркера как индекс в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант: <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexAutomatic" /> или <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexNone" />. Применяется только к строку, точечные и лепестковые диаграммы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />
-        </value>
+        <summary>Возвращает или задает цвет фона маркера в качестве индекса в текущей цветовой палитре или в виде одной из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант: <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexAutomatic" /> или <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexNone" />. Применяется только к линейным, дискретным и лепесткским диаграммам. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -791,10 +721,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает цвет переднего плана маркер как значение RGB или возвращает соответствующее значение индекса цвета. Применяется только к строку, точечные и лепестковые диаграммы. Чтение и запись <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Задает цвет переднего плана маркера в виде значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к линейным, дискретным и лепесткским диаграммам. Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -824,10 +752,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет переднего плана маркера как индекс в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант: <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexAutomatic" /> или <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexNone" />. Применяется только к строку, точечные и лепестковые диаграммы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />
-        </value>
+        <summary>Возвращает или задает цвет переднего плана маркера в качестве индекса в текущей цветовой палитре или в виде одной <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> из следующих <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexAutomatic" /> констант <see cref="F:Microsoft.Office.Interop.Word.XlColorIndex.xlColorIndexNone" />: или. Применяется только к линейным, дискретным и лепесткским диаграммам. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" />.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -857,10 +783,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер маркера данных в пунктах. Может быть в диапазоне от 2 до 72. Чтение и запись <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает размер маркера данных в пунктах. Может принимать значение от 2 до 72. Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -890,10 +814,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlMarkerStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль маркера для точки или серии график, диаграмме или лепестковые диаграммы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlMarkerStyle" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlMarkerStyle" />
-        </value>
+        <summary>Возвращает или задает стиль маркера для точки или ряда на графике, точечной диаграмме или лепестковой диаграмме. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlMarkerStyle" />.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlMarkerStyle" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -922,11 +844,9 @@
       <Docs>
         <summary>Получает имя объекта.</summary>
         <value>Имя объекта.</value>
-        <remarks>
-          <para>Только для чтения. Это свойство соответствует имени точки данных на диаграмме. Имя представлено в следующем формате:</para>
+        <remarks><para>Только для чтения. Это свойство соответствует имени точки данных на диаграмме. Имя представлено в следующем формате:</para>
           <code>S&amp;lt;series number&amp;gt;P&amp;lt;point number&amp;gt;</code>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -952,10 +872,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -980,14 +898,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вставляет изображение из буфера обмена как маркер на выбранной точки.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
-        <remarks>
-          <para>Этот метод можно использовать в столбце, строке, строки или лепестковые диаграммы, а также определяет <see cref="P:Microsoft.Office.Interop.Word.Point.MarkerStyle" /> свойства <see cref="F:Microsoft.Office.Interop.Word.XlMarkerStyle.xlMarkerStylePicture" />.</para>
-          <para />
-        </remarks>
+        <summary>Добавляет изображение из буфера обмена в качестве маркера в выбранной точке.</summary>
+        <returns><b>Object</b></returns>
+        <remarks><para>Этот метод можно использовать для столбцов, линейчатых диаграмм, линейных и лепестковых диаграмм, а также <see cref="P:Microsoft.Office.Interop.Word.Point.MarkerStyle" /> для <see cref="F:Microsoft.Office.Interop.Word.XlMarkerStyle.xlMarkerStylePicture" />свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PictureType">
@@ -1016,10 +930,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlChartPictureType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.XlChartPictureType" /> значение, представляющее рисунки способом, отображаются на диаграмме рисунков столбца или строки.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlChartPictureType" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.XlChartPictureType" /> значение, представляющее способ отображения рисунков на диаграмме столбца или линейчатой диаграммы.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlChartPictureType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1055,10 +967,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает единицу измерения для каждого изображения на диаграмме, если <see cref="P:Microsoft.Office.Interop.Word.LegendKey.PictureType" /> свойству <see cref="F:Microsoft.Office.Interop.Word.XlChartPictureType.xlStackScale" /> (если не, это свойство игнорируется).</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает единицу измерения для каждого изображения на диаграмме, <see cref="P:Microsoft.Office.Interop.Word.LegendKey.PictureType" /> если свойство имеет значение <see cref="F:Microsoft.Office.Interop.Word.XlChartPictureType.xlStackScale" /> (если нет, это свойство игнорируется).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1088,10 +998,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает единицу измерения для каждого изображения на диаграмме, если <see cref="P:Microsoft.Office.Interop.Word.LegendKey.PictureType" /> свойству <see cref="F:Microsoft.Office.Interop.Word.XlChartPictureType.xlStackScale" /> (если не, это свойство игнорируется). Для чтения и записи, <b>Double</b>.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает единицу измерения для каждого изображения на диаграмме, <see cref="P:Microsoft.Office.Interop.Word.LegendKey.PictureType" /> если свойство имеет значение <see cref="F:Microsoft.Office.Interop.Word.XlChartPictureType.xlStackScale" /> (если нет, это свойство игнорируется). Для чтения и записи, <b>Double</b>.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1118,14 +1026,12 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Word.XlPieSliceIndex" />
       </Parameters>
       <Docs>
-        <param name="loc">Определяет горизонтальную или вертикальную координаты.</param>
-        <param name="Index">Указывает, какие координата положение круговая slice для возврата. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Word.XlPieSliceIndex.xlOuterCenterPoint" />.</param>
-        <summary>Получает горизонтальную или вертикальную позицию точку на элемент диаграммы в пунктах от левого или верхнего края объекта для левого или верхнего края области диаграммы.</summary>
-        <returns>Горизонтальную или вертикальную позицию точку на элемент диаграммы в точках.</returns>
-        <remarks>
-          <para>Это свойство применяется только к типам круговой диаграммы.</para>
-          <para />
-        </remarks>
+        <param name="loc">Указывает координату по горизонтали или вертикали.</param>
+        <param name="Index">Указывает, какую координату положения секторов необходимо вернуть. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Word.XlPieSliceIndex.xlOuterCenterPoint" />.</param>
+        <summary>Получает вертикальную или горизонтальную позицию точки на элементе диаграммы (в пунктах) от верхнего или левого края объекта до верхнего или левого края области диаграммы.</summary>
+        <returns>Положение точки на элементе диаграммы по вертикали или горизонтали в пунктах.</returns>
+        <remarks><para>Это свойство применяется только к типам круговых диаграмм.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SecondaryPlot">
@@ -1154,11 +1060,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если точка находится в разделе дополнительный Вторичная круговая диаграмма или панели круговой диаграммы. Применяется только к точек на круговой диаграммы или панели круговой диаграммы. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>Значение true</b> , если точка находится в дополнительном разделе круговой диаграммы или круговой диаграммы. Применяется только к точкам в круговых диаграммах или линейчатых круговых диаграммах. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1183,10 +1086,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1217,9 +1118,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <b>логическое</b> значение, которое определяет, имеет ли объект тень.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1246,12 +1145,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее расстояние в пунктах от верхнего края объектов на верхнюю границу области диаграммы.</summary>
-        <value>Расстояние в пунктах от верхнего края объектов на верхнюю границу области диаграммы.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, представляющее расстояние от верхнего края объекта до верхнего края области диаграммы (в пунктах).</summary>
+        <value>Расстояние от верхнего края объекта до верхнего края области диаграммы (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -1277,12 +1174,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает ширину в точках объекта.</summary>
-        <value>Ширина в точках объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает ширину объекта (в пунктах).</summary>
+        <value>Ширина объекта (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

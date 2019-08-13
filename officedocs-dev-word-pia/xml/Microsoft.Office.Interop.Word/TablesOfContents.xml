@@ -1,13 +1,5 @@
 <Type Name="TablesOfContents" FullName="Microsoft.Office.Interop.Word.TablesOfContents">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="34f7f3f0b04b6f94b3b32e279d16090a2318aa78" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674088" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TablesOfContents : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1dba7adac0f83b8430c22e283a149c42e38aadef" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143926" /></Metadata><TypeSignature Language="C#" Value="public interface TablesOfContents : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TablesOfContents implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TablesOfContents" />
   <TypeSignature Language="VB.NET" Value="Public Interface TablesOfContents&#xA;Implements IEnumerable" />
@@ -30,10 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> объекты, которые представляют таблицы содержимого в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.TablesOfContents" /> свойство для возврата коллекции <b>TablesOfContents</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для добавления в документ оглавления.</para> Использование <b>TablesOfContents</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>TableOfContents</b> . Номер индекса представляет положение оглавления в документе.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> объектов, представляющих оглавления в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.TablesOfContents" /> свойство, чтобы возвратить коллекцию <b>TablesOfContents</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить оглавление в документ.</para>
+      <para>Используйте <b>TablesOfContents</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>TableOfContents</b> . Номер индекса представляет положение оглавления в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -68,19 +61,19 @@
         <Parameter Name="UseOutlineLevels" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон, место оглавления отображаться. Оглавления заменяет диапазон, если не будет свернуть в диапазоне.</param>
-        <param name="UseHeadingStyles">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы использовать для создания оглавления встроенные стили заголовков. Значение по умолчанию — <b>True</b>.</param>
-        <param name="UpperHeadingLevel">Необязательный элемент <b>Object</b>. Начальный уровень заголовка для содержания. Соответствует начальное значение используется с параметром \o для поля в таблице содержимое (Оглавление). Значение по умолчанию — 1.</param>
-        <param name="LowerHeadingLevel">Необязательный элемент <b>Object</b>. Конечный уровень заголовка для содержания. Соответствует конечное значение, используемые с параметром \o для поля в таблице содержимое (Оглавление). Значение по умолчанию — 9.</param>
-        <param name="UseFields">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если поля в таблице из содержимого запись (ТРАД.) используются для создания оглавления. Использование <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы отметить записей, которые будут включены в оглавление. Значение по умолчанию — <b>False</b>.</param>
-        <param name="TableID">Необязательный элемент <b>Object</b>. Идентификатор одной буквы, используемые для создания оглавления поля TC. Соответствующий параметр \f для поля в таблице содержимое (Оглавление). Например «T» включает оглавление поля TC, используя идентификатор таблицы т. Если этот аргумент указан, поля TC не используются.</param>
-        <param name="RightAlignPageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если номера страниц в таблице содержимое выравнивается правого поля. Значение по умолчанию — <b>True</b>.</param>
-        <param name="IncludePageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true</b> для включения номера страниц в оглавлении. Значение по умолчанию — <b>True</b>.</param>
-        <param name="AddedStyles">Необязательный элемент <b>Object</b>. Имя строки для дополнительных стилей, используемых для компиляции оглавления (стили отличный от заголовок 1 — Заголовок 9 стили). Использование <see cref="M:Microsoft.Office.Interop.Word.HeadingStyles.Add(System.Object@,System.Int16)" /> метод <see cref="T:Microsoft.Office.Interop.Word.HeadingStyles" /> объект, который требуется создать новые стили заголовков.</param>
-        <param name="UseHyperlinks">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если элементы в таблице содержимое следует форматируются как гиперссылки, при документа публикации в Интернете. Значение по умолчанию — <b>True</b>.</param>
-        <param name="HidePageNumbersInWeb">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы использовать уровни структуры для создания оглавления. Значение по умолчанию — <b>False</b>.</param>
-        <param name="UseOutlineLevels">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы использовать уровни структуры для создания оглавления. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> объект, представляющий оглавления, добавлены в документ.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, в котором будет отображаться оглавление. Если диапазон не свернут, в оглавлении заменяется диапазон.</param>
+        <param name="UseHeadingStyles">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать встроенные стили заголовков для создания оглавления. Значение по умолчанию — <b>True</b>.</param>
+        <param name="UpperHeadingLevel">Необязательный <b>объект</b>. Начальный уровень заголовка для оглавления. Соответствует начальному значению, используемому с параметром \o для поля содержания (TOC). Значение по умолчанию равно 1.</param>
+        <param name="LowerHeadingLevel">Необязательный <b>объект</b>. Конечный уровень заголовка для оглавления. Соответствует конечному значению, используемому с параметром \o для поля содержания (TOC). По умолчанию параметр имеет значение 9.</param>
+        <param name="UseFields">Необязательный <b>объект</b>. <b>Значение true</b> , если поля элемента оглавления (TC) используются для создания оглавления. Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы пометить записи, включаемые в оглавление. Значение по умолчанию — <b>False</b>.</param>
+        <param name="TableID">Необязательный <b>объект</b>. Однобуквенный идентификатор, который используется для создания оглавления из полей TC. Соответствует параметру \f для поля оглавления (TOC). Например, "T" создает оглавление из полей TC с помощью идентификатора таблицы T. Если этот аргумент опущен, поля TC не используются.</param>
+        <param name="RightAlignPageNumbers">Необязательный <b>объект</b>. <b>Значение true</b> , если номера страниц в содержании выровнены по правому полю. Значение по умолчанию — <b>True</b>.</param>
+        <param name="IncludePageNumbers">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы включить номера страниц в оглавление. Значение по умолчанию — <b>True</b>.</param>
+        <param name="AddedStyles">Необязательный <b>объект</b>. Имя строки для дополнительных стилей, используемых для компиляции оглавления (стили, отличные от стиля заголовка 1 – заголовок 9). Используйте <see cref="M:Microsoft.Office.Interop.Word.HeadingStyles.Add(System.Object@,System.Int16)" /> метод <see cref="T:Microsoft.Office.Interop.Word.HeadingStyles" /> объекта для создания новых стилей заголовков.</param>
+        <param name="UseHyperlinks">Необязательный <b>объект</b>. <b>Значение true</b> , если записи в содержании должны отформатированы как гиперссылки, когда документ публикуется в Интернете. Значение по умолчанию — <b>True</b>.</param>
+        <param name="HidePageNumbersInWeb">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать уровни структуры для создания оглавления. По умолчанию используется значение <b>False</b>.</param>
+        <param name="UseOutlineLevels">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать уровни структуры для создания оглавления. По умолчанию используется значение <b>False</b>.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> объект, представляющий оглавление, добавленное в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -232,7 +225,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -260,11 +253,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Format">
@@ -293,34 +286,32 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTocFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает форматирование таблицы содержимого в указанный документ.</summary>
+        <summary>Возвращает или задает форматирование оглавления в заданном документе.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTocFormat" />может быть одной из этих констант <b>вдтокформат</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTocFormat" />может иметь одно из следующих констант <b>WdTocFormat</b> . </para>
-          <para>
-            <b>wdTOCTemplate</b>
+            <b>вдтокдистинктиве</b>
           </para>
           <para>
-            <b>wdTOCDistinctive </b>
+            <b>вдтокформал</b>
           </para>
           <para>
-            <b>wdTOCFormal </b>
+            <b>вдтоксимпле</b>
           </para>
           <para>
-            <b>wdTOCSimple </b>
+            <b>вдтокклассик</b>
           </para>
           <para>
-            <b>wdTOCClassic </b>
+            <b>вдтокфанци</b>
           </para>
           <para>
-            <b>wdTOCFancy </b>
+            <b>вдтокмодерн</b>
           </para>
           <para>
-            <b>wdTOCModern </b>
+            <b>вдтоктемплате</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -381,9 +372,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -413,12 +403,12 @@
         <Parameter Name="Level" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Расположение записи. Поле TC вставляется после <paramref name="Range" />.</param>
-        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, который отображается в оглавлении или оглавления. Чтобы указать дополнительный элемент, включают текст основного элемента, а затем текст, разделенных точкой с запятой (:) (например, «введение: продукт»).</param>
-        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, который включает в себя текст для индекса, иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
-        <param name="TableID">Необязательный элемент <b>Object</b>. Идентификатор одной буквы для иллюстраций или таблице содержимое элемента (например, «i» для «рисунок»).</param>
-        <param name="Level">Необязательный элемент <b>Object</b>. Уровень для записи в оглавлении или оглавления.</param>
-        <summary>Вставка поля TC (элемент таблицы содержимое) после указанного диапазона. Метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле ТРАД.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Расположение записи. Поле TC вставляется после <paramref name="Range" />.</param>
+        <param name="Entry">Необязательный <b>объект</b>. Текст, отображаемый в содержании или таблице иллюстраций. Чтобы указать подзапись, добавьте основной текст записи и текст подзаписи, разделив их двоеточием (:) (например, "Введение: продукт").</param>
+        <param name="EntryAutoText">Необязательный <b>объект</b>. Имя элемента автотекста, которое содержит текст для индекса, таблицы иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
+        <param name="TableID">Необязательный <b>объект</b>. Однобуквенный идентификатор для таблицы иллюстраций или элемента оглавления (например, "i" для "иллюстрации").</param>
+        <param name="Level">Необязательный <b>объект</b>. Уровень для записи в содержании или таблице иллюстраций.</param>
+        <summary>Вставляет поле TC (элемент оглавления) после указанного диапазона. Метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле TC.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -446,7 +436,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

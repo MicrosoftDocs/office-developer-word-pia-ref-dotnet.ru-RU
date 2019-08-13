@@ -1,13 +1,5 @@
 <Type Name="TextEffectFormat" FullName="Microsoft.Office.Interop.Word.TextEffectFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="535c52f83ff14879047adca8e3275089ad459d85" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672678" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TextEffectFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3bccc6953b9e4d0fcd66b37d7cece52b10c81de8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143835" /></Metadata><TypeSignature Language="C#" Value="public interface TextEffectFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextEffectFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextEffectFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextEffectFormat" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, которые применяются к объекты WordArt.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.TextEffect" /> свойство возвращает объект <b>TextEffectFormat</b> .</para>
-      <para />
-    </remarks>
+    <summary>Содержит свойства и методы, применяемые к объектам WordArt.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.TextEffect" /> свойство, чтобы возвратить объект <b>TextEffectFormat</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Alignment">
@@ -59,34 +49,32 @@
         <ReturnType>Microsoft.Office.Core.MsoTextEffectAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение константы, представляющий выравнивание по влиянию указанный текст.</summary>
+        <summary>Возвращает или задает константу, представляющую выравнивание для указанного текстового результата.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTextEffectAlignment" />может быть одной из следующих констант <b>мсотекстеффекталигнмент</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTextEffectAlignment" />может иметь одно из следующих констант <b>MsoTextEffectAlignment</b> :</para>
-          <para>
-            <b>msoTextEffectAlignmentCentered </b>
+            <b>мсотекстеффекталигнментцентеред</b>
           </para>
           <para>
-            <b>msoTextEffectAlignmentLeft </b>
+            <b>мсотекстеффекталигнментлефт</b>
           </para>
           <para>
-            <b>msoTextEffectAlignmentLetterJustify </b>
+            <b>мсотекстеффекталигнментлеттержустифи</b>
           </para>
           <para>
-            <b>msoTextEffectAlignmentMixed</b>
+            <b>мсотекстеффекталигнментмиксед</b>
           </para>
           <para>
-            <b> msoTextEffectAlignmentRight </b>
+            <b>мсотекстеффекталигнментригхт</b>
           </para>
           <para>
-            <b>msoTextEffectAlignmentStretchJustify </b>
+            <b>мсотекстеффекталигнментстретчжустифи</b>
           </para>
           <para>
-            <b>msoTextEffectAlignmentWordJustify</b>
+            <b>мсотекстеффекталигнментворджустифи</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -140,11 +128,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FontBold">
@@ -173,27 +161,25 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает константу, представляющий как полужирный шрифт обрабатывается по влиянию указанный текст.</summary>
+        <summary>Возвращает или задает константу, которая представляет способ обработки полужирного шрифта для указанного текстового результата.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> : </para>
-          <para>
-            <b>msoCTrue </b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse </b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed </b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle </b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b> шрифтов в указанном WordArt выделяется полужирным шрифтом.</para>
-          <para />
-        </remarks>
+            <b>мсотруе</b> Шрифт в указанном объекте WordArt выделен полужирным шрифтом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FontItalic">
@@ -222,28 +208,26 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Italicizes WordArt текст.</summary>
+        <summary>ИталиЦизес текст WordArt.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> : </para>
-          <para>
-            <b>msoCTrue </b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse </b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed </b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle </b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b>
+            <b>мсотруе</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FontName">
@@ -272,7 +256,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя шрифта для буквицы.</summary>
+        <summary>Возвращает или задает имя шрифта, для которого была пропущена прописная буква.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -334,28 +318,26 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает,, что кернинг пар знаков в объекте WordArt.</summary>
+        <summary>Указывает, что для пар символов в объекте WordArt задан кернинг.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> : </para>
-          <para>
-            <b>msoCTrue </b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse </b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed </b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle </b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b>
+            <b>мсотруе</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NormalizedHeight">
@@ -384,29 +366,26 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>MsoTrue</b> , если все символы (прописные и строчные) в указанном WordArt по высоте.</summary>
+        <summary><b>Мсотруе</b> , если все символы (как прописные, так и строчные буквы) в указанном объекте WordArt имеют одинаковую высоту.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> : </para>
-          <para>
-            <b>msoCTrue </b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse </b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed </b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle </b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b>
+            <b>мсотруе</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -432,7 +411,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -463,12 +442,10 @@
         <ReturnType>Microsoft.Office.Core.MsoPresetTextEffectShape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает форму указанного WordArt.</summary>
+        <summary>Возвращает или задает форму указанного объекта WordArt.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Word.TextEffectFormat.PresetTextEffect" /> свойство автоматически устанавливает для свойства <b>PresetShape</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>При установке <see cref="P:Microsoft.Office.Interop.Word.TextEffectFormat.PresetTextEffect" /> свойства автоматически задается свойство <b>пресетшапе</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PresetTextEffect">
@@ -497,13 +474,11 @@
         <ReturnType>Microsoft.Office.Core.MsoPresetTextEffect</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль указанного WordArt.</summary>
+        <summary>Возвращает или задает стиль указанного объекта WordArt.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значения для этого свойства соответствуют форматов в диалоговое окно "Коллекция WordArt" (меню "Вставка"), нумерованные слева направо, сверху вниз.</para>
-          <para>Свойства <b>PresetTextEffect</b> автоматически устанавливает многие другие свойства форматирования указанной фигуры.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значения этого свойства соответствуют форматам в диалоговом окне Коллекция WordArt (меню "Вставка"), пронумерованных слева направо, сверху вниз.</para>
+          <para>При установке свойства <b>пресеттекстеффект</b> автоматически задаются многие другие свойства форматирования указанной фигуры.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RotatedChars">
@@ -532,32 +507,28 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>MsoTrue</b> при символов в указанном WordArt вращение 90 градусов относительно WordArt ограничивающего фигуры. <b>MsoFalse</b> , если символы в указанном WordArt сохранить исходная ориентация относительно ограничивающего фигуры.</summary>
+        <summary><b>Мсотруе</b> , если символы в указанном объекте WordArt поворачиваются в 90 градусов относительно привязанной к нему фигуры WordArt. <b>Мсофалсе</b> , если символы в указанном объекте WordArt сохраняют свою исходную ориентацию относительно ограничивающей фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> : </para>
-          <para>
-            <b>msoCTrue </b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse </b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed </b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle </b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b>
+            <b>мсотруе</b>
           </para>
-          <para>, если объект WordArt горизонтальный текст параметру <b>RotatedChars</b> значение <b>True</b> поворот знаки 90 градусов против. Если объект WordArt вертикальной, для свойства <b>RotatedChars</b> значение <b>False</b> поворот знаки 90 градусов часовой. Использование <see cref="M:Microsoft.Office.Interop.Word.TextEffectFormat.ToggleVerticalText" /> метод для переключения между горизонтальных и вертикальных текста.</para>
-          <para>
-            <see cref="M:Microsoft.Office.Interop.Word.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, <b>RotatedChars</b> свойство и метод <b>ToggleVerticalText</b><b>TextEffectFormat</b> объекта все влияют на ориентация символов и Направление текста в объект <b>фигуры</b> , представляющий WordArt. В некоторых случаях требуется проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, вы должны.</para>
-          <para />
-        </remarks>
+          <para>Если объект WordArt имеет горизонтальный текст, то при установке для свойства <b>ротатедчарс</b> значения <b>true</b> поворачиваются символы 90 градусов против часовой стрелки. Если у объекта WordArt вертикальный текст, установка для свойства <b>ротатедчарс</b> значения <b>false</b> поворачивает символы 90 градусов по часовой стрелке. Используйте <see cref="M:Microsoft.Office.Interop.Word.TextEffectFormat.ToggleVerticalText" /> метод для переключения между горизонтальным и вертикальным направлением текста.</para>
+          <para><see cref="M:Microsoft.Office.Interop.Word.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> и свойство <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, а также свойство <b>ротатедчарс</b> и метод <b>тогглевертикалтекст</b> объекта <b>TextEffectFormat</b> влияют на ориентацию символов и направление текста в элементе Объект <b>Shape</b> , представляющий объект WordArt. Может потребоваться поэкспериментно, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить требуемый результат.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -586,7 +557,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст в указанном WordArt.</summary>
+        <summary>Возвращает или задает текст в указанном объекте WordArt.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -612,13 +583,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Переключение потока текст в указанном WordArt горизонтальную по вертикали или наоборот.</summary>
-        <remarks>
-          <para>С помощью метода <b>ToggleVerticalText</b> меняет местами значения <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий объект WordArt и оставляет <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> свойства без изменений.</para>
-          <para>
-            <see cref="M:Microsoft.Office.Interop.Word.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> свойство объекта <b>Shape</b> и <see cref="P:Microsoft.Office.Interop.Word.TextEffectFormat.RotatedChars" /> свойство и метод <b>ToggleVerticalText</b><b>TextEffectFormat</b> объекта все влияют на ориентация символов и направление текста поток в объект <b>фигуры</b> , представляющий WordArt. В некоторых случаях требуется проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, вы должны.</para>
-          <para />
-        </remarks>
+        <summary>Переключает направление текста в указанном объекте WordArt с горизонтального на вертикальный и наоборот.</summary>
+        <remarks><para>С помощью метода <b>тогглевертикалтекст</b> заменяются значения свойств <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> свойств <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, представляющего объект WordArt, а свойства <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> свойства остаются неизменными.</para>
+          <para><see cref="M:Microsoft.Office.Interop.Word.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> свойство объекта <b>Shape</b> , а <see cref="P:Microsoft.Office.Interop.Word.TextEffectFormat.RotatedChars" /> также метод Property и <b>тогглевертикалтекст</b> объекта <b>TextEffectFormat</b> влияют на ориентацию символов и направление потока текста в элементе <b> Объект Shape</b> , представляющий объект WordArt. Может потребоваться поэкспериментно, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить требуемый результат.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Tracking">
@@ -647,18 +615,17 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает коэффициент горизонтальное пространство, выделенной для всех символов в указанный WordArt при использовании ширину знаков.</summary>
+        <summary>Возвращает или задает отношение горизонтального пространства, выделенное каждому символу в указанном объекте WordArt, относительно ширины символа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>отслеживания</b> может быть в диапазоне от 0 (ноль) — 5. (Большие значения для этого свойства укажите достаточно пространство между символами; значение меньше 1 может осуществлять перекрытие символ.)</para>
-          <para>В следующей таблице приведены значения свойства <b>отслеживания</b> , соответствующие параметры в пользовательском интерфейсе.</para>
+        <remarks><para>Свойство <b>Track</b> может принимать значение от 0 (ноль) до 5. (Большие значения этого свойства задают свободное пространство между символами; значения меньше 1 могут привести к перекрытию символов).</para>
+          <para>В следующей таблице приведены значения свойства Tracking <b></b> , соответствующие параметрам, доступным в пользовательском интерфейсе.</para>
           <list type="table">
             <item>
-              <description>Очень узкий</description>
+              <description>Очень плотная</description>
               <description>0,8</description>
             </item>
             <item>
-              <description>строгий контроль</description>
+              <description>Используют</description>
               <description>0,9</description>
             </item>
             <item>
@@ -666,16 +633,15 @@
               <description>1.0</description>
             </item>
             <item>
-              <description>свободном</description>
+              <description>Свободное</description>
               <description>1.2</description>
             </item>
             <item>
-              <description>очень широкий</description>
-              <description>1,5</description>
+              <description>Очень свободная</description>
+              <description>1.5</description>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="XMLNamespaces" FullName="Microsoft.Office.Interop.Word.XMLNamespaces">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a28377e4aa15237bf9fa30770fff97380ef9bf73" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672543" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLNamespaces : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d9eb0ff72d7f177eb7bd98e5edbe17f3467652a3" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142635" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNamespaces : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNamespaces implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLNamespaces" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLNamespaces&#xA;Implements IEnumerable" />
@@ -30,8 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объекты, которые представляют вся коллекция схемы в библиотеку схем.</summary>
-    <remarks>Библиотека схем <para>в Microsoft Word, можно открыть из вкладки XML-схема в диалоговом окне Шаблоны и надстройки. Представляет схем, установленные на компьютере пользователя, который пользователь применил к документа Word или, явно добавленное пользователем в библиотеку схем, используя диалоговое окно "Библиотека схем" Библиотека схем.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.XMLNamespaces.Item(System.Object@)" /> свойство коллекции <b>XMLNamespaces</b> для получения отдельных объекта <b>XMLNameSpace</b> . Значение индекса свойство <b>Item</b> может быть <b>целое число</b>, которое указывает положение схемы в библиотеку схем, или <b>строка</b>, которая представляет имя схемы в виде, возвращаемом с помощью <see cref="P:Microsoft.Office.Interop.Word.XMLNamespace.URI" /> свойство ( Параметр TargetNamespace, определенном в схеме).</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объектов, представляющая всю коллекцию схем в библиотеке схем.</summary>
+    <remarks><para>В Microsoft Word можно открыть библиотеку схемы на вкладке Схема XML в диалоговом окне Шаблоны и надстройки. Библиотека схем представляет схемы, установленные на компьютере пользователя, который пользователь применил к документу Word или который явно добавлен в библиотеку схем с помощью диалогового окна "Библиотека схем".</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNamespaces.Item(System.Object@)" /> свойство коллекции <b>XMLNamespaces</b> , чтобы возвратить отдельный объект <b>XmlNamespace</b> . Значение индекса свойства <b>Item</b> может быть <b>целым числом</b>, указывающим положение схемы в библиотеке схем, или <b>строкой</b>, которая представляет имя схемы, возвращаемой с помощью <see cref="P:Microsoft.Office.Interop.Word.XMLNamespace.URI" /> свойства ( Параметр TargetNamespace, определенный в схеме).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -59,12 +53,11 @@
         <Parameter Name="InstallForAllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Path">
-          <b>Строковое значение.</b> Путь и имя схемы. Это может быть локальный путь, сетевой путь или адрес в Интернете.</param>
-        <param name="NamespaceURI">Необязательный атрибут типа <b>String</b>.  Пространство имен универсальный код ресурса индикатор, указанный в схеме. <paramref name="NamespaceURI" /> Параметр задается с учетом регистра и не должно быть указано именно то, как указано в схеме.</param>
-        <param name="Alias">Необязательный атрибут типа <b>String</b>.  Имя схемы, как оно отображается на вкладке схем в диалоговом окне Шаблоны и надстройки.</param>
-        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> Если все пользователи, выполните вход компьютер доступ и использование новой схемой. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объект, представляющий схемы, в которой будет добавлена в библиотеку схем и делаются доступными для пользователей в Microsoft Word.</summary>
+        <param name="Path">Обязательный атрибут типа <b>String</b>. Путь и имя файла схемы. Это может быть локальный путь к файлу, сетевой путь или адрес в Интернете.</param>
+        <param name="NamespaceURI">Необязательная <b>строка</b>. Индикатор универсального ресурса пространства имен, как указано в схеме. Параметр <paramref name="NamespaceURI" /> чувствителен к регистру и должен задаваться точно так же, как и в схеме.</param>
+        <param name="Alias">Необязательная <b>строка</b>. Имя схемы, отображаемое на вкладке схемы в диалоговом окне Шаблоны и надстройки.</param>
+        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. По умолчанию используется значение <b>False</b>.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объект, представляющий схему, которая добавляется в библиотеку схемы и становится доступной пользователям в Microsoft Word.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -120,7 +113,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,11 +141,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -210,14 +203,11 @@
         <Parameter Name="InstallForAllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Path">
-          <b>Строковое значение.</b> Путь и имя пакета расширения XML.</param>
-        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> Установка пакета расширения XML и делает его доступным для всех пользователей на компьютере. <b>Значение false</b> позволяет сделать пакета расширения XML доступным только для текущего пользователя. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Устанавливает указанный пакет расширения XML на компьютере пользователя, обеспечение доступности решения смарт-документа XML для одного или нескольких пользователей.</summary>
-        <remarks>
-          <para>По соображениям безопасности не удается установить неподписанный манифест. Дополнительные сведения о манифестах см смарт-документа Software Development Kit (SDK) на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <param name="Path">Обязательный атрибут типа <b>String</b>. Путь и имя файла пакета расширения XML.</param>
+        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> устанавливает пакет расширения XML и делает его доступным для всех пользователей на компьютере. <b>False</b> — делает пакет расширения XML доступным только для текущего пользователя. Значение по умолчанию — <b>false</b>.</param>
+        <summary>Устанавливает указанный пакет расширения XML на компьютер пользователя, делая решение смарт-документа XML доступным для одного или нескольких пользователей.</summary>
+        <remarks><para>В целях безопасности невозможно установить неподписанный манифест. Для получения дополнительных сведений о манифестах просмотрите пакет средств разработки для смарт-документов (SDK) на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -246,9 +236,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -276,7 +265,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

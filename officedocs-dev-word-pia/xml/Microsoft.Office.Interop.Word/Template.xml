@@ -1,13 +1,5 @@
 <Type Name="Template" FullName="Microsoft.Office.Interop.Word.Template">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="534019c643dbd50c521e73ede295686eb260edbc" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672920" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Template" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ab6c90166c80860b2142f0d365e15d418af64385" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143856" /></Metadata><TypeSignature Language="C#" Value="public interface Template" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Template" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Template" />
   <TypeSignature Language="VB.NET" Value="Public Interface Template" />
@@ -27,8 +19,26 @@
   </Attributes>
   <Docs>
     <summary>Представляет шаблон документа.</summary>
-    <remarks>
-      <para>Объект <b>шаблона</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Templates" /> семейства сайтов. Коллекция <b>шаблонов</b> включает все доступные объекты <b>шаблона</b> .</para> Использование <b>шаблонов</b><para>(<paramref name="index" />), где <paramref name="index" /> — это имя шаблона или номер индекса для возврата объекта <b>шаблона</b> . Номер индекса предоставляет позицию шаблона в коллекцию <b>шаблонов</b> .</para> Метод <b>Add</b><para>недоступен для коллекции <b>шаблонов</b> . Вместо этого можно добавить шаблон в коллекцию <b>шаблонов</b> , выполнив одно из следующих значений:</para><list type="bullet"><item><para>с помощью <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод с <see cref="T:Microsoft.Office.Interop.Word.Documents" /> семейства сайтов для открытия документа на основе шаблона или шаблон</para></item><item><para>с помощью <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" />метод с семейства <b>документы</b> , чтобы открыть новый документ на основе шаблона</para></item><item><para>с помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метод с <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию, чтобы загрузить глобальный шаблон</para></item><item><para>с помощью <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Document" /> Объект, который требуется присоединить шаблон документа</para></item></list><para>использования <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> свойство возвращает объект шаблон, который относится к шаблона Normal.dot. Использование <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> присоединенное свойство для возврата шаблона для указанного документа.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойство для возвращения или задания расположение шаблонов пользователя или рабочей группы (то есть, папку, где будут храниться эти шаблоны).</para><para /></remarks>
+    <remarks><para>Объект <b>template</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Templates" /> коллекции. Коллекция <b>Templates</b> включает все доступные объекты <b>шаблона</b> .</para>
+      <para>Используйте <b></b>Templates<paramref name="index" />(), <paramref name="index" /> где — это имя шаблона или номер индекса, чтобы вернуть один объект <b>шаблона</b> . Номер индекса представляет положение шаблона в коллекции <b>Templates</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>Templates</b> . Вместо этого можно добавить шаблон в коллекцию Templates <b></b> , выполнив одно из следующих действий:</para>
+      <list type="bullet">
+        <item>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метода с <see cref="T:Microsoft.Office.Interop.Word.Documents" /> коллекцией для открытия документа на основе шаблона или шаблона</para>
+        </item>
+        <item>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" /> метода с коллекцией <b>Documents</b> для открытия нового документа на основе шаблона</para>
+        </item>
+        <item>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода с <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцией для загрузки глобального шаблона</para>
+        </item>
+        <item>
+          <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Document" /> объектом для присоединения шаблона к документу</para>
+        </item>
+      </list>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> свойство, чтобы возвратить объект шаблона, ссылающийся на шаблон Normal. Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойство, чтобы возвратить шаблон, вложенный в указанный документ.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойство, чтобы возвратить или задать расположение шаблонов пользователя или рабочей группы (то есть папки, в которой будут храниться эти шаблоны).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,7 +95,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.AutoTextEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntries" /> коллекции, представляющей всех элементов автотекста в указанный шаблон.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntries" /> коллекцию, которая представляет все записи автотекста в указанном шаблоне.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,10 +123,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.BuildingBlockEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> коллекции, представляющей коллекцию стандартный блок записей в шаблон. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> коллекцию, представляющую коллекцию записей стандартных блоков в шаблоне. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,10 +151,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.BuildingBlockTypes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекции, представляющей коллекцию стандартный блок типов, содержащихся в шаблоне. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекцию, представляющую коллекцию типов стандартных блоков, которые хранятся в шаблоне. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,14 +179,12 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.DocumentProperties" /> коллекции, представляющей всех встроенных свойств документа для указанного документа.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.DocumentProperties" /> коллекцию, которая представляет все встроенные свойства документа для указанного документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы вернуть объект <see cref="T:Microsoft.Office.Core.DocumentProperty" /> использовать объект, который представляет определенные встроенное свойство документа, <b>которые</b>(<paramref name="index" />), где <paramref name="index" /> — это <see cref="T:Microsoft.Office.Interop.Word.WdBuiltInProperty" /> константу.</para>
-          <para>Если Microsoft Word не определяет значение для одного из встроенных свойств документа, чтение <see cref="P:Microsoft.Office.Interop.Word.CustomProperty.Value" /> свойства для этого свойства документа, приведет к ошибке.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Template.CustomDocumentProperties" /> свойство для возврата коллекции настраиваемых свойств документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы вернуть <see cref="T:Microsoft.Office.Core.DocumentProperty" /> один объект, представляющий конкретное встроенное свойство документа, используйте <b>BuiltinDocumentProperties</b>(<paramref name="index" />), где <paramref name="index" /> — <see cref="T:Microsoft.Office.Interop.Word.WdBuiltInProperty" /> константа.</para>
+          <para>Если в Microsoft Word не определено значение для одного из встроенных свойств документа, чтение <see cref="P:Microsoft.Office.Interop.Word.CustomProperty.Value" /> свойства для этого свойства документа приводит к ошибке.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Template.CustomDocumentProperties" /> свойство, чтобы возвратить коллекцию настраиваемых свойств документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -206,11 +210,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomDocumentProperties">
@@ -236,12 +240,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.DocumentProperties" /> коллекции, представляющей все настраиваемые свойства документа для указанного документа.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.DocumentProperties" /> коллекцию, которая представляет все настраиваемые свойства документа для указанного документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Template.BuiltInDocumentProperties" /> свойство для возврата коллекции встроенных свойств документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Template.BuiltInDocumentProperties" /> свойство, чтобы возвратить коллекцию встроенных свойств документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FarEastLineBreakLanguage">
@@ -270,25 +272,23 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFarEastLineBreakLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает восточно-азиатских языков для использования при разрыве строк текста в указанный документ или шаблон.</summary>
+        <summary>Возвращает или задает восточно-азиатский язык, используемый при разрыве строк текста в указанном документе или шаблоне.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdFarEastLineBreakLanguageID" />может быть одной из следующих констант <b>вдфареастлинебреаклангуажеид</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdFarEastLineBreakLanguageID" />может иметь одно из следующих констант <b>WdFarEastLineBreakLanguageID</b> :</para>
-          <para>
-            <b>wdLineBreakJapanese</b>
+            <b>вдлинебреакжапанесе</b>
           </para>
           <para>
-            <b>wdLineBreakKorean</b>
+            <b>вдлинебреаккореан</b>
           </para>
           <para>
-            <b>wdLineBreakSimplifiedChinese</b>
+            <b>вдлинебреаксимплифиедчинесе</b>
           </para>
           <para>
-            <b>wdLineBreakTraditionalChinese</b>
+            <b>вдлинебреактрадитионалчинесе</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FarEastLineBreakLevel">
@@ -317,23 +317,21 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFarEastLineBreakLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает уровень проверки разрывов строк для указанного документа.</summary>
+        <summary>Возвращает или задает уровень управления разрывом строки для указанного документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Word.Paragraph.FarEastLineBreakControl" /> задано значение <b>False</b>.</para>
+        <remarks><para>Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Word.Paragraph.FarEastLineBreakControl" /> для свойства задано значение <b>false</b>.</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdFarEastLineBreakLevel" /> может иметь одно из следующих констант <b>WdFarEastLineBreakLevel</b> :</para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdFarEastLineBreakLevel" />может быть одной из следующих констант <b>вдфареастлинебреаклевел</b> :</para>
           <para>
-            <b>wdFarEastLineBreakLevelCustom</b>
+            <b>вдфареастлинебреаклевелкустом</b>
           </para>
           <para>
-            <b>wdFarEastLineBreakLevelNormal</b>
+            <b>вдфареастлинебреаклевелнормал</b>
           </para>
           <para>
-            <b>wdFarEastLineBreakLevelStrict</b>
+            <b>вдфареастлинебреаклевелстрикт</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FullName">
@@ -359,12 +357,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает имя шаблона, включая диск или веб-путь.</summary>
+        <summary>Задает имя шаблона, включая путь к диску или веб-путь.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использовать это свойство эквивалентно использованию <see cref="P:Microsoft.Office.Interop.Word.Template.Path" />, <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" />, и <see cref="P:Microsoft.Office.Interop.Word.Template.Name" /> свойств в последовательности.</para>
-          <para />
-        </remarks>
+        <remarks><para>Использование этого свойства эквивалентно использованию свойств <see cref="P:Microsoft.Office.Interop.Word.Template.Path" />, <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" />и <see cref="P:Microsoft.Office.Interop.Word.Template.Name" /> в последовательности.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="JustificationMode">
@@ -393,22 +389,20 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdJustificationMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает интервал между знаками для указанного шаблона.</summary>
+        <summary>Возвращает или задает коррекцию интервала между символами для указанного шаблона.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdJustificationMode" />может быть одной из следующих констант <b>вджустификатионмоде</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdJustificationMode" />может иметь одно из следующих констант <b>WdJustificationMode</b> :</para>
-          <para>
-            <b>wdJustificationModeCompressKana</b>
+            <b>вджустификатионмодекомпресс</b>
           </para>
           <para>
-            <b>wdJustificationModeCompress</b>
+            <b>вджустификатионмодекомпресскана</b>
           </para>
           <para>
-            <b>wdJustificationModeExpand</b>
+            <b>вджустификатионмодикспанд</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KerningByAlgorithm">
@@ -437,8 +431,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Word дробит половинной ширины Латинская символы и знаки пунктуации в указанный документ.</summary>
+        <summary><b>Значение true</b> , если Microsoft Word выполняет кернинг полуширинных символов половинной ширины и знаков препинания в указанном документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -471,11 +464,9 @@
       <Docs>
         <summary>Возвращает или задает язык для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</para>
-          <para>Некоторые <b>WdLanguageID</b> константы могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант.</para>
+          <para>Некоторые константы <b>вдлангуажеид</b> могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageIDFarEast">
@@ -504,13 +495,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает восточно-азиатских языков для указанного объекта.</summary>
+        <summary>Возвращает или задает восточно-азиатский язык для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</para>
-          <para>Этот способ рекомендуется использовать для возвращения или задания язык Восточной Азии текста в документе, созданном в восточно-азиатских версиях Microsoft Word.</para>
-          <para />
-        </remarks>
+        <remarks><para>Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант.</para>
+          <para>Это рекомендуемый способ возврата или установки языка для восточно-азиатского текста в документе, созданном в восточно-азиатской версии Microsoft Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListTemplates">
@@ -536,7 +525,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplates</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекции, представляющей список форматов для указанного шаблона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекцию, которая представляет все форматы списка для указанного шаблона.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -595,7 +584,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символы кинсоку, после которых Microsoft Word не выполняет разбиение строки.</summary>
+        <summary>Возвращает или задает символы кинсоку после того, как Microsoft Word не будет прерывать линию.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -626,7 +615,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символы кинсоку, перед которым Microsoft Word не выполняет разбиение строки.</summary>
+        <summary>Возвращает или задает символы кинсоку, перед которыми Microsoft Word не будет прерывать линию.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -657,8 +646,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если проверки орфографии и грамматики игнорирует документы на основе этого шаблона.</summary>
+        <summary><b>True</b> , если средство проверки правописания и грамматики игнорирует документы на основе этого шаблона.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -684,12 +672,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Открывает указанный документ в виде и возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта.</summary>
+        <summary>Открывает указанный шаблон в качестве документа и возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Открытие шаблона как документ позволяет пользователю изменять содержимое шаблона. Это необходимо, если свойство или метод ( <see cref="P:Microsoft.Office.Interop.Word._Document.Styles" /> свойства, например) недоступен из <see cref="T:Microsoft.Office.Interop.Word.Template" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Открытие шаблона в качестве документа позволяет пользователю редактировать содержимое шаблона. Это может потребоваться, если свойство или метод (например, <see cref="P:Microsoft.Office.Interop.Word._Document.Styles" /> свойство) недоступен из <see cref="T:Microsoft.Office.Interop.Word.Template" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -715,7 +701,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -743,14 +729,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанный объект диска или веб-путь.</summary>
+        <summary>Возвращает диск или веб-путь к указанному объекту.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака — например, «C:\MSOffice» или "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Используйте <see cref="P:Microsoft.Office.Interop.Word.Template.Name" /> свойство возвращает имя файла без пути и использование <see cref="P:Microsoft.Office.Interop.Word.Template.FullName" /> свойство возвращает имя файла и путь друг с другом.</para>
+        <remarks><para>Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте <see cref="P:Microsoft.Office.Interop.Word.Template.Name" /> свойство, чтобы возвратить имя файла без пути и использовать <see cref="P:Microsoft.Office.Interop.Word.Template.FullName" /> свойство, чтобы вернуть имя файла и путь вместе.</para>
           <para>
-            <b>Примечание</b> свойство <b>PathSeparator</b> можно использовать для построения веб-адреса, несмотря на то, что они содержат косую черту (/) и свойство <b>PathSeparator</b> параметры по умолчанию для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+            <b>Note (Примечание</b> )  Свойство <b>пассепаратор</b> можно использовать для создания веб-адресов, несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -774,11 +758,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сохраняет указанный документ или шаблон.</summary>
-        <remarks>
-          <para>Если документ или шаблон не был сохранен перед, в диалоговом окне Сохранить как пользователю с именем файла.</para>
-          <para />
-        </remarks>
+        <summary>Сохранение указанного документа или шаблона.</summary>
+        <remarks><para>Если документ или шаблон еще не сохранялся ранее, диалоговое окно Сохранить как запрашивает у пользователя имя файла.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Saved">
@@ -807,8 +789,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный документ или шаблон не изменилось с момента последнего сохранения. <b>Значение false,</b> Если отображать запрос на сохранение изменений при закрытии документа Microsoft Word.</summary>
+        <summary><b>Значение true</b> , если указанный документ или шаблон не изменился с момента последнего сохранения. <b>False</b> , если при закрытии документа в Microsoft Word отображается запрос на сохранение изменений.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -838,20 +819,18 @@
       <Docs>
         <summary>Возвращает тип шаблона.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTemplateType" />может быть одной из следующих констант <b>вдтемплатетипе</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTemplateType" />может иметь одно из следующих констант <b>WdTemplateType</b> :</para>
-          <para>
-            <b>wdGlobalTemplate</b>
+            <b>вдаттачедтемплате</b>
           </para>
           <para>
-            <b>wdAttachedTemplate</b>
+            <b>вдглобалтемплате</b>
           </para>
           <para>
-            <b>wdNormalTemplate</b>
+            <b>вднормалтемплате</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VBProject">
@@ -879,11 +858,9 @@
       <Docs>
         <summary>Возвращает объект <b>VBProject</b> для указанного шаблона.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство используется для получения доступа к модулей кода и пользовательских форм.</para>
-          <para>Для объекта <b>VBProject</b> просмотра в обозревателе объектов, необходимо выбрать в редакторе Visual Basic Microsoft Visual Basic для приложений расширяемость флажок в диалоговое окно "ссылки" (меню "Сервис").</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство используется для получения доступа к модулям кода и пользовательским формам.</para>
+          <para>Чтобы просмотреть объект <b>VBProject</b> в обозревателе объектов, необходимо установить флажок Microsoft Visual Basic для приложений в диалоговом окне "ссылки" (меню "Сервис") в редакторе Visual Basic.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

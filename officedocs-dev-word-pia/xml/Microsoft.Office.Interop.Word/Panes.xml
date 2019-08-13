@@ -1,13 +1,5 @@
 <Type Name="Panes" FullName="Microsoft.Office.Interop.Word.Panes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d90b242373bbbcaf3d57c22154e720e2f2e43252" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673202" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Panes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c93e1f96de2b3c9480f4dadee3a64fe30ee9c1e5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144178" /></Metadata><TypeSignature Language="C#" Value="public interface Panes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Panes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Panes" />
   <TypeSignature Language="VB.NET" Value="Public Interface Panes&#xA;Implements IEnumerable" />
@@ -30,14 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объектов, представляющих области окна для одного окна.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Window.Panes" /> свойство для возврата коллекции <b>областей</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Panes.Add(System.Object@)" /> метод или <see cref="P:Microsoft.Office.Interop.Word.Window.Split" /> свойство для добавления области окна.</para>
-      <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Word.View.SplitSpecial" /> свойство, чтобы показать примечания, сноски и концевые сноски в отдельной области.</para>
-      <para>Окно имеет более одной области, если он разделение или активного представления не режим разметки и отображаются данные, такие как сноски или примечания.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объектов, представляющих области окна для одного окна.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Window.Panes" /> свойство, чтобы возвратить коллекцию <b>областей</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Panes.Add(System.Object@)" /> метод или <see cref="P:Microsoft.Office.Interop.Word.Window.Split" /> свойство, чтобы добавить область окна.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.View.SplitSpecial" /> Свойство можно использовать для отображения примечаний, сносок или концевых сносок в отдельной области.</para>
+      <para>Окно содержит несколько областей, если оно разбивается, или если активное представление не является режимом разметки, и отображаются такие сведения, как сноски или комментарии.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -62,13 +52,11 @@
         <Parameter Name="SplitVertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="SplitVertical">Необязательный элемент <b>Object</b>. Число, соответствующее проценту от окна, сверху вниз, будет отображаться над разбиение.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект, представляющий новую область в окно.</summary>
+        <param name="SplitVertical">Необязательный <b>объект</b>. Число, представляющее процентное отношение окна сверху вниз, которое должно отображаться над раздельным.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект, представляющий новую область в окне.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод завершится ошибкой, если он применяется к окно, в котором уже были разделены.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод завершится с ошибками, если он применен к уже разделенному окну.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -122,7 +110,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,11 +138,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -215,9 +203,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -245,7 +232,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

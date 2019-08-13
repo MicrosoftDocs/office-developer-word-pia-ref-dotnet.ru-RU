@@ -1,13 +1,5 @@
 <Type Name="Window" FullName="Microsoft.Office.Interop.Word.Window">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ef41ba1d1545160b80a5ea0214b97f73c4073af3" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674192" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Window" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4e29decd5d2ab2a5ef57937db92371976360b243" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142698" /></Metadata><TypeSignature Language="C#" Value="public interface Window" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Window" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Window" />
   <TypeSignature Language="VB.NET" Value="Public Interface Window" />
@@ -27,15 +19,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет окно.</summary>
-    <remarks>
-      <para>Многие характеристики документа, например полосы прокрутки и линейки, в действительности являются свойствами окна. <see cref="T:Microsoft.Office.Interop.Word.Window" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Windows" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.Windows" /> Семейство сайтов для <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект содержит все окна в приложении, в то время как <see cref="T:Microsoft.Office.Interop.Word.Windows" /> семейство сайтов для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект содержит только windows, в которых отображаются указанный документ.</para>
-      <para>Использовать <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — окно имя или номер индекса, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект.</para>
-      <para>Номер индекса — номер слева от имени окно, в меню окно.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Window.NewWindow" /> метод, чтобы добавить новое окно для <see cref="T:Microsoft.Office.Interop.Word.Windows" /> семейства.</para>
-      <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
-      <para>При переключении представления в режим предварительного просмотра, создается новое окно. Это окно будет удален из <see cref="T:Microsoft.Office.Interop.Word.Windows" /> семейства сайтов при закрытии предварительного.</para>
-      <para />
-    </remarks>
+    <remarks><para>Многие характеристики документа, такие как полосы прокрутки и линейки, фактически являются свойствами окна. <see cref="T:Microsoft.Office.Interop.Word.Window" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.Windows" /> Коллекция <see cref="T:Microsoft.Office.Interop.Word.Application" /> для объекта содержит все окна в приложении, а <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекция для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта содержит только те окна, в которых отображается указанный документ.</para>
+      <para>Используйте <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — это имя окна или номер индекса, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект.</para>
+      <para>Номер индекса — это число слева от имени окна в меню Window (окно).</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Window.NewWindow" /> метод, чтобы добавить новое окно в <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекцию.</para>
+      <para>Двоеточие (:) Кроме того, если для документа открыто несколько окон, в заголовке окна отображается число.</para>
+      <para>При переключении представления в режим предварительного просмотра создается новое окно. Это окно удаляется из <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекции при закрытии предварительного просмотра.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -86,8 +76,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанное окно является активным.</summary>
+        <summary><b>Значение true</b> , если указанное окно активно.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +104,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Pane</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект, представляющий область активной для заданного окна.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект, представляющий активную область для указанного окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -174,12 +163,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст заголовка для указанного документа или окна приложения.</summary>
+        <summary>Возвращает или задает текст заголовка для указанного окна документа или приложения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы изменить заголовок окна приложения на текст по умолчанию, этому свойству присвоено значение пустую строку (»»).</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы изменить заголовок окна приложения на текст по умолчанию, установите для этого свойства пустую строку ("").</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Close">
@@ -205,8 +192,8 @@
         <Parameter Name="RouteDocument" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">Необязательный элемент <b>Object</b>. Задает сохранение для документа. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdSaveOptions" /> констант: <b>wdDoNotSaveChanges</b>, <b>wdPromptToSaveChanges</b>или <b>wdSaveChanges</b>.</param>
-        <param name="RouteDocument">Необязательный элемент <b>Object</b>. <b>Значение true,</b> для отправки документа к следующему получателю. Если документ не имеет маршрут, этот аргумент игнорируется.</param>
+        <param name="SaveChanges">Необязательный <b>объект</b>. Задает действие сохранения для документа. Может быть <see cref="T:Microsoft.Office.Interop.Word.WdSaveOptions" /> одной из следующих констант: <b>вддонотсавечанжес</b>, <b>вдпромпттосавечанжес</b>или <b>вдсавечанжес</b>.</param>
+        <param name="RouteDocument">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отправить документ следующему получателю. Если у документа нет прикрепленной к нему маршрут, этот аргумент игнорируется.</param>
         <summary>Закрывает указанное окно.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -234,11 +221,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayHorizontalScrollBar">
@@ -267,8 +254,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанного окна отображается горизонтальная полоса прокрутки.</summary>
+        <summary><b>Имеет значение true</b> , если для указанного окна отображается горизонтальная полоса прокрутки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -299,8 +285,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> если вертикальная полоса прокрутки появится в левой части окна документа.</summary>
+        <summary><b>Значение true</b> , если вертикальная полоса прокрутки отображается в левой части окна документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,8 +316,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если вертикальной линейки отображается в правой части окна документа в режим разметки.</summary>
+        <summary><b>Имеет значение true</b> , если вертикальная линейка отображается в правой части окна документа в режиме разметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,15 +347,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанного окна или панели отображаются линейки.</summary>
+        <summary><b>Значение true</b> , если линейки отображаются для указанного окна или области.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DisplayRulers</b> является аналогом команду Линейка в меню Вид. </para>
+        <remarks><para>Свойство <b>дисплайрулерс</b> эквивалентно команде линейка в меню Вид. </para>
           <para>
-            <b>Примечание</b> Если <b>DisplayRulers</b> имеет <b>значение False</b>, горизонтальные и вертикальные линейки не будут отображаться, вне зависимости от состояния <see cref="P:Microsoft.Office.Interop.Word.Window.DisplayVerticalRuler" /> свойство.</para>
-          <para />
-        </remarks>
+            <b>Note (Примечание</b> )  Если <b>дисплайрулерс</b> имеет <b>значение false</b>, горизонтальные и вертикальные линейки не будут отображаться независимо от состояния <see cref="P:Microsoft.Office.Interop.Word.Window.DisplayVerticalRuler" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayScreenTips">
@@ -400,8 +381,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если комментарии, сноски, концевые сноски и гиперссылки отображаются в виде подсказки. Текст помечается как наличие комментариев будет выделена.</summary>
+        <summary><b>True</b> , если комментарии, сноски, концевые сноски и гиперссылки отображаются как подсказки. Текст, помеченный как имеющий комментарии, выделяется.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -432,14 +412,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанного окна или области отображается вертикальная линейки.</summary>
+        <summary><b>Значение true</b> , если вертикальная линейка отображается для указанного окна или области.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Вертикальная линейка отображается только в режиме разметки, а также при <see cref="P:Microsoft.Office.Interop.Word.Window.DisplayRulers" /> задано значение <b>True</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Вертикальная линейка отображается только в режиме разметки и только в том <see cref="P:Microsoft.Office.Interop.Word.Window.DisplayRulers" /> случае, если для свойства задано <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayVerticalScrollBar">
@@ -468,8 +445,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанного окна отображается вертикальная полоса прокрутки.</summary>
+        <summary><b>Имеет значение true</b> , если для указанного окна отображается вертикальная полоса прокрутки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -497,7 +473,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Document</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта, связанного с указанным окном.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, связанный с заданным окном.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -528,8 +504,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображается схема документа.</summary>
+        <summary><b>Значение true</b> , если схема документа отображается.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -566,7 +541,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину схемы документа в процентах от ширины указанное окно.</summary>
+        <summary>Возвращает или задает ширину схемы документа в процентах от ширины указанного окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -597,13 +572,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если заголовок сообщения электронной почты отображается в окне документа. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>Значение true</b> , если заголовок сообщения электронной почты отображается в окне документа. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не оказывает влияния, если документ не сообщения электронной почты.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не действует, если документ не является сообщением электронной почты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPoint">
@@ -633,16 +605,14 @@
         <Parameter Name="obj" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ScreenPixelsLeft">Требуется <b>целое число</b>. Имя переменной, который будет Microsoft Word для возврата значения для левого края объекта.</param>
-        <param name="ScreenPixelsTop">Требуется <b>целое число</b>. Имя переменной Word для возврата значения для верхнего края объекта, который будет использоваться.</param>
-        <param name="ScreenPixelsWidth">Требуется <b>целое число</b>. Имя переменной, который будет использоваться Word для возврата значения для ширину объекта.</param>
-        <param name="ScreenPixelsHeight">Требуется <b>целое число</b>. Имя переменной, к которому требуется для возврата значения высоты объекта.</param>
-        <param name="obj">Требуется <b>объект</b>. A <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта.</param>
-        <summary>Возвращает координаты заданного диапазона или фигуры на экране.</summary>
-        <remarks>
-          <para>Если диапазон или фигура не отображается на экране, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <param name="ScreenPixelsLeft">Обязательный атрибут типа <b>Integer</b>. Имя переменной, в которой вы хотите, чтобы Microsoft Word возвращал значение для левого края объекта.</param>
+        <param name="ScreenPixelsTop">Обязательный атрибут типа <b>Integer</b>. Имя переменной, в которую Word должен вернуть значение для верхнего края объекта.</param>
+        <param name="ScreenPixelsWidth">Обязательный атрибут типа <b>Integer</b>. Имя переменной, в которую Word должен вернуть значение ширины объекта.</param>
+        <param name="ScreenPixelsHeight">Обязательный атрибут типа <b>Integer</b>. Имя переменной, в которую Word должен вернуть значение высоты объекта.</param>
+        <param name="obj">Обязательный <b>объект</b>. Объект <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> .</param>
+        <summary>Возвращает экранные координаты указанного диапазона или фигуры.</summary>
+        <remarks><para>Если весь диапазон или фигура не отображается на экране, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -673,11 +643,9 @@
       <Docs>
         <summary>Возвращает или задает высоту окна.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Нельзя настраивать данное свойство, если окно свернуто или развернуто.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word._Application.UsableHeight" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, который требуется определить максимальный размер окна. Использование <see cref="P:Microsoft.Office.Interop.Word.Window.WindowState" /> свойства, чтобы определить состояние окна.</para>
-          <para />
-        </remarks>
+        <remarks><para>Невозможно задать это свойство, если окно развернуто или свернуто.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.UsableHeight" /> свойство <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта для определения максимального размера окна. Используйте <see cref="P:Microsoft.Office.Interop.Word.Window.WindowState" /> свойство, чтобы определить состояние окна.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HorizontalPercentScrolled">
@@ -706,7 +674,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по горизонтальные полосы прокрутки в процентах от ширины документа.</summary>
+        <summary>Возвращает или задает позицию горизонтальной прокрутки в процентах от ширины документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -734,7 +702,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает аргумент <b>Integer</b> (<b>int</b> в C#), которое указывает, дескриптор окна в указанном окне. Только для чтения.</summary>
+        <summary>Возвращает <b>целое число</b> (<b>int</b> в C#), которое указывает дескриптор окна указанного окна. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -765,43 +733,41 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdIMEMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает режим по умолчанию при запуске для японского языка метод редактор ввода (IME).</summary>
+        <summary>Возвращает или задает режим запуска по умолчанию для японского редактора способов ввода (IME).</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdIMEMode" />может быть одной из следующих констант <b>вдимемоде</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdIMEMode" />может иметь одно из следующих констант <b>WdIMEMode</b> : </para>
+            <b>вдимемодеалфа</b> 
+            <b>—</b> Активирует IME в режиме половинной ширины латиницы. </para>
           <para>
-            <b>wdIMEModeAlpha</b>
-            <b>–</b> активирует IME в режиме Латинская половинной ширины.</para>
+            <b>вдимемодеалфафулл</b> 
+            <b>—</b> Активирует редактор IME в режиме латиницы с полной шириной знаков. </para>
           <para>
-            <b>wdIMEModeAlphaFull</b>
-            <b>–</b> активирует IME в режиме Латинская полной ширины.</para>
+            <b>вдимемодехангул</b> 
+            <b>—</b> Активирует IME в режиме "хангыль половинной ширины". </para>
           <para>
-            <b>wdIMEModeHangul</b>
-            <b>–</b> активирует IME в Полуширинный режим хангыль.</para>
+            <b>вдимемодехангулфулл</b> 
+            <b>—</b> Активирует IME в режиме хангыль с полной шириной. </para>
           <para>
-            <b>wdIMEModeHangulFull</b>
-            <b>–</b> активирует IME в режим хангыль полной ширины.</para>
+            <b>вдимемодехирагана</b> 
+            <b>—</b> Активирует IME в режиме полной ширины хирагана. </para>
           <para>
-            <b>wdIMEModeHiragana</b>
-            <b>–</b> активирует IME в режиме хираганы полной ширины.</para>
+            <b>вдимемодекатакана</b> 
+            <b>—</b> Активирует редактор IME в режиме катакана с полной шириной знаков. </para>
           <para>
-            <b>wdIMEModeKatakana</b>
-            <b>–</b> активирует IME в режиме катаканы полной ширины.</para>
+            <b>вдимемодекатаканахалф</b> 
+            <b>—</b> Активирует IME в режиме катакана половинной ширины. </para>
           <para>
-            <b>wdIMEModeKatakanaHalf</b>
-            <b>–</b> активирует IME в режиме катаканы половинной ширины.</para>
+            <b>вдимемоденоконтрол</b> 
+            <b>—</b> Не изменяет режим IME. </para>
           <para>
-            <b>wdIMEModeNoControl</b>
-            <b>–</b> не изменяется режим IME.</para>
+            <b>вдимемодеофф</b> 
+            <b>—</b> Отключает IME и активирует ввод текста латиницы. </para>
           <para>
-            <b>wdIMEModeOff</b>
-            <b>–</b> отключает IME и активирует ввода текста Латинская.</para>
-          <para>
-            <b>wdIMEModeOn</b>
-            <b>–</b> активирует IME.</para>
-          <para />
-        </remarks>
+            <b>вдимемодеон</b> 
+            <b>—</b> Активирует IME.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -857,17 +823,15 @@
         <Parameter Name="ToLeft" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный элемент <b>Object</b>. Количество окна для прокрутите окно вниз.</param>
-        <param name="Up">Необязательный элемент <b>Object</b>. Число экранов прокрутка окна вверх.</param>
-        <param name="ToRight">Необязательный элемент <b>Object</b>. Количество окна для прокрутите окно вправо.</param>
-        <param name="ToLeft">Необязательный элемент <b>Object</b>. Число экранов для прокрутки окна слева.</param>
-        <summary>Прокрутка окна или панели указанное число экранов.</summary>
-        <remarks>
-          <para>Метод <b>LargeScroll</b> является эквивалентом щелчка мыши только что перед или после поля прокрутки на горизонтальные и вертикальные полосы прокрутки.</para>
-          <para>Если <paramref name="Down" /> и <paramref name="Up" /> указаны, прокручивать окно различием аргументов. Например если <paramref name="Down" /> -2 и <paramref name="Up" /> — 4, прокручивать окно Копирование двух экранах. Аналогично Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> указаны, прокручивать окно различием аргументов.</para>
-          <para>Любой из этих аргументов может быть отрицательное значение. Если аргументы не заданы, окно прокрутки вниз на один экран.</para>
-          <para />
-        </remarks>
+        <param name="Down">Необязательный <b>объект</b>. Количество экранов, в течение которых окно прокручивается вниз.</param>
+        <param name="Up">Необязательный <b>объект</b>. Количество экранов для прокрутки окна вверх.</param>
+        <param name="ToRight">Необязательный <b>объект</b>. Количество экранов для прокрутки окна вправо.</param>
+        <param name="ToLeft">Необязательный <b>объект</b>. Количество экранов для прокрутки окна влево.</param>
+        <summary>Прокручивает окно или область на указанное число экранов.</summary>
+        <remarks><para>Метод <b>ларжескролл</b> эквивалентен щелчку до или сразу после ползунков на горизонтальной и вертикальной полосах прокрутки.</para>
+          <para>Если <paramref name="Down" /> и <paramref name="Up" /> оба указаны, окно прокручивается под разностью аргументов. Например, если <paramref name="Down" /> значение равно 2 и <paramref name="Up" /> равно 4, окно прокручивается вверх на два экрана. Аналогично, <paramref name="ToLeft" /> если <paramref name="ToRight" /> и то, и другое, окно прокручивается под разностью аргументов.</para>
+          <para>Любой из этих аргументов может быть отрицательным числом. Если аргументы не указаны, окно прокручивается вниз на один экран.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Left">
@@ -922,14 +886,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Откроется новое окно с одного документа в указанном окне.</summary>
+        <summary>Открывает новое окно с тем же документом, что и в указанном окне.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
-          <para>При использовании метода <b>NewWindow</b><see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, открывается новое окно активного окна.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Двоеточие (:) Кроме того, если для документа открыто несколько окон, в заголовке окна отображается число.</para>
+          <para>Если для <b></b> <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта используется метод NewWindow, в активном окне открывается новое окно.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -983,14 +945,12 @@
         <Parameter Name="Up" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный элемент <b>Object</b>. Число страниц для прокрутки вниз. Если этот аргумент указан, это значение оценивается в 1.</param>
-        <param name="Up">Необязательный элемент <b>Object</b>. Число страниц для прокрутке вверх.</param>
-        <summary>Выполняет прокрутку окне страницу по или указанной области.</summary>
-        <remarks>
-          <para>Метод <b>PageScroll</b> доступна только в том случае, если вы находитесь в режиме разметки или веб-документа. Этот метод не влияет на положение курсора.</para>
-          <para>Если <paramref name="Down" /> и <paramref name="Up" /> указаны, прокручивать окно различием аргументов. Например если <paramref name="Down" /> -2 и <paramref name="Up" /> — 4, прокручивать окно две страницы.</para>
-          <para />
-        </remarks>
+        <param name="Down">Необязательный <b>объект</b>. Количество страниц, прокручиваемых вниз. Если этот аргумент опущен, предполагается, что это значение равно 1.</param>
+        <param name="Up">Необязательный <b>объект</b>. Количество страниц, прокручиваемых вверх.</param>
+        <summary>Выполняет прокрутку указанной области или страницы окна с помощью страницы.</summary>
+        <remarks><para>Метод <b>пажескролл</b> доступен, только если вы находитесь в режиме разметки или в режиме веб-документа. Этот метод не влияет на положение точки вставки.</para>
+          <para>Если <paramref name="Down" /> и <paramref name="Up" /> оба указаны, окно прокручивается под разностью аргументов. Например, если <paramref name="Down" /> значение равно 2 и <paramref name="Up" /> равно 4, окно прокручивается вверх на две страницы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Panes">
@@ -1016,7 +976,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Panes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Panes" /> коллекции, представляющей все области окна для заданного окна.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Panes" /> коллекцию, которая представляет все области окна для указанного окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1044,7 +1004,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1116,25 +1076,25 @@
         <Parameter Name="PrintZoomPaperHeight" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Background">Необязательный элемент <b>Object</b>. Установите значение <b>True</b> , чтобы продолжить во время Microsoft Word для печати в макрос.</param>
-        <param name="Append">Необязательный элемент <b>Object</b>. Значение <b>True</b> для добавления указанного документа к имени файла, указанного идентификатором <paramref name="OutputFileName" /> аргумент. <b>Значение false,</b> чтобы перезаписать содержимое <paramref name="OutputFileName" />.</param>
-        <param name="Range">Необязательный элемент <b>Object</b>. Диапазон страниц. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutRange" /> константу. <b>wdPrintAllDocument</b><b>wdPrintCurrentPage</b><b>wdPrintFromTo</b><b>wdPrintRangeOfPages</b><b>wdPrintSelection</b></param>
-        <param name="OutputFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет <b>значение True</b>, этот аргумент задает путь и имя выходного файла.</param>
-        <param name="From">Необязательный элемент <b>Object</b>. Номер начальной страницы при <paramref name="Range" /> задано значение <b>wdPrintFromTo</b>.</param>
-        <param name="To">Необязательный элемент <b>Object</b>. Последний номер страницы при <paramref name="Range" /> задано значение <b>wdPrintFromTo</b>.</param>
-        <param name="Item">Необязательный элемент <b>Object</b>. Элемент для печати. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutItem" /> константу. <b>wdPrintAutoTextEntries</b><b>wdPrintComments</b><b>wdPrintDocumentContent</b><b>wdPrintDocumentWithMarkup</b><b>wdPrintEnvelope</b><b>wdPrintKeyAssignments</b><b>wdPrintMarkup</b><b>wdPrintProperties</b><b>wdPrintStyles</b></param>
-        <param name="Copies">Необязательный элемент <b>Object</b>. Число копий для печати.</param>
-        <param name="Pages">Необязательный элемент <b>Object</b>. Номера страниц и диапазоны страниц для печати, разделенных запятыми. Например, «2, 6-10» печать страницы 2 и страницы с 6 по 10.</param>
-        <param name="PageType">Необязательный элемент <b>Object</b>. Тип страницы для печати. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutPages" /> константу. <b>wdPrintAllPages</b><b>wdPrintEvenPagesOnly</b><b>wdPrintOddPagesOnly</b></param>
-        <param name="PrintToFile">Необязательный элемент <b>Object</b>. <b>Значение true,</b> для отправки инструкций печати в файл. Убедитесь в том указать имя файла с <paramref name="OutputFileName" />.</param>
-        <param name="Collate">Необязательный элемент <b>Object</b>. При печати нескольких копий документа, <b>значение True</b> для печати всех страниц документа перед печатью следующей копии.</param>
-        <param name="ActivePrinterMacGX">Необязательный элемент <b>Object</b>. Этот аргумент доступен только в выпуске Macintosh Microsoft Office. Для получения дополнительных сведений об этом аргумент обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</param>
-        <param name="ManualDuplexPrint">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати двусторонних документов на принтере без двусторонней печати. Если этот аргумент имеет <b>значение True</b>, <see cref="P:Microsoft.Office.Interop.Word.Options.PrintBackground" /> и <see cref="P:Microsoft.Office.Interop.Word.Options.PrintReverse" /> свойства игнорируются. Использование <see cref="P:Microsoft.Office.Interop.Word.Options.PrintOddPagesInAscendingOrder" /> и <see cref="P:Microsoft.Office.Interop.Word.Options.PrintEvenPagesInAscendingOrder" /> свойства, управляющие выходные данные во время вручную двусторонней печати. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="PrintZoomColumn">Необязательный элемент <b>Object</b>. Число страниц, которое приложению Word необходимо разместить горизонтально на одной странице. Может быть 1, 2, 3 или 4. Использование с <paramref name="PrintZoomRow" /> аргумент для печати нескольких страниц на одном листе.</param>
-        <param name="PrintZoomRow">Необязательный элемент <b>Object</b>. Число страниц, которое приложению Word необходимо разместить вертикально на одной странице. Может быть 1, 2 или 4. Использование с <paramref name="PrintZoomColumn" /> аргумент для печати нескольких страниц на одном листе.</param>
-        <param name="PrintZoomPaperWidth">Необязательный элемент <b>Object</b>. Ширина, к которому требуется вертикальное печатных страниц в твипах (20 твипов = 1 пункт; 72 пункта = 1 дюйм).</param>
-        <param name="PrintZoomPaperHeight">Необязательный элемент <b>Object</b>. Высота, который будет Microsoft Word для масштабирования печатных страниц в твипах (20 твипов = 1 пункт; 72 пункта = 1 дюйм).</param>
-        <summary>Печатает полностью или частично указанный документ.</summary>
+        <param name="Background">Необязательный <b>объект</b>. Задайте значение <b>true</b> , чтобы макрос продолжался в процессе печати документа.</param>
+        <param name="Append">Необязательный <b>объект</b>. Задайте значение <b>true</b> , чтобы добавить указанный документ в имя файла, заданное <paramref name="OutputFileName" /> аргументом. <b>False</b> для перезаписи содержимого <paramref name="OutputFileName" />.</param>
+        <param name="Range">Необязательный <b>объект</b>. Диапазон страниц. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutRange" /> константой. <b>вдпринталлдокумент</b> <b>вдпринткуррентпаже</b> <b>вдпринтфромто</b> <b>вдпринтранжеофпажес</b> <b>вдпринтселектион</b></param>
+        <param name="OutputFileName">Необязательный <b>объект</b>. Если <paramref name="PrintToFile" /> имеет <b>значение true</b>, этот аргумент задает путь и имя файла для выходного файла.</param>
+        <param name="From">Необязательный <b>объект</b>. Номер начальной страницы, когда <paramref name="Range" /> для этого параметра задано значение <b>вдпринтфромто</b>.</param>
+        <param name="To">Необязательный <b>объект</b>. Конечный номер страницы, когда <paramref name="Range" /> для этого параметра задано значение <b>вдпринтфромто</b>.</param>
+        <param name="Item">Необязательный <b>объект</b>. Элемент, который требуется напечатать. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutItem" /> константой. <b>вдпринтаутотекстентриес</b> <b>вдпринткомментс</b> <b>вдпринтдокументконтент</b> <b>вдпринтдокументвисмаркуп</b> <b>вдпринтенвелопе</b> <b>вдпринткэйассигнментс</b> <b>вдпринтмаркуп</b> <b>вдпринтпропертиес</b> <b>вдпринтстилес</b></param>
+        <param name="Copies">Необязательный <b>объект</b>. Число копий, которое необходимо напечатать.</param>
+        <param name="Pages">Необязательный <b>объект</b>. Номера страниц и диапазоны страниц, которые необходимо распечатать, разделив запятыми. Например, "2, 6-10" печатает страницу 2 и страницы с 6 по 10.</param>
+        <param name="PageType">Необязательный <b>объект</b>. Тип страниц, которые необходимо напечатать. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdPrintOutPages" /> константой. <b>вдпринталлпажес</b> <b>вдпринтевенпажесонли</b> <b>вдпринтоддпажесонли</b></param>
+        <param name="PrintToFile">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отправить инструкции принтера в файл. Обязательно укажите имя файла с помощью <paramref name="OutputFileName" />.</param>
+        <param name="Collate">Необязательный <b>объект</b>. При печати нескольких копий документа <b>имеет значение true</b> , чтобы напечатать все страницы документа перед печатью следующей копии.</param>
+        <param name="ActivePrinterMacGX">Необязательный <b>объект</b>. Этот аргумент доступен только в Microsoft Office Macintosh Edition. Для получения дополнительных сведений об этом аргументе обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</param>
+        <param name="ManualDuplexPrint">Необязательный <b>объект</b>. <b>Значение true</b> для печати двустороннего документа на принтере без набора дуплексных принтеров. Если этот аргумент имеет <b>значение true</b>, <see cref="P:Microsoft.Office.Interop.Word.Options.PrintBackground" /> свойства <see cref="P:Microsoft.Office.Interop.Word.Options.PrintReverse" /> и не учитываются. Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.Options.PrintOddPagesInAscendingOrder" /> и <see cref="P:Microsoft.Office.Interop.Word.Options.PrintEvenPagesInAscendingOrder" /> для управления выходными данными при дуплексной печати вручную. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="PrintZoomColumn">Необязательный <b>объект</b>. Количество страниц, которые должны разместиться в Word горизонтально на одной странице. Может принимать значения 1, 2, 3 и 4. Используйте с <paramref name="PrintZoomRow" /> аргументом, чтобы напечатать несколько страниц на одном листе.</param>
+        <param name="PrintZoomRow">Необязательный <b>объект</b>. Количество страниц, которое Word будет расположить вертикально на одной странице. Может принимать значения 1, 2 или 4. Используйте с <paramref name="PrintZoomColumn" /> аргументом, чтобы напечатать несколько страниц на одном листе.</param>
+        <param name="PrintZoomPaperWidth">Необязательный <b>объект</b>. Ширина, в которой Word будет масштабировать страницы печати, в твипах (20 твипов = 1 точка; 72 точек = 1 дюйм).</param>
+        <param name="PrintZoomPaperHeight">Необязательный <b>объект</b>. Высота, в которой Word будет масштабировать страницы печати, в твипах (20 твипов = 1 точка; 72 точек = 1 дюйм).</param>
+        <summary>Печатает весь указанный документ или его часть.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1282,14 +1242,12 @@
         <Parameter Name="y" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="x">Требуется <b>целое число</b>. Расстояние по горизонтали (в точках) от левого края экрана, на момент.</param>
-        <param name="y">Требуется <b>целое число</b>. Расстояние по вертикали (в точках) в верхней части экрана на момент.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, который находится в том месте, заданном парой координат положение экрана.</summary>
+        <param name="x">Обязательный атрибут типа <b>Integer</b>. Расстояние по горизонтали (в пикселях) от левого края экрана до точки.</param>
+        <param name="y">Обязательный атрибут типа <b>Integer</b>. Расстояние по вертикали (в пикселях) от верхнего края экрана до точки.</param>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, расположенный в точке, указанной в сочетании с координатами положения экрана.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если нет диапазон или фигуры расположена в каталоге парой координат указан, метод возвращает <b>значение Nothing</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если диапазон или фигура не размещается в указанной Вами точке координат, метод <b>не возвращает значение Nothing</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScrollIntoView">
@@ -1315,13 +1273,11 @@
         <Parameter Name="Start" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="obj">Требуется <b>объект</b>. A <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта.</param>
-        <param name="Start">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> Если верхний левый угол фигуры или диапазон появляется в верхний левый угол окна документа. <b>Значение false,</b> Если нижней правой кнопкой углу диапазон или фигуры отображается в правом нижнем углу окна документа. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Прокрутка в окне документа, заданного диапазона или фигуры отображается в окне документа.</summary>
-        <remarks>
-          <para>Если диапазон или фигуры больше, чем в окно документа <paramref name="Start" /> аргумент указывает, какие части диапазон или фигуры отображает или получает начальный фокус. Этот метод не может использоваться с режимом структуры.</para>
-          <para />
-        </remarks>
+        <param name="obj">Обязательный <b>объект</b>. Объект <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> .</param>
+        <param name="Start">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если верхний левый угол диапазона или фигуры отображается в левом верхнем углу окна документа. <b>False</b> , если нижний правый угол диапазона или фигуры отображается в правом нижнем углу окна документа. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Прокручивает окно документа таким образом, чтобы указанный диапазон или форма отображались в окне документа.</summary>
+        <remarks><para>Если диапазон или фигура больше, чем окно документа, <paramref name="Start" /> аргумент указывает, какая часть диапазона или фигуры отображается или получает начальный фокус. Этот метод невозможно использовать с режимом структуры.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Selection">
@@ -1347,7 +1303,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Selection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, который представляет выбранный диапазон или точку вставки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, представляющий выбранный диапазон или точку вставки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1373,11 +1329,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает фокус в окно документа, указанного в теле сообщения электронной почты.</summary>
-        <remarks>
-          <para>Если документ не сообщения электронной почты, этот метод не оказывает влияния.</para>
-          <para />
-        </remarks>
+        <summary>Устанавливает фокус указанного окна документа в тексте сообщения электронной почты.</summary>
+        <remarks><para>Если документ не является сообщением электронной почты, этот метод не оказывает никакого действия.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowSourceDocuments">
@@ -1406,10 +1360,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdShowSourceDocuments</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdShowSourceDocuments" /> константа, представляющий отображение исходные документы Microsoft Office Word после сравнить и объединить процесса. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdShowSourceDocuments" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdShowSourceDocuments" /> константу, представляющую, как Microsoft Office Word отображает исходные документы после процесса сравнения и слияния. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdShowSourceDocuments" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1438,17 +1390,15 @@
         <Parameter Name="ToLeft" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный элемент <b>Object</b>. Номер строки, чтобы прокрутите окно вниз. «Строка» соответствует расстояние прокрутки, щелкнув стрелку вниз на вертикальной полосы один раз прокрутки.</param>
-        <param name="Up">Необязательный элемент <b>Object</b>. Количество строк для прокрутки окна вверх. «Строка» соответствует расстояние прокрутки, щелкнув стрелку вверх на вертикальной полосы один раз прокрутки.</param>
-        <param name="ToRight">Необязательный элемент <b>Object</b>. Количество строк для прокрутки окна справа. «Строка» соответствует расстояние прокрутки, щелкнув стрелку вправо на горизонтальной один раз полосы прокрутки.</param>
-        <param name="ToLeft">Необязательный элемент <b>Object</b>. Количество строк для прокрутки окна слева. «Строка» соответствует расстояние прокрутки, щелкнув стрелку влево на горизонтальной один раз полосы прокрутки.</param>
-        <summary>Прокрутка окна или области, указанное число строк.</summary>
-        <remarks>
-          <para>Этот метод эквивалентен нажатие стрелки прокрутки на горизонтальные и вертикальные полосы прокрутки.</para>
-          <para>Если <paramref name="Down" /> и <paramref name="Up" /> указаны, прокручивать окно различием аргументов. Например если <paramref name="Down" /> — 3 и <paramref name="Up" /> — 6, прокручивать окно Копирование три строки. Аналогично Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> указаны, прокручивать окно различием аргументов.</para>
-          <para>Любой из этих аргументов может быть отрицательное значение. Если аргументы не заданы, окно прокрутки вниз на одну строку.</para>
-          <para />
-        </remarks>
+        <param name="Down">Необязательный <b>объект</b>. Число строк, прокручиваемых вниз по окну. "Строка" соответствует расстоянию прокрутки, щелкнув стрелку прокрутки вниз на вертикальной полосе прокрутки.</param>
+        <param name="Up">Необязательный <b>объект</b>. Число строк, в течение которых окно будет прокручиваться вверх. "Строка" соответствует расстоянию полосы прокрутки, щелкнув стрелку прокрутки вверх на вертикальной полосе прокрутки один раз.</param>
+        <param name="ToRight">Необязательный <b>объект</b>. Число строк для прокрутки окна вправо. "Строка" соответствует расстоянию прокрутки, щелкнув стрелку вправо на горизонтальной полосе прокрутки.</param>
+        <param name="ToLeft">Необязательный <b>объект</b>. Число строк для прокрутки окна влево. "Строка" соответствует расстоянию прокрутки, щелкнув стрелку влево на горизонтальной полосе прокрутки.</param>
+        <summary>Прокручивает окно или область на указанное число строк.</summary>
+        <remarks><para>Этот метод эквивалентен щелчку по стрелкам прокрутки на горизонтальной и вертикальной полосах прокрутки.</para>
+          <para>Если <paramref name="Down" /> и <paramref name="Up" /> оба указаны, окно прокручивается под разностью аргументов. Например, если <paramref name="Down" /> 3 и <paramref name="Up" /> 6, окно прокручивается вверх на три строки. Аналогично, <paramref name="ToLeft" /> если <paramref name="ToRight" /> и то, и другое, окно прокручивается под разностью аргументов.</para>
+          <para>Любой из этих аргументов может быть отрицательным числом. Если аргументы не указаны, окно прокручивается вниз вниз на одну строку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Split">
@@ -1477,8 +1427,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если окно разделено на несколько областей.</summary>
+        <summary><b>Значение true</b> , если окно разделено на несколько областей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1509,12 +1458,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает разделение процент для заданного окна по вертикали.</summary>
+        <summary>Возвращает или задает вертикальное разделение в процентах для указанного окна.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы удалить линии разделения, этому свойству присвоено значение нуль (0) или задать <see cref="P:Microsoft.Office.Interop.Word.Window.Split" /> значение <b>False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы удалить разбиение, установите для этого свойства значение ноль (0) или задайте <see cref="P:Microsoft.Office.Interop.Word.Window.Split" /> для свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StyleAreaWidth">
@@ -1543,12 +1490,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину области стилей в пунктах.</summary>
+        <summary>Возвращает или задает ширину области стиля в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>StyleAreaWidth</b> больше, чем нуль (0), названия стилей отображаются слева от текста. В области стиль не отображается в режиме разметки или веб-документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если свойство <b>стилеареавидс</b> больше 0 (ноль), имена стилей отображаются слева от текста. Область стилей не отображается в разметке страницы или режиме веб-документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Thumbnails">
@@ -1577,7 +1522,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает значение <b>типа Boolean</b> , указывающий ли эскизов страниц в документе, отображаются в левой части окна документа Microsoft Word.</summary>
+        <summary>Задает или возвращает <b>логическое значение</b> , указывающее, отображаются ли эскизы страниц в документе вдоль левой стороны окна документа Microsoft Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1603,11 +1548,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает и скрывает ленты.</summary>
-        <remarks>
-          <para>Если ленты, <see cref="M:Microsoft.Office.Interop.Word.Window.ToggleRibbon" /> метод скрывает; Если ленты скрыта, <see cref="M:Microsoft.Office.Interop.Word.Window.ToggleRibbon" /> метод показывает его.</para>
-          <para />
-        </remarks>
+        <summary>Показывает или скрывает ленту.</summary>
+        <remarks><para>Если лента отображается, <see cref="M:Microsoft.Office.Interop.Word.Window.ToggleRibbon" /> метод скрывает ее; Если лента скрыта, <see cref="M:Microsoft.Office.Interop.Word.Window.ToggleRibbon" /> метод отображает ее.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ToggleShowAllReviewers">
@@ -1664,7 +1607,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает вертикальную позицию окна указанного в пунктах.</summary>
+        <summary>Возвращает или задает вертикальную позицию указанного окна в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1694,17 +1637,15 @@
       <Docs>
         <summary>Возвращает тип окна.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdWindowType" />может быть одной из следующих констант <b>вдвиндовтипе</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdWindowType" />может иметь одно из следующих констант <b>WdWindowType</b> : </para>
-          <para>
-            <b>wdWindowTemplate </b>
+            <b>вдвиндовтемплате</b>
           </para>
           <para>
-            <b>wdWindowDocument</b>
+            <b>вдвиндовдокумент</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UsableHeight">
@@ -1730,12 +1671,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает высоту (в точках) активной рабочей области в окне указанный документ.</summary>
+        <summary>Возвращает высоту активной рабочей области в указанном окне документа (в пунктах).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если ни одна из рабочей области отображается в окне документа, <b>UsableHeight</b> возвращает значение 1. Чтобы определить фактический доступная высота, вычитается 1 значение <b>UsableHeight</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Если в окне документа не отображается ни одна рабочая область, <b>UsableHeight</b> возвращает 1. Чтобы определить фактическую доступную высоту, вычтите 1 из значения <b>UsableHeight</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UsableWidth">
@@ -1761,12 +1700,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ширину (в точках) активной рабочей области в окне указанный документ.</summary>
+        <summary>Возвращает ширину активной рабочей области в указанном окне документа (в пунктах).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если ни одна из рабочей области отображается в окне документа, <b>UsableWidth</b> возвращает значение 1. Чтобы определить фактический доступная высота, вычитается 1 значение <b>UsableWidth</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Если в окне документа не отображается ни одна рабочая область, <b>UsableWidth</b> возвращает 1. Чтобы определить фактическую доступную высоту, вычтите 1 из значения <b>UsableWidth</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalPercentScrolled">
@@ -1795,7 +1732,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает позицию вертикальной прокрутки в процентном соотношении от длина документа.</summary>
+        <summary>Возвращает или задает позицию вертикальной прокрутки в процентах от длины документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1823,7 +1760,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.View</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.View" /> объект, представляющий представление для заданного окна.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.View" /> объект, представляющий представление для указанного окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1854,13 +1791,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный объект является видимым.</summary>
+        <summary><b>Значение true</b> , если указанный объект является видимым.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для любого объекта некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для любого объекта некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -1917,12 +1851,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер окна документа, отображаемые в указанном окне. Например если заголовок окна «Sales.doc:2», данное свойство возвращает номер 2.</summary>
+        <summary>Возвращает номер окна документа, отображаемого в указанном окне. Например, если заголовок окна — "Sales. doc: 2", это свойство возвращает число 2.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Window.Index" /> свойство для возвращения указанного окна в <see cref="T:Microsoft.Office.Interop.Word.Windows" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Window.Index" /> свойство, чтобы возвратить номер указанного окна в <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WindowState">
@@ -1951,23 +1883,21 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdWindowState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает состояние окне указанный документ или задач.</summary>
+        <summary>Возвращает или задает состояние указанного окна документа или окна задачи.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdWindowState" />может быть одной из следующих констант <b>вдвиндовстате</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdWindowState" />может иметь одно из следующих констант <b>WdWindowState</b> : </para>
-          <para>
-            <b>wdWindowStateNormal </b>
+            <b>вдвиндовстатемаксимизе</b>
           </para>
           <para>
-            <b>wdWindowStateMaximize </b>
+            <b>вдвиндовстатенормал</b>
           </para>
           <para>
-            <b>wdWindowStateMinimize </b>
+            <b>вдвиндовстатеминимизе</b>
           </para>
-          <para>константу <b>wdWindowStateNormal</b> указывает окно, не развернуто или свернуто. Не удается установить состояние неактивного окна. Использование <see cref="M:Microsoft.Office.Interop.Word.Window.Activate" /> метод активации окно до настройки состояния окна.</para>
-          <para />
-        </remarks>
+          <para>Константа <b>вдвиндовстатенормал</b> указывает, что окно не развернуто или свернуто. Невозможно задать состояние неактивного окна. Используйте <see cref="M:Microsoft.Office.Interop.Word.Window.Activate" /> метод для активации окна перед настройкой состояния окна.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

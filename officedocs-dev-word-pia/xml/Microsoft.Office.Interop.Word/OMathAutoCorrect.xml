@@ -1,13 +1,5 @@
 <Type Name="OMathAutoCorrect" FullName="Microsoft.Office.Interop.Word.OMathAutoCorrect">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="496371be8dfa743a25eebac4dfef38a8e285d3d1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673345" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathAutoCorrect" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c0cc8c6beb49c151853fe8d7c4420fa2e287c5e7" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144395" /></Metadata><TypeSignature Language="C#" Value="public interface OMathAutoCorrect" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathAutoCorrect" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathAutoCorrect" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathAutoCorrect" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет компонент math автозамены в Microsoft Office Word. Для доступа к автозамены math, используйте <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /> семейства сайтов.</summary>
+    <summary>Представляет функцию автозамены математическими символами в Microsoft Office Word. Чтобы получить доступ к записям автозамены математическими <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /> символами, используйте коллекцию.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,11 +73,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrect.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrect.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Entries">
@@ -113,10 +103,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMathAutoCorrectEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию формула автозамены, найденные в компоненте средство автоисправления формул. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" />
-        </value>
+        <summary>Возвращает коллекцию записей автозамены уравнений, найденных в функции автозамены формул. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,10 +131,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMathRecognizedFunctions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, которая представляет распознанные функции, которые автоматически исправляются с помощью функции средство автоисправления формул. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathRecognizedFunctions" />
-        </value>
+        <summary>Возвращает коллекцию, представляющую распознаваемые функции, которые автоматически исправлены с помощью функции автозамены формул. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMathRecognizedFunctions" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,9 +160,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrect" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,10 +190,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли Microsoft Office Word автоматически заменяет строк в формулах соответствующие определения автозамены math. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, будет ли Microsoft Office Word автоматически заменять строки в формулах соответствующими определениями автозамены математическими символами. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -239,10 +221,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли Microsoft Office Word используются правила автозамены math за пределами формулы в документе. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, использует ли Microsoft Office Word правила автозамены математическими символами за пресловом математическими формулами в документе. Для чтения и записи.</summary>
+        <value><b>Логический</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

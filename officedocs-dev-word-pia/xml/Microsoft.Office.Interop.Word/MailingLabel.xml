@@ -1,13 +1,5 @@
 <Type Name="MailingLabel" FullName="Microsoft.Office.Interop.Word.MailingLabel">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ea639f9554460c830e5274ddb6a737859278d9e9" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673276" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailingLabel" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4afda2d9ebd64dca6130b11e02d6aa6915201036" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144437" /></Metadata><TypeSignature Language="C#" Value="public interface MailingLabel" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailingLabel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailingLabel" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailingLabel" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет метку адреса электронной почты.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.MailingLabel" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.MailingLabel" /> объект.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.MailingLabel.PrintOut(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для печати метку адреса электронной почты из списка в поле номер продукта в диалоговом окне Параметры наклейки.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.MailingLabel.CustomLabels" /> свойство для форматирования или печати настраиваемую метку адреса электронной почты.</para>
-      <para />
-    </remarks>
+    <summary>Представляет почтовую метку.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.MailingLabel" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.MailingLabel" /> объект.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.MailingLabel.PrintOut(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы напечатать почтовую метку, указанную в поле "номер продукта" в диалоговом окне параметры метки.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailingLabel.CustomLabels" /> свойство, чтобы отформатировать или напечатать настраиваемую почтовую метку.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,14 +81,14 @@
         <Parameter Name="Vertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Name">Необязательный элемент <b>Object</b>. Имя метки адреса электронной почты.</param>
-        <param name="Address">Необязательный элемент <b>Object</b>. Текст надписи, адреса электронной почты.</param>
-        <param name="AutoText">Необязательный элемент <b>Object</b>. Имя автотекста, который включает в себя надписью адреса электронной почты.</param>
-        <param name="ExtractAddress">Необязательный элемент <b>Object</b>. <b>Значение true</b> для использования текст адреса помечено посредством пользовательских закладки с именем «EnvelopeAddress» вместо использования <paramref name="Address" /> аргумент.</param>
-        <param name="LaserTray">Необязательный элемент <b>Object</b>. Область лазерный принтер. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константы.</param>
-        <param name="PrintEPostageLabel">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати марок, с помощью поставщика обеспечение Интернета.</param>
-        <param name="Vertical">Необязательный элемент <b>Object</b>. <b>Значение true,</b> форматирование текста по вертикали на метку. Используется для азиатских языков наклейки.</param>
-        <summary>Создает новый документ метки, с помощью параметров метки по умолчанию или, указан. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий новый документ.</summary>
+        <param name="Name">Необязательный <b>объект</b>. Имя почтовой метки.</param>
+        <param name="Address">Необязательный <b>объект</b>. Текст метки корреспонденции.</param>
+        <param name="AutoText">Необязательный <b>объект</b>. Имя элемента автотекста, включающего текст почтовой метки.</param>
+        <param name="ExtractAddress">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать текст адреса, помеченный пользовательской закладке с именем "енвелопеаддресс", вместо использования <paramref name="Address" /> аргумента.</param>
+        <param name="LaserTray">Необязательный <b>объект</b>. Лоток лазерного принтера. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> констант.</param>
+        <param name="PrintEPostageLabel">Необязательный <b>объект</b>. <b>True</b> для печати почтовых марок с помощью поставщика услуг Интернета.</param>
+        <param name="Vertical">Необязательный <b>объект</b>. <b>True</b> форматирует текст вертикально на метке. Используется для почтовых наклеек с азиатским языком.</param>
+        <summary>Создает новый документ с наклейками, используя параметры метки по умолчанию или заданные вами параметры. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий новый документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -170,20 +160,15 @@
         <Parameter Name="Vertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="LabelID">Адреса электронной почты код метки.</param>
-        <param name="Address">Текст надписи, адреса электронной почты.</param>
-        <param name="AutoText">Имя автотекста, который включает в себя надписью адреса электронной почты.</param>
-        <param name="ExtractAddress">
-          <b>Значение true</b> для использования текст адреса помечено посредством пользовательских закладки с именем «EnvelopeAddress» вместо использования <paramref name="Address" /> аргумент.</param>
-        <param name="LaserTray">Область лазерный принтер. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константы.</param>
-        <param name="PrintEPostageLabel">
-          <b>Значение true</b> для печати марок, с помощью поставщика обеспечение Интернета.</param>
-        <param name="Vertical">
-          <b>Значение true,</b> форматирование текста по вертикали на метку. Используется для азиатских языков наклейки.</param>
-        <summary>Создает новый документ метки, с помощью параметров метки по умолчанию или, указан. Возвращает <see cref="T:Microsoft.Office.Interop.Word._Document" /> объект, представляющий новый документ.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word._Document" />
-        </returns>
+        <param name="LabelID">Идентификация метки почтовой рассылки.</param>
+        <param name="Address">Текст метки корреспонденции.</param>
+        <param name="AutoText">Имя элемента автотекста, включающего текст почтовой метки.</param>
+        <param name="ExtractAddress"><b>Значение true</b> , чтобы использовать текст адреса, помеченный пользовательской закладке с именем "енвелопеаддресс", вместо использования <paramref name="Address" /> аргумента.</param>
+        <param name="LaserTray">Лоток лазерного принтера. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> констант.</param>
+        <param name="PrintEPostageLabel"><b>True</b> для печати почтовых марок с помощью поставщика услуг Интернета.</param>
+        <param name="Vertical"><b>True</b> форматирует текст вертикально на метке. Используется для почтовых наклеек с азиатским языком.</param>
+        <summary>Создает новый документ с наклейками, используя параметры метки по умолчанию или заданные вами параметры. Возвращает <see cref="T:Microsoft.Office.Interop.Word._Document" /> объект, представляющий новый документ.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word._Document" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -210,11 +195,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomLabels">
@@ -240,7 +225,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.CustomLabels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CustomLabels" /> коллекции, представляющей недоступны настраиваемые метки адреса электронной почты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CustomLabels" /> коллекцию, представляющую доступные настраиваемые почтовые наклейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,13 +256,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя для рассылки метки по умолчанию.</summary>
+        <summary>Возвращает или задает имя почтовой метки по умолчанию.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы найти строки для указанного встроенных метки, выберите метки в диалоговом окне Параметры наклейки (меню "Сервис", диалоговое окно Конверты и наклейки, вкладка "метки", кнопка "Параметры"). Затем нажмите кнопку сведения и посмотрите на поле имя метки содержит правильное строку, которую нужно использовать для данного свойства. Чтобы задать настраиваемую метку по умолчанию, наклейки, используйте имя метки, которое отображается в диалоговом окне сведения о или используйте <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Name" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.CustomLabel" /> объект.</para>
-          <para>Создания документа метки из объекта <b>CustomLabel</b> автоматически устанавливает для свойства <b>DefaultLabelName</b> значение имя объекта <b>CustomLabel</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы найти строку для указанной встроенной метки, выберите метку в диалоговом окне параметры метки (меню Сервис, диалоговое окно "конверты и метки", вкладка "метки", кнопка "Параметры"). Затем нажмите кнопку сведения и просмотрите поле имя метки, содержащее правильную строку, которая будет использоваться для этого свойства. Чтобы задать настраиваемую метку в качестве почтовой метки по умолчанию, используйте имя метки, которое отображается в диалоговом окне сведения, <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Name" /> или используйте свойство <see cref="T:Microsoft.Office.Interop.Word.CustomLabel" /> с объектом.</para>
+          <para>При создании нового документа с наклейками из объекта <b>CustomLabel</b> автоматически задается имя объекта <b>CustomLabel</b> в свойстве <b>дефаултлабелнаме</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultLaserTray">
@@ -306,12 +289,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPaperTray</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает по умолчанию документ, содержащий листов наклейки.</summary>
+        <summary>Возвращает или задает лоток бумаги по умолчанию, содержащий листы почтовых наклеек.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DefaultLaserTray</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>дефаултласертрай</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultPrintBarCode">
@@ -346,13 +327,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если штрих-код POSTNET добавляется Конверты и наклейки по умолчанию.</summary>
+        <summary><b>True</b> , если штрих-код POSTNET добавляется в конверты или почтовые метки по умолчанию.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для США почты. Конверты, это свойство должно быть присвоено <b>значение True,</b> прежде чем <see cref="P:Microsoft.Office.Interop.Word.Envelope.DefaultPrintFIMA" /> свойству.</para>
-          <para />
-        </remarks>
+        <remarks><para>Только для почты в США. Для конвертов этому свойству необходимо присвоить значение <b>true</b> , <see cref="P:Microsoft.Office.Interop.Word.Envelope.DefaultPrintFIMA" /> чтобы задать свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LabelOptions">
@@ -376,11 +354,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает диалоговое окно Параметры метки.</summary>
-        <remarks>
-          <para>Метод <b>LabelOptions</b> работает только в том случае, если документ — это основной документ адреса электронной почты слияния почты метки.</para>
-          <para />
-        </remarks>
+        <summary>Отображает диалоговое окно параметры метки.</summary>
+        <remarks><para>Метод <b>лабелоптионс</b> работает только в том случае, если документ является основным документом слияния почтовых наклеек.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -406,7 +382,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -441,16 +417,16 @@
         <Parameter Name="Vertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Name">Необязательный элемент <b>Object</b>. Имя метки адреса электронной почты.</param>
-        <param name="Address">Необязательный элемент <b>Object</b>. Текст для адреса метки.</param>
-        <param name="ExtractAddress">Необязательный элемент <b>Object</b>. <b>Значение true</b> для использования текста, помечено посредством закладка «EnvelopeAddress» (закладку пользовательских) как текст подписи. Если этот параметр задан, <paramref name="Address" /> и <paramref name="AutoText" /> игнорируются.</param>
-        <param name="LaserTray">Необязательный элемент <b>Object</b>. Область лазерный принтер для использования. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константу.</param>
-        <param name="SingleLabel">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати одноуровневые; <b>Значение false</b> для печати всей страницы же метки.</param>
-        <param name="Row">Необязательный элемент <b>Object</b>. Строка метки для одного метки. Если недействительный <paramref name="SingleLabel" /> имеет <b>значение False</b>.</param>
-        <param name="Column">Необязательный элемент <b>Object</b>. Столбец метки для одного метки. Если недействительный <paramref name="SingleLabel" /> имеет <b>значение False</b>.</param>
-        <param name="PrintEPostageLabel">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати марок, с помощью поставщика обеспечение Интернета.</param>
-        <param name="Vertical">Необязательный элемент <b>Object</b>. <b>Значение true,</b> печать текста по вертикали для метки. Используется для азиатских языков наклейки.</param>
-        <summary>Печать страницы меток с тем же адресом.</summary>
+        <param name="Name">Необязательный <b>объект</b>. Имя почтовой метки.</param>
+        <param name="Address">Необязательный <b>объект</b>. Текст для адреса метки.</param>
+        <param name="ExtractAddress">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать текст, помеченный закладкой "енвелопеаддресс" (пользовательская закладка), как текст метки. Если этот аргумент указан, <paramref name="Address" /> <paramref name="AutoText" /> он игнорируется.</param>
+        <param name="LaserTray">Необязательный <b>объект</b>. Лоток лазерного принтера, который будет использоваться. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константой.</param>
+        <param name="SingleLabel">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы напечатать одну метку; <b>Значение false</b> , чтобы напечатать всю страницу с одинаковой меткой.</param>
+        <param name="Row">Необязательный <b>объект</b>. Строка меток для одной метки. Недопустимо, <paramref name="SingleLabel" /> если имеет <b>значение false</b>.</param>
+        <param name="Column">Необязательный <b>объект</b>. Столбец меток для одной метки. Недопустимо, <paramref name="SingleLabel" /> если имеет <b>значение false</b>.</param>
+        <param name="PrintEPostageLabel">Необязательный <b>объект</b>. <b>True</b> для печати почтовых марок с помощью поставщика услуг Интернета.</param>
+        <param name="Vertical">Необязательный <b>объект</b>. <b>True</b> — печатает текст вертикально на метке. Используется для почтовых наклеек с азиатским языком.</param>
+        <summary>Печатает метку или страницу меток с одним и тем же адресом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -526,20 +502,16 @@
         <Parameter Name="Vertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="LabelID">Адреса электронной почты код метки.</param>
+        <param name="LabelID">Идентификация метки почтовой рассылки.</param>
         <param name="Address">Текст для адреса метки.</param>
-        <param name="ExtractAddress">
-          <b>Значение true</b> для использования текста, помечено посредством закладка «EnvelopeAddress» (закладку пользовательских) как текст подписи. Если этот параметр задан, <paramref name="Address" /> и <paramref name="AutoText" /> игнорируются.</param>
-        <param name="LaserTray">Область лазерный принтер. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> константы.</param>
-        <param name="SingleLabel">
-          <b>Значение true</b> для печати одноуровневые; <b>Значение false</b> для печати всей страницы же метки.</param>
-        <param name="Row">Строка метки для одного метки. Если недействительный <paramref name="SingleLabel" /> имеет <b>значение False</b>.</param>
-        <param name="Column">Столбец метки для одного метки. Если недействительный <paramref name="SingleLabel" /> имеет <b>значение False</b>.</param>
-        <param name="PrintEPostageLabel">
-          <b>Значение true</b> для печати марок, с помощью поставщика обеспечение Интернета.</param>
-        <param name="Vertical">
-          <b>Значение true,</b> печать текста по вертикали для метки. Используется для азиатских языков наклейки.</param>
-        <summary>Печать страницы меток с тем же адресом.</summary>
+        <param name="ExtractAddress"><b>Значение true</b> , чтобы использовать текст, помеченный закладкой "енвелопеаддресс" (пользовательская закладка), как текст метки. Если этот аргумент указан, <paramref name="Address" /> <paramref name="AutoText" /> он игнорируется.</param>
+        <param name="LaserTray">Лоток лазерного принтера. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdPaperTray" /> констант.</param>
+        <param name="SingleLabel"><b>Значение true</b> , чтобы напечатать одну метку; <b>Значение false</b> , чтобы напечатать всю страницу с одинаковой меткой.</param>
+        <param name="Row">Строка меток для одной метки. Недопустимо, <paramref name="SingleLabel" /> если имеет <b>значение false</b>.</param>
+        <param name="Column">Столбец меток для одной метки. Недопустимо, <paramref name="SingleLabel" /> если имеет <b>значение false</b>.</param>
+        <param name="PrintEPostageLabel"><b>True</b> для печати почтовых марок с помощью поставщика услуг Интернета.</param>
+        <param name="Vertical"><b>True</b> — печатает текст вертикально на метке. Используется для почтовых наклеек с азиатским языком.</param>
+        <summary>Печатает метку или страницу меток с одним и тем же адресом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -569,13 +541,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> по вертикали — Ориентация текста на азиатских Конверты и наклейки.</summary>
+        <summary><b>True</b> — вертикально расположить текст на конвертах для восточноазиатских языков и почтовых наклеек.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство работает только с адреса электронной почты метки или конверты, которые были настроены для слияния почты и применяется только к азиатских языков.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство работает только с почтовыми наклейками или конвертами, настроенными для слияния почты и применяемым только к азиатским языкам.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="Section" FullName="Microsoft.Office.Interop.Word.Section">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5c702a4f22186e2c8dd36d4c7af1c0c4030c1d81" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673669" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Section" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="15d5b626e3ad97e6bd9d5b96a9cc32a2356d9fe4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146138" /></Metadata><TypeSignature Language="C#" Value="public interface Section" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Section" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Section" />
   <TypeSignature Language="VB.NET" Value="Public Interface Section" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один раздел выбора, диапазон или документа.</summary>
-    <remarks>
-      <para>Объект <b>раздела</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Sections" /> семейства сайтов. Коллекция <b>разделах</b> включает все разделы в выделение, диапазон или документа.</para>
-      <para>Использования <b>разделов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>раздела</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> метод, чтобы добавить новый раздел в документ.</para>
-      <para>Примечание <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> и <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> свойства указанного <b>раздела</b> объекта return <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> объект.</para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельный раздел в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Объект <b>section</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Sections" /> коллекции. Коллекция <b>Sections</b> включает все разделы в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <b>разделы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>section</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> метод, чтобы добавить новый раздел в документ.</para>
+      <para>Обратите <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> внимание <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> на то, что <b></b> свойства указанного объекта Section <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> возвращают объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,11 +108,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Footers">
@@ -148,12 +138,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.HeadersFooters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> коллекции, представляющей нижние колонтитулы указанного раздела.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> коллекцию, представляющую нижние колонтитулы в указанном разделе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы вернуть коллекцию <b>HeadersFooters</b> , представляющий заголовки для указанного раздела, используйте <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы возвратить коллекцию <b>HeadersFooters</b> , представляющую заголовки для указанного раздела, используйте <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Headers">
@@ -179,12 +167,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.HeadersFooters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> коллекции, представляющей заголовки для указанного раздела.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> коллекцию, представляющую заголовки для указанного раздела.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы вернуть коллекцию <b>HeadersFooters</b> , представляющий нижние колонтитулы для указанного раздела, используйте <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы возвратить коллекцию <b>HeadersFooters</b> , представляющую нижние колонтитулы для указанного раздела, используйте <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -241,7 +227,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.PageSetup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объект, связанный с указанного раздела.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объект, связанный с указанным разделом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -269,7 +255,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,13 +286,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный раздел защищен для форм. Если раздел защищен для форм, можно выбирать и изменять текст только в полях формы.</summary>
+        <summary><b>Значение true</b> , если указанный раздел защищен для форм. Если раздел защищен для форм, можно выбирать и изменять текст только в полях формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы защитить весь документ, используйте <see cref="M:Microsoft.Office.Interop.Word._Document.Protect(Microsoft.Office.Interop.Word.WdProtectionType,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы защитить весь документ, используйте <see cref="M:Microsoft.Office.Interop.Word._Document.Protect(Microsoft.Office.Interop.Word.WdProtectionType,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -332,12 +315,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

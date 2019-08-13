@@ -1,13 +1,5 @@
 <Type Name="XMLMapping" FullName="Microsoft.Office.Interop.Word.XMLMapping">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="789b346ac01d9a48554f8869d1aadad7ba53b43b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673982" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLMapping" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9c7faf4f3e3ffccb270c1cc125874ce43681ee78" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142642" /></Metadata><TypeSignature Language="C#" Value="public interface XMLMapping" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLMapping" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLMapping" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLMapping" />
@@ -26,9 +18,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет сопоставление XML на <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта между пользовательским XML и элементом управления контентом. Сопоставление XML — это связь между текста в элементе управления содержимым и XML-элемента в хранилище пользовательских данных XML для данного документа.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод, чтобы добавить или изменить сопоставление XML для элемента управления контентом, используя строку XPath. В следующем примере задается свойство встроенных документа для автора документа, вставляет новый элемент управления контентом в активный документ и затем задает сопоставление XML для элемента управления для свойства встроенных документа.</para>
+    <summary>Представляет сопоставление XML для <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта между настраиваемыми XML и элементом управления содержимым. Сопоставление XML это ссылка между текстом в элементе управления контентом и элементом XML в пользовательском хранилище данных XML для этого документа.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод, чтобы добавить или изменить сопоставление XML для элемента управления содержимым с помощью строки XPath. В следующем примере задается встроенное свойство документа для автора документа, вставляется новый элемент управления содержимым в активный документ, а затем для сопоставления XML для элемента управления устанавливается встроенное свойство документа.</para>
       <code>&lt;span class="label"&gt;Dim objcc As ContentControl
 
 
@@ -1822,7 +1813,7 @@ If blnMap = False Then
 
 
 End If&lt;/span&gt;</code>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод, чтобы добавить или изменить сопоставление XML для элемента управления содержимым, с помощью объекта <b>CustomXMLNode</b> . В следующем примере выполняются те же действия, что и в предыдущем примере, но с помощью метода <b>SetMappingByNode</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод, чтобы добавить или изменить сопоставление XML для элемента управления содержимым с помощью объекта <b>CustomXMLNode</b> . В приведенном ниже примере выполняется та же функция, что и в предыдущем примере, но используется метод <b>сетмаппингбиноде</b> .</para>
       <code>&lt;span class="label"&gt;Dim objcc As ContentControl
 
 
@@ -3744,7 +3735,7 @@ Set objMap = objcc.XMLMapping
 
 
 blnMap = objMap.SetMappingByNode(objNode)&lt;/span&gt;</code>
-      <para>В следующем примере создает новый объект <b>CustomXMLPart</b> , загружает настраиваемые XML в его и затем создает два новых элементов управления контентом и сопоставляет друг к другой элемент XML внутри настраиваемой XML.</para>
+      <para>В приведенном ниже примере создается новый объект <b>CustomXMLPart</b> , загружается пользовательский XML-код, после чего создаются два новых элемента управления содержимым, и каждый из них сопоставляется с другим XML-элементом в настраиваемом XML-коде.</para>
       <code>&lt;span class="label"&gt;Dim objRange As Range
 
 
@@ -7842,7 +7833,7 @@ objCustomControl.XMLMapping.SetMappingByNode objCustomNode
 
 
 MsgBox objCustomControl.XMLMapping.IsMapped&lt;/span&gt;</code>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.Delete" /> метод, чтобы удалить сопоставление XML для элемента управления контентом.  При удалении сопоставления XML для элемента управления контентом только подключения между элемента управления контентом и XML-данные.  Элемент управления содержимым и XML-данные, остаются в документе.  В следующем примере удаляется сопоставление XML для всех элементов управления контентом в активном документе, отображенные.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.Delete" /> метод, чтобы удалить сопоставление XML для элемента управления содержимым.  Удаление сопоставления XML для элемента управления содержимым удаляет только соединение между элементом управления содержимым и данными XML.  В документе хранятся как элемент управления содержимым, так и данные XML.  В следующем примере показано, как удалить сопоставление XML для всех элементов управления содержимым в текущем документе, которые сопоставлены.</para>
       <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -8612,7 +8603,7 @@ For Each objCC In ActiveDocument.ContentControls
 
 
 Next&lt;/span&gt;</code>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.IsMapped" /> свойство, чтобы определить, если элемент управления содержимым сопоставление XML-узел в хранилище данных документа. В следующем примере удаляется сопоставление XML для всех сопоставленных элементов управления контентом в активный документ.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.IsMapped" /> свойство, чтобы определить, сопоставлен ли элемент управления содержимым с узлом XML в хранилище данных документа. В следующем примере показано, как удалить сопоставление XML для всех сопоставленных элементов управления содержимым в активном документе.</para>
       <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -9382,9 +9373,8 @@ For Each objCC In ActiveDocument.ContentControls
 
 
 Next&lt;/span&gt;</code>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.CustomXMLNode" /> свойство для доступа к XML-узла, с которыми сопоставляется элемента управления контентом. Использование <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.CustomXMLPart" /> часть свойства для доступа к XML-код с которыми сопоставляется элемента управления контентом. Дополнительные сведения о работе с объектов <b>CustomXMLNode</b> и <b>CustomXMLPart</b> , соответствующих объектов см.</para>
-      <para />
-    </remarks>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.CustomXMLNode" /> свойство для доступа к узлу XML, который сопоставляется с элементом управления содержимым. Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLMapping.CustomXMLPart" /> свойство, чтобы получить доступ к XML-части, с которой сопоставлен элемент управления контентом. Дополнительные сведения о работе с объектами <b>CustomXMLNode</b> и <b>CustomXMLPart</b> можно найти в разделах, посвященных соответствующим объектам.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -9438,14 +9428,12 @@ Next&lt;/span&gt;</code>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>времени</b>.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Long</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomXMLNode">
@@ -9471,11 +9459,10 @@ Next&lt;/span&gt;</code>
         <ReturnType>Microsoft.Office.Core.CustomXMLNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>CustomXMLNode</b> , представляющий настраиваемые XML-узла в хранилище данных, с которыми сопоставляется элемента управления контентом в документе.</summary>
+        <summary>Возвращает объект <b>CustomXMLNode</b> , который представляет настраиваемый узел XML в хранилище данных, к которому следует присвоить элемент управления содержимым в картах документов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В следующем примере вставляет новый элемент управления содержимым и настраиваемой XML-части в активный документ, сопоставляется узлу в пользовательской XML-части элемента управления контентом и затем задает значение сопоставленный узла XML.</para>
+        <example><para>В примере ниже показано, как вставить новый элемент управления содержимым и пользовательскую XML-часть в активный документ, сопоставить элемент управления содержимым с узлом в пользовательской XML-части, а затем задать значение сопоставленного XML-узла.</para>
           <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -11142,8 +11129,7 @@ objMap.SetMapping "/books/book/author", , objPart
 
 Set objNode = objMap.&lt;/span&gt;
 &lt;span class="label"&gt;CustomXMLNode&lt;/span&gt;
-&lt;span class="label"&gt;objNode.Text = "Matt Hink"objCC.Range.Text = objNode.Text&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;objNode.Text = "Matt Hink"objCC.Range.Text = objNode.Text&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="CustomXMLPart">
@@ -11169,13 +11155,12 @@ Set objNode = objMap.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Core.CustomXMLPart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>CustomXMLPart</b> , представляющий настраиваемую XML-часть, с которыми сопоставляется элемента управления контентом в документе.</summary>
+        <summary>Возвращает объект <b>CustomXMLPart</b> , представляющий ПОЛЬЗОВАТЕЛЬСКУЮ XML-часть, к которой относится элемент управления содержимым в картах документов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>Этот пример ссылается первого элемента управления контентом в пользовательской XML-части, в который сопоставлен и затем задает текстовое значение одного из узлов XML, содержащихся в настраиваемой XML работу и активных документов</para>
+        <example><para>В следующем примере выполняется доступ к первому элементу управления содержимым в активном документе и пользовательской XML-части, которой он сопоставлен, а затем задается текстовое значение одного из узлов XML, содержащихся в пользовательской XML-части.</para>
           <para>
-            <b>Примечание</b>: в этом примере предполагается, что по крайней мере одного элемента управления контентом в активном документе сопоставляется с пользовательской XML-части, которая содержит узлы XML, указанного в строке XPath.</para>
+            <b>Note</b>: в этом примере предполагается, что по крайней мере один элемент управления содержимым в активном документе сопоставлен с пользовательской XML-частью, СОДЕРЖАЩЕЙ узлы XML, указанные в строке XPath.</para>
           <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -11818,8 +11803,7 @@ Set objCC = ActiveDocument.ContentControls(1)
 
 Set objPart = objCC.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;CustomXMLPart&lt;/span&gt;
-&lt;span class="label"&gt;Set objNode = objPart.SelectSingleNode("/books/book/title")objNode.Text = "Mystery of the Empty Chair"&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;Set objNode = objPart.SelectSingleNode("/books/book/title")objNode.Text = "Mystery of the Empty Chair"&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -11843,13 +11827,10 @@ Set objPart = objCC.XMLMapping.&lt;/span&gt;
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет сопоставление XML из родительского элемента управления контентом.</summary>
-        <remarks>
-          <para>Эта операция удаляет сопоставление XML.  XML-данные и элемент управления содержимым остаются в документе.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В следующем примере удаляется сопоставление XML для всех элементов управления контентом в активный документ, сопоставляются в настоящее время.</para>
+        <summary>Удаляет сопоставление XML из родительского элемента управления содержимым.</summary>
+        <remarks><para>Эта операция удаляет сопоставление XML.  XML-данные и элемент управления содержимым остались в документе.</para>
+          <para> </para></remarks>
+        <example><para>В следующем примере показано, как удалить сопоставление XML для всех элементов управления содержимым в текущем документе, которые сопоставлены.</para>
           <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -12364,8 +12345,7 @@ For Each objCC In ActiveDocument.ContentControls
 
         objCC.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;Delete&lt;/span&gt;
-&lt;span class="label"&gt;End IfNext&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;End IfNext&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="IsMapped">
@@ -12391,11 +12371,10 @@ For Each objCC In ActiveDocument.ContentControls
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающий ли элемент управления содержимым в документе сопоставляется узел XML в хранилище данных XML документа. Только для чтения.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, сопоставляется ли элемент управления содержимым в документе с узлом XML в хранилище данных XML документа. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В следующем примере удаляется сопоставление XML для всех элементов управления контентом в активный документ, сопоставляются в настоящее время.</para>
+        <example><para>В следующем примере показано, как удалить сопоставление XML для всех элементов управления содержимым в текущем документе, которые сопоставлены.</para>
           <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -12782,8 +12761,7 @@ For Each objCC In ActiveDocument.ContentControls
 
     If objCC.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;IsMapped&lt;/span&gt;
-&lt;span class="label"&gt;Then        objCC.XMLMapping.Delete    End IfNext&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;Then        objCC.XMLMapping.Delete    End IfNext&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -12809,7 +12787,7 @@ For Each objCC In ActiveDocument.ContentControls
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>XMLMapping (en)</b> .</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>XmlMapping</b> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -12837,12 +12815,10 @@ For Each objCC In ActiveDocument.ContentControls
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую сопоставлений префиксов, используемых для оценки XPath для текущего сопоставления XML. Только для чтения.</summary>
+        <summary>Возвращает <b>строку</b> , которая представляет сопоставления префиксов, используемые для оценки XPath для текущего сопоставления XML. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать сопоставление для элемента управления содержимым, используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать сопоставление для элемента управления содержимым, используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetMapping">
@@ -12869,20 +12845,17 @@ For Each objCC In ActiveDocument.ContentControls
         <Parameter Name="Source" Type="Microsoft.Office.Core.CustomXMLPart" />
       </Parameters>
       <Docs>
-        <param name="XPath">Указывает строку XPath, который представляет узел XML, с которым сопоставляется элемента управления контентом. Недопустимую строку XPath вызывает ошибку времени выполнения.</param>
-        <param name="PrefixMapping">Указывает сопоставлений префиксов для использования при запрашивании выражения, содержащиеся в <paramref name="XPath" /> параметр. Если этот параметр опущен, Word использует набор сопоставлений префиксов для указанного настраиваемой XML-части в текущем документе.</param>
-        <param name="Source">Задает желаемую настраиваемые XML-данные назначить элемента управления контентом. Если этот параметр указан, выражение XPath вычисляется для всех настраиваемых XML в текущем документе и сопоставление устанавливается с первого <b>CustomXMLPart</b> , в котором разрешается выражение XPath узла XML.</param>
-        <summary>Позволяет создать или изменить сопоставление XML в элемент управления содержимым. Возвращает <b>значение True</b> , если Microsoft Office Word сопоставляет элемента управления контентом для настраиваемых XML-узле в хранилище документов настраиваемых XML-данных.</summary>
-        <returns>Логический</returns>
-        <remarks>
-          <para>Если XML сопоставление уже существует, Word заменяет существующее сопоставление XML и содержимое нового сопоставленные заменяет узел XML текст элемента управления контентом. Если указанный XPath не принимают значение узла XML в указанном пользовательской XML-части или частей, по-прежнему можно указать сопоставление, и он будет создан. Это сопоставление автоматически связывает при указанный XPath бы принимают значение узла XML в указанном настраиваемых XML-частей.</para>
+        <param name="XPath">Указывает строку XPath, представляющую узел XML, с которым сопоставляется элемент управления содержимым. Недопустимая строка XPath вызывает ошибку времени выполнения.</param>
+        <param name="PrefixMapping">Указывает сопоставления префиксов, используемые при запросе выражения, указанного в <paramref name="XPath" /> параметре. Если этот параметр опущен, Word использует набор сопоставлений префиксов для указанной пользовательской XML-части в текущем документе.</param>
+        <param name="Source">Указывает требуемые настраиваемые XML-данные, с которыми будет сопоставлен элемент управления содержимым. Если этот параметр опущен, то XPath оценивается для всех пользовательских XML-кода в текущем документе, а сопоставление устанавливается с первым <b>CustomXMLPart</b> , в котором XPath разрешается в узел XML.</param>
+        <summary>Позволяет создавать или изменять сопоставление XML для элемента управления содержимым. Возвращает <b>значение true</b> , если приложение Microsoft Office Word сопоставляет элемент управления содержимым с настраиваемым узлом XML в пользовательском хранилище XML-данных документа.</summary>
+        <returns>Boolean</returns>
+        <remarks><para>Если сопоставление XML уже существует, Word заменяет существующее сопоставление XML, а содержимое нового сопоставленного узла XML заменяет текст элемента управления содержимым. Если указанное выражение XPath не оценивается до XML-узла в указанной пользовательской части или части XML, вы можете указать сопоставление, и один из них будет создан. Это сопоставление автоматически связывается, когда заданное выражение XPath оценивается до XML-узла в заданных пользовательских XML-частях.</para>
           <para>См. также <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод.</para>
           <para>
-            <b>Заметка</b>: создание сопоставление для элемента управления контентом форматированного текста вызывает ошибку времени выполнения.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В следующем примере вставляется в пользовательской XML-части и задает XML-код для пользовательской части и затем вставка двух элементов управления контентом в начало документа и сопоставляет содержимое элементов управления содержимое XML-элементы в пользовательской части.</para>
+            <b>Note</b>: Создание сопоставления для элемента управления содержимым "форматированный текст" приводит к ошибке во время выполнения.</para>
+          <para> </para></remarks>
+        <example><para>В приведенном ниже примере показано, как вставить пользовательскую XML-часть и задать XML для настраиваемой части, а затем вставить два элемента управления содержимым в начало документа и сопоставить содержимое элементов управления содержимому элементов XML в пользовательской части.</para>
           <code>&lt;span class="label"&gt;Dim objRange As Range
 
 
@@ -15319,8 +15292,7 @@ objCustomControl.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;SetMapping&lt;/span&gt;
 &lt;span class="label"&gt;_    "/books/book/title", , objCustomPartobjRange.InsertParagraphAfterSet objRange = ActiveDocument.Paragraphs(2).RangeSet objCustomControl = ActiveDocument.ContentControls _    .Add(wdContentControlText, objRange)objCustomControl.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;SetMapping&lt;/span&gt;
-&lt;span class="label"&gt;_    "/books/book/abstract", , objCustomPart&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;_    "/books/book/abstract", , objCustomPart&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="SetMappingByNode">
@@ -15346,17 +15318,14 @@ objCustomControl.XMLMapping.&lt;/span&gt;
         <Parameter Name="Node" Type="Microsoft.Office.Core.CustomXMLNode" />
       </Parameters>
       <Docs>
-        <param name="Node">Указывает узел XML, с которым сопоставляется текущего элемента управления контентом.</param>
-        <summary>Позволяет создать или изменить сопоставление данных XML в элемент управления содержимым. Возвращает <b>значение True</b> , если Microsoft Office Word сопоставляет элемента управления контентом для настраиваемых XML-узле в хранилище документов настраиваемых XML-данных.</summary>
-        <returns>Логический</returns>
-        <remarks>
-          <para>Если сопоставление XML уже существует, а затем Word заменяет существующее сопоставление XML и содержимое нового сопоставленный XML-узла заменяет текст элемента управления контентом. См. также <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод.</para>
+        <param name="Node">Указывает узел XML, с которым будет сопоставлен текущий элемент управления содержимым.</param>
+        <summary>Позволяет создавать и изменять сопоставление данных XML для элемента управления содержимым. Возвращает <b>значение true</b> , если приложение Microsoft Office Word сопоставляет элемент управления содержимым с настраиваемым узлом XML в пользовательском хранилище XML-данных документа.</summary>
+        <returns>Boolean</returns>
+        <remarks><para>Если сопоставление XML уже существует, Word заменяет существующее сопоставление XML, а содержимое нового сопоставленного узла XML заменяет текст элемента управления содержимым. См. также <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод.</para>
           <para>
-            <b>Заметка</b>: создание сопоставление для элемента управления контентом форматированного текста вызывает ошибку времени выполнения.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В следующем примере задается свойство встроенных документа для автора документа, вставляет новый элемент управления контентом в активный документ и затем задает сопоставление XML для элемента управления для свойства встроенных документа.</para>
+            <b>Note</b>: Создание сопоставления для элемента управления содержимым "форматированный текст" приводит к ошибке во время выполнения.</para>
+          <para> </para></remarks>
+        <example><para>В следующем примере задается встроенное свойство документа для автора документа, вставляется новый элемент управления содержимым в активный документ, а затем для сопоставления XML для элемента управления устанавливается встроенное свойство документа.</para>
           <code>&lt;span class="label"&gt;Dim objcc As ContentControl
 
 
@@ -17278,7 +17247,7 @@ Set objMap = objcc.XMLMapping
 
 
 blnMap = objMap.SetMappingByNode(objNode)&lt;/span&gt;</code>
-          <para>В следующем примере создается пользовательской XML-части и создает два элемента управления контентом и сопоставляет все элементы управления содержимым в настраиваемой XML-узла.</para>
+          <para>В следующем примере создается пользовательская XML-часть, а затем создаются два элемента управления содержимым и сопоставляются все элементы управления содержимым с определенным узлом в настраиваемом XML-файле.</para>
           <code>&lt;span class="label"&gt;Dim objRange As Range
 
 
@@ -19843,8 +19812,7 @@ objCustomControl.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;SetMappingByNode&lt;/span&gt;
 &lt;span class="label"&gt;objCustomNodeobjRange.InsertParagraphAfterSet objRange = ActiveDocument.Paragraphs(2).RangeSet objCustomNode = objCustomPart.SelectSingleNode _    ("/books/book/abstract")Set objCustomControl = ActiveDocument.ContentControls _    .Add(wdContentControlText, objRange)objCustomControl.XMLMapping.&lt;/span&gt;
 &lt;span class="label"&gt;SetMappingByNode&lt;/span&gt;
-&lt;span class="label"&gt;objCustomNode&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;objCustomNode&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="XPath">
@@ -19870,14 +19838,11 @@ objCustomControl.XMLMapping.&lt;/span&gt;
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую выражение XPath для сопоставления XML, которое оценивается в настоящее время сопоставленный узла XML. Только для чтения.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую XPath для сопоставления XML, которое вычисляется в текущий сопоставленный узел XML. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать сопоставление для элемента управления содержимым, используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод. Если сопоставление не включена, с помощью этого свойства возвращает ошибку.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В следующем примере проверяется ли первого элемента управления контентом в активный документ представляет собой элемент управления даты и ли строка XPath задано значение свойства конкретного встроенных документа. Затем сопоставление устанавливается на элемент управления, если не соответствует выражение XPath, а элемент управления представляет собой элемент управления даты.</para>
+        <remarks><para>Чтобы задать сопоставление для элемента управления содержимым, используйте <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMapping(System.String,System.String,Microsoft.Office.Core.CustomXMLPart)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.XMLMapping.SetMappingByNode(Microsoft.Office.Core.CustomXMLNode)" /> метод. Если сопоставление неактивно, при использовании этого свойства возвращается ошибка.</para>
+          <para> </para></remarks>
+        <example><para>В следующем примере проверяется, является ли первый элемент управления содержимым в активном документе элементом управления "Дата", а также задана ли для строки XPath заданное встроенное свойство документа. Затем устанавливается сопоставление для элемента управления, если выражение XPath не сопоставлено, а элемент управления является элементом управления "Дата".</para>
           <code>&lt;span class="label"&gt;Dim objCC As ContentControl
 
 
@@ -20776,8 +20741,7 @@ Set objMap = objCC.XMLMapping
 
 If (objCC.Type = wdContentControlDate) And (objMap.&lt;/span&gt;
 &lt;span class="label"&gt;XPath&lt;/span&gt;
-&lt;span class="label"&gt;&amp;lt;&amp;gt; _        "/ns1:coreProperties[1]/ns0:createdate[1]") Then    blnMap = objMap.SetMapping(XPath:="/ns1:coreProperties[1]/ns0:createdate[1]")    If blnMap = False Then        MsgBox "Unable to map the content control."    End IfEnd If&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;&amp;lt;&amp;gt; _        "/ns1:coreProperties[1]/ns0:createdate[1]") Then    blnMap = objMap.SetMapping(XPath:="/ns1:coreProperties[1]/ns0:createdate[1]")    If blnMap = False Then        MsgBox "Unable to map the content control."    End IfEnd If&lt;/span&gt;</code></example>
       </Docs>
     </Member>
   </Members>

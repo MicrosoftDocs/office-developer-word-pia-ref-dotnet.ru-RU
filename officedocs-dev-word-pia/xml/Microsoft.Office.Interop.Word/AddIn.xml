@@ -1,13 +1,5 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Interop.Word.AddIn">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="eca0625fe8de93d38c8fe893e6a66c3f0bf7b440" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672550" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AddIn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="695249a505a14baf5625853d5db3725ed54c358e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144675" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AddIn" />
   <TypeSignature Language="VB.NET" Value="Public Interface AddIn" />
@@ -26,16 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одной надстройки, установлен или не установлен.</summary>
-    <remarks>
-      <para>Объект <b>AddIn</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> семейства сайтов. Коллекция <b>AddIns</b> содержит все доступные надстройки для Microsoft Word, независимо от того, является ли они в настоящее время загрузки. Коллекция <b>AddIns</b> включает в себя глобальных шаблонов или Word библиотеки надстроек (файлы WLL) отображается в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
-      <para>Использования <b>AddIns</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса, чтобы возвратить объект <b>AddIn</b> . Должен полностью совпадать орфографии (но не обязательно заглавные буквы) из имени, как показано в диалоговом окне Шаблоны и надстройки.</para>
+    <summary>Представляет одну надстройку: установлена или не установлена.</summary>
+    <remarks><para>Объект <b>ADDIN</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции. Коллекция <b>AddIns</b> содержит все надстройки, доступные в Microsoft Word, независимо от того, загружены ли они в данный момент. Коллекция <b>AddIns</b> включает в себя глобальные шаблоны или библиотеки надстроек Word (вллс), отображаемые в диалоговом окне Шаблоны и надстройки (меню Сервис).</para>
+      <para>Используйте <b>надстройки</b>(<paramref name="index" />), где <paramref name="index" /> — это имя надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в диалоговом окне Шаблоны и надстройки.</para>
       <para>Номер индекса представляет положение надстройки в списке надстроек в диалоговом окне Шаблоны и надстройки.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метод, чтобы добавить надстройку в список Доступные надстройки и (необязательно) установите его с помощью <paramref name="Install" /> аргумент.</para>
-      <para>Для установки надстройки, перечислены в списке Доступные надстройки, используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> свойство.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> свойства, чтобы определить, является ли объект <b>AddIn</b> шаблона или WLL.</para>
-      <para />
-    </remarks>
+      <para>С помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода добавьте надстройку в список доступных надстроек и (необязательно) установите ее с помощью <paramref name="Install" /> аргумента.</para>
+      <para>Чтобы установить надстройку, отображаемую в списке доступных надстроек, используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> свойство.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> свойство, чтобы определить, является ли объект <b>ADDIN</b> шаблоном или общедоступным.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -61,7 +51,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -89,12 +79,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, является ли указанный надстройки автоматически загружается при запуске Microsoft Word.</summary>
+        <summary>Возвращает значение, указывающее, загружается ли указанная надстройка автоматически при запуске Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Надстройки, расположенной в папке автозагрузки в папке программы Word, автоматически загружаются.</para>
-          <para />
-        </remarks>
+        <remarks><para>Надстройки, расположенные в папке автозагрузки в папке Word Program, загружаются автоматически.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Compiled">
@@ -120,12 +108,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, является ли указанный надстройки надстройки библиотеки Microsoft Word (WLL).</summary>
+        <summary>Возвращает значение, указывающее, является ли указанная надстройка библиотекой надстроек Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный надстройка не WLL, — это шаблон.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанная надстройка не является общедоступной, то она является шаблоном.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -151,11 +137,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -179,7 +165,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
+        <summary>Удаляет указанный <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,7 +192,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, представляющее положение элемента в <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> семейства сайтов.</summary>
+        <summary>Возвращает значение, представляющее положение элемента в <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -237,11 +223,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее <b>значение True,</b> Если установлен указанного надстройки (загружен).</summary>
+        <summary>Возвращает или задает значение <b>true</b> , если указанная надстройка установлена (загружена).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Надстройки, которые загружаются выбраны в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para> Надстройки 
-          <para>Uninstalled включены в <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> семейства сайтов. Чтобы удалить шаблон или WLL из коллекции <b>AddIns</b> , применение <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> метод <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта (имя надстройки удаляется из диалогового окна Шаблоны и надстройки). Чтобы выгрузить все шаблоны и файлы WLL, применение <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> метод в коллекцию <b>AddIns</b> .</para><para /></remarks>
+        <remarks><para>Загруженные надстройки выбираются в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
+          <para>В <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию включены неустановленные надстройки. Чтобы удалить шаблон или переключать из коллекции <b>AddIns</b> , примените к <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекту метод (имя надстройки будет удалено из диалогового окна шаблоны и надстройки). Чтобы выгрузить все шаблоны и Вллс, <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> примените метод к коллекции <b>AddIns</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -267,7 +253,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее имя указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
+        <summary>Возвращает значение, которое указывает имя указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -295,7 +281,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, которое представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
+        <summary>Возвращает значение, представляющее родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -323,12 +309,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, URL-адрес для указанной <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
+        <summary>Возвращает значение, указывающее URL-адрес указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не включает конечный символ косой черты — например, "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления конечные косую черту символов, несмотря на то, что свойство <b>PathSeparator</b> параметры по умолчанию для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+        <remarks><para>Путь не включает замыкающую косую черту вперед, например "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления знака замыкающей косой черты, несмотря на то, что свойство <b>пассепаратор</b> по умолчанию имеет\)обратную косую черту (.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

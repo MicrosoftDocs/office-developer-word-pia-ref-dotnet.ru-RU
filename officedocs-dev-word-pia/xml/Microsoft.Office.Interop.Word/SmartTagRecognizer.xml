@@ -1,13 +1,5 @@
 <Type Name="SmartTagRecognizer" FullName="Microsoft.Office.Interop.Word.SmartTagRecognizer">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a1596270bff23eea1f59ab9bdc76d1e9433b328f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672537" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTagRecognizer" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4f6682dbac9852e24913ff87211561eae8bef090" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143982" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagRecognizer" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagRecognizer" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTagRecognizer" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет компоненты, которые метка текст с типами данных.</summary>
-    <remarks>
-      <para>Компонент адреса (на английском языке) смарт-тега содержит распознавателями улицы, города, состояние и ПОЧТОВЫЙ индекс, наряду с другими адреса связанных элементов. Когда пользователь активирует компонент в коде или с помощью вкладки смарт-тегов в диалоговом окне Автозамена, Microsoft Word, что подпись, которая соответствует эти элементы в документе.</para>
+    <summary>Представляет установленные компоненты, которые помечают текст типами данных.</summary>
+    <remarks><para>Компонент смарт-тега Address (английский) содержит распознаватели для улицы, города, региона и почтового индекса, а также другие элементы, связанные с адресом. Когда пользователь активирует установленный компонент либо с помощью кода, либо с помощью вкладки смарт-теги в диалоговом окне автозамены, Microsoft Word помечает текст, который соответствует этим элементам в документе.</para>
       <para>
-        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <see cref="T:Microsoft.Office.Interop.Word.SmartTagAction" />, и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> , то есть каждого элемента, распознает смарт-тег компонент — это объект <b>SmartTagType</b> связанные объекты. К примеру «Город» в компоненте смарт-тег адрес является объектом определенного <b>SmartTagType</b> . Тип смарт-тега city имеет связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тег, который распознает смарт-теги типа «Город» в документах) и <b>SmartTagAction</b> (часть смарт-тега компонента, предоставляющий действия связанные с тип определенный смарт-тег, который может включать поиск распознанных Город в Microsoft MapPoint на MSN). Поместить просто, средства распознавания делает пометки, обработчика события предоставляет функциональные возможности конечных пользователей и что связывает их является типом смарт-тега, они работают.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.SmartTagRecognizers.Item(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizers" /> семейства сайтов, чтобы возвратить объект <b>SmartTagRecognizer</b> . После возвращения объект <b>SmartTagRecognizer</b> , можно определить, включены ли для приложения распознавателями смарт-тег.</para>
-      <para />
-    </remarks>
+        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <see cref="T:Microsoft.Office.Interop.Word.SmartTagAction" />и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекты связаны в том, что каждый элемент, распознаваемый компонентом смарт-тега, является объектом <b>smartTagType</b> . Например, "City" в компоненте "адрес смарт-тега" — это определенный объект <b>smartTagType</b> . Тип смарт-тега City содержит связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тега, который распознает смарт-теги типа "City" в документах) и объекты <b>SmartTagAction</b> (часть компонента смарт-тега, предоставляющая действия относится к определенному типу смарт-тега, который может включать Поиск известного города в Microsoft MapPoint в MSN. Отметьте, что распознаватель выполняет маркировку, обработчик действий обеспечивает функцию конечного пользователя, а то, что объединяет их, это тип смарт-тега, над которым они работают.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagRecognizers.Item(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizers" /> коллекции, чтобы вернуть один объект <b>SmartTagRecognizer</b> . После возврата объекта <b>SmartTagRecognizer</b> можно определить, включены ли распознаватели смарт-тегов для приложения.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -93,7 +83,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает метку, которая идентифицирует средства распознавания указанного смарт-тег.</summary>
+        <summary>Возвращает метку, которая определяет заданный распознаватель смарт-тегов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -124,11 +114,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Enabled">
@@ -163,8 +153,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если смарт-тег средства распознавания включена.</summary>
+        <summary><b>Значение true</b> , если распознаватель смарт-тегов включен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,7 +215,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -259,10 +248,8 @@
       <Docs>
         <summary>Получает программный идентификатор (ProgID) для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para>
-          <para />
-        </remarks>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

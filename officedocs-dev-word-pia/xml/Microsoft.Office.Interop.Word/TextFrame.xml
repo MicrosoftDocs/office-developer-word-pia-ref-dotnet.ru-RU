@@ -1,13 +1,5 @@
 <Type Name="TextFrame" FullName="Microsoft.Office.Interop.Word.TextFrame">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="43a95d54648a4f84b9738139489698d0d40d0080" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672698" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TextFrame" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9dc205fa2eb96a394cd184a865635344805cf9be" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143821" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextFrame" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextFrame" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextFrame" />
@@ -26,13 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет текстовый фрейм в <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта. Содержит текст в текстовой рамки, а также свойства, которые управляют полей и ориентации рамки.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> свойство для возврата объекта <b>TextFrame</b> для фигуры. <see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста в элементе frame указанный текст.</para>
+    <summary>Представляет текстовую рамку в <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекте. Содержит текст в текстовом фрейме, а также свойства, управляющие полями и ориентацией текстового фрейма.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> свойство, чтобы возвратить объект <b>TextFrame</b> для фигуры. <see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста в заданном текстовом фрейме.</para>
       <para>
-        <b>Примечание</b> не поддерживают некоторые фигуры текстом (линии, полилинии, изображения и объекты OLE, например). Если для возвращения или задания свойства, которые управляют текстом в фрагмент текста для этих объектов, возникает ошибка.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> свойства, чтобы определить, содержит ли текст надписи.</para> Текстовые рамки 
-      <para>могут быть связаны друг с другом, чтобы текст перетекал из рамки одной фигуры в текстовой рамке другую фигуру. Использование <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> и <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> свойства, чтобы связать текстовые рамки.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.Range" /> связан объект, представляющий весь материал, который осуществляется между текстовые рамки.</para><para /></remarks>
+        <b>Note (Примечание</b> )  Некоторые фигуры не поддерживают присоединенный текст (например, линии, полилинии, изображения и объекты OLE). Если вы попытаетесь вернуть или задать свойства, которые управляют текстом в текстовом фрейме для этих объектов, возникает ошибка.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> свойство, чтобы определить, содержит ли текстовая рамку текст.</para>
+      <para>Текстовые фреймы можно связывать друг с другом, чтобы текст перетекать из текстового фрейма одной фигуры в текстовую рамку другой фигуры. Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> и <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> для связывания текстовых фреймов.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью, перенаправляемую между связанными текстовыми рамками.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,7 +82,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее ли автоматически изменять размер фрагмент текста.</summary>
+        <summary>Возвращает или задает <b>целое число</b> , которое указывает, изменяется ли размер текстового фрейма автоматически.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,11 +108,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Прерывается прямая ссылка для frame указанный текст, если существует таких ссылок.</summary>
-        <remarks>
-          <para>Этот метод для применения к фигуры середину цепочки фигур с помощью связанных текстовых кадров разрываются цепочки, отправляемых из двух наборов связанные фигуры. Весь текст, тем не менее, останутся первого ряда связанные фигуры.</para>
-          <para />
-        </remarks>
+        <summary>Разбивает ссылку вперед для указанного текстового фрейма, если такая ссылка существует.</summary>
+        <remarks><para>Применение этого метода к фигуре в середине цепочки фигур со связанными текстовыми рамками приведет к разрыву цепочки, оставив два набора связанных фигур. Однако весь текст останется в первом ряду связанных фигур.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Column">
@@ -145,13 +136,10 @@
         <ReturnType>Microsoft.Office.Core.TextColumn2</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, который представляет столбцы фрейма указанный текст.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.TextColumn2" /> Объект, который представляет столбцы фрейма указанный текст.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, представляющий столбцы указанного текстового фрейма.</summary>
+        <value><see cref="T:Microsoft.Office.Core.TextColumn2" /> Объект, представляющий столбцы указанного текстового фрейма.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ContainingRange">
@@ -177,7 +165,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью в серии из фигур с помощью связанных текстовых рамок, к которым принадлежит frame указанный текст.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью в наборе фигур со связанными текстовыми фреймами, к которым относится заданная текстовая рамка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,11 +193,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DeleteText">
@@ -233,7 +221,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет текст из фрагмент текста и всех связанных свойств текста, включая атрибуты шрифта.</summary>
+        <summary>Удаляет текст из текстового фрейма и все связанные с ним свойства текста, включая атрибуты шрифта.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -260,8 +248,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры текст, связанный с ним.</summary>
+        <summary><b>Имеет значение true</b> , если указанная фигура имеет связанный с ней текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -292,12 +279,10 @@
         <ReturnType>Microsoft.Office.Core.MsoHorizontalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает горизонтальное выравнивание текста в рамке.</summary>
-        <value>Горизонтальное выравнивание текста в рамке.</value>
-        <remarks>
-          <para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" />.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает горизонтальное выравнивание текста в текстовом фрейме.</summary>
+        <value>Горизонтальное выравнивание текста в текстовом фрейме.</value>
+        <remarks><para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MarginBottom">
@@ -326,7 +311,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между нижней части рамки и в нижней части inscribed прямоугольник с текстом фигуры.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между нижней частью текстового фрейма и нижней частью прямоугольника инскрибед фигуры, содержащей текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,7 +342,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) от левого края рамки и левой границей inscribed прямоугольника, который содержит текст фигуры.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между левым краем текстового фрейма и левым краем прямоугольника инскрибед фигуры, содержащей текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -388,7 +373,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между правым краем рамки и правому краю элемента inscribed прямоугольник с текстом фигуры.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между правым краем текстового фрейма и правым краем прямоугольника инскрибед фигуры, содержащей текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -419,7 +404,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между верхней части текстового фрейма и в верхней части inscribed прямоугольник с текстом фигуры.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между верхней частью текстового фрейма и верхней частью прямоугольника инскрибед фигуры, содержащей текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -481,12 +466,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает текст в текстовой рамке не следует поворот при вращаться фигуры.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.MsoTriState" /> объекта.</value>
-        <remarks>
-          <para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />. Чтобы задать это свойство можно использовать константы <b>MsoTriState</b><b>msoFalse</b> и <b>msoTrue</b> .</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает значение, указывающее, следует ли поворачивать текст в текстовом фрейме при вращении фигуры.</summary>
+        <value>Объект <see cref="T:Microsoft.Office.Core.MsoTriState" />.</value>
+        <remarks><para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />. Для задания этого свойства можно использовать только константы <b>MsoTriState</b> <b>мсофалсе</b> и <b>мсотруе</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Orientation">
@@ -515,36 +498,34 @@
         <ReturnType>Microsoft.Office.Core.MsoTextOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ориентации текста внутри фрейма.</summary>
+        <summary>Возвращает или задает ориентацию текста внутри фрейма.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />может быть одной из этих констант <b>мсотексториентатион</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />может иметь одно из следующих констант <b>MsoTextOrientation</b> . </para>
-          <para>
-            <b>msoTextOrientationDownward </b>
+            <b>мсотексториентатиондовнвард</b>
           </para>
           <para>
-            <b>msoTextOrientationHorizontal </b>
+            <b>мсотексториентатионхоризонтал</b>
           </para>
           <para>
-            <b>msoTextOrientationHorizontalRotatedFarEast </b>
+            <b>мсотексториентатионхоризонталротатедфареаст</b>
           </para>
           <para>
-            <b>msoTextOrientationMixed </b>
+            <b>мсотексториентатионмиксед</b>
           </para>
           <para>
-            <b>msoTextOrientationUpward</b>
+            <b>мсотексториентатионупвард</b>
           </para>
           <para>
-            <b> msoTextOrientationVertical </b>
+            <b>мсотексториентатионвертикал</b>
           </para>
           <para>
-            <b>msoTextOrientationVerticalFarEast</b>
+            <b>мсотексториентатионвертикалфареаст</b>
           </para>
-          <para>некоторые из перечисленных выше констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para>Можно установить ориентацию для фрагмент текста или диапазон или выбора, выполняемыми в рамке. Сведения о различиях между фрагмент текста и текстовое поле в разделе <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект.</para>
-          <para />
-        </remarks>
+          <para>Некоторые из перечисленных выше констант могут быть недоступны, в зависимости от того, какой языковой параметр (например, Английский (США)) выбран или установлен.</para>
+          <para>Можно задать ориентацию для текстового фрейма или диапазона или выделения, которые происходят внутри текстового фрейма. Сведения о различиях между текстовыми и текстовыми рамками приведены в <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> разделе Object.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Overflowing">
@@ -570,8 +551,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст внутри фрейма указанный текст не все размеру в кадре.</summary>
+        <summary><b>Значение true</b> , если текст внутри указанной текстовой рамки не подбирается в рамке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -599,7 +579,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий родительскую фигуру рамки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий родительскую фигуру текстового фрейма.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -630,16 +610,10 @@
         <ReturnType>Microsoft.Office.Core.MsoPathFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает тип пути для frame указанный текст.</summary>
-        <value>Тип пути для frame указанный текст.</value>
-        <remarks>
-          <para>Значение этого свойства может иметь одно из следующих <see cref="T:Microsoft.Offic.Core.MsoPathType" /> констант:</para>
+        <summary>Получает или задает тип пути для указанного текстового фрейма.</summary>
+        <value>Тип пути для указанного текстового фрейма.</value>
+        <remarks><para>Значение этого свойства может быть одной из следующих <see cref="T:Microsoft.Offic.Core.MsoPathType" /> констант:</para>
           <list type="bullet">
-            <item>
-              <para>
-                <b>msoPathTypeNone</b>
-              </para>
-            </item>
             <item>
               <para>
                 <b>msoPathType1</b>
@@ -662,12 +636,16 @@
             </item>
             <item>
               <para>
-                <b>msoPathTypeMixed</b>
+                <b>мсопастипемиксед</b>
+              </para>
+            </item>
+            <item>
+              <para>
+                <b>мсопастипеноне</b>
               </para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Previous">
@@ -724,7 +702,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст в элементе frame указанный текст.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст в указанном текстовом фрейме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -752,12 +730,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ThreeDFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, содержащий объема параметры форматирования для frame указанный текст.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, содержащий объема параметры форматирования для frame указанный текст.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который содержит объемные свойства форматирования указанного текстового фрейма.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> Объект, содержащий объемные свойства форматирования для указанного текстового фрейма.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ValidLinkTarget">
@@ -783,13 +759,11 @@
         <Parameter Name="TargetTextFrame" Type="Microsoft.Office.Interop.Word.TextFrame" />
       </Parameters>
       <Docs>
-        <param name="TargetTextFrame">Требуется <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объекта. Frame конечного текста, к которому вы хотите связаться frame указанный текст.</param>
-        <summary>Определяет, могут быть связаны рамки одной фигуры с рамки другую фигуру.</summary>
+        <param name="TargetTextFrame">Обязательный <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект. Целевой текстовый фрейм, с которым требуется связать заданный текстовый фрейм.</param>
+        <summary>Определяет, можно ли связать текстовый фрейм одной фигуры с текстовым фреймом другой фигуры.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Свойство <b>TextFrame</b> возвращает <b>значение True,</b> Если <paramref name="TargetTextFrame" /> — это допустимый конечный объект. Возвращает <b>значение False</b> , если <paramref name="TargetTextFrame" /> уже содержит текст или уже связан или не поддерживает фигуры текстом.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>TextFrame</b> возвращает <b>значение true</b> , <paramref name="TargetTextFrame" /> если значение является допустимым целевым объектом. Возвращает <b>значение false</b> , <paramref name="TargetTextFrame" /> если элемент уже содержит текст или уже связан, или если фигура не поддерживает вложенный текст.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalAnchor">
@@ -818,10 +792,8 @@
         <ReturnType>Microsoft.Office.Core.MsoVerticalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает константой <b>MsoVerticalAnchor</b> , представляющий вертикальное выравнивание текста внутри фигуры. Для чтения и записи.</summary>
-        <value>
-          <b>MsoVerticalAnchor</b>
-        </value>
+        <summary>Возвращает или задает константу <b>мсовертикаланчор</b> , представляющую вертикальное выравнивание текста в фигуре. Для чтения и записи.</summary>
+        <value><b>MsoVerticalAnchor</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -851,12 +823,10 @@
         <ReturnType>Microsoft.Office.Core.MsoWarpFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или устанавливает формат искажение (как текст деформации) для frame указанный текст.</summary>
-        <value>Искажение формат (как текст деформации) для frame указанный текст.</value>
-        <remarks>
-          <para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoWarpFormat" />.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает формат деформации (способ деформации текста) для указанного текстового фрейма.</summary>
+        <value>Формат деформации (способ деформации текста) для указанного текстового фрейма.</value>
+        <remarks><para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoWarpFormat" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WordWrap">
@@ -885,14 +855,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Word охватывает латиница середину слова в указанном абзацев или текстовые рамки.</summary>
+        <summary><b>True</b> , если Microsoft Word заключает текст на латинице в середине слова в указанных абзацах или текстовых фреймах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>WordWrap</b> возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев или текстовые рамки.</para>
-          <para>Этот использования могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>WordWrap</b> возвращает <b>вдундефинед</b> , если для него задано <b>значение true</b> только для некоторых заданных абзацев или текстовых фреймов.</para>
+          <para>Это может быть недоступно в зависимости от того, какой язык (например, английский) выбран или установлен.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

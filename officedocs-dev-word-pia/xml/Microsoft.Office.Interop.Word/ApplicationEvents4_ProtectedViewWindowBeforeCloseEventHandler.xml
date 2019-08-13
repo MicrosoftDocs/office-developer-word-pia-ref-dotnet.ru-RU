@@ -1,13 +1,5 @@
 <Type Name="ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler" FullName="Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2da20928e13bb46286ad0de367984baa39c54808" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674169" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler(ProtectedViewWindow PvWindow, int CloseReason, out bool Cancel);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d540bdcf50e7d23cbce5ad054d121597300aa736" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144738" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler(ProtectedViewWindow PvWindow, int CloseReason, out bool Cancel);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler(PvWindow As ProtectedViewWindow, CloseReason As Integer, ByRef Cancel As Boolean)" />
@@ -36,11 +28,10 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="PvWindow">Окно защищенный просмотр, закрыто.</param>
-    <param name="CloseReason">Константы в <see cref="T:Microsoft.Office.Interop.Word.WdProtectedViewCloseReason" /> перечисления, которое указывает причину защищенный просмотр окно закрывается.</param>
-    <param name="Cancel">
-      <b>значение false,</b> при возникновении события. Если этот аргумент задает процедуру события значение <b>true</b>, окно не закрывается при завершения процедуры. NoteIf вызывается событие <b>ProtectedViewWindowsBeforeClose</b> как часть <see cref="M:Microsoft.Office.Interop.Word.ProtectedViewWindow.Edit(System.Object@,System.Object@,System.Object@)" /> метод параметру <paramref name="Cancel" /><b>значения true</b> создает никаких действий.</param>
-    <summary>Тип <b>делегата</b> , используемый для добавления обработчика события для <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.ProtectedViewWindowBeforeClose" /> события. <b>ProtectedViewWindowBeforeClose</b> событие происходит непосредственно перед защищенный просмотр окна или документа в защищенный просмотр окно закрывается.</summary>
+    <param name="PvWindow">Закрытое окно защищенного просмотра.</param>
+    <param name="CloseReason">Константа в <see cref="T:Microsoft.Office.Interop.Word.WdProtectedViewCloseReason" /> перечислении, указывающая причину закрытия окна защищенного просмотра.</param>
+    <param name="Cancel"><b>false</b> при возникновении события. Если процедура события устанавливает для этого аргумента <b>значение true</b>, окно не закрывается после завершения процедуры. Нотеиф событие <b>протектедвиеввиндовсбефореклосе</b> вызывается как часть <see cref="M:Microsoft.Office.Interop.Word.ProtectedViewWindow.Edit(System.Object@,System.Object@,System.Object@)" /> метода, при установке <paramref name="Cancel" /> для true не <b>выполняется</b> никаких действий.</param>
+    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.ProtectedViewWindowBeforeClose" /> для события. Событие <b>протектедвиеввиндовбефореклосе</b> возникает сразу же перед закрытием окна защищенного представления или документа в защищенном окне просмотра.</summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

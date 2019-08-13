@@ -1,13 +1,5 @@
 <Type Name="UndoRecord" FullName="Microsoft.Office.Interop.Word.UndoRecord">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="cad0a001261dae8c6e1145efa4c99df630fc70b1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673309" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface UndoRecord" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dccd67ac1bae806d140ca00b07a8119ac1166895" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143793" /></Metadata><TypeSignature Language="C#" Value="public interface UndoRecord" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UndoRecord" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.UndoRecord" />
   <TypeSignature Language="VB.NET" Value="Public Interface UndoRecord" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Предоставляет точку входа в стеке отмены.</summary>
+    <summary>Предоставляет точку входа в стек отмены.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,12 +46,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word 2010.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word 2010.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word 2010.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -85,14 +74,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание!</b>это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomRecordLevel">
@@ -118,12 +105,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее количество вызовов настраиваемой отмены действия, которые в настоящее время активно.</summary>
-        <value>Указывает количество вызовов настраиваемой отмены действия, которые в настоящее время активно.</value>
-        <remarks>
-          <para>Только для чтения. Если нет настраиваемых отменить действие не активны, это свойство присваивается нулевое значение.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, задающее количество пользовательских вызовов действий отмены, которые активны в данный момент.</summary>
+        <value>Указывает количество пользовательских вызовов действий отмены, которые активны в данный момент.</value>
+        <remarks><para>Только для чтения. Если настраиваемое действие отмены не активно, для этого свойства задано значение ноль.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomRecordName">
@@ -149,12 +134,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает строку, которая определяет запись, которая отображается в стеке отмены после завершения всех действий по настраиваемой отмены.</summary>
-        <value>Определяет элемент, который отображается в стеке отмены завершены все настраиваемые отмены действия.</value>
-        <remarks>
-          <para>Только для чтения. Если вложенные пользовательских записей отмены в других пользовательских записей отмены, это свойство определяет, какие строка отображается в стеке отмены после всех настраиваемых завершены действия отмены. Если несколько вызовов <see cref="M:Microsoft.Office.Interop.Word.UndoRecord.StartCustomRecord" /> метод вложены, этим свойством возвращается строка, указанный с первого звонка. Если никакие действия не активны, свойство возвращает пустую строку.</para>
-          <para />
-        </remarks>
+        <summary>Получает строку, указывающую запись, которая отображается в стеке отмены после завершения всех пользовательских действий отмены.</summary>
+        <value>Указывает запись, которая отображается в стеке отмены после завершения всех пользовательских действий отмены.</value>
+        <remarks><para>Только для чтения. Если настраиваемые записи отмены вложены в другие настраиваемые записи отмены, это свойство указывает строку, которая отображается в стеке отмены после завершения всех настраиваемых действий отмены. Если несколько вызовов <see cref="M:Microsoft.Office.Interop.Word.UndoRecord.StartCustomRecord" /> метода являются вложенными, это свойство возвращает строку, заданную первым вызовом. Если действие не активно, свойство возвращает пустую строку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EndCustomRecord">
@@ -178,7 +161,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Завершает создание настраиваемой отмены записи.</summary>
+        <summary>Завершает создание настраиваемой записи отмены.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -205,13 +188,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли настраиваемых отменить действие записываются.</summary>
-        <value>
-          <b>значение true,</b> Если записываются действия с настраиваемой отмены; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает значение, указывающее, записано ли настраиваемое действие отмены.</summary>
+        <value><b>значение true</b> , если настраиваемое действие отмены записывается; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -237,9 +217,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.UndoRecord" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.UndoRecord" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.UndoRecord" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.UndoRecord" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -265,13 +244,11 @@
         <Parameter Name="Name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">Задает имя настраиваемой отмены записи. Эта строка ограничена 64 символов. Если указано более длинные строки Строка усекается до 64 символов.</param>
-        <summary>Инициирует создания настраиваемой отмены записи.</summary>
-        <remarks>
-          <para>Если <paramref name="Name" /> параметр опущен, или пустая строка, Word 2010 использует имя первого команда выполнена как имя записи отмены.</para>
-          <para>Этот метод начинает создания настраиваемой отмены запись, которая записывает все действия, выполнить, чтобы приложение во время его активности в разделе записи, определяемый по имени.</para>
-          <para />
-        </remarks>
+        <param name="Name">Задает имя настраиваемой записи отмены. Эта строка ограничена 64 символами. Если указана более длинная строка, строка усекается до 64 символов.</param>
+        <summary>Инициирует создание настраиваемой записи отмены.</summary>
+        <remarks><para>Если <paramref name="Name" /> параметр опущен или содержит пустую строку, Word 2010 использует имя первой команды, выполняемой в качестве имени записи отмены.</para>
+          <para>Этот метод начинает создание настраиваемой записи отмены, которая записывает все действия, выполненные в приложении, пока она активна в записи, определенной именем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

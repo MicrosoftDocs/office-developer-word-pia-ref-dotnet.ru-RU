@@ -1,13 +1,5 @@
 <Type Name="Subdocuments" FullName="Microsoft.Office.Interop.Word.Subdocuments">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a21d5c2632a3938485eff78ac0f2f1d8a922befc" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672800" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Subdocuments : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ddd1247b7607cf6fdec9c86653bd6de16fa1156f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143919" /></Metadata><TypeSignature Language="C#" Value="public interface Subdocuments : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Subdocuments implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Subdocuments" />
   <TypeSignature Language="VB.NET" Value="Public Interface Subdocuments&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объекты, которые представляют вложенные документы в диапазон или документа.</summary>
-    <remarks>
-      <para>Используйте свойство <b>вложенные документы</b><see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект для возврата коллекции <b>вложенные документы</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromFile(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromRange(Microsoft.Office.Interop.Word.Range)" /> способ добавления вложенного документа в документ.</para>
-      <para>Использования <b>вложенные документы</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>вложенный</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объектов, представляющих вложенные документы в диапазоне или документе.</summary>
+    <remarks><para>Используйте свойство <b>вложенных документов</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> для возврата коллекции <b>вложенных документов</b> .</para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromFile(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromRange(Microsoft.Office.Interop.Word.Range)" /> для добавления вложенного документа в документ.</para>
+      <para>Используйте <b>вложенные документы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>вложенного документа</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddFromFile">
@@ -68,21 +58,19 @@
         <Parameter Name="WritePasswordTemplate" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Name">Требуется <b>объект</b>. Имя файла, вложенного документа, которую нужно вставить в главный документ.</param>
-        <param name="ConfirmConversions">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы подтвердить преобразования файлов в диалоговом окне Преобразование файла, если файл не находится в формате Microsoft Word.</param>
-        <param name="ReadOnly">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы вставить вложенный документ как документ только для чтения.</param>
-        <param name="PasswordDocument">Необязательный элемент <b>Object</b>. Пароль, необходимый для открытия документа, если защищен паролем.</param>
-        <param name="PasswordTemplate">Необязательный элемент <b>Object</b>. Пароль, необходимый для открытия шаблона, подключенного к вложенный документ, если шаблон защищены паролем.</param>
-        <param name="Revert">Необязательный элемент <b>Object</b>. Определяет, что произойдет, если <paramref name="Name" /> — это имя файла, открытого документа. <b>Значение true,</b> Чтобы вставить сохраненные версии документа. <b>Значение false</b> для вставки открыть версию вложенный документ, который может содержать несохраненные изменения.</param>
-        <param name="WritePasswordDocument">Необязательный элемент <b>Object</b>. Пароль, необходимый для сохранения изменений в файл документа, если является запись защищенный.</param>
-        <param name="WritePasswordTemplate">Необязательный элемент <b>Object</b>. Пароль, необходимый для сохранения изменений в шаблон, подключенного к вложенный документ, если шаблон только для чтения.</param>
-        <summary>Добавляет указанный вложенный документ главного документа в начале выделение и возвращает <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объекта.</summary>
+        <param name="Name">Обязательный <b>объект</b>. Имя файла вложенного документа, который будет вставлен в главный документ.</param>
+        <param name="ConfirmConversions">Необязательный <b>объект</b>. <b>True</b> для подтверждения преобразования файлов в диалоговом окне Преобразование файла, если файл не является форматом Microsoft Word.</param>
+        <param name="ReadOnly">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы вставить вложенный документ как документ, предназначенный только для чтения.</param>
+        <param name="PasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для открытия вложенного документа, если он защищен паролем.</param>
+        <param name="PasswordTemplate">Необязательный <b>объект</b>. Пароль, необходимый для открытия шаблона, вложенного в вложенный документ, если шаблон защищен паролем.</param>
+        <param name="Revert">Необязательный <b>объект</b>. Определяет, что происходит <paramref name="Name" /> , если это имя файла открытого документа. <b>Значение true</b> , чтобы вставить сохраненную версию вложенного документа. <b>Значение false</b> , чтобы вставить открытую версию вложенного документа, который может содержать несохраненные изменения.</param>
+        <param name="WritePasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для сохранения изменений в файле документа, если он защищен от записи.</param>
+        <param name="WritePasswordTemplate">Необязательный <b>объект</b>. Пароль, необходимый для сохранения изменений в шаблоне, вложенном в вложенный документ, если шаблон защищен от записи.</param>
+        <summary>Добавляет указанный вложенный документ в главный документ в начале выделенного фрагмента и возвращает <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Если активного представления не структура или режим главного документа, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Если активное представление не является представлением структуры или главного документа, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFromRange">
@@ -107,14 +95,12 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Объект <b>Range</b> , используемые для создания одного или нескольких вложенных документов.</param>
-        <summary>Создает один или несколько вложенных документов из текста в указанном диапазоне и возвращает <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объекта.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Объект <b>Range</b> , используемый для создания одного или нескольких вложенных документов.</param>
+        <summary>Создает один или несколько вложенных документов из текста в указанном диапазоне и возвращает <see cref="T:Microsoft.Office.Interop.Word.Subdocument" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Диапазон должен начинаться с одним из встроенные стили (например, Заголовок 1) заголовков. Вложенные документы, создаются на все абзацы, отформатированные с заголовком формате, используемом в начале диапазона. Вложенный документ файлы сохраняются при сохранении главного документа и имеют автоматически с помощью текст из первой строки в файле.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Диапазон должен начинаться с одного из встроенных стилей уровня заголовков (например, заголовок 1). Вложенные документы создаются в каждом абзаце, отформатированном с использованием того же формата заголовков, что и в начале диапазона. Файлы вложенных документов сохраняются при сохранении главного документа и автоматически именуются с использованием текста, начиная с первой строки в файле.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -168,7 +154,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,11 +182,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -254,8 +240,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если развернут вложенные документы в указанный документ.</summary>
+        <summary><b>Значение true</b> , если вложенные документы в указанном документе развернуты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -318,9 +303,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -348,9 +332,9 @@
         <Parameter Name="LastSubdocument" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="FirstSubdocument">Необязательный элемент <b>Object</b>. Путь и имя исходного документа, чтобы объединить исправления с.</param>
-        <param name="LastSubdocument">Необязательный элемент <b>Object</b>. Последний вложенный документ в диапазоне вложенных документов для объединения.</param>
-        <summary>Объединяет указанный вложенные документы основного документа в один.</summary>
+        <param name="FirstSubdocument">Необязательный <b>объект</b>. Путь и имя файла исходного документа, с которым требуется объединить изменения.</param>
+        <param name="LastSubdocument">Необязательный <b>объект</b>. Последний вложенный документ в диапазоне вложенных документов для слияния.</param>
+        <summary>Слияние указанных вложенных документов с главным документом с одним вложенным документом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -377,7 +361,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -404,11 +388,9 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  После использования этого метода, используйте свойство <b>выбора</b> для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  После использования этого метода для работы с выбранными элементами используйте свойство <b>Selection</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

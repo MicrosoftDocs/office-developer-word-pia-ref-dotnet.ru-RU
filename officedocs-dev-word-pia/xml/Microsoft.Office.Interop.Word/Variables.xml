@@ -1,13 +1,5 @@
 <Type Name="Variables" FullName="Microsoft.Office.Interop.Word.Variables">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9c2b6ad10492a0ea22a2cb22b7ede41be953247c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672996" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Variables : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="644ab7343db817764d5aa3ab3fa23f78b8f047eb" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143779" /></Metadata><TypeSignature Language="C#" Value="public interface Variables : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Variables implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Variables" />
   <TypeSignature Language="VB.NET" Value="Public Interface Variables&#xA;Implements IEnumerable" />
@@ -30,13 +22,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Variable" /> объекты, которые представляют переменных, добавленных в документ или шаблон. Переменные документов используются, чтобы сохранить параметры макросов между сеансами макросов.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.Variables" /> свойство для возвращения коллекции <b>переменных</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Variables.Add(System.String,System.Object@)" /> способ добавления переменной в документ.</para>
-      <para>При попытке добавить документ переменной с именем уже существует в коллекции <b>переменных</b> , возникает ошибка. Чтобы избежать этой ошибки, можно перечислить коллекцию перед добавлением нового переменные.</para>
-      <para>Использования <b>переменных</b>(<paramref name="index" />), где <paramref name="index" /> — это имя переменной документа или номер индекса для возврата объекта <b>переменной</b> .</para> Номер индекса 
-      <para>представляет положение переменной документа в коллекции <b>переменных</b> . Первой переменной добавлен к коллекции <b>переменных</b> — номер индекса 1; Вторая переменная добавлен к коллекции — номер индекса 2 и т. д.</para><para>Добавление переменной в шаблон, откройте шаблон как документ с помощью <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метод.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Variable" /> объектов, представляющих переменные, добавленные в документ или шаблон. Переменные документа используются для сохранения параметров макросов между сеансами макросов.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Variables" /> свойство, чтобы возвратить коллекцию <b>Variables</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Variables.Add(System.String,System.Object@)" /> метод, чтобы добавить переменную в документ.</para>
+      <para>Если вы попробуете добавить переменную документа с именем, которое уже существует в <b></b> коллекции Variables, возникнет ошибка. Чтобы избежать этой ошибки, можно перечислить коллекцию перед добавлением новых переменных.</para>
+      <para>Используйте <b>переменные</b>(<paramref name="index" />), где <paramref name="index" /> — это имя переменной документа или номер индекса, чтобы получить один объект <b>variable</b> .</para>
+      <para>Номер индекса представляет положение переменной документа в коллекции <b>Variables</b> . Первая переменная, добавленная в <b></b> коллекцию Variables, — это индекс 1; Вторая переменная, добавляемая в коллекцию, — это индекс 2 и т. д.</para>
+      <para>Чтобы добавить переменную в шаблон, откройте шаблон в виде документа с помощью <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метода.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -62,10 +55,9 @@
         <Parameter Name="Value" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя переменной документа.</param>
-        <param name="Value">Необязательный элемент <b>Object</b>. Значение для переменной документа.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Variable" /> объект, представляющий переменную, добавлены в документ.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя переменной документа.</param>
+        <param name="Value">Необязательный <b>объект</b>. Значение для переменной документа.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Variable" /> объект, представляющий переменную, добавленную в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,7 +113,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,11 +141,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -214,9 +206,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -244,7 +235,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

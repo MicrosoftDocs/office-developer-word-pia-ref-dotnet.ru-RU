@@ -1,13 +1,5 @@
 <Type Name="Variable" FullName="Microsoft.Office.Interop.Word.Variable">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5a6d54bdd189749e8d6825c71826127afd6c461d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673169" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Variable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3e2a8fae352f5d719c8e9311fb04b65b7fefebfe" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143773" /></Metadata><TypeSignature Language="C#" Value="public interface Variable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Variable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Variable" />
   <TypeSignature Language="VB.NET" Value="Public Interface Variable" />
@@ -26,11 +18,15 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет переменной, хранящейся как часть документа. Переменные документов используются, чтобы сохранить параметры макросов между сеансами макросов.</summary>
-    <remarks>
-      <para>Объект <b>переменной</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Variables" /> семейства сайтов. Коллекция <b>переменных</b> включает все переменные документа в документ или шаблон.</para>
-      <para>Использования <b>переменных</b>(<paramref name="index" />), где <paramref name="index" /> — это имя переменной документа или номер индекса для возврата объекта <b>переменной</b> .</para> Номер индекса 
-      <para>представляет положение переменной документа в коллекции <b>переменных</b> . Последняя переменная добавлен к коллекции <b>переменных</b> — номер индекса 1; переменная с последним второго добавлен к коллекции является номер индекса 2 и т. д.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.Variables.Add(System.String,System.Object@)" /> из <see cref="T:Microsoft.Office.Interop.Word.Variables" /> метода сбора данных для добавления в документ переменной.</para><para>При попытке добавить документ переменной с именем уже существует в коллекции <b>переменных</b> , возникает ошибка. Чтобы избежать этой ошибки, можно перечислить коллекцию перед добавлением нового переменные.</para><para>Переменных документа невидимы для пользователя, только если был вставлен DOCVARIABLE поля с помощью соответствующего имени переменной.</para><para>Добавление переменной документа в шаблон, откройте шаблон как документ с помощью <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метод.</para><para /></remarks>
+    <summary>Представляет переменную, хранящуюся в составе документа. Переменные документа используются для сохранения параметров макросов между сеансами макросов.</summary>
+    <remarks><para>Объект <b>variable</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Variables" /> коллекции. Коллекция <b>Variables</b> включает все переменные документа в документе или шаблоне.</para>
+      <para>Используйте <b>переменные</b>(<paramref name="index" />), где <paramref name="index" /> — это имя переменной документа или номер индекса, чтобы получить один объект <b>variable</b> .</para>
+      <para>Номер индекса представляет положение переменной документа в коллекции <b>Variables</b> . Последняя переменная, добавленная в <b></b> коллекцию Variables, — это индекс 1; Вторая переменная-to-Last, добавленная в коллекцию, — это индекс 2 и т. д.</para>
+      <para><see cref="M:Microsoft.Office.Interop.Word.Variables.Add(System.String,System.Object@)" /> Используйте метод <see cref="T:Microsoft.Office.Interop.Word.Variables" /> Collection, чтобы добавить переменную в документ.</para>
+      <para>Если вы попробуете добавить переменную документа с именем, которое уже существует в <b></b> коллекции Variables, возникнет ошибка. Чтобы избежать этой ошибки, можно перечислить коллекцию перед добавлением новых переменных.</para>
+      <para>Переменные документа невидимы для пользователя, если не вставлено поле ДОКВАРИАБЛЕ с соответствующим именем переменной.</para>
+      <para>Чтобы добавить переменную документа в шаблон, откройте шаблон в виде документа с помощью <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метода.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,11 +80,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -195,7 +191,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

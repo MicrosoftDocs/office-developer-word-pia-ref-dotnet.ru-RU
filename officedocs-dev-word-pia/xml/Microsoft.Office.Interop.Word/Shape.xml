@@ -1,13 +1,5 @@
 <Type Name="Shape" FullName="Microsoft.Office.Interop.Word.Shape">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2915d39cd9f30924e816a91d0fc0360b7f46543b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673611" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Shape" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="acacfe3317c3167f71680de182a642ad6c015546" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144073" /></Metadata><TypeSignature Language="C#" Value="public interface Shape" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Shape" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Shape" />
   <TypeSignature Language="VB.NET" Value="Public Interface Shape" />
@@ -26,11 +18,27 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет объект в графических, такие как автофигуры freeform, объекта OLE, элемент управления ActiveX или рисунок.</summary>
-    <remarks>
+    <summary>Представляет объект в графическом слое, например автофигуру, полилинию, объект OLE, элемент управления ActiveX или рисунок.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.Shape" /> Объект является элементом <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции, который включает все фигуры в основном материале документа или во всех верхних и нижних колонтитулах документа.</para>
+      <para>Фигура всегда присоединяется к диапазону привязки. Вы можете разместить фигуру в любом месте на странице, содержащей привязку.</para>
+      <para>Существует три объекта, представляющие фигуры: <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекция, которая представляет все фигуры в документе; <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> коллекция, представляющая заданное подмножество фигур в документе (например, <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объект может представлять фигуры с одним и четырьмя документами, или он может представлять все выбранные фигуры в документе); <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий отдельную фигуру в документе. Если вы хотите работать с несколькими фигурами одновременно или с фигурами в выделенной области, используйте <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> коллекцию.</para>
+      <para>Используйте <b>фигуры</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект. </para>
+      <para>При создании каждой фигуры назначается имя по умолчанию. Например, если вы добавите в документ три различные фигуры, они могут называться "прямоугольник 2", "TextBox 3" и "овал 4". Чтобы присвоить фигуре более понятное имя, <see cref="P:Microsoft.Office.Interop.Word.Shape.Name" /> задайте свойство.</para>
+      <para>Используйте <b>Selection. ShapeRange</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий фигуру в выделенном фрагменте.</para>
+      <para>Чтобы добавить <see cref="T:Microsoft.Office.Interop.Word.Shape" /> <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект в коллекцию фигур для указанного документа и возвратить объект, представляющий только что созданную фигуру, используйте один из следующих методов <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции: <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCallout(Microsoft.Office.Core.MsoCalloutType,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCurve(System.Object@,System.Object@)" /> <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddLabel(Microsoft.Office.Core.MsoTextOrientation,System.Single,System.Single,System.Single,System.Single,System.Object@)" />,,, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEControl(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddLine(System.Single,System.Single,System.Single,System.Single,System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEObject(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPolyline(System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddShape(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddTextEffect(Microsoft.Office.Core.MsoPresetTextEffect,System.String,System.String,System.Single,Microsoft.Office.Core.MsoTriState,Microsoft.Office.Core.MsoTriState,System.Single,System.Single,System.Object@)" />, или <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" />.</para>
+      <para>Используйте <b>граупитемс</b>(<paramref name="index" />), где <paramref name="index" /> — это имя фигуры или номер индекса в группе, чтобы возвратить объект <b>Shape</b> , представляющий отдельную фигуру в сгруппированной фигуре.</para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Word.ShapeRange.Group" /> or <see cref="M:Microsoft.Office.Interop.Word.ShapeRange.Regroup" /> для группирования диапазона фигур и возврата одного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, представляющего новую группу. После того как группа сформирована, вы можете работать с этой группой так же, как и с любой другой фигурой.</para>
+      <para>Каждый <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект привязан к диапазону текста. Фигура привязана к началу первого абзаца, содержащего диапазон привязки. Фигура всегда будет находиться на той же странице, что и ее привязка.</para>
+      <para>Вы можете просмотреть саму привязку, присвоив <see cref="P:Microsoft.Office.Interop.Word.View.ShowObjectAnchors" /> свойству <b>значение true</b>. Свойства <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> свойства фигуры определяют их вертикальное и горизонтальное положение. Свойства <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalPosition" /> свойства фигуры определяют, измеряется ли положение из абзаца привязки, столбца, содержащего закрепленный абзац, поле или край страницы.</para>
+      <para>Если <see cref="P:Microsoft.Office.Interop.Word.Shape.LockAnchor" /> свойству фигуры присвоено значение <b>true</b>, невозможно перетащить точку привязки из ее положения на странице.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Fill" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит все свойства и методы для форматирования заливки замкнутой фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.Shadow" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" /> объект, который используется для форматирования тени. Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Line" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, который содержит свойства и методы для форматирования линий и стрелок. <see cref="P:Microsoft.Office.Interop.Word.Shape.TextEffect" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, который используется для форматирования объекта WordArt. <see cref="P:Microsoft.Office.Interop.Word.Shape.Callout" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объект, который используется для форматирования выносок. <see cref="P:Microsoft.Office.Interop.Word.Shape.WrapFormat" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объект, который используется для определения способа переноса текста вокруг фигур. <see cref="P:Microsoft.Office.Interop.Word.Shape.ThreeD" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который используется для создания трехмерных фигур. Вы можете использовать методы <see cref="M:Microsoft.Office.Interop.Word.Shape.PickUp" /> и <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> для переноса форматирования из одной фигуры в другую.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.SetShapesDefaultProperties" /> метод для <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, чтобы задать форматирование фигуры по умолчанию для документа. Новые фигуры наследуют многие их атрибуты от фигуры по умолчанию.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Type" /> свойство, чтобы указать тип фигуры: "полилиния", "Автофигура", "объект OLE", "Выноска" или "связанное изображение" для экземпляра. Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.AutoShapeType" /> свойство, чтобы указать тип автофигуры: овал, прямоугольник или выноска для экземпляра.</para>
+      <para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> для указания размера фигуры.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект, который содержит все свойства и методы для присоединения текста к фигурам и связывания текста между текстовыми фреймами.</para>
       <para>
-        <see cref="T:Microsoft.Office.Interop.Word.Shape" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции, которая включает в себя всех фигур в основная статья документа или всех верхних и нижних колонтитулов документа.</para> Фигура A 
-      <para>всегда подключенного к привязке диапазона. Форму можно расположить в любом месте на странице, содержащей точку привязки.</para><para>Существует три объекты, которые представляют фигур: <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> семейства сайтов, который представляет всех фигур в документе; <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> семейства сайтов, который представляет указанный подмножество фигур в документе (например, <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объект может представлять один и четыре фигуры на документ, или она может представлять все выбранные фигуры в документе); <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий одну фигуру в документе. Для работы с несколькими фигурами в то же время или с фигурами в выделение, используйте <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> семейства.</para><para>Использования <b>фигур</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект.</para><para>Каждой фигуры присваивается имя по умолчанию, при его создании. Например, при добавлении три различных фигур в документ, они может иметь имя «Прямоугольник 2», «Текстовое поле 3» и «Овал 4». Чтобы предоставить более понятным именем фигуры, задайте <see cref="P:Microsoft.Office.Interop.Word.Shape.Name" /> свойство.</para><para>Использования <b>Selection.ShapeRange</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса для возврата <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий фигуру в составе.</para><para>Добавление <see cref="T:Microsoft.Office.Interop.Word.Shape" /> к коллекции фигур для указанного документа и вернуть <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий только что созданный фигуры, используйте один из следующих методов <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> семейства сайтов: <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCallout(Microsoft.Office.Core.MsoCalloutType,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCurve(System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddLabel(Microsoft.Office.Core.MsoTextOrientation,System.Single,System.Single,System.Single,System.Single,System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddLine(System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEControl(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEObject(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPolyline(System.Object@,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddShape(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation,System.Single,System.Single,System.Single,System.Single,System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddTextEffect(Microsoft.Office.Core.MsoPresetTextEffect,System.String,System.String,System.Single,Microsoft.Office.Core.MsoTriState,Microsoft.Office.Core.MsoTriState,System.Single,System.Single,System.Object@)" />, или <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" />.</para><para>Использования <b>GroupItems</b>(<paramref name="index" />), где <paramref name="index" /> — фигуры имя или номер индекса в группе, чтобы возвратить объект <b>фигуры</b> , который представляет одну форму в группы фигур.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.ShapeRange.Group" /> или <see cref="M:Microsoft.Office.Interop.Word.ShapeRange.Regroup" /> метод для группировки диапазона фигур и вернуть объект <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий только что сформированные группы. После формируется группу, можно работать с группой так же, как работать с какой другой фигурой.</para><para>Каждые <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, привязанный к диапазон текста. Фигуры, привязанный к начала первого абзаца, содержащий привязки диапазона. Фигура всегда остается на одну страницу вместе с его привязки.</para><para>Привязки самого можно просмотреть путем установки <see cref="P:Microsoft.Office.Interop.Word.View.ShowObjectAnchors" /> значение <b>True</b>. Фигура <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> определяют его вертикальных и горизонтальных позиции. Фигура <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalPosition" /> ли положение отсчитывается от привязки абзаца, столбец, который содержит привязки абзаца, полей или края страницы определяют.</para><para>Если <see cref="P:Microsoft.Office.Interop.Word.Shape.LockAnchor" /> формы задано значение <b>True</b>, нельзя перетащить привязки с положение на странице.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Fill" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит все свойства и методы для форматирования заливки закрытой фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.Shadow" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" /> объект, который используется для форматирования тени. Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.Line" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, который содержит свойства и методы для форматирования строк и стрелки. <see cref="P:Microsoft.Office.Interop.Word.Shape.TextEffect" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, который используется в формат WordArt. <see cref="P:Microsoft.Office.Interop.Word.Shape.Callout" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объект, который используется для форматирования выноски строки. <see cref="P:Microsoft.Office.Interop.Word.Shape.WrapFormat" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объект, который используется для определения способа обтекания фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.ThreeD" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который используется для создания объемных фигур. Можно использовать <see cref="M:Microsoft.Office.Interop.Word.Shape.PickUp" /> и <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> методов для переноса форматирования из одной формы в другую.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.Shape.SetShapesDefaultProperties" /> метод для <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, который требуется задать форматирование формы по умолчанию для документов. Новые фигуры наследовали многие из их атрибутов по умолчанию фигуры.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Type" /> свойство, чтобы указать тип фигуры: freeform, автофигуры, OLE объекта выноски или связанного рисунка для экземпляра. Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.AutoShapeType" /> свойство, чтобы указать тип автофигуры: овала, прямоугольника или в документе, например.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> и <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> для указания размера фигуры.</para><para><see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> Возвращает свойство <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект, который содержит все свойства и методы для присоединения текста к фигурам и связывания текста между рамок текста.</para><para><see cref="T:Microsoft.Office.Interop.Word.Shape" /> прикреплено к диапазон текста, но свободным и объектов могут размещаться в любом месте страницы. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекты обрабатываются как символы и размещенный как символы в строку текста. Можно использовать <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> метод и <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /> метод преобразования фигур из одного типа в другой. Только рисунки, объекты OLE и элементы управления ActiveX можно преобразовать в встроенных фигур.</para><para /></remarks>
+        <see cref="T:Microsoft.Office.Interop.Word.Shape" />объекты привязаны к диапазону текста, но имеют свободный плавающий и могут размещаться в любом месте на странице. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />объекты обрабатываются как символы и располагаются в виде символов в текстовой строке. <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> Метод и <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /> метод можно использовать для преобразования фигур из одного типа в другой. Встроенные фигуры можно преобразовать только изображения, объекты OLE и элементы управления ActiveX.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -84,7 +92,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Adjustments</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Adjustments" /> объект, содержащий значения настройки для всех настроек в указанном <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий автофигуры или WordArt.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Adjustments" /> объект, который содержит значения коррекции для всех корректировок указанного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, представляющего автофигуру или объект WordArt.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +123,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает замещающий текст, связанный с фигуры на веб-странице.</summary>
+        <summary>Возвращает или задает замещающий текст, связанный с фигурой на веб-странице.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,8 +151,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон привязки для указанного фигуры.</summary>
-        <value>Все <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекты прикреплено к диапазон текста, но могут размещаться в любом месте страницы, содержащей точку привязки. При указании привязки диапазона при создании фигуры, привязки располагается в начале первого абзаца, содержащий привязки диапазона. Если не указать диапазон привязки, автоматически выбран диапазон привязки и фигуры размещается относительно краев верхней и левой части страницы. Фигура всегда остается на одну страницу вместе с его привязки. Если <see cref="P:Microsoft.Office.Interop.Word.Shape.LockAnchor" /> формы задано значение <b>True</b>, нельзя перетащить привязки с положение на странице.</value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон привязки для указанной фигуры.</summary>
+        <value>Все <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекты привязаны к диапазону текста, но их можно разместить в любом месте на странице, содержащей точку привязки. Если вы укажете диапазон привязки при создании фигуры, привязка будет размещена в начале первого абзаца, содержащего диапазон привязки. Если вы не укажете диапазон привязки, диапазон привязки выбирается автоматически, а фигура располагается относительно верхнего и левого краев страницы. Фигура всегда будет находиться на той же странице, что и ее привязка. Если <see cref="P:Microsoft.Office.Interop.Word.Shape.LockAnchor" /> свойству фигуры присвоено значение <b>true</b>, невозможно перетащить точку привязки из ее положения на странице.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,11 +236,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Применяется для форматирования указанной фигуры, скопированные с помощью <see cref="M:Microsoft.Office.Interop.Word.Shape.PickUp" /> метод.</summary>
-        <remarks>
-          <para>Если форматирования для <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект не ранее был скопирован с помощью <see cref="M:Microsoft.Office.Core.Shape.PickUp" /> метод, с помощью <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> метод создает сообщение об ошибке.</para>
-          <para />
-        </remarks>
+        <summary>Применяется к указанному форматированию фигуры, которое было скопировано <see cref="M:Microsoft.Office.Interop.Word.Shape.PickUp" /> с помощью метода.</summary>
+        <remarks><para>Если форматирование <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта ранее не было скопировано с помощью <see cref="M:Microsoft.Office.Core.Shape.PickUp" /> метода, использование <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> метода приводит к возникновению ошибки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoShapeType">
@@ -261,12 +267,10 @@
         <ReturnType>Microsoft.Office.Core.MsoAutoShapeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип фигуры для указанного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, который должен представлять автофигуры отличный от строки или freeform документа.</summary>
+        <summary>Возвращает или задает тип фигуры для указанного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, который должен представлять автофигуру, отличную от линии или полилинии.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При изменении типа фигуры фигуры сохраняет его размер, цвет и другие атрибуты.</para>
-          <para />
-        </remarks>
+        <remarks><para>Когда вы изменяете тип фигуры, фигура сохраняет ее размер, цвет и другие атрибуты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BackgroundStyle">
@@ -295,12 +299,10 @@
         <ReturnType>Microsoft.Office.Core.MsoBackgroundStyleIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает тиль фона указанного фигуры.</summary>
-        <value>Стиль фона указанные форму.</value>
-        <remarks>
-          <para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoBackgroundStyleIndex" />.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает стиль фона заданной фигуры.</summary>
+        <value>Стиль фона заданной фигуры.</value>
+        <remarks><para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoBackgroundStyleIndex" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Callout">
@@ -326,12 +328,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CalloutFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объект, который содержит параметры форматирования для указанного фигура выноски.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объект, который содержит свойства форматирования выноски для указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекты, которые представляют выносок.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объектам, представляющим выноски.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanvasCropBottom">
@@ -357,12 +357,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Сумма в процентах полотно высоты требуемый оставшиеся после полотно, обрезается. Ввод 0,9 как приращение обрезает десяти процентов высота полотно в нижней части. Ввод 0,1 обрезает 90 процентов высота полотно в нижней части.</param>
-        <summary>Обрезает процент высоты полотно в нижней части полотно.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropTop(System.Single)" /> метод обрезать сверху.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Величина в процентных единицах высоты полотна, которая должна быть оставшейся после кадрирования холста. Ввод 0,9 в качестве приращения десять процентов от высоты холста в нижней части. При вводе 0,1 обрезает 90 процентов от высоты холста в нижней части.</param>
+        <summary>Обрезает в процентах высоту полотна в нижней части холста.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropTop(System.Single)" /> метод для обрезки сверху.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanvasCropLeft">
@@ -388,12 +386,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Сумма в процентах от ширины полотно, который будет оставшиеся после полотно, обрезается. Ввод 0,9 как приращение обрезает десяти процентов от ширины полотно слева. Ввод 0,1 обрезает 90 процентов от ширины полотно слева.</param>
-        <summary>Обрезает в процентах от ширины полотно с левой стороны полотно.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropRight(System.Single)" /> метод обрезать из правой части полотне.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Величина в процентных баллах ширины полотна, которая должна быть оставшейся после кадрирования холста. Ввод 0,9 в качестве приращения десять процентов от ширины холста слева. При вводе 0,1 обрезает 90 процентов ширины холста слева.</param>
+        <summary>Обрезает долю ширины полотна с левой стороны холста.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropRight(System.Single)" /> метод для обрезки с правой стороны полотна.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanvasCropRight">
@@ -419,12 +415,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Сумма в процентах от ширины полотно, который будет оставшиеся после полотно, обрезается. Ввод 0,9 как приращение обрезает десяти процентов от ширины полотно справа. Ввод 0,1 обрезает 90 процентов от ширины полотно справа.</param>
-        <summary>Обрезает в процентах от ширины полотно из правой части полотно.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropLeft(System.Single)" /> метод Обрезка с левой стороны полотне.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Величина в процентных единицах ширины холста, которая должна быть оставшейся после кадрирования холста. Ввод 0,9 в качестве приращения составляет десять процентов от ширины холста справа. При вводе 0,1 обрезает 90 процентов ширины холста справа.</param>
+        <summary>Обрезает долю ширины полотна с правой стороны холста.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropLeft(System.Single)" /> метод, чтобы обрезать из левой части полотна.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanvasCropTop">
@@ -450,12 +444,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Сумма в процентах полотно высоты требуемый оставшиеся после полотно, обрезается. Ввод 0,9 как приращение обрезает десяти процентов высота полотно сверху. Ввод 0,1 обрезает 90 процентов высота полотно сверху.</param>
-        <summary>Обрезает процент высоты полотно из верхней части полотно.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropBottom(System.Single)" /> метод обрезки снизу.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Величина в процентных единицах высоты холста, которая должна быть оставшейся после кадрирования холста. Ввод 0,9 в качестве приращения десять процентов от высоты холста сверху. При вводе 0,1 обрезает 90 процентов от высоты холста в верхней части.</param>
+        <summary>Обрезает в процентах высоту полотна с верхней границы холста.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.CanvasCropBottom(System.Single)" /> метод для обрезки снизу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanvasItems">
@@ -509,10 +501,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Chart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Chart" /> объект, который представляет собой диаграмму в коллекции фигур в документе. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Chart" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Chart" /> объект, представляющий диаграмму в коллекции фигур в документе. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Chart" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -539,12 +529,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли фигура фигурой дочерних.</summary>
+        <summary>Определяет, является ли фигура дочерней фигурой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если фигуры — это дочерние фигуры и <b>значение False,</b> Если это не так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если фигура является дочерней, и <b>false</b> , если нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConnectionSiteCount">
@@ -664,14 +652,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Преобразует указанные форму в кадре.</summary>
+        <summary>Преобразует указанную фигуру в рамку.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.Frame" /> объект, представляющий новую рамку.</para>
-          <para>Фигуры, которые не поддерживают вложенные текст невозможно преобразовать в кадрах. Рисунки, объекты OLE и элементов управления ActiveX, используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> метод.</para>
-          <para>В Microsoft Word 97 и более поздних версий, рамок были заменены текстовых полей.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.Frame" /> объект, представляющий новый кадр.</para>
+          <para>Фигуры, не поддерживающие присоединенный текст, не могут быть преобразованы в рамки. Для изображений, объектов OLE и элементов управления ActiveX используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> метод.</para>
+          <para>В Microsoft Word 97 и более поздних версиях рамки были заменены текстовыми полями.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConvertToInlineShape">
@@ -695,11 +681,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Преобразует указанные форму в графических документа встроенная фигура в текстовой части.</summary>
+        <summary>Преобразует указанную фигуру в графическом слое документа во встроенную фигуру в текстовом слое.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно преобразовать только фигуры, которые представляют изображения, объекты OLE или элементов управления ActiveX. Этот метод возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображения или объекта OLE.</para> Невозможно преобразовать 
-          <para>фигуры, которые поддерживают вложенные текст для встроенных фигур. Эти фигуры используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToFrame" /> метод.</para><para /></remarks>
+        <remarks><para>Вы можете преобразовать только фигуры, представляющие изображения, объекты OLE или элементы управления ActiveX. Этот метод возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображение или объект OLE.</para>
+          <para>Фигуры, поддерживающие вложенный текст, не могут быть преобразованы в встроенные фигуры. Для этих фигур используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToFrame" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -725,11 +711,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -783,7 +769,7 @@
         <ReturnType>Microsoft.Office.Core.IMsoDiagram</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Diagram" /> объекта, к которому принадлежит узел диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Diagram" /> объект, к которому относится узел схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -840,7 +826,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Создает копию указанного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> , добавляет новый диапазон фигуры, чтобы <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции стандартных смещением от исходной фигуры и затем возвращает объекта <b>Shape</b> .</summary>
+        <summary>Создает дубликат указанного <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта, добавляет новый диапазон фигур в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекцию со стандартным смещением от исходных фигур, а затем возвращает новый объект <b>Shape</b> .</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -899,7 +885,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит параметры форматирования для указанного фигуры заливки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит свойства форматирования заливки для указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -927,8 +913,8 @@
         <Parameter Name="FlipCmd" Type="Microsoft.Office.Core.MsoFlipCmd" />
       </Parameters>
       <Docs>
-        <param name="FlipCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoFlipCmd" />. Переворот ориентация.</param>
-        <summary>Зеркальное отражение фигуры по горизонтали или по вертикали.</summary>
+        <param name="FlipCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoFlipCmd" />. Ориентация отразится.</param>
+        <summary>Отражение фигуры по горизонтали или по вертикали.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -955,10 +941,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.GlowFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.GlowFormat" /> объект, представляющий свечения форматирования для фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.GlowFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.GlowFormat" /> объект, представляющий Форматирование фигуры в подсвете. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.GlowFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -985,13 +969,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.GroupShapes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.GroupShapes" /> объект, который представляет отдельные фигуры в указанную группу.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.GroupShapes" /> объект, представляющий отдельные фигуры в указанной группе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.GroupShapes.Item(System.Object@)" /> метод объекта <b>GroupShapes</b> возвращает одну из группы.</para>
-          <para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> или <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекты, которые представляют группы фигур.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.GroupShapes.Item(System.Object@)" /> метод объекта <b>GroupShapes</b> для возврата отдельной фигуры из группы.</para>
+          <para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объектам, представляющим сгруппированные фигуры.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasChart">
@@ -1017,15 +999,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры диаграммы. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство всегда возвращает значение false для диаграмм OLE. OLE диаграмм, используйте InlineShape.OLEFormat.ProgID и флажок для следующих значений: «Excel.Chart.8», «MSGraph.Chart.8», «Excel.Sheet.8», «Excel.Chart.5», «MSGraph.Chart.5» или «Excel.Sheet.5».</para>
-          <para />
-        </remarks>
+        <summary><b>Значение true</b> , если указанная фигура содержит диаграмму. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство всегда возвращает значение false для диаграмм OLE. Для OLE Charts используйте InlineShape. OLEFormat. ProgID и проверьте наличие следующих возможных значений: "Excel. Chart. 8", "MSGraph. Chart. 8", "Excel. sheet. 8", "Excel. Chart. 5", "MSGraph. Chart. 5" и "Excel. sheet. 5".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasDiagram">
@@ -1054,12 +1031,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли фигура схему.</summary>
+        <summary>Определяет, является ли фигура схемой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>MsoTrue</b> , если фигуры схемы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>мсотруе</b> , если фигура является схемой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasDiagramNode">
@@ -1088,12 +1063,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли фигура узел диаграммы.</summary>
+        <summary>Определяет, является ли фигура узлом схемы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>MsoTrue</b> , если узел диаграммы фигуры.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>мсотруе</b> , если фигура является узлом схемы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasSmartArt">
@@ -1119,12 +1092,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <b>значение True</b> , если диаграмма SmartArt, размещенное на форме.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.MsoTriState" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <b>значение true</b> , если в фигуре присутствует схема SmartArt.</summary>
+        <value>Объект <see cref="T:Microsoft.Office.Core.MsoTriState" />.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -1153,7 +1124,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту указанной фигуры в точках.</summary>
+        <summary>Возвращает или задает высоту указанной фигуры в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1184,14 +1155,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>одного</b> , которое представляет собой процентную долю относительная высота фигуры. Для чтения и записи.</summary>
-        <value>
-          <b>Single</b>
-        </value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalSize" /> свойство. Если параметр имеет значение <b>wdShapeSizeRelativeNone</b> (-999999) (просмотреть <see cref="T:Microsoft.Office.Interop.Word.WdShapeSizeRelative" /> перечисления), это свойство игнорироваться, так как фигуры не использует процент изменения размера. Высота определяется исключительно <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение <b>Single</b> , представляющее процент относительной высоты фигуры. Для чтения и записи.</summary>
+        <value><b>Single</b></value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalSize" /> свойством. Если задано значение <b>вдшапесизерелативеноне</b> (-999999) (см <see cref="T:Microsoft.Office.Interop.Word.WdShapeSizeRelative" /> . перечисление), это свойство должно игнорироваться, так как фигура не использует процентное масштабирование. Высота определяется только <see cref="P:Microsoft.Office.Interop.Word.Shape.Height" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HorizontalFlip">
@@ -1217,7 +1184,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, по горизонтали зеркально фигуры.</summary>
+        <summary>Указывает, что фигура была отражена по горизонтали.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1245,12 +1212,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Hyperlink</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий гиперссылку, связанные с указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий гиперссылку, связанную с указанной фигурой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если нет гиперссылки, связанные с указанной фигуры, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если гиперссылка, связанная с указанной формой, отсутствует, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ID">
@@ -1276,7 +1241,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип для указанного объекта.</summary>
+        <summary>Возвращает тип указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1304,8 +1269,8 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько фигуры по горизонтали, перемещаемых в пунктах. Положительное значение перемещает фигуру справа; отрицательное значение перемещает его слева.</param>
-        <summary>Перемещение указанного фигуры по горизонтали указанное число точек.</summary>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко фигура перемещается по горизонтали (в пунктах). Положительное значение перемещает фигуру вправо; отрицательное значение перемещается влево.</param>
+        <summary>Перемещает указанную фигуру по горизонтали на указанное количество точек.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1332,13 +1297,11 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько фигуры будет вращаться по горизонтали, в градусов. Положительное значение Поворот фигуры часовой; отрицательное значение поворот против.</param>
-        <summary>Изменяет вращение указанного фигуры относительно оси z указанное число градусов.</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> свойство, чтобы задать абсолютные Поворот фигуры.</para>
-          <para>Для поворот объемной фигуры вокруг оси x или y, используйте <see cref="M:Microsoft.Office.Interop.Word.ThreeDFormat.IncrementRotationX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.ThreeDFormat.IncrementRotationY(System.Single)" /> метод.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко фигура вращается горизонтально (в градусах). Положительное значение поворачивает фигуру по часовой стрелке; отрицательное значение поворачивает его против часовой стрелки.</param>
+        <summary>Изменяет поворот указанной фигуры вокруг оси z на заданное число градусов.</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Rotation" /> свойство, чтобы задать абсолютный поворот фигуры.</para>
+          <para>Чтобы повернуть трехмерную форму вокруг оси x или оси y, используйте <see cref="M:Microsoft.Office.Interop.Word.ThreeDFormat.IncrementRotationX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.ThreeDFormat.IncrementRotationY(System.Single)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementTop">
@@ -1364,8 +1327,8 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько объекта shape по вертикали, перемещены в пунктах. Положительное значение перемещает фигуру; отрицательное значение перемещает его вверх.</param>
-        <summary>Перемещает указанные форму на указанное число точек по вертикали.</summary>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко объект Shape должен перемещаться по вертикали (в пунктах). Положительное значение перемещает фигуру вниз; отрицательное значение перемещается вверх.</param>
+        <summary>Перемещает указанную фигуру на заданное количество точек по вертикали.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1395,14 +1358,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число</b> , представляющее ли фигуры в таблице отображается внутри таблицы или за пределы таблицы.</summary>
+        <summary>Возвращает <b>целое число</b> , которое указывает, отображается ли фигура в таблице внутри таблицы или за пределами таблицы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> чтобы указать, что указанный рисунок отображаются в таблице и <b>значение False,</b> чтобы указать, что указанный рисунок отображается за пределы таблицы,.</para>
-          <para>Свойства <b>LayoutInCell</b> вступят в силу только в том случае, если <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> свойства <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта установлено на что-то отличного от <b>wdWrapTypeInline</b> или <b>wdWrapTypeNone</b>.</para>
-          <para>Свойство <b>LayoutInCell</b> соответствует макета в параметр ячейки таблицы в диалоговом окне Дополнительная разметка для форматирования рисунка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , чтобы указать, что указанное изображение отображается в таблице, и <b>false</b> , чтобы показать, что указанный рисунок отображается за пределами таблицы.</para>
+          <para>Установка свойства <b>лайаутинцелл</b> вступает в силу, только <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> если свойству <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта присвоено значение, отличное от <b>вдвраптипеинлине</b> или <b>вдвраптипеноне</b>.</para>
+          <para>Свойство <b>лайаутинцелл</b> соответствует параметру макет в ячейке таблицы в диалоговом окне Расширенная разметка для форматирования рисунка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Left">
@@ -1431,13 +1392,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>единого</b> , представляющий горизонтальную позицию, измеряемую в точках указанного фигуры или диапазона фигуры.</summary>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее горизонтальное положение указанной фигуры или диапазона фигуры в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает любое допустимое <see cref="T:Microsoft.Office.Interop.Word.WdShapePosition" /> константу.</para>
-          <para>Положения фигуры измеряется в левом верхнем углу ограничивающему прямоугольнику фигуры на привязку фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> Свойство определяет, находится ли привязки наряду с символа, столбец, полей или края страницы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает любую допустимую <see cref="T:Microsoft.Office.Interop.Word.WdShapePosition" /> константу.</para>
+          <para>Положение фигуры измеряется от левого верхнего угла ограничительной рамки фигуры к привязке фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> Свойство определяет, располагается ли точка привязки вместе с символом, столбцом, полем или краем страницы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LeftRelative">
@@ -1466,14 +1425,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>единого</b> , представляющий относительный левую границу фигуры. Для чтения и записи.</summary>
-        <value>
-          <b>Single</b>
-        </value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> свойство. Если параметр имеет значение <b>wdShapePositionRelativeNone</b> (-999999) (просмотреть <see cref="T:Microsoft.Office.Interop.Word.WdShapePositionRelative" /> перечисление), это свойство должны игнорироваться, так как фигуры не использует процента размещения. Горизонтальную позицию определяется исключительно <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее относительную левую позицию фигуры. Для чтения и записи.</summary>
+        <value><b>Single</b></value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> свойством. Если задано значение <b>вдшапепоситионрелативеноне</b> (-999999) (см <see cref="T:Microsoft.Office.Interop.Word.WdShapePositionRelative" /> . перечисление), это свойство должно игнорироваться, так как фигура не использует процентное расположение. Горизонтальное положение определяется только <see cref="P:Microsoft.Office.Interop.Word.Shape.Left" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Line">
@@ -1499,12 +1454,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.LineFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, содержащий свойства для указанного фигуры форматирования строки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, который содержит свойства форматирования линии для указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для строки объект <b>LineFormat</b> представляет строки для фигуры с границей объект <b>LineFormat</b> представляет границы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для строки объект <b>LineFormat</b> представляет саму линию; для фигуры с границей объект <b>LineFormat</b> представляет границу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinkFormat">
@@ -1530,7 +1483,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.LinkFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, представляющий параметры связи указанного фигуры, связанной с файлом.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, представляющий параметры ссылки указанной фигуры, связанной с файлом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1561,13 +1514,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный <see cref="T:Microsoft.Office.Interop.Word.Shape" /> заблокированный привязки к привязке диапазона.</summary>
+        <summary>Определяет, заблокирована <see cref="T:Microsoft.Office.Interop.Word.Shape" /> ли привязка указанного объекта к диапазону привязки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает значение true, если указанный <see cref="T:Microsoft.Office.Interop.Word.Shape" /> заблокированный привязки к привязке диапазона. Если фигуры заблокированной привязки, нельзя переместить привязки фигуры путем перетаскивания (привязка не перемещает фигуры при перемещении).</para>
-          <para>A объекта <b>Shape</b> , привязанный к диапазон текста, но который можно расположить в любом месте на странице. Фигура, привязанный к начала первого абзаца, содержащий привязки диапазона. Фигуры будет всегда оставаться на одну страницу вместе с его привязки.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает значение true, если <see cref="T:Microsoft.Office.Interop.Word.Shape" /> привязка указанного объекта заблокирована для диапазона привязки. Если фигура имеет Заблокированную точку привязки, ее невозможно переместить, перетащив ее перетаскиванием (привязка не перемещается при перемещении фигуры).</para>
+          <para>Объект <b>Shape</b> привязан к диапазону текста, но его можно разместить в любом месте страницы. Фигура привязана к началу первого абзаца, содержащего диапазон привязки. Фигура всегда будет находиться на той же странице, что и ее привязка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LockAspectRatio">
@@ -1596,12 +1547,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если можно изменить высоту и ширину фигуры независимо друг от друга при изменении размера или если сохраняются исходные пропорции.</summary>
+        <summary>Определяет, можно ли изменять высоту и ширину фигуры независимо друг от друга при изменении размера или при сохранении исходных пропорций.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>MsoTrue</b> , если указанный фигуры сохраняются исходные пропорции при изменении размера и <b>MsoFalse</b> , если при изменении размера можно изменить высоту и ширину фигуры независимо друг от друга.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>мсотруе</b> , если указанная фигура сохраняет исходные пропорции при изменении размера, и <b>мсофалсе</b> , если вы можете изменить высоту и ширину фигуры независимо друг от друга при изменении его размера.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -1658,7 +1607,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ShapeNodes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> коллекции, представляющей геометрические описание указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> коллекцию, представляющую геометрическое описание указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1686,7 +1635,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.OLEFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE (отличного от компоновки) для указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE для указанной фигуры (кроме ссылки).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1714,7 +1663,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1742,7 +1691,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий общие родительскую фигуру дочерних фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий общую родительскую форму дочерней фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1768,11 +1717,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирование форматирования указанной фигуры.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> метод Применение скопированного форматирования на другую фигуру.</para>
-          <para />
-        </remarks>
+        <summary>Копирует форматирование указанной фигуры.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.Apply" /> метод для применения скопированного форматирования к другой фигуре.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PictureFormat">
@@ -1798,12 +1745,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.PictureFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PictureFormat" /> объект, который содержит изображение свойства для указанного объекта форматирования.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PictureFormat" /> объект, который содержит свойства форматирования рисунка для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется к фигуры, которые представляют изображения или объекты OLE.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применяется к объектам Shape, представляющим изображения или объекты OLE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reflection">
@@ -1829,10 +1774,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ReflectionFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" /> объект, представляющий отражения, форматирования для фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" /> объект, представляющий формат отражения для фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1862,7 +1805,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeHorizontalPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, какие горизонтальную позицию фигуры относительно.</summary>
+        <summary>Задает относительную позицию фигуры по горизонтали.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1893,14 +1836,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeHorizontalSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalSize" /> константа, представляющий объект относительно диапазона фигур. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalSize" />
-        </value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.WidthRelative" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalSize" /> константу, представляющую объект, относительно которого относительный диапазон фигур. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdRelativeHorizontalSize" /></value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.WidthRelative" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelativeVerticalPosition">
@@ -1929,7 +1868,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeVerticalPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, какие вертикальную позицию фигуры относительно.</summary>
+        <summary>Задает относительное расположение фигуры по вертикали.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1960,14 +1899,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRelativeVerticalSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalSize" /> константа, представляющий относительный размер фигуры по вертикали. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalSize" />
-        </value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.HeightRelative" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalSize" /> константу, представляющую относительный вертикальный размер фигуры. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdRelativeVerticalSize" /></value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.HeightRelative" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RerouteConnections">
@@ -2024,13 +1959,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число указанный указанные форму — это вращаться вокруг оси z.</summary>
+        <summary>Возвращает или задает число градусов, на которые поворачивается заданная фигура вокруг оси z.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Положительное значение указывает часовой стрелки, отрицательное значение показывает против ротации.</para>
-          <para>Чтобы задать поворот объемной фигуры вокруг оси x или y, используйте <see cref="P:Microsoft.Office.Interop.Word.ThreeDFormat.RotationX" /> свойство или <see cref="P:Microsoft.Office.Interop.Word.ThreeDFormat.RotationY" /> свойства <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект.</para>
-          <para />
-        </remarks>
+        <remarks><para>Положительное значение указывает поворот по часовой стрелке; отрицательное значение указывает на поворот против часовой стрелки.</para>
+          <para>Чтобы задать поворот трехмерной фигуры вокруг оси x или оси y, используйте <see cref="P:Microsoft.Office.Interop.Word.ThreeDFormat.RotationX" /> свойство или <see cref="P:Microsoft.Office.Interop.Word.ThreeDFormat.RotationY" /> свойство <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RTF">
@@ -2088,14 +2021,12 @@
         <Parameter Name="Scale" Type="Microsoft.Office.Core.MsoScaleFrom" />
       </Parameters>
       <Docs>
-        <param name="Factor">Требуется <b>один</b>. Указывает отношение между высота формы при изменении размера и высота текущей или исходной. Например чтобы сделать прямоугольник более 50 процентов, укажите 1,5 для этого аргумента.</param>
-        <param name="RelativeToOriginalSize">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение true</b> для масштабирования фигуры относительно исходного размера. <b>Значение false</b> для масштабирования относительно его текущий размер. Можно указать <b>значение True</b> для этого аргумента только в том случае, если указанный фигуры изображения или объекта OLE.</param>
-        <param name="Scale">Необязательные <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />. Часть фигуры, сохраняет его положение при масштабировании фигуры.</param>
-        <summary>Масштабирование высота формы с указанным коэффициентом.</summary>
-        <remarks>
-          <para>Для изображений и объекты OLE можно указать, следует ли масштабировать фигуры относительно исходного размера или относительно текущего размера. Их текущей высоте всегда масштабируются фигур, отличный от изображения и объекты OLE.</para>
-          <para />
-        </remarks>
+        <param name="Factor">Обязательное <b>одно</b>. Задает отношение высоты фигуры после изменения ее размера и текущей или исходной высоты. Например, чтобы увеличить размер прямоугольника 50 в процентах, укажите значение 1,5 для этого аргумента.</param>
+        <param name="RelativeToOriginalSize">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение true</b> , чтобы масштабировать фигуру относительно исходного размера. <b>Значение false</b> , чтобы масштабировать его относительно текущего размера. <b>Значение true</b> для этого аргумента можно задать только в том случае, если указанная фигура является рисунком или объектом OLE.</param>
+        <param name="Scale">Необязательный <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />параметр. Часть фигуры, сохраняющая положение при масштабировании фигуры.</param>
+        <summary>Масштабирует высоту фигуры с применением указанного коэффициента.</summary>
+        <remarks><para>Для рисунков и объектов OLE можно указать, следует ли масштабировать фигуру относительно исходного размера или относительно текущего размера. Фигуры, отличные от изображений и объектов OLE, всегда масштабируются относительно текущей высоты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScaleWidth">
@@ -2122,14 +2053,12 @@
         <Parameter Name="Scale" Type="Microsoft.Office.Core.MsoScaleFrom" />
       </Parameters>
       <Docs>
-        <param name="Factor">Требуется <b>один</b>. Указывает отношение между ширина формы при изменении размера и текущей или исходной ширины. Например чтобы сделать прямоугольник более 50 процентов, укажите 1,5 для этого аргумента.</param>
-        <param name="RelativeToOriginalSize">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение true</b> для масштабирования фигуры относительно исходного размера. <b>Значение false</b> для масштабирования относительно его текущий размер. Можно указать <b>значение True</b> для этого аргумента только в том случае, если указанный фигуры изображения или объекта OLE.</param>
-        <param name="Scale">Необязательные <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />. Часть фигуры, сохраняет его положение при масштабировании фигуры.</param>
-        <summary>Масштабирование ширины фигуры с указанного коэффициента.</summary>
-        <remarks>
-          <para>Для изображений и объекты OLE можно указать, следует ли масштабировать фигуры относительно исходного размера или относительно текущего размера. Их текущей ширине всегда масштабируются фигур, отличный от изображения и объекты OLE.</para>
-          <para />
-        </remarks>
+        <param name="Factor">Обязательное <b>одно</b>. Задает отношение ширины фигуры после изменения ее размера и текущей или исходной ширины. Например, чтобы увеличить размер прямоугольника 50 в процентах, укажите значение 1,5 для этого аргумента.</param>
+        <param name="RelativeToOriginalSize">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение true</b> , чтобы масштабировать фигуру относительно исходного размера. <b>Значение false</b> , чтобы масштабировать его относительно текущего размера. <b>Значение true</b> для этого аргумента можно задать только в том случае, если указанная фигура является рисунком или объектом OLE.</param>
+        <param name="Scale">Необязательный <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />параметр. Часть фигуры, сохраняющая положение при масштабировании фигуры.</param>
+        <summary>Масштабирует ширину фигуры с применением указанного коэффициента.</summary>
+        <remarks><para>Для рисунков и объектов OLE можно указать, следует ли масштабировать фигуру относительно исходного размера или относительно текущего размера. Фигуры, отличные от изображений и объектов OLE, всегда масштабируются относительно текущей ширины.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Script">
@@ -2155,12 +2084,10 @@
         <ReturnType>Microsoft.Office.Core.Script</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Script" /> объект, представляющий блок скрипта или код на указанном веб-странице.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Script" /> объект, представляющий блок скрипта или кода на указанной веб-странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если страница содержит не скрипт, ничего не возвращается.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если страница не содержит скрипта, ничего не возвращается.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -2185,7 +2112,7 @@
         <Parameter Name="Replace" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b>. При добавлении фигуры, <b>значение True,</b> заменяет выделенный фрагмент. <b>Значение false,</b> добавляет новую фигуру для выделения.</param>
+        <param name="Replace">Необязательный <b>объект</b>. При добавлении фигуры <b>true</b> заменяет выделенный фрагмент. <b>False</b> добавляет новую фигуру к выделению.</param>
         <summary>Выбирает указанный объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2211,11 +2138,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Применяет форматирование указанного фигуры в фигуру по умолчанию для этого документа. Новые фигуры наследовать многие из их атрибутов из формы по умолчанию.</summary>
-        <remarks>
-          <para>С помощью этого метода эквивалентно с помощью команды по умолчанию для автофигуры в меню действия на панели инструментов Рисование.</para>
-          <para />
-        </remarks>
+        <summary>Применяет форматирование указанной фигуры к фигуре по умолчанию для этого документа. Новые фигуры наследуют многие их атрибуты от фигуры по умолчанию.</summary>
+        <remarks><para>Использование этого метода эквивалентно использованию команды "настроить автофигуры по умолчанию" в меню "действия" на панели инструментов "Рисование".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shadow">
@@ -2241,7 +2166,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ShadowFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" /> объект, представляющий тени для указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" /> объект, представляющий теневое форматирование указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2274,10 +2199,8 @@
       <Docs>
         <summary>Получает или задает стиль фигуры для указанной фигуры.</summary>
         <value>Стиль фигуры для указанной фигуры.</value>
-        <remarks>
-          <para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" />.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтение и запись <see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SmartArt">
@@ -2303,12 +2226,10 @@
         <ReturnType>Microsoft.Office.Core.SmartArt</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ для работы с SmartArt, связанный с указанным фигуры.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ для работы с SmartArt, связанный с указанным фигуры.</value>
-        <remarks>
-          <para>Только для чтения. Это свойство предоставляет точки входа для взаимодействия с рисунок SmartArt, связанный с формой.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ работы с SmartArt, связанным с указанной формой.</summary>
+        <value><see cref="T:Microsoft.Office.Core.SmartArt" /> Объект, который предоставляет способ работы с SmartArt, связанным с указанной формой.</value>
+        <remarks><para>Только для чтения. Это свойство предоставляет точку входа для взаимодействия с графическим изображением, связанным с фигурой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SoftEdge">
@@ -2334,10 +2255,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.SoftEdgeFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" /> объект, представляющий мягкий край форматирования для фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" /> объект, представляющий необратимое Форматирование фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2364,12 +2283,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextEffectFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, содержащий свойства форматирования текста влияние для указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, который содержит свойства форматирования текстового действия для указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекты, которые представляют WordArt.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применяется к <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объектам, представляющим объект WordArt.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextFrame">
@@ -2424,9 +2341,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Core.TextFrame2" /> объект, который содержит текст для указанной фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.TextFrame2" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Core.TextFrame2" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2453,7 +2368,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ThreeDFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, содержащий свойства форматирования трехмерную эффекта для указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который содержит свойства форматирования трехмерного результата для указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2484,12 +2399,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает строку, которая содержит заголовок для указанной фигуры.</summary>
-        <value>Строка, содержащая название для указанной фигуры.</value>
-        <remarks>
-          <para>Чтение и запись. Это свойство можно используйте для предоставления замещающий текст заголовка для фигуры. Это свойство добавляет текст заголовка в текстовом поле название на замещающий текст области диалогового окна Формат фигуры в Microsoft Word 2010.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает строку, содержащую название указанной фигуры.</summary>
+        <value>Строка, содержащая название указанной фигуры.</value>
+        <remarks><para>Для чтения и записи. Это свойство используется для предоставления альтернативного текстового заголовка фигуры. Это свойство добавляет текст заголовка в текстовое поле "заголовок" в области "замещающий текст" диалогового окна "Формат фигуры" в Microsoft Word 2010.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Top">
@@ -2518,12 +2431,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает вертикальную позицию указанного фигуры в точках.</summary>
+        <summary>Возвращает или задает вертикальную позицию указанной фигуры в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Положение фигуры отсчитывается от в верхний левый угол прямоугольника фигуры на привязку фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalPosition" /> Свойство определяет, находится ли привязки фигуры наряду с строки, абзаца, полей или края страницы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Положение фигуры измеряется от левого верхнего угла ограничительной рамки фигуры к привязке фигуры. <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalPosition" /> Свойство определяет, располагается ли привязка фигуры рядом со строкой, абзацем, полем или краем страницы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TopRelative">
@@ -2552,14 +2463,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>единого</b> , представляющий относительный верхнюю границу фигуры. Для чтения и записи.</summary>
-        <value>
-          <b>Single</b>
-        </value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> свойство. Если параметр имеет значение <b>wdShapePositionRelativeNone</b> (-999999) (просмотреть <see cref="T:Microsoft.Office.Interop.Word.WdShapePositionRelative" /> перечисление), это свойство должны игнорироваться, так как фигуры не использует процента размещения. Вертикальное положение определяется исключительно <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее относительную верхнюю позицию фигуры. Для чтения и записи.</summary>
+        <value><b>Single</b></value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeHorizontalPosition" /> свойством. Если задано значение <b>вдшапепоситионрелативеноне</b> (-999999) (см <see cref="T:Microsoft.Office.Interop.Word.WdShapePositionRelative" /> . перечисление), это свойство должно игнорироваться, так как фигура не использует процентное расположение. Вертикальное положение определяется только <see cref="P:Microsoft.Office.Interop.Word.Shape.Top" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -2611,14 +2518,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отменяет группировку сгруппированные фигуры в указанном фигуры.</summary>
+        <summary>Разгруппировать все сгруппированные фигуры в указанной фигуре.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Дизассемблирует изображения и объекты OLE в указанной фигуре.</para>
-          <para>Возвращает разгруппировании фигур в виде одного <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объект.</para>
-          <para>Так, как в группы фигур обрабатывается как один объект, Группировка и разгруппировка фигур изменения количество элементов в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> изменения номера индекса элементов, следующие за затронутых элементов в коллекции и семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Разборку изображений и объектов OLE в указанной фигуре.</para>
+          <para>Возвращает несгруппированные фигуры в виде одного <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекта.</para>
+          <para>Так как Группа фигур обрабатывается как одиночный объект, группирование и разгруппирование фигур изменяет количество элементов в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции и изменяет номера индексов элементов, поступающих после затронутых элементов в коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalFlip">
@@ -2644,12 +2549,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный фигуры отражается вокруг вертикальной оси.</summary>
+        <summary>Определяет, перемещается ли указанная фигура вокруг вертикальной оси.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если указанный фигуры отражается вокруг вертикальной оси и <b>значение False,</b> Если это не так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанная фигура перевернута вокруг вертикальной оси, и <b>false</b> , если нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Vertices">
@@ -2675,39 +2578,37 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает координаты вершин указанного freeform документа (и контрольные точки для кривых Безье) в формате пары координат.</summary>
+        <summary>Возвращает координаты заданных вершин полилинии (и контрольные точки для кривых Безье) в виде ряда пар координат.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно использовать массив, возвращаемый этим свойством, в качестве аргумента для <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCurve(System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPolyline(System.Object@,System.Object@)" /> метод.</para>
-          <para>В следующей таблице показано, как свойство <b>вершин</b> связывает значения в vertArray() массива с координаты вершины треугольника.</para>
+        <remarks><para>Вы можете использовать массив, возвращенный этим свойством, в качестве <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddCurve(System.Object@,System.Object@)" /> аргумента <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPolyline(System.Object@,System.Object@)" /> метода или.</para>
+          <para>В следующей таблице показано, как свойство <b>вершины</b> связывает значения в массиве вертаррай () с координатами вершин треугольника.</para>
           <list type="table">
             <item>
-              <description>vertArray (1, 1)</description>
-              <description>расстояние по горизонтали из первой вершины в левой части документа.</description>
+              <description>Вертаррай (1, 1)</description>
+              <description>Горизонтальное расстояние от первой вершины до левой части документа.</description>
             </item>
             <item>
-              <description>vertArray (1, 2)</description>
-              <description>расстояние по вертикали из первой вершины в начало документа.</description>
+              <description>Вертаррай (1, 2)</description>
+              <description>Вертикальное расстояние от первой вершины до верха документа.</description>
             </item>
             <item>
-              <description>vertArray (2, 1)</description>
-              <description>горизонтальной расстояние от второй вершины в левой части документа.</description>
+              <description>Вертаррай (2, 1)</description>
+              <description>Горизонтальное расстояние от второй вершины до левой части документа.</description>
             </item>
             <item>
-              <description>vertArray (2, 2)</description>
-              <description>вертикальной расстояние от второй вершины в начало документа.</description>
+              <description>Вертаррай (2, 2)</description>
+              <description>Вертикальное расстояние от второй вершины до верха документа.</description>
             </item>
             <item>
-              <description>vertArray (3, 1)</description>
-              <description>горизонтальной расстояние от третьей вершины в левой части документа.</description>
+              <description>Вертаррай (3, 1)</description>
+              <description>Горизонтальное расстояние от третьей вершины до левой части документа.</description>
             </item>
             <item>
-              <description>vertArray (3, 2)</description>
-              <description>вертикальной расстояние от третьей вершины в начало документа.</description>
+              <description>Вертаррай (3, 2)</description>
+              <description>Вертикальное расстояние от третьей вершины до верха документа.</description>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Visible">
@@ -2736,13 +2637,11 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный объект или форматирование, применяемое к нему, отображается.</summary>
+        <summary>Определяет, является ли видимым указанный объект или применение форматирования.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если указанный объект или форматирование применяется к нему, будет отображаться и <b>значение False,</b> если он не установлен.</para>
-          <para>Для любого объекта некоторые методы и свойства может быть недоступны, если свойство <b>Visible</b> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанный объект или форматирование, примененное к нему, видимы, и <b>false</b> , если это не так.</para>
+          <para>Для любого объекта некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -2802,12 +2701,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>один</b> , который представляет ширину фигуры. Для чтения и записи.</summary>
-        <value>Возвращает <see cref="T:System.Single" />.</value>
-        <remarks>
-          <para>Использование этого свойства с <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalSize" /> свойство. Если параметр имеет значение <b>wdShapeSizeRelativeNone</b> (-999999) (просмотреть <see cref="T:Microsoft.Office.Interop.Word.WdShapeSizeRelative" /> перечисления), это свойство игнорироваться, так как фигуры не использует процент изменения размера. Ширина определяется исключительно <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> свойство.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее относительную ширину фигуры. Для чтения и записи.</summary>
+        <value>Возвращает <see cref="T:System.Single" />значение.</value>
+        <remarks><para>Используйте это свойство вместе со <see cref="P:Microsoft.Office.Interop.Word.Shape.RelativeVerticalSize" /> свойством. Если задано значение <b>вдшапесизерелативеноне</b> (-999999) (см <see cref="T:Microsoft.Office.Interop.Word.WdShapeSizeRelative" /> . перечисление), это свойство должно игнорироваться, так как фигура не использует процентное масштабирование. Ширина определяется только <see cref="P:Microsoft.Office.Interop.Word.Shape.Width" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WrapFormat">
@@ -2833,7 +2730,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WrapFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> , содержащий свойства обтекания текста указанного фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объект, который содержит свойства для переноса текста вокруг указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2861,12 +2758,10 @@
         <Parameter Name="ZOrderCmd" Type="Microsoft.Office.Core.MsoZOrderCmd" />
       </Parameters>
       <Docs>
-        <param name="ZOrderCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoZOrderCmd" />. Указывает, где для перемещения указанного фигуры относительно других фигур.</param>
-        <summary>Перемещает указанный фигуры на переднем плане или из-за других фигур в коллекции (то есть, изменяется фигуры позицию в z порядке).</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.ZOrderPosition" /> свойства, чтобы определить фигуры текущую позицию в z порядке.</para>
-          <para />
-        </remarks>
+        <param name="ZOrderCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoZOrderCmd" />. Указывает, куда перемещать указанную фигуру относительно других фигур.</param>
+        <summary>Помещает указанную фигуру перед или за другими фигурами в коллекции (то есть изменяет положение фигуры по оси Z).</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.ZOrderPosition" /> свойство, чтобы определить текущую позицию фигуры в z — порядке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ZOrderPosition">
@@ -2892,14 +2787,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение указанного фигуры в z порядке.</summary>
+        <summary>Возвращает позицию указанной фигуры в z — порядке.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать положение фигуры в z порядке, используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ZOrder(Microsoft.Office.Core.MsoZOrderCmd)" /> метод.</para>
-          <para>Фигуры позицию в z порядке, соответствует номеру индекса фигуры в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> семейства.</para>
-          <para>Каждый раз при добавлении новой фигуры в коллекцию добавляется в начало z порядка по умолчанию.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать положение фигуры в z, используйте <see cref="M:Microsoft.Office.Interop.Word.Shape.ZOrder(Microsoft.Office.Core.MsoZOrderCmd)" /> метод.</para>
+          <para>Положение фигуры в z-порядке соответствует номеру индекса фигуры в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции.</para>
+          <para>Когда вы добавляете новую фигуру в коллекцию, она добавляется в начало z-порядка по умолчанию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

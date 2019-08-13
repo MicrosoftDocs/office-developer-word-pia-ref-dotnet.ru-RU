@@ -1,13 +1,5 @@
 <Type Name="Words" FullName="Microsoft.Office.Interop.Word.Words">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d48de7da434ab165907e297c39bfe4ff1b969693" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672520" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Words : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d236676b440e6d795d3c1717b83df235a2ae0ef2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142656" /></Metadata><TypeSignature Language="C#" Value="public interface Words : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Words implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Words" />
   <TypeSignature Language="VB.NET" Value="Public Interface Words&#xA;Implements IEnumerable" />
@@ -30,12 +22,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция слов в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Каждый элемент в коллекции <b>слова</b> отображается <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет одно слово. Нет объекта Word.</para>
-      <para>Воспользуйтесь свойством <b>слова</b> для возврата объекта <b>слова</b> .</para>
-      <para>Использования <b>слова</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>Range</b> , который представляет одно слово. Номер индекса представляет положение слова в коллекции <b>слова</b> .</para> Коллекция 
-      <para>элемента в <b>слова</b> включает слово и пробелы после слова. Если это точку вставки и сразу же следуют пробел, Selection.Words(1) ссылается на слова предыдущих выделение. Если выделение — точка вставки и сразу же следуют знак, Selection.Words(1) ссылается на слово после выбора.</para><para><see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте коллекции с помощью объекта <b>Range</b> . Кроме того свойство <b>Count</b> включает в себя знаки пунктуации и абзацев в целом. Количество фактических слов в документе, используйте диалоговое окно Статистика.</para> Метод <b>Add</b><para>недоступен для коллекции <b>слова</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> метод для добавления текста в объект <b>Range</b> .</para><para /></remarks>
+    <summary>Коллекция слов в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Каждый элемент в коллекции <b>Words</b> — это <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий одно слово. Отсутствует объект Word.</para>
+      <para>Чтобы получить объект Words, используйте <b></b> свойство <b>Words</b> .</para>
+      <para>Используйте <b>слова</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Range</b> , представляющий одно слово. Номер индекса представляет положение слова в коллекции <b>слов</b> .</para>
+      <para>Элемент в коллекции <b>слов</b> содержит как слово, так и пробелы после слова. Если выделенный фрагмент является точкой вставки и сразу за ним следует пробел, выделение. слова (1) — это слово, предшествующее выделенному фрагменту. Если выделенный фрагмент является точкой вставки и сразу за ним следует символ, выделение. слова (1) относится к слову, следующему за выделенным фрагментом.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Words.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> . Кроме того, свойство <b>Count</b> включает знаки пунктуации и знаки абзаца в общей сумме. Чтобы получить количество фактических слов в документе, используйте диалоговое окно "Статистика".</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>Words</b> . Вместо этого используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> метод, чтобы добавить текст в объект <b>Range</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,7 +83,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,11 +111,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="First">
@@ -147,7 +141,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий первое слово в документе, выделения или диапазона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий первое слово в документе, выделенном фрагменте или диапазоне.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -210,9 +204,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,7 +233,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта, представляющего последнего слова в документ, выделения или диапазона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий Последнее слово в документе, выделенном фрагменте или диапазоне.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -268,7 +261,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

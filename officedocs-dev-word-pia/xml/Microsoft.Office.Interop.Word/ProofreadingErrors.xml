@@ -1,13 +1,5 @@
 <Type Name="ProofreadingErrors" FullName="Microsoft.Office.Interop.Word.ProofreadingErrors">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f10bd2f36ccd49a6e2ce9df79a605d805e0e9d07" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673303" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ProofreadingErrors : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0c61f910fa45ca20cb739f36d01474a098c8703d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144143" /></Metadata><TypeSignature Language="C#" Value="public interface ProofreadingErrors : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ProofreadingErrors implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ProofreadingErrors" />
   <TypeSignature Language="VB.NET" Value="Public Interface ProofreadingErrors&#xA;Implements IEnumerable" />
@@ -30,16 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция орфографических и грамматических ошибок для указанного документа или диапазона.</summary>
-    <remarks>
-      <para>Нет объекта ProofreadingError; Вместо этого каждого элемента в коллекции <b>ProofreadingErrors</b> — это <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий один орфографических или грамматических ошибок.</para>
-      <para>Использование свойства <b>SpellingErrors</b> или <b>GrammaticalErrors</b><see cref="T:Microsoft.Office.Interop.Word.Document" /> или объекта Range для возврата коллекции <b>ProofreadingErrors</b> .</para>
-      <para>Использования <b>SpellingErrors</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата одной орфографических ошибок (представленный объектом <b>диапазон</b> ).</para>
-      <para>Использования <b>GrammarErrors</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возвращения одного грамматических ошибок (представленный объектом <b>диапазон</b> ).</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте коллекции с помощью объекта <b>Range</b> . Если все слова в документе или диапазон написаны правильно и грамматически исправьте, свойство <b>Count</b> для возвращает объект <b>ProofreadingErrors</b> 0 (ноль) и <b>SpellingChecked</b> и <b>GrammarChecked</b> свойства объекта <b>документа</b> или <b>диапазона</b> возвращало <b>значение True</b>.</para>
-      <para />
-    </remarks>
+    <summary>Набор орфографических и грамматических ошибок для указанного документа или диапазона.</summary>
+    <remarks><para>Объект Пруфреадинжеррор отсутствует; Вместо этого каждый элемент в коллекции <b>ProofreadingErrors</b> является <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом, представляющим одну орфографиую или грамматическую ошибку.</para>
+      <para>Используйте свойство <b>спеллинжеррорс</b> или <b>Грамматикалеррорс</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" /> или диапазона, чтобы возвратить коллекцию <b>ProofreadingErrors</b> .</para>
+      <para>Используйте <b>спеллинжеррорс</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну ошибку правописания (представленную объектом <b>Range</b> ).</para>
+      <para>Используйте <b>граммареррорс</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну грамматическую ошибку (представленную объектом <b>Range</b> ).</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> . Если все слова в документе или диапазоне написаны правильно и грамматикалли правильно, свойство <b>Count</b> объекта <b>ProofreadingErrors</b> возвращает значение 0 (ноль) и свойства <b>спеллингчеккед</b> и <b>граммарчеккед</b> Объект <b>Document</b> или <b>Range</b> возвращает <b>значение true</b>.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -93,7 +82,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,11 +110,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -186,9 +175,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -216,7 +204,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -244,7 +232,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdProofreadingErrorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип проверки ошибок.</summary>
+        <summary>Возвращает тип ошибки проверки правописания.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

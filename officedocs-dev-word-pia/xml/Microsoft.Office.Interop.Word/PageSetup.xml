@@ -1,13 +1,5 @@
 <Type Name="PageSetup" FullName="Microsoft.Office.Interop.Word.PageSetup">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="558d1f8af2b21e49d591c611c2670c360008123e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673841" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PageSetup" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="433e93ba8183c9b0045586babe477ca93fb72916" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144206" /></Metadata><TypeSignature Language="C#" Value="public interface PageSetup" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PageSetup" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.PageSetup" />
   <TypeSignature Language="VB.NET" Value="Public Interface PageSetup" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет описание настройки страницы. Объект <b>PageSetup</b> содержит все атрибуты страницы программы установки (левое поле, нижнее, размер бумаги и т. п.) как свойства.</summary>
-    <remarks>
-      <para>Свойство <b>PageSetup</b> используется для возврата объекта <b>PageSetup</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет описание параметров страницы. Объект <b>PageSetup</b> содержит все атрибуты параметров страницы (левое поле, нижнее поле, размер бумаги и т. д.) в виде свойств.</summary>
+    <remarks><para>Чтобы вернуть объект <b>PageSetup</b> , используйте свойство <b>PageSetup</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,8 +77,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word печати документа в серии из буклетов, поэтому печатных страниц можно складывается и читать как книга.</summary>
+        <summary><b>True</b> для Microsoft Word для печати документа в нескольких брошюрах, чтобы напечатанные страницы могли быть сложены и прочитаны в виде книги.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,7 +108,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее число страниц для каждого брошюра.</summary>
+        <summary>Возвращает или задает <b>целое</b> число, представляющее количество страниц для каждой брошюры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,8 +139,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word в обратном порядке печати для книги сложить печати двунаправленный или документов азиатских языков.</summary>
+        <summary><b>True</b> для Microsoft Word, чтобы обратить порядок печати в документах с двунаправленным или азиатским языковым сгибом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,7 +170,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между нижней границей страницы и нижнюю границу к основному тексту.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между нижней границей страницы и нижней границей основного текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -213,7 +201,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число знаков в строке в сетке документа.</summary>
+        <summary>Возвращает или задает количество символов в строке в сетке документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,11 +229,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DifferentFirstPageHeaderFooter">
@@ -274,7 +262,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>На первой странице используется <b>значение true,</b> Если различных верхнего или нижнего колонтитула. Может быть <b>значение True</b>, <b>False</b>или <b>wdUndefined</b>.</summary>
+        <summary><b>Значение true</b> , если на первой странице используется другой верхний колонтитул или нижний колонтитул. Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -305,7 +293,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPaperTray</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает область бумаги для первой страницы документа или раздела.</summary>
+        <summary>Возвращает или задает лоток для бумаги, который будет использоваться для первой страницы документа или раздела.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -336,7 +324,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между нижнего колонтитула и нижней части страницы.</summary>
+        <summary>Возвращает или задает расстояние между нижним колонтитулом и нижней частью страницы (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -367,12 +355,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает интервал (в точках) пространства дополнительных полей, добавляемого на каждую страницу в документ или раздел для привязки.</summary>
+        <summary>Возвращает или задает величину (в пунктах) дополнительного места для полей, добавленных на каждую страницу документа или раздела для привязки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> задано значение <b>True</b>, свойство <b>переплета</b> добавляет дополнительное пространство внутри поля. В противном случае дополнительное пространство добавляется по левому краю.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> свойству присвоено значение <b>true</b>, свойство <b>корешкового</b> поля добавляет дополнительное пространство во внутренние поля. В противном случае в левое поле добавляется дополнительное пространство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GutterOnTop">
@@ -438,7 +424,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdGutterStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает какие части внутренней области отображается в документе.</summary>
+        <summary>Возвращает или задает, на какой стороне в документе отображается переплет.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -469,7 +455,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdGutterStyleOld</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает Microsoft Word использует переплета для текущего документа на основе языка для письма справа налево или слева направо языка.</summary>
+        <summary>Возвращает или задает значение, указывающее, использует ли Microsoft Word внутренние интервалы для текущего документа на основе языка с письмом справа налево или с письмом слева направо.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -500,7 +486,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между заголовком и верхней части страницы.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между заголовком и верхней частью страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -562,12 +548,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) от левого края страницы и левой границей основного текста.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между левым краем страницы и левой границей основного текста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> задано значение <b>True</b>, свойство <b>LeftMargin</b> управляет текущее значение внутри полей и <see cref="P:Microsoft.Office.Interop.Word.PageSetup.RightMargin" /> свойство управляет значение для поля, находящиеся за пределами организации.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> свойству присвоено значение <b>true</b>, свойство <b>LeftMargin</b> управляет параметром для внутренних полей, а <see cref="P:Microsoft.Office.Interop.Word.PageSetup.RightMargin" /> свойство определяет параметр для внешних полей.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LineNumbering">
@@ -598,10 +582,8 @@
       <Docs>
         <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.LineNumbering" /> объект, представляющий номера строк для указанного <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Требуется для просмотра нумерация строк в режим разметки.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для просмотра нумерации строк необходимо перейти в режим разметки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinesPage">
@@ -630,7 +612,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число строк на странице в сетке документа.</summary>
+        <summary>Возвращает или задает количество строк на странице в сетке документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -661,13 +643,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если внутри и вне поля противоположных страницах имеют одинаковую ширину. Может быть <b>значение True</b>, <b>False</b>или <b>wdUndefined</b>.</summary>
+        <summary><b>Значение true</b> , если внутренние и внешние поля разворотов имеют одинаковую ширину. Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>MirrorMargins</b> имеет значение <b>True</b>, <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LeftMargin" /> свойство управляет текущее значение внутри полей и <see cref="P:Microsoft.Office.Interop.Word.PageSetup.RightMargin" /> свойство управляет значение для поля, находящиеся за пределами организации.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для свойства <b>миррормаргинс</b> задано <b>значение true</b>, то <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LeftMargin" /> свойство управляет параметрами для внутренних полей, а <see cref="P:Microsoft.Office.Interop.Word.PageSetup.RightMargin" /> свойство определяет параметр для внешних полей.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OddAndEvenPagesHeaderFooter">
@@ -696,8 +675,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объект имеет разные верхние и нижние колонтитулы для нечетных и четных страниц. Может быть <b>значение True</b>, <b>False</b>или <b>wdUndefined</b>.</summary>
+        <summary>Имеет <b>значение true</b> , <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> если у указанного объекта разные колонтитулы для нечетных и четных страниц с нечетным числом. Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -728,12 +706,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ориентации страницы.</summary>
+        <summary>Возвращает или задает ориентацию страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Некоторые из <see cref="T:Microsoft.Office.Interop.Word.WdOrientation" /> константы могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Некоторые <see cref="T:Microsoft.Office.Interop.Word.WdOrientation" /> константы могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OtherPagesTray">
@@ -762,7 +738,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPaperTray</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает область документ, которое будет использоваться для всех, кроме первой страницы документа или раздела.</summary>
+        <summary>Возвращает или задает лоток для бумаги, который будет использоваться для всех страниц документа или раздела, кроме первой.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -793,13 +769,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту страницы в точках.</summary>
+        <summary>Возвращает или задает высоту страницы в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Задание изменения свойств <b>PageHeight</b><see cref="P:Microsoft.Office.Interop.Word.PageSetup.PaperSize" /> свойства <b>wdPaperCustom</b>.</para>
-          <para>Свойство <b>PaperSize</b> позволяет установить страницы высоту и ширину теми предварительно заданных бумаги, такие как буква или A4.</para>
-          <para />
-        </remarks>
+        <remarks><para>Установка свойства <b>PageHeight</b> изменяет значение <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PaperSize" /> свойства на <b>вдпаперкустом</b>.</para>
+          <para>Используйте свойство <b>паперсизе</b> , чтобы задать высоту и ширину страницы для предварительно определенного размера бумаги, например Letter или A4.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageWidth">
@@ -828,13 +802,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину страницы в точках.</summary>
+        <summary>Возвращает или задает ширину страницы в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Задание изменения свойств <b>PageWidth</b><see cref="P:Microsoft.Office.Interop.Word.PageSetup.PaperSize" /> свойства <b>wdPaperCustom</b>.</para>
-          <para>Свойство <b>PaperSize</b> позволяет установить страницы высоту и ширину теми предварительно заданных бумаги, такие как буква или A4.</para>
-          <para />
-        </remarks>
+        <remarks><para>Установка свойства <b>PageWidth</b> изменяет значение <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PaperSize" /> свойства на <b>вдпаперкустом</b>.</para>
+          <para>Используйте свойство <b>паперсизе</b> , чтобы задать высоту и ширину страницы для предварительно определенного размера бумаги, например Letter или A4.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PaperSize">
@@ -865,10 +837,8 @@
       <Docs>
         <summary>Возвращает или задает размер бумаги.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PageHeight" /> или <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PageWidth" /> свойство изменяет свойство <b>PaperSize</b><b>wdPaperCustom</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>При установке <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PageHeight" /> свойства <see cref="P:Microsoft.Office.Interop.Word.PageSetup.PageWidth" /> или свойства <b>паперсизе</b> изменяется значение <b>вдпаперкустом</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -894,7 +864,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -925,12 +895,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между правым краем страницы и правой границы основного текста.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между правым краем страницы и правой границей основного текста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> задано значение <b>True</b>, свойство <b>RightMargin</b> определяет значение для поля, находящиеся за пределами организации и <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LeftMargin" /> свойство управляет текущее значение внутри полей.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.PageSetup.MirrorMargins" /> свойству присвоено значение <b>true</b>, свойство <b>RightMargin</b> управляет параметром для внешних полей, а <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LeftMargin" /> свойство определяет параметр для внутренних полей.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SectionDirection">
@@ -959,7 +927,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSectionDirection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок чтения и выравнивание для указанного раздела.</summary>
+        <summary>Возвращает или задает порядок чтения и выравнивание для указанных разделов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -990,7 +958,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSectionStart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип разрыва для указанного объекта.</summary>
+        <summary>Возвращает или задает тип разрыва раздела для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1016,7 +984,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает параметры указанной страницы, форматирование по умолчанию для активных документов и всех новых документов на основе active шаблона.</summary>
+        <summary>Устанавливает заданное форматирование страницы по умолчанию для активного документа и всех новых документов, основанных на активном шаблоне.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1077,13 +1045,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если концевые сноски печатаются в конце следующего раздела, который не Запретить концевые сноски. Отключенные концевые сноски печатаются перед концевые сноски в этом разделе.</summary>
+        <summary><b>True</b> , если концевые сноски печатаются в конце следующего раздела, который не подавляет концевые сноски. Отключенные концевые сноски печатаются до концевых сносок в этом разделе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство действует только в том случае, если <see cref="P:Microsoft.Office.Interop.Word.Endnotes.Location" /> задано значение <b>wdEndOfSection</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство вступает в силу только в <see cref="P:Microsoft.Office.Interop.Word.Endnotes.Location" /> том случае, если для свойства задано значение <b>вдендофсектион</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextColumns">
@@ -1112,12 +1077,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextColumns</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> коллекции, представляющей наборы столбцов текста для указанного <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> коллекцию, представляющую набор текстовых столбцов для указанного <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Всегда будет по крайней мере один столбец текста в коллекции. При создании новых столбцов текста, добавляемым в коллекцию один столбец.</para>
-          <para />
-        </remarks>
+        <remarks><para>В коллекции всегда должен быть по крайней мере один текстовый столбец. При создании новых текстовых столбцов добавляется в коллекцию из одного столбца.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TogglePortrait">
@@ -1141,11 +1104,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Переключение между книжная или альбомная ориентации страницы для документа или раздела.</summary>
-        <remarks>
-          <para>Если указанный разделах ориентации другой страницы, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <summary>Переключение между книжной и альбомной ориентацией страниц для документа или раздела.</summary>
+        <remarks><para>Если указанные разделы имеют разные ориентации страниц, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TopMargin">
@@ -1174,7 +1135,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между верхнего края страницы и верхней границы основного текста.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между верхним краем страницы и верхней границей основного текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1205,8 +1166,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный документ двух страниц на листе печатается Microsoft Word.</summary>
+        <summary><b>Значение true</b> , если Microsoft Word печатает указанный документ на две страницы на листе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

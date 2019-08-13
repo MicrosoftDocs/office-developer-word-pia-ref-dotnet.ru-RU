@@ -1,13 +1,5 @@
 <Type Name="SmartTags" FullName="Microsoft.Office.Interop.Word.SmartTags">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="48b9a46976fc40ea2e4c681e6c129534480095b5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672797" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTags : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bfd50651b1e8f6cb8ea8dd99dcfa5aa199718e35" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143968" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTags : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTags implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTags" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTags&#xA;Implements IEnumerable" />
@@ -30,12 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.SmartTag" /> объекты, которые представляют текста в документе, помеченный как содержащий сведения о типе распознанный.</summary>
-    <remarks>
-      <para>Коллекция <b>смарт-тегов</b> содержит смарт-тегов в документе или диапазон текста в документе. Microsoft Word использует файл смарт-тегами подписи, средства распознавания и использует файл действие для выполнения действий, связанных с смарт-тегов, такие как создание ссылок на веб-сайтов.</para>
-      <para>Использование метода <b>Item</b> — или <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> (<paramref name="index" />), где <paramref name="index" /> представляет число смарт-тега — для возврата объекта <b>смарт-тега</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.SmartTag" /> объектов, представляющая текст в документе, помеченный как содержащий распознанные сведения о типе.</summary>
+    <remarks><para>Коллекция <b>SmartTags</b> содержит все смарт-теги в документе или диапазоне текста в документе. Microsoft Word использует файл распознавателя для обозначения смарт-тегов и использует файл действий для выполнения действий, связанных со смарт-тегами, таких как связывание с веб-сайтами.</para>
+      <para>Используйте метод <b>Item</b> — или <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> (<paramref name="index" />), где <paramref name="index" /> представляет номер смарт-тега, чтобы вернуть один объект <b>SmartTag</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -65,11 +55,10 @@
         <Parameter Name="Properties" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя смарт-тега.</param>
-        <param name="Range">Необязательный элемент <b>Object</b>. Диапазон, к которому следует применить смарт-тег.</param>
-        <param name="Properties">Необязательный элемент <b>Object</b>. Свойства, которые применяются к смарт-тег.</param>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.SmartTag" /> объект, представляющий новый смарт-тег добавлен в документ.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя смарт-тега.</param>
+        <param name="Range">Необязательный <b>объект</b>. Диапазон, к которому применяется смарт-тег.</param>
+        <param name="Properties">Необязательный <b>объект</b>. Свойства, которые применяются к смарт-тегу.</param>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.SmartTag" /> объект, представляющий новый смарт-тег, добавленный в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -131,7 +120,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -162,11 +151,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -230,9 +219,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -263,7 +251,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -294,9 +282,8 @@
         <Parameter Name="Name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя типа смарт-тега.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> коллекции, представляющей смарт-тегов, установленные на компьютере пользователя для указанного типа.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя типа смарт-тега.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> коллекцию, которая представляет все смарт-теги, установленные на компьютере пользователя указанного типа.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
