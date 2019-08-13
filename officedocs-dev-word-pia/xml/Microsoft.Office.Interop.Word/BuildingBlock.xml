@@ -1,13 +1,5 @@
 <Type Name="BuildingBlock" FullName="Microsoft.Office.Interop.Word.BuildingBlock">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fc15f7587aceebb7da5afc606fbedbd78e590230" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673519" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface BuildingBlock" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ca9bed40f87117ccf911469b9c1d874a575c9129" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146229" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlock" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlock" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.BuildingBlock" />
   <TypeSignature Language="VB.NET" Value="Public Interface BuildingBlock" />
@@ -26,38 +18,17 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <span data-ttu-id="d03b9-101">Представляет стандартный блок в шаблоне.</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="d03b9-101">Represents a building block in a template.</span>
-      </span>
-      <span data-ttu-id="d03b9-102">Стандартный блок — это готовые содержимое, аналогичное автотекст, которое может содержать текст, изображения и форматирование.</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="d03b9-102">A building block is pre-built content, similar to autotext, that may contain text, images, and formatting.</span>
-      </span>
-    </summary>
-    <remarks>
-      <span data-ttu-id="d03b9-103">
-        <para>Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> и <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> семейств сайтов. Стандартные блоки, хранятся в шаблоны Microsoft Office Word.  Таким образом для доступа к стандартные блоки, доступных для документа, необходимо получить доступ к присоединенного шаблона.  Встроенные стандартные блоки, хранятся в шаблоне с именем «Построение Blocks.dotx».</para>
-        <para>
-          <b>Примечание</b>: использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> методу коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции для возврата отдельных стандартного блока. В зависимости от того, как можно получить доступ к коллекции возвращаемой коллекции может измениться.  Например, если доступ к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией «Общие», возвращенной коллекции может отличаться от коллекции, возвращаемой при доступе к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией «Custom». Различные из коллекции, возвращаемой при доступе к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией «Общие». Таким образом, первый элемент в коллекции, доступного из коллекции <b>BuildingBlockEntries</b> может отличаться от первого элемента в коллекции осуществляется из коллекции <b>BuildingBlocks</b> .</para>
-        <para>Для создания нового стандартного блока, можно использовать метод <b>Add</b> коллекции <b>BuildingBlockEntries</b> или <b>BuildingBlocks</b> коллекции.  Тем не менее, для создания нового стандартного блока рекомендуется с помощью <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метод <b>BuildingBlockEntries</b> семейства сайтов. </para>
-        <para>Использования <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для вставки нового стандартного блока в документ. Использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> метод для удаления стандартного блока из шаблона.</para> Стандартные блоки 
-      <para>упорядочены по категории и типа.  Использование <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> семейства сайтов для отдельного клиента <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объектов. Использование <see cref="T:Microsoft.Office.Interop.Word.Categories" /> семейства сайтов для отдельного клиента <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> объектов. Затем используйте свойство <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> . </para><para>Каждого стандартный блок имеет свойства, которые содержат сведения, описывающие уникальным образом, таких как <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />, и <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />.</para><para>Дополнительные сведения о стандартных блоках в разделе <a href="HV10120827">Работа с стандартные блоки</a></para><para /></span>
-      <span class="sxs-lookup">
-        <span data-stu-id="d03b9-103">
-          <para>Each <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> object is a member of the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> and <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> collections. Building blocks are stored in Microsoft Office Word templates.  Therefore, to access the building blocks available for a document, you need to access an attached template.  Built-in building blocks are stored in the template named "Building Blocks.dotx".</para>
-          <para>
-            <b>Note</b>: Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> method of the  collection or the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> collection to return an individual building block. Depending on how you access the collection, the collection returned may change.  For example, if you access a collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> with a category of "General", the returned collection may be different from the collection returned if you access a collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> with a category of "Custom". It is also  different from the collection returned if you access the collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> with a category of "General". Therefore, the first item in a collection accessed from the <b>BuildingBlockEntries</b> collection may be different from the first item in the collection accessed from the <b>BuildingBlocks</b> collection.</para>
-          <para>To create a new building block, you can use the <b>Add</b> method for either the <b>BuildingBlockEntries</b> collection or the <b>BuildingBlocks</b> collection.  However, the recommended way to create a new building block is by using the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> method for the <b>BuildingBlockEntries</b> collection. </para>
-          <para>Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> method to insert a new building block into a document. Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> method to remove a building block from a template.</para>
-          <para>Building blocks are organized by category and type.  Use the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> collection to access individual <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> objects. Use the <see cref="T:Microsoft.Office.Interop.Word.Categories" /> collection to access individual <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> objects. Then use the <b>BuildingBlocks</b> propery to access the <b>BuildingBlocks</b> collection for a <b>Category</b> object. </para>
-          <para>Each building block has properties that contain information that applies uniquely to it, such as <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />, and <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />.</para>
-          <para>For more information about building blocks, see <a href="HV10120827">Working with Building Blocks</a></para>
-          <para />
-        </span>
-      </span>
-    </remarks>
+    <summary><span data-ttu-id="0e770-101">Представляет стандартный блок в шаблоне.</span><span class="sxs-lookup"><span data-stu-id="0e770-101">Represents a building block in a template.</span></span>  <span data-ttu-id="0e770-102">Стандартный блок — это встроенный контент, похожий на Автотекст, который может содержать текст, изображения и форматирование.</span><span class="sxs-lookup"><span data-stu-id="0e770-102">A building block is pre-built content, similar to autotext, that may contain text, images, and formatting.</span></span></summary>
+    <remarks><para><span data-ttu-id="0e770-103">Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом коллекции <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> и. <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /></span><span class="sxs-lookup"><span data-stu-id="0e770-103">Each <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> object is a member of the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> and <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> collections.</span></span> <span data-ttu-id="0e770-104">Стандартные блоки хранятся в шаблонах Microsoft Office Word.</span><span class="sxs-lookup"><span data-stu-id="0e770-104">Building blocks are stored in Microsoft Office Word templates.</span></span>  <span data-ttu-id="0e770-105">Таким образом, для доступа к стандартным блокам, доступным для документа, необходимо получить доступ к присоединенному шаблону.</span><span class="sxs-lookup"><span data-stu-id="0e770-105">Therefore, to access the building blocks available for a document, you need to access an attached template.</span></span>  <span data-ttu-id="0e770-106">Встроенные стандартные блоки хранятся в шаблоне под названием "компоновочные блоки. dotx".</span><span class="sxs-lookup"><span data-stu-id="0e770-106">Built-in building blocks are stored in the template named "Building Blocks.dotx".</span></span></para>
+      <para><span data-ttu-id="0e770-107">
+        <b>Note</b>: используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> метод коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции, чтобы возвратить отдельный Стандартный блок.</span><span class="sxs-lookup"><span data-stu-id="0e770-107">
+        <b>Note</b>: Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> method of the  collection or the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> collection to return an individual building block.</span></span> <span data-ttu-id="0e770-108">В зависимости от того, как вы получите доступ к коллекции, возвращаемая коллекция может измениться.</span><span class="sxs-lookup"><span data-stu-id="0e770-108">Depending on how you access the collection, the collection returned may change.</span></span>  <span data-ttu-id="0e770-109">Например, если вы обращаетесь к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией "Общие", возвращаемая коллекция может отличаться от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом Category <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> "Custom".</span><span class="sxs-lookup"><span data-stu-id="0e770-109">For example, if you access a collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> with a category of "General", the returned collection may be different from the collection returned if you access a collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> with a category of "Custom".</span></span> <span data-ttu-id="0e770-110">Он также отличается от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией "Общие".</span><span class="sxs-lookup"><span data-stu-id="0e770-110">It is also  different from the collection returned if you access the collection of building blocks with a type of <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> with a category of "General".</span></span> <span data-ttu-id="0e770-111">Таким образом, первый элемент коллекции, к которому получен доступ из коллекции <b>BuildingBlockEntries</b> , может отличаться от первого элемента коллекции, к которому получен доступ из коллекции <b>BuildingBlocks</b> .</span><span class="sxs-lookup"><span data-stu-id="0e770-111">Therefore, the first item in a collection accessed from the <b>BuildingBlockEntries</b> collection may be different from the first item in the collection accessed from the <b>BuildingBlocks</b> collection.</span></span></para>
+      <para><span data-ttu-id="0e770-112">Для создания нового стандартного блока можно использовать метод <b>Add</b> для коллекции <b>BuildingBlockEntries</b> или коллекции <b>BuildingBlocks</b> .</span><span class="sxs-lookup"><span data-stu-id="0e770-112">To create a new building block, you can use the <b>Add</b> method for either the <b>BuildingBlockEntries</b> collection or the <b>BuildingBlocks</b> collection.</span></span>  <span data-ttu-id="0e770-113">Однако рекомендуемый способ создания нового стандартного блока — использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метода для коллекции <b>BuildingBlockEntries</b> .</span><span class="sxs-lookup"><span data-stu-id="0e770-113">However, the recommended way to create a new building block is by using the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> method for the <b>BuildingBlockEntries</b> collection.</span></span> </para>
+      <para><span data-ttu-id="0e770-114">Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для вставки нового стандартного блока в документ.</span><span class="sxs-lookup"><span data-stu-id="0e770-114">Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> method to insert a new building block into a document.</span></span> <span data-ttu-id="0e770-115">Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> метод для удаления стандартного блока из шаблона.</span><span class="sxs-lookup"><span data-stu-id="0e770-115">Use the <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> method to remove a building block from a template.</span></span></para>
+      <para><span data-ttu-id="0e770-116">Стандартные блоки организованы по категориям и типам.</span><span class="sxs-lookup"><span data-stu-id="0e770-116">Building blocks are organized by category and type.</span></span>  <span data-ttu-id="0e770-117">Используйте эту <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекцию для доступа к <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> отдельным объектам.</span><span class="sxs-lookup"><span data-stu-id="0e770-117">Use the <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> collection to access individual <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> objects.</span></span> <span data-ttu-id="0e770-118">Используйте эту <see cref="T:Microsoft.Office.Interop.Word.Categories" /> коллекцию для доступа к <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> отдельным объектам.</span><span class="sxs-lookup"><span data-stu-id="0e770-118">Use the <see cref="T:Microsoft.Office.Interop.Word.Categories" /> collection to access individual <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> objects.</span></span> <span data-ttu-id="0e770-119">Затем используйте надлежащее <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> .</span><span class="sxs-lookup"><span data-stu-id="0e770-119">Then use the <b>BuildingBlocks</b> propery to access the <b>BuildingBlocks</b> collection for a <b>Category</b> object.</span></span> </para>
+      <para><span data-ttu-id="0e770-120">Каждый стандартный блок имеет свойства, которые содержат сведения, применимые к нему уникальным образом <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />например <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />,, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />, и.</span><span class="sxs-lookup"><span data-stu-id="0e770-120">Each building block has properties that contain information that applies uniquely to it, such as <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />, and <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />.</span></span></para>
+      <para><span data-ttu-id="0e770-121">Дополнительные сведения о стандартных блоках см <a href="HV10120827">в разделе Работа с строительными блоками</a></span><span class="sxs-lookup"><span data-stu-id="0e770-121">For more information about building blocks, see <a href="HV10120827">Working with Building Blocks</a></span></span></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -83,15 +54,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-104">Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-104">Returns an <see cref="T:Microsoft.Office.Interop.Word._Application" /> object that represents the Microsoft Word application.</span>
-          </span>
-        </summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <summary><span data-ttu-id="0e770-122">Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="0e770-122">Returns an <see cref="T:Microsoft.Office.Interop.Word._Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -118,19 +82,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Category</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-105">Возвращает категорию для стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-105">Returns the category for a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-106">Только для чтения.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-106">Read-only.</span>
-          </span>
-        </summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Category" />
-        </value>
+        <summary><span data-ttu-id="0e770-123">Возвращает категорию для стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-123">Returns the category for a building block.</span></span> <span data-ttu-id="0e770-124">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="0e770-124">Read-only.</span></span></summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Category" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,42 +110,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-107">Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-107">Returns a 32-bit integer that indicates the application in which the add-in was created.</span>
-          </span>
-          <span data-ttu-id="d03b9-108">Только для чтения.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-108">Read-only.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-109">
-            <b>Integer</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-109">
-              <b>Integer</b>
-            </span>
-          </span>
-        </value>
-        <remarks>
-          <span data-ttu-id="d03b9-110">
-            <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
-            <para>
-              <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-            <para />
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-110">
-              <para>If the object was created in Microsoft Word, the <b>Creator</b> property returns the hexadecimal number 4D535744, which represents the string "MSWD."  This property was primarily designed to be used on the Macintosh, where each application has a four-character creator code. For example, Microsoft Word has the creator code MSWD. For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</para>
-              <para>
-                <b>Note</b>: This value can also be represented by the constant <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <summary><span data-ttu-id="0e770-125">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка.</span><span class="sxs-lookup"><span data-stu-id="0e770-125">Returns a 32-bit integer that indicates the application in which the add-in was created.</span></span> <span data-ttu-id="0e770-126">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="0e770-126">Read-only.</span></span></summary>
+        <value><span data-ttu-id="0e770-127"><b>Integer</b></span><span class="sxs-lookup"><span data-stu-id="0e770-127"><b>Integer</b></span></span></value>
+        <remarks><para><span data-ttu-id="0e770-128">Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="0e770-128">If the object was created in Microsoft Word, the <b>Creator</b> property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span>  <span data-ttu-id="0e770-129">Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="0e770-129">This property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="0e770-130">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="0e770-130">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="0e770-131">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="0e770-131">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+          <para><span data-ttu-id="0e770-132">
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</span><span class="sxs-lookup"><span data-stu-id="0e770-132">
+            <b>Note</b>: This value can also be represented by the constant <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -216,12 +140,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-111">Удаление указанного стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-111">Deletes the specified building block.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="0e770-133">Удаляет указанный Стандартный блок.</span><span class="sxs-lookup"><span data-stu-id="0e770-133">Deletes the specified building block.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -251,26 +170,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-112">Возвращает или задает описание для стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-112">Returns or sets the description for a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-113">Для чтения и записи.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-113">Read/write.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-114">
-            <b>Строка</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-114">
-              <b>String</b>
-            </span>
-          </span>
-        </value>
+        <summary><span data-ttu-id="0e770-134">Возвращает или задает описание стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-134">Returns or sets the description for a building block.</span></span> <span data-ttu-id="0e770-135">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="0e770-135">Read/write.</span></span></summary>
+        <value><span data-ttu-id="0e770-136"><b>String</b></span><span class="sxs-lookup"><span data-stu-id="0e770-136"><b>String</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -297,39 +198,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-115">Возвращает внутренний идентификационный номер для стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-115">Returns the internal identification number for a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-116">Только для чтения.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-116">Read-only.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-117">
-            <b>Строка</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-117">
-              <b>String</b>
-            </span>
-          </span>
-        </value>
-        <remarks>
-          <span data-ttu-id="d03b9-118">
-            <para>
-              <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> Свойство возвращает идентификационной строки, которая задается в форме: идентификатор GUID.</para>
-            <para />
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-118">
-              <para>The <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> property returns an identification string that is in the form of a GUID.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <summary><span data-ttu-id="0e770-137">Возвращает внутренний идентификационный номер для стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-137">Returns the internal identification number for a building block.</span></span> <span data-ttu-id="0e770-138">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="0e770-138">Read-only.</span></span></summary>
+        <value><span data-ttu-id="0e770-139"><b>String</b></span><span class="sxs-lookup"><span data-stu-id="0e770-139"><b>String</b></span></span></value>
+        <remarks><para><span data-ttu-id="0e770-140"><see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> Свойство возвращает строку идентификации в виде идентификатора GUID.</span><span class="sxs-lookup"><span data-stu-id="0e770-140">The <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> property returns an identification string that is in the form of a GUID.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -355,26 +227,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-119">Возвращает положение элемента в коллекции.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-119">Returns the position of an item in a collection.</span>
-          </span>
-          <span data-ttu-id="d03b9-120">Только для чтения.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-120">Read-only.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-121">
-            <b>Integer</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-121">
-              <b>Integer</b>
-            </span>
-          </span>
-        </value>
+        <summary><span data-ttu-id="0e770-141">Возвращает позицию элемента в коллекции.</span><span class="sxs-lookup"><span data-stu-id="0e770-141">Returns the position of an item in a collection.</span></span> <span data-ttu-id="0e770-142">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="0e770-142">Read-only.</span></span></summary>
+        <value><span data-ttu-id="0e770-143"><b>Integer</b></span><span class="sxs-lookup"><span data-stu-id="0e770-143"><b>Integer</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -401,35 +255,10 @@
         <Parameter Name="RichText" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Where">
-          <span data-ttu-id="d03b9-122">Расположение поместить содержимое стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-122">The location of where to place the contents of the building block.</span>
-          </span>
-        </param>
-        <param name="RichText">
-          <span data-ttu-id="d03b9-123">
-            <b>Значение true,</b> Вставка стандартного блока как расширенными возможностями, форматированный текст.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-123">
-              <b>True</b> inserts the building block as rich, formatted text.</span>
-          </span>
-          <span data-ttu-id="d03b9-124">
-            <b>Значение false,</b> Вставка стандартного блока как обычный текст.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-124">
-              <b>False</b> inserts the building block as plain text.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="d03b9-125">Вставляет значение стандартный блок в документе и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет содержимое стандартного блока в документе.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-125">Inserts the value of a building block into a document and returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the contents of the building block within the document.</span>
-          </span>
-        </summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />
-        </returns>
+        <param name="Where"><span data-ttu-id="0e770-144">Место размещения содержимого стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-144">The location of where to place the contents of the building block.</span></span></param>
+        <param name="RichText"><span data-ttu-id="0e770-145"><b>Значение true</b> вставляет Стандартный блок в виде форматированного форматированного текста.</span><span class="sxs-lookup"><span data-stu-id="0e770-145"><b>True</b> inserts the building block as rich, formatted text.</span></span>  <span data-ttu-id="0e770-146"><b>Значение false</b> вставляет Стандартный блок как обычный текст.</span><span class="sxs-lookup"><span data-stu-id="0e770-146"><b>False</b> inserts the building block as plain text.</span></span></param>
+        <summary><span data-ttu-id="0e770-147">Вставляет значение стандартного блока в документ и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий содержимое стандартного блока в документе.</span><span class="sxs-lookup"><span data-stu-id="0e770-147">Inserts the value of a building block into a document and returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the contents of the building block within the document.</span></span></summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.Range" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -459,38 +288,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-126">Возвращает или задает <b>целое число</b> , представляющее как будет вставлено содержимое стандартного блока в документ.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-126">Returns or sets an <b>Integer</b> that represents how to insert the contents of a building block into a document.</span>
-          </span>
-          <span data-ttu-id="d03b9-127">Для чтения и записи.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-127">Read/write.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-128">
-            <b>Integer</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-128">
-              <b>Integer</b>
-            </span>
-          </span>
-        </value>
-        <remarks>
-          <span data-ttu-id="d03b9-129">
-            <para>Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> значений перечисления.</para>
-            <para />
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-129">
-              <para>The value of the <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> property can be any of the <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> enumeration values.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <summary><span data-ttu-id="0e770-148">Возвращает или задает <b>целое число</b> , представляющее способ вставки содержимого стандартного блока в документ.</span><span class="sxs-lookup"><span data-stu-id="0e770-148">Returns or sets an <b>Integer</b> that represents how to insert the contents of a building block into a document.</span></span> <span data-ttu-id="0e770-149">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="0e770-149">Read/write.</span></span></summary>
+        <value><span data-ttu-id="0e770-150"><b>Integer</b></span><span class="sxs-lookup"><span data-stu-id="0e770-150"><b>Integer</b></span></span></value>
+        <remarks><para><span data-ttu-id="0e770-151">Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любым из значений <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> перечисления.</span><span class="sxs-lookup"><span data-stu-id="0e770-151">The value of the <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> property can be any of the <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> enumeration values.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -519,26 +320,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-130">Возвращает или задает имя стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-130">Returns or sets the name of a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-131">Для чтения и записи.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-131">Read/write.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-132">
-            <b>Строка</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-132">
-              <b>String</b>
-            </span>
-          </span>
-        </value>
+        <summary><span data-ttu-id="0e770-152">Возвращает или задает имя стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-152">Returns or sets the name of a building block.</span></span> <span data-ttu-id="0e770-153">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="0e770-153">Read/write.</span></span></summary>
+        <value><span data-ttu-id="0e770-154"><b>String</b></span><span class="sxs-lookup"><span data-stu-id="0e770-154"><b>String</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -565,22 +348,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-133">Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объекта.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-133">Returns the parent object of the specified <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> object.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-134">
-            <b>Объект</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-134">
-              <b>Object</b>
-            </span>
-          </span>
-        </value>
+        <summary><span data-ttu-id="0e770-155">Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="0e770-155">Returns the parent object of the specified <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> object.</span></span></summary>
+        <value><span data-ttu-id="0e770-156"><b>Object</b></span><span class="sxs-lookup"><span data-stu-id="0e770-156"><b>Object</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -607,19 +376,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.BuildingBlockType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-135">Возвращает тип для стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-135">Returns the type for a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-136">Только для чтения.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-136">Read-only.</span>
-          </span>
-        </summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" />
-        </value>
+        <summary><span data-ttu-id="0e770-157">Возвращает тип для стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-157">Returns the type for a building block.</span></span> <span data-ttu-id="0e770-158">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="0e770-158">Read-only.</span></span></summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -649,26 +407,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="d03b9-137">Возвращает или задает содержимое стандартного блока.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-137">Returns or sets the contents of a building block.</span>
-          </span>
-          <span data-ttu-id="d03b9-138">Для чтения и записи.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-138">Read/write.</span>
-          </span>
-        </summary>
-        <value>
-          <span data-ttu-id="d03b9-139">
-            <b>Строка</b>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="d03b9-139">
-              <b>String</b>
-            </span>
-          </span>
-        </value>
+        <summary><span data-ttu-id="0e770-159">Возвращает или задает содержимое стандартного блока.</span><span class="sxs-lookup"><span data-stu-id="0e770-159">Returns or sets the contents of a building block.</span></span> <span data-ttu-id="0e770-160">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="0e770-160">Read/write.</span></span></summary>
+        <value><span data-ttu-id="0e770-161"><b>String</b></span><span class="sxs-lookup"><span data-stu-id="0e770-161"><b>String</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

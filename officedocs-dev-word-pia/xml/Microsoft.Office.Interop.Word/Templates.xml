@@ -1,13 +1,5 @@
 <Type Name="Templates" FullName="Microsoft.Office.Interop.Word.Templates">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4fe7644306f01e74a51b86f41f1804f6d1567d98" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673766" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Templates : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ca599c52638f5408c860ce6ae6c04bd7ff85d141" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143849" /></Metadata><TypeSignature Language="C#" Value="public interface Templates : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Templates implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Templates" />
   <TypeSignature Language="VB.NET" Value="Public Interface Templates&#xA;Implements IEnumerable" />
@@ -30,42 +22,28 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <span data-ttu-id="9dc91-101">Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Template" /> объекты, которые представляют все шаблоны, доступные в настоящее время.</span>
-      <span class="sxs-lookup">
-        <span data-stu-id="9dc91-101">A collection of <see cref="T:Microsoft.Office.Interop.Word.Template" /> objects that represent all the templates that are currently available.</span>
-      </span>
-    </summary>
-    <remarks>
-      <span data-ttu-id="9dc91-102">
-        <para>Данная коллекция включает open шаблоны, шаблоны, присоединенные к открывать документы и Общие шаблоны, загруженных в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
-        <para>Использования <see cref="P:Microsoft.Office.Interop.Word._Application.Templates" /> свойство для возврата коллекции <b>шаблонов</b> .</para> Метод <b>Add</b><para>недоступен для коллекции <b>шаблонов</b> . Вместо этого можно добавить шаблон в коллекцию <b>шаблонов</b> , выполнив одно из следующих значений:</para><list type="bullet"><item><para>с помощью <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод с <see cref="T:Microsoft.Office.Interop.Word.Documents" /> семейства сайтов для открытия документа на основе шаблона или шаблона.</para></item><item><para>С помощью <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" /> метод с семейства <b>документы</b> , чтобы открыть новый документ на основе шаблона.</para></item><item><para>С помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метод с <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию, чтобы загрузить глобальный шаблон.</para></item><item><para>С помощью <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойства с помощью объекта <b>Document</b> для присоединения шаблона документа.</para></item></list><para>Использование <b>шаблонов</b>(<paramref name="index" />), где <paramref name="index" /> — это имя шаблона или номер индекса для возврата объекта <b>шаблона</b> номер индекса предоставляет позицию шаблона в коллекцию <b>шаблонов</b> .</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> свойство возвращает объект шаблон, который относится к шаблона Normal.dot. Использование <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> присоединенное свойство для возврата шаблона для указанного документа.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойства, чтобы определить расположение шаблонов пользователя или рабочей группы (то есть, папку, где будут храниться эти шаблоны).</para><para /></span>
-      <span class="sxs-lookup">
-        <span data-stu-id="9dc91-102">
-          <para>This collection includes open templates, templates attached to open documents, and global templates loaded in the Templates and Add-ins dialog box (Tools menu).</para>
-          <para>Use the <see cref="P:Microsoft.Office.Interop.Word._Application.Templates" /> property to return the <b>Templates</b> collection.</para>
-          <para>The <b>Add</b> method isn't available for the <b>Templates</b> collection. Instead, you can add a template to the <b>Templates</b> collection by doing any of the following:</para>
-          <list type="bullet">
-            <item>
-              <para>Using the <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> method with the <see cref="T:Microsoft.Office.Interop.Word.Documents" /> collection to open a document based on a template or a template.</para>
-            </item>
-            <item>
-              <para>Using the <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" /> method with the <b>Documents</b> collection to open a new document based on a template.</para>
-            </item>
-            <item>
-              <para>Using the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> method with the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection to load a global template.</para>
-            </item>
-            <item>
-              <para>Using the <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> property with the <b>Document</b> object to attach a template to a document.</para>
-            </item>
-          </list>
-          <para>Use <b>Templates</b>(<paramref name="index" />), where <paramref name="index" /> is the template name or the index number, to return a single <b>Template</b> object The index number represents the position of the template in the <b>Templates</b> collection.</para>
-          <para>Use the <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> property to return a template object that refers to the Normal template. Use the <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> property to return the template attached to the specified document.</para>
-          <para>Use the <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> property to determine the location of user or workgroup templates (that is, the folder where you want to store these templates).</para>
-          <para />
-        </span>
-      </span>
-    </remarks>
+    <summary><span data-ttu-id="5b6a6-101">Коллекция <see cref="T:Microsoft.Office.Interop.Word.Template" /> объектов, представляющих все доступные в данный момент шаблоны.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-101">A collection of <see cref="T:Microsoft.Office.Interop.Word.Template" /> objects that represent all the templates that are currently available.</span></span></summary>
+    <remarks><para><span data-ttu-id="5b6a6-102">Эта коллекция включает открытые шаблоны, шаблоны, вложенные в открытые документы, и глобальные шаблоны, загруженные в диалоговом окне Шаблоны и надстройки (меню "Сервис").</span><span class="sxs-lookup"><span data-stu-id="5b6a6-102">This collection includes open templates, templates attached to open documents, and global templates loaded in the Templates and Add-ins dialog box (Tools menu).</span></span></para>
+      <para><span data-ttu-id="5b6a6-103">Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.Templates" /> свойство, чтобы возвратить коллекцию <b>Templates</b> .</span><span class="sxs-lookup"><span data-stu-id="5b6a6-103">Use the <see cref="P:Microsoft.Office.Interop.Word._Application.Templates" /> property to return the <b>Templates</b> collection.</span></span></para>
+      <para><span data-ttu-id="5b6a6-104">Метод <b>Add</b> недоступен для коллекции <b>Templates</b> .</span><span class="sxs-lookup"><span data-stu-id="5b6a6-104">The <b>Add</b> method isn't available for the <b>Templates</b> collection.</span></span> <span data-ttu-id="5b6a6-105">Вместо этого можно добавить шаблон в коллекцию Templates <b></b> , выполнив одно из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="5b6a6-105">Instead, you can add a template to the <b>Templates</b> collection by doing any of the following:</span></span></para>
+      <list type="bullet">
+        <item>
+          <para><span data-ttu-id="5b6a6-106">Использование <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метода с <see cref="T:Microsoft.Office.Interop.Word.Documents" /> коллекцией для открытия документа на основе шаблона или шаблона.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-106">Using the <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> method with the <see cref="T:Microsoft.Office.Interop.Word.Documents" /> collection to open a document based on a template or a template.</span></span></para>
+        </item>
+        <item>
+          <para><span data-ttu-id="5b6a6-107">Использование <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" /> метода с коллекцией <b>Documents</b> для открытия нового документа на основе шаблона.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-107">Using the <see cref="M:Microsoft.Office.Interop.Word.Documents.Add(System.Object@,System.Object@,System.Object@,System.Object@)" /> method with the <b>Documents</b> collection to open a new document based on a template.</span></span></para>
+        </item>
+        <item>
+          <para><span data-ttu-id="5b6a6-108">Использование <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода с <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцией для загрузки глобального шаблона.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-108">Using the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> method with the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection to load a global template.</span></span></para>
+        </item>
+        <item>
+          <para><span data-ttu-id="5b6a6-109">Использование <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойства с объектом <b>Document</b> для присоединения шаблона к документу.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-109">Using the <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> property with the <b>Document</b> object to attach a template to a document.</span></span></para>
+        </item>
+      </list>
+      <para><span data-ttu-id="5b6a6-110">USE <b></b>Templates<paramref name="index" />(), <paramref name="index" /> где — это имя шаблона или номер индекса, чтобы вернуть один объект <b>шаблона</b> — номер индекса представляет позицию шаблона в коллекции <b>Templates</b> .</span><span class="sxs-lookup"><span data-stu-id="5b6a6-110">Use <b>Templates</b>(<paramref name="index" />), where <paramref name="index" /> is the template name or the index number, to return a single <b>Template</b> object The index number represents the position of the template in the <b>Templates</b> collection.</span></span></para>
+      <para><span data-ttu-id="5b6a6-111">Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> свойство, чтобы возвратить объект шаблона, ссылающийся на шаблон Normal.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-111">Use the <see cref="P:Microsoft.Office.Interop.Word._Application.NormalTemplate" /> property to return a template object that refers to the Normal template.</span></span> <span data-ttu-id="5b6a6-112">Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> свойство, чтобы возвратить шаблон, вложенный в указанный документ.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-112">Use the <see cref="P:Microsoft.Office.Interop.Word._Document.AttachedTemplate" /> property to return the template attached to the specified document.</span></span></para>
+      <para><span data-ttu-id="5b6a6-113">Используйте <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойство, чтобы определить расположение шаблонов пользователя или рабочей группы (то есть папки, в которой будут храниться эти шаблоны).</span><span class="sxs-lookup"><span data-stu-id="5b6a6-113">Use the <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> property to determine the location of user or workgroup templates (that is, the folder where you want to store these templates).</span></span></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,12 +69,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="9dc91-103">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-103">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="5b6a6-114">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-114">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -124,12 +97,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="9dc91-104">Возвращает число элементов в указанном семействе сайтов.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-104">Returns the number of items in the specified collection.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="5b6a6-115">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-115">Returns the number of items in the specified collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -157,25 +125,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="9dc91-105">Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-105">Returns a 32-bit integer that indicates the application in which the specified object was created.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="5b6a6-116">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-116">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks>
-          <span data-ttu-id="9dc91-106">
-            <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-106">
-              <para>If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD." This value can also be represented by the constant <b>wdCreatorCode</b>.</para>
-              <para>The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code. For example, Microsoft Word has the creator code MSWD. For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <remarks><para><span data-ttu-id="5b6a6-117">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="5b6a6-117">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="5b6a6-118">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-118">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="5b6a6-119">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-119">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="5b6a6-120">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-120">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="5b6a6-121">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-121">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -236,19 +190,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <span data-ttu-id="9dc91-107">
-            <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-107">An <b>Object</b> indicating the ordinal position or a string representing the name of the individual object.</span>
-          </span>
-        </param>
-        <summary>
-          <span data-ttu-id="9dc91-108">Возвращает отдельный объект в коллекцию.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-108">Returns an individual object in a collection.</span>
-          </span>
-        </summary>
+        <param name="Index"><span data-ttu-id="5b6a6-122"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-122">An <b>Object</b> indicating the ordinal position or a string representing the name of the individual object.</span></span></param>
+        <summary><span data-ttu-id="5b6a6-123">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-123">Returns an individual object in a collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -274,24 +217,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>
-          <span data-ttu-id="9dc91-109">Загружает стандартные блоки для всех шаблонов в Microsoft Office Word.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-109">Loads the building blocks for all templates into Microsoft Office Word.</span>
-          </span>
-        </summary>
-        <remarks>
-          <span data-ttu-id="9dc91-110">
-            <para>Word обычно загружает стандартные блоки, когда они сначала требуется, например когда пользователь отображает галереи с помощью ленты. Этот метод вызывает Word немедленно загрузить все стандартные блоки.</para>
-            <para />
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-110">
-              <para>Word normally loads building blocks when they are first needed, for example when a user displays a gallery by using the Ribbon. This method forces Word to immediately load all building blocks.</para>
-              <para />
-            </span>
-          </span>
-        </remarks>
+        <summary><span data-ttu-id="5b6a6-124">Загружает стандартные блоки для всех шаблонов в Microsoft Office Word.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-124">Loads the building blocks for all templates into Microsoft Office Word.</span></span></summary>
+        <remarks><para><span data-ttu-id="5b6a6-125">Word обычно загружает стандартные блоки при их первом необходимости, например, когда пользователь отображает галерею с помощью ленты.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-125">Word normally loads building blocks when they are first needed, for example when a user displays a gallery by using the Ribbon.</span></span> <span data-ttu-id="5b6a6-126">Этот метод заставляет Word сразу же загружать все стандартные блоки.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-126">This method forces Word to immediately load all building blocks.</span></span></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -317,12 +245,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <span data-ttu-id="9dc91-111">Возвращает объект, представляющий родительский объект для указанного объекта.</span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9dc91-111">Returns an object that represents the parent object of the specified object.</span>
-          </span>
-        </summary>
+        <summary><span data-ttu-id="5b6a6-127">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="5b6a6-127">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
