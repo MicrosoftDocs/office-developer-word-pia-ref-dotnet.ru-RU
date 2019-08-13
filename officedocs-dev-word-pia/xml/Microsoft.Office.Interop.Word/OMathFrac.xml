@@ -1,13 +1,5 @@
 <Type Name="OMathFrac" FullName="Microsoft.Office.Interop.Word.OMathFrac">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5e8586e721b996c46718d2645d934be436083965" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673655" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathFrac" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="786a29fe9248ff0100d5735752f66a77bbae63c9" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144367" /></Metadata><TypeSignature Language="C#" Value="public interface OMathFrac" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathFrac" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathFrac" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathFrac" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет дроби, состоящая из числитель и разделенных дробную черту делителя. На панели дроби может быть горизонтальной или диагональной, в зависимости от свойства дроби.</summary>
+    <summary>Представляет дробь, состоящую из числителя и знаменателя, разделенных на черту дробной части. Дробная черта может быть горизонтальной или диагональной, в зависимости от свойств дроби.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,11 +73,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathFrac.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathFrac.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Den">
@@ -113,10 +103,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий делителя для формулы, которая содержит часть. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий знаменатель для уравнения, содержащего дробь. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,9 +132,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий числитель для дроби. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,9 +160,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathFrac" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,10 +190,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOMathFracType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathFracType" /> константа, представляющий макет дроби, является ли он с накоплением, наклоном, линейная или без дробную черту. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdOMathFracType" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathFracType" /> константу, которая представляет макет дроби, независимо от того, находится ли она в стеке, наклоненном, линейном или без нее. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdOMathFracType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

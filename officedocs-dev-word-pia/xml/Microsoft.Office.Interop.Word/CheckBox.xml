@@ -1,13 +1,5 @@
 <Type Name="CheckBox" FullName="Microsoft.Office.Interop.Word.CheckBox">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="49c5e968d7ca83ab33c2d641b57ba5240bef239d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672810" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CheckBox" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="44f3ebc6503c36473eb317875150d1134c7933aa" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147181" /></Metadata><TypeSignature Language="C#" Value="public interface CheckBox" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CheckBox" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CheckBox" />
   <TypeSignature Language="VB.NET" Value="Public Interface CheckBox" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один флажок.</summary>
-    <remarks>
-      <para>Используйте <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> индекс или имя закладки связанного или снимите флажок, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта. Использование <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" /> свойства с помощью объекта <b>FormField</b> для возврата объекта <b>CheckBox</b> .</para>
-      <para>Номер индекса представляет позицию поля формы в <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> семейства.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields </b>для добавления поля формы флажок.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одно поле формы с флажком.</summary>
+    <remarks><para>Используйте <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса или имя закладки, связанное с флажком, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объект. Используйте <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" /> свойство с объектом <b>FormField</b> , чтобы вернуть объект <b>CheckBox</b> .</para>
+      <para>Номер индекса представляет положение поля формы в <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> коллекции.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields </b>, чтобы добавить поле формы с флажком.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,8 +79,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> размеры флажок или надписи в соответствии с окружающим текстом размер шрифта. <b>Значение false,</b> размеры флажок или надписи по <see cref="P:Microsoft.Office.Interop.Word.CheckBox.Size" /> свойство.</summary>
+        <summary><b>True</b> — размер флажка или текстового фрейма в соответствии с размером шрифта окружающего текста. <b>False</b> — размер флажка или текстового фрейма в соответствии <see cref="P:Microsoft.Office.Interop.Word.CheckBox.Size" /> со свойством.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,11 +107,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Default">
@@ -151,7 +140,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение по умолчанию флажок.</summary>
+        <summary>Возвращает или задает значение по умолчанию для флажка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,7 +168,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -210,7 +199,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер указанного флажок в пунктах.</summary>
+        <summary>Возвращает или задает размер указанного флажка в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -238,12 +227,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, является ли объект поля указанную форму допустимый флажок.</summary>
+        <summary>Возвращает значение, которое указывает, является ли указанный объект поля формы допустимым полем формы с флажком.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.FormField.Type" /> свойства <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта для определения типа поля формы (<see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormCheckBox" />, <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormDropDown" />, или <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormTextInput" />) перед применением <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" /> свойство. Эти меры предосторожности, что объект <b>FormField </b>— ожидаемый тип.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.FormField.Type" /> свойство <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта, чтобы определить тип поля формы (<see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormCheckBox" />, <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormDropDown" />или <see cref="F:Microsoft.Office.Interop.Word.WdFieldType.wdFieldFormTextInput" />) перед применением <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" /> свойства. Эта мера предосторожности гарантирует, что объект <b>FormField </b>является ожидаемым типом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -272,7 +259,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если установлен флажок.</summary>
+        <summary>Возвращает или задает значение, указывающее, установлен ли флажок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="StyleSheets" FullName="Microsoft.Office.Interop.Word.StyleSheets">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="415546f5018b33b6f674dcbe8715760966a62c30" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672798" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface StyleSheets : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f5e7d2970cc046f6ff039df36db9be51e896453e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146061" /></Metadata><TypeSignature Language="C#" Value="public interface StyleSheets : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract StyleSheets implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.StyleSheets" />
   <TypeSignature Language="VB.NET" Value="Public Interface StyleSheets&#xA;Implements IEnumerable" />
@@ -30,12 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.StyleSheet" /> объекты, которые представляют каскадных таблиц стилей, присоединенного к документу.</summary>
-    <remarks>
-      <para>Коллекция <b>таблицы стилей, которые</b> включает все каскадные таблицы стилей, отображаемые в диалоговом окне связанных таблиц стилей CSS получить доступ с помощью команды шаблоны и надстройки (меню "Сервис").</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word._Document.StyleSheets" /> свойство для возврата коллекции <b>таблиц стилей</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.StyleSheets.Add(System.String,Microsoft.Office.Interop.Word.WdStyleSheetLinkType,System.String,Microsoft.Office.Interop.Word.WdStyleSheetPrecedence)" /> метод, чтобы добавить таблицу стилей в коллекцию <b>таблицы стилей, которые</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.StyleSheet" /> объектов, представляющих каскадные таблицы стилей, прикрепленные к документу.</summary>
+    <remarks><para>Коллекция <b>StyleSheet</b> содержит все каскадные таблицы стилей, которые отображаются в диалоговом окне связанные таблицы стилей CSS, доступ к которому осуществляется с помощью команды шаблоны и надстройки (меню Сервис).</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.StyleSheets" /> свойство, чтобы возвратить коллекцию <b>таблиц стилей</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.StyleSheets.Add(System.String,Microsoft.Office.Interop.Word.WdStyleSheetLinkType,System.String,Microsoft.Office.Interop.Word.WdStyleSheetPrecedence)" /> метод для добавления таблицы стилей в коллекцию <b>таблиц стилей</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -64,13 +54,11 @@
         <Parameter Name="Precedence" Type="Microsoft.Office.Interop.Word.WdStyleSheetPrecedence" />
       </Parameters>
       <Docs>
-        <param name="FileName">
-          <b>Строковое значение.</b> Путь и имя каскадные таблицы стилей.</param>
-        <param name="LinkType">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdStyleSheetLinkType" />. Указывает, добавляется в качестве ссылки или импортированы в веб-документа на таблицу стилей. Может иметь одно из следующих констант: <b>wdStyleSheetLinkTypeImported </b><b>wdStyleSheetLinkTypeLinked</b><paramref name="default" /></param>
-        <param name="Title">
-          <b>Строковое значение.</b> Имя таблицы стилей.</param>
-        <param name="Precedence">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdStyleSheetPrecedence" />. Показывает уровень важности, по сравнению с другими каскадные таблицы стилей, подключенного к веб-документа. Может иметь одно из следующих констант:<b>wdStyleSheetPrecedenceHigher</b><b>wdStyleSheetPrecedenceHighest</b><paramref name="default" /><b>wdStyleSheetPrecedenceLower</b><b>wdStyleSheetPrecedenceLowest</b></param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.StyleSheet" /> добавить объект, представляющий новую таблицу стилей в веб-документ.</summary>
+        <param name="FileName">Обязательный атрибут типа <b>String</b>. Путь и имя файла таблицы каскадных стилей.</param>
+        <param name="LinkType">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdStyleSheetLinkType" />. Указывает, следует ли добавить таблицу стилей в виде ссылки или импортировать ее в веб-документ. Может быть одной из следующих констант: <b>вдстилешитлинктипеимпортед </b> <b>вдстилешитлинктипелинкед</b><paramref name="default" /></param>
+        <param name="Title">Обязательный атрибут типа <b>String</b>. Имя таблицы стилей.</param>
+        <param name="Precedence">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdStyleSheetPrecedence" />. Указывает уровень важности по сравнению с другими каскадными таблицами стилей, прикрепленными к веб-документу. Может быть одной из следующих констант:<b>вдстилешитпрецеденцехигхер</b><b>вдстилешитпрецеденцехигхест</b><paramref name="default" /><b>вдстилешитпрецеденцеловер</b><b>wdStyleSheetPrecedenceLowest</b></param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.StyleSheet" /> объект, представляющий новую таблицу стилей, добавленную в веб-документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -126,7 +114,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,11 +142,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -219,9 +207,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -249,7 +236,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

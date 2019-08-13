@@ -1,13 +1,5 @@
 <Type Name="DataTable" FullName="Microsoft.Office.Interop.Word.DataTable">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f5ef99bc8c27407b021c0739574e1ec5b4e96d47" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672688" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DataTable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="19d9aad388e9203f82aac5f80b18a9bb4967fa9a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147111" /></Metadata><TypeSignature Language="C#" Value="public interface DataTable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DataTable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DataTable" />
   <TypeSignature Language="VB.NET" Value="Public Interface DataTable" />
@@ -27,10 +19,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет таблицу данных диаграммы.</summary>
-    <remarks>
-      <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Word.Chart.DataTable" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.DataTable" /> объекта.</para>
-      <para />
-    </remarks>
+    <remarks><para>Для возврата <see cref="T:Microsoft.Office.Interop.Word.DataTable" /> объекта можно <see cref="P:Microsoft.Office.Interop.Word.Chart.DataTable" /> использовать свойство.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -56,10 +46,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,13 +83,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает и возвращает Если текста в объекте изменяет размер шрифта, когда изменяется размер объекта</summary>
-        <value>
-          <b>Объект</b> , задать значение <b>True</b> , если текст в объекте изменяет размер шрифта, когда изменяется размер объекта, в противном случае — <b>значение False</b></value>
-        <remarks>
-          <para>Значение по умолчанию — <b>True</b></para>
-          <para />
-        </remarks>
+        <summary>Задает и возвращает значение, указывающее, изменяется ли размер шрифта в объекте при изменении размера объекта</summary>
+        <value><b>Объект</b> имеет значение <b>true</b> , если текст в объекте изменяет размер шрифта при изменении размера объекта; в противном случае — <b>false</b> .</value>
+        <remarks><para>Значение по умолчанию — <b>true</b></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Border">
@@ -127,10 +112,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает границы объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает границу объекта. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,14 +140,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -215,10 +194,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает шрифт указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFont" />
-        </value>
+        <summary>Возвращает шрифт указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,11 +222,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
 Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -279,9 +254,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое определяет, имеет ли в таблице данных диаграммы горизонтальные границы ячеек. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если в таблице данных диаграммы горизонтальные границы ячеек, в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, определяющее, имеет ли таблица данных диаграммы горизонтальные границы ячеек. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в таблице данных диаграммы есть горизонтальные границы ячеек; в противном случае — <b>false</b> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -311,9 +285,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое определяет, имеет ли внешние границы таблицы данных диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если в таблице данных диаграммы внешние границы, в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, определяющее, имеет ли таблица данных диаграммы границы структуры. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение равно <b>true</b> , если таблица данных диаграммы имеет границы структуры; в противном случае — <b>false</b> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -343,9 +316,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое определяет, имеет ли в таблице данных диаграммы вертикальные границы ячеек. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если в таблице данных диаграммы вертикальные границы ячеек, в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, определяющее, содержит ли таблица данных диаграммы вертикальные границы ячеек. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в таблице данных диаграммы есть вертикальные границы ячеек; в противном случае — <b>false</b> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -372,10 +344,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -400,7 +370,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
+        <summary>Выбирает объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -430,9 +400,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое определяет, является ли видимым ключ легенды метки данных. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True</b> , если ключ легенды метки данных отображается, в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, определяющее, отображается ли ключ легенды метки данных. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если ключ условных обозначений метки данных является видимым; в противном случае — <b>false</b> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

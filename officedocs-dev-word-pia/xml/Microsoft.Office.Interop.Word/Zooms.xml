@@ -1,13 +1,5 @@
 <Type Name="Zooms" FullName="Microsoft.Office.Interop.Word.Zooms">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="df6017bf6f1646554effe774f780500331186037" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672553" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Zooms" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e190583a23d362ac7b11375f86aca595c1df450a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142037" /></Metadata><TypeSignature Language="C#" Value="public interface Zooms" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Zooms" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Zooms" />
   <TypeSignature Language="VB.NET" Value="Public Interface Zooms" />
@@ -26,9 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объекты, которые представляют параметры масштаба для каждого представления (структуры, макет Обычный, печати и т. д).</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Pane.Zooms" /> свойство для возврата коллекции <b>увеличивает</b> .</para> Метод <b>Add</b><para>недоступен для коллекции <b>увеличивает</b> . Коллекция <b>увеличивает</b> включает single <b>отобразить</b> объект для каждого из различных типов представления (структуры, обычный, макет страницы и т.д.). Не удается перечисления коллекции <b>увеличивает</b> с помощью <b>For Each... Далее</b> loop.</para> Использование <b>увеличивает</b><para>(<paramref name="index" />), где <paramref name="index" /> идентифицирует тип представления, чтобы вернуть объект <b>отобразить</b> объект. Тип представления, заданный по индексу, может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Word.WdViewType" /> констант: <b>wdMasterView</b>, <b>wdNormalView</b>, <b>wdOutlineView</b>, <b>wdPrintPreview</b>, <b>wdPrintView</b>или <b>wdWebView</b>.</para><para>Вы также можете использовать <see cref="P:Microsoft.Office.Interop.Word.View.Zoom" /> свойства <see cref="T:Microsoft.Office.Interop.Word.View" /> объект, который требуется вернуть объект <b>отобразить</b> объект.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объектов, представляющая параметры масштаба для каждого представления (структуры, обычного, макета для печати и т. д.).</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Pane.Zooms" /> свойство, чтобы возвратить коллекцию <b>масштабов</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>масштабирования</b> . Коллекция <b>Zoom</b> содержит один объект <b>масштаба</b> для каждого типа представления (структура, обычный, макет страницы и т. д.). Невозможно перечислить коллекцию <b>масштабов</b> с помощью метода <b>For Each... Next</b> Loop.</para>
+      <para>Используйте <b>масштабирование</b>(<paramref name="index" />), где <paramref name="index" /> определяет тип представления, чтобы вернуть один объект <b>масштаба</b> . Типом представления, указанным индексом, может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdViewType" /> констант: <b>вдмастервиев</b>, <b>вднормалвиев</b>, <b>вдаутлиневиев</b>, <b>вдпринтпревиев</b>, <b>вдпринтвиев</b>или <b>вдвебвиев</b>.</para>
+      <para>Кроме того, можно использовать <see cref="P:Microsoft.Office.Interop.Word.View.Zoom" /> свойство <see cref="T:Microsoft.Office.Interop.Word.View" /> объекта, чтобы вернуть один объект <b>масштаба</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +77,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -112,8 +107,8 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Word.WdViewType" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />. Тип указанного масштабирования.</param>
-        <summary>Возвращает указанный <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объекта.</summary>
+        <param name="Index">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />. Указанный тип масштабирования.</param>
+        <summary>Возвращает указанный <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -141,7 +136,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

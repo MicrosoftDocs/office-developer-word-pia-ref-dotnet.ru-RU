@@ -1,13 +1,5 @@
 <Type Name="StoryRanges" FullName="Microsoft.Office.Interop.Word.StoryRanges">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8d88da35103c95cabcdd68d3af81c9af0d429c7d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672799" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface StoryRanges : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b1737872c1ea38c8e74f55ed04f58b48e1c4b7f2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143961" /></Metadata><TypeSignature Language="C#" Value="public interface StoryRanges : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract StoryRanges implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.StoryRanges" />
   <TypeSignature Language="VB.NET" Value="Public Interface StoryRanges&#xA;Implements IEnumerable" />
@@ -30,9 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекты, которые представляют материалах в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.StoryRanges" /> свойство для возврата коллекции <b>StoryRanges</b> .</para> Метод <b>Add</b><para>недоступен для коллекции <b>StoryRanges</b> . Конечное число описаний в коллекции <b>StoryRanges</b> .</para><para>Использования <b>StoryRanges</b>(<paramref name="index" />), где <paramref name="index" /> — это <see cref="T:Microsoft.Office.Interop.Word.WdStoryType" /> константу для возврата одной статьи как объект <b>Range</b> .</para><para>При попытке возврата материал, который недоступен в указанный документ, возникает ошибка.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Range.NextStoryRange" /> свойство, чтобы просмотреть все материалы в документе.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектов, представляющих материалы в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.StoryRanges" /> свойство, чтобы возвратить коллекцию <b>StoryRanges</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>StoryRanges</b> . Количество описаний функциональности в коллекции <b>StoryRanges</b> ограничено.</para>
+      <para>Используйте <b>StoryRanges</b>(<paramref name="index" />), где <paramref name="index" /> — <see cref="T:Microsoft.Office.Interop.Word.WdStoryType" /> константа, чтобы возвратить одну историю в виде объекта <b>Range</b> .</para>
+      <para>Если вы попытаетесь вернуть статью, которая недоступна в указанном документе, возникает ошибка.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.NextStoryRange" /> свойство, чтобы перебрать все материалы в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,7 +82,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,11 +110,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -179,8 +175,8 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Word.WdStoryType" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdStoryType" />. Тип указанного статьи. Может иметь одно из следующих констант <b>WdStoryType</b> . <b>wdCommentsStory</b><b>wdEndnotesStory</b><b>wdEvenPagesFooterStory</b><b>wdEvenPagesHeaderStory</b><b>wdFirstPageFooterStory</b><b>wdFirstPageHeaderStory</b><b>wdFootnotesStory</b><b>wdMainTextStory</b><b>wdPrimaryFooterStory</b><b>wdPrimaryHeaderStory</b><b>wdTextFrameStory</b></param>
-        <summary>Возвращает один История создания диапазон или выборки в виде <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</summary>
+        <param name="Index">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdStoryType" />. Указанный тип статьи. Может быть одной из этих констант <b>вдсторитипе</b> . <b>вдкомментсстори</b> <b>вденднотесстори</b> <b>вдевенпажесфутерстори</b> <b>вдевенпажешеадерстори</b> <b>вдфирстпажефутерстори</b> <b>вдфирстпажехеадерстори</b> <b>вдфутнотесстори</b> <b>вдмаинтекстстори</b> <b>вдпримарифутерстори</b> <b>вдпримарихеадерстори</b> <b>вдтекстфраместори</b></param>
+        <summary>Возвращает отдельное описание диапазона или выделенного фрагмента в <see cref="T:Microsoft.Office.Interop.Word.Range" /> виде объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,7 +204,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

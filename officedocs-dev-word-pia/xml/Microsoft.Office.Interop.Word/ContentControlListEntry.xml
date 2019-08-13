@@ -1,13 +1,5 @@
 <Type Name="ContentControlListEntry" FullName="Microsoft.Office.Interop.Word.ContentControlListEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9aaa99f4b00477851b09bd8dc7e539ca6231ad87" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672720" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ContentControlListEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="58121ff87a2cbde78e578387d442ae7b9c00c1d5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147202" /></Metadata><TypeSignature Language="C#" Value="public interface ContentControlListEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControlListEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ContentControlListEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface ContentControlListEntry" />
@@ -26,12 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>A <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> представляет объект элемента списка в раскрывающемся списке или поле со списком поле элемента управления контентом. A <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объект является членом <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> семейство сайтов для <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Add(System.String,System.String,System.Int32)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> семейства сайтов для создания нового <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта. Использование <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntries.Item(System.Int32)" /> метод, или <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DropdownListEntries" />(<paramref name="Index" />), где <paramref name="Index" /> — это порядковый номер элемента списка элемента управления контентом, для доступа к отдельного элемента в пределах <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> семейства.</para>
+    <summary><see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> Объект представляет элемент списка в раскрывающемся списке или элементе управления содержимым поля со списком. <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> Объект является элементом <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> коллекции для <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Add(System.String,System.String,System.Int32)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> коллекции для создания нового <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта. <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntries.Item(System.Int32)" /> Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DropdownListEntries" />метод<paramref name="Index" />(), где <paramref name="Index" /> — это порядковый номер элемента списка элементов управления содержимым, чтобы получить доступ к отдельному элементу списка в <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> коллекции.</para>
       <para>
-        <b>Примечание</b>: записей списка должны иметь уникальные отображаемые имена.  Попытка добавить элемент списка, который уже существует вызывает ошибку времени выполнения.</para> Использование 
-      <para><see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.MoveUp" /> и <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.MoveDown" /> методы для изменения положения элементов в раскрывающемся списке. Использование <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.Select" /> метод для выбора элемента списка элемента управления содержимым программным путем.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойство, чтобы задать отображаемый текст для элемента управления содержимым списка и использовать <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства для задания программный значения, которое может использоваться для обработки формы. К примеру может использовать элемент управления содержимым раскрывающегося списка список продуктов. <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> Свойство может содержать имя продукта, отображаемое имя, которое пользователь можно легко определить и понять. <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> Свойство может содержать номер продукта для продукта, соответствующий номер продукта в базе данных.  Затем можно использовать номер продукта из <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойство для поиска сведений о продукте в базе данных. Кроме того, значение <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства отправляется и настраиваемых XML-данных Если сопоставляется элемента управления контентом к XML-данным в хранилище данных.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.Delete" /> метод удаление элемента из раскрывающегося списка или поля со списком раскрывающегося списка элемента управления контентом.</para><para /></remarks>
+        <b>Note</b>: записи списка должны иметь уникальные отображаемые имена.  При попытке добавить уже существующий элемент списка возникает ошибка во время выполнения.</para>
+      <para>Используйте методы <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.MoveUp" /> и <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.MoveDown" /> для перемещения элементов в раскрывающемся списке. Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.Select" /> метод для программного выбора элемента списка элемента управления содержимым.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойство, чтобы задать отображаемый текст для элемента списка элементов управления содержимым, и используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойство, чтобы задать программное значение, которое вы можете использовать позже для обработки формы. Например, вы можете использовать раскрывающийся список элементов управления содержимым для списка продуктов. <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> Свойство может содержать имя продукта, отображаемое имя, которое пользователь может легко распознавать и понимать. <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> Свойство может содержать номер продукта, который соответствует номеру продукта в базе данных.  Затем можно использовать номер продукта из <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства для поиска сведений о продукте в базе данных. Кроме того, значение <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства отправляется в настраиваемые XML-данные, если элемент управления содержимым сопоставлен с XML-данными в хранилище данных.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntry.Delete" /> метод, чтобы удалить элемент из раскрывающегося списка или поля со списком элементов управления содержимым. </para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -58,9 +52,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,16 +79,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -120,7 +108,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный элемент в поле со списком или элемент управления содержимым раскрывающегося списка.</summary>
+        <summary>Удаляет указанный элемент в поле со списком или раскрывающемся списке.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -150,10 +138,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядковый номер элемента управления содержимым списка в коллекции элементов списка. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает порядковый номер элемента списка элемента управления содержимым в коллекции элементов списка. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -178,7 +164,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Перемещение элемента в раскрывающемся списке или поле контента со списком вниз один элемент, чтобы после элемента, изначально за его.</summary>
+        <summary>Перемещает элемент из раскрывающегося списка или элемента управления содержимым поля со списком на один элемент вниз, чтобы он был после элемента, который следовал за ним.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -203,7 +189,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Перемещение элемента в раскрывающемся списке или контента со списком копирование одного элемента, таким образом, прежде чем элемент, который изначально перед его.</summary>
+        <summary>Перемещает элемент из раскрывающегося списка или поля со списком на один элемент вверх, чтобы он предшествовал предшествующему элементу.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -231,9 +217,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -258,7 +242,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбирает элемент списка в раскрывающемся списке или поле со списком поле элемента управления контентом и задает текст элемента управления содержимым значение элемента.</summary>
+        <summary>Выбирает элемент списка в раскрывающемся списке или элементе управления содержимым поля со списком и задает для текста элемента управления содержимым значение элемента.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -288,14 +272,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отображаемый текст элемента списка для раскрывающегося списка или поля со списком поле элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Записи списка необходимо иметь уникальные отображаемые имена.  Попытка изменить <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> строку, которая уже существует в список записей вызывает ошибку времени выполнения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает отображаемый текст элемента списка для раскрывающегося списка или элемента управления содержимым поля со списком. Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Записи списка должны иметь уникальные отображаемые имена.  При попытке изменить <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойство на строку, которая уже существует в списке записей, возникает ошибка времени выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -324,16 +304,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает программный значение элемента в раскрывающемся списке или поле со списком поле элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Используйте свойство <b>Value</b> для хранения данных, которые необходимы для использования во время обработки. Например <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойство может содержать строку, которая будет отображаться и свойство <b>Value</b> может содержать номер, например на номер элемента, которые можно использовать для поиска информации в базе данных.  Кроме того, значение свойства <b>Value</b> отправляется и настраиваемых XML-данных, если элемент управления содержимым сопоставляется с XML-данных в хранилище данных.</para>
+        <summary>Возвращает или задает программное значение элемента в раскрывающемся списке или элементе управления содержимым поля со списком. Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Используйте свойство <b>value</b> для хранения данных, которые необходимо использовать во время обработки. Например, <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойство может содержать строку, которую необходимо отобразить, а свойство <b>value</b> может содержать число, например номер элемента, которое можно использовать для поиска информации в базе данных.  Кроме того, значение свойства <b>value</b> отправляется в настраиваемые XML-данные, если элемент управления содержимым сопоставлен с XML-данными в хранилище данных.</para>
           <para>
-            <b>Примечание</b>: нельзя задать <b>значение</b> свойства для элементов списка, которые были автоматически заполняется с использованием схемы XML, подключенного к пользовательским XML, сопоставленную с данного элемента управления.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: невозможно задать свойство <b>value</b> для записей списка, которые были автоматически заполнены из XML-схемы, прикрепленной к пользовательскому XML, сопоставленному с этим элементом управления. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

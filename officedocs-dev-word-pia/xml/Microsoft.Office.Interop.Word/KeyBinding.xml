@@ -1,13 +1,5 @@
 <Type Name="KeyBinding" FullName="Microsoft.Office.Interop.Word.KeyBinding">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fc64b4fc8db5345fc3e67c15c1eeed23c8027af5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673856" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface KeyBinding" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="df71ed001e9153c7b8aaaebf2ea2bd7c4f797a38" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147951" /></Metadata><TypeSignature Language="C#" Value="public interface KeyBinding" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract KeyBinding" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.KeyBinding" />
   <TypeSignature Language="VB.NET" Value="Public Interface KeyBinding" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет настраиваемые назначение ключа в текущем контексте.</summary>
-    <remarks>
-      <para>Объект <b>соответствующие клавиши</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> семейства сайтов. Настраиваемые ключевые назначений в диалоговом окне Настройка клавиатуры.</para>
-      <para>Использования <b>сочетания клавиш</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>соответствующие клавиши</b> .</para>
-      <para>Вы также можете использовать <see cref="P:Microsoft.Office.Interop.Word._Application.FindKey(System.Int32,System.Object@)" /> свойство и <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Key(System.Int32,System.Object@)" /> метод возвращает объект <b>соответствующие клавиши</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет настраиваемое назначение ключа в текущем контексте.</summary>
+    <remarks><para>Объект <b>KeyBinding</b> является членом <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> коллекции. Настраиваемые сочетания клавиш вносятся в диалоговом окне Настройка клавиатуры.</para>
+      <para>Используйте <b>KeyBindings</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>KeyBinding</b> .</para>
+      <para>Кроме того, можно использовать <see cref="P:Microsoft.Office.Interop.Word._Application.FindKey(System.Int32,System.Object@)" /> свойство и <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Key(System.Int32,System.Object@)" /> метод для возврата объекта <b>KeyBinding</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,7 +74,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет привязки клавиш из <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> семейства сайтов и сбрасывает встроенной команды ее назначение ключа по умолчанию.</summary>
+        <summary>Удаляет привязку ключа из <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> коллекции и восстанавливает для встроенной команды назначение ключа по умолчанию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -111,7 +101,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает команду, назначенную заданное сочетание клавиш.</summary>
+        <summary>Возвращает команду, назначенную заданному сочетанию клавиш.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,12 +129,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает параметр команды, назначенных для указанного сочетания клавиш.</summary>
+        <summary>Возвращает параметр команды, назначенный заданному сочетанию клавиш.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о командах, использующие параметры в разделе <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта. Использование <see cref="P:Microsoft.Office.Interop.Word.KeyBinding.Command" /> свойство для возвращения команду имя, присвоенное указанного сочетания клавиш.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о командах, которые принимают параметры, приведены <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> в разделе метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта. Используйте <see cref="P:Microsoft.Office.Interop.Word.KeyBinding.Command" /> свойство, чтобы возвратить имя команды, назначенное заданному сочетанию клавиш.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Context">
@@ -170,12 +158,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет место хранения ключа указанную привязку. Это свойство можно вернуть <see cref="T:Microsoft.Office.Interop.Word.Document" />, <see cref="T:Microsoft.Office.Interop.Word.Template" />, или <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта.</summary>
+        <summary>Возвращает объект, представляющий место хранения указанной привязки клавиш. Это свойство может возвращать <see cref="T:Microsoft.Office.Interop.Word.Document" />объект <see cref="T:Microsoft.Office.Interop.Word.Template" />a, <see cref="T:Microsoft.Office.Interop.Word.Application" /> или Object.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Встроенные сочетания клавиш (например, CTRL + I для <b>курсива</b>) возврата объекта <b>приложения</b> в контексте. Все ключевые привязки, добавлении возвращает объект <b>документа</b> или <b>шаблона</b> в зависимости от контекста настройки фактически при <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект был добавлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Встроенные сочетания клавиш (например, CTRL + I для курсива <b></b>) возвращают объект <b>Application</b> в качестве контекста. Все добавленные вами привязки будут возвращать объект <b>Document</b> или <b>template</b> , в зависимости от контекста настройки, действующего при добавлении <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -201,11 +187,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Disable">
@@ -229,12 +215,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет заданное сочетание клавиш, если в настоящее время назначены команду.</summary>
-        <remarks>
-          <para>После использования этого метода, сочетание клавиш не оказывает влияния. С помощью этого метода является эквивалентом нажать кнопку "Удалить" в диалоговое окно "Настройка клавиатуры" (меню "Сервис").</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.KeyBinding.Clear" /> метод с <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, который требуется сбросить встроенной команды ее назначение ключа по умолчанию. Вам не нужно удалить или изменить привязку объекта <b>соответствующие клавиши</b> перед добавлением в другом месте.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет указанную комбинацию клавиш, если она в данный момент назначена команде.</summary>
+        <remarks><para>После использования этого метода сочетание клавиш не оказывает никакого действия. Использование этого метода эквивалентно нажатию кнопки Удалить в диалоговом окне Настройка клавиатуры (меню Сервис).</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.KeyBinding.Clear" /> метод с <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объектом, чтобы сбросить встроенную команду к назначению ключа по умолчанию. Нет необходимости удалять или повторно привязывать объект <b>KeyBinding</b> перед добавлением в другом месте.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -258,7 +242,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет команду, связанную с указанным сочетание клавиш.</summary>
+        <summary>Выполняет команду, связанную с указанным сочетанием клавиш.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -285,7 +269,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdKeyCategory</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип элемента, назначенный указанную привязку ключа.</summary>
+        <summary>Возвращает тип элемента, назначенный указанной ключевой привязке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -313,12 +297,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер первого ключа в указанную привязку ключа.</summary>
+        <summary>Возвращает уникальный номер для первого ключа в заданной ключевой привязке.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Создается это номеров с помощью <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> при добавлении привязки клавиш с помощью метода <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это число создается с помощью <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метода при добавлении привязок клавиш с помощью <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метода <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyCode2">
@@ -344,7 +326,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уникальный номер для второго ключа в указанную привязку ключа.</summary>
+        <summary>Возвращает уникальный номер для второго ключа в заданной ключевой привязке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -372,7 +354,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку сочетание клавиш для указанных ключей (например, CTRL + SHIFT + A).</summary>
+        <summary>Возвращает строку сочетаний клавиш для заданных ключей (например, CTRL + SHIFT + A).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -400,7 +382,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -428,13 +410,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если не удается изменить указанную привязку ключа в диалоговом окне "Настройка клавиатуры" (в меню Сервис выберите пункт Настройка и нажмите кнопку сочетания).</summary>
+        <summary><b>True</b> , если невозможно изменить указанную ключевую привязку в диалоговом окне Настройка клавиатуры (в меню Сервис выберите пункт Настройка, а затем нажмите кнопку клавиатура).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объект, который требуется добавить привязку ключевые вне зависимости от состояния защищенного.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта, чтобы добавить привязку клавиш независимо от состояния protected.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Rebind">
@@ -461,11 +440,10 @@
         <Parameter Name="CommandParameter" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCategory">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Основные категории указанную привязку ключа.</param>
-        <param name="Command">
-          <b>Строковое значение.</b> Имя указанной команды.</param>
-        <param name="CommandParameter">Необязательный элемент <b>Object</b>. Дополнительный текст, при их наличии, необходимые для команды, заданной параметром <paramref name="Command" />. Сведения о значения для этого аргумента можно <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод для <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</param>
-        <summary>Изменение команды, назначенный указанную привязку ключа.</summary>
+        <param name="KeyCategory">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Категория ключа указанной привязки клавиш.</param>
+        <param name="Command">Обязательный атрибут типа <b>String</b>. Имя указанной команды.</param>
+        <param name="CommandParameter">Необязательный <b>объект</b>. Дополнительный текст (при наличии), необходимый для команды, заданной параметром <paramref name="Command" />. Для получения сведений о значениях этого аргумента обратитесь <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> к методу <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</param>
+        <summary>Изменяет команду, назначенную указанной ключевой привязке.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

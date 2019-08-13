@@ -1,13 +1,5 @@
 <Type Name="Frameset" FullName="Microsoft.Office.Interop.Word.Frameset">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a153326e0a463fab1ea2191a5ff18e8f268d65d4" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673327" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Frameset : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a60060da0b1c4ff85a021ce286850c649ffa86e1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146810" /></Metadata><TypeSignature Language="C#" Value="public interface Frameset : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Frameset implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Frameset" />
   <TypeSignature Language="VB.NET" Value="Public Interface Frameset&#xA;Implements IEnumerable" />
@@ -30,10 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет целую страницу рамок или один кадр страницы рамок.</summary>
-    <remarks>
-      <para>Нет <b>наборы рамок</b> семейства сайтов; Каждый <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект или <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект содержит только один объект <b>рамок</b> .</para> Свойство 
-      <para>использования <b>рамок</b> объекта <b>документа</b> или <b>область</b> для возврата объекта <b>рамок</b> . Для свойства или методы, которые влияют на все рамок на странице рамок используйте объект <b>рамок</b> из объекта <b>Document</b> . Для свойства или методы, которые влияют на отдельные кадры на странице рамок, используйте объект <b>рамок</b> из <b>области</b> объекта.</para><para /></remarks>
+    <summary>Представляет целую страницу Frame или один кадр на странице рамок.</summary>
+    <remarks><para>Коллекция <b>наборов фреймов</b> отсутствует; Каждый <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект или <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект содержит только один объект <b>FRAMESET</b> .</para>
+      <para>Используйте свойство <b>FRAMESET</b> объекта <b>Document</b> или <b>Pane</b> для возврата объекта <b>FRAMESET</b> . Для свойств или методов, которые влияют на все кадры на странице рамок, используйте объект <b>FRAMESET</b> из объекта <b>Document</b> . Для свойств или методов, которые влияют на отдельные фреймы на странице рамок, используйте объект <b>FRAMESET</b> из объекта <b>Pane</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNewFrame">
@@ -59,8 +51,8 @@
         <Parameter Name="Where" Type="Microsoft.Office.Interop.Word.WdFramesetNewFrameLocation" />
       </Parameters>
       <Docs>
-        <param name="Where">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdFramesetNewFrameLocation" />. Задает расположение, где — это новый фрейм будет добавлена при использовании указанного кадра.</param>
-        <summary>Добавляет новый фрейм страницы рамок.</summary>
+        <param name="Where">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdFramesetNewFrameLocation" />. Задает расположение, в которое добавляется новый фрейм относительно указанного кадра.</param>
+        <summary>Добавляет новую рамку на страницу рамок.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -116,12 +108,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число дочерних <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекты, связанные с указанным объектом <b>рамок</b> .</summary>
+        <summary>Возвращает количество дочерних <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объектов, связанных с указанным объектом <b>FRAMESET</b> .</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется только к объектам <b>рамок</b> тип <b>wdFramesetTypeFrameset</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применяется только к объектам <b>набора фреймов</b> типа <b>вдфрамесеттипефрамесет</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChildFramesetItem">
@@ -150,13 +140,11 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Номер индекса для указанного кадра.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий <b>набор рамок</b> указанного дочернего объекта.</summary>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер индекса указанного кадра.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий указанный дочерний объект <b>FRAMESET</b> .</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется только к объектам <b>рамок</b> тип <b>wdFramesetTypeFrameset</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применяется только к объектам <b>набора фреймов</b> типа <b>вдфрамесеттипефрамесет</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -182,11 +170,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -240,7 +228,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает веб-страницу или другой документ будет отображаться в указанном фрейме при открытии страницы рамок.</summary>
+        <summary>Возвращает или задает веб-страницу или другой документ, который будет отображаться в указанном кадре при открытии страницы рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,8 +259,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображаются границы frame на указанной странице.</summary>
+        <summary><b>Значение true</b> , если отображаются границы рамки на указанной странице рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -303,8 +290,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если веб-страницы или другой документ, заданный параметром <see cref="P:Microsoft.Office.Interop.Word.Frameset.FrameDefaultURL" /> свойство является внешнего файла, в который Microsoft Word сохраняет только ссылку от указанного кадра.</summary>
+        <summary><b>Имеет значение true</b> , если веб-страница или другой документ <see cref="P:Microsoft.Office.Interop.Word.Frameset.FrameDefaultURL" /> , заданный свойством, является внешним файлом, в котором Microsoft Word поддерживает только ссылку из указанного кадра.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -335,7 +321,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя указанного рамки на странице рамок.</summary>
+        <summary>Возвращает или задает имя указанного кадра на странице рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -366,8 +352,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если пользователь может изменять размер указанного кадра при просмотре страницы рамок в веб-браузере.</summary>
+        <summary><b>Имеет значение true</b> , если пользователь может изменять размер указанного фрейма при просмотре страницы рамок в веб-браузере.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -398,7 +383,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdScrollbarType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает когда полосы прокрутки доступны для указанного кадра при просмотре страницы его рамок в веб-браузере.</summary>
+        <summary>Возвращает или задает значение, указывающее, доступны ли полосы прокрутки для указанного кадра при просмотре страницы рамок в веб-браузере.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -429,7 +414,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет границы рамок на указанной странице. Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdColor" /> константы.</summary>
+        <summary>Возвращает или задает цвет границ рамки на заданной странице рамок. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdColor" /> константой.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -460,7 +445,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину (в точках) границы вокруг рамок на указанной странице.</summary>
+        <summary>Возвращает или задает ширину (в пунктах) границ вокруг кадров на заданной странице рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -525,11 +510,8 @@
       <Docs>
         <summary>Возвращает или задает высоту указанного <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.Frameset.HeightType" /> Свойство определяет тип подразделения, в котором выражается это значение.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.Frameset.HeightType" /> Свойство определяет тип единицы измерения, в которой выражается это значение.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HeightType">
@@ -558,7 +540,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFramesetSizeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип ширину для указанного кадра страницы рамок.</summary>
+        <summary>Возвращает или задает тип ширины для указанного кадра на странице рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -586,7 +568,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -614,7 +596,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Frameset</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий родительский на указанный объект <b>рамок</b> на странице рамок.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий родительский объект указанного объекта <b>FRAMESET</b> на странице рамок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -642,7 +624,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFramesetType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> тип объекта.</summary>
+        <summary>Возвращает тип <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -675,11 +657,8 @@
       <Docs>
         <summary>Возвращает или задает ширину указанного <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.Frameset.WidthType" /> Свойство определяет тип подразделения, в котором выражается это значение.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.Frameset.WidthType" /> Свойство определяет тип единицы измерения, в которой выражается это значение.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WidthType">
@@ -708,7 +687,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFramesetSizeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину тип указанного <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекта.</summary>
+        <summary>Возвращает или задает тип ширины указанного <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

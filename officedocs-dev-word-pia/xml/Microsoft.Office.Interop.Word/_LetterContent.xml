@@ -1,13 +1,5 @@
 <Type Name="_LetterContent" FullName="Microsoft.Office.Interop.Word._LetterContent">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="935d8ead36e24d408c303d383bb7e1226d4740d6" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672566" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface _LetterContent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="935d8ead36e24d408c303d383bb7e1226d4740d6" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145249" /></Metadata><TypeSignature Language="C#" Value="public interface _LetterContent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _LetterContent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word._LetterContent" />
   <TypeSignature Language="VB.NET" Value="Public Interface _LetterContent" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Это основной интерфейс в компонентном классе COM, необходимые для управляемого кода для взаимодействия с соответствующим COM-объектом. Этот основной интерфейс используется только в том случае, если метод, который будет использоваться совместно совпадает с именем событие COM-объектом; в этом случае преобразовывается этот интерфейс для вызова метода и приведены последние интерфейс события для подключения к событию. В противном случае используется интерфейс .NET, который является производным от компонентного класса COM для доступа к методы, свойства и события COM-объектом. Дополнительные сведения о объекта COM можно <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />.</summary>
+    <summary>Это основной интерфейс в компонентном классе COM, который требуется управляемому программному коду для взаимодействия с соответствующим объектом COM. Используйте этот основной интерфейс только в тех случаях, когда метод, который предполагается использовать, имеет такое же имя, как событие объекта COM; в таких случаях для вызова метода приведите к этому интерфейсу, для соединения с событием приведите к интерфейсу последних событий. Иначе используйте интерфейс .NET, который создается но основе компонентного класса COM для доступа к методам, свойствам и событиям объекта COM. Дополнительные сведения о changefolder COM см <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -84,7 +76,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст строки адресации для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает текст строки с предупреждением, созданной мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +107,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает получателей скрытой копии (CC) для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает получателей копии (CC) для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,7 +138,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст закрывающего тега для буквы, созданные мастер писем (например, «С уважением, вам»).</summary>
+        <summary>Возвращает или задает закрывающий текст для письма, созданного мастером писем (например, "с уважением").</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -174,11 +166,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Например, если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DateFormat">
@@ -207,7 +199,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает дату для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает дату для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -235,12 +227,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.LetterContent</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает доступный только для чтения <see cref="T:Microsoft.Office.Interop.Word.LetterContent" /> объект, который представляет содержимое созданные мастер писем указанную букву.</summary>
+        <summary>Возвращает объект, предназначенный <see cref="T:Microsoft.Office.Interop.Word.LetterContent" /> только для чтения и представляющий содержимое указанного письма, созданного мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>дублируется</b> трубку параметры всех свойств объекта дублируемые <b>LetterContent</b> . Можно назначить объект, возвращенный свойством <b>дублирующиеся</b> другой объект того же типа, для применения этих параметров за один раз. Перед назначением повторяющихся объектов на другой объект, можно изменить любые свойства объекта повторяющихся без изменения исходного.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство " <b>дублировать</b> " можно использовать для выбора параметров всех свойств повторяющегося объекта <b>LetterContent</b> . Вы можете назначить объект, возвращенный свойством <b>повторения</b> , другому объекту того же типа, чтобы применить эти параметры сразу. Перед назначением дубликата объекта другому объекту можно изменить любое из его свойств, не влияя на исходный объект.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnclosureNumber">
@@ -269,7 +259,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число приложений буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает количество вложений для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,13 +290,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если заголовок и нижний колонтитул из шаблона конструктора страницы включены в буквы, созданные мастер писем.</summary>
+        <summary><b>Имеет значение true</b> , если верхний и нижний колонтитулы из шаблона дизайна страницы включены в письмо, созданное мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word._LetterContent.PageDesign" /> свойство, чтобы задать имя шаблона, присоединенного к документу, созданные мастер писем.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._LetterContent.PageDesign" /> свойство, чтобы задать имя шаблона, присоединенного к документу, созданному мастером писем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InfoBlock">
@@ -335,12 +322,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Связанные с мастер писем в Microsoft Word. Не используется в английской версии Word.</summary>
+        <summary>Связан с мастером писем в Microsoft Word. Не используется в английской версии Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Letterhead">
@@ -369,14 +354,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для предварительной бланков буквы, созданные мастер писем резервируется пространство.</summary>
+        <summary><b>True</b> , если место резервируется для печатного бланка в письме, созданном мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word._LetterContent.LetterheadSize" /> Свойство определяет размер пространства зарезервированные бланков.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word._LetterContent.LetterheadSize" /> Свойство управляет размером зарезервированного Бланка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LetterheadLocation">
@@ -405,12 +386,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLetterheadLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расположение готовых бланков буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает расположение предварительно напечатанного бланка в письме, созданном мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>LetterheadLocation</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLetterheadLocation" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>леттерхеадлокатион</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLetterheadLocation" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LetterheadSize">
@@ -439,7 +418,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает дискового пространства (в пунктах) зарезервировать выводить бланков буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает количество пробелов (в пунктах), резервируемых для предварительно напечатанного бланка в письме, созданном с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -470,12 +449,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLetterStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает макет буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает макет письма, созданного мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>LetterStyle</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLetterStyle" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>леттерстиле</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLetterStyle" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailingInstructions">
@@ -504,7 +481,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст инструкции по отправлению для письма, созданные мастер писем (например, «почтовый сертификат»).</summary>
+        <summary>Возвращает или задает текст инструкции по рассылке письма, созданного мастером писем (например, "сертифицированная почта").</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -535,7 +512,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя шаблона, присоединенного к документу, созданные мастер писем.</summary>
+        <summary>Возвращает или задает имя шаблона, присоединенного к документу, созданному мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -563,7 +540,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -594,7 +571,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает адрес адрес электронной почты человека, который будет принимать буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает почтовый адрес человека, который будет получать письмо, созданное мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -625,12 +602,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает получателей кода. Не используется в английской версии Microsoft Word.</summary>
+        <summary>Возвращает или задает код получателя. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RecipientGender">
@@ -659,12 +634,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSalutationGender</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает пол получателя, если оно известно. Не используется в английской версии Microsoft Word.</summary>
+        <summary>Возвращает или задает пол получателя, если он известен. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>RecipientGender</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationGender" /> константы. Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>реЦипиентжендер</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationGender" /> констант. Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RecipientName">
@@ -693,7 +666,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя человека, который будет принимать буквы, созданные мастер писем.</summary>
+        <summary>Возвращает или задает имя человека, который будет получать письмо, созданное мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -724,7 +697,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строки ссылки (например, «в ответ на:») для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает строку ссылки (например, "в ответе на:") для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -755,7 +728,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает обратный адрес для письма, созданных с помощью мастера писем.</summary>
+        <summary>Возвращает или задает обратный адрес для письма, созданного с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -786,12 +759,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает адрес краткая форма. Не используется в английской версии Microsoft Word.</summary>
+        <summary>Возвращает или задает адрес короткой формы. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Salutation">
@@ -820,7 +791,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст приветствия для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает текст приветствия для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -851,12 +822,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSalutationType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип обращения для письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает тип обращения для письма, созданного мастером писем.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>SalutationType</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>салутатионтипе</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SenderCity">
@@ -887,10 +856,8 @@
       <Docs>
         <summary>Возвращает или задает город отправителя. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SenderCode">
@@ -921,10 +888,8 @@
       <Docs>
         <summary>Возвращает или задает код отправителя. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SenderCompany">
@@ -953,7 +918,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя компании человека, Создание письма с помощью мастера писем.</summary>
+        <summary>Возвращает или задает имя компании, создавшей письмо с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -984,12 +949,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSalutationGender</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает пол, используемые с приветствие. Не используется в английской версии Microsoft Word.</summary>
+        <summary>Возвращает или задает пол, используемый с приветствием. Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>SenderGender</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationGender" /> константы. Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>сендержендер</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSalutationGender" /> констант. Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SenderInitials">
@@ -1018,7 +981,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает инициалы пользователя, Создание письма с помощью мастера писем.</summary>
+        <summary>Возвращает или задает инициалы пользователя, создающего письмо с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1049,7 +1012,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает Должность автора письма с помощью мастера писем.</summary>
+        <summary>Возвращает или задает должность лица, создающего письмо с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1080,7 +1043,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя человека, Создание письма с помощью мастера писем.</summary>
+        <summary>Возвращает или задает имя пользователя, создающего письмо с помощью мастера писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1113,10 +1076,8 @@
       <Docs>
         <summary>Не используется в английской версии Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство может быть недоступно в зависимости от того, какая языковая поддержка выбрана или установлена (например, Английский (США)).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Subject">
@@ -1145,7 +1106,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст темы письма, созданные мастер писем.</summary>
+        <summary>Возвращает или задает текст темы письма, созданного мастером писем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="ListFormat" FullName="Microsoft.Office.Interop.Word.ListFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="bedc659e05e0c224f2395785ec902aa8914376ed" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673243" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ListFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4ae3a6e1fbf76ffb21d88db92775f307cfb0ece9" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146579" /></Metadata><TypeSignature Language="C#" Value="public interface ListFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListFormat" />
@@ -26,16 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет список атрибутов, которые могут быть применены к абзацы в диапазоне форматирования.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Range.ListFormat" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта для диапазона.</para>
-      <para>— Это простой способ применить форматирование списка для использования <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" />, и <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> методы, которые соответствуют, соответственно, первый формате списка (без None) на всех листах маркеры и нумерация диалоговое окно.</para>
-      <para>Чтобы применить формат, отличный от по умолчанию, используйте <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> метод, который позволяет указать формате списка (шаблон списка), которую нужно применить.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.ListFormat.List" /> или <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListTemplate" /> свойство для возвращения списка или шаблон списка из первого абзаца в указанном диапазоне.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Range.ListFormat" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который требуется получить доступ к списку форматирования свойства и методы, доступные для указанного диапазона.</para>
-      <para>Тем не менее, если уже имеется в списке, определенном в документе, доступны в объект списка с помощью <see cref="P:Microsoft.Office.Interop.Word._Document.Lists" /> свойство.</para>
-      <para />
-    </remarks>
+    <summary>Представляет атрибуты форматирования списка, которые могут быть применены к абзацам в диапазоне.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.ListFormat" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект для диапазона.</para>
+      <para>Простой способ применить форматирование списков — использовать методы <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" />, <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" />, и <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> , соответственно, соответственно, к первому формату списка (не включая None) на каждой вкладке в диалоговом окне "маркеры и нумерация".</para>
+      <para>Чтобы применить формат, отличный от формата по умолчанию, используйте <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> метод, который позволяет указать формат списка (шаблон списка), который требуется применить.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.ListFormat.List" /> или <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListTemplate" /> для возврата списка или шаблона списка из первого абзаца в указанном диапазоне.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.ListFormat" /> свойство <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта для доступа к свойствам и методам форматирования списка, доступным для указанного диапазона.</para>
+      <para>Однако если в документе уже определен список, можно получить доступ к объекту List с помощью <see cref="P:Microsoft.Office.Interop.Word._Document.Lists" /> свойства.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -88,8 +78,8 @@
         <Parameter Name="DefaultListBehavior" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="DefaultListBehavior">Необязательный элемент <b>Object</b>. Задает значение, указывающее, используется ли Microsoft Word нового веб ориентированные форматирования для лучшего отображения списка. Может быть одним из следующих констант: <b>wdWord8ListBehavior</b> (использования форматирования, совместимые с Microsoft Word 97) или <b>wdWord9ListBehavior</b> (использовать веб ориентированные форматирование). В целях совместимости константы по умолчанию является <b>wdWord8ListBehavior</b>, но в новые процедуры следует использовать <b>wdWord9ListBehavior</b> преимуществами Улучшенная веб ориентированные форматирования относительно отступов и многоуровневых списков.</param>
-        <summary>Добавляет маркеры и форматирование абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Если абзацы уже отформатирован маркеры, этот метод удаляет маркеры и форматирования.</summary>
+        <param name="DefaultListBehavior">Необязательный <b>объект</b>. Задает значение, указывающее, использует ли Microsoft Word новое веб-ориентированное форматирование для улучшения отображения списка. Может быть любой из следующих констант: <b>wdWord8ListBehavior</b> (Используйте форматирование, совместимое с Microsoft Word 97) или <b>WdWord9ListBehavior</b> (используйте веб-ориентированное форматирование). В целях обеспечения совместимости константа по умолчанию — <b>wdWord8ListBehavior</b>, но в новых процедурах рекомендуется использовать <b>WdWord9ListBehavior</b> для улучшения веб-ориентированного форматирования с точки зрения отступов и многоуровневых списков.</param>
+        <summary>Добавляет маркеры и форматирование к абзацам в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Если абзацы уже отформатированы с помощью маркеров, этот метод удаляет маркеры и форматирование.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -145,11 +135,11 @@
         <Parameter Name="DefaultListBehavior" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ListTemplate">Требуется <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объекта. Шаблон списка, который нужно применить.</param>
-        <param name="ContinuePreviousList">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы продолжить нумерации в предыдущем списке; <b>Значение false</b> для запуска нового списка.</param>
-        <param name="ApplyTo">Необязательный элемент <b>Object</b>. Часть списка, который должен применяться к шаблона списка. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdListApplyTo" /> констант: <b>wdListApplyToSelection</b>, <b>wdListApplyToWholeList</b>или <b>wdListApplyToThisPointForward</b>.</param>
-        <param name="DefaultListBehavior">Необязательный элемент <b>Object</b>. Задает значение, указывающее, используется ли Microsoft Word нового веб ориентированные форматирования для лучшего отображения списка. Может быть одним из следующих констант: <b>wdWord8ListBehavior</b> (использования форматирования, совместимые с Microsoft Word 97) или <b>wdWord9ListBehavior</b> (использовать веб ориентированные форматирование). В целях совместимости константы по умолчанию является <b>wdWord8ListBehavior</b>, но в новые процедуры следует использовать <b>wdWord9ListBehavior</b> преимуществами Улучшенная веб ориентированные форматирования относительно отступов и многоуровневых списков.</param>
-        <summary>Применяет набор характеристик форматирования списка в указанный <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <param name="ListTemplate">Обязательный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект. Шаблон списка, который необходимо применить.</param>
+        <param name="ContinuePreviousList">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы продолжить нумерацию из предыдущего списка; <b>Значение false</b> для запуска нового списка.</param>
+        <param name="ApplyTo">Необязательный <b>объект</b>. Часть списка, к которой применяется шаблон списка. Может быть <see cref="T:Microsoft.Office.Interop.Word.WdListApplyTo" /> одной из следующих констант: <b>вдлистапплитоселектион</b>, <b>вдлистапплитовхолелист</b>или <b>вдлистапплитосиспоинтфорвард</b>.</param>
+        <param name="DefaultListBehavior">Необязательный <b>объект</b>. Задает значение, указывающее, использует ли Microsoft Word новое веб-ориентированное форматирование для улучшения отображения списка. Может быть любой из следующих констант: <b>wdWord8ListBehavior</b> (Используйте форматирование, совместимое с Microsoft Word 97) или <b>WdWord9ListBehavior</b> (используйте веб-ориентированное форматирование). В целях обеспечения совместимости константа по умолчанию — <b>wdWord8ListBehavior</b>, но в новых процедурах рекомендуется использовать <b>WdWord9ListBehavior</b> для улучшения веб-ориентированного форматирования с точки зрения отступов и многоуровневых списков.</param>
+        <summary>Применяет набор характеристик форматирования списка к указанному <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекту.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,13 +201,12 @@
         <Parameter Name="ApplyLevel" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ListTemplate">Шаблон списка, который нужно применить.</param>
-        <param name="ContinuePreviousList">
-          <b>Значение true,</b> чтобы продолжить нумерации в предыдущем списке; <b>Значение false</b> для запуска нового списка.</param>
-        <param name="ApplyTo">Часть списка, который должен применяться к шаблона списка. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdListApplyTo" /> констант: <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToSelection" />, <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToThisPointForward" />, или <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToWholeList" />.</param>
-        <param name="DefaultListBehavior">Задает значение, указывающее, используется ли Microsoft Word нового веб ориентированные форматирования для лучшего отображения списка. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdDefaultListBehavior" /> констант: <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord8ListBehavior" /> (использовать форматирования, совместимые с Microsoft Word 97) или <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord9ListBehavior" /> (использующие веб ориентированные форматирование). В целях совместимости константы по умолчанию — это <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord8ListBehavior" />, но в новые процедуры следует использовать <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord9ListBehavior" /> воспользоваться преимуществами Улучшенная веб ориентированные форматирования с помощью отношении для отступов и многоуровневой списков.</param>
-        <param name="ApplyLevel">Уровень, к которым будет применяться шаблон списка.</param>
-        <summary>Применяет набор характеристик форматирования списка, при необходимости для указанного уровня.</summary>
+        <param name="ListTemplate">Шаблон списка, который необходимо применить.</param>
+        <param name="ContinuePreviousList"><b>Значение true</b> , чтобы продолжить нумерацию из предыдущего списка; <b>Значение false</b> для запуска нового списка.</param>
+        <param name="ApplyTo">Часть списка, к которой применяется шаблон списка. Может быть <see cref="T:Microsoft.Office.Interop.Word.WdListApplyTo" /> одной из следующих констант: <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToSelection" />, <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToThisPointForward" />, или. <see cref="F:Microsoft.Office.Interop.Word.WdListApplyTo.wdListApplyToWholeList" /></param>
+        <param name="DefaultListBehavior">Задает значение, указывающее, использует ли Microsoft Word новое веб-ориентированное форматирование для улучшения отображения списка. Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Word.WdDefaultListBehavior" /> констант: <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord8ListBehavior" /> (Используйте форматирование, совместимое с Microsoft Word 97) <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord9ListBehavior" /> или (используйте веб-ориентированное форматирование). В целях обеспечения совместимости константа по умолчанию имеет <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord8ListBehavior" />значение, но в новых процедурах следует использовать <see cref="F:Microsoft.Office.Interop.Word.WdDefaultListBehavior.wdWord9ListBehavior" /> преимущества улучшенного веб-ориентированного форматирования с точки зрения отступов и многоуровневых списков.</param>
+        <param name="ApplyLevel">Уровень, к которому применяется шаблон списка.</param>
+        <summary>Применяет набор характеристик форматирования списка (при необходимости) для указанного уровня.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -243,8 +232,8 @@
         <Parameter Name="DefaultListBehavior" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="DefaultListBehavior">Необязательный элемент <b>Object</b>. Задает значение, указывающее, используется ли Microsoft Word нового веб ориентированные форматирования для лучшего отображения списка. Может быть одним из следующих констант: <b>wdWord8ListBehavior</b> (использования форматирования, совместимые с Microsoft Word 97) или <b>wdWord9ListBehavior</b> (использовать веб ориентированные форматирование). В целях совместимости константы по умолчанию является <b>wdWord8ListBehavior</b>, но в новые процедуры следует использовать <b>wdWord9ListBehavior</b> преимуществами Улучшенная веб ориентированные форматирования относительно отступов и многоуровневых списков.</param>
-        <summary>Добавляет нумерации абзацев в диапазоне для заданного по умолчанию <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Абзацы уже имеют формат нумерованного списка, этот метод удалит номера и форматирования.</summary>
+        <param name="DefaultListBehavior">Необязательный <b>объект</b>. Задает значение, указывающее, использует ли Microsoft Word новое веб-ориентированное форматирование для улучшения отображения списка. Может быть любой из следующих констант: <b>wdWord8ListBehavior</b> (Используйте форматирование, совместимое с Microsoft Word 97) или <b>WdWord9ListBehavior</b> (используйте веб-ориентированное форматирование). В целях обеспечения совместимости константа по умолчанию — <b>wdWord8ListBehavior</b>, но в новых процедурах рекомендуется использовать <b>WdWord9ListBehavior</b> для улучшения веб-ориентированного форматирования с точки зрения отступов и многоуровневых списков.</param>
+        <summary>Добавляет стандартную схему нумерации к абзацам в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Если абзацы уже отформатированы как нумерованный список, этот метод удаляет числа и форматирование.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -298,12 +287,10 @@
         <Parameter Name="DefaultListBehavior" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="DefaultListBehavior">Необязательный элемент <b>Object</b>. Задает значение, указывающее, используется ли Microsoft Word нового веб ориентированные форматирования для лучшего отображения списка. Может быть одним из следующих констант: <b>wdWord8ListBehavior</b> (использования форматирования, совместимые с Microsoft Word 97) или <b>wdWord9ListBehavior</b> (использовать веб ориентированные форматирование). В целях совместимости константы по умолчанию является <b>wdWord8ListBehavior</b>, но в новые процедуры следует использовать <b>wdWord9ListBehavior</b> преимуществами Улучшенная веб ориентированные форматирования относительно отступов и многоуровневых списков.</param>
-        <summary>Добавляет схемы нумерации структуры по умолчанию для абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Абзацы уже имеют формат многоуровневого списка, этот метод удалит номера и форматирования.</summary>
-        <remarks>
-          <para>Этот метод не удаляет встроенные стили заголовков, которые были применены к абзацев.</para>
-          <para />
-        </remarks>
+        <param name="DefaultListBehavior">Необязательный <b>объект</b>. Задает значение, указывающее, использует ли Microsoft Word новое веб-ориентированное форматирование для улучшения отображения списка. Может быть любой из следующих констант: <b>wdWord8ListBehavior</b> (Используйте форматирование, совместимое с Microsoft Word 97) или <b>WdWord9ListBehavior</b> (используйте веб-ориентированное форматирование). В целях обеспечения совместимости константа по умолчанию — <b>wdWord8ListBehavior</b>, но в новых процедурах рекомендуется использовать <b>WdWord9ListBehavior</b> для улучшения веб-ориентированного форматирования с точки зрения отступов и многоуровневых списков.</param>
+        <summary>Добавляет схему нумерации контура по умолчанию в абзацы диапазона для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Если абзацы уже отформатированы как нумерованный список, этот метод удаляет числа и форматирование.</summary>
+        <remarks><para>Этот метод не удаляет встроенные стили заголовков, примененные к абзацам.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplyOutlineNumberDefaultOld">
@@ -356,13 +343,11 @@
         <Parameter Name="ListTemplate" Type="Microsoft.Office.Interop.Word.ListTemplate" />
       </Parameters>
       <Docs>
-        <param name="ListTemplate">Требуется <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объекта. Шаблон списка, применяемый к предыдущей абзацев в документе.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdContinue" /> константу (<b>wdContinueDisabled</b>, <b>wdResetList</b>или <b>wdContinueList</b>), которое указывает, может быть продолжен форматирование в предыдущем списке.</summary>
+        <param name="ListTemplate">Обязательный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект. Шаблон списка, примененный к предыдущим абзацам в документе.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdContinue" /> константу (<b>вдконтинуедисаблед</b>, <b>вдресетлист</b>или <b>вдконтинуелист</b>), которая указывает, можно ли продолжить форматирование из предыдущего списка.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает состояние вышеприведенном списке продолжить и перезапуск параметры нумерации в маркеры и нумерация диалоговое окно Формат указанного списка. Чтобы изменить параметры эти параметры, задать <paramref name="ContinuePreviousList" /> аргумент <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает состояние "продолжить предыдущий список" и перезапускать параметры нумерации в диалоговом окне маркеры и нумерация для указанного формата списка. Чтобы изменить параметры этих параметров, задайте <paramref name="ContinuePreviousList" /> аргумент <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> метода.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConvertNumbersToText">
@@ -387,15 +372,12 @@
         <Parameter Name="NumberType" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="NumberType">Необязательный элемент <b>Object</b>. Тип номера для преобразования. Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" /> константы.</param>
-        <summary>Изменение числа списка и поля LISTNUM в указанном <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект в текст.</summary>
-        <remarks>
-          <para>Существует два типа номеров: стиль номеров (<b>wdNumberParagraph</b>), можно добавить для абзацев по выбору шаблона в маркеры и нумерация диалоговое окно; и поля LISTNUM (<b>wdNumberListNum</b>), которые можно добавлять несколько количество для каждого абзаца.</para>
-          <para>
-            <b>ConvertNumbersToText</b> метод удобен, если вы хотите работать с документом в другом приложении и этого приложения не распознает форматирование списка или поля LISTNUM.</para>
-          <para>После преобразования чисел списка в текст, больше не управляйте ими в списке.</para>
-          <para />
-        </remarks>
+        <param name="NumberType">Необязательный <b>объект</b>. Тип преобразуемого числа. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" /> константой.</param>
+        <summary>Изменяет числовые номера и поля LISTNUM в заданном <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекте на Text.</summary>
+        <remarks><para>Существует два типа чисел: стандартные номера (<b>вднумберпараграф</b>), которые можно добавить в абзацы, выбрав шаблон в диалоговом окне маркеры и нумерация; и поля LISTNUM (<b>вднумберлистнум</b>), которые позволяют добавлять несколько номеров для каждого абзаца.</para>
+          <para>Метод <b>конвертнумберстотекст</b> полезен, если вы хотите работать с документом в другом приложении, и оно не распознает форматирование списка или поля LISTNUM.</para>
+          <para>После преобразования номеров списков в текст вы больше не сможете управлять ими в списке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CountNumberedItems">
@@ -421,15 +403,13 @@
         <Parameter Name="Level" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="NumberType">Необязательный элемент <b>Object</b>. Тип номера для инвентаризации. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" /> констант: <b>wdNumberParagraph</b>, <b>wdNumberListNum</b>или <b>wdNumberAllNumbers</b>. Значение по умолчанию — <b>wdNumberAllNumbers</b>.</param>
-        <param name="Level">Необязательный элемент <b>Object</b>. Номер, соответствующий уровень нумерации нужно подсчитать. Если этот аргумент задан, учитываются все уровни.</param>
-        <summary>Возвращает число нумерованном или маркированном элементов и полей LISTNUM в указанном объекте <b>ListFormat</b> .</summary>
+        <param name="NumberType">Необязательный <b>объект</b>. Тип подсчитанных номеров. Может быть <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" /> одной из следующих констант: <b>вднумберпараграф</b>, <b>вднумберлистнум</b>или <b>вднумбераллнумберс</b>. Значение по умолчанию — <b>вднумбераллнумберс</b>.</param>
+        <param name="Level">Необязательный <b>объект</b>. Число, соответствующее уровню нумерации, который требуется считать. Если этот аргумент опущен, учитываются все уровни.</param>
+        <summary>Возвращает количество маркированных или нумерованных элементов и полей LISTNUM в указанном объекте <b>ListFormat</b> .</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Маркированные элементы удваивается при указанный <b>wdNumberParagraph</b> или <b>wdNumberAllNumbers</b> (по умолчанию) для <paramref name="NumberType" />.</para>
-          <para>Существует два типа номеров: поля LISTNUM (<b>wdNumberListNum</b>), которые можно добавлять несколько учетных записей и предварительно номеров (<b>wdNumberParagraph</b>), можно добавить для абзацев по выбору шаблона в маркеры и нумерация диалоговое окно; номер каждого абзаца.</para>
-          <para />
-        </remarks>
+        <remarks><para>Маркированные элементы подсчитываются, если для <paramref name="NumberType" />параметра задано значение <b>вднумберпараграф</b> или <b>вднумбераллнумберс</b> (значение по умолчанию).</para>
+          <para>Существует два типа чисел: стандартные номера (<b>вднумберпараграф</b>), которые можно добавить в абзацы, выбрав шаблон в диалоговом окне маркеры и нумерация; и поля LISTNUM (<b>вднумберлистнум</b>), которые позволяют добавлять несколько номеров для каждого абзаца.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -455,11 +435,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="List">
@@ -485,12 +465,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.List</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.List" /> объект, представляющий первый форматированный список, содержащиеся в указанном <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.List" /> объект, представляющий первый отформатированный список, содержащийся в <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если в первый абзац диапазон для объекта <b>ListFormat</b> не отформатированным в виде списка, свойство <b>списка</b> возвращает значение nothing.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если первый абзац в диапазоне для объекта <b>ListFormat</b> не отформатирован как список, свойство <b>List</b> не возвращает значение Nothing.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListIndent">
@@ -514,7 +492,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Повышает уровень списка абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект с шагом на один уровень.</summary>
+        <summary>Увеличивает уровень списка абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта в приращениях на один уровень.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -544,7 +522,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает уровень списка для первого абзаца в указанном <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <summary>Возвращает или задает уровень списка для первого абзаца указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -570,7 +548,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Снижает уровень списка абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект с шагом на один уровень.</summary>
+        <summary>Уменьшает уровень списка абзацев в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта в приращениях на один уровень.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -597,7 +575,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.InlineShape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображение, использовать в качестве маркеров в маркированного списка рисунков.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображение, используемое в качестве маркера в списке маркеров рисунков.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -625,13 +603,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую внешний вид списка значение в первый абзац диапазон для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Например, для второго абзаца в алфавитном списке вернет б.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую внешний вид значения списка первого абзаца в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Например, во втором абзаце в алфавитном списке возвращается значение B.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Маркированный список, необходимо применить правильный шрифт для отображения строки. Большинство маркеры использовать шрифт символа или Wingdings.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListValue" /> свойство для возвращения числовое значение абзаца.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для маркированного списка необходимо применить правильный шрифт для отображения строки. Большинство маркеров используют шрифт Symbol или Wingdings.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListValue" /> свойство, чтобы возвратить числовое значение абзаца.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListTemplate">
@@ -657,9 +633,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект, представляющий форматирования для указанного списка <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект, представляющий форматирование списка для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>Шаблон списка <para>A содержит все форматирование, определяющий конкретного списка. Каждая из семи форматов (не включая None) на каждый из вкладки в маркеры и нумерация диалоговое окно "" (меню "Формат") соответствует шаблона списка. Документы и шаблоны также может содержать коллекции шаблонов списков.</para><para>Если первый абзац в диапазоне для объекта <b>ListFormat</b> не отформатированным в виде списка, свойство <b>ListTemplate</b> возвращает <b>значение Nothing</b>.</para><para /></remarks>
+        <remarks><para>Шаблон списка включает все параметры форматирования, которые определяют определенный список. Каждый из семи форматов (не включая None), найденных на каждой из вкладок диалогового окна "маркеры и нумерация" (меню "формат") соответствует шаблону списка. Документы и шаблоны также могут содержать коллекции шаблонов списков.</para>
+          <para>Если первый абзац в диапазоне для объекта <b>ListFormat</b> не отформатирован в виде списка, свойство <b>ListTemplate</b> не возвращает <b>значение Nothing</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListType">
@@ -685,12 +663,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdListType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип списков, содержащихся в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <summary>Возвращает тип списков, которые содержатся в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>ListType</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdListType" /> константы. Константа <b>wdListListNumOnly</b> относится к LISTNUM поля, которые являются поля, которые могут быть добавлены в тексте абзац.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>листтипе</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdListType" /> констант. Константа <b>вдлистлистнумонли</b> ссылается на поля LISTNUM, представляющие собой поля, которые можно добавить в тексте абзаца.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListValue">
@@ -716,15 +692,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает первый абзац числовое значение в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Например свойство <b>ListValue</b> применяется для второго абзаца в алфавитном списке возвращает 2.</summary>
+        <summary>Возвращает числовое значение первого абзаца в диапазоне для указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта. Например, свойство <b>листвалуе</b> , применяемое ко второму абзацу в алфавитном списке, возвратит значение 2.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListString" /> свойство возвращает строку, представляющую значения списка.</para>
-          <para>Если объект <b>ListFormat</b> применяется к маркированный список, свойство <b>ListValue</b> возвращает 1.</para>
-          <para>, Если объект <b>ListFormat</b> применяется к списку многоуровневого, свойство <b>ListValue</b> возвращает числовое значение первого абзаца, как происходит в последовательности абзацев на одном уровне. Например, если первый абзац для указанного объекта <b>ListFormat</b> были нумерованные «A.2» <b>ListValue</b> возвращает 2.</para>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ListFormat.ListString" /> свойство, чтобы возвратить строку, представляющую значение списка.</para>
+          <para>Если объект <b>ListFormat</b> применяется к маркированному списку, свойство <b>листвалуе</b> возвращает 1.</para>
+          <para>Если объект <b>ListFormat</b> применяется к списку с нумерацией, свойство <b>листвалуе</b> возвращает числовое значение первого абзаца в том виде, в котором оно происходит в последовательности абзацев того же уровня. Например, если первый абзац для указанного объекта <b>ListFormat</b> был пронумерован "a. 2", <b>листвалуе</b> возвратит 2.</para>
           <para>Это свойство не будет возвращать значение для поля LISTNUM.</para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -750,7 +724,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -777,12 +751,10 @@
         <Parameter Name="NumberType" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="NumberType">Необязательные <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" />. Тип номера требуется удалить.</param>
-        <summary>Удаляет из указанных номеров или маркеров <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
-        <remarks>
-          <para>Если этот метод применяется к <see cref="T:Microsoft.Office.Interop.Word.List" /> объекта, оно удаляет номера только из абзацев в заданном списке пропуск через чередующихся чисел из других списков. Если этот метод применяется к объекту <b>ListFormat</b> для диапазон текста, удаляются все номера из всех списков в диапазоне.</para>
-          <para />
-        </remarks>
+        <param name="NumberType">Необязательный <see cref="T:Microsoft.Office.Interop.Word.WdNumberType" />параметр. Тип удаляемого номера.</param>
+        <summary>Удаляет номера или маркеры из указанного <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</summary>
+        <remarks><para>Когда этот метод применяется к <see cref="T:Microsoft.Office.Interop.Word.List" /> объекту, он удаляет числа только из абзацев в указанном списке, пропуская все чередование чисел из других списков. Если этот метод применяется к объекту <b>ListFormat</b> для диапазона текста, удаляются все числа из всех списков в диапазоне.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SingleList">
@@ -808,8 +780,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект содержит только один список.</summary>
+        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> указанный объект содержит только один список.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -837,8 +808,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если весь <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объект использует один и тот же шаблон списка.</summary>
+        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> весь объект использует один и тот же шаблон списка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

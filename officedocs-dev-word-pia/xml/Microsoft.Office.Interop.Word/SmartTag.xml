@@ -1,13 +1,5 @@
 <Type Name="SmartTag" FullName="Microsoft.Office.Interop.Word.SmartTag">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d90397c8f538990a390264fd3d1b286f3e023f2a" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673711" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTag" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5fa49cb1dcddf81834677aefdc8cd50240fa9578" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146124" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTag" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTag" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTag" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTag" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет строку, в документе или диапазон, который содержит сведения о типе распознанный.</summary>
-    <remarks>
-      <para>Объект <b>SmartTag</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> семейства сайтов. Коллекция <b>смарт-тегов</b> содержит смарт-тегов в документе или диапазон текста в документе. Microsoft Word использует файл смарт-тегами подписи, средства распознавания и использует файл действие для выполнения действий, связанных с смарт-тегов, такие как создание ссылок на веб-сайтов.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Editors.Item(System.Object@)" /> метод — или <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> (<paramref name="index" />), где <paramref name="index" /> представляет число смарт-тега — для возврата объекта <b>смарт-тега</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет строку в документе или диапазоне, в которой содержатся распознаваемые сведения о типе.</summary>
+    <remarks><para>Объект <b>SmartTag</b> является членом <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> коллекции. Коллекция <b>SmartTags</b> содержит все смарт-теги в документе или диапазоне текста в документе. Microsoft Word использует файл распознавателя для обозначения смарт-тегов и использует файл действий для выполнения действий, связанных со смарт-тегами, таких как связывание с веб-сайтами.</para>
+      <para><see cref="M:Microsoft.Office.Interop.Word.Editors.Item(System.Object@)" /> Используйте метод — или <see cref="T:Microsoft.Office.Interop.Word.SmartTags" /> (<paramref name="index" />), где <paramref name="index" /> представляет номер смарт-тега, чтобы вернуть один объект <b>SmartTag</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,11 +81,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -152,12 +142,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую URL-адрес для смарт-тега.</summary>
+        <summary>Возвращает <b>строку</b> , ПРЕДСТАВЛЯЮЩую URL-адрес смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>URL-адрес указан в файле средства распознавания связанных с ними смарт-тег. Если фрагмент текста распознанные и помеченные, URL-адрес становится частью сведения, содержащиеся в смарт-тег. Свойство <b>DownloadURL</b> можно использовать, если документ отправляется тому, кто не имеет необходимые файлы средства распознавания и действия, установленного на их компьютерах. Пользователя можно следовать URL-адрес для загрузки файлов необходимые смарт-тег.</para>
-          <para />
-        </remarks>
+        <remarks><para>URL-адрес указывается в соответствующем файле распознавателя смарт-тегов. Когда фрагмент текста распознается и помечается, URL-адрес становится частью данных, включенных в смарт-тег. Свойство <b>довнлоадурл</b> удобно, если документ отправляется пользователю, у которого нет необходимых распознавателей и файлов действий, установленных на компьютере. Пользователь может следовать URL-адресу, чтобы скачать необходимые файлы смарт-тегов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -217,7 +205,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -248,12 +236,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CustomProperties</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CustomProperties" /> объект, представляющий свойства смарт-тег.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CustomProperties" /> объект, представляющий свойства смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word.SmartTags.Add(System.String,System.Object@,System.Object@)" /> метод для добавления настраиваемых свойств. Тем не менее настраиваемые свойства обычно задаются в файлах средства распознавания и действия смарт-тега.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="M:Microsoft.Office.Interop.Word.SmartTags.Add(System.String,System.Object@,System.Object@)" /> Метод можно использовать для добавления настраиваемых свойств. Однако настраиваемые свойства обычно указываются в средствах распознавания смарт-тегов и файлов действий.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -282,12 +268,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -315,10 +299,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SmartTagActions">
@@ -347,7 +329,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.SmartTagActions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекции, представляющей коллекцию действий, доступных на смарт-тег.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекцию, представляющую коллекцию действий, доступных для смарт-тега.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -378,7 +360,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую связанные XML-код для смарт-тега.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую связанный XML для смарт-тега.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -411,10 +393,8 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий элемент XML для смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Не все смарт-теги содержат узлы XML; Тем не менее свойство <b>XMLNode</b> разработчики могут получить доступ к XML-узлов для смарт-тегов, которые содержат узлы XML.</para>
-          <para />
-        </remarks>
+        <remarks><para>Не все смарт-теги содержат узлы XML; Однако свойство <b>XmlNode</b> позволяет разработчикам получать доступ к XML-узлам для смарт-тегов, содержащих XML-узлы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

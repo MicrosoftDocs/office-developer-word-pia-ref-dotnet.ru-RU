@@ -1,13 +1,5 @@
 <Type Name="ApplicationEvents4_EPostageInsertExEventHandler" FullName="Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertExEventHandler">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1c6b1e2fa691a9be9bf147368164681f801784e0" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674010" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_EPostageInsertExEventHandler(Document Doc, int cpDeliveryAddrStart, int cpDeliveryAddrEnd, int cpReturnAddrStart, int cpReturnAddrEnd, int xaWidth, int yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, out bool fCancel);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="94af4b0a8aa74cc409913103a77c2efdb8781bff" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144829" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_EPostageInsertExEventHandler(Document Doc, int cpDeliveryAddrStart, int cpDeliveryAddrEnd, int cpReturnAddrStart, int cpReturnAddrEnd, int xaWidth, int yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, out bool fCancel);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ApplicationEvents4_EPostageInsertExEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertExEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ApplicationEvents4_EPostageInsertExEventHandler(Doc As Document, cpDeliveryAddrStart As Integer, cpDeliveryAddrEnd As Integer, cpReturnAddrStart As Integer, cpReturnAddrEnd As Integer, xaWidth As Integer, yaHeight As Integer, bstrPrinterName As String, bstrPaperFeed As String, fPrint As Boolean, ByRef fCancel As Boolean)" />
@@ -44,28 +36,18 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="Doc">Требуется <see cref="T:Microsoft.Office.Interop.Word.Document" />. Документ, к которому добавляется электронной марки.</param>
-    <param name="cpDeliveryAddrStart">
-      <b>Целое число</b>. Начальная позиция в документе для адреса доставки. Размещение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.Start" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</param>
-    <param name="cpDeliveryAddrEnd">
-      <b>Целое число</b>. Положение конечного документа для адреса доставки. Размещение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.End" /> свойства для объекта <b>диапазона</b> .</param>
-    <param name="cpReturnAddrStart">
-      <b>Целое число</b>. Начальная позиция в документе для обратный адрес. Размещение соответствует значению свойства <b>Start</b> для объекта <b>Range</b> .</param>
-    <param name="cpReturnAddrEnd">
-      <b>Целое число</b>. Положение конечного документа для обратный адрес. Размещение соответствует значению свойства <b>окончания</b> для объекта <b>Range</b> .</param>
-    <param name="xaWidth">
-      <b>Целое число</b>. Ширина конверт в 1/1440 дюйма единиц измерения.</param>
-    <param name="yaHeight">
-      <b>Целое число</b>. Высота конверт в 1/1440 дюйма единиц измерения.</param>
-    <param name="bstrPrinterName">
-      <b>Строка</b>. Имя принтера, указанный на вкладке Параметры печати диалогового окна Параметры конверта.</param>
-    <param name="bstrPaperFeed">
-      <b>Строка</b>. Метод веб-канала активности, указанный на вкладке Параметры печати диалогового окна Параметры конверта.</param>
-    <param name="fPrint">
-      <b>Boolean</b>. <b>Значение true,</b> Если пользователь указал для печати конверт. <b>Значение false,</b> Если пользователь указал для вставки в документ конверт.</param>
-    <param name="fCancel">
-      <b>Boolean</b>. <b>Значение true,</b> отменяет действие пользователя, указанного, указанного в <paramref name="fPrint" /> параметр.</param>
-    <summary>Тип <b>делегата</b> , используемый для добавления обработчика события для <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.EPostageInsertEx" /> события. <b>EPostageInsertEx</b> событие происходит, когда пользователь вставляет электронной марки в документ.</summary>
+    <param name="Doc">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Document" />. Документ, в который добавляется электронная марка.</param>
+    <param name="cpDeliveryAddrStart"><b>Целое число</b>. Начальная позиция в документе для адреса доставки. Положение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.Start" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</param>
+    <param name="cpDeliveryAddrEnd"><b>Целое число</b>. Конечное положение в документе для адреса доставки. Положение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.End" /> свойства для объекта <b>Range</b> .</param>
+    <param name="cpReturnAddrStart"><b>Целое число</b>. Начальная позиция в документе для обратного адреса. Положение соответствует значению свойства <b>Start</b> объекта <b>Range</b> .</param>
+    <param name="cpReturnAddrEnd"><b>Целое число</b>. Конечная позиция в документе для обратного адреса. Положение соответствует значению свойства <b>End</b> для объекта <b>Range</b> .</param>
+    <param name="xaWidth"><b>Целое число</b>. Ширина конверта в единицах 1/1440-дюймовый.</param>
+    <param name="yaHeight"><b>Целое число</b>. Высота конверта в единицах измерения 1/1440 дюймов.</param>
+    <param name="bstrPrinterName"><b>Строка</b>. Имя принтера, указанное на вкладке Параметры печати в диалоговом окне Параметры конверта.</param>
+    <param name="bstrPaperFeed"><b>Строка</b>. Метод веб-канала, указанный на вкладке "Параметры печати" диалогового окна "Параметры конверта".</param>
+    <param name="fPrint"><b>Логическое значение</b>. <b>Значение true</b> , если пользователь указал, что печатает конверт. <b>False</b> , если пользователь задает вставку конверта в документ.</param>
+    <param name="fCancel"><b>Логическое значение</b>. <b>Значение true</b> отменяет действие, указанное пользователем, как указано <paramref name="fPrint" /> в параметре.</param>
+    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.EPostageInsertEx" /> для события. Событие <b>епостажеинсертекс</b> происходит, когда пользователь вставляет электронную почтовые марку в документ.</summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

@@ -1,13 +1,5 @@
 <Type Name="Bookmarks" FullName="Microsoft.Office.Interop.Word.Bookmarks">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="559e2005557e5b0811ba9d6921064eb66efff775" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673111" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Bookmarks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="164f4a022f0e0f2ed1514f8a343f3dcbfd3f7cef" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146334" /></Metadata><TypeSignature Language="C#" Value="public interface Bookmarks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Bookmarks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Bookmarks" />
   <TypeSignature Language="VB.NET" Value="Public Interface Bookmarks&#xA;Implements IEnumerable" />
@@ -30,16 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объекты, которые представляют закладки в указанный выделения, диапазон или документа.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.Bookmarks" /> свойство для возврата коллекции <b>закладки</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Bookmarks.Add(System.String,System.Object@)" /> метод, чтобы установить закладку для диапазона в документе.</para>
-      <para>Использования <b>закладок</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы возвратить объект <b>закладки</b> . Должен полностью совпадать орфографии (но не обязательно заглавные буквы) с именем закладки.</para>
-      <para>Номер индекса представляет положение закладки в <see cref="T:Microsoft.Office.Interop.Word.Selection" /> или <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, положение закладки в алфавитном список закладок в диалоговом окне "закладки" представляет номер индекса (щелкните имя, чтобы отсортировать список закладок в алфавитном порядке). </para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Bookmarks.ShowHidden" /> Свойство влияет на число элементов в коллекции <b>закладки</b> . Если <b>ShowHidden</b> имеет <b>значение True</b>, скрытые закладки включаются в коллекцию <b>закладки</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объектов, представляющих закладки в указанном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Bookmarks" /> свойство, чтобы возвратить коллекцию <b>закладок</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Bookmarks.Add(System.String,System.Object@)" /> метод, чтобы задать закладку для диапазона в документе.</para>
+      <para>Используйте <b>закладки</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>закладки</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени закладки.</para>
+      <para>Номер индекса представляет положение закладки в объекте <see cref="T:Microsoft.Office.Interop.Word.Selection" /> или. <see cref="T:Microsoft.Office.Interop.Word.Range" /> Для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта номер индекса представляет положение закладки в алфавитном списке закладок в диалоговом окне "закладки" (щелкните имя, чтобы отсортировать список закладок в алфавитном порядке). </para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Bookmarks.ShowHidden" /> Свойство влияет на количество элементов в коллекции <b>закладок</b> . Если <b>ShowHidden</b> имеет <b>значение true</b>, скрытые закладки включаются в коллекцию <b>закладок</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -66,9 +55,9 @@
       </Parameters>
       <Docs>
         <param name="Name">Имя закладки. Имя не может быть больше одного слова.</param>
-        <param name="Range">Диапазон текста, помеченные в закладке. Закладку можно включить свернутые диапазона (точку вставки).</param>
-        <summary>Добавляет закладки к диапазону.</summary>
-        <returns>A <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объект, представляющий закладку, добавлены в диапазон.</returns>
+        <param name="Range">Диапазон текста, помеченный закладкой. Для закладки можно задать свернутый диапазон (точка вставки).</param>
+        <summary>Добавляет закладку к диапазону.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> Объект, представляющий закладку, добавленную к диапазону.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,7 +84,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -123,7 +112,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -151,11 +140,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultSorting">
@@ -184,12 +173,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdBookmarkSortBy</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает параметр сортировки для имен закладок, отображаемые в диалоговое окно "Закладка" (меню "Вставка").</summary>
+        <summary>Возвращает или задает параметр Sort для имен закладок, отображаемых в диалоговом окне "закладки" (меню "Вставка").</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не влияет на порядок объектов закладку в <see cref="T:Microsoft.Office.Interop.Word.Bookmarks" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не влияет на порядок объектов закладок в <see cref="T:Microsoft.Office.Interop.Word.Bookmarks" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Exists">
@@ -216,9 +203,8 @@
       </Parameters>
       <Docs>
         <param name="Name">Имя закладки.</param>
-        <summary>Определяет, существует ли указанный закладка.</summary>
-        <returns>
-          <b>Значение true,</b> Если указанный закладку существует, <b>значение False,</b> Если это не так.</returns>
+        <summary>Определяет, существует ли указанная закладка.</summary>
+        <returns><b>Значение true</b> , если указанная закладка существует, в противном случае — <b>false</b> .</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -280,8 +266,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">Имя отдельного объекта должно быть возвращено.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index">Имя возвращаемого отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -309,7 +295,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -340,13 +326,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если скрытые закладки включаются в <see cref="T:Microsoft.Office.Interop.Word.Bookmarks" /> семейства сайтов.</summary>
+        <summary>Возвращает или задает значение, указывающее, включены ли в <see cref="T:Microsoft.Office.Interop.Word.Bookmarks" /> коллекцию скрытые закладки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство также управляет ли скрытые закладки перечислены в диалоговое окно "Закладка" (меню "Вставка").</para>
-          <para>Скрытые закладки вставляются автоматически при вставке перекрестных ссылок в документ.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство также определяет, отображаются ли скрытые закладки в диалоговом окне "закладки" (меню "Вставка").</para>
+          <para>Скрытые закладки автоматически вставляются при вставке перекрестных ссылок в документ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

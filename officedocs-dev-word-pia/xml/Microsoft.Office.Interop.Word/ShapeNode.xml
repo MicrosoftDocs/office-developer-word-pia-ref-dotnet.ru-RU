@@ -1,13 +1,5 @@
 <Type Name="ShapeNode" FullName="Microsoft.Office.Interop.Word.ShapeNode">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="dea0f3f64b98c01fd58dabd1cbdfd93db788f7c5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672671" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ShapeNode" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="86c2673d3a1bd61e13b1505a88e585abcef62547" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147643" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeNode" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShapeNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ShapeNode" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShapeNode" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет геометрии и редактирования геометрии свойства узлов в определенный пользователем freeform.</summary>
-    <remarks>
-      <para>Узлы включают грани между сегменты фигуру и контрольные точки для изогнутые сегменты. Объект <b>ShapeNode</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> семейства сайтов. Коллекция <b>ShapeNodes</b> содержит все узлы в произвольный.</para>
-      <para>Использования <b>узлов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса узел, чтобы возвратить объект <b>ShapeNode</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет геометрию и свойства редактирования геометрии для узлов в пользовательской полилинии.</summary>
+    <remarks><para>Узлы включают вершины между сегментами полилинии и контрольные точки для искривленных сегментов. Объект <b>ShapeNode</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> коллекции. Коллекция <b>ShapeNodes</b> содержит все узлы полилинии.</para>
+      <para>Используйте <b></b>Nodes<paramref name="index" />(), <paramref name="index" /> где — это номер индекса узла, чтобы вернуть один объект <b>ShapeNode</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,11 +75,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EditingType">
@@ -115,12 +105,10 @@
         <ReturnType>Microsoft.Office.Core.MsoEditingType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если указанный узел является узел, данное свойство возвращает значение, указывающее влияние изменений, внесенных в узел на двух сегментах, подключенные к узлу. Если узел является контрольной точки для сегмент, данное свойство возвращает типа редактирования рядом с вершины.</summary>
+        <summary>Если указанный узел является вершиной, это свойство возвращает значение, которое указывает, как изменения, вносимые в узел, влияют на два сегмента, подключенных к узлу. Если узел является контрольной точкой для криволинейного сегмента, это свойство возвращает тип редактирования соседней вершины.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetEditingType(System.Int32,Microsoft.Office.Core.MsoEditingType)" /> метод, чтобы задать значение этого свойства.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetEditingType(System.Int32,Microsoft.Office.Core.MsoEditingType)" /> метод, чтобы задать значение этого свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -146,7 +134,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -174,12 +162,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение указанного узла как парой координат. Каждый координата выражается в точках.</summary>
+        <summary>Возвращает позицию указанного узла в виде покоординатной точки. Каждая координата выражается в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetPosition(System.Int32,System.Single,System.Single)" /> метод, чтобы задать расположение узла.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetPosition(System.Int32,System.Single,System.Single)" /> метод, чтобы задать расположение узла.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SegmentType">
@@ -205,13 +191,11 @@
         <ReturnType>Microsoft.Office.Core.MsoSegmentType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, является ли сегмент, связанные с указанного узла прямых или изогнутых.</summary>
+        <summary>Возвращает значение, которое указывает, является ли сегмент, связанный с указанным узлом, прямым или изогнутым.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный узел контрольной точки для сегмент, данное свойство возвращает <b>msoSegmentCurve</b>.</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetSegmentType(System.Int32,Microsoft.Office.Core.MsoSegmentType)" /> метод, чтобы задать значение этого свойства.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанный узел является контрольной точкой для криволинейного сегмента, это свойство возвращает <b>мсосегменткурве</b>.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.SetSegmentType(System.Int32,Microsoft.Office.Core.MsoSegmentType)" /> метод, чтобы задать значение этого свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="LineFormat" FullName="Microsoft.Office.Interop.Word.LineFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="39124d858fa3e2858bacfc840bef5cc7e6d37c84" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674173" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface LineFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1047c76a8c9ae2fdbaa19fb7954aa01fb4ae033d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146607" /></Metadata><TypeSignature Language="C#" Value="public interface LineFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LineFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.LineFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface LineFormat" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет строку и стрелки форматирования. Для строки объект <b>LineFormat</b> содержит сведения о форматировании для строки для фигуры с границей этот объект содержит сведения о форматировании для граница фигуры.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.Line" /> свойство возвращает объект <b>LineFormat</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет форматирование линий и стрелок. Для строки объект <b>LineFormat</b> содержит сведения о форматировании для самой линии; для фигуры с границей этот объект содержит сведения о форматировании границы фигуры.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Line" /> свойство, чтобы возвратить объект <b>LineFormat</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,7 +74,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ColorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ColorFormat" /> объект, представляющий цвет фона для указанного заливка или узорная линия.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ColorFormat" /> объект, представляющий цвет фона для заданной заливки или узорной линии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +105,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadLength</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает длину стрелки в начале указанной строке.</summary>
+        <summary>Возвращает или задает длину наконечника в начале указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,7 +136,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль стрелки в начале указанной строке.</summary>
+        <summary>Возвращает или задает стиль наконечника в начале указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,7 +167,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadWidth</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину стрелки в начале указанной строке.</summary>
+        <summary>Возвращает или задает ширину наконечника в начале указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,11 +195,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DashStyle">
@@ -238,7 +228,7 @@
         <ReturnType>Microsoft.Office.Core.MsoLineDashStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль тире для указанной строки.</summary>
+        <summary>Возвращает или задает стиль штриха для указанной линии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -269,7 +259,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadLength</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает длину стрелки в конце указанной строке.</summary>
+        <summary>Возвращает или задает длину наконечника в конце указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,7 +290,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль стрелки в конце указанной строке.</summary>
+        <summary>Возвращает или задает стиль наконечника в конце указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,7 +321,7 @@
         <ReturnType>Microsoft.Office.Core.MsoArrowheadWidth</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину стрелки в конце указанной строке.</summary>
+        <summary>Возвращает или задает ширину наконечника в конце указанной строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -359,7 +349,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ColorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ColorFormat" /> объект, представляющий цвет переднего плана для строки.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ColorFormat" /> объект, представляющий цвет переднего плана для линии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -390,13 +380,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>MsoTrue</b> рисовать линии внутри указанного фигуры.</summary>
+        <summary><b>Мсотруе</b> для рисования линий внутри указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте свойство <b>InsetPen</b> в соответствии с копирование края фигур равные ширину, но которого Толщина линии в зависимости.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте свойство <b>инсетпен</b> , чтобы соответствовать краям фигур с одинаковой шириной, ширина линии которой варьируется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -422,7 +409,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -453,13 +440,11 @@
         <ReturnType>Microsoft.Office.Core.MsoPatternType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее шаблон, применяемый к указанным заливки или строки.</summary>
+        <summary>Возвращает или задает значение, представляющее шаблон, примененный к заданному заполнению или строке.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Вы также можете использовать <see cref="M:Microsoft.Office.Interop.Word.FillFormat.Patterned(Microsoft.Office.Core.MsoPatternType)" /> метод, чтобы задать шаблон для заполнения или строку.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.LineFormat.BackColor" /> и <see cref="P:Microsoft.Office.Interop.Word.LineFormat.ForeColor" /> свойства, чтобы задать цвета, используемые в шаблоне.</para>
-          <para />
-        </remarks>
+        <remarks><para>Вы также можете использовать <see cref="M:Microsoft.Office.Interop.Word.FillFormat.Patterned(Microsoft.Office.Core.MsoPatternType)" /> метод, чтобы задать шаблон для заливки или линии.</para>
+          <para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.LineFormat.BackColor" /> и <see cref="P:Microsoft.Office.Interop.Word.LineFormat.ForeColor" /> для настройки цветов, используемых в шаблоне.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Style">
@@ -488,7 +473,7 @@
         <ReturnType>Microsoft.Office.Core.MsoLineStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип формата линии.</summary>
+        <summary>Возвращает или задает стиль формата линии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -519,12 +504,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение между 0.0 (Непрозрачный) и 1.0 (clear) степень прозрачности указанной строки.</summary>
+        <summary>Возвращает или задает степень прозрачности указанной линии в виде значения между 0,0 (непрозрачность) и 1,0 (Clear).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение этого свойства влияет на внешний вид сплошного заливки и линии. он не влияет на внешний вид Узорные линии или узора, градиента, изображение или текстуры заливки.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значение этого свойства влияет только на внешний вид сплошных заливок и линий; Он не оказывает никакого действия над видом узорных линий или узором, градиентом, рисунком или текстурным заполнением.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Visible">
@@ -553,13 +536,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный объект или форматирование применяется к нему, отображается.</summary>
+        <summary><b>Значение true</b> , если указанный объект или форматирование, примененное к нему, являются видимыми.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Weight">
@@ -588,7 +568,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину указанной строки в пунктах.</summary>
+        <summary>Возвращает или задает толщину указанной линии в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

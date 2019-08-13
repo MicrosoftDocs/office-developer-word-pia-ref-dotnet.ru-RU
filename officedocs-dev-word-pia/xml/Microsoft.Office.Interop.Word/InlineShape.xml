@@ -1,13 +1,5 @@
 <Type Name="InlineShape" FullName="Microsoft.Office.Interop.Word.InlineShape">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="66e249dbce92dbea7c1d72c74e1758b2d5b3cece" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673135" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface InlineShape" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9f81e89e789a82e62997f9c7555c77ad9c26269d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146684" /></Metadata><TypeSignature Language="C#" Value="public interface InlineShape" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract InlineShape" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.InlineShape" />
   <TypeSignature Language="VB.NET" Value="Public Interface InlineShape" />
@@ -26,9 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет объект в текстовой части документа.</summary>
-    <remarks>
-      <para>Встроенная фигура можно только изображения, объект OLE или элемент управления ActiveX. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекты обрабатываются как символы и размещенный как символы в строку текста. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> Коллекцию всех фигур в документе, диапазон или выделение.</para> Использование <b>InlineShapes</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекта. Встроенных фигур не имеют имен.</para><para><see cref="T:Microsoft.Office.Interop.Word.Shape" /> прикреплено к диапазон текста, но свободным и объектов могут размещаться в любом месте страницы. Можно использовать <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> метод и <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /> методы преобразования фигур из одного типа в другой. Только рисунки, объекты OLE и элементы управления ActiveX можно преобразовать в встроенных фигур. Использование <see cref="P:Microsoft.Office.Interop.Word.InlineShape.Type" /> свойство для возвращения типа фигуры встроенного: рисунков, связанных рисунков, внедренных объектов OLE, связанного объекта или элемент управления ActiveX.</para><para>При открытии документа, созданного в более ранней версии Microsoft Word, рисунки преобразуются в встроенных фигур.</para><para /></remarks>
+    <summary>Представляет объект в текстовом слое документа.</summary>
+    <remarks><para>Встроенная фигура может быть только рисунком, объектом OLE или элементом управления ActiveX. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />объекты обрабатываются как символы и располагаются в виде символов в текстовой строке. <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> Коллекция содержит все фигуры в документе, диапазоне или выделенном фрагменте.</para>
+      <para>Используйте <b>InlineShapes</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект. Встроенные фигуры не имеют имен.</para>
+      <para>
+        <see cref="T:Microsoft.Office.Interop.Word.Shape" />объекты привязаны к диапазону текста, но имеют свободный плавающий и могут размещаться в любом месте на странице. <see cref="M:Microsoft.Office.Interop.Word.Shape.ConvertToInlineShape" /> Метод и <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /> методы можно использовать для преобразования фигур из одного типа в другой. Встроенные фигуры можно преобразовать только изображения, объекты OLE и элементы управления ActiveX. Используйте <see cref="P:Microsoft.Office.Interop.Word.InlineShape.Type" /> свойство, чтобы возвратить тип встроенной фигуры: рисунок, связанный рисунок, внедренный объект OLE, связанный объект OLE или элемент управления ActiveX.</para>
+      <para>При открытии документа, созданного в более ранней версии Microsoft Word, изображения преобразуются в встроенные фигуры.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -85,7 +81,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает замещающий текст, связанный с фигуры на веб-странице.</summary>
+        <summary>Возвращает или задает замещающий текст, связанный с фигурой на веб-странице.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,7 +171,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -203,10 +199,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Chart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает диаграммы в коллекции встроенных фигур в документе. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Chart" />
-        </value>
+        <summary>Возвращает диаграмму в пределах коллекции встроенных фигур в документе. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Chart" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -231,12 +225,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Преобразует встроенная фигура фигурой свободным и возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий новую фигуру.</summary>
+        <summary>Преобразует встроенную фигуру в фигуру с произвольным плавающим значением <see cref="T:Microsoft.Office.Interop.Word.Shape" /> и возвращает объект, представляющий новую фигуру.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Необходимо применить <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекта по крайней мере один раз, прежде чем использовать метод <b>ConvertToShape</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> Метод необходимо применить к <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекту по крайней мере один раз, прежде чем использовать метод <b>конверттошапе</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -262,11 +254,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -348,12 +340,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Field</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле, связанное с указанным фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле, связанное с указанной фигурой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.Fields" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.Fields" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Fields" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.Fields" /> коллекцию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Fill">
@@ -379,7 +369,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит параметры форматирования для указанного фигуры заливки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект, который содержит свойства форматирования заливки для указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -408,9 +398,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает свойства форматирования для эффект свечения. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.GlowFormat" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.GlowFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -437,10 +425,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.GroupShapes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает фигур, сгруппированных для встроенная фигура. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.GroupShapes" />
-        </value>
+        <summary>Возвращает фигуры, которые группируются вместе для встроенной фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.GroupShapes" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -467,15 +453,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры диаграммы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoTriState" />
-        </value>
-        <remarks>
-          <para>Это свойство всегда возвращает <b>значение False</b> для диаграмм OLE. OLE диаграмм, используйте InlineShape.OLEFormat.ProgID и флажок для следующих значений: «Excel.Chart.8», «MSGraph.Chart.8», «Excel.Sheet.8», «Excel.Chart.5», «MSGraph.Chart.5» или «Excel.Sheet.5».</para>
-          <para />
-        </remarks>
+        <summary><b>Значение true</b> , если указанная фигура является диаграммой. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoTriState" /></value>
+        <remarks><para>Это свойство всегда возвращает <b>значение false</b> для диаграмм OLE. Для OLE Charts используйте InlineShape. OLEFormat. ProgID и проверьте наличие следующих возможных значений: "Excel. Chart. 8", "MSGraph. Chart. 8", "Excel. sheet. 8", "Excel. Chart. 5", "MSGraph. Chart. 5" и "Excel. sheet. 5".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasSmartArt">
@@ -501,12 +482,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <b>значение True</b> , если диаграмма SmartArt, размещенное на форме.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.MsoTriState" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <b>значение true</b> , если в фигуре присутствует схема SmartArt.</summary>
+        <value>Объект <see cref="T:Microsoft.Office.Core.MsoTriState" />.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -535,7 +514,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту фигуры указанного встроенного.</summary>
+        <summary>Возвращает или задает высоту заданной встроенной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -563,7 +542,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.HorizontalLineFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HorizontalLineFormat" /> объект, содержащий горизонтальную линию, форматирование для указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HorizontalLineFormat" /> объект, который содержит форматирование горизонтальной линии для указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -591,12 +570,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Hyperlink</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий гиперссылку, связанный с заданным <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий гиперссылку, связанную с указанным <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объектом.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если нет гиперссылки, связанные с указанной фигуры, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если гиперссылка, связанная с указанной формой, отсутствует, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsPictureBullet">
@@ -622,13 +599,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект — это маркер.</summary>
+        <summary>Определяет, является <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> ли объект графическим.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> чтобы указать, что <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект является маркер.</para>
-          <para>Несмотря на то, что маркеры считаются встроенных фигур, поиск документов <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> семейства сайтов не будет возвращать маркеры.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , чтобы показать <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> , что объект является маркером рисунка.</para>
+          <para>Несмотря на то, что маркеры рисунков считаются встроенными фигурами <see cref="T:Microsoft.Office.Interop.Word.InlineShapes" /> , Поиск коллекции документа не приводит к возврату графических маркеров.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Line">
@@ -654,12 +629,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.LineFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, содержащий свойства для указанного фигуры форматирования строки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LineFormat" /> объект, который содержит свойства форматирования линии для указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для строки объект <b>LineFormat</b> представляет строки для фигуры с границей объект <b>LineFormat</b> представляет границы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для строки объект <b>LineFormat</b> представляет саму линию; для фигуры с границей объект <b>LineFormat</b> представляет границу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinkFormat">
@@ -685,7 +658,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.LinkFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, представляющий параметры связи указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> , связанной с файлом.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, который представляет параметры ссылки указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> файла.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -716,29 +689,27 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли указанный фигуры сохраняются исходные пропорции при изменении размера.</summary>
+        <summary>Определяет, сохраняет ли указанная фигура исходные пропорции при изменении размера.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>MsoTrue</b> , если указанный фигуры сохраняются исходные пропорции при изменении размера и <b>MsoFalse</b> , если при изменении размеров его можно изменить высоту и ширину фигуры независимо друг от друга</para>
+        <remarks><para>Это свойство возвращает <b>мсотруе</b> , если указанная фигура сохраняет исходные пропорции при изменении размера, и <b>мсофалсе</b> , если вы можете изменить высоту и ширину фигуры независимо друг от друга при изменении его размера.</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" /> может иметь одно из следующих констант:</para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант: </para>
           <para>
-            <b>msoCTrue</b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse</b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed</b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle</b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b>
+            <b>мсотруе</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OLEFormat">
@@ -764,7 +735,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.OLEFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE (отличного от компоновки) для указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE (кроме ссылки) для указанного <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />элемента.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -823,7 +794,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -854,7 +825,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.PictureFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PictureFormat" /> объект, который содержит изображение свойства для указанного объекта форматирования.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PictureFormat" /> объект, который содержит свойства форматирования рисунка для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -882,12 +853,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reflection">
@@ -913,10 +882,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ReflectionFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает отражения, форматирования для фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" />
-        </value>
+        <summary>Возвращает форматирование отражения для фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ReflectionFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -941,7 +908,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет изменения, внесенные в встроенная фигура.</summary>
+        <summary>Удаляет изменения, внесенные во встроенную фигуру.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -971,7 +938,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Масштабируется высота формы указанного встроенного относительно исходного размера.</summary>
+        <summary>Масштабирует высоту указанной встроенной фигуры относительно исходного размера.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1002,7 +969,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Масштабирование ширины фигуры указанного встроенного относительно исходного размера.</summary>
+        <summary>Масштабирует ширину указанной встроенной фигуры относительно исходного размера.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1030,12 +997,10 @@
         <ReturnType>Microsoft.Office.Core.Script</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Script" /> объект, представляющий блок скрипта или код на указанном веб-странице.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Script" /> объект, представляющий блок скрипта или кода на указанной веб-странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если страница содержит не скрипт, ничего не возвращается.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если страница не содержит скрипта, ничего не возвращается.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -1060,10 +1025,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shadow">
@@ -1089,10 +1052,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ShadowFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тени для указанной фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" />
-        </value>
+        <summary>Возвращает форматирование тени для указанной фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1119,12 +1080,10 @@
         <ReturnType>Microsoft.Office.Core.SmartArt</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ для работы с SmartArt, связанный с указанным встроенная фигура.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ для работы с SmartArt, связанный с указанным встроенная фигура.</value>
-        <remarks>
-          <para>Только для чтения. Это свойство предоставляет точки входа для взаимодействия с рисунок SmartArt, связанный с помощью встроенного фигуры.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Core.SmartArt" /> объект, который предоставляет способ работы с SmartArt, связанным с заданной встроенной фигурой.</summary>
+        <value><see cref="T:Microsoft.Office.Core.SmartArt" /> Объект, который предоставляет способ работы с SmartArt, связанным с заданной встроенной фигурой.</value>
+        <remarks><para>Только для чтения. Это свойство предоставляет точку входа для взаимодействия с графическим изображением, связанным с встроенной фигурой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SoftEdge">
@@ -1150,10 +1109,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.SoftEdgeFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает мягкий край форматирования для фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" />
-        </value>
+        <summary>Возвращает для фигуры форматирование с необратимым краем. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.SoftEdgeFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1183,7 +1140,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextEffectFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, содержащий свойства форматирования текста влияние для указанной фигуры.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextEffectFormat" /> объект, который содержит свойства форматирования текстового действия для указанной фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1214,12 +1171,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, которое содержит заголовок для указанного встроенного фигуры.</summary>
-        <value>Заголовок для указанного встроенного фигуры.</value>
-        <remarks>
-          <para>Чтение и запись. Это свойство можно используйте для предоставления замещающий текст заголовка для встроенная фигура. Это свойство добавляет текст заголовка в текстовом поле название на замещающий текст области диалогового окна Формат фигуры в Microsoft Word 2010.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает значение, которое содержит заголовок для заданной встроенной фигуры.</summary>
+        <value>Заголовок для заданной встроенной фигуры.</value>
+        <remarks><para>Для чтения и записи. Используйте это свойство, чтобы указать альтернативное текстовое название для встроенной фигуры. Это свойство добавляет текст заголовка в текстовое поле "заголовок" в области "замещающий текст" диалогового окна "Формат фигуры" в Microsoft Word 2010.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -1245,46 +1200,44 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdInlineShapeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип встроенного фигуры.</summary>
+        <summary>Возвращает тип встроенной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdInlineShapeType" />может быть одной из следующих констант. </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdInlineShapeType" /> может иметь одно из следующих констант.</para>
-          <para>
-            <b>wdInlineShapeEmbeddedOLEObject</b>
+            <b>вдинлинешапимбеддедолеобжект</b>
           </para>
           <para>
-            <b>wdInlineShapeHorizontalLine</b>
+            <b>вдинлинешапехоризонталлине</b>
           </para>
           <para>
-            <b>wdInlineShapeLinkedOLEObject</b>
+            <b>вдинлинешапелинкедолеобжект</b>
           </para>
           <para>
-            <b>wdInlineShapeLinkedPicture</b>
+            <b>вдинлинешапелинкедпиктуре</b>
           </para>
           <para>
-            <b>wdInlineShapeLinkedPictureHorizontalLine</b>
+            <b>вдинлинешапелинкедпиктурехоризонталлине</b>
           </para>
           <para>
-            <b>wdInlineShapeOLEControlObject</b>
+            <b>вдинлинешапеолеконтролобжект</b>
           </para>
           <para>
-            <b>wdInlineShapeOWSAnchor</b>
+            <b>вдинлинешапеовсанчор</b>
           </para>
           <para>
-            <b>wdInlineShapePicture</b>
+            <b>вдинлинешапепиктуре</b>
           </para>
           <para>
-            <b>wdInlineShapePictureBullet</b>
+            <b>вдинлинешапепиктуребуллет</b>
           </para>
           <para>
-            <b>wdInlineShapePictureHorizontalLine</b>
+            <b>вдинлинешапепиктурехоризонталлине</b>
           </para>
           <para>
-            <b>wdInlineShapeScriptAnchor</b>
+            <b>вдинлинешапескриптанчор</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">

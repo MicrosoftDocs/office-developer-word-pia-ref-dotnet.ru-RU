@@ -1,13 +1,5 @@
 <Type Name="Broadcast" FullName="Microsoft.Office.Interop.Word.Broadcast">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="98d790daa433768bcb289537f5925f957d798e48" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673517" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Broadcast" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0d509697e025a0a6da57a59ccf0c2e2d3d1b050a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146215" /></Metadata><TypeSignature Language="C#" Value="public interface Broadcast" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Broadcast" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Broadcast" />
   <TypeSignature Language="VB.NET" Value="Public Interface Broadcast" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет сеанс вещания Windows Live службы вещания.</summary>
+    <summary>Представляет сеанс вещания службы вещания Windows Live.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,13 +46,11 @@
         <Parameter Name="notesWacUrl" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="notesUrl">Задает URL-адрес, где хранятся общих собрания для участников с помощью Расширенный клиент OneNote.</param>
-        <param name="notesWacUrl">Задает URL-адрес, где хранятся общих собрания для участников с помощью клиент OneNote Online.</param>
-        <summary>Добавление примечаний к собраниям общей для указанного показа слайдов, которые доступны для участников, использующих расширенный клиент OneNote 2013 или веб-приложения.</summary>
-        <remarks>
-          <para>Если вы не передайте строку для одного из двух параметров, метод <b>AddMeetingNotes</b> возвращает ошибку недопустимый параметр. Если по какой-либо причине происходит сбой вызова метода, Word возвращает Общая ошибка вещания.</para>
-          <para />
-        </remarks>
+        <param name="notesUrl">Задает URL-адрес, по которому хранятся общие заметки к собранию, для участников, использующих расширенный клиент OneNote.</param>
+        <param name="notesWacUrl">Задает URL-адрес, по которому хранятся общие заметки к собранию, для участников, использующих клиент OneNote Online.</param>
+        <summary>Добавляет общие заметки к собранию для указанного вещания, доступного участникам, которые используют полнофункциональный клиент или веб-приложение OneNote 2013.</summary>
+        <remarks><para>Если вы не передаете строку для одного из двух параметров, метод <b>аддмитингнотес</b> возвращает ошибку недопустимого параметра. Если по какой – либо причине происходит сбой вызова метода, Word возвращает универсальную ошибку вещания.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -114,12 +104,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если выполняется вещания возвращает <b>String</b> (<b>строка</b> в C#), который представляет URL-адрес ссылки на attendee. Только для чтения.</summary>
+        <summary>При проходе вещания возвращает <b>строку</b> (<b>строку</b> в C#), которая представляет URL-адрес ссылки участника. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если вещания не выполняется, <b>AttendeeUrl</b> возвращает пустую строку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если трансляция не выполняется, <b>аттендиурл</b> возвращает пустую строку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Capabilities">
@@ -145,11 +133,34 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>UInteger</b> (<b>uint</b> в C#), который представляет возможности указанного показа слайдов. Только для чтения.</summary>
+        <summary>Возвращает объект <b>UInteger</b> (<b>uint</b> в C#), представляющий возможности указанного вещания. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>возможности</b> может возвращать следующие значения:</para>поддерживает
-          <list type="table"><item><description><b>MSOBroadcastCapFileSizeLimited</b></description><description>1</description><description>ограниченный размер файла</description></item><item><description><b>MSOBroadcastCapSupportsMeetingNotes</b></description><description>2</description><description> примечания к собранию</description></item><item><description><b>MSOBroadcastCapSupportsUpdateDoc</b></description><description>4</description><description>документов поддерживает обновление</description></item></list><para>значений, возвращенных соответствует любого из Microsoft Office 2013 или широковещательного Microsoft Office 2010 возможности службы презентации.</para><para /></remarks>
+        <remarks><para>Свойство <b>capabilities</b> может возвращать следующие значения:</para>
+          <list type="table">
+            <item>
+              <description>
+                <b>мсоброадкасткапфилесизелимитед</b>
+              </description>
+              <description>1,1</description>
+              <description>Ограниченный размер файлов</description>
+            </item>
+            <item>
+              <description>
+                <b>мсоброадкасткапсуппортсмитингнотес</b>
+              </description>
+              <description>2</description>
+              <description>Поддержка заметок к собранию</description>
+            </item>
+            <item>
+              <description>
+                <b>мсоброадкасткапсуппортсупдатедок</b>
+              </description>
+              <description>SP4</description>
+              <description>Поддержка обновления документов</description>
+            </item>
+          </list>
+          <para>Возвращаемые значения соответствуют либо возможностям службы широковещательной презентации Microsoft Office 2013, либо Microsoft Office 2010.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="End">
@@ -173,12 +184,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Завершает указанного сеанса вещания.</summary>
-        <remarks>
-          <para>Вызов метода <b>End</b> завершает сеанс вещания без отображения запроса подтверждения пользователя. Он также устанавливает значение <see cref="P:Microsoft.Office.Interop.Word.Broadcast.AttendeeUrlproperty" /> пустую строку.</para>
-          <para>Если документ не широковещательные, метод возвращает ошибку времени выполнения 4702.</para>
-          <para />
-        </remarks>
+        <summary>Завершает указанный сеанс вещания.</summary>
+        <remarks><para>Вызов метода <b>End</b> завершает сеанс вещания без отображения запроса подтверждения пользователю. Кроме того, в качестве значения свойства <see cref="P:Microsoft.Office.Interop.Word.Broadcast.AttendeeUrlproperty" /> присваивается пустая строка.</para>
+          <para>Если документ не транслируется, метод возвращает ошибку времени выполнения 4702.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -204,7 +213,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>вещания</b></summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>Broadcast</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,11 +239,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Приостанавливает работу указанного показа слайдов.</summary>
-        <remarks>
-          <para>Если указанный вещания не выполняется, <b>Приостановить</b> возвращает ошибку времени выполнения 4702.</para>
-          <para />
-        </remarks>
+        <summary>Приостанавливает заданное вещание.</summary>
+        <remarks><para>Если указанное вещание не выполняется, то <b>Pause</b> возвращает ошибку времени выполнения 4702.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PresenterServiceUrl">
@@ -260,12 +267,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если выполняется вещания возвращает <b>String</b> (<b>строка</b> в C#), который представляет URL-адрес службы выступающего, размещения показа слайдов. Только для чтения.</summary>
+        <summary>При проходе вещания возвращает <b>строку</b> (<b>строку</b> в C#), представляющую URL-адрес службы докладчика, на которой размещается вещание. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если вещания не выполняется, <b>PresenterServiceUrl</b> возвращает пустую строку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если трансляция не выполняется, <b>пресентерсервицеурл</b> возвращает пустую строку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Resume">
@@ -289,11 +294,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возобновляет работу указанного показа слайдов.</summary>
-        <remarks>
-          <para>Метод <b>Resume</b> возвращает сообщение об ошибке (#4700) Если документ защищен управления цифровыми правами, уже является широковещательные (#4698), не происходит рассылка во всех (#4702) или имеет конфликт (находится в режиме объединения #4701).</para>
-          <para />
-        </remarks>
+        <summary>Возобновляет заданное вещание.</summary>
+        <remarks><para>Метод <b>Resume</b> возвращает ошибку (#4700), если документ защищен с помощью DRM (#4698), не передается на всех (#4702) или не выполняет конфликтующие изменения (находится в режиме объединения, #4701).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SessionID">
@@ -319,12 +322,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если выполняется вещания возвращает <b>String</b> (<b>строка</b> в C#), которая указывает идентификатор сеанса. Только для чтения.</summary>
+        <summary>При проходе вещания возвращает <b>строку</b> (<b>строку</b> в C#), которая задает идентификатор сеанса. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если вещания не выполняется, <b>SessionID</b> возвращает пустую строку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если трансляция не выполняется, <b>SessionID</b> возвращает пустую строку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Start">
@@ -350,11 +351,11 @@
         <Parameter Name="serverUrl" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="serverUrl">URL-адрес сервера, вещания.</param>
-        <summary>Инициирует указанного сеанса вещания.</summary>
-        <remarks>
-          <para>Вызов метода <b>запустите</b> выполняет настройку сервера, выполняет проверку подлинности пользователь и отправляет презентации.</para> Если значение, переданное 
-          <para><paramref name="serverUrl" /> имеет недопустимый форматирования, <b>запустите</b> возвращает ошибку «Недопустимый параметр». Кроме того, метод возвращает сообщение об ошибке, если документ защищен паролем, управления цифровыми правами уже широковещательные или имеет конфликт (находится в режиме объединения).</para><para /></remarks>
+        <param name="serverUrl">URL-адрес сервера вещания.</param>
+        <summary>Инициирует указанный сеанс вещания.</summary>
+        <remarks><para>Вызов метода <b>Start</b> настраивает сервер, проверяет подлинность пользователя и передает презентацию.</para>
+          <para>Если значение, переданное <paramref name="serverUrl" /> для, имеет недопустимое форматирование, <b>Start</b> возвращает ошибку "Недопустимый параметр". Кроме того, метод возвращает ошибку, если документ защищен с помощью DRM, уже выполняет трансляцию или имеет конфликтующие изменения (находится в режиме объединения).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="State">
@@ -380,23 +381,21 @@
         <ReturnType>Microsoft.Office.Core.MsoBroadcastState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу <b>MSOBroadcastState</b> , описывающее текущее состояние вещания. Только для чтения.</summary>
+        <summary>Возвращает константу <b>мсоброадкастстате</b> , которая описывает текущее состояние вещания. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>State</b> можно вернуть одну из трех состояний:</para>
+        <remarks><para>Свойство <b>State</b> может возвращать одно из следующих трех состояний:</para>
           <list type="bullet">
             <item>
-              <para>не вещания (0)</para>
+              <para>Без вещания (0)</para>
             </item>
             <item>
-              <para>вещания запущена (1)</para>
+              <para>Начато вещание (1)</para>
             </item>
             <item>
-              <para>вещания приостановлено (2)</para>
+              <para>Трансляция приостановлена (2)</para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

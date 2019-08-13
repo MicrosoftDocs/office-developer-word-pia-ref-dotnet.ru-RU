@@ -1,13 +1,5 @@
 <Type Name="HeadingStyles" FullName="Microsoft.Office.Interop.Word.HeadingStyles">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ac08de01c0786e7b85ed6512cee7ebcc71040b6f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673237" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface HeadingStyles : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8035dbeadf8f64cd8b07bd451f70eb58cd11b7a1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147986" /></Metadata><TypeSignature Language="C#" Value="public interface HeadingStyles : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HeadingStyles implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.HeadingStyles" />
   <TypeSignature Language="VB.NET" Value="Public Interface HeadingStyles&#xA;Implements IEnumerable" />
@@ -30,10 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.HeadingStyle" /> объекты, которые представляют стилей, используемых для компиляции списка иллюстраций или оглавления.</summary>
-    <remarks>
-      <para>Используйте свойство <b>HeadingStyles</b><see cref="T:Microsoft.Office.Interop.Word.TablesOfContents" /> или <see cref="T:Microsoft.Office.Interop.Word.TablesOfFigures" /> объект для возврата коллекции <b>HeadingStyles</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.HeadingStyles.Add(System.Object@,System.Int16)" /> способ добавления стиля в коллекцию <b>HeadingStyles</b> .</para> Использование <b>HeadingStyles</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>HeadingStyle</b> . Номер индекса представляет положение стиль в коллекции <b>HeadingStyles</b> .</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.HeadingStyle" /> объектов, представляющих стили, используемые для компиляции таблицы иллюстраций или оглавления.</summary>
+    <remarks><para>Используйте свойство <b>HeadingStyles</b> объекта <see cref="T:Microsoft.Office.Interop.Word.TablesOfContents" /> или <see cref="T:Microsoft.Office.Interop.Word.TablesOfFigures" /> , чтобы вернуть коллекцию <b>HeadingStyles</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.HeadingStyles.Add(System.Object@,System.Int16)" /> метод, чтобы добавить стиль в коллекцию <b>HeadingStyles</b> .</para>
+      <para>Используйте <b>HeadingStyles</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>HeadingStyle</b> . Номер индекса представляет положение стиля в коллекции <b>HeadingStyles</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -60,9 +53,9 @@
         <Parameter Name="Level" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Style">Требуется <b>объект</b>. Стиль, который требуется добавить. Вы можете указать этот аргумент, используя строковое имя для стиля или <see cref="T:Microsoft.Office.Interop.Word.Style" /> объекта.</param>
-        <param name="Level">Требуется <b>короткий</b>. Число, представляющее уровень заголовка.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadingStyle" /> объект, представляющий новый стиль Заголовок добавлен в документ. Новый стиль заголовка будут включены при компиляции оглавления или оглавления.</summary>
+        <param name="Style">Обязательный <b>объект</b>. Стиль, который вы хотите добавить. Этот аргумент можно указать с помощью имени строки для стиля или <see cref="T:Microsoft.Office.Interop.Word.Style" /> объекта.</param>
+        <param name="Level">Обязательный <b>короткий</b>. Число, представляющее уровень заголовка.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadingStyle" /> объект, представляющий новый стиль заголовка, добавленный в документ. Новый стиль заголовка будет включен при компиляции оглавления или таблицы иллюстраций.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,7 +111,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,11 +139,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -211,9 +204,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,7 +233,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

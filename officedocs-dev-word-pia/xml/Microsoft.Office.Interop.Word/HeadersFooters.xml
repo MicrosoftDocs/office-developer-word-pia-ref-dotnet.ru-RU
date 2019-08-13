@@ -1,13 +1,5 @@
 <Type Name="HeadersFooters" FullName="Microsoft.Office.Interop.Word.HeadersFooters">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="32606f0e2fa1a2e01b68a8926235fb029c8bcf6a" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674174" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface HeadersFooters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bbb3145635811002276f2778bca17d7fa3c40db1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148000" /></Metadata><TypeSignature Language="C#" Value="public interface HeadersFooters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HeadersFooters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.HeadersFooters" />
   <TypeSignature Language="VB.NET" Value="Public Interface HeadersFooters&#xA;Implements IEnumerable" />
@@ -30,18 +22,16 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекты, которые представляют верхние и нижние колонтитулы в разделе указанного документа.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> или <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> свойство для возврата коллекции <b>HeadersFooters</b> .</para>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объектов, представляющих верхние или нижние колонтитулы в указанном разделе документа.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.Section.Headers" /> или <see cref="P:Microsoft.Office.Interop.Word.Section.Footers" /> для возврата коллекции <b>HeadersFooters</b> .</para>
       <para>
-        <b>Примечание</b>: не удается добавить <b>HeaderFooter</b> объекты в коллекцию <b>HeadersFooters</b> .</para>
-      <para>Использовать <b>заголовки</b>(<paramref name="index" />) и <b>нижние колонтитулы</b>(<paramref name="index" />), где <paramref name="index" /> — это один из <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" /> константы (<b>wdHeaderFooterEvenPages</b>, <b>wdHeaderFooterFirstPage</b>или <b>wdHeaderFooterPrimary</b>), чтобы Возвращает объект <b>HeaderFooter</b> .</para>
-      <para>С помощью можно вернуть объект <b>HeaderFooter</b><see cref="P:Microsoft.Office.Interop.Word.Selection.HeaderFooter" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объект, который требуется указать другой первой страницы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.PageSetup.OddAndEvenPagesHeaderFooter" /> свойство с объектом <b>PageSetup</b> , чтобы указать разные и даже верхних и нижних колонтитулов. Если свойство <b>OddAndEvenPagesHeaderFooter</b> имеет <b>значение True</b>, с помощью <b>wdHeaderFooterPrimary</b>можно вернуть нечетной верхних и нижних колонтитулов и возврат даже верхних и нижних колонтитулов с помощью <b>wdHeaderFooterEvenPages</b>.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод с <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> объект, который требуется добавить номер страницы для верхних и нижних колонтитулов.</para>
-      <para />
-    </remarks>
+        <b>Note</b>: невозможно добавить объекты <b>HeaderFooter</b> в коллекцию <b>HeadersFooters</b> .</para>
+      <para>Используйте <b></b>верхние<paramref name="index" />или нижние колонтитулы<paramref name="index" />(), <paramref name="index" /> где — одна из <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" /> констант (<b>вдхеадерфутеревенпажес</b>, <b>вдхеадерфутерфирстпаже</b>или <b>вдхеадерфутерпримари</b>), чтобы вернуть один объект <b></b> <b> Объект HeaderFooter</b> .</para>
+      <para>Вы также можете вернуть один объект <b>HeaderFooter</b> , используя <see cref="P:Microsoft.Office.Interop.Word.Selection.HeaderFooter" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объектом.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объектом, чтобы указать другую первую страницу.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.PageSetup.OddAndEvenPagesHeaderFooter" /> свойство с объектом <b>PageSetup</b> для указания разных колонтитулов нечетных и четных страниц. Если свойство <b>оддандевенпажешеадерфутер</b> имеет <b>значение true</b>, вы можете вернуть нерегулярный верхний или нижний колонтитул с помощью <b>вдхеадерфутерпримари</b>, а также возвратить четный верхний или нижний колонтитул с помощью <b>вдхеадерфутеревенпажес</b>.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод вместе с <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> объектом, чтобы добавить номер страницы в верхний или нижний колонтитул.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -95,7 +85,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -123,11 +113,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -188,8 +178,8 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Word.WdHeaderFooterIndex" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" />. Константа, которая указывает верхних и нижних колонтитулов в выделение. Может иметь одно из следующих констант <b>WdHeaderFooterIndex</b> :<b>wdHeaderFooterFirstPage</b><b>wdHeaderFooterEvenPages</b><b>wdHeaderFooterPrimary</b></param>
-        <summary>Возвращает верхних и нижних колонтитулов в диапазон или выделить фрагмент.</summary>
+        <param name="Index">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" />. Константа, задающая верхний или нижний колонтитул в выделенном фрагменте. Может быть одной из следующих констант <b>вдхеадерфутериндекс</b> :<b>вдхеадерфутеревенпажес</b><b>вдхеадерфутерфирстпаже</b><b>вдхеадерфутерпримари</b></param>
+        <summary>Возвращает верхний или нижний колонтитул в диапазоне или выделенный фрагмент.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -217,7 +207,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

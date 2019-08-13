@@ -1,13 +1,5 @@
 <Type Name="Editor" FullName="Microsoft.Office.Interop.Word.Editor">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c6046e570f2096e2ced3959088626d9cad02b5df" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673287" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Editor" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4c3c24b5cd7783a2941b968d06d78d74af20a9dd" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144556" /></Metadata><TypeSignature Language="C#" Value="public interface Editor" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Editor" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Editor" />
   <TypeSignature Language="VB.NET" Value="Public Interface Editor" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один пользователь, которому предоставлены определенные разрешения на изменение части документа.</summary>
-    <remarks>
-      <para>Пользователей, которые могут быть предоставлены разрешения включают отдельными участниками и групп пользователей, как определено для сайтов рабочих областей для документов.</para>
-      <para>Разрешения, которые нужно назначить диапазонов и выбранные элементы вступают в силу только после защищенного документа. Использование <see cref="T:Microsoft.Office.Interop.Word.Editors" /> семейства сайтов и объект <b>редактора</b> назначение определенные разрешения к разделам документа. Затем с помощью <see cref="M:Microsoft.Office.Interop.Word._Document.Protect(Microsoft.Office.Interop.Word.WdProtectionType,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для защиты документа.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Editors.Add(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Editors" /> семейства сайтов, чтобы предоставить указанному пользователю или группе разрешения на изменение диапазона или выделить фрагмент в документе.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одного пользователя, которому предоставлены особые разрешения на редактирование частей документа.</summary>
+    <remarks><para>Пользователи, которым могут быть предоставлены разрешения, включают в себя отдельных участников и группы пользователей, определенных для сайтов рабочих областей для документов.</para>
+      <para>Разрешения, назначаемые для диапазонов и выделений, действуют только после того, как документ защищен. Используйте <see cref="T:Microsoft.Office.Interop.Word.Editors" /> коллекцию и объект <b>редактора</b> , чтобы назначить определенные разрешения для разделов документа. Затем используйте <see cref="M:Microsoft.Office.Interop.Word._Document.Protect(Microsoft.Office.Interop.Word.WdProtectionType,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод защиты документа.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Editors.Add(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Editors" /> коллекции, чтобы предоставить указанному пользователю или группе разрешение на изменение диапазона или выделенного фрагмента в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -139,7 +129,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет все разрешения на изменение в документе для определенного пользователя.</summary>
+        <summary>Удаляет все разрешения на редактирование в документе для определенного пользователя.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -166,12 +156,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает метку для указанного объекта при сохранении текущего документа в качестве веб-страницы.</summary>
+        <summary>Возвращает или задает идентифицирующую метку для указанного объекта, когда текущий документ сохраняется в качестве веб-страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>За исключением элемента <see cref="T:Microsoft.Office.Interop.Word.Editor" /> объекта, метки можно использовать как гиперссылку из других веб-страниц или из текущего документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>За исключением <see cref="T:Microsoft.Office.Interop.Word.Editor" /> объекта, вы можете использовать метку в качестве ссылки на гиперссылку с других веб-страниц или из текущего документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -225,12 +213,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий следующий диапазон, для которого пользователь имеет разрешения на изменение.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий следующий диапазон, для которого у пользователя есть разрешения на изменение.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно также использовать метод <b>GoToEditableRange</b><b>диапазон</b> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> object для возвращения следующего диапазона, для которых пользователь имеет разрешения на изменение.</para>
-          <para />
-        </remarks>
+        <remarks><para>Кроме того, можно использовать метод <b>Готоедитаблеранже</b> <b>диапазона</b> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта, чтобы возвратить следующий диапазон, для которого у пользователя есть разрешение на изменение.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -256,7 +242,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,12 +270,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="P:Microsoft.Office.Interop.Word.Editor.Range" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="P:Microsoft.Office.Interop.Word.Editor.Range" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SelectAll">
@@ -313,11 +297,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор всех фигур в основную статью, полотно или в верхних и нижних колонтитулов документа.</summary>
-        <remarks>
-          <para>Этот метод не выделяет <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объектов.</para>
-          <para />
-        </remarks>
+        <summary>Выделяет все фигуры в основной статье, на холсте или в верхних и нижних колонтитулах документа.</summary>
+        <remarks><para>Этот метод не выбирает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

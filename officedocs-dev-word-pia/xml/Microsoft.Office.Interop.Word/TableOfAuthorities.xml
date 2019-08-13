@@ -1,13 +1,5 @@
 <Type Name="TableOfAuthorities" FullName="Microsoft.Office.Interop.Word.TableOfAuthorities">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4e825c703b3e4cc6dffdec314dcfbc3e937efc35" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672676" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TableOfAuthorities" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9fae6c30ceb2af52ffb36c1e3cbed81fcdb745e5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143898" /></Metadata><TypeSignature Language="C#" Value="public interface TableOfAuthorities" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TableOfAuthorities" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TableOfAuthorities" />
   <TypeSignature Language="VB.NET" Value="Public Interface TableOfAuthorities" />
@@ -26,10 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один таблицы ссылок в документе (поле таблицы ССЫЛОК).</summary>
-    <remarks>
-      <para>Объект <b>TableOfAuthorities</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.TablesOfAuthorities" /> семейства сайтов. Коллекция <b>TablesOfAuthorities</b> включает все таблицы ссылок в документе.</para> Использование <b>TablesOfAuthorities</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>TableOfAuthorities</b> . Номер индекса представляет положение таблицы ссылок в документе.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.TablesOfAuthorities.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить таблицы ссылок в документ.</para> Таблица 
-        <b>Примечание</b><para>ссылок создается из полей та (элемент таблицы ссылок) в документе. Использование <see cref="M:Microsoft.Office.Interop.Word.TablesOfAuthorities.MarkCitation(Microsoft.Office.Interop.Word.Range,System.String,System.Object@,System.Object@,System.Object@)" /> способ метку ссылки, которые будут включены в таблицу ссылок.</para><para /></remarks>
+    <summary>Представляет одну таблицу ссылок в документе (поле TOA).</summary>
+    <remarks><para>Объект <b>TableOfAuthorities</b> является членом <see cref="T:Microsoft.Office.Interop.Word.TablesOfAuthorities" /> коллекции. Коллекция <b>TablesOfAuthorities</b> включает все таблицы ссылок в документе.</para>
+      <para>Используйте <b>TablesOfAuthorities</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>TableOfAuthorities</b> . Номер индекса представляет положение таблицы ссылок в документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfAuthorities.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для добавления таблицы ссылок в документ.</para>
+      <para>
+        <b>Note (Примечание</b> )  Таблица ссылок строится на основе полей TA (элемент таблицы ссылок) в документе. Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfAuthorities.MarkCitation(Microsoft.Office.Interop.Word.Range,System.String,System.Object@,System.Object@,System.Object@)" /> метод, чтобы пометить ссылки, включаемые в таблицу ссылок.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,12 +81,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя закладки, из которого можно собирать элементов таблицы ссылок.</summary>
+        <summary>Возвращает или задает имя закладки, из которой необходимо собирать записи таблицы ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>закладку</b> соответствующий ключ \b для поля таблицы ССЫЛОК (таблицы ссылок).</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Bookmark</b> соответствует параметру \b для поля TOA (таблица ссылок).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Category">
@@ -120,14 +113,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает категории записей, которые будут включены в таблицы ссылок.</summary>
+        <summary>Возвращает или задает категорию записей, включаемых в таблицу ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство " <b>Категория</b> " соответствует ключ \c для поля таблицы ССЫЛОК. Значения 1 – 16, соответствуют элементам в списке категории на вкладке таблицы ссылок в диалоговом окне Оглавление и указатели.</para>
+        <remarks><para>Свойство <b>Category</b> соответствует параметру \c для поля TOA. Значения от 1 до 16 соответствуют элементам списка категорий на вкладке Таблица ссылок в диалоговом окне индекс и таблицы.</para>
           <para>
-            <b>Примечание</b> номер нуль (0), который соответствует все категории, не может использоваться с этим свойством. Тем не менее, можно использовать 0 для указания всех категорий при вставляемого таблицы ссылок.</para>
-          <para />
-        </remarks>
+            <b>Note (Примечание</b> )  Число 0 (ноль), которое соответствует всем категориям, не может использоваться с этим свойством. Однако можно использовать значение 0, чтобы указать все категории при вставке таблицы ссылок.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -153,11 +144,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -211,13 +202,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает знаков (до пяти), которые разделения таблицы ссылок и номером страницы.</summary>
+        <summary>Возвращает или задает символы (не более пяти), которые разделяют запись таблицы ссылок и ее номер страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Разделителем запись по умолчанию является символ табуляции с точками ведущим.</para>
-          <para>Свойство <b>EntrySeparator</b> соответствует \e switch для поля таблицы ССЫЛОК (таблицы ссылок).</para>
-          <para />
-        </remarks>
+        <remarks><para>Разделитель записей по умолчанию — символ табуляции с пунктирным заполнительом.</para>
+          <para>Свойство <b>ентрисепаратор</b> соответствует параметру \e для поля TOA (таблица ссылок).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeCategoryHeader">
@@ -246,13 +235,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если имя категории для группы записей, появится в таблице ссылок.</summary>
+        <summary><b>Значение true</b> , если имя категории для группы записей отображается в таблице ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>IncludeCategoryHeader</b> соответствует переключатель \h для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>инклудекатегорихеадер</b> соответствует параметру \h для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeSequenceName">
@@ -281,12 +267,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает идентификатор поля последовательность (SEQ) для таблицы ссылок.</summary>
+        <summary>Возвращает или задает идентификатор поля последовательности (SEQ) для таблицы ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>IncludeSequenceName</b> соответствует ключа \s для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>инклудесекуенценаме</b> соответствует параметру \s для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KeepEntryFormatting">
@@ -315,13 +299,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если форматирование из элементов таблицы ссылок применяется к записи в указанной таблице ссылок.</summary>
+        <summary><b>True</b> , если форматирование из записей таблицы ссылок применяется к записям в указанной таблице ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>KeepEntryFormatting</b> соответствует переключатель \f для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>кипентриформаттинг</b> соответствует параметру \f для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageNumberSeparator">
@@ -350,13 +331,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает наборов знаков (до пяти), которые разделения ссылки на отдельную страницу в таблице ссылок.</summary>
+        <summary>Возвращает набор символов (до пяти), которые разделяют отдельные ссылки на страницы в таблице ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Разделитель номеров страниц по умолчанию является запятой и пробелом.</para>
-          <para>Свойство <b>PageNumberSeparator</b> соответствующий ключ \l для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Разделитель номеров страниц по умолчанию — запятая и пробел.</para>
+          <para>Свойство <b>паженумберсепаратор</b> соответствует параметру \l для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageRangeSeparator">
@@ -385,13 +364,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает знаков (до пяти), которые разделения диапазонов страниц в таблице ссылок.</summary>
+        <summary>Возвращает или задает символы (не более пяти), которые разделяют диапазон страниц в таблице ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Разделитель диапазон страниц по умолчанию используется короткое тире.</para>
-          <para>Свойство <b>PageRangeSeparator</b> соответствующий ключ \g для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>По умолчанию в качестве разделителя диапазона страниц используется короткое тире.</para>
+          <para>Свойство <b>пажеранжесепаратор</b> соответствует параметру \G для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -417,7 +394,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -448,13 +425,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> если пять или более ссылок на страницы для одной, заменены на «Passim».</summary>
+        <summary><b>Значение true</b> , если пять или более ссылок на страницы для одного и того же центра заменяются на "по тексту".</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Passim</b> соответствует переключатель \p для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b></b> "текст" соответствует параметру "\p" для поля таблицы ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -480,12 +454,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="P:Microsoft.Office.Interop.Word.TableOfAuthorities.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="P:Microsoft.Office.Interop.Word.TableOfAuthorities.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="P:Microsoft.Office.Interop.Word.TableOfAuthorities.Range" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="P:Microsoft.Office.Interop.Word.TableOfAuthorities.Range" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Separator">
@@ -514,13 +486,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает знаков (до пяти) между порядковый номер и номер страницы.</summary>
+        <summary>Возвращает или задает символы (до пяти) между порядковым номером и номером страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дефис (-) — это разделитель по умолчанию.</para>
-          <para>Свойство <b>разделителя групп разрядов</b> соответствующий параметр \d для поля в таблице ссылок (ССЫЛОК).</para>
-          <para />
-        </remarks>
+        <remarks><para>Дефис (-) является символом разделителя по умолчанию.</para>
+          <para>Свойство <b>separator</b> соответствует параметру \d для поля таблица ссылок (Toa).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TabLeader">
@@ -549,31 +519,29 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTabLeader</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символ между операциями и номера страниц в таблице ссылок.</summary>
+        <summary>Возвращает или задает символ между записями и их номерами страниц в таблице ссылок.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может быть одной из этих констант <b>вдтаблеадер</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может иметь одно из следующих констант <b>WdTabLeader</b> . </para>
-          <para>
-            <b>wdTabLeaderSpaces</b>
+            <b>вдтаблеадердашес</b>
           </para>
           <para>
-            <b>wdTabLeaderDashes </b>
+            <b>вдтаблеадердотс</b>
           </para>
           <para>
-            <b>wdTabLeaderDots </b>
+            <b>вдтаблеадерхеави</b>
           </para>
           <para>
-            <b>wdTabLeaderHeavy </b>
+            <b>вдтаблеадерлинес</b>
           </para>
           <para>
-            <b>wdTabLeaderLines </b>
+            <b>вдтаблеадермиддледот</b>
           </para>
           <para>
-            <b>wdTabLeaderMiddleDot </b>
+            <b>вдтаблеадерспацес</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -597,7 +565,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет записи, приведенные в указанной таблице ссылок.</summary>
+        <summary>Обновляет записи, показанные в указанной таблице ссылок.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

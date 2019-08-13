@@ -1,13 +1,5 @@
 <Type Name="WrapFormat" FullName="Microsoft.Office.Interop.Word.WrapFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a78d91a19af227c5deade3b7e9b4ffa6ceab3ede" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672538" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface WrapFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9d2134484e052c9659a96b0dd53bd285acaebe61" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145438" /></Metadata><TypeSignature Language="C#" Value="public interface WrapFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WrapFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.WrapFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface WrapFormat" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет все свойства обтекания текста фигуры или диапазона фигуры.</summary>
-    <remarks>
-      <para>Используйте свойство <b>WrapFormat</b><see cref="T:Microsoft.Office.Interop.Word.Shape" /> или <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объект для возврата объекта <b>WrapFormat</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет все свойства для переноса текста вокруг фигуры или диапазона фигур.</summary>
+    <remarks><para>Чтобы вернуть объект <b>WrapFormat</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.Shape" /> свойство <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> <b>WrapFormat</b> объекта или.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AllowOverlap">
@@ -59,12 +49,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, может ли заданной фигуры пересекаются другие фигуры. Может быть присвоено значение <b>True</b> или <b>False</b>.</summary>
+        <summary>Возвращает или задает значение, указывающее, может ли данная фигура пересекать другие фигуры. Может иметь значение <b>true</b> или <b>false</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>HTML-код поддерживает повторяющейся таблицы или фигуры, <b>AllowOverlap</b> игнорируется в режиме веб-документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Так как HTML не поддерживает перекрывающиеся таблицы или фигуры, <b>аллововерлап</b> игнорируется в режиме веб-документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -118,11 +106,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceBottom">
@@ -151,12 +139,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и нижний край области текста, окружающей указанные форму.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и нижней границей области без текста, окружающей указанную фигуру.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Размеру и форме указанного фигуры вместе со значениями <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> свойства <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> , следует определить размер и форма этой области текста.</para>
-          <para />
-        </remarks>
+        <remarks><para>Размер и форма указанной фигуры вместе со значениями свойства <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта, определяющими размер и форму этой области без текста.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceLeft">
@@ -185,12 +171,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и левого края области текста, вокруг указанной фигуры.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и левым краем области без текста, окружающей указанную фигуру.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Размеру и форме указанного фигуры вместе со значениями <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> свойства <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> , следует определить размер и форма этой области текста.</para>
-          <para />
-        </remarks>
+        <remarks><para>Размер и форма указанной фигуры вместе со значениями свойства <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта, определяющими размер и форму этой области без текста.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceRight">
@@ -219,12 +203,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и правым краем области текста, окружающей указанные форму.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и правым краем области без текста, окружающей указанную фигуру.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Размеру и форме указанного фигуры вместе со значениями <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> свойства <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> , следует определить размер и форма этой области текста.</para>
-          <para />
-        </remarks>
+        <remarks><para>Размер и форма указанной фигуры вместе со значениями свойства <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта, определяющими размер и форму этой области без текста.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceTop">
@@ -253,12 +235,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между текст документа и верхнего края области текста, окружающей указанные форму.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и верхним краем области без текста, окружающей указанную фигуру.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Размеру и форме указанного фигуры вместе со значениями <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> свойства <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> , следует определить размер и форма этой области текста.</para>
-          <para />
-        </remarks>
+        <remarks><para>Размер и форма указанной фигуры вместе со значениями свойства <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.WrapFormat.Side" /> <see cref="T:Microsoft.Office.Interop.Word.WrapFormat" /> объекта, определяющими размер и форму этой области без текста.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -284,7 +264,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -315,26 +295,24 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdWrapSideType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, следует ли текст документа перенос на обеих сторонах указанного фигуры, слева или справа только или краю фигуры, наиболее удаленной от поля страницы.</summary>
+        <summary>Возвращает или задает значение, указывающее, должен ли текст документа переноситься по обеим сторонам указанной фигуры, либо только слева, либо справа, либо сбоку фигуры относительно поля страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если выполняется перенос текста на только с одной стороны фигуры, является область текста между в части фигуры и полей страницы.</para>
+        <remarks><para>Если текст переносится только по одной стороне фигуры, существует область, отличная от текста, между другой стороной фигуры и полем страницы.</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdWrapSideType" /> может иметь одно из следующих констант <b>WdWrapSideType</b> :</para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdWrapSideType" />может быть одной из следующих констант <b>вдврапсидетипе</b> : </para>
           <para>
-            <b>wdWrapBoth</b>
+            <b>вдврапбос</b>
           </para>
           <para>
-            <b>wdWrapLargest</b>
+            <b>вдврапларжест</b>
           </para>
           <para>
-            <b>wdWrapLeft</b>
+            <b>вдвраплефт</b>
           </para>
           <para>
-            <b>wdWrapRight</b>
+            <b>вдврапригхт</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -365,29 +343,27 @@
       <Docs>
         <summary>Возвращает тип переноса для указанной фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdWrapType" />может быть одной из следующих констант <b>вдвраптипе</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdWrapType" />может иметь одно из следующих констант <b>WdWrapType</b> : </para>
-          <para>
-            <b>wdWrapTopBottom</b>
+            <b>вдврапинлине</b>
           </para>
           <para>
-            <b>wdWrapInline </b>
+            <b>вдврапноне</b>
           </para>
           <para>
-            <b>wdWrapNone </b>
+            <b>вдврапскуаре</b>
           </para>
           <para>
-            <b>wdWrapSquare </b>
+            <b>вдврапсраугх</b>
           </para>
           <para>
-            <b>wdWrapThrough </b>
+            <b>вдвраптигхт</b>
           </para>
           <para>
-            <b>wdWrapTight </b>
+            <b>вдвраптопботтом</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

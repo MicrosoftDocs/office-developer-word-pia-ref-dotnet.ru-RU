@@ -1,13 +1,5 @@
 <Type Name="PictureFormat" FullName="Microsoft.Office.Interop.Word.PictureFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7533126a34adfedd4e31baade1a3e4d7b7ecdbc5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673329" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PictureFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="47daacc6dd5e59ccb2bda07ea680b3bf997208f5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144185" /></Metadata><TypeSignature Language="C#" Value="public interface PictureFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PictureFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.PictureFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface PictureFormat" />
@@ -26,13 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, которые применяются к изображения и объекты OLE.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> Объект содержит свойства и методы, которые применяются только связанные объекты OLE. <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> Объект содержит свойства и методы, которые применяются к объекты OLE ли они в случае связаны.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.PictureFormat" /> свойство возвращает объект <b>PictureFormat</b> .</para>
-      <para />
-    </remarks>
+    <summary>Содержит свойства и методы, применяемые к изображениям и объектам OLE.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> Объект содержит свойства и методы, которые применяются только к связанным объектам OLE. <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> Объект содержит свойства и методы, которые применяются к объектам OLE независимо от того, связаны они или нет.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.PictureFormat" /> свойство, чтобы возвратить объект <b>PictureFormat</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,7 +78,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает яркость указанного изображения или объекта OLE. Значение этого свойства должно быть числом между 0.0 (dimmest) 1.0 (ярким).</summary>
+        <summary>Возвращает или задает яркость указанного изображения или объекта OLE. Значение этого свойства должно быть числом от 0,0 (с разъемом DIMM) до 1,0 (самое яркое).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -120,7 +109,7 @@
         <ReturnType>Microsoft.Office.Core.MsoPictureColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип преобразования цвета, применяемые к указанной изображения или объекта OLE.</summary>
+        <summary>Возвращает или задает тип преобразования цвета, примененный к указанному рисунку или объекту OLE.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -151,7 +140,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает контрастность для указанного изображения или объекта OLE. Значение для этого свойства должна быть число от 0,0 (как минимум контрастности) до 1.0 (наивысшего контрастности).</summary>
+        <summary>Возвращает или задает контраст для указанного изображения или объекта OLE. Значение этого свойства должно быть числом от 0,0 (наименьшая контрастность) до 1,0 (наибольшая контрастность).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,11 +168,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Crop">
@@ -212,12 +201,10 @@
         <ReturnType>Microsoft.Office.Core.Crop</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает <see cref="T:Microsoft.Office.Core.Crop" /> объект, представляющий обрезки изображения.</summary>
-        <value>A <see cref="T:Microsoft.Office.Core.Crop" /> объект, представляющий обрезки изображения.</value>
-        <remarks>
-          <para>Чтение и запись. Установка для этого свойства имеет тот же эффект, что и Выбор элемента в раскрывающемся списке в диалоговом окне 2010Options Word (вкладку Дополнительно, параметры редактирования, обновления стиля по образцу:.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает <see cref="T:Microsoft.Office.Core.Crop" /> объект, представляющий кадрирование изображения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.Crop" /> Объект, представляющий кадрирование изображения.</value>
+        <remarks><para>Для чтения и записи. Задание этого свойства оказывает то же самое, что и выбор элемента в раскрывающемся списке в диалоговом окне Word 2010Options (вкладка "Дополнительно", параметры редактирования, обновление стиля в соответствии с выделенным фрагментом:.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CropBottom">
@@ -246,12 +233,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число точек, которые обрезки в нижней части указанного изображения или объекта OLE.</summary>
+        <summary>Возвращает или задает число точек, обрезанных внизу указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Обрезка рассчитывается относительно исходного размера изображения. Например если вставить рисунок, который изначально — 100 точки высокой, размера, чтобы он был 200 точек высокой и свойства <b>CropBottom</b> 50 100 точек (не 50) будет обрезки в нижней части рисунка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Обрезка вычисляется относительно исходного размера изображения. Например, если вы вставляете рисунок, который изначально 100 имеет высокое значение, измените его размер таким образом, чтобы он был равен 200 очков, а затем присвойте свойству <b>кропботтом</b> значение 50, 100 баллов (не 50) будут обрезаны внизу изображения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CropLeft">
@@ -280,12 +265,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число точек, которые обрезки слева указанного изображения или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с левой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Обрезка рассчитывается относительно исходного размера изображения. Например если вставить рисунок, который изначально — 100 точки широкий, размера, чтобы он был 200 точек широкий и свойства <b>CropLeft</b> 50 100 точек (не 50) будет обрезки слева изображения.</para>
-          <para />
-        </remarks>
+        <remarks><para>Обрезка вычисляется относительно исходного размера изображения. Например, если вы вставляете рисунок, который изначально составляет 100 баллов, измените его размер таким образом, чтобы он был равен 200 очков, а затем задайте для свойства <b>кроплефт</b> значение 50, 100 баллов (не 50) будут обрезаны слева от изображения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CropRight">
@@ -314,12 +297,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число точек, которые обрезки справа указанного изображения или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с правой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Обрезка рассчитывается относительно исходного размера изображения. Например если вставить рисунок, который изначально — 100 точки широкий, размера, чтобы он был 200 точек широкий и свойства <b>CropRight</b> 50 100 точек (не 50) будет обрезки справа изображения.</para>
-          <para />
-        </remarks>
+        <remarks><para>Обрезка вычисляется относительно исходного размера изображения. Например, если вы вставляете рисунок, который изначально составляет 100 баллов, измените его размер таким образом, чтобы он был равен 200 очков, а затем задайте для свойства <b>кропригхт</b> значение 50, 100 баллов (не 50) будут обрезаны справа от изображения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CropTop">
@@ -348,12 +329,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число точек, которые обрезки off в верхней части указанного изображения или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных в верхней части указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Обрезка рассчитывается относительно исходного размера изображения. Например если вставить рисунок, который изначально — 100 точки высокой, размера, чтобы он был 200 точек высокой и свойства <b>CropTop</b> 50 100 точек (не 50) будет обрезки off в верхней части рисунка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Обрезка вычисляется относительно исходного размера изображения. Например, если вы вставляете рисунок, который изначально 100 имеет высокое значение, измените его размер таким образом, чтобы он был равен 200 очков, а затем присвойте свойству <b>кроптоп</b> значение 50, 100 баллов (не 50) будут обрезаны от верхнего края изображения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementBrightness">
@@ -379,12 +358,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Определяет, насколько изменение значение свойства <b>яркость</b> рисунка. Положительное значение делает изображение более яркие; отрицательное значение делает изображение более темные.</param>
-        <summary>Изменение яркости рисунка на указанную величину. Использование <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.Brightness" /> свойство, чтобы задать абсолютные яркости рисунка.</summary>
-        <remarks>
-          <para>Не удается яркость изображения за границу верхней или нижней, для свойства <b>яркость</b> . Например, если свойство <b>яркость</b> изначально установлено значение 0,9 и укажите 0,3 для <paramref name="Increment" /> аргумент, результирующий уровень яркости будет 1.0, являющийся верхний предел для свойства <b>яркость</b> , вместо 1.2.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Задает степень изменения значения свойства <b>яркости</b> для изображения. Положительное значение повышает яркость рисунка; отрицательное значение делает рисунок темнее.</param>
+        <summary>Изменяет яркость изображения на указанную величину. Используйте <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.Brightness" /> свойство, чтобы задать абсолютную яркость изображения.</summary>
+        <remarks><para>Невозможно настроить яркость рисунка, который находится за пределами верхнего или нижнего предела для свойства <b>яркость</b> . Например, если для свойства <b>яркости</b> изначально задано значение 0,9, а для <paramref name="Increment" /> аргумента задано значение 0,3, то итоговый уровень яркости будет равен 1,0, а это верхний предел для свойства <b>яркости</b> , а не 1,2.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementContrast">
@@ -410,12 +387,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Определяет, насколько изменение значение свойства <b>контрастности</b> рисунка. Положительное значение увеличивает контрастность; отрицательное значение уменьшает контраст.</param>
-        <summary>Изменение контрастности рисунка на указанную величину. Использование <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.Contrast" /> свойство, чтобы задать абсолютные яркости для рисунка.</summary>
-        <remarks>
-          <para>Нельзя настроить контрастность изображения за границу верхней или нижней, для свойства <b>контрастности</b> . Например, если свойство <b>контрастности</b> изначально установлено значение 0,9 и укажите 0,3 для <paramref name="Increment" /> аргумент, результирующий уровень контрастности будет 1.0, являющийся верхний предел для свойства <b>контрастности</b> вместо 1.2.</para>
-          <para />
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Задает степень изменения значения свойства контрастности изображения. <b></b> Положительное значение повышает контрастность; отрицательное значение уменьшает контрастность.</param>
+        <summary>Изменяет контрастность изображения на указанную величину. Используйте <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.Contrast" /> свойство, чтобы задать для рисунка абсолютную контрастность.</summary>
+        <remarks><para>Контрастность изображения не может быть меньше верхнего или нижнего предела для свойства <b>контрастности</b> . Например, если изначально для <b></b> свойства контраста задано значение 0,9, а для <paramref name="Increment" /> аргумента задано значение 0,3, то результирующий уровень контрастности будет иметь значение 1,0, что является <b></b> верхним пределом свойства контрастности, а не 1,2.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -441,7 +416,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -472,13 +447,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает прозрачный цвет для указанного изображения как значение красный зеленый синий (RGB). Применяется только растровые изображения.</summary>
+        <summary>Возвращает или задает прозрачный цвет для указанного изображения в виде значения красного, зеленого и синего (RGB). Применяется только к точечным рисункам.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для этого свойства вступили в силу <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.TransparentBackground" /> свойство должно быть присвоено <b>значение True</b>.</para>
-          <para>, Чтобы иметь возможность видеть через прозрачный частей рисунка до объекты за изображение, необходимо установить <see cref="P:Microsoft.Office.Interop.Word.FillFormat.Visible" /> свойство изображения <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объекта значение <b>False</b>. Если изображение имеет прозрачный цвет и свойство <b>Visible</b> объекта <b>FillFormat</b> изображение имеет значение <b>True</b>, будут видимы через прозрачный цвет заливки рисунка, но будут скрыты объектов за рисунок.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы это свойство вступило в силу, <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.TransparentBackground" /> свойству должно быть присвоено <b>значение true</b>.</para>
+          <para>Если вы хотите видеть, как прозрачные части изображения будут иметь доступ к объектам на изображении, необходимо задать для <see cref="P:Microsoft.Office.Interop.Word.FillFormat.Visible" /> свойства <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объекта изображения <b>значение false</b>. Если у изображения есть прозрачный цвет и свойство <b>Visible</b> объекта <b>FillFormat</b> рисунка имеет значение <b>true</b>, заливка изображения будет отображаться с помощью прозрачного цвета, но объекты позади изображения будут скрыты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TransparentBackground">
@@ -507,14 +480,11 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>MsoTrue</b> Если частей рисунка, определенные с помощью прозрачный цвет фактически прозрачным. Применяется только растровые изображения.</summary>
+        <summary><b>Мсотруе</b> , если части изображения, которые определены прозрачным цветом, на самом деле выглядят прозрачными. Применяется только к точечным рисункам.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.TransparencyColor" /> свойство, чтобы задать прозрачный цвет. </para>
-          <para>, Чтобы иметь возможность видеть через прозрачный частей рисунка до объекты за изображение, необходимо установить <see cref="P:Microsoft.Office.Interop.Word.FillFormat.Visible" /> свойство изображения <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объекта значение <b>False</b>. Если изображение имеет прозрачный цвет и свойство <b>Visible</b> объекта <b>FillFormat</b> изображение имеет значение <b>True</b>, будут видимы через прозрачный цвет заливки рисунка, но будут скрыты объектов за рисунок.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.PictureFormat.TransparencyColor" /> свойство, чтобы задать прозрачный цвет. </para>
+          <para>Если вы хотите видеть, как прозрачные части изображения будут иметь доступ к объектам на изображении, необходимо задать для <see cref="P:Microsoft.Office.Interop.Word.FillFormat.Visible" /> свойства <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объекта изображения <b>значение false</b>. Если у изображения есть прозрачный цвет и свойство <b>Visible</b> объекта <b>FillFormat</b> рисунка имеет значение <b>true</b>, заливка изображения будет отображаться с помощью прозрачного цвета, но объекты позади изображения будут скрыты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

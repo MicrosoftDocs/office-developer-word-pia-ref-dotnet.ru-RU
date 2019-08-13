@@ -1,13 +1,5 @@
 <Type Name="Index" FullName="Microsoft.Office.Interop.Word.Index">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="29a048bd50da4b799253e2ded2f3f3740fa51959" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673341" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Index" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ea0b3d6991ec86522b62224092f8f026d7c830fe" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146698" /></Metadata><TypeSignature Language="C#" Value="public interface Index" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Index" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Index" />
   <TypeSignature Language="VB.NET" Value="Public Interface Index" />
@@ -27,12 +19,10 @@
   </Attributes>
   <Docs>
     <summary>Представляет один индекс.</summary>
-    <remarks>
-      <para>Объект <b>индекса</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Indexes" /> семейства сайтов. Коллекция <b>индексов</b> включает все индексы в указанный документ.</para>
-      <para>Использования <b>индексов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>индекса</b> . Номер индекса представляет позиции объекта <b>индекса</b> в документе.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для создания индекса и добавить его в коллекцию <b>индексов</b> .</para>
-      <para />
-    </remarks>
+    <remarks><para>Объект <b>index</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Indexes" /> коллекции. Коллекция <b>indexes</b> включает все индексы в указанном документе.</para>
+      <para>Используйте <b></b>индексы<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>индекса</b> . Номер индекса представляет положение объекта <b>index</b> в документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для создания индекса и добавления его в коллекцию <b>indexes</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AccentedLetters">
@@ -61,8 +51,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный индекс содержит отдельные заголовки для букв с надстрочными знаками (например, слова, начинающиеся с «А» в рамках одного заголовка и слова, начинающиеся с «A» под другим).</summary>
+        <summary><b>Значение true</b> , если указанный индекс содержит отдельные заголовки для букв с надстрочными знаками (например, слова, начинающиеся с "à", находятся под одним заголовком, а слова, начинающиеся с "A", находятся под другим заголовком.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,11 +107,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -176,12 +165,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdIndexFilter</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, как Microsoft Word классифицируются первого знака записей в указанном индексе.</summary>
+        <summary>Возвращает или задает значение, указывающее, как Microsoft Word классифицирует первый символ элементов в указанном индексе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>фильтра</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdIndexFilter" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Filter</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdIndexFilter" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HeadingSeparator">
@@ -210,12 +197,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdHeadingSeparator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст между группами буквам и цифрам (записи, которые начинаются с буквы же) в индексе. Соответствующий параметр \h ИНДЕКСА в поле.</summary>
+        <summary>Возвращает или задает текст между алфавитными группами (записями, начинающимися с той же буквой) в индексе. Соответствует коммутатору \h для поля индекса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>HeadingSeparator</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdHeadingSeparator" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>хеадингсепаратор</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdHeadingSeparator" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IndexLanguage">
@@ -244,12 +229,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает сортировки язык, используемый для указанного индекса.</summary>
+        <summary>Возвращает или задает язык сортировки, используемый для указанного индекса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>IndexLanguage</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>индекслангуаже</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberOfColumns">
@@ -278,12 +261,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает число столбцов для каждой страницы индекса.</summary>
+        <summary>Задает или возвращает количество столбцов для каждой страницы индекса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Указать значение 0 (ноль) задает число столбцов в индексе на тот же номер, как и в документе.</para>
-          <para />
-        </remarks>
+        <remarks><para>При указании значения 0 (ноль) количество столбцов в индексе будет совпадать с числом в документе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -309,7 +290,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -337,12 +318,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур, см <b>диапазон</b> из <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о возврате диапазона из документа или возврате диапазона фигуры из коллекции фигур представлены в разделе метод <b>Range</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RightAlignPageNumbers">
@@ -371,8 +350,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если номера страниц выравнивается правого поля в индексе.</summary>
+        <summary><b>Значение true</b> , если номера страниц выровнены по правому полю в индексе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -403,12 +381,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdIndexSortBy</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает критерия сортировки для указанного индекса.</summary>
+        <summary>Возвращает или задает критерии сортировки для указанного индекса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>SortBy</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdIndexSortBy" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>SortBy</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdIndexSortBy" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TabLeader">
@@ -437,12 +413,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTabLeader</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символ между операциями и номера страниц в индексе.</summary>
+        <summary>Возвращает или задает символ между записями и их номерами страниц в индексе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>TabLeader</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>таблеадер</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -473,10 +447,8 @@
       <Docs>
         <summary>Возвращает или задает тип индекса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdIndexType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdIndexType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -500,7 +472,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет указанному индексу.</summary>
+        <summary>Обновляет указанный индекс.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

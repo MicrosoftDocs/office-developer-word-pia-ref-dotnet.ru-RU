@@ -1,13 +1,5 @@
 <Type Name="Column" FullName="Microsoft.Office.Interop.Word.Column">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2c3fd80490074f82dd9583409f8f86882d94dd68" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673200" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Column" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e45caf40bd3b70419995c7ac70846ec49a9f5e99" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146166" /></Metadata><TypeSignature Language="C#" Value="public interface Column" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Column" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Column" />
   <TypeSignature Language="VB.NET" Value="Public Interface Column" />
@@ -26,15 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одного столбца. Объект <b>столбца</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Columns" /> семейства сайтов.</summary>
-    <remarks>
-      <para>Коллекция <b>столбцов</b> включает все столбцы в таблице, Выбор или диапазон.</para>
-      <para>Использования <b>столбцов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект одного <b>столбца</b> . Номер индекса представляет положение столбца в коллекции <b>столбцов</b> (начиная с слева направо).</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Cell.Column" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Cell" /> объекта возвращает объект <b>столбца</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Columns.Add(System.Object@)" /> метод, чтобы добавить столбец в таблицу.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Selection.Information(Microsoft.Office.Interop.Word.WdInformation)" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, который требуется вернуть текущий номер столбца.</para>
-      <para />
-    </remarks>
+    <summary>Представляет один столбец таблицы. Объект <b>Column</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Columns" /> коллекции.</summary>
+    <remarks><para>Коллекция <b>Columns</b> включает все столбцы в таблице, выделении или диапазоне.</para>
+      <para>Используйте <b></b>Columns<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>Column</b> . Номер индекса представляет положение столбца в коллекции Columns (считая <b></b> слева направо).</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Cell.Column" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Cell" /> объектом, чтобы вернуть объект <b>Column</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Columns.Add(System.Object@)" /> метод, чтобы добавить столбец в таблицу. </para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Selection.Information(Microsoft.Office.Interop.Word.WdInformation)" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объектом, чтобы возвратить текущий номер столбца.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,11 +76,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Изменения является оболочкой ширины столбца таблицы для учета ширины текста без изменения текста в ячейках.</summary>
-        <remarks>
-          <para>Если в таблице по ширине расстояние между левое и правое поля, этот метод не оказывает влияния.</para>
-          <para />
-        </remarks>
+        <summary>Изменяет ширину столбца таблицы в соответствии с шириной текста, не изменяя способ переноса текста в ячейках.</summary>
+        <remarks><para>Если таблица уже имеет ширину, равную расстоянию между левым и правым полями, этот метод не оказывает влияния.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Borders">
@@ -119,7 +107,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,7 +135,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Cells</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Cells" /> коллекции, представляющей в таблице ячеек в столбце.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Cells" /> коллекцию, представляющую ячейки таблицы в столбце.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,11 +163,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -258,7 +246,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, если указанный столбец является первым в таблице.</summary>
+        <summary>Возвращает значение, которое указывает, является ли указанный столбец первым в таблице.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -316,10 +304,8 @@
       <Docs>
         <summary>Возвращает уровень вложенности указанного столбца.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Внешняя таблица имеет вложения уровня 1. Уровень вложенности каждой последовательно вложенные таблицы — это один выше, чем в предыдущей таблице.</para>
-          <para />
-        </remarks>
+        <remarks><para>Внешняя таблица имеет уровень вложения 1. Уровень вложенности каждой последующей вложенной таблицы — это на один уровень выше предыдущей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -373,7 +359,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -404,7 +390,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину (в точках или в процентах от ширины окна) для указанного столбца.</summary>
+        <summary>Возвращает или задает предпочтительную ширину (в пунктах или в процентах от ширины окна) для указанного столбца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -435,7 +421,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPreferredWidthType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает предпочтительную единицы измерения для ширины указанного столбца.</summary>
+        <summary>Возвращает или задает предпочтительную единицу измерения для ширины указанного столбца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -517,14 +503,11 @@
         <Parameter Name="RulerStyle" Type="Microsoft.Office.Interop.Word.WdRulerStyle" />
       </Parameters>
       <Docs>
-        <param name="ColumnWidth">Ширина указанного столбца в точках.</param>
-        <param name="RulerStyle">Значение, определяют, как Microsoft Word регулировка ширины ячеек.</param>
-        <summary>Ширина столбца в таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> Поведение применяется к по левому краю таблицы. Поведение <b>WdRulerStyle</b> для центр и по правому краю таблиц может быть непредвиденным; в таких случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> должен использоваться с осторожностью.</para>
-          <para />
-        </remarks>
+        <param name="ColumnWidth">Ширина указанного столбца в пунктах.</param>
+        <param name="RulerStyle">Значение, определяющее способ регулирования ширины ячеек в Microsoft Word.</param>
+        <summary>Задает ширину столбца в таблице.</summary>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> Поведение применяется к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в этих случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> метод следует использовать с осторожностью.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shading">
@@ -550,7 +533,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -586,21 +569,19 @@
         <Parameter Name="LanguageID" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ExcludeHeader">Значение, которое указывает, следует ли исключить из операции сортировки первой строки или заголовка абзаца. Значение по умолчанию — <b>False</b>.</param>
-        <param name="SortFieldType">Тип сортировки столбца. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdSortFieldType" /> константы.</param>
-        <param name="SortOrder">Порядок сортировки для столбца. Может иметь одно <see cref="T:Microsoft.Office.Interop.Word.WdSortOrder" /> константу.</param>
-        <param name="CaseSensitive">Значение, указывающее порядок сортировки с учетом регистра. Значение по умолчанию — <b>False</b>.</param>
-        <param name="BidiSort">Значение, указывающее, следует ли сортировать на основе языка для письма справа налево правил. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="IgnoreThe">Значение, которое указывает, следует ли игнорировать алиф лам арабский символ, при сортировке текста справа налево языка. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="IgnoreKashida">Значение, которое указывает, следует ли игнорировать кашид при сортировке текста справа налево языка. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="IgnoreDiacritics">Значение, которое указывает, следует ли игнорировать двунаправленные управляющие знаки при сортировке текста справа налево языка. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="IgnoreHe">Значение, указывающее, следует ли игнорировать иврите символов он при сортировке текста справа налево языка. Этот аргумент могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</param>
-        <param name="LanguageID">Указывает язык сортировки. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</param>
-        <summary>Сортировка столбца указанную таблицу.</summary>
-        <remarks>
-          <para>Чтобы отсортировать абзацы внутри ячейки таблицы, включают в себя только абзацы и не пометить конечных ячеек; Если включать метку окончания ячейки в выделенном фрагменте или диапазон и затем повторите попытку сортировки абзацы, Microsoft Word отображается сообщение о том, что его найти нет записи для сортировки.</para>
-          <para />
-        </remarks>
+        <param name="ExcludeHeader">Значение, указывающее, следует ли исключить первый заголовок строки или абзаца из операции сортировки. Значение по умолчанию — <b>False</b>.</param>
+        <param name="SortFieldType">Тип сортировки для столбца. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSortFieldType" /> констант.</param>
+        <param name="SortOrder">Порядок сортировки, используемый для столбца. Может быть одной <see cref="T:Microsoft.Office.Interop.Word.WdSortOrder" /> константой.</param>
+        <param name="CaseSensitive">Значение, указывающее, следует ли сортировать с учетом регистра. Значение по умолчанию — <b>False</b>.</param>
+        <param name="BidiSort">Значение, указывающее, следует ли сортировать на основе правил для языков с письмом справа налево. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="IgnoreThe">Значение, указывающее, следует ли игнорировать арабский символ алиф лам при сортировке текста на языке с письмом справа налево. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="IgnoreKashida">Значение, указывающее, следует ли игнорировать кашиду при сортировке текста на языке с письмом справа налево. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="IgnoreDiacritics">Значение, указывающее, следует ли игнорировать двунаправленные управляющие символы при сортировке текста на языке с письмом справа налево. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="IgnoreHe">Значение, указывающее, следует ли игнорировать символ иврита при сортировке текста на языке с письмом справа налево. Этот аргумент может быть недоступен в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</param>
+        <param name="LanguageID">Указывает язык сортировки. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант.</param>
+        <summary>Сортирует заданный столбец таблицы.</summary>
+        <remarks><para>Если требуется сортировать абзацы в ячейке таблицы, включайте только абзацы, а не знак конца ячейки; Если включить знак конца ячейки в выделенный фрагмент или диапазон, а затем попробовать отсортировать абзацы, в Microsoft Word отобразится сообщение о том, что не найдены допустимые записи для сортировки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SortOld">

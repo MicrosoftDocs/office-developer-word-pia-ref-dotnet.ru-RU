@@ -1,13 +1,5 @@
 <Type Name="CustomLabel" FullName="Microsoft.Office.Interop.Word.CustomLabel">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fc491a73c52a2fd4e6f048a49a9302b5b1ff748f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674199" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CustomLabel" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0f214b3428fec4a541bfb576068a5cc01082ae76" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147265" /></Metadata><TypeSignature Language="C#" Value="public interface CustomLabel" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomLabel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CustomLabel" />
   <TypeSignature Language="VB.NET" Value="Public Interface CustomLabel" />
@@ -26,16 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет настраиваемую метку адреса электронной почты.</summary>
-    <remarks>
-      <para>Объект <b>CustomLabel</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.CustomLabels" /> семейства сайтов. Коллекция <b>CustomLabels</b> содержит все пользовательские почтовые наклейки перечисленные в диалоговом окне Параметры метки.</para>
-      <para>Использования <b>CustomLabels</b>(<paramref name="index" />), где <paramref name="index" /> — настраиваемые метки имя или номер индекса, чтобы возвратить объект <b>CustomLabel</b> .</para>
-      <para>Номер индекса представляет положение настраиваемую метку адреса электронной почты в коллекции <b>CustomLabels</b> .</para>
+    <summary>Представляет настраиваемую почтовую метку.</summary>
+    <remarks><para>Объект <b>CustomLabel</b> является членом <see cref="T:Microsoft.Office.Interop.Word.CustomLabels" /> коллекции. Коллекция <b>CustomLabels</b> содержит все настраиваемые почтовые наклейки, перечисленные в диалоговом окне параметры метки.</para>
+      <para>Используйте <b>CustomLabels</b>(<paramref name="index" />), где <paramref name="index" /> — это имя настраиваемой метки или номер индекса, чтобы вернуть один объект <b>CustomLabel</b> .</para>
+      <para>Номер индекса представляет положение настраиваемой почтовой метки в коллекции <b>CustomLabels</b> .</para>
       <para>
-        <b>Примечание</b>: <b>CustomLabel</b> объекты сортируются в алфавитном порядке в коллекции <b>CustomLabels</b> и их индексов динамически переназначить как содержимое изменение коллекции. По этой причине лучше ссылки на объект определенного <b>CustomLabel</b> по имени, а не по номеру индекса.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.CustomLabels.Add(System.String,System.Object@)" /> метод для создания пользовательской подписи.</para>
-      <para />
-    </remarks>
+        <b>Note</b>: объекты <b>CustomLabel</b> сортируются в алфавитном порядке в коллекции <b>CustomLabels</b> , а их индексы динамически переназначаются в качестве содержимого изменения коллекции. По этой причине более безопасно ссылаться на определенный объект <b>CustomLabel</b> по имени, а не по номеру индекса.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CustomLabels.Add(System.String,System.Object@)" /> метод, чтобы создать настраиваемую метку.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,11 +79,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -144,8 +134,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанного настраиваемую метку тип принтера — матричный. <b>Значение false,</b> Если тип принтера jet лазерная или рукописного ввода.</summary>
+        <summary><b>Значение true</b> , если тип принтера для указанной пользовательской метки имеет точку Matrix. <b>False</b> , если тип принтера — лазерный или струйный.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,7 +165,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту указанной меткой настраиваемого адреса электронной почты в пунктах.</summary>
+        <summary>Возвращает или задает высоту указанной настраиваемой почтовой метки в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -207,12 +196,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние по горизонтали (в точках) от левого края элемента управления label настраиваемого адреса электронной почты и левого края метку следующего адреса электронной почты.</summary>
+        <summary>Возвращает или задает расстояние по горизонтали (в пунктах) между левым краем одной настраиваемой метки почтовой почты и левым краем следующей почтовых меток.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если это свойство изменено на значение, которое не является допустимым для указанного адреса электронной почты макета метки, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если изменить значение этого свойства на недействительное для указанной структуры почтовой наклейки, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -300,12 +287,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число настраиваемых наклейки на страницу.</summary>
+        <summary>Возвращает или задает количество настраиваемых почтовых наклеек на странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если это свойство изменено на значение, которое не является допустимым для указанного адреса электронной почты макета метки, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если изменить значение этого свойства на недействительное для указанной структуры почтовой наклейки, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberDown">
@@ -334,12 +319,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число настраиваемых наклейки вниз длина страницы.</summary>
+        <summary>Возвращает или задает количество настраиваемых почтовых наклеек в меньшую длину страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если это свойство изменено на значение, которое не является допустимым для указанного адреса электронной почты макета метки, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если изменить значение этого свойства на недействительное для указанной структуры почтовой наклейки, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageSize">
@@ -368,12 +351,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCustomLabelPageSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер страницы для указанного настраиваемую метку адреса электронной почты.</summary>
+        <summary>Возвращает или задает размер страницы для указанной настраиваемой почтовой метки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>PageSize</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdCustomLabelPageSize" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>pageSize</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdCustomLabelPageSize" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -399,7 +380,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -430,12 +411,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину полей со стороны (в пунктах) для указанного настраиваемую метку адреса электронной почты.</summary>
+        <summary>Возвращает или задает ширину боковых полей (в пунктах) для указанной настраиваемой почтовой метки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если это свойство изменено на значение, которое не является допустимым для указанного адреса электронной почты макета метки, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если изменить значение этого свойства на недействительное для указанной структуры почтовой наклейки, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TopMargin">
@@ -464,7 +443,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в точках) между верхнего края страницы и верхней границы основного текста.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах) между верхним краем страницы и верхней границей основного текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -492,8 +471,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если различных свойств (например, <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Height" />, <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Width" />, и <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.NumberDown" />) для указанного настраиваемую метку работы складываются для получения метку действительный адрес электронной почты.</summary>
+        <summary><b>Значение true</b> , если различные свойства ( <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Height" /> <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.Width" />например,, и <see cref="P:Microsoft.Office.Interop.Word.CustomLabel.NumberDown" />) для указанной настраиваемой метки работают вместе, чтобы получить допустимую почтовую метку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -524,12 +502,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние по вертикали между в верхней части одного адреса электронной почты метки и в верхней части метку следующего адреса электронной почты.</summary>
+        <summary>Возвращает или задает расстояние по вертикали между верхней частью одной почтовых наклеек и верхней стороной следующей почтовой метки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если это свойство изменено на значение, которое не является допустимым для указанного адреса электронной почты макета метки, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если изменить значение этого свойства на недействительное для указанной структуры почтовой наклейки, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">

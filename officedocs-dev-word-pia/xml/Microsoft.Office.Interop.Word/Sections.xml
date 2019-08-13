@@ -1,13 +1,5 @@
 <Type Name="Sections" FullName="Microsoft.Office.Interop.Word.Sections">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7164f7e4bfc02da5d54d10cc8a60f240644b351c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672930" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Sections : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fe2cba10cfbd345cb511c3cbdb748c5431925b9f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144066" /></Metadata><TypeSignature Language="C#" Value="public interface Sections : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Sections implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Sections" />
   <TypeSignature Language="VB.NET" Value="Public Interface Sections&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Section" /> объекты в выделенный фрагмент, диапазон или документа.</summary>
-    <remarks>
-      <para>Используйте свойство <b>разделах</b><see cref="T:Microsoft.Office.Interop.Word.Selection" />, <see cref="T:Microsoft.Office.Interop.Word.Range" />, или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект для возврата коллекции <b>разделов</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> метод, чтобы добавить новый раздел в документ.</para>
-      <para>Использования <b>разделов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>раздела</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Section" /> объектов в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Используйте свойство <b>Sections</b> объекта a <see cref="T:Microsoft.Office.Interop.Word.Selection" />, <see cref="T:Microsoft.Office.Interop.Word.Range" />или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта, чтобы вернуть коллекцию <b>Sections</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> метод, чтобы добавить новый раздел в документ.</para>
+      <para>Используйте <b>разделы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>section</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -62,9 +52,9 @@
         <Parameter Name="Start" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Необязательный элемент <b>Object</b>. Диапазон, перед которой нужно вставить раздел. Если этот аргумент задан, разрыв раздела вставляется в конце документа.</param>
-        <param name="Start">Необязательный элемент <b>Object</b>. Тип разрыв раздела, который требуется добавить. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdSectionStart" /><b></b>констант: <b>wdSectionContinuous</b>, <b>wdSectionEvenPage</b>, <b>wdSectionNewColumn</b>, <b>wdSectionNewPage</b>или <b>wdSectionOddPage</b>. Если этот аргумент задан, добавляется разрыв раздела следующую страницу.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Section" /> объект, представляющий новый раздел, добавлены в документ.</summary>
+        <param name="Range">Необязательный <b>объект</b>. Диапазон, перед которым необходимо вставить разрыв раздела. Если этот аргумент опущен, разрыв раздела вставляется в конце документа.</param>
+        <param name="Start">Необязательный <b>объект</b>. Тип разрыва раздела, который требуется добавить. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSectionStart" /> <b> </b>следующих констант: <b>вдсектионконтинуаус</b>, <b>вдсектионевенпаже</b>, <b>вдсектионневколумн</b>, <b>вдсектионневпаже</b>или <b>вдсектионоддпаже</b>. Если этот аргумент опущен, добавляется разрыв раздела на следующей странице.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Section" /> объект, представляющий новый раздел, добавленный в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -120,7 +110,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,11 +138,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="First">
@@ -178,7 +168,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Section</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Section" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> семейства сайтов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Section" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,9 +231,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,7 +260,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Section</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает последнего элемента в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> семейство сайтов, что <see cref="T:Microsoft.Office.Interop.Word.Section" /> объекта.</summary>
+        <summary>Возвращает последний элемент в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> коллекции в качестве <see cref="T:Microsoft.Office.Interop.Word.Section" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,7 +291,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.PageSetup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта, связанного с указанным разделы</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объект, связанный с указанными разделами.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -330,7 +319,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

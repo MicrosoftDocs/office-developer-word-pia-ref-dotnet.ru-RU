@@ -1,13 +1,5 @@
 <Type Name="CoAuthors" FullName="Microsoft.Office.Interop.Word.CoAuthors">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1a83a584815b6b737670b82711ed93572e37caa4" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673317" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CoAuthors : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="eae4f5baad7adeb54a2f93c028eaf954a2e6a29e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147188" /></Metadata><TypeSignature Language="C#" Value="public interface CoAuthors : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthors implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthors" />
   <TypeSignature Language="VB.NET" Value="Public Interface CoAuthors&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объекты в документе.</summary>
-    <remarks>
-      <para>Эта коллекция содержит все совместного авторов в документе (авторов, которые активно редактирования документа).</para>
-      <para />
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объектов в документе.</summary>
+    <remarks><para>Эта коллекция содержит все совместно редактируемые авторы в документе (авторы, которые активно редактируют документ).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -61,12 +51,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -92,12 +79,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> семейства сайтов.</summary>
-        <value>Количество элементов в <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> семейства сайтов.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекции.</summary>
+        <value>Число элементов в <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -123,15 +108,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>:</para>
-          <para>Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание</b>: </para>
+          <para>Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -162,7 +145,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -192,9 +175,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Отдельный объект которого требуется получить.</param>
-        <summary>Возвращает объект отдельных <b>соавторов</b> в семействе сайтов.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" />.</value>
+        <param name="Index">Возвращаемый отдельный объект.</param>
+        <summary>Возвращает отдельный объект <b></b> соавторами в коллекции.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -221,9 +204,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="DisplayUnitLabel" FullName="Microsoft.Office.Interop.Word.DisplayUnitLabel">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="64e6437f7c00edd6a9e588eee416a16c3478d8a0" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674150" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DisplayUnitLabel" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f43a0a51a2187362cda2c6834ebc4f822a794312" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147048" /></Metadata><TypeSignature Language="C#" Value="public interface DisplayUnitLabel" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DisplayUnitLabel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DisplayUnitLabel" />
   <TypeSignature Language="VB.NET" Value="Public Interface DisplayUnitLabel" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет метка элемента на оси в указанную диаграмму.</summary>
-    <remarks>
-      <para>Заголовки устройства можно использовать для построения диаграмм большие значения — например, в миллионов и миллиардов. Можно настроить диаграмму более удобным для чтения с помощью единый элемент label вместо большим количеством в каждом деления.</para>
-      <para />
-    </remarks>
+    <summary>Представляет метку единицы измерения на оси в указанной диаграмме.</summary>
+    <remarks><para>Метки единиц используются для построения диаграмм больших значений (например, в миллионах или миллиардах). Вы можете сделать диаграмму более удобочитаемой, используя одну метку единицы, а не большое число на каждом делении.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -56,10 +46,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,11 +83,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст в объекте изменяет размер шрифта, когда изменяется размер объекта. Значение по умолчанию — <b>True</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary><b>Значение true</b> , если текст в объекте изменяет размер шрифта при изменении размера объекта. Значение по умолчанию — <b>True</b>.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -129,10 +114,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границы объекта.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,10 +145,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строковое</b> значение, представляющее деления текст подписи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает или задает <b>строковое</b> значение, представляющее текст метки отображаемой единицы.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -196,17 +177,12 @@
         <Parameter Name="Length" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Start">Первый символ которого требуется получить. Если этот аргумент равен 1 или опущен, данное свойство возвращает диапазон символов, начиная с первого знака.</param>
-        <param name="Length">Число символов, которые будут возвращены. Если этот аргумент указан, данное свойство возвращает остаток строки (все, что после <paramref name="Start" /> символ).</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объект, представляющий диапазон символов в текст объекта. Можно использовать <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объекта для форматирования символов в текстовую строку.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" />
-        </value>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> Объект не является частью коллекции.</para>
-          <para />
-        </remarks>
+        <param name="Start">Первый возвращаемый символ. Если этот аргумент равен 1 или опущен, это свойство возвращает диапазон символов, начиная с первого символа.</param>
+        <param name="Length">Число возвращаемых символов. Если этот аргумент опущен, это свойство возвращает оставшуюся часть строки (все после <paramref name="Start" /> знака).</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объект, представляющий диапазон символов в тексте объекта. Этот <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объект можно использовать для форматирования символов в текстовой строке.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /></value>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> Объект не является семейством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -232,14 +208,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.DisplayUnitLabel.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.DisplayUnitLabel.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -264,9 +236,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -296,10 +266,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект для указанного фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, содержащий заливки параметры форматирования для фигуры или диаграммы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект указанной фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, который содержит свойства форматирования заливки для фигуры или диаграммы.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -329,10 +297,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий шрифт указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFont" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий шрифт указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -359,12 +325,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
 
-Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -394,12 +358,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, представляющее формула объекта с помощью нотации стиля A1, на английском языке.</summary>
-        <value>Формула объекта с помощью нотации стиля A1, на английском языке.</value>
-        <remarks>
-          <para>Чтение и запись.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает значение, представляющее формулу объекта с использованием нотации в стиле a1 на английском языке.</summary>
+        <value>Формула объекта, использующая нотацию в стиле a1, на английском языке.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FormulaLocal">
@@ -428,14 +390,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает формулу для объекта, с помощью ссылки стиля A1 на языке пользователя.</summary>
-        <value>Формула для объекта, с помощью ссылки стиля A1 на языке пользователя.</value>
-        <remarks>
-          <para>Строка чтения и записи. Если ячейка содержит константы, данное свойство возвращает, константу. Если ячейка пуста, свойство возвращает пустую строку. Если ячейка содержит формулу, это свойство возвращает формулу как строку, в том же формате, в котором он будет отображаться в строке формулы (включая знак равенства (=)).</para>
-          <para>, Если задано значение или формула ячейки к дате, Microsoft Excel проверяет уже формат ячейки с одним из числовые форматы даты и времени. Если не, формат номера меняется по умолчанию короткий формат даты.</para>
-          <para>Установка формулы несколько ячеек заполняет все ячейки в диапазоне с формулой.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает формулу для объекта с использованием ссылок в стиле a1 на языке пользователя.</summary>
+        <value>Формула для объекта с использованием ссылок в стиле a1 на языке пользователя.</value>
+        <remarks><para>Строка для чтения и записи. Если ячейка содержит константу, это свойство возвращает эту константу. Если ячейка пуста, свойство возвращает пустую строку. Если ячейка содержит формулу, свойство возвращает формулу в виде строки в том же формате, в котором она будет отображаться в строке формул (включая знак равенства (=)).</para>
+          <para>Если присвоить ячейке значение или формулу, Microsoft Excel проверяет, что ячейка уже отформатирована с помощью одного из форматов даты или времени. В противном случае числовой формат изменяется на формат короткой даты по умолчанию.</para>
+          <para>При установке формулы в диапазоне с несколькими ячейками все ячейки в диапазоне заполняются формулой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FormulaR1C1">
@@ -464,12 +424,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает формулу для объекта в нотации стиля R1C1 на языке макрос.</summary>
-        <value>Формула для объекта в нотации стиля R1C1 на языке макрос.</value>
-        <remarks>
-          <para>Строка, чтение и запись.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает формулу для объекта с использованием нотации стиля R1C1 на языке макроса.</summary>
+        <value>Формула для объекта с использованием нотации стиля R1C1 на языке макроса.</value>
+        <remarks><para>Строка для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FormulaR1C1Local">
@@ -498,12 +456,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает формулу для объекта в нотации стиля R1C1 на языке пользователя.</summary>
-        <value>Формула для объекта в нотации стиля R1C1 на языке пользователя.</value>
-        <remarks>
-          <para>Строка, чтение и запись.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает формулу для объекта с использованием нотации стиля R1C1 на языке пользователя.</summary>
+        <value>Формула для объекта с использованием нотации стиля R1C1 на языке пользователя.</value>
+        <remarks><para>Строка для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -529,12 +485,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает высоту, в пунктах объекта.</summary>
-        <value>Высота в пунктах объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает высоту объекта (в пунктах).</summary>
+        <value>Высота объекта (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HorizontalAlignment">
@@ -563,13 +517,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>объекта</b> , который представляет горизонтальное выравнивание для указанного объекта.</summary>
-        <value>Возвращает <see cref="T:System.Object" />.</value>
-        <remarks>
-          <para>Значение этого свойства может быть установлено одно из <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> константы.</para>
-          <para>Примечание: некоторые <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> константы могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение <b>объекта</b> , представляющее горизонтальное выравнивание для указанного объекта.</summary>
+        <value>Возвращает <see cref="T:System.Object" />значение.</value>
+        <remarks><para>Значение этого свойства можно задать для одной из <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> констант.</para>
+          <para>Примечание. Некоторые <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> константы могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeInLayout">
@@ -598,14 +550,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Значение <b>True</b> , если метка элемента займет пространства макета диаграммы, когда определяется макета диаграммы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство не влияет на диаграммы находится в режиме Автомакет или нет.  Если пользователь добавляет заголовок, с помощью команды над диаграммы, диаграмма изменится, как в предыдущих версиях системы Microsoft Office.  Если пользователь затем удаляет заголовок или выбирает один из вариантов заголовка перекрытия, диаграмма изменится больше, как если заголовок не были на диаграмме.</para>
-          <para />
-        </remarks>
+        <summary>Задайте значение <b>true</b> , если метка устройства будет занимать пространство макета диаграммы при определенном макете диаграммы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство не влияет на то, находится ли диаграмма в режиме автомакета.  Если пользователь добавляет название с помощью команды приведенной выше диаграммы, размер диаграммы уменьшится, как в предыдущих версиях Microsoft Office.  Если пользователь удаляет название или выбирает один из вариантов заголовков, размер диаграммы изменится, как если бы название не было на диаграмме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Interior">
@@ -634,10 +582,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутренней указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Interior" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Interior" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -667,10 +613,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , который представляет расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает <b>Двойное</b> значение, представляющее расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -698,9 +642,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>строковое</b> значение, представляющее имя объекта.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -730,14 +672,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>объекта</b> , который представляет Ориентация текста.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Значение этого свойства может быть целое число от – 90 до 90 градусов или одного из <see cref="T:Microsoft.Office.Interop.Word.XlOrientation" /> константы.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение <b>объекта</b> , представляющее ориентацию текста.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Значение этого свойства может быть целым числом от – 90 до 90 градусов или одной из <see cref="T:Microsoft.Office.Interop.Word.XlOrientation" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -763,10 +701,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -796,10 +732,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlChartElementPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по метка элемента на оси диаграммы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlChartElementPosition" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlChartElementPosition" />
-        </value>
+        <summary>Возвращает или задает положение метки единицы измерения на оси диаграммы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.XlChartElementPosition" />.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlChartElementPosition" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -829,10 +763,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое</b> значение <see cref="T:Microsoft.Office.Interop.Word.XlReadingOrder" /> константа, которая представляет порядок чтения для указанного объекта. Чтение и запись</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает <b>целое</b> значение <see cref="T:Microsoft.Office.Interop.Word.XlReadingOrder" /> константы, представляющее порядок чтения для указанного объекта. Чтение и запись</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -857,10 +789,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -891,9 +821,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <b>логическое</b> значение, которое определяет, имеет ли объект тень.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -924,9 +852,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает текст для указанного объекта. Для чтения и записи, <b>String</b>.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -956,10 +882,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , указывающее расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает <b>Двойное</b> значение, представляющее расстояние от верхнего края объекта до верха строки 1 (на листе) или в верхней части области диаграммы (на диаграмме).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -989,14 +913,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>объекта</b> , который представляет вертикальное выравнивание указанный объект.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Значение этого свойства может быть установлено одно из <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> константы.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение <b>объекта</b> , представляющее вертикальное выравнивание указанного объекта.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Значение этого свойства можно задать для одной из <see cref="T:Microsoft.Office.Interop.Word.XlConstants" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -1022,12 +942,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает ширину в точках объекта.</summary>
-        <value>Ширина в точках объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает ширину объекта (в пунктах).</summary>
+        <value>Ширина объекта (в пунктах).</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

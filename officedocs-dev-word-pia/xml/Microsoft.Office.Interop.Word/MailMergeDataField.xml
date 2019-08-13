@@ -1,13 +1,5 @@
 <Type Name="MailMergeDataField" FullName="Microsoft.Office.Interop.Word.MailMergeDataField">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="847238fe1da13e6be4d3d410aab2159918c55b3e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673354" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeDataField" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bde8cf0716521eb5937f2d0e38f75cfde3f6bdda" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144486" /></Metadata><TypeSignature Language="C#" Value="public interface MailMergeDataField" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeDataField" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMergeDataField" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMergeDataField" />
@@ -26,9 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одного поля данных в источнике данных.</summary>
-    <remarks>
-      <para>Объект <b>MailMergeDataField</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> семейства сайтов. Коллекция <b>MailMergeDataFields</b> включает все поля данных в источнике данных слияния почты (например, имя, адрес и Город).</para> Использование <b>DataFields</b><para>(<paramref name="index" />), где <paramref name="index" /> — это имя поля данных или номер индекса для возврата объекта <b>MailMergeDataField</b> . Номер индекса представляет позицию поля данных в источнике данных слияния почты.</para> Не удается добавить поля в коллекцию <b>MailMergeDataFields</b><para>. Все поля данных в источнике данных, автоматически включается в коллекции <b>MailMergeDataFields</b> .</para><para /></remarks>
+    <summary>Представляет одно поле слияния почты в источнике данных.</summary>
+    <remarks><para>Объект <b>MailMergeDataField</b> является членом <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> коллекции. Коллекция <b>MailMergeDataFields</b> включает все поля данных в источнике данных слияния (например, имя, адрес и город).</para>
+      <para>Используйте <b>поля</b>данных (<paramref name="index" />), где <paramref name="index" /> — это имя поля данных или номер индекса, чтобы вернуть один объект <b>MailMergeDataField</b> . Номер индекса представляет положение поля данных в источнике данных слияния.</para>
+      <para>Вы не можете добавлять поля в коллекцию <b>MailMergeDataFields</b> . Все поля данных в источнике данных автоматически включаются в коллекцию <b>MailMergeDataFields</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -168,7 +162,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,12 +190,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значения поля данных слияния почты для текущей записи.</summary>
+        <summary>Возвращает содержимое поля данных слияния почты для текущей записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.ActiveRecord" /> свойства активной записи в источнике данных.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.ActiveRecord" /> свойство, чтобы задать активную запись в источнике данных слияния.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

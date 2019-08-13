@@ -1,13 +1,5 @@
 <Type Name="Points" FullName="Microsoft.Office.Interop.Word.Points">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e6ec73c293d015a6238b804a975848286853fb8c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673872" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Points : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5975220702129151c3928a376d05fe3cd4618651" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147720" /></Metadata><TypeSignature Language="C#" Value="public interface Points : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Points implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Points" />
   <TypeSignature Language="VB.NET" Value="Public Interface Points&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.Point" /> объекты в указанной последовательности на диаграмме.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Series.Points(System.Object)" />(<paramref name="Index" />), где <paramref name="Index" /> — номер индекса точки, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.Point" /> объекта. Точки нумеруются слева направо по ряду. Points(1) — это самые левые точка и Points(Points.Count) является крайней правой точки.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.Point" /> объектов в указанном ряду на диаграмме.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Series.Points(System.Object)" />(<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса точки, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.Point" /> объект. Точки нумеруются слева направо для ряда. Точки (1) — это крайняя левая точка, а точки (Points. Count) — крайние точки.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -65,7 +55,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Point" />.</returns>
+        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Point" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -92,9 +82,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Application (приложение</b> ) (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -121,10 +110,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число, представляющее количество объектов в коллекции</b> .</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает <b>целое</b> значение, представляющее число объектов в коллекции.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,14 +138,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -189,7 +172,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -219,11 +202,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Номер индекса для объекта.</param>
-        <summary>Возвращает объект из коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Point" />
-        </value>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер индекса для объекта.</param>
+        <summary>Возвращает один объект из коллекции.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Point" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -250,10 +231,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

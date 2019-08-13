@@ -1,13 +1,5 @@
 <Type Name="Source" FullName="Microsoft.Office.Interop.Word.Source">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3dd89d7c9571e46afb64a95b641d68981f2d325d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672784" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Source" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3cf829a261bb8edb3c3588016161838a1205f721" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143975" /></Metadata><TypeSignature Language="C#" Value="public interface Source" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Source" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Source" />
   <TypeSignature Language="VB.NET" Value="Public Interface Source" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет отдельные источника, например книги, статья журнала или интервью.</summary>
-    <remarks>
-      <para>Для получения дополнительных сведений см <a href="HV10118297">списки литературы</a></para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельный источник, например книгу, статью журнала или интервью.</summary>
+    <remarks><para>Дополнительные сведения см в разделе <a href="HV10118297">Работа со списками литературы</a></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,9 +47,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,10 +74,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающий ли источника были указанных в документе. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает <b>логическое значение</b> , указывающее, был ли в документе указан источник. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,16 +102,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -182,15 +164,11 @@
         <Parameter Name="Name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">Указывает имя поля, для которого возвращается значение.</param>
-        <summary>Возвращает <b>строку</b> , которая представляет значение поля в список литературы источника. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Имя поля, соответствующий имени соответствующих элементов XML в результирующем XML для источника список литературы. Можно использовать <see cref="P:Microsoft.Office.Interop.Word.Source.XML" /> свойство для возвращения XML-код источника список литературы. Для получения дополнительных сведений см <a href="HV10118297">списки литературы</a></para>
-          <para />
-        </remarks>
+        <param name="Name">Задает имя поля, для которого необходимо извлечь значение.</param>
+        <summary>Возвращает <b>строку</b> , представляющую значение поля в источнике списка литературы. Только для чтения.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Имя поля соответствует имени соответствующего элемента XML в результирующем XML-файле для источника списка литературы. Можно использовать <see cref="P:Microsoft.Office.Interop.Word.Source.XML" /> свойство, чтобы возвратить XML-код для источника списка литературы. Дополнительные сведения см в разделе <a href="HV10118297">Работа со списками литературы</a></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -217,9 +195,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Source" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -246,10 +222,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую внутренних метку для источника. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает <b>строку</b> , представляющую внутреннюю идентифицирующую метку для источника. Только для чтения.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -276,15 +250,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую XML-разметка для <see cref="T:Microsoft.Office.Interop.Word.Source" /> объекта. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>
-            <paramref name="Data" /> Параметр <see cref="M:Microsoft.Office.Interop.Word.Sources.Add(System.String)" /> метод для <see cref="T:Microsoft.Office.Interop.Word.Sources" /> объект требует допустимая XML-строка, которая содержит данные для необходимые элементы. В зависимости от типа источника, добавления могут изменить XML-код.  Чтобы определить, что должно быть для определенного типа источника правильный XML, создание источника в диалоговом окне Создание источника и выберите <see cref="P:Microsoft.Office.Interop.Word.Source.XML" /> свойство для возвращения правильность синтаксиса XML.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <b>строку</b> , представляющую разметку XML для <see cref="T:Microsoft.Office.Interop.Word.Source" /> объекта. Только для чтения.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Для <paramref name="Data" /> параметра <see cref="M:Microsoft.Office.Interop.Word.Sources.Add(System.String)" /> метода для <see cref="T:Microsoft.Office.Interop.Word.Sources" /> объекта требуется допустимая строка XML, содержащая данные для необходимых элементов. В зависимости от типа добавляемого источника может измениться XML-файл.  Чтобы определить необходимые XML-файлы для определенного типа источника, создайте источник с помощью диалогового окна Создание источника, а затем используйте <see cref="P:Microsoft.Office.Interop.Word.Source.XML" /> свойство, чтобы возвратить правильный синтаксис XML.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

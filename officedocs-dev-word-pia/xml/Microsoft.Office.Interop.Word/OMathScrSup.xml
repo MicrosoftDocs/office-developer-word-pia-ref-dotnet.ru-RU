@@ -1,13 +1,5 @@
 <Type Name="OMathScrSup" FullName="Microsoft.Office.Interop.Word.OMathScrSup">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="34e884bf9df3fef78b5772d9a1fe390117aa7396" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673368" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathScrSup" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="162f8e6265f34ad73954dc4f5a805ab00f966f64" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144262" /></Metadata><TypeSignature Language="C#" Value="public interface OMathScrSup" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathScrSup" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathScrSup" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathScrSup" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет формулы с основанием, содержащий верхний.</summary>
+    <summary>Представляет уравнение с основанием, которое содержит Надстрочный индекс.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,16 +73,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathScrSup.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathScrSup.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="E">
@@ -118,10 +104,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий базовый объект указанного формулы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий основу указанного объекта уравнения. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -149,9 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathScrSup" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -178,10 +160,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий надстрочный знак для верхнего объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий Надстрочный индекс для объекта надстрочного знака. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

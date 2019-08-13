@@ -1,13 +1,5 @@
 <Type Name="OMathAutoCorrectEntries" FullName="Microsoft.Office.Interop.Word.OMathAutoCorrectEntries">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d58a8ffaf591069c193d93e4ce28b69fe92bac84" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673128" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathAutoCorrectEntries : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="35cd1a7cab040433579eb73434d2c6b194d3661b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147832" /></Metadata><TypeSignature Language="C#" Value="public interface OMathAutoCorrectEntries : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathAutoCorrectEntries implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathAutoCorrectEntries&#xA;Implements IEnumerable" />
@@ -30,7 +22,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию элементов автозамены math. Использование <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объект, который требуется получить доступ к отдельным автозамены.</summary>
+    <summary>Представляет коллекцию записей автозамены математическими символами. Используйте <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объект для доступа к отдельным элементам автозамены.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -58,12 +50,10 @@
         <Parameter Name="Value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">Требуется <b>строковое</b> имя записи автозамены. Соответствует <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry.Name" /> свойства <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объекта.</param>
-        <param name="Value">Требуется <b>строковое</b> значение элемента автозамены. Соответствует <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry.Value" /> свойства <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объекта.</param>
-        <summary>Создает запись правильных формула автоматическое и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объекта.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" />
-        </returns>
+        <param name="Name">Обязательная <b>строка</b> имя элемента списка автозамены. Соответствует <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry.Name" /> свойству <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объекта.</param>
+        <param name="Value">Обязательная <b>строка</b> . значение элемента списка автозамены. Соответствует <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry.Value" /> свойству <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объекта.</param>
+        <summary>Создает автоматически правильную запись и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /> объект.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntry" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -91,9 +81,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -120,10 +108,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -150,11 +136,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -215,11 +201,9 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>строка</b> или <b>целое число</b> , представляющее имя или порядковый номер объекта в коллекции.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OmathAutoCorrectEntry" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OmathAutoCorrectEntry" />
-        </value>
+        <param name="Index">Обязательная <b>строка</b> или <b>целое число</b> , представляющее имя или порядковый номер объекта в коллекции.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OmathAutoCorrectEntry" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OmathAutoCorrectEntry" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -247,9 +231,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathAutoCorrectEntries" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="ApplicationEvents4_Event" FullName="Microsoft.Office.Interop.Word.ApplicationEvents4_Event">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e8fc8679de3e808303fc2750b432e5243a2d864f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673560" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ApplicationEvents4_Event" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5a8775d8e740f980588b7c678e2c9ffe63481ea2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144836" /></Metadata><TypeSignature Language="C#" Value="public interface ApplicationEvents4_Event" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ApplicationEvents4_Event" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ApplicationEvents4_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface ApplicationEvents4_Event" />
@@ -29,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Интерфейс события для Word<see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта события. Это интерфейс .NET, созданных при обработке компонентном классе COM, необходимые для управляемого кода для взаимодействия с соответствующим COM-объектом. Этот интерфейс реализует все события более ранних интерфейсов и любые дополнительные новые события. Этот интерфейс используется только в том случае, когда события, которое вы хотите использовать общий совпадает с именем метода COM-объектом; в этом случае преобразовывается этот интерфейс, чтобы подключиться к событию и привести к основной интерфейс для вызова метода. В противном случае используется интерфейс .NET, который является производным от компонентного класса COM для доступа к методы, свойства и события COM-объектом.</summary>
+    <summary>Интерфейс событий для событий<see cref="T:Microsoft.Office.Interop.Excel.Application" /> объектов Word. Это интерфейс .NET, созданный при обработке компонентного класса COM, который необходим управляемому коду для взаимодействия с соответствующим COM-объектом. Этот интерфейс охватывает все события более ранних интерфейсов и все дополнительные новые события. Используйте этот интерфейс только в тех случаях, когда событие, которое предполагается использовать, имеет такое же имя, что и метод объекта COM; в таких случаях для соединения с событием приведите к этому интерфейсу, для вызова метода приведите к основному интерфейсу. Иначе используйте интерфейс .NET, который создается но основе компонентного класса COM для доступа к методам, свойствам и событиям объекта COM.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -105,7 +97,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_DocumentChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при создании нового документа, при открытии существующего документа или другой документ будет создано активных документов.</summary>
+        <summary>Возникает при создании нового документа, при открытии существующего документа или при внесении активного документа другим документом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,7 +135,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_DocumentSyncEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда локальную копию документа, который является частью рабочей области для документов синхронизируется с копией на сервере.</summary>
+        <summary>Происходит, когда локальная копия документа, который является частью рабочей области для документов, синхронизируется с копией на сервере.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,7 +154,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда пользователь вставляет электронной марки в документ.</summary>
+        <summary>Происходит, когда пользователь вставляет электронную почтовые марки в документ.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -181,7 +173,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertExEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда пользователь вставляет электронной марки в документ.</summary>
+        <summary>Происходит, когда пользователь вставляет электронную почтовые марки в документ.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -200,11 +192,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_EPostagePropertyDialogEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда пользователь нажимает кнопку Свойства марки (конверты и наклейки диалоговое окно "") или Print электронной марки кнопка панели инструментов.</summary>
-        <remarks>
-          <para>Это событие позволяет приложению программного обеспечения сторонних производителей для перехвата и показать их свойства.</para>
-          <para />
-        </remarks>
+        <summary>Происходит, когда пользователь нажимает кнопку Свойства электронной почты (диалоговые окна метки и конверты) или кнопка Печать электронной марки на панели инструментов.</summary>
+        <remarks><para>Это событие позволяет стороннее программным приложениям перехватывать и отображать свои диалоговые окна свойств.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailMergeAfterMerge">
@@ -222,7 +212,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeAfterMergeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит после успешного слияния всех записей в слияния почты.</summary>
+        <summary>Возникает после успешного слияния всех записей в слиянии.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -241,7 +231,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeAfterRecordMergeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит после успешного слияния каждой записи в источнике данных.</summary>
+        <summary>Происходит после успешного слияния каждой записи в источнике данных при слиянии.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -260,7 +250,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeBeforeMergeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда выполняется слияние, перед слиянием любой записей.</summary>
+        <summary>Возникает при выполнении объединения перед слиянием всех записей.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -279,7 +269,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeBeforeRecordMergeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, как для отдельных записей выполняется слияние.</summary>
+        <summary>Происходит при слиянии для отдельных записей при слиянии.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -317,11 +307,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeDataSourceValidateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда пользователь выполняет проверку адреса, нажав кнопку Проверить в диалоговом окне Получатели слияния почты.</summary>
-        <remarks>
-          <para>Если у вас нет на компьютере программное обеспечение для проверки адресов, <b>событием MailMergeDataSourceValidate</b> позволяет создать простой фильтрации процедур, например, циклический перебор записей для проверки почтового индекса и их удаление не США.</para>
-          <para />
-        </remarks>
+        <summary>Возникает, когда пользователь выполняет проверку адреса, нажав кнопку проверить в диалоговом окне Получатели слияния почты.</summary>
+        <remarks><para>Если на компьютере не установлено программное обеспечение для проверки адресов, событие <b>маилмержедатасаурцевалидате</b> позволяет создавать простые процедуры фильтрации, такие как цикл по записям для проверки почтовых индексов и удаления всех не — U. S.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailMergeDataSourceValidate2">
@@ -339,13 +327,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeDataSourceValidate2EventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает, когда пользователь проверяет получатели, нажав кнопку Проверить адреса ссылка кнопка в диалоговом окне Получатели слияния.</summary>
-        <remarks>
-          <para>Если у вас на компьютере программное обеспечение для проверки адресов, события <b>MailMergeDataSourceValidate2</b> позволяет создать простой фильтрации процедур, такие как циклический перебор записей для проверки почтового индекса и удаление, — это не США</para>
+        <summary>Происходит, когда пользователь проверяет получателей слияния, нажав кнопку проверить адреса в диалоговом окне Получатели слияния.</summary>
+        <remarks><para>Если на компьютере не установлено программное обеспечение для проверки адресов, событие <b>MailMergeDataSourceValidate2</b> позволяет создавать простые процедуры фильтрации, такие как цикл по записям для проверки почтовых индексов и удаления всех не — U. S.</para>
           <para>
-            <b>Примечание</b>: не может вызывать это событие из в Microsoft Visual Basic для приложений (VBA) проект.  Это событие работает правильно только в управляемых надстроек и внешних приложений. Надстройки COM, используйте <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.MailMergeDataSourceValidate" /> события.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это событие нельзя вызвать в проекте Microsoft Visual Basic для приложений (VBA).  Это событие работает правильно только в управляемых надстройках и внешних приложениях. Для надстроек COM используйте <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.MailMergeDataSourceValidate" /> событие.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailMergeWizardSendToCustom">
@@ -363,11 +349,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeWizardSendToCustomEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при нажатии настраиваемой кнопки на шаге 6 мастера слияния почты.</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.MailMerge.ShowSendToCustom" /> свойство для создания настраиваемой кнопке на шестой шаг мастера слияния.</para>
-          <para />
-        </remarks>
+        <summary>Возникает, когда пользовательская кнопка нажата на шаге 6 мастера слияния почты.</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailMerge.ShowSendToCustom" /> свойство, чтобы создать настраиваемую кнопку на шестом этапе мастера слияния почты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailMergeWizardStateChange">
@@ -385,7 +369,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_MailMergeWizardStateChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при изменении пользователем из указанного действия в указанном этап в мастере слияния почты.</summary>
+        <summary>Возникает при изменении пользователем указанного шага в мастере слияния почты.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -404,7 +388,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_NewDocumentEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при создании нового документа.</summary>
+        <summary>Возникает при создании нового документа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -423,7 +407,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowActivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при активации любого окна защищенный просмотр.</summary>
+        <summary>Возникает при активации любого защищенного окна просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -442,7 +426,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowBeforeCloseEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит непосредственно перед защищенный просмотр окна или документа в защищенный просмотр окно закрывается.</summary>
+        <summary>Возникает непосредственно перед закрытием окна защищенного представления или документа в защищенном режиме просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -461,7 +445,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowBeforeEditEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит непосредственно перед включено редактирование документа в указанный защищенный просмотр окна.</summary>
+        <summary>Происходит непосредственно перед включением редактирования документа в указанном окне защищенного просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -480,7 +464,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowDeactivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при отключении защищенный просмотр окна.</summary>
+        <summary>Возникает при отключении защищенного окна просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -499,7 +483,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowOpenEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда открывается окно защищенный просмотр.</summary>
+        <summary>Возникает при открытии окна защищенного просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -518,7 +502,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_ProtectedViewWindowSizeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда перемещения защищенный просмотр окна или размера.</summary>
+        <summary>Возникает при перемещении или изменении размеров окна защищенного просмотра.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -537,7 +521,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_QuitEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда пользователь покидает Word.</summary>
+        <summary>Происходит, когда пользователь завершает работу Word.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -594,7 +578,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_WindowBeforeDoubleClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при двойном щелчке области редактирования окна документа перед двойного щелчка по умолчанию.</summary>
+        <summary>Возникает при двойном щелчке области редактирования окна документа до действия двойного щелчка по умолчанию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -613,7 +597,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_WindowBeforeRightClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при щелчке правой кнопкой мыши область редактирования окна документа перед кнопкой по умолчанию.</summary>
+        <summary>Возникает при щелчке правой кнопкой мыши в области редактирования окна документа перед действием, выполняемым по умолчанию при щелчке правой кнопкой мыши.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -651,7 +635,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_WindowSelectionChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении выбора в окне активных документов.</summary>
+        <summary>Возникает при изменении выделенного фрагмента в активном окне документа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -689,7 +673,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_XMLSelectionChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении родительского узла XML текущего выделенного фрагмента.</summary>
+        <summary>Возникает при изменении родительского узла XML текущего выделения.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -708,7 +692,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ApplicationEvents4_XMLValidationErrorEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при ошибке проверки в документе.</summary>
+        <summary>Возникает при возникновении ошибки проверки в документе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

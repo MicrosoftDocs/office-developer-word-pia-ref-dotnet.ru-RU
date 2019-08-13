@@ -1,13 +1,5 @@
 <Type Name="MailMergeFieldNames" FullName="Microsoft.Office.Interop.Word.MailMergeFieldNames">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8ce689d8b63f51a09bd289dd98e0a8fbc72c68d5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673862" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeFieldNames : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="72c829f6095f1bb6f834fc06ba5dd467841d4b77" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144451" /></Metadata><TypeSignature Language="C#" Value="public interface MailMergeFieldNames : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeFieldNames implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMergeFieldNames" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMergeFieldNames&#xA;Implements IEnumerable" />
@@ -30,9 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.MailMergeFieldName" /> объекты, которые представляют имена полей в источнике данных.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.FieldNames" /> свойство для возврата коллекции <b>MailMergeFieldNames</b> .</para> Не удается добавить имена в коллекцию <b>MailMergeFieldNames</b><para>. При добавлении поля в источнике данных, имя поля, автоматически включается в коллекции <b>MailMergeFieldNames</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.MailMerge.EditDataSource" /> метод для изменения содержимого в источнике данных.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.MailMergeFieldName" /> объектов, представляющих имена полей в источнике данных слияния.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.FieldNames" /> свойство, чтобы возвратить коллекцию <b>MailMergeFieldNames</b> .</para>
+      <para>Вы не можете добавлять имена в коллекцию <b>MailMergeFieldNames</b> . При добавлении поля в источник данных имя поля автоматически включается в коллекцию <b>MailMergeFieldNames</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMerge.EditDataSource" /> метод для изменения содержимого источника данных.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,7 +79,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,11 +107,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -179,9 +172,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,7 +201,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="FreeformBuilder" FullName="Microsoft.Office.Interop.Word.FreeformBuilder">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9f076c5ec7da9dca39ea0d028830ee6df1330893" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673937" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FreeformBuilder" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f7da0a16c045e6dc0d03c5438ac63fb5b3f441a0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148049" /></Metadata><TypeSignature Language="C#" Value="public interface FreeformBuilder" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FreeformBuilder" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FreeformBuilder" />
   <TypeSignature Language="VB.NET" Value="Public Interface FreeformBuilder" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет геометрии freeform во время его построения.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> метод возвращает объект <b>FreeformBuilder</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод для добавления узлов в фигуру. Использование <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" /> метод создания фигуры, определенные в объекте <b>FreeformBuilder</b> и добавляет его к <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> семейства сайтов.</para>
-      <para />
-    </remarks>
+    <summary>Представляет геометрию полилинии во время ее построения.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> метод для возврата объекта <b>FreeformBuilder</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод, чтобы добавить узлы в полилинию. С помощью <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" /> метода Создайте фигуру, определенную в объекте <b>FreeformBuilder</b> , и добавьте ее в <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекцию.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNodes">
@@ -62,19 +52,17 @@
         <Parameter Name="Y3" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="SegmentType">Требуется <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип сегмента будет добавлена.</param>
-        <param name="EditingType">Требуется <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство редактирования вершины. Если <paramref name="SegmentType" /> — это <b>msoSegmentLine</b><paramref name="EditingType" /> должен быть <b>msoEditingAuto</b>.</param>
-        <param name="X1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="Y1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент определяет расстояние по вертикали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали (в пунктах) в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="X2">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y2">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали (в пунктах) в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="X3">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y3">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <summary>Вставляет новый сегмент в конце фигуру, который создается и добавляет узлов, которые определяют сегмента.</summary>
-        <remarks>
-          <para>Этот метод можно использовать столько раз, сколько требуется добавить узлы в произвольной формы, которое вы создаете. Завершив добавление узлов, используйте <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" /> метод для создания freeform только что был определен. Чтобы добавить узлы freeform после он создается, используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип добавляемого сегмента.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit для вершины. Если <paramref name="SegmentType" /> это <b>мсосегментлине</b>, <paramref name="EditingType" /> должен быть <b>мсоедитингауто</b>.</param>
+        <param name="X1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="Y1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="X2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="X3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <summary>Вставляет новый сегмент в конец создаваемой полилинии и добавляет узлы, определяющие сегмент.</summary>
+        <remarks><para>Этот метод можно использовать столько раз, сколько вы хотите добавить узлы для полилинии, которую вы создаете. Когда вы завершите Добавление узлов, используйте <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" /> метод, чтобы создать только что заданную полилинию. Чтобы добавить узлы в полилинию после создания, используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -127,13 +115,11 @@
         <Parameter Name="Anchor" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Anchor">Необязательный элемент <b>Object</b>. A <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст, к которому привязывается фигуры. Если <paramref name="Anchor" /> указано, привязки располагается в начале в первый абзац привязки диапазона. Если этот аргумент указан, автоматически выбран диапазон привязки и фигуры размещается относительно краев верхней и левой части страницы.</param>
-        <summary>Создает фигуры, геометрические характеристики указанный объект. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий новую фигуру.</summary>
+        <param name="Anchor">Необязательный <b>объект</b>. <see cref="T:Microsoft.Office.Interop.Word.Range" /> Объект, представляющий текст, к которому привязана фигура. Если <paramref name="Anchor" /> указан, то привязка располагается в начале первого абзаца в диапазоне привязки. Если этот аргумент опущен, диапазон привязки выбирается автоматически, а фигура располагается относительно верхнего и левого краев страницы.</param>
+        <summary>Создает фигуру, которая имеет геометрические характеристики указанного объекта. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий новую фигуру.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Необходимо применить <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекта по крайней мере один раз, прежде чем использовать метод <b>ConvertToShape</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> Метод необходимо применить к <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекту по крайней мере один раз, прежде чем использовать метод <b>конверттошапе</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -159,11 +145,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -189,7 +175,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

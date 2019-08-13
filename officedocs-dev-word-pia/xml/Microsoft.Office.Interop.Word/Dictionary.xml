@@ -1,13 +1,5 @@
 <Type Name="Dictionary" FullName="Microsoft.Office.Interop.Word.Dictionary">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f7e27533dba0d2d5080542778447d02727eef81e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673324" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Dictionary" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7eb1c3a125004711f709d1a46bde81b4b66d431c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147055" /></Metadata><TypeSignature Language="C#" Value="public interface Dictionary" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Dictionary" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Dictionary" />
   <TypeSignature Language="VB.NET" Value="Public Interface Dictionary" />
@@ -27,18 +19,15 @@
   </Attributes>
   <Docs>
     <summary>Представляет словарь.</summary>
-    <remarks>
-      <para>Объекты 
-        <b>словаря</b> , которые представляют вспомогательные словари являются членами <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> семейства сайтов. Другие объекты словаря возвращаемых свойств <see cref="T:Microsoft.Office.Interop.Word.Language" /> коллекции; к ним относятся <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />, и <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> свойства. Можно использовать эти свойства для каждого языка, для которых установлены средства проверки правописания.</para>
-      <para>Использования <b>CustomDictionaries</b>(<paramref name="index" />), где <paramref name="index" /> является числом индекса или имя строки для словаря, чтобы возвратить объект <b>словаря</b> , который представляет вспомогательного словаря.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> свойство, чтобы задать настраиваемые орфографического словаря в коллекции, в которую добавляются новые слова. Если этому свойству присвоено значение словаря, который не является вспомогательного словаря, возникает ошибка.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> метод, чтобы добавить новый словарь в коллекцию active пользовательских словарей. Если файла с указанным именем не существует, Microsoft Word создает его</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> и <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> свойство, чтобы найти какой-либо словарей.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойство, чтобы определить, имеют ли указанный вспомогательного словаря конкретного языка назначен с <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> свойство. Если словарь конкретного языка, он подтверждает только текст, отформатированный для указанного языка.</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" /> Свойство возвращает <b>значение True</b> для файлов .lex (встроенной проверки правописания словарей) и <b>значение False</b> для файлов .dic (настраиваемые орфографические словари).</para>
-      <para />
-    </remarks>
+    <remarks><para>Объекты 
+        <b>Dictionary</b> , представляющие настраиваемые словари, входят <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> в коллекцию. Другие объекты Dictionary возвращаются свойствами <see cref="T:Microsoft.Office.Interop.Word.Language" /> коллекции; к <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />ним относятся свойства <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />, и <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> . Вы можете использовать эти свойства для каждого языка, для которого установлены средства проверки правописания.</para>
+      <para>Используйте <b>кустомдиктионариес</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса или строковое имя словаря, чтобы получить один объект <b>Dictionary</b> , представляющий пользовательский словарь.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> свойство, чтобы задать в коллекции настраиваемый словарь правописания, в который добавляются новые слова. Если вы попытаетесь установить для этого свойства словарь, который не является настраиваемым словарем, возникнет ошибка.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> метод, чтобы добавить новый словарь в коллекцию активных настраиваемых словарей. Если файл с указанным именем отсутствует, Microsoft Word создает его.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> и <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> для обнаружения любого из словарей.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойство, чтобы определить, может ли указанный вспомогательный словарь иметь определенный язык, назначенный ему со <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> свойством. Если словарь зависит от языка, он будет проверять только текст, отформатированный для указанного языка.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" /> Свойство возвращает <b>значение true</b> для файлов Лекс (встроенные словари проверки правописания) и <b>false</b> для файлов. dic (настраиваемые словари правописания).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -92,11 +81,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -152,11 +141,9 @@
       <Docs>
         <summary>Возвращает или задает язык для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для вспомогательного словаря, следует сначала задать <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойство значение <b>True,</b> перед тем как указать свойство <b>LanguageID</b> . Вспомогательные словари, зависящие от языка только просмотрите текст для данного языка.</para>
-          <para>Свойство LanguageID может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для настраиваемого словаря необходимо сначала задать для <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойства <b>значение true</b> , прежде чем указать свойство <b>LanguageID</b> . Пользовательские словари, зависящие от конкретного языка, заносятся только на текст, отформатированный для этого языка.</para>
+          <para>Свойство LanguageID может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageSpecific">
@@ -185,8 +172,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если вспомогательного словаря будет использоваться только с текстом в формате для конкретного языка.</summary>
+        <summary><b>Значение true</b> , если пользовательский словарь должен использоваться только с текстом, отформатированным для определенного языка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -242,7 +228,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -270,13 +256,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанный объект диска или веб-путь.</summary>
+        <summary>Возвращает диск или веб-путь к указанному объекту.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака — например, «C:\MSOffice» или "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Использование <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> свойство возвращает имя файла без путь.</para>
-          <para>Примечание можно использовать свойство <b>PathSeparator</b> для построения веб-адреса, несмотря на то, что они содержат косую черту (/) и значения по умолчанию свойства <b>PathSeparator</b> для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+        <remarks><para>Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> свойство, чтобы возвратить имя файла без пути.</para>
+          <para>Примечание для создания веб-адресов можно использовать свойство <b>пассепаратор</b> , несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadOnly">
@@ -302,13 +286,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный словарь не может быть изменен.</summary>
+        <summary><b>Значение true</b> , если указанный словарь не может быть изменен.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Активных словарей грамматики, расстановки переносов, правописания и тезауруса доступны только для чтения. Вспомогательные словари, чтение и запись.</para>
-          <para />
-        </remarks>
+        <remarks><para>Активные грамматика, расстановка переносов, Орфография и словари тезауруса доступны только для чтения. Настраиваемые словари доступны для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -336,10 +317,8 @@
       <Docs>
         <summary>Возвращает тип словаря.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

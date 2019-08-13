@@ -1,13 +1,5 @@
 <Type Name="Revisions" FullName="Microsoft.Office.Interop.Word.Revisions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="05758c729b81dbb4be141a7989f2b0e4ff125db8" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673371" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Revisions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dcf957961a05e06b776741ff11ebc85cce0581a2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147664" /></Metadata><TypeSignature Language="C#" Value="public interface Revisions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Revisions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Revisions" />
   <TypeSignature Language="VB.NET" Value="Public Interface Revisions&#xA;Implements IEnumerable" />
@@ -30,9 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Revision" /> объекты, которые представляют изменения, отмеченные с исправлений в документе или диапазон.</summary>
-    <remarks>
-      <para>Используйте свойство <b>исправлений</b><see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект для возврата коллекции <b>исправлений</b> .</para> Метод <b>Add</b><para>недоступен для <b>редакций</b> коллекции. <b>Версия</b> объекты добавляются, когда включено отслеживание изменений. Установка <see cref="P:Microsoft.Office.Interop.Word._Document.TrackRevisions" /> свойства, <b>значение True,</b> чтобы отслеживать изменения, внесенные в текст документа.</para><para>Использования <b>исправлений</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>редакции</b> . Номер индекса представляющее номер версии в диапазон или документов.</para><para><see cref="P:Microsoft.Office.Interop.Word.Revisions.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте коллекции с помощью объекта <b>Range</b> .</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Revision" /> объектов, представляющих изменения, помеченные метками исправлений в диапазоне или документе.</summary>
+    <remarks><para>Чтобы возвратить коллекцию Revisions, <see cref="T:Microsoft.Office.Interop.Word.Document" /> используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> свойство <b>Revisions</b> объекта <b></b> или.</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>Revisions</b> . Объекты <b>Revision</b> добавляются, когда включено отслеживание изменений. Задайте для <see cref="P:Microsoft.Office.Interop.Word._Document.TrackRevisions" /> свойства <b>значение true</b> , чтобы отслеживать изменения, внесенные в текст документа.</para>
+      <para>Используйте <b>Revisions</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Revision</b> . Номер индекса представляет положение редакции в диапазоне или документе.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Revisions.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AcceptAll">
@@ -56,11 +51,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Принимает все изменения в документе или диапазон. Записанные исправления, удалены и изменения вносятся в документ.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word._Document.AcceptAllRevisions" /> метод, чтобы принять все исправления в документе.</para>
-          <para />
-        </remarks>
+        <summary>Принимает все записанные изменения в документе или диапазоне. Исправления удаляются, а изменения вносятся в документ.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word._Document.AcceptAllRevisions" /> метод, чтобы принять все изменения в документе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -88,11 +81,8 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>CreateObject</b> Visual Basic и функции <b>GetObject</b> предоставляется доступ к объекту автоматизации OLE из Visual Basic для приложений.</para>
-          <para />
-        </remarks>
+        <remarks><para>Функции <b>CreateObject</b> и <b>GetObject</b> в Visual Basic предоставляют доступ к объекту OLE Automation из проекта Visual Basic для приложений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -118,7 +108,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,11 +136,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -211,9 +201,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,7 +230,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -267,11 +256,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отклоняет все изменения в диапазоне. Удаляются исправлений, отправляемых из исходного текста без изменений.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word._Document.RejectAllRevisions" /> метод отклоняет всех редакций документа. Не удается Отклонено изменений форматирования.</para>
-          <para />
-        </remarks>
+        <summary>Отклоняет все отслеживаемые изменения в диапазоне. Исправления удаляются, оставляя исходный текст без изменений.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word._Document.RejectAllRevisions" /> метод, чтобы отклонить все изменения в документе. Изменения форматирования не могут быть отклонены.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

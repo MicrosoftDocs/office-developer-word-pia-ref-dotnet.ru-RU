@@ -1,13 +1,5 @@
 <Type Name="Windows" FullName="Microsoft.Office.Interop.Word.Windows">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="aa5d387f914422cf8c79854703cd4dd7eb61e181" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673435" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Windows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="485e25bf5a3ae2e6749378af1596be5bee3a3b09" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142663" /></Metadata><TypeSignature Language="C#" Value="public interface Windows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Windows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Windows" />
   <TypeSignature Language="VB.NET" Value="Public Interface Windows&#xA;Implements IEnumerable" />
@@ -30,16 +22,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Window" /> объекты, которые представляют все доступные windows.</summary>
-    <remarks>
-      <para>Используйте свойство <b>Windows</b><see cref="T:Microsoft.Office.Interop.Word.Application" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, который требуется вернуть семейства <b>Windows</b> . Семейство <b>Windows</b> для объекта <b>Application</b> содержит все окна в приложении, в то время как windows, в которых отображаются указанный документ содержит коллекцию <b>Windows</b> для объекта <b>Document</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Window.NewWindow" /> метод, чтобы добавить новое окно к коллекции окон.</para>
-      <para>Использовать <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — окно имя или номер индекса для возврата объекта <b>Window</b> .</para>
-      <para>Номер индекса — номер слева от имени окно, в меню окно.</para>
-      <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
-      <para>При переключении представления в режим предварительного просмотра, создается новое окно. Это окно удаляется из коллекции <b>Windows</b> при закрытии предварительного.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Window" /> объектов, представляющих все доступные окна.</summary>
+    <remarks><para>Используйте свойство <b>Windows</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Application" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> для возврата коллекции <b>Windows</b> . Коллекция <b>Windows</b> для объекта <b>Application</b> содержит все окна в приложении, в то время как коллекция <b>Windows</b> для объекта <b>Document</b> содержит только те окна, в которых отображается указанный документ.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Windows.Add(System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Window.NewWindow" /> метод, чтобы добавить новое окно в коллекцию Windows.</para>
+      <para>Используйте <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — это имя окна или номер индекса, чтобы вернуть один объект <b>Window</b> .</para>
+      <para>Номер индекса — это число слева от имени окна в меню Window (окно).</para>
+      <para>Двоеточие (:) Кроме того, если для документа открыто несколько окон, в заголовке окна отображается число.</para>
+      <para>При переключении представления в режим предварительного просмотра создается новое окно. Это окно удаляется из коллекции <b>Windows</b> при закрытии предварительного просмотра.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -63,13 +53,11 @@
         <Parameter Name="Window" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Window">Необязательный элемент <b>Object</b>. Чтобы открыть другое окно для объекта <b>Window</b> . Если этот аргумент задан, открывается новое окно для активных документов.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект, который представляет новое окно документа.</summary>
+        <param name="Window">Необязательный <b>объект</b>. Объект <b>окна</b> , для которого нужно открыть другое окно. Если этот аргумент опущен, для активного документа открывается новое окно.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект, представляющий новое окно документа.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
-          <para />
-        </remarks>
+        <remarks><para>Двоеточие (:) Кроме того, если для документа открыто несколько окон, в заголовке окна отображается число.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -122,8 +110,8 @@
         <Parameter Name="ArrangeStyle" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ArrangeStyle">Необязательный элемент <b>Object</b>. Расположение окон. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdArrangeStyle" /> констант: <b>wdIcons</b> или <b>wdTiled</b>.</param>
-        <summary>Упорядочивает все окна открытых документов в рабочей области приложения. Так как Microsoft Word с помощью интерфейса одного документа (SDI), этот метод больше не имеет никакого влияния.</summary>
+        <param name="ArrangeStyle">Необязательный <b>объект</b>. Расположение окон. Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Word.WdArrangeStyle" /> констант: <b>вдиконс</b> или <b>вдтилед</b>.</param>
+        <summary>Упорядочивает все открытые окна документов в рабочей области приложения. Так как в Microsoft Word используется один интерфейс документов (SDI), этот метод больше не оказывает никакого действия.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,7 +136,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Заканчивается рядом друг с другом режиме, если два windows находятся в режиме рядом друг с другом. Возвращает значение <b>типа Boolean</b> , указывающий ли метод прошла успешно.</summary>
+        <summary>Завершается параллельный режим, если два окна находятся в параллельном режиме. Возвращает <b>логическое значение</b> , которое указывает, был ли метод успешным.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,13 +164,11 @@
         <Parameter Name="Document" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Document">Требуется <b>объект</b>. Документ для просмотра в windows рядом друг с другом.</param>
-        <summary>Открывает два windows в режиме рядом друг с другом.</summary>
+        <param name="Document">Обязательный <b>объект</b>. Документ, который необходимо просмотреть в параллельных окнах.</param>
+        <summary>Открывает два окна в параллельном режиме.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Нельзя использовать метод <b>CompareSideBySideWith</b> с <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект или <see cref="P:Microsoft.Office.Interop.Word._Application.ActiveDocument" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Невозможно использовать метод <b>компаресидебисидевис</b> с <see cref="T:Microsoft.Office.Interop.Word.Application" /> объектом или <see cref="P:Microsoft.Office.Interop.Word._Application.ActiveDocument" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -208,7 +194,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -236,11 +222,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -301,9 +287,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,7 +316,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,10 +342,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает два окна документов, которые находятся в Сравнить рядом с режим просмотра.</summary>
-        <remarks>
-          <para>Метод <b>ResetPositionsSideBySide</b> соответствует восстановить расположение окна кнопки на панели инструментов Сравнить рядом друг с другом.</para> Метод 
-          <para>использования <b>ResetPositionsSideBySide</b> для сброса отображения двух документов. Например, если пользователь сворачивает или разворачивает один из двух сравниваемые мозаики, метод <b>ResetPositionsSideBySide</b> сбрасывается отображение, что два окна, отображаемого рядом друг с другом еще раз.</para><para /></remarks>
+        <summary>Сбрасывает два окна документа, которые находятся в списке сравнить параллельно с режимом просмотра.</summary>
+        <remarks><para>Метод <b>ресетпоситионссидебисиде</b> соответствует кнопке Сброс положения окна на панели инструментов сравнить рядом друг с другом.</para>
+          <para>Используйте метод <b>ресетпоситионссидебисиде</b> , чтобы сбросить отображение двух документов. Например, если пользователь сводит или развертывает один из двух сравниваемых окон документов, метод <b>ресетпоситионссидебисиде</b> сбрасывает отображение, чтобы два окна отображались рядом друг с другом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SyncScrollingSideBySide">
@@ -389,8 +374,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> включает прокрутки содержимого windows, в то же время. <b>False</b> отключает прокрутки windows в то же время.</summary>
+        <summary><b>True</b> включает прокрутку содержимого окон одновременно. <b>False</b> запрещает одновременное прокручивание окон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

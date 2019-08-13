@@ -1,13 +1,5 @@
 <Type Name="Conflict" FullName="Microsoft.Office.Interop.Word.Conflict">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0b87b76ff93cbb3eea67868bd57964e4eb8e0287" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673512" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Conflict" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="21e74154c2475877e56ac3b4b4b6917cedd06347" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147209" /></Metadata><TypeSignature Language="C#" Value="public interface Conflict" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Conflict" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Conflict" />
   <TypeSignature Language="VB.NET" Value="Public Interface Conflict" />
@@ -26,10 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет конфликтующие изменить в совместное редактирование документа. Тип <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> заданного объекта с <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> перечисления.</summary>
-    <remarks>
-      <para>Обычно при документов с поддержкой совместной работы одновременно изменяется, только для одного совместное редактирование можно изменить определенный диапазон за один раз. Microsoft Word 2010 автоматически помещает блокировку на диапазон тогда, когда начинается редактирования, поэтому авторами совместного не может изменить этот же диапазон в то же время совместное редактирование.</para> Конфликт 
-      <para>A может возникнуть при перед любой одной совместно редактировать получает монопольную блокировку диапазона одновременно изменяется для определенного диапазона ячеек в документ с поддержкой совместной работы. В случае конфликта он находится в каждом совместное редактирование, что у них монопольная блокировка диапазона, но их блокировки не передается для совместного авторов. Совместное редактирование, который сохраняет на сервере сначала не будут отображаться конфликт, так как их версии документа становится установленной версии. Совместное авторов, пытается сохранить после первого совместное редактирование удалось сэкономить конфликтов. — Это конфликта между различными версиями тот же диапазон.</para><para>К примеру, если один совместно редактировать редактирует предложения, «Выпей» чтение «Fast fox красный» и другой совместно редактировать одновременно редактирует предложение для чтения, «Быстрый Технический fox» и оба изменения происходят перед либо совместное редактирование получает монопольная блокировка на абзац, происходит конфликт. В этом случае «Быстрая красный» и «быстрый Технический» не могут быть согласованы Word 2010. Первый совместное редактирование для сохранения их версии документа на сервере не конфликтов. Когда далее совместное редактирование пытается сохранить их версии документа на сервере, происходит конфликт и разрешить конфликт, принятие и отклонение изменений необходимо выбрать совместное редактирование.</para><para /></remarks>
+    <summary>Представляет конфликт редактирования в документе, созданном в совместном редактировании. Тип <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта задается <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> перечислением.</summary>
+    <remarks><para>Как правило, при одновременном редактировании документа с включенным совместным редактированием в один раз можно редактировать только одного отдельного диапазона. Microsoft Word 2010 автоматически помещает блокировку на диапазон в момент, когда совместное редактирование начинает редактироваться, чтобы другие совместное авторы не могли редактировать один и тот же диапазон одновременно.</para>
+      <para>Конфликт может возникнуть при одновременном редактировании определенного диапазона в документе с включенной поддержкой совместного редактирования до того, как любой одиночный автор получает монопольную блокировку диапазона. В случае конфликта он отображается для каждого соавтора, у которого есть монопольная блокировка для диапазона, но их блокировка не связана с другими авторами. При этом соавтор, сохраняющийся на сервере, не сможет увидеть конфликт, так как версия документа становится установленной. Соавторами, которые пытаются сохранить после сохранения первого совместного редактирования, столкнулись с конфликтом. Конфликт между различными версиями одного и того же диапазона.</para>
+      <para>Например, если один автор редактирует предложение "Быстрая Браун Fox" прочитает "быструю красную Fox", а другое совместное редактирование, одновременно изменяет предложение Read, "The The White White Fox Fox", и оба изменения происходят до того, как соавтор получает монопольную блокировку абзац — возникает конфликт. В этом случае "быстрый красный" и "непроизводительный белый" не удается согласовать по Word 2010. Для сохранения версии документа на сервере первое совместное редактирование не обнаруживает конфликт. Когда следующий совместное редактирование попытается сохранить свою версию документа на сервере, возникает конфликт, и соавтор должен разрешить конфликт, приняв или отклоняя изменения.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -53,11 +46,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Принимает пользователь указан конфликта изменений, удаляет конфликт и объединяет изменения в сервере копию документа.</summary>
-        <remarks>
-          <para>Этот метод принимает версии пользователя об изменении конфликтов и отклоняет версию сервера изменения конфликта.</para>
-          <para />
-        </remarks>
+        <summary>Принимает заданное пользователем изменение конфликтов, удаляет конфликт и объединяет изменения в копию документа на сервере.</summary>
+        <remarks><para>Этот метод принимает пользовательскую версию изменения конфликта и отклоняет серверную версию изменения конфликта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -84,12 +75,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -115,14 +103,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание!</b>это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -149,7 +135,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает значение, представляющее положение элемента в коллекции.</summary>
-        <value>Возвращает <see cref="T:System.Int32" />.</value>
+        <value>Возвращает <see cref="T:System.Int32" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,9 +162,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -205,12 +190,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Range" /> Объект, представляющий часть документа, содержащуюся в указанном объекте.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reject">
@@ -234,11 +217,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отклоняет изменения пользователей, удаляет конфликт и принимает копия изменений для конфликта на сервере.</summary>
-        <remarks>
-          <para>Этот метод отклоняет версии пользователя конфликта и принимает версии, в настоящее время на сервере.</para>
-          <para />
-        </remarks>
+        <summary>Отклоняет изменение пользователя, удаляет конфликт и принимает серверную копию изменения конфликта.</summary>
+        <remarks><para>Этот метод отклоняет пользовательскую версию конфликта и принимает текущую версию на сервере.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -264,13 +245,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> для <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> Для <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> , заданное для <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> Для <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

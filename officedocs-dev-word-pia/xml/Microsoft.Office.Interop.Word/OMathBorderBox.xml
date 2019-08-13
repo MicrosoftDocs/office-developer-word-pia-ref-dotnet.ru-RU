@@ -1,13 +1,5 @@
 <Type Name="OMathBorderBox" FullName="Microsoft.Office.Interop.Word.OMathBorderBox">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="065fb2bf1836f7b1cc42ae7c4e2cc6af6bf9ea9e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673126" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathBorderBox" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d81a8256ac77b1f035631d63d591da07a2860dfa" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144374" /></Metadata><TypeSignature Language="C#" Value="public interface OMathBorderBox" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathBorderBox" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathBorderBox" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathBorderBox" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет невидимой рамку формулы или части формулы, к которому можно назначить свойства, которые влияют на расположение или математических форматирование всей рамки.  К примеру поле может служить эмулятора оператор или без точки выравнивания работать как like точка останова, с соответствующим аргументом размером (argSz) или группироваться, так как не разрывы строки.</summary>
+    <summary>Представляет невидимое поле вокруг уравнения или части уравнения, которым можно назначить свойства, которые влияют на макет или математическое форматирование всего поля.  Например, поле может служить эмулятором оператора с точкой выравнивания или без нее, служить в качестве точки останова, с которым связан Размер аргумента (Аргсз) или быть сгруппированным, чтобы не разрешать разрывы строк.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,11 +73,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathBorderBox.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathBorderBox.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="E">
@@ -113,10 +103,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий базовый объект указанного формулы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий основу указанного объекта уравнения. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -146,10 +134,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть нижнюю границу прямоугольника формула. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть нижнюю границу ограничительной рамки формулы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,10 +165,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть левую границу прямоугольника формула. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть левую границу ограничительной рамки формулы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -212,10 +196,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть у правого края прямоугольника формула. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть правую границу ограничительной рамки формулы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,10 +227,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть верхнюю границу прямоугольника формула. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть верхнюю границу ограничительной рамки формулы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -276,9 +256,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathBorderBox" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -308,10 +286,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляющий диагональные зачеркивание из нижнего левого угла в верхний правый. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , представляющее диагональное зачеркивание слева направого нижнего угла. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,10 +317,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , представляющий горизонтальную зачеркивание. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , представляющее горизонтальное зачеркивание. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -374,10 +348,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , который представляет диагональные зачеркивание от левого верхнего угла в правом нижнем углу. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , представляющее диагональное зачеркивание от левого верхнего угла до правого нижнего. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -407,10 +379,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , представляющий вертикальной зачеркивание. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , представляющее вертикальное зачеркивание. Для чтения и записи.</summary>
+        <value><b>Логический</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

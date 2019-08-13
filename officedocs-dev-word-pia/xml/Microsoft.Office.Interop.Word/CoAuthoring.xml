@@ -1,13 +1,5 @@
 <Type Name="CoAuthoring" FullName="Microsoft.Office.Interop.Word.CoAuthoring">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d195f255aaf0a9c9baac4c0c2a349c00374fd387" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673188" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CoAuthoring" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="aa37e28413aff41cf5c8b6361b6d410b11b49671" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147272" /></Metadata><TypeSignature Language="C#" Value="public interface CoAuthoring" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthoring" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthoring" />
   <TypeSignature Language="VB.NET" Value="Public Interface CoAuthoring" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит основной точкой входа для совместного редактирования объектной модели.</summary>
-    <remarks>
-      <para>Объект <b>CoAuthoring</b> предоставляет сведения о совместной работы на уровне документа. Например объект <b>CoAuthoring</b> может предоставлять сведения о ли в документе, пользователей, имеющих текущие блокировки на документе, все блокировки или из или не обновлений содержимого документа доступна с сервера. Использование <see cref="T:Microsoft.Office.Interop.Word.Document.CoAuthoring" /> свойство для возврата объекта <b>CoAuthoring</b> .</para>
-      <para />
-    </remarks>
+    <summary>Предоставляет основную точку входа для объектной модели совместного редактирования.</summary>
+    <remarks><para>Объект совместного <b>редактирования</b> предоставляет сведения о совместном редактировании на уровне документа. Например, объект <b>совместной разработки</b> может содержать сведения о наличии блокировок в документе, в которых пользователи имеют текущие блокировки документа, а также сведения о том, доступен ли доступ к содержимому документа с сервера. Используйте <see cref="T:Microsoft.Office.Interop.Word.Document.CoAuthoring" /> свойство, чтобы возвратить объект <b>совместного редактирования</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,12 +47,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Authors">
@@ -88,12 +75,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthors</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекции, представляющей совместного авторов, в настоящее время редактирования документа.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекции, представляющей совместного авторов, в настоящее время редактирования документа.</value>
-        <remarks>
-          <para>Только для чтения. Коллекции, возвращаемой этим свойством является статическим. При сборе сохраненных и затем новый пользователям начать редактирование документа, или текущей пользователи больше не изменяют документа, сохраненные семейства сайтов не изменяется.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекцию, которая представляет всех авторов, которые в настоящее время редактируют документ.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> Коллекция, представляющая все авторы, которые в настоящее время редактируют документ.</value>
+        <remarks><para>Только для чтения. Коллекция, возвращаемая этим свойством, является статической. Если эта коллекция хранится, а затем новые пользователи начинают редактировать документ, или текущие пользователи больше не редактируют документ, хранимая коллекция не изменяется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanMerge">
@@ -119,30 +104,27 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли документ может быть объединены автоматически.</summary>
-        <value>
-          <b>значение true,</b> Если документ может быть автоматически объединить; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только документы, расположенные в библиотеке документов Microsoft SharePoint Server 2010 могут быть объединены автоматически. Кроме того, документе, используя следующие функции не может быть слиянием auto:</para>
+        <summary>Получает значение, указывающее, может ли документ быть автоматически объединен.</summary>
+        <value><b>значение true</b> , если документ можно автоматически объединить; в противном случае — <b>false</b>.</value>
+        <remarks><para>Автоматическое слияние допускается только для документов, расположенных в библиотеке документов Microsoft SharePoint Server 2010. Кроме того, документ со следующими компонентами невозможно автоматически объединить:</para>
           <list type="bullet">
             <item>
-              <para>Управления цифровыми правами</para>
+              <para>Управление цифровыми правами</para>
             </item>
             <item>
-              <para>Цифровых подписей</para>
+              <para>Цифровые подписи</para>
             </item>
             <item>
-              <para>окончательный режим</para>
+              <para>Конечный режим</para>
             </item>
             <item>
-              <para>шифрования</para>
+              <para>Шифрование</para>
             </item>
             <item>
-              <para>роль главный документ</para>
+              <para>Роль главного документа</para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanShare">
@@ -168,13 +150,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли этот документ может быть совместное редактирование.</summary>
-        <value>
-          <b>значение true,</b> Если этот документ можно выпущенной; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения. Это свойство имеет <b>значение true</b> , только если <see cref="P:Microsoft.Office.Interop.Word.CoAuthoring.CanMerge" /> свойство имеет <b>значение true</b> , а документ — это файл с расширением DOCX.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает расположение, указывающее, можно ли редактировать документ.</summary>
+        <value><b>значение true</b> , если документ можно совместно редактировать; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения. Это свойство имеет <b>значение true</b> , только <see cref="P:Microsoft.Office.Interop.Word.CoAuthoring.CanMerge" /> если свойство имеет <b>значение true</b> , а документ является docx-файлом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Conflicts">
@@ -200,12 +179,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Conflicts</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> коллекции, представляющей всех конфликтов в документе.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> коллекции, представляющей всех конфликтов в документе.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> коллекцию, которая представляет все конфликты в документе.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> Коллекция, представляющая все конфликты в документе.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -231,14 +208,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание!</b>это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Locks">
@@ -264,12 +239,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthLocks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекции, представляющей блокировки в документе.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекции, представляющей блокировки в документе.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекцию, представляющую блокировку в документе.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> Коллекция, представляющая блокировки в документе.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Me">
@@ -295,12 +268,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объект, который представляет текущего пользователя.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объект, который представляет текущего пользователя.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объект, представляющий текущего пользователя.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> Объект, представляющий текущего пользователя.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -326,9 +297,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthoring" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthoring" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthoring" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthoring" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -355,13 +325,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли в документе есть ожидающих обновлений, которые не были приняты.</summary>
-        <value>
-          <b>значение true,</b> Если в документе есть ожидающих обновлений, которые не были приняты; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, указывающее, есть ли в документе ожидающие обновления, которые не были приняты.</summary>
+        <value><b>значение true</b> , если в документе есть ожидающие обновления, которые не были приняты; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Updates">
@@ -387,12 +354,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthUpdates</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdates" /> коллекции, представляющей все доступные обновления в документ.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdates" /> коллекции, представляющей все доступные обновления в документ.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdates" /> коллекцию, которая представляет все доступные для документа обновления.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdates" /> Коллекция, представляющая все обновления, доступные в документе.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

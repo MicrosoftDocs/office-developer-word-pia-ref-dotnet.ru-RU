@@ -1,13 +1,5 @@
 <Type Name="Category" FullName="Microsoft.Office.Interop.Word.Category">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="60d6731499991e5423f388f2cbbb54d084722c37" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672779" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Category" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d4ebcc53d5d821839f9a81aad950abc6d855e17c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142329" /></Metadata><TypeSignature Language="C#" Value="public interface Category" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Category" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Category" />
   <TypeSignature Language="VB.NET" Value="Public Interface Category" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет отдельные категории типа стандартного блока.</summary>
-    <remarks>
-      <para>Microsoft Office Word использует типы и категорий для организации стандартные блоки. Представленный каждого типа стандартный блок <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> константу. Каждой категории — это уникальная строка, которая определяет пользователя. Word поставляется с предварительно заданных две категории: «Общие» и «Custom»; При необходимости можно создать дополнительные категории.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Category.Type" /> свойства для доступа к типу базовые элементы, связанные с конкретной категории.  Использование <see cref="P:Microsoft.Office.Interop.Word.Category.BuildingBlocks" /> свойства для доступа к коллекции стандартные блоки для категории. </para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Categories.Item(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Categories" /> семейства сайтов для доступа к exising категории, для создания новой категории, используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метод <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> семейства сайтов. Задайте значение <paramref name="Category" /> параметр. </para>
-      <para>Дополнительные сведения о стандартных блоках, в разделе <a href="HV10120827">Работа с стандартные блоки</a></para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельную категорию типа стандартного блока.</summary>
+    <remarks><para>Microsoft Office Word использует типы и категории для упорядочения стандартных блоков. Каждый тип стандартного блока представлен <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> константой. Каждая категория — это уникальная строка, определяемая пользователем. Word поставляется с двумя уже определенными категориями: "Общие" и "Настраиваемая"; Вы можете создавать дополнительные категории по мере необходимости.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Category.Type" /> свойство, чтобы получить доступ к типу стандартного блока, связанному с определенной категорией.  Используйте <see cref="P:Microsoft.Office.Interop.Word.Category.BuildingBlocks" /> свойство, чтобы получить доступ к коллекции стандартных блоков для категории. </para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Categories.Item(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Categories" /> коллекции для доступа к категории ексисинг; чтобы создать новую категорию, используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метод <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> коллекции. Задайте значение <paramref name="Category" /> параметра. </para>
+      <para>Дополнительные сведения о стандартных блоках см <a href="HV10120827">в разделе Работа с строительными блоками</a></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,9 +50,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -90,9 +78,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает стандартные блоки для категории. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,16 +105,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -154,10 +136,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение элемента в коллекции. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает позицию элемента в коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -185,9 +165,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает имя указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -214,10 +192,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект объекта указанной <b>категории</b> .</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного объекта <b>Category</b> .</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -244,10 +220,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.BuildingBlockType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип стандартных блоков для стандартного блока категории. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" />
-        </value>
+        <summary>Возвращает тип стандартного блока для категории стандартного блока. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="TextColumns" FullName="Microsoft.Office.Interop.Word.TextColumns">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8dbb16690af8ebe16762e0c55b824b7bfb1c1353" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672787" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TextColumns : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c1d6c908a7e72752109b1c98cf6bbd36a0e9196e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143828" /></Metadata><TypeSignature Language="C#" Value="public interface TextColumns : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextColumns implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextColumns" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextColumns&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объекты, которые представляют все столбцы текста в документе или разделе документа.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.PageSetup.TextColumns" /> свойство для возврата коллекции <b>TextColumns</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить столбец в коллекцию столбцов. По умолчанию существует один столбец текста в коллекции <b>TextColumns</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.TextColumns.SetCount(System.Int32)" /> метод, чтобы поместить текст в столбцах.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объектов, представляющих все столбцы текста в документе или разделе документа.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.PageSetup.TextColumns" /> свойство, чтобы возвратить коллекцию <b>TextColumns</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить столбец в коллекцию столбцов. По умолчанию в коллекции <b>TextColumns</b> существует один текстовый столбец.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TextColumns.SetCount(System.Int32)" /> метод для выравнивания текста по столбцам.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -63,10 +53,10 @@
         <Parameter Name="EvenlySpaced" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Width">Необязательный элемент <b>Object</b>. Ширина нового столбца текста в документе в пунктах.</param>
-        <param name="Spacing">Необязательный элемент <b>Object</b>. Разделитель между столбцами текста в документе в пунктах.</param>
-        <param name="EvenlySpaced">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы равномерное текстовым столбцам значения в документ.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объект, представляющий новый столбец текст добавлен раздел или документу.</summary>
+        <param name="Width">Необязательный <b>объект</b>. Ширина нового текстового столбца в документе в пунктах.</param>
+        <param name="Spacing">Необязательный <b>объект</b>. Расстояние между текстовыми столбцами в документе в пунктах.</param>
+        <param name="EvenlySpaced">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы равномерно указать все текстовые столбцы в документе.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объект, представляющий новый текстовый столбец, добавленный в раздел или документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -122,7 +112,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,11 +140,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EvenlySpaced">
@@ -183,13 +173,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если равномерно текстовым столбцам. Может быть <b>значение True</b>, <b>False</b>или <b>wdUndefined</b>.</summary>
+        <summary><b>Значение true</b> , если для текстовых столбцов задано равномерное пространство. Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если задать <see cref="P:Microsoft.Office.Interop.Word.TextColumns.Spacing" /> или <see cref="P:Microsoft.Office.Interop.Word.TextColumns.Width" /> свойства <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> объекта, свойство <b>EvenlySpaced</b> автоматически устанавливается значение <b>True</b>. Кроме того свойство <b>EvenlySpaced</b> может изменить параметры для свойства <b>интервалы</b> и <b>Ширина</b> объекта <b>TextColumns</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы задаете <see cref="P:Microsoft.Office.Interop.Word.TextColumns.Width" /> значение свойства <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> <see cref="P:Microsoft.Office.Interop.Word.TextColumns.Spacing" /> или объекта, свойству <b>евенлиспацед</b> автоматически присваивается значение <b>true</b>. Кроме того, установка свойства <b>евенлиспацед</b> может изменить параметры интервалов и <b></b> <b>ширины</b> объекта <b>TextColumns</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FlowDirection">
@@ -218,17 +205,15 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFlowDirection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает направление в какие потоки текст из одного текстового столбца к другому.</summary>
+        <summary>Возвращает или задает направление, в котором текст перетекает из одного текстового столбца в следующий.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdFlowDirection" />может быть одной из следующих констант <b>вдфловдиректион</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdFlowDirection" />может иметь одно из следующих констант <b>WdFlowDirection</b> : </para>
+            <b>вдфловлтр </b>— текст в столбцах направляется слева направо. </para>
           <para>
-            <b>wdFlowLtr </b>— текст в столбцах потоки слева направо.</para>
-          <para>
-            <b>wdFlowRtl </b>— потоки текст в столбцах справа налево.</para>
-          <para />
-        </remarks>
+            <b>вдфловртл </b>— текст в столбцах направляется справа налево.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -289,9 +274,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -322,8 +306,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если появляются вертикальной линии между все столбцы в <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> семейства сайтов. Может быть <b>значение True</b>, <b>False</b>или <b>wdUndefined</b>.</summary>
+        <summary><b>Значение true</b> , если вертикальные линии отображаются между всеми столбцами в <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> коллекции. Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -351,7 +334,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -379,13 +362,11 @@
         <Parameter Name="NumColumns" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="NumColumns">Требуется <b>целое число</b>. Число столбцов, должен быть организованы в текст.</param>
-        <summary>Располагает текст в указанное число столбцов текста.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Вы также можете использовать <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> объект, который требуется добавить одного столбца в коллекцию <b>TextColumns</b> .</para>
-          <para />
-        </remarks>
+        <param name="NumColumns">Обязательный атрибут типа <b>Integer</b>. Число столбцов, в которые необходимо упорядочить текст.</param>
+        <summary>Упорядочивает текст по указанному числу столбцов текста.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Кроме того, с помощью <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метода <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> объекта можно добавить один столбец в коллекцию <b>TextColumns</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Spacing">
@@ -414,12 +395,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает интервал (в точках) между столбцами <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> объекта.</summary>
+        <summary>Возвращает или задает расстояние между столбцами <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> объекта (в пунктах).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>После этого свойства для объекта <b>TextColumns</b><see cref="P:Microsoft.Office.Interop.Word.TextColumns.EvenlySpaced" /> задано значение <b>True</b>. Чтобы вернуть или задать интервалы для одного текстового столбца при <see cref="P:Microsoft.Office.Interop.Word.TextColumns.EvenlySpaced" /> равно <b>False</b>, использование <see cref="P:Microsoft.Office.Interop.Word.TextColumn.SpaceAfter" /> свойства <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>После задания этого свойства для объекта <b>TextColumns</b> <see cref="P:Microsoft.Office.Interop.Word.TextColumns.EvenlySpaced" /> свойство будет иметь значение <b>true</b>. Чтобы вернуть или задать интервалы для <see cref="P:Microsoft.Office.Interop.Word.TextColumns.EvenlySpaced" /> столбца с одним текстовым значением <b>false</b>, используйте <see cref="P:Microsoft.Office.Interop.Word.TextColumn.SpaceAfter" /> свойство <see cref="T:Microsoft.Office.Interop.Word.TextColumn" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">

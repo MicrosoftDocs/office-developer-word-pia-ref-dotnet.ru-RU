@@ -1,13 +1,5 @@
 <Type Name="ContentControl" FullName="Microsoft.Office.Interop.Word.ContentControl">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="cc2bb690be9293f31f98e8e695e89ae1d1508d27" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673527" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ContentControl" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2847f454c15d707ff146dc7c527cbd9a80f88237" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147293" /></Metadata><TypeSignature Language="C#" Value="public interface ContentControl" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControl" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ContentControl" />
   <TypeSignature Language="VB.NET" Value="Public Interface ContentControl" />
@@ -26,12 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Отдельного элемента управления контентом. Элементы управления содержимым ограниченного и потенциально с меткой областей в документе, которые используются в качестве контейнеров для определенных типов содержимого. Отдельные элементы управления содержимым может содержать содержимое, например даты, списки или абзацы форматированного текста. Объект <b>ContentControl</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ContentControls" /> семейства сайтов.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ContentControls.Add(Microsoft.Office.Interop.Word.WdContentControlType,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ContentControls" /> семейства сайтов для создания элемента управления контентом. Использование <paramref name="Type" /> параметра метода <b>Add</b> , чтобы указать тип элемента управления содержимым для создания. </para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> свойства для изменения элемента управления контентом для различных типов элементов управления содержимым.  Например возможно нужно изменить из элемента управления даты для элемента управления. Тем не менее вы может не иметь возможность изменять все элементы управления содержимым в другой тип; Некоторые не допускаются изменения их типа.  Кроме того в зависимости от содержимого элемента управления содержимым, нельзя изменять тип. Например, если управления содержимым, который требуется изменить, чтобы запретить тип контента, который находится в существующего элемента управления контентом, попытка изменить тип не допускается и возникает ошибка времени выполнения.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.ContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы изменить замещающий текст из строки по умолчанию на что-то более подходящее для элемента управления. Использование <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Title" /> свойство, чтобы задать текст заголовка для элемента управления.  Отображает над элементом управления при курсор размещается внутри элемента управления или при наведении указателя мыши на элемент управления.</para>
-      <para>В зависимости от типа элемента управления содержимым, у вас есть, вы может не иметь возможность использовать все свойства и методы объекта <b>ContentControl</b> .</para>
+    <summary>Отдельный элемент управления содержимым. Элементы управления контентом — это связанные и, возможно, помеченные фрагменты документа, выполняющие роль контейнеров для определенных типов содержимого. Отдельные элементы управления содержимым могут содержать такие элементы, как даты, списки или абзацы форматированного текста. Объект <b>ContentControl</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.ContentControls" /> коллекции.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControls.Add(Microsoft.Office.Interop.Word.WdContentControlType,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ContentControls" /> коллекции для создания элемента управления содержимым. Используйте <paramref name="Type" /> параметр метода <b>Add</b> , чтобы указать тип создаваемого элемента управления содержимым. </para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> свойство, чтобы изменить элемент управления содержимым на другой тип элемента управления содержимым.  Например, вы хотите изменить элемент управления даты с помощью элемента управления "текст". Однако вы не можете изменить все элементы управления содержимым на другой тип; Некоторые из них могут не допускать изменения типа.  Кроме того, в зависимости от содержимого элемента управления контентом тип может быть недоступен для изменения. Например, если элемент управления содержимым, который требуется изменить, не поддерживает тип контента, который находится в существующем элементе управления содержимым, попытка изменить тип не допускается и создает ошибку во время выполнения.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы изменить замещающий текст из строки по умолчанию на нечто более подходящее для элемента управления. Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Title" /> свойство, чтобы указать текст заголовка для элемента управления.  Отображается над элементом управления, когда курсор располагается внутри элемента управления или указатель мыши наведен на элемент управления.</para>
+      <para>В зависимости от типа имеющегося элемента управления контентом может быть невозможно использовать все свойства и методы объекта <b>ContentControl</b> .</para>
       <code />
       <para>Not all content control properties apply to all the different types of content controls.  The following table lists which properties apply to which types of content controls.</para>
       <list type="table">
@@ -76,8 +67,7 @@
           <description>Group content controls (<see cref="F:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup" />)</description>
         </item>
       </list>
-      <para />
-    </remarks>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AllowInsertDeleteSection">
@@ -106,12 +96,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает ли пользователи могут добавлять или удалять разделы из указанного повторяющийся раздел содержимого элемента управления с помощью пользовательского интерфейса.</summary>
+        <summary>Получает или задает значение, указывающее, могут ли пользователи добавлять или удалять разделы из указанного элемента управления содержимым "повторяющийся раздел" с помощью пользовательского интерфейса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно использовать только с повторяющийся раздел элементов управления контентом. С помощью других эффект сообщение об ошибке приведет к элементам управления содержимым.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство можно использовать только с элементами управления содержимым "повторяющийся раздел". Использование этого элемента с другими элементами управления содержимым приведет к появлению сообщения об ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Appearance">
@@ -169,9 +157,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -201,14 +187,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает категорию для элемента управления содержимым стандартного блока. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Это свойство применяется только к элементам управления содержимым стандартного блока и соответствующий параметр категории в диалоговом окне Свойства элемента управления контентом. Это свойство можно задать любую строку; Тем не менее если задать его к типу string, для которого нет соответствующего категории, значение параметра категории имеет значение "(все категории)».</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает категорию для элемента управления содержимым "Стандартный блок". Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Это свойство применяется только к компоновочным элементам управления содержимым и соответствует параметру Category в диалоговом окне Свойства элемента управления контентом. Этому свойству можно присвоить любую строку; Тем не менее, если задана строка, для которой нет соответствующей категории, для параметра Category устанавливается значение "(все категории)".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildingBlockType">
@@ -237,34 +219,30 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdBuildingBlockTypes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип стандартных блоков для элемента управления содержимым стандартного блока. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" />
-        </value>
-        <remarks>
-          <para>Это свойство применяется только к содержимое стандартного блока элементов управления и соответствующий вариант коллекции в диалоговом окне Свойства элемента управления контентом. Это свойство можно задать только для следующих типов стандартный блок:</para>
+        <summary>Возвращает или задает тип стандартного блока для элемента управления содержимым "Стандартный блок". Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /></value>
+        <remarks><para>Это свойство применяется только к стандартным элементам управления содержимым и соответствует параметру коллекции в диалоговом окне Свойства элемента управления контентом. Это свойство можно задать только для следующих типов стандартных блоков:</para>
           <list type="bullet">
             <item>
-              <para>Настраиваемых экспресс-блоков</para>
+              <para>Настраиваемый с 1 по настраиваемому 5</para>
             </item>
             <item>
-              <para>Автотекст настраиваемых</para>
+              <para>Элемента</para>
             </item>
             <item>
-              <para>формул</para>
+              <para>Быстрые блоки</para>
             </item>
             <item>
-              <para>метод 1-5 настраиваемых</para>
+              <para>Настраиваемый Автотекст</para>
             </item>
             <item>
-              <para>автотекста</para>
+              <para>Настраиваемые быстрые блоки</para>
             </item>
             <item>
-              <para>Экспресс-блоки</para>
+              <para>Формулы</para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Checked">
@@ -293,13 +271,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает текущее состояние (или снятии флажка) для флажка.</summary>
-        <value>
-          <b>значение true,</b> Если установлен флажок; в противном случае; <b>значение false</b>.</value>
-        <remarks>
-          <para>Чтение и запись. Свойство позволяет получить или задать текущее состояние элемента управления содержимым "флажок". Если элемент управления не флажок, пытается получить доступ к свойство сбой с ошибкой во время выполнения, «это свойство доступно только для элементов управления содержимым "флажок".»</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает текущее состояние флажка (флажок установлен/снят).</summary>
+        <value><b>значение true</b> , если флажок установлен; другое <b>false</b>.</value>
+        <remarks><para>Для чтения и записи. Это свойство используется для получения или задания текущего состояния для элемента управления содержимым "флажок". Если элемент управления не является флажком, попытка получить доступ к свойству завершается с ошибкой времени выполнения. это свойство доступно только для элементов управления содержимым "флажок".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Color">
@@ -354,11 +329,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирует элемент управления содержимым из активных документов в буфер обмена.</summary>
-        <remarks>
-          <para>При использовании метода <b>копии</b> исходного элемента управления контентом остается в активный документ, но копию элемента управления, включая все параметры текста и свойства, помещаются в буфер обмена. Элемент управления содержимым можно вставить в других разделах активных документов. Используйте <see cref="M:Microsoft.Office.Interop.Word.Selection.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект или <see cref="M:Microsoft.Office.Interop.Word.Range.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект для вставки скопированного элемента управления контентом, или использовать функцию Вставить в Microsoft Office Word.</para>
-          <para />
-        </remarks>
+        <summary>Копирует элемент управления содержимым из активного документа в буфер обмена.</summary>
+        <remarks><para>При использовании метода <b>Copy</b> исходный элемент управления содержимым остается в активном документе, но копия элемента управления, включая все параметры текста и свойств, перемещается в буфер обмена. После этого вы можете вставить элемент управления содержимым в другие разделы активного документа. Используйте <see cref="M:Microsoft.Office.Interop.Word.Selection.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта или <see cref="M:Microsoft.Office.Interop.Word.Range.Paste" /> метода <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта, чтобы вставить скопированный элемент управления содержимым, или используйте функцию Вставить из Microsoft Office Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -384,16 +357,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -417,11 +386,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет элемент управления содержимым из активных документов и перемещает элемент управления содержимым в буфер обмена.</summary>
-        <remarks>
-          <para>При использовании метода <b>копии</b> исходного элемента управления контентом остается в активный документ, но копию элемента управления, включая все параметры текста и свойства, помещаются в буфер обмена. Элемент управления содержимым можно вставить в других разделах активных документов. Используйте <see cref="M:Microsoft.Office.Interop.Word.Selection.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект или <see cref="M:Microsoft.Office.Interop.Word.Range.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект для вставки скопированного элемента управления контентом, или использовать функцию Вставить в Microsoft Office Word.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет элемент управления содержимым из активного документа и перемещает элемент управления содержимым в буфер обмена.</summary>
+        <remarks><para>При использовании метода <b>Copy</b> исходный элемент управления содержимым остается в активном документе, но копия элемента управления, включая все параметры текста и свойств, перемещается в буфер обмена. После этого вы можете вставить элемент управления содержимым в другие разделы активного документа. Используйте <see cref="M:Microsoft.Office.Interop.Word.Selection.Paste" /> метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта или <see cref="M:Microsoft.Office.Interop.Word.Range.Paste" /> метода <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта, чтобы вставить скопированный элемент управления содержимым, или используйте функцию Вставить из Microsoft Office Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DateCalendarType">
@@ -450,10 +417,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCalendarType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип календаря для элемента управления контентом календаря.  Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdCalendarType" />
-        </value>
+        <summary>Возвращает или задает тип календаря для элемента управления содержимым "Календарь".  Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdCalendarType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -483,14 +448,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает формат даты. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Формат по умолчанию используется формат, указанный в Microsoft Office Word в системе пользователя, который обычно зависит от расположения в Microsoft Windows. Например по умолчанию формат даты для Английский (США) «мм/дд/гггг». Использование <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateDisplayFormat" /> свойство, чтобы указать другой формат.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает формат, в котором отображаются даты. Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para>По умолчанию используется формат, заданный в Microsoft Office Word для системы пользователей, который обычно зависит от параметра расположения в Microsoft Windows. Например, по умолчанию используется формат даты "Английский (США)" ("мм/дд/гггг"). Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateDisplayFormat" /> свойство, чтобы указать другой формат даты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DateDisplayLocale">
@@ -519,14 +480,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает язык для даты, отображаемые в элементе управления содержимым даты. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" />
-        </value>
-        <remarks>
-          <para>По умолчанию <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateDisplayLocale" /> изначально свойству язык редактирования, указанное в Microsoft Office Word, если он отличается от расположения, указанного в Microsoft Windows.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает языковой формат даты, отображаемой в элементе управления содержимым "Дата". Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /></value>
+        <remarks><para>По умолчанию для <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateDisplayLocale" /> свойства изначально задается язык редактирования, указанный в Microsoft Office Word, если он отличается от расположения, указанного в Microsoft Windows.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DateStorageFormat">
@@ -555,15 +512,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает формат для хранения и извлечения даты при привязке к элементу управления контентом даты в хранилище данных XML из активных документов. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" />
-        </value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateStorageFormat" /> Свойство предоставляет возможность сохранения данных в формат даты, формата даты и времени или текстовом формате.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает формат хранения и извлечения дат, когда элемент управления содержимым "Дата" привязан к хранилищу XML-данных активного документа. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdContentControlDateStorageFormat" /></value>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.ContentControl.DateStorageFormat" /> Свойство позволяет хранить даты в формате даты, формате даты/времени или текстовом формате.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultTextStyle">
@@ -592,10 +544,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя стиль символа для форматирования текста в элементе управления содержимым текста. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает или задает имя стиля символов, который будет использоваться для форматирования текста в элементе управления текстовым содержимым. Для чтения и записи.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -621,8 +571,8 @@
         <Parameter Name="DeleteContents" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="DeleteContents">Указывает, следует ли удалять содержимое элемента управления контентом.  <b>Значение true,</b> удаляется элемент управления содержимым и ее содержимое. <b>False</b> удаляет элемент управления, но оставляет содержимое элемента управления контентом в активный документ. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Удаление указанного элемента управления контентом и содержимое элемента управления контентом.</summary>
+        <param name="DeleteContents">Указывает, следует ли удалить содержимое элемента управления содержимым.  <b>Значение true</b> удаляет как элемент управления содержимым, так и его содержимое. <b>False</b> удаляет элемент управления, но оставляет содержимое элемента управления содержимым в активном документе. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Удаляет указанный элемент управления содержимым и содержимое элемента управления содержимым.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -649,10 +599,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ContentControlListEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает элементы в элемент управления содержимым раскрывающегося списка или поля со списком управления содержимым ". Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" />
-        </value>
+        <summary>Возвращает элементы в элементе управления содержимым раскрывающегося списка или в элементе управления содержимым "поле со списком". Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -679,14 +627,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает идентификатор для элемента управления контентом. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Свойство <b>ID</b> является внутренний номер, который не может изменить, но, чтобы использовать для идентификации элемента управления контентом в коде. Этот номер является уникальным для каждого элемента управления содержимым и не изменяется.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает идентификатор для элемента управления содержимым. Только для чтения.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Свойство <b>ID</b> — это внутренний номер, который нельзя изменить, но можно использовать для идентификации элемента управления содержимым в коде. Это значение уникально для каждого элемента управления содержимым и не изменяется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Level">
@@ -712,7 +656,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdContentControlLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень элемента управления содержимым, является ли элемент управления содержимым охватывающего текста, абзацы, ячейки таблицы или строки в таблице; или, если это встроенные. Только для чтения <see cref="T:Microsoft.Office.Interop.Word.WdContentControlLevel" />.</summary>
+        <summary>Возвращает уровень элемента управления содержимым — содержит ли элемент управления содержимым текст, абзацы, ячейки таблицы или строки таблицы; или, если он является встроенным. Только <see cref="T:Microsoft.Office.Interop.Word.WdContentControlLevel" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -743,16 +687,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли пользователь может удалить элемент управления содержимым из активных документов. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию этого свойства имеет <b>значение False</b>.  Это свойство соответствует параметру содержимое элемента управления не может быть удаленных флажок в диалоговом окне свойства содержимого элемента управления.</para>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, может ли пользователь удалить элемент управления содержимым из активного документа. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Значение этого свойства по умолчанию — <b>false</b>.  Это свойство соответствует элементу управления содержимым "не удается удалить" в диалоговом окне Свойства элемента управления контентом.</para>
           <para>
-            <b>Примечание</b>: Если нельзя настраивать данное свойство <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Temporary" /> задано значение <b>True</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: невозможно задать это свойство, если для <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Temporary" /> свойства задано <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LockContents">
@@ -781,14 +721,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли пользователь может изменять содержимое элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию этого свойства имеет <b>значение False</b>.  Это свойство соответствует параметру содержимого не может быть измененного флажок в диалоговом окне свойства содержимого элемента управления.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, может ли пользователь изменять содержимое элемента управления содержимым. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Значение этого свойства по умолчанию — <b>false</b>.  Это свойство соответствует содержимому, которое нельзя изменить, в диалоговом окне Свойства элемента управления контентом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MultiLine">
@@ -817,14 +753,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>типа Boolean</b> , указывающий ли элемент управления содержимым текста позволяет несколько строк текста. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство применяется только к элементам управления контента текста и элементов управления контентом форматированного текста.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, поддерживает ли элемент управления текстовым контентом несколько строк текста. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство применяется только к элементам управления текстовым содержимым и элементам управления содержимым в форматированном тексте.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -850,10 +782,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает объект, представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -880,14 +810,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ContentControl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительского элемента управления содержимым контента управления, являющийся вложенных в форматированного текста элементов управления или группы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ContentControl" />
-        </value>
-        <remarks>
-          <para>Если элемент управления содержимым не вложенным, этот proprerty возвращает ошибку.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает родительский элемент управления содержимым для элемента управления содержимым, вложенного в элемент управления "форматированный текст" или "Группа". Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ContentControl" /></value>
+        <remarks><para>Если элемент управления контентом не является вложенным, то пропрерти возвращает ошибку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PlaceholderText">
@@ -913,12 +839,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.BuildingBlock</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект, представляющий замещающий текст для элемента управления контентом. Только для чтения.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы задать замещающий текст для элемента управления контентом.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект, представляющий замещающий текст для элемента управления содержимым. Только для чтения.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" />значение.</value>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControl.SetPlaceholderText(Microsoft.Office.Interop.Word.BuildingBlock,Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы задать замещающий текст для элемента управления содержимым.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -944,12 +868,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> , который представляет содержимое элемента управления контентом в активном документе. Только для чтения.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" />.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Range" /> свойство для доступа к форматирования текста и других свойств текста текста.  Дополнительные сведения в разделе <a href="HV10056876">Работа с объектами диапазона</a></para>
-          <para />
-        </remarks>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.Range" /> , представляющий содержимое элемента управления содержимым в активном документе. Только для чтения.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" />значение.</value>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Range" /> свойство, чтобы получить доступ к тексту, форматированию текста и другим свойствам текста.  Дополнительные сведения см в разделе <a href="HV10056876">Работа с объектами Range</a></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RepeatingSectionItems">
@@ -975,12 +897,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.RepeatingSectionItemColl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию повторяющийся раздел элементы в указанной повторяющегося раздела элемента управления содержимым. Только для чтения.</summary>
+        <summary>Возвращает коллекцию элементов повторяющихся разделов в указанном элементе управления содержимым "повторяющийся раздел". Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно использовать с повторяющийся раздел элементы управления содержимым только. Использование с другими элементами управления содержимым приведет к ошибке.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство можно использовать только с элементами управления содержимым "повторяющийся раздел". Использование этого элемента с другими элементами управления содержимым приведет к ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RepeatingSectionItemTitle">
@@ -1009,12 +929,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя элементы повторяющегося раздела, используемые в контекстном меню, связанного с указанным повторяющегося раздела элемента управления содержимым. Для чтения и записи.</summary>
+        <summary>Возвращает или задает имя элементов повторяющихся разделов, используемых в контекстном меню, связанном с указанным элементом управления содержимым "повторяющийся раздел". Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно использовать с повторяющийся раздел элементы управления содержимым только. Использование с другими элементами управления содержимым приведет к ошибке.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство можно использовать только с элементами управления содержимым "повторяющийся раздел". Использование этого элемента с другими элементами управления содержимым приведет к ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetCheckedSymbol">
@@ -1040,9 +958,9 @@
         <Parameter Name="Font" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="CharacterNumber">Номер знака Unicode для указанного символа. Это значение всегда будет представлять собой сумму 31 (числа символов управления в начале шрифта) и номер, соответствующий позиции символа в таблице символов (начиная с слева направо). Например, чтобы указать символ дельты позиции 37 в таблице символов символов шрифта, задайте <paramref name="CharacterNumber" /> для 68.</param>
-        <param name="Font">Имя шрифта, которая содержит символ.</param>
-        <summary>Задает символ, используемый для представления состояние проверки элемента управления содержимым "флажок".</summary>
+        <param name="CharacterNumber">Номер знака Юникода для указанного символа. Это значение всегда будет равно сумме 31 (число управляющих символов в начале шрифта) и число, соответствующее позиции символа в таблице символов (считая слева направо). Например, чтобы указать разностный символ в позиции 37 в таблице символов шрифта Symbol, установите значение <paramref name="CharacterNumber" /> 68.</param>
+        <param name="Font">Имя шрифта, содержащего символ.</param>
+        <summary>Задает символ, используемый для представления отмеченного состояния элемента управления содержимым "флажок".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1069,14 +987,12 @@
         <Parameter Name="Text" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="BuildingBlock">Указывает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект, который содержит содержимое замещающий текст.</param>
-        <param name="Range">Указывает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который содержит содержимое замещающий текст.</param>
-        <param name="Text">Задает содержимое замещающий текст.</param>
-        <summary>Задает замещающий текст, который отображается в элементе управления содержимым, пока пользователь вводит свои собственные текст.</summary>
-        <remarks>
-          <para>При указании замещающий текст, используется только один из параметров.  Если используется несколько параметров, текст, заданный в качестве первого параметра используется Microsoft Office Word. Если все параметры были пропущены, замещающий текст не задан.</para>
-          <para />
-        </remarks>
+        <param name="BuildingBlock">Задает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект, который содержит содержимое заполнительного текста.</param>
+        <param name="Range">Задает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который содержит содержимое заполнительного текста.</param>
+        <param name="Text">Задает содержимое заполнительного текста.</param>
+        <summary>Задает замещающий текст, который отображается в элементе управления контентом до тех пор, пока пользователь не введет собственный текст.</summary>
+        <remarks><para>При указании замещающего текста используется только один параметр.  Если используется более одного параметра, Microsoft Office Word использует текст, указанный в первом параметре. Если все параметры опущены, замещающий текст пуст.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetUncheckedSymbol">
@@ -1102,9 +1018,9 @@
         <Parameter Name="Font" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="CharacterNumber">Номер знака Unicode для указанного символа. Это значение всегда будет представлять собой сумму 31 (числа символов управления в начале шрифта) и номер, соответствующий позиции символа в таблице символов (начиная с слева направо). Например, чтобы указать символ дельты позиции 37 в таблице символов символов шрифта, задайте <paramref name="CharacterNumber" /> для 68.</param>
-        <param name="Font">Имя шрифта, которая содержит символ.</param>
-        <summary>Задает символ, используемый для представления со снятым состояния элемента управления содержимым "флажок".</summary>
+        <param name="CharacterNumber">Номер знака Юникода для указанного символа. Это значение всегда будет равно сумме 31 (число управляющих символов в начале шрифта) и число, соответствующее позиции символа в таблице символов (считая слева направо). Например, чтобы указать разностный символ в позиции 37 в таблице символов шрифта Symbol, установите значение <paramref name="CharacterNumber" /> 68.</param>
+        <param name="Font">Имя шрифта, содержащего символ.</param>
+        <summary>Задает символ, используемый для представления неустановленного состояния элемента управления содержимым "флажок".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1131,10 +1047,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающее, отображается ли замещающий текст для элемента управления контентом. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, отображается ли замещающий текст для элемента управления содержимым. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1164,15 +1078,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, определяющее элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Tag" /> Свойства отличается от <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Title" /> свойство в том, что тег никогда не отображаются при пользователь изменяет документ.  Вместо этого разработчики могут использовать его для хранения значения для программной обработки, при открытии документа.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение для идентификации элемента управления содержимым. Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.ContentControl.Tag" /> Свойство отличается от свойства тем <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Title" /> , что тег никогда не отображается при редактировании документа пользователем.  Вместо этого разработчики могут использовать его для хранения значения программной манипуляции при открытии документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Temporary">
@@ -1201,16 +1110,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли удалить элемент управления содержимым из активных документов при редактировании содержимое элемента управления. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию — <b>False</b>. Это свойство соответствует элементу управления контентом Remove, когда содержимое измененного флажок в диалоговом окне Свойства элемента управления контентом.</para>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли удалить элемент управления содержимым из активного документа, когда пользователь редактирует содержимое этого элемента управления. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Значение по умолчанию — <b>False</b>. Это свойство соответствует флажку удалить элемент управления содержимым при редактировании содержимого в диалоговом окне Свойства элемента управления контентом.</para>
           <para>
-            <b>Примечание</b>: Если нельзя настраивать данное свойство <see cref="P:Microsoft.Office.Interop.Word.ContentControl.LockContentControl" /> задано значение <b>True</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: невозможно задать это свойство, если для <see cref="P:Microsoft.Office.Interop.Word.ContentControl.LockContentControl" /> свойства задано <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Title">
@@ -1239,10 +1144,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок для элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает или задает заголовок для элемента управления содержимым. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1272,14 +1175,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdContentControlType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип для элемента управления контентом. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdContentControlType" />
-        </value>
-        <remarks>
-          <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> свойство, чтобы изменить тип элемента управления содержимым из одного типа в другой.  Тем не менее возможность изменять тип элемента управления зависит от исходного типа и содержимое внутри элемента управления содержимым во время изменения.  Все элементы управления содержимым можно изменить для форматированного текста или стандартный блок коллекция типа элементов управления содержимым, так как эти типы разрешенных произвольное содержимое.  Для других типов Если содержимое является допустимым для типа, который требуется изменить, затем Изменение типа разрешено.  В противном случае изменения будут отклонены, что приводит к ошибке времени выполнения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает тип элемента управления содержимым. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdContentControlType" /></value>
+        <remarks><para>С помощью <see cref="P:Microsoft.Office.Interop.Word.ContentControl.Type" /> свойства можно изменить тип элемента управления содержимым с одного типа на другой.  Однако возможность изменять тип элемента управления зависит от исходного типа и содержимого внутри элемента управления содержимым во время изменения.  Все элементы управления содержимым можно изменить на элементы управления содержимым "форматированный текст" или "коллекция стандартных блоков", так как эти типы допускают произвольное содержимое.  Для других типов, если контент является допустимым для типа, к которому требуется перейти, то изменение типа разрешено.  В противном случае изменение отклоняется, что приводит к ошибке во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Ungroup">
@@ -1303,11 +1202,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет элемент управления содержимым группы из документа, чтобы больше не являются вложенными и можно свободно редактировать его дочерних элементов управления контентом.</summary>
-        <remarks>
-          <para>Этот метод не выполняется, если запустить его на элемент управления, который не относится к типу <see cref="F:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup" />.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет элемент управления контентом группы из документа, чтобы его дочерние элементы управления содержимым не были вложенными и можно было свободно редактироваться.</summary>
+        <remarks><para>Этот метод завершается с ошибкой, если он выполняется для элемента управления, который <see cref="F:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlGroup" />не является типом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="XMLMapping">
@@ -1333,10 +1230,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLMapping</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает сопоставление элемента управления контентом к XML-данным в хранилище данных документа. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XMLMapping" />
-        </value>
+        <summary>Возвращает сопоставление элемента управления содержимым с данными XML в хранилище данных документа. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XMLMapping" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

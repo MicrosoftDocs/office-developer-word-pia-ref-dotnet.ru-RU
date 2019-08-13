@@ -1,13 +1,5 @@
 <Type Name="ListTemplate" FullName="Microsoft.Office.Interop.Word.ListTemplate">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="6ee663e8d8d86e765adeb286114c48281180a479" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673131" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ListTemplate" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1139c365cea882b428ac0f0075b3c20e4756cad2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144507" /></Metadata><TypeSignature Language="C#" Value="public interface ListTemplate" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListTemplate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListTemplate" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListTemplate" />
@@ -26,18 +18,16 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один список шаблон, который включает в себя все форматирование, определяющий список.</summary>
-    <remarks>
-      <para>Объект <b>ListTemplate</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> семейства сайтов. Каждая из семи форматов (не включая None) на каждом из трех вкладок в маркеры и нумерация диалоговое окно соответствует объект шаблона списка. Эти шаблоны списка предопределенных возможен из трех <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объектов в <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> семейства сайтов. Документы и шаблоны также может содержать коллекции шаблонов списков.</para>
-      <para>Использования <b>ListTemplates</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 7, для возврата шаблон списка одного из коллекции списков.</para>
+    <summary>Представляет один шаблон списка, включающий все форматирование, которое определяет список.</summary>
+    <remarks><para>Объект <b>ListTemplate</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекции. Каждый из семи форматов (не включая None), найденных на каждой из трех вкладок диалогового окна маркеры и нумерация соответствует объекту шаблона списка. Доступ к этим стандартным шаблонам списков можно получить <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> из трех объектов <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> в коллекции. Документы и шаблоны также могут содержать коллекции шаблонов списков.</para>
+      <para>Используйте <b>ListTemplates</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 7, чтобы получить один шаблон списка из коллекции списков.</para>
       <para>
-        <b>Примечание</b>: некоторые свойства и методы — <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" />, например, с помощью шаблонов списков, которые доступны из коллекции списков, не будут работать. Можно изменить эти шаблоны списков, но не может изменить тип коллекции списка (<b>wdBulletGallery</b>, <b>wdNumberGallery</b>или <b>wdOutlineNumberGallery</b>).</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> метод, чтобы добавить шаблон списка в коллекцию шаблонов списков в документа или шаблона.</para>
-      <para>Содержит ли указанного шаблона списков форматирование, встроенной в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойства с помощью объекта <b>ListGallery</b> . Сброс форматирования в исходном формате списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
-      <para>После возврата объекта <b>ListTemplate</b> используйте <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта. С объектом <b>ListLevel</b> у вас есть доступ ко всем свойствам форматирования для указанного списка уровня, таких как <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />, и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" />.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> метод преобразование шаблон списка многоуровневая шаблон одноуровневая.</para>
-      <para />
-    </remarks>
+        <b>Note</b>: некоторые свойства и методы, <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" />, например, не будут работать с шаблонами списков, к которым можно получить доступ из коллекции списков. Вы можете изменить эти шаблоны списков, но не можете изменить тип коллекции списков (<b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>).</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> метод, чтобы добавить шаблон списка в коллекцию шаблонов списков в документе или шаблоне.</para>
+      <para>Чтобы определить, содержит ли указанный шаблон списка форматирование, встроенное в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойство с объектом <b>ListGallery</b> . Чтобы сбросить форматирование к исходному формату списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
+      <para>После возвращения объекта <b>ListTemplate</b> используйте <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объект. С помощью объекта <b>ListLevel</b> вы можете получить доступ ко всем свойствам форматирования для указанного уровня списка, например <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />,,, и. <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /></para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> метод для преобразования шаблона списка с несколькими уровнями в шаблон с одним уровнем.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,13 +80,11 @@
         <Parameter Name="Level" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Level">Необязательный элемент <b>Object</b>. Уровень для форматирования нового списка. При преобразовании многоуровневых списков в одном уровне списка, этот аргумент может быть число от 1 до 9. При преобразовании одноуровневого списка в многоуровневых списков, 1 — только допустимое значение. Если этот аргумент задан, 1 — значение по умолчанию.</param>
-        <summary>Преобразует многоуровневых списков на одном уровне списка или наоборот.</summary>
+        <param name="Level">Необязательный <b>объект</b>. Уровень, используемый для форматирования нового списка. При преобразовании многоуровневого списка в список с одним уровнем этот аргумент может быть числом от 1 до 9. При преобразовании списка из одного уровня в многоуровневый список 1 является единственным допустимым значением. Если этот аргумент опущен, значение по умолчанию — 1.</param>
+        <summary>Преобразует список с несколькими уровнями в список с одним уровнем или наоборот.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Нельзя использовать метод <b>преобразования</b> на шаблон списка, который является производным от <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Невозможно использовать метод <b>Convert</b> для шаблона списка, производного от <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -122,11 +110,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListLevels">
@@ -152,7 +140,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListLevels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекции, представляющей все уровни для указанного <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" />.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекцию, которая представляет все уровни для указанного <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" />объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -214,14 +202,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект является многоуровневого.</summary>
+        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> указанный объект имеет Многоуровневый номер.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Назначить этому свойству значение <b>False</b> преобразует шаблон списка в одном уровне списка, использующего форматирования первый уровень.</para>
-          <para>Нельзя настраивать данное свойство для <b>ListTemplate</b> объект, возвращенный из <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объект.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если задать для этого свойства <b>значение false</b> , шаблон списка будет преобразован в одноуровневый список, использующий форматирование первого уровня.</para>
+          <para>Невозможно задать это свойство для объекта <b>ListTemplate</b> , возвращаемого из <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -247,7 +232,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

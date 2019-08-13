@@ -1,13 +1,5 @@
 <Type Name="LinkFormat" FullName="Microsoft.Office.Interop.Word.LinkFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f8294bafcd1f6920b3ef713f96dedbabca82b54c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673472" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface LinkFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c971517dcfc20eb4687dbc3c18cb470ffe6557a7" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146600" /></Metadata><TypeSignature Language="C#" Value="public interface LinkFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LinkFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.LinkFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface LinkFormat" />
@@ -26,11 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет связывания характеристики для объекта OLE или рисунок.</summary>
-    <remarks>
-      <para>Используйте свойство <b>LinkFormat</b><see cref="T:Microsoft.Office.Interop.Word.Shape" />, <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />, или <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект для возврата объекта <b>LinkFormat</b> .</para>
-      <para>Не все типы фигур, встроенных фигур и полей могут быть связаны с источника. Свойство <b>типа</b><b>фигуры</b> или <b>InlineShape</b> объект позволяет определить, могут быть связаны определенного фигуры. Свойство <b>Type</b> для объекта <b>поля</b> возвращает тип поля.</para> Можно использовать как 
-      <para><see cref="M:Microsoft.Office.Interop.Word.LinkFormat.Update" /> метод и <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.AutoUpdate" /> свойство для обновления ссылок. Для возвращения или задания полный путь для данной ссылки исходного файла, используйте <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceFullName" /> свойство.</para><para /></remarks>
+    <summary>Представляет характеристики связи для объекта или изображения OLE.</summary>
+    <remarks><para>Используйте свойство <b>LinkFormat</b> объекта a <see cref="T:Microsoft.Office.Interop.Word.Shape" />, <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />или <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекта, чтобы возвратить объект <b>LinkFormat</b> .</para>
+      <para>Не все типы фигур, встроенные фигуры и поля могут быть связаны с источником. Используйте свойство <b>Type</b> <b>фигуры</b> или объекта <b>InlineShape</b> , чтобы определить, можно ли связать определенную фигуру. Свойство <b>Type</b> для объекта <b>field</b> Возвращает тип поля.</para>
+      <para>Для обновления ссылок можно использовать <see cref="M:Microsoft.Office.Interop.Word.LinkFormat.Update" /> метод и <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.AutoUpdate" /> свойство. Чтобы вернуть или задать полный путь к исходному файлу определенной ссылки, используйте <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceFullName" /> свойство.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,8 +79,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанная ссылка является автоматическое обновление при открытии файла контейнер или при изменении исходного файла.</summary>
+        <summary><b>Значение true</b> , если указанная ссылка обновляется автоматически при открытии файла контейнера или при изменении исходного файла.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,11 +105,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Разрывы связь между исходный файл и указанный объект OLE, рисунков или связанные поля.</summary>
-        <remarks>
-          <para>При использовании этого метода результата ссылки не будут обновляться автоматически при изменении исходного файла.</para>
-          <para />
-        </remarks>
+        <summary>Разрывает связь между исходным файлом и указанным объектом OLE, рисунком или связанным полем.</summary>
+        <remarks><para>После использования этого метода результаты связи не будут автоматически обновляться при изменении исходного файла.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -144,11 +133,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Locked">
@@ -177,13 +166,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если <see cref="T:Microsoft.Office.Interop.Word.Field" />, <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />, или <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекта будет заблокирована, чтобы запретить автоматическое обновление.</summary>
+        <summary><b>Значение true</b> <see cref="T:Microsoft.Office.Interop.Word.Field" />, если <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />объект, <see cref="T:Microsoft.Office.Interop.Word.Shape" /> или объект заблокирован, чтобы запретить автоматическое обновление.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При использовании этого свойства с объектом <b>фигуры</b> с плавающей связанного рисунка (рисунок добавляется с <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPicture(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> объект), возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы используете это свойство с объектом <b>Shape</b> , связанным с перемещаемым рисунком (изображением, добавленным с <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddPicture(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> помощью <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> метода объекта), возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -209,7 +195,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,13 +226,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный рисунок сохраняется в документе.</summary>
+        <summary><b>Значение true</b> , если указанный рисунок сохраняется вместе с документом.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство работает только с фигуры и встроенных фигур, которые являются связанных рисунков.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство работает только с фигурами и встроенными фигурами, связанными с рисунками.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceFullName">
@@ -275,12 +258,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает путь и имя исходного файла для указанного связанного объекта, рисунков или поля.</summary>
+        <summary>Возвращает или задает путь и имя исходного файла для указанного связанного объекта OLE, рисунка или поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использовать это свойство эквивалентно использованию в последовательности <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourcePath" />, <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" />, и <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceName" /> свойства.</para>
-          <para />
-        </remarks>
+        <remarks><para>Использование этого свойства эквивалентно использованию в последовательности свойств <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourcePath" />, <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" />и, и <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceName" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceName">
@@ -306,12 +287,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя исходного файла для указанного связанного объекта, рисунков или поля.</summary>
+        <summary>Возвращает имя исходного файла для указанного связанного объекта OLE, рисунка или поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не возвращает путь для исходного файла.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не возвращает путь к исходному файлу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourcePath">
@@ -337,12 +316,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает путь к исходному файлу для указанного связанного объекта, рисунков или поля.</summary>
+        <summary>Возвращает путь к исходному файлу для указанного связанного объекта OLE, рисунка или поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака (например, «C:\MSOffice»). Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Используйте <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceName" /> свойство возвращает имя файла без пути и использование <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceFullName" /> свойство возвращает имя файла и путь к друг с другом.</para>
-          <para />
-        </remarks>
+        <remarks><para>Путь не включает замыкающий символ (например, "К:\мсоффице"). Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceName" /> свойство, чтобы возвратить имя файла без пути и использовать <see cref="P:Microsoft.Office.Interop.Word.LinkFormat.SourceFullName" /> свойство для одновременного возврата пути и имени файла.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -370,10 +347,8 @@
       <Docs>
         <summary>Возвращает тип ссылки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLinkType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLinkType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -397,7 +372,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновление указанного ссылки.</summary>
+        <summary>Обновляет указанную ссылку.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

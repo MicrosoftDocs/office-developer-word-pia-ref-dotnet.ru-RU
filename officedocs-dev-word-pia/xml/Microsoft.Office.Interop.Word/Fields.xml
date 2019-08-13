@@ -1,13 +1,5 @@
 <Type Name="Fields" FullName="Microsoft.Office.Interop.Word.Fields">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2fdd77cf26598c9ff9a9d497e81fbed99577fb24" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673326" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Fields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="57c76419b1fbb163aa0a4e6e8b8649d94596aa1d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148077" /></Metadata><TypeSignature Language="C#" Value="public interface Fields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Fields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Fields" />
   <TypeSignature Language="VB.NET" Value="Public Interface Fields&#xA;Implements IEnumerable" />
@@ -30,16 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекты, которые представляют всех полей в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Используйте свойство <b>полей</b> для возврата коллекции <b>полей</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Fields.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить поля в коллекцию <b>полей</b> .</para>
-      <para>Использование <b>полей</b>(<paramref name="index" />), где — индекс <paramref name="index" /> номер, чтобы возвратить объект одного <b>поля</b> . Номер индекса представляет позицию поля выбора, диапазон или документов.</para>
-      <para>Используйте свойство <b>поля</b> с объектом <b>слияния</b> для возврата коллекции <b>MailMergeFields</b> .</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Fields.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте семейства с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Field" /> объектов, представляющих все поля в выделении, диапазоне или документе.</summary>
+    <remarks><para>Используйте свойство <b>Fields</b> , чтобы возвратить коллекцию <b>Fields</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Fields.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить поле в коллекцию <b>Fields</b> .</para>
+      <para>Используйте <b></b>Fields<paramref name="index" />(), где index — <paramref name="index" /> это число, чтобы вернуть один объект <b>field</b> . Номер индекса представляет положение поля в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте свойство <b>Fields</b> с объектом <b>слияния</b> , чтобы возвратить коллекцию <b>MailMergeFields</b> .</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Fields.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> коллекцию с объектом.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -66,17 +55,15 @@
         <Parameter Name="PreserveFormatting" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон, где требуется добавить поле. Если диапазон не будет свернут, поле заменяет диапазон.</param>
-        <param name="Type">Необязательный элемент <b>Object</b>. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" /> константу. Чтобы получить список допустимых констант обратитесь к обозревателя объектов. Значение по умолчанию — <b>wdFieldEmpty</b>.</param>
-        <param name="Text">Необязательный элемент <b>Object</b>. Дополнительный текст, необходимые для поля. К примеру Если необходимо указать параметр для поля, вы бы добавить здесь.</param>
-        <param name="PreserveFormatting">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы форматирование, которая применяется к полю, сохраняется во время обновления.</param>
-        <summary>Добавляет <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект <see cref="T:Microsoft.Office.Interop.Word.Fields" /> семейства сайтов.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, в который требуется добавить поле. Если диапазон не свернут, то поле заменяется диапазоном.</param>
+        <param name="Type">Необязательный <b>объект</b>. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" /> константой. Список допустимых констант можно найти в обозревателе объектов. Значение по умолчанию — <b>вдфиелдемпти</b>.</param>
+        <param name="Text">Необязательный <b>объект</b>. Для поля требуется дополнительный текст. Например, если вы хотите указать переключатель для поля, его можно добавить здесь.</param>
+        <param name="PreserveFormatting">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы форматирование, примененное к полю, сохранялось во время обновлений.</param>
+        <summary>Добавляет <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект в <see cref="T:Microsoft.Office.Interop.Word.Fields" /> коллекцию.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает объект <b>поля</b> в указанном диапазоне.</para>
-          <para>Не удается вставить несколько полей (например, <b>wdFieldOCX</b> и <b>wdFieldFormCheckBox</b>) с помощью метода <b>Add</b> коллекции <b>полей</b> . Вместо этого необходимо использовать отдельных методов, таких как <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEControl(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод и метод <b>Add</b> для <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> семейства.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает объект <b>field</b> в указанном диапазоне.</para>
+          <para>Невозможно вставить некоторые поля (например, <b>вдфиелдоккс</b> и <b>вдфиелдформчеккбокс</b>) с помощью метода <b>Add</b> коллекции Fields. <b></b> Вместо этого необходимо использовать конкретные методы, такие как <see cref="M:Microsoft.Office.Interop.Word.Shapes.AddOLEControl(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод и метод <b>Add</b> , <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> для коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -130,7 +117,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -158,11 +145,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -223,9 +210,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -256,12 +242,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если все поля в <see cref="T:Microsoft.Office.Interop.Word.Fields" /> блокировки семейства сайтов.</summary>
+        <summary>Определяет, заблокированы ли все <see cref="T:Microsoft.Office.Interop.Word.Fields" /> поля в коллекции.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если все поля в <see cref="T:Microsoft.Office.Interop.Word.Fields" /> заблокированы коллекции и <b>значение False,</b> Если это не так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если все поля <see cref="T:Microsoft.Office.Interop.Word.Fields" /> в коллекции заблокированы, и <b>false</b> , если нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -287,7 +271,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -313,11 +297,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Включение и выключение отображения полей между коды полей и значений полей.</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Field.ShowCodes" /> свойство для управления отображением отдельного поля.</para>
-          <para />
-        </remarks>
+        <summary>Переключает отображение полей между кодами поля и результатами поля.</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Field.ShowCodes" /> свойство, чтобы управлять отображением отдельного поля.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Unlink">
@@ -341,11 +323,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Заменяет все поля в <see cref="T:Microsoft.Office.Interop.Word.Fields" /> семейства сайтов с самыми последними результаты.</summary>
-        <remarks>
-          <para>Когда вы разорвать связь с полем, его текущего результат преобразуется в текст или графику и уже не могут быть обновлены автоматически. Обратите внимание на то, что некоторые поля, например полями (запись в индекс) и поля SEQ (последовательность) — не могут быть разорваны.</para>
-          <para />
-        </remarks>
+        <summary>Заменяет все поля в <see cref="T:Microsoft.Office.Interop.Word.Fields" /> коллекции на их последние результаты.</summary>
+        <remarks><para>При разрыве связи с полем его текущий результат преобразуется в текст или графику и больше не может обновляться автоматически. Обратите внимание, что некоторые поля, например поля XE (элемент оглавления) и SEQ (Sequence) Fields, не могут быть несвязанными.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -369,12 +349,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет в результате объект поля.</summary>
+        <summary>Обновляет результат объекта Fields.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>При применении к <see cref="T:Microsoft.Office.Interop.Word.Fields" /> семейства сайтов, возвращает нуль (0), если не происходит ошибки при обновлении поля или возвращает <b>целое число</b> , представляющее индекс первого поля, которое содержит ошибку.</para>
-          <para />
-        </remarks>
+        <remarks><para>При применении к <see cref="T:Microsoft.Office.Interop.Word.Fields" /> коллекции возвращает значение 0 (ноль), если при обновлении полей ошибки не возникают, или возвращает <b>целое число</b> , представляющее индекс первого поля, содержащего ошибку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UpdateSource">
@@ -398,11 +376,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сохраняет изменения, внесенные в результатах поле INCLUDETEXT обратно в исходный документ.</summary>
-        <remarks>
-          <para>Исходный документ должен быть в формате документа Microsoft Word.</para>
-          <para />
-        </remarks>
+        <summary>Сохраняет изменения, внесенные в результаты поля INCLUDETEXT, обратно в исходный документ.</summary>
+        <remarks><para>Исходный документ должен быть отформатирован в виде документа Microsoft Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

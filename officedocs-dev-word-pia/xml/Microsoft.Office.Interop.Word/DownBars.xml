@@ -1,13 +1,5 @@
 <Type Name="DownBars" FullName="Microsoft.Office.Interop.Word.DownBars">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="afe32958072786003f671a96246de5d7c5f9f62b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673295" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DownBars" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f83d3ab2ff75cc5513807729e60d0a241fa1cd13" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144584" /></Metadata><TypeSignature Language="C#" Value="public interface DownBars" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DownBars" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DownBars" />
   <TypeSignature Language="VB.NET" Value="Public Interface DownBars" />
@@ -26,8 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет вниз панелей в группе диаграммы.</summary>
-    <remarks>Полосы повышения и понижения <para>подключение точек от первого ряда в группе диаграммы с помощью меньше значения на последний ряд (строки перейти от первого ряда). Закрытие может иметь только график групп, которые содержат по крайней мере два ряда. Этот объект не является частью коллекции. Нет объекта, который представляет один сервер панели; необходимо полос и закрытие включено для всех точек в группе диаграммы или у вас есть их отключения</para><para>Если <see cref="P:Microsoft.Office.Interop.Word.ChartGroup.HasUpDownBars" /> свойство имеет <b>значение False</b>, большая часть свойств объекта <b>DownBars</b> отключены.</para><para /></remarks>
+    <summary>Представляет полосы понижения в группе диаграммы.</summary>
+    <remarks><para>Полосы понижения соединяют точки в первом ряду в группе диаграммы с нижними значениями последнего ряда (строки переходят из первого ряда). Только двумерные группы линий, которые содержат, содержащие не менее двух рядов, могут иметь полосы понижения. Этот объект не является семейством. Отсутствует объект, представляющий одну полосу понижения; для всех точек в группе диаграмм включены полосы и полосы понижения, либо они отключены.</para>
+      <para>Если <see cref="P:Microsoft.Office.Interop.Word.ChartGroup.HasUpDownBars" /> свойство имеет <b>значение false</b>, большинство свойств объекта <b>DownBars</b> отключаются.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -53,10 +47,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,10 +78,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /> объект, представляющий границы объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /> объект, представляющий границу объекта. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,14 +106,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.DownBars.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.DownBars.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -148,9 +134,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -180,10 +164,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для родительского элемента диаграммы, содержащий заливки параметры форматирования для элемента диаграммы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для родительского элемента диаграммы, содержащего свойства форматирования заливки элемента диаграммы. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -210,12 +192,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
 
-Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,10 +225,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутренней объекта.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Interior" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Interior" /> объект, представляющий внутреннюю часть объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Interior" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -276,9 +254,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>строковое</b> значение, представляющее имя объекта.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -305,10 +281,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -333,10 +307,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

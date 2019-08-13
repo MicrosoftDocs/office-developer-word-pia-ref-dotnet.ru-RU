@@ -1,13 +1,5 @@
 <Type Name="Diagram" FullName="Microsoft.Office.Interop.Word.Diagram">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="716f02ec4b6e7d1f64d0bb8f9f474e53ca6129f2" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673505" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Diagram" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bc06f6c988452cbcd9040e790955deac67b02537" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147105" /></Metadata><TypeSignature Language="C#" Value="public interface Diagram" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Diagram" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Diagram" />
   <TypeSignature Language="VB.NET" Value="Public Interface Diagram" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один схему в документе.</summary>
-    <remarks>
-      <para>Объект <b>диаграммы</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> семейства.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Diagram" /> свойства <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" />, <see cref="T:Microsoft.Office.Interop.Word.Shape" />, и <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекты для возврата объекта <b>схемы</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.Diagram.Convert(Microsoft.Office.Core.MsoDiagramType)" /> метод переход к схемы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Diagram.Reverse" /> свойство, чтобы отразить порядка узлов в схеме.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одну схему в документе.</summary>
+    <remarks><para>Объект <b>Diagram</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Shape.Diagram" /> Используйте свойство объекта <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" />, <see cref="T:Microsoft.Office.Interop.Word.Shape" />и <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекты, чтобы вернуть один объект <b>схемы</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.Diagram.Convert(Microsoft.Office.Core.MsoDiagramType)" /> метод для изменения схемы с одного типа на другой.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Diagram.Reverse" /> свойство, чтобы отразить порядок узлов в схеме.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -89,7 +79,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTriState" /> константу, определяющую состояние автоматического форматирования для диаграммы.</summary>
+        <summary>Задает или возвращает <see cref="T:Microsoft.Office.Core.MsoTriState" /> константу, определяющую состояние автоматического форматирования схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -120,7 +110,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTriState" /> константа, которая определяет автоматическое размещение узлов и соединители в схеме.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTriState" /> константу, определяющую автоматическое позиционирование узлов и соединителей в схеме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,8 +138,8 @@
         <Parameter Name="Type" Type="Microsoft.Office.Core.MsoDiagramType" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Core.MsoDiagramType" />. Тип диаграммы, для которого требуется преобразовать.</param>
-        <summary>Преобразовать диаграмму из одного типа в схему другого типа.</summary>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoDiagramType" />. Тип схемы, для которой необходимо выполнить преобразование.</param>
+        <summary>Преобразует схему одного типа в схему другого типа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,11 +166,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Например, если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FitText">
@@ -204,11 +194,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Изменяет размер текста в узлы в схему, чтобы выходить за границы узлов.</summary>
-        <remarks>
-          <para>Этот метод работает только в Microsoft Office PowerPoint 2003.</para>
-          <para />
-        </remarks>
+        <summary>Настраивает размер текста в узлах схемы для размещения в пределах границ узлов.</summary>
+        <remarks><para>Этот метод работает только в Microsoft Office PowerPoint 2003.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Nodes">
@@ -234,7 +222,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.DiagramNodes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNodes" /> объект, представляющий узлов в схеме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNodes" /> объект, представляющий узлы в схеме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -262,7 +250,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -293,8 +281,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>MsoTrue</b> отменяет узлов в схеме.</summary>
+        <summary><b>Мсотруе</b> отменяет узлы в схеме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -322,7 +309,7 @@
         <ReturnType>Microsoft.Office.Core.MsoDiagramType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип диаграммы.</summary>
+        <summary>Возвращает тип схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

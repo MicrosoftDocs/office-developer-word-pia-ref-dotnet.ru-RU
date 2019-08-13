@@ -1,13 +1,5 @@
 <Type Name="ListGallery" FullName="Microsoft.Office.Interop.Word.ListGallery">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="966516dad1e0dd08ab38c58e333200e586d28db7" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674041" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ListGallery" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5bd7ff965569856360b744ab132d1fadf6ac4b2d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147888" /></Metadata><TypeSignature Language="C#" Value="public interface ListGallery" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListGallery" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListGallery" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListGallery" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию одного из списка форматов.</summary>
-    <remarks>
-      <para>Объект <b>ListGallery</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> семейства сайтов. Каждый объект <b>ListGallery</b> представляет один из трех вкладок в маркеры и нумерация диалоговое.</para>
-      <para>Использования <b>ListGalleries</b>(<paramref name="index" />), где <paramref name="index" /> — это <b>wdBulletGallery</b>, <b>wdNumberGallery</b>или <b>wdOutlineNumberGallery</b>, чтобы возвратить объект <b>ListGallery</b> .</para>
-      <para>Содержит ли указанного шаблона списков форматирование, встроенной в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойства для объекта <b>ListGallery</b> . Сброс форматирования в исходном формате списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельную галерею форматов списка.</summary>
+    <remarks><para>Объект <b>ListGallery</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> коллекции. Каждый объект <b>ListGallery</b> представляет одну из трех вкладок в диалоговом окне "маркеры и нумерация".</para>
+      <para>Используйте <b>ListGalleries</b>(<paramref name="index" />), где <paramref name="index" /> — <b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>, чтобы вернуть один объект <b>ListGallery</b> .</para>
+      <para>Чтобы определить, содержит ли указанный шаблон списка форматирование, встроенное в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойство для объекта <b>ListGallery</b> . Чтобы сбросить форматирование к исходному формату списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListTemplates">
@@ -116,7 +106,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplates</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекции, представляющей список форматов для галереи указанного списка.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекцию, которая представляет все форматы списка для указанной коллекции списков.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,14 +137,11 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Число от 1 до 7, соответствующий позиции шаблона в маркеры и нумерация диалоговое окно "" (меню "Формат"). За исключением ни один параметр, шаблоны нумеруются слева направо, начиная с верхней строке.</param>
-        <summary>
-          <b>Значение true,</b> Если указанный список шаблон не встроенного шаблона для этой позиции в коллекцию списков.</summary>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Число от 1 до 7, соответствующее позиции шаблона в диалоговом окне "маркеры и нумерация" (меню "формат"). За исключением параметра None, шаблоны нумеруются слева направо, начиная с верхней строки.</param>
+        <summary><b>Значение true</b> , если указанный шаблон списка не является встроенным шаблоном списка для этой позиции в коллекции списков.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод, чтобы задать шаблон списка в коллекции списков шаблону встроенных списков.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод, чтобы задать шаблон списка в коллекции списков обратно во встроенный шаблон списка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -180,7 +167,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,8 +195,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>.</param>
-        <summary>Восстанавливает указанного шаблона списков для галереи списка в формате шаблона встроенных списков.</summary>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>.</param>
+        <summary>Сбрасывает указанный шаблон списка для коллекции списков со встроенным форматом шаблона списка.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

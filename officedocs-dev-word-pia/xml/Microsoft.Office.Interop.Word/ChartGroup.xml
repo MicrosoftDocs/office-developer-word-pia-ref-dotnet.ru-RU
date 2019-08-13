@@ -1,13 +1,5 @@
 <Type Name="ChartGroup" FullName="Microsoft.Office.Interop.Word.ChartGroup">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4444187f8205ad4277847ad3e62bd596ec10edd2" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673833" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartGroup" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c46b7a3f6b3884f675aec38fe394cce284c200df" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142273" /></Metadata><TypeSignature Language="C#" Value="public interface ChartGroup" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartGroup" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartGroup" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartGroup" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один или несколько рядов на диаграмме с тот же формат.</summary>
-    <remarks>
-      <para>Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько <see cref="T:Microsoft.Office.Interop.Word.Series" /> объекты и каждого ряда содержит один или несколько <see cref="T:Microsoft.Office.Interop.Word.Points" /> объектов. К примеру отдельных диаграмм может содержать группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма. Объект <b>ChartGroup</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> семейства.</para>
-      <para>Использования <b>коллекцию ChartGroups</b>(<paramref name="Index" />), где <paramref name="index" /> — номер диаграмма группы индекса для возврата объекта <b>ChartGroup</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет один или несколько рядов, построенных на диаграмме с одинаковым форматом.</summary>
+    <remarks><para>Диаграмма содержит одну или несколько групп диаграмм, каждая группа диаграммы содержит один или несколько <see cref="T:Microsoft.Office.Interop.Word.Series" /> объектов, и каждый ряд содержит один или несколько <see cref="T:Microsoft.Office.Interop.Word.Points" /> объектов. Например, одна диаграмма может содержать как группу графиков, содержащую все ряды, построенные с помощью линейного формата диаграммы, так и группу линейчатой диаграммы, содержащую все ряды, построенные с помощью формата линейчатой диаграммы. Объект <b>свойство ChartGroup</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> коллекции.</para>
+      <para>Используйте <b>ChartGroups</b>(<paramref name="Index" />), где <paramref name="index" /> — это номер индекса группы диаграммы, чтобы вернуть один объект <b>свойство ChartGroup</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,10 +47,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -90,10 +78,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlAxisGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип группы оси. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlAxisGroup" />
-        </value>
+        <summary>Возвращает тип группы осей. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlAxisGroup" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -123,14 +109,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает коэффициент масштабирования для может передаваться в группе указанную диаграмму.  Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Это свойство можно задать целое число от 0 (ноль) равным 300, соответствующий в процентах от размера по умолчанию.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает коэффициент масштаба для пузырьков в указанной группе диаграммы.  Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Этому свойству можно присвоить целое число от 0 (ноль) до 300, соответствующее проценту от размера по умолчанию. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CategoryCollection">
@@ -158,8 +140,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Номер индекса в коллекции видимым категории категории, которую требуется вернуть.</param>
-        <summary>Возвращает все видимым категории в группе диаграммы или указанной категории видимым.</summary>
+        <param name="Index">Номер индекса в коллекции видимых категорий категории, которую требуется возвратить.</param>
+        <summary>Возвращает все видимые категории в группе диаграммы или указанную видимую категорию.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -187,14 +169,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartGroup.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartGroup.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DoughnutHoleSize">
@@ -223,10 +201,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер отверстия в группе кольцевых диаграмм. Размер отверстия выражается в процентном соотношении от размер диаграммы от 10 до 90 процентов. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает размер отверстия в кольцевой группе диаграмм. Размер отверстия выражается в процентном соотношении от размера диаграммы (от 10 до 90 процентов). Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -253,10 +229,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.DownBars</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает вниз панелей на графике. Применяется только к графики. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.DownBars" />
-        </value>
+        <summary>Возвращает полосы понижения на графике. Применяется только к графикам. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.DownBars" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -283,10 +257,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.DropLines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строки размещения сообщений для ряда на графике или области диаграммы. Применяется только к графики и диаграммы с областями. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.DropLines" />
-        </value>
+        <summary>Возвращает линии проекции для ряда на графике или диаграмме с областями. Применяется только к графикам и диаграммам с областями. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.DropLines" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -316,14 +288,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает угол первого сектора круговой диаграммы или кольцевая диаграмма, в градусов (часовой с вертикального). Применяется только к круговая, объемных круговых и кольцевых диаграммах. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Может быть в диапазоне от 0 до 360.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает угол первого сектора круговой или кольцевой диаграммы, в градусах (по часовой стрелке из вертикального положения). Применяется только к круговым, объемным круговым и кольцевым диаграммам. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Может находиться в диапазоне от 0 до 360.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FullCategoryCollection">
@@ -351,8 +319,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Номер индекса в коллекции полный категории категории, которую требуется вернуть.</param>
-        <summary>Возвращает все категории в группе диаграммы или указанной категории, является ли видимым или отфильтрованные выходной параметр.</summary>
+        <param name="Index">Номер индекса в коллекции полных категорий для возвращаемой категории.</param>
+        <summary>Возвращает все категории в группе диаграммы или указанную категорию, будь то видимая или отфильтрованная.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -383,14 +351,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Диаграмм и гистограмм: Возвращает или задает интервалы между строку или столбец кластеры в процентном соотношении от строки или столбца ширины. Вторичная круговая и вторичной гистограммы: Возвращает или задает пространство между разделами основных и дополнительных диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Значение этого свойства должны быть от 0 до 500.</para>
-          <para />
-        </remarks>
+        <summary>Линейчатые диаграммы и гистограммы: Возвращает или задает расстояние между полосами или столбцами в процентах от ширины полосы или столбца. Вторичная круговая диаграмма и круговая диаграмма: Возвращает или задает пространство между основной и дополнительной разделами диаграммы. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Значение этого свойства должно находиться в пределах от 0 до 500.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Has3DShading">
@@ -419,14 +383,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, определяющее Если группа диаграммы имеет трехмерную тени. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если группа диаграммы трехмерную затенение, в противном случае — <b>False</b>.</value>
-        <remarks>
-          <para>
-            <b>Примечание</b>: параметр <b>Has3DShading</b> = <b>False</b> действует как задание диаграммы на «Плоский» или удаление влияние, а параметру <b>Has3DShading</b> = <b>значение True,</b> задает содержимое диаграммы по умолчанию.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает значение, определяющее, будет ли группа диаграммы иметь трехмерную заливку. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если группа диаграммы имеет трехмерную заливку; в противном случае — <b>false</b>.</value>
+        <remarks><para>
+            <b>Note</b>: Установка <b>Has3DShading</b> = <b>false</b> оказывает в результате установки "Flat" для материала диаграммы "Flat" или удаления этого результата, в то время как задание <b>Has3DShading</b> = <b>true</b> устанавливает для содержимого диаграммы значение по умолчанию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasDropLines">
@@ -455,9 +416,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, о том, если на диаграмме есть линии проекции. Применяется только к строке и области диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если график или диаграмма линии проекции; в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, указывающее, есть ли в диаграмме линии проекции. Применяется только к графикам и диаграммам с областями. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в линейной диаграмме или диаграмме с областями имеются линии проекции; в противном случае — <b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -487,9 +447,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, о том, если на диаграмме есть коридор колебания. Применяется только к графики. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если график коридор колебания; в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, указывающее, имеются ли в диаграмме коридор колебания. Применяется только к графикам. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в линейной диаграмме есть коридор колебания; в противном случае — <b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -519,9 +478,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее наличие подписи оси лепестковые диаграммы. Применяется только к лепестковые диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если лепестковые диаграммы подписей осей; в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, указывающее, есть ли в лепестковой диаграмме метки осей. Применяется только к лепестковых диаграммах. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в лепестковой диаграмме имеются метки осей; в противном случае — <b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -551,9 +509,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение о том, если Гистограмма или Линейчатая диаграмма ряда или Вторичная круговая диаграмма или панели круговая диаграмма имеет соединительные линии между два раздела. Применяется только к с накоплением, 2-D с накоплением Гистограмма, Вторичная круговая диаграмма или панели круговой диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение значения, указанные в приведенной ниже таблице согласно условиям, указанным. DescriptionReturn разработчике Вторичная круговая диаграмма или круговой диаграмме, имеющей соединительные линии между два раздела. <b>Значение true</b> Гистограмма или линейчатую диаграмму, которая имеет ряд строк<b>значение True</b>в ином случае<b>значение False</b></value>
+        <summary>Возвращает или задает значение, указывающее, содержит ли гистограмма гистограмму или линейчатую диаграмму с накоплением линии рядов или сектор круговой диаграммы или круговой диаграммы между двумя разделами. Применяется только к двумерной линейчатой диаграмме, двумерной гистограммы, круговой круговой диаграмме или линейчатой диаграмме с накоплением. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение, приведенное в приведенной ниже таблице, в соответствии с указанными условиями. Дескриптионретурнная круговая диаграмма или вторичная круговая диаграмма, в которой есть соединительные линии между двумя разделами. <b>Значение true</b> Гистограмма или линейчатая диаграмма с накоплением со строками<b>true</b>; в противном случае —<b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -583,9 +540,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее наличие диаграммы вверх и вниз панелей. Применяется только к графики. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True,</b> Если график вверх и вниз полосы; в противном случае — <b>False</b>.</value>
+        <summary>Возвращает или задает значение, указывающее, есть ли на диаграмме полосы повышения и понижения. Применяется только к графикам. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если в линейной диаграмме есть полосы повышения и понижения; в противном случае — <b>false</b>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -612,10 +568,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.HiLoLines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коридор колебания для ряда на графике. Применяется только к графики. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.HiLoLines" />
-        </value>
+        <summary>Возвращает коридор колебания для ряда на графике. Применяется только к графикам. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.HiLoLines" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -642,10 +596,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -675,14 +627,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает расположение строки и столбцы. Может быть в диапазоне от-100 до 100. Применяется только к плоских диаграмм и гистограмм 2-D. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если это свойство задано значение – 100, полосы с расположением, чтобы не одно полоса между ними. Если перекрытие нуль (0), нет места между панелей (одной строки начинается сразу после предыдущего панели). Если перекрытие 100, полосы расположены друг на друга.</para>
-          <para />
-        </remarks>
+        <summary>Указывает на расположение строк и столбцов. Может принимать значение от – 100 до 100. Применяется только к двумерным диаграммам и гистограммам. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если для этого свойства задано значение – 100, то полосы располагаются таким образом, чтобы между ними отображалась одна ширина панели. Если перекрытие составляет 0 (ноль), между панелями нет пробела (одна панель начинается сразу же после предыдущего столбца). Если перекрытие составляет 100, полосы располагаются поверх другого.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -708,10 +656,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -738,10 +684,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.TickLabels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает подписями осей для группы указанную диаграмму. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.TickLabels" />
-        </value>
+        <summary>Возвращает метки оси лепестковой диаграммы для указанной группы диаграммы. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.TickLabels" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -771,14 +715,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер дополнительного раздела либо Вторичная круговая диаграмма или панели круговой диаграммы в процентах от размера основной круговой диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Может быть в диапазоне от 5 до 200.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает размер вторичного раздела круга круговой диаграммы либо линии круговой диаграммы в процентах от размера основной круговой диаграммы. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Может находиться в диапазоне от 5 до 200.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SeriesCollection">
@@ -803,10 +743,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный <b>объект</b> имя или номер серии, которые вам следует должно возвращено. Если индекс не используется, будут возвращены все ряды в группе диаграммы.</param>
-        <summary>Возвращает запрошенный серии из группы диаграммы.</summary>
-        <returns>
-          <b>Объект</b> в <see cref="T:Microsoft.Office.Interop.Word.SeriesCollection" /> формат, который представляет все запрошенные серии из группы диаграммы</returns>
+        <param name="Index">Необязательный <b>объект</b> имя или номер ряда, который требуется возвратить. Если индекс не используется, будут возвращены все ряды в группе диаграмм.</param>
+        <summary>Возвращает запрошенный ряд в группе диаграммы.</summary>
+        <returns><b>Объект</b> в <see cref="T:Microsoft.Office.Interop.Word.SeriesCollection" /> формате, который представляет все запрошенные ряды из группы диаграммы</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -833,10 +772,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.SeriesLines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ряда по 2-D с накоплением, 2-D Гистограмма, Вторичная круговая диаграмма или Вторичная гистограмма. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.SeriesLines" />
-        </value>
+        <summary>Возвращает линии ряда для плоской линейчатой диаграммы с накоплением, двумерной гистограммы, круговой диаграммы или вторичной гистограммы. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.SeriesLines" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -866,9 +803,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое определяет, если отрицательные значения отображаются для группы диаграммы. Действительно только для пузырьковых диаграмм. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение <b>True</b> , если отрицательные значения отображаются для группы диаграммы, в противном случае — <b>False</b>.</value>
+        <summary>Возвращает или задает значение, определяющее, отображаются ли отрицательные пузырьки для группы диаграммы. Подходит только для пузырьковых диаграмм. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если для группы диаграммы отображается отрицательное число, в противном случае — <b>false</b>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -898,8 +834,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlSizeRepresents</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер пузырьковой представляет на пузырьковой диаграммы. Для чтения и записи.</summary>
-        <value>Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.XlSizeRepresents" /> констант: <b>xlSizeIsArea</b> или <b>xlSizeIsWidth</b></value>
+        <summary>Возвращает или задает размер пузырька, который представляется в пузырьковой диаграмме. Для чтения и записи.</summary>
+        <value>Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Word.XlSizeRepresents" /> констант: <b>кслсизеисареа</b> или <b>кслсизеисвидс</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -929,10 +865,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.XlChartSplitType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ разделить два раздела Вторичная круговая диаграмма или панели круговой диаграммы. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlChartSplitType" />
-        </value>
+        <summary>Возвращает или задает способ разделения двух разделов круга круговой диаграммы либо линии круговой диаграммы. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlChartSplitType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -962,10 +896,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает пороговое значение, отделяя два раздела любого Вторичная круговая диаграмма или панели круговой диаграммы. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает или задает пороговое значение, разделяющее два раздела круга круговой диаграммы или линии круговой диаграммы. Для чтения и записи.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1002,9 +934,7 @@
       </ReturnValue>
       <Docs>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1041,8 +971,7 @@
       </ReturnValue>
       <Docs>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <value>
-          <b>Целое число</b>.</value>
+        <value><b>Целое число</b>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1069,10 +998,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.UpBars</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает вверх панелей на графике. Применяется только к графики. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.UpBars" />
-        </value>
+        <summary>Возвращает полосы повышения на графике. Применяется только к графикам. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.UpBars" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1102,9 +1029,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, о том, если Microsoft Word назначает разные цвета или узора к маркерам данных. Диаграмма должен содержать только один ряд. Для чтения и записи.</summary>
-        <value>
-          <b>Логическое</b> значение, <b>значение True,</b> Если Microsoft Word, назначает разные цвета или узора к маркерам данных; в противном случае — <b>значение False</b></value>
+        <summary>Возвращает или задает значение, указывающее, назначает ли Microsoft Word другой цвет или узор для каждого маркера данных. Диаграмма должна содержать только один ряд. Для чтения и записи.</summary>
+        <value><b>Логическое</b> значение <b>true</b> , если Microsoft Word назначает разные цвета или узор для каждого маркера данных; в противном случае — <b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="RecentFile" FullName="Microsoft.Office.Interop.Word.RecentFile">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1e434d3e1e088bc212d7bbc10abf5c431e2964b4" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673576" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface RecentFile" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5a818ea88a0f5d83922bdd03f47dd18ee09e79b4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147706" /></Metadata><TypeSignature Language="C#" Value="public interface RecentFile" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RecentFile" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.RecentFile" />
   <TypeSignature Language="VB.NET" Value="Public Interface RecentFile" />
@@ -26,9 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет недавно использовавшихся файлов.</summary>
-    <remarks>
-      <para>Объект <b>последних</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.RecentFiles" /> семейства сайтов. Коллекция <b>RecentFiles</b> включает все файлы, недавно использованные. В нижней части меню Файл отображаются элементы в коллекции <b>RecentFiles</b> .</para> Использование <b>RecentFiles</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>последних</b> . Номер индекса представляет положение файла в меню <b>файл</b> .</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.RecentFiles.Add(System.Object@,System.Object@)" /> метод для добавления файла в коллекцию <b>RecentFiles</b> .</para><para><see cref="M:Microsoft.Office.Interop.Word._Document.SaveAs(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> И <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> используются следующие методы <paramref name="AddToRecentFiles" /> аргумент, который управляет ли файл добавляется в список недавно использованных файлов после открытия или сохранения файла.</para><para /></remarks>
+    <summary>Представляет файл, который использовался недавно.</summary>
+    <remarks><para>Объект <b>RecentFile</b> является членом <see cref="T:Microsoft.Office.Interop.Word.RecentFiles" /> коллекции. Коллекция <b>RecentFiles</b> включает все файлы, которые использовались недавно. Элементы коллекции <b>RecentFiles</b> отображаются в нижней части меню файл.</para>
+      <para>Используйте <b>RecentFiles</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>RecentFile</b> . Номер индекса представляет положение файла в меню <b>файл</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.RecentFiles.Add(System.Object@,System.Object@)" /> метод, чтобы добавить файл в коллекцию <b>RecentFiles</b> .</para>
+      <para>Методы <see cref="M:Microsoft.Office.Interop.Word._Document.SaveAs(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.Documents.Open(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> содержат <paramref name="AddToRecentFiles" /> аргумент, который определяет, добавляется ли файл в список недавно использовавшихся файлов при его открытии или сохранении.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +77,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -191,7 +186,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Открывает указанный объект. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> , который представляет открытый объект.</summary>
+        <summary>Открывает указанный объект. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий открытый объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -219,7 +214,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -247,14 +242,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанный объект диска или веб-путь.</summary>
+        <summary>Возвращает диск или веб-путь к указанному объекту.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака — например, «C:\MSOffice» или "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Используйте свойство <b>Name</b> возвращает имя файла без путь.</para>
+        <remarks><para>Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте свойство <b>Name</b> , чтобы возвратить имя файла без пути.</para>
           <para>
-            <b>Примечание</b> свойство <b>PathSeparator</b> можно использовать для построения веб-адреса, несмотря на то, что они содержат косую черту (/) и свойство <b>PathSeparator</b> параметры по умолчанию для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+            <b>Note (Примечание</b> )  Свойство <b>пассепаратор</b> можно использовать для создания веб-адресов, несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadOnly">
@@ -283,8 +276,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если не удается сохранить изменения документа в исходный документ.</summary>
+        <summary><b>Имеет значение true</b> , если изменения документа невозможно сохранить в исходном документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

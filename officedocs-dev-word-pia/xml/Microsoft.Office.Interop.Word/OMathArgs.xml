@@ -1,13 +1,5 @@
 <Type Name="OMathArgs" FullName="Microsoft.Office.Interop.Word.OMathArgs">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9cb9fb0ddbeaaed3135da719c1d25bf94d0cc716" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672983" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathArgs" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d53926b22241062e6717fb428f4fc2cb5b5959f6" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147853" /></Metadata><TypeSignature Language="C#" Value="public interface OMathArgs" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathArgs" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathArgs" />
@@ -52,11 +44,9 @@
         <Parameter Name="BeforeArg" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="BeforeArg">(Необязательно) <b>Объект</b>. Существующие аргумент перед которого необходимо добавить новый аргумент.</param>
-        <summary>Вставляет аргумента в формулу с переменным числом аргументов (<see cref="T:Microsoft.Office.Interop.Word.OMathDelim" /> и <see cref="T:Microsoft.Office.Interop.Word.OMathEqArray" /> объектов)</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </returns>
+        <param name="BeforeArg">Необязательно <b>Объект</b>. Существующий аргумент, перед которым добавляется новый аргумент.</param>
+        <summary>Вставляет аргумент в формулу с переменным числом аргументов (<see cref="T:Microsoft.Office.Interop.Word.OMathDelim" /> и <see cref="T:Microsoft.Office.Interop.Word.OMathEqArray" /> объектов)</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMath" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,9 +74,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -113,10 +101,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,17 +129,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
-          <para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>:</para>
-          <para />
-        </remarks>
+            <b>Примечание.</b> </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -179,11 +161,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">(Обязательно) <b>Целое число</b> , указывающее порядковый номер объекта в коллекции.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </returns>
+        <param name="Index">Потребоваться <b>Целое число</b> , определяющее порядковый номер объекта в коллекции.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMath" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,9 +191,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

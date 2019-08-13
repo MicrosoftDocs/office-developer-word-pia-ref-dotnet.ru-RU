@@ -1,13 +1,5 @@
 <Type Name="FormField" FullName="Microsoft.Office.Interop.Word.FormField">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="137dfb21b0a9bdd9ac870c9196378e48d20ab52e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673470" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FormField" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4de4cb33d6d8353de0dcfc472045a254de650268" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146817" /></Metadata><TypeSignature Language="C#" Value="public interface FormField" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormField" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FormField" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormField" />
@@ -26,15 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет поле одной формы.</summary>
-    <remarks>
-      <para>Объект <b>FormField</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> семейства.</para>
-      <para>Использования <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы возвратить объект <b>FormField</b> .</para>
-      <para>Номер индекса представляет позицию поля формы в выделение, диапазон или документа.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields</b> для добавления поля формы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" />, <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" />, и <see cref="P:Microsoft.Office.Interop.Word.FormField.TextInput" /> свойства с помощью объекта <b>FormField</b> для возврата <see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />, и <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объекты.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одно поле формы.</summary>
+    <remarks><para>Объект <b>FormField</b> является членом <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> коллекции.</para>
+      <para>Используйте <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>FormField</b> .</para>
+      <para>Номер индекса представляет положение поля формы в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields</b> для добавления поля формы.</para>
+      <para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" />, <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" />и, <see cref="P:Microsoft.Office.Interop.Word.FormField.TextInput" /> а также объект <b>FormField</b> <see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, чтобы возвратить, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />и <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объекты.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,11 +81,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет ссылки на поле указанную форму, автоматически обновляются при выходе из поля.</summary>
+        <summary>Определяет, будут ли автоматически обновляться ссылки на указанное поле формы при выходе из этого поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если ссылки на поля указанную форму обновляются автоматически при выходе из поля и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para> Поле 
-          <para>REF можно использовать для ссылки на содержимое поля формы. Например, {REF промежуточные итоги} ссылается на поле формы, помечено посредством промежуточных итогов закладка.</para><para /></remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если ссылки на указанное поле формы автоматически обновляются при выходе из поля, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Поле REF можно использовать для ссылки на содержимое поля формы. Например, {REF подытог} ссылается на поле формы, помеченное закладкой подобщее итоговое значение.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CheckBox">
@@ -121,12 +111,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CheckBox</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CheckBox" /> объект, представляющий поле формы флажок.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CheckBox" /> объект, представляющий поле формы с флажком.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>CheckBox</b> применяется к <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта, который не флажок поля формы, свойство не будет ошибкой, но <see cref="P:Microsoft.Office.Interop.Word.CheckBox.Valid" /> свойства для возвращенного объекта будет иметь <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если свойство <b>CheckBox</b> применено к <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекту, который не является полем формы с флажком, то свойство не будет выполнено, но <see cref="P:Microsoft.Office.Interop.Word.CheckBox.Valid" /> свойство для возвращаемого объекта будет иметь <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Copy">
@@ -177,11 +165,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -257,12 +245,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.DropDown</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DropDown" /> объект, представляющий поле формы раскрывающегося списка.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DropDown" /> объект, представляющий поле раскрывающегося формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>раскрывающийся список</b> применяется к <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта, который не поле раскрывающегося списка формы, свойство не происходит сбой, но <see cref="P:Microsoft.Office.Interop.Word.DropDown.Valid" /> свойства для возвращенного объекта будет иметь <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если свойство <b>dropdown</b> применено к <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекту, который не является полем раскрывающегося списка, то свойство не будет выполнено, но <see cref="P:Microsoft.Office.Interop.Word.DropDown.Valid" /> свойство для возвращаемого объекта будет иметь <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Enabled">
@@ -291,13 +277,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, включена ли поле формы.</summary>
+        <summary>Определяет, включено ли поле формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если этот параметр включен поля формы и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Если включена поля формы, его содержимое может быть изменен как форма является заполнено</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если поле формы включено, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Если поле формы включено, его содержимое можно изменить при заполнении формы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EntryMacro">
@@ -326,12 +310,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя записи макросов для поля указанную форму (<see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />, или <see cref="T:Microsoft.Office.Interop.Word.TextInput" />).</summary>
+        <summary>Возвращает или задает имя макроса записи для указанного поля формы (<see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />или <see cref="T:Microsoft.Office.Interop.Word.TextInput" />).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Запись макроса выполняется, когда фокус получает поля формы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Макрос записи запускается, когда поле формы получает фокус.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ExitMacro">
@@ -360,12 +342,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя макроса выхода для поля указанную форму (<see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />, или <see cref="T:Microsoft.Office.Interop.Word.TextInput" />).</summary>
+        <summary>Возвращает или задает имя макроса выхода для указанного поля формы (<see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />или <see cref="T:Microsoft.Office.Interop.Word.TextInput" />).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Выход макрос запускается при поля формы теряет фокус.</para>
-          <para />
-        </remarks>
+        <remarks><para>Макрос Exit запускается, когда поле формы теряет фокус.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HelpText">
@@ -394,12 +374,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст, отображаемый в окне сообщения, когда фокус находится на поле формы и пользователь нажимает клавишу F1.</summary>
+        <summary>Возвращает или задает текст, отображаемый в окне сообщения, когда фокус находится на поле формы, и пользователь нажимает клавишу F1.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.FormField.OwnHelp" /> задано значение <b>True</b>, <b>HelpText</b> задает строковое значение текста. Если <b>OwnHelp</b> имеет значение <b>False</b>, <b>HelpText</b> указывает имя записи автотекста, содержащее текст справки для поля формы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для <see cref="P:Microsoft.Office.Interop.Word.FormField.OwnHelp" /> свойства задано значение <b>true</b>, <b>HELPTEXT</b> указывает текстовое значение строки. Если для <b>овнхелп</b> задано <b>значение false</b>, <b>HELPTEXT</b> указывает имя элемента автотекста, содержащего текст справки для поля формы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -487,12 +465,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает исходный текст, отображаемый в окне сообщения, когда фокус находится на поле формы и пользователь нажимает клавишу F1.</summary>
+        <summary>Указывает источник текста, который отображается в окне сообщения, когда фокус находится на поле формы, и пользователь нажимает клавишу F1.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <b>значение True</b>, текст, заданный параметром <see cref="P:Microsoft.Office.Interop.Word.FormField.HelpText" /> отображения свойства. Если <b>значение False</b>, текст в автотекста, указанного в свойстве <b>HelpText</b> отображается.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если задано <b>значение true</b>, отображается текст <see cref="P:Microsoft.Office.Interop.Word.FormField.HelpText" /> , заданный свойством. Если <b>значение равно false</b>, отображается текст элемента автотекста, указанного свойством <b>HELPTEXT</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OwnStatus">
@@ -521,12 +497,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает исходный текст, который отображается в строке при поля формы имеет фокус состояния.</summary>
+        <summary>Указывает источник текста, который отображается в строке состояния, когда фокус находится на поле формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство возвращает <b>значение True</b>, текст, заданный <see cref="P:Microsoft.Office.Interop.Word.FormField.StatusText" /> отображения свойства, а если задано <b>значение False</b>, текст автотекста с свойство <b>StatusText</b> отображается. Значение свойства равно <b>True</b> или <b>False</b> для включения или отключения функциональные возможности.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если свойство возвращает <b>значение true</b>, отображается текст, заданный <see cref="P:Microsoft.Office.Interop.Word.FormField.StatusText" /> свойством, и <b>значение false</b>указывает, что отображается текст записи автотекста, заданной свойством <b>StatusText</b> . Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -552,7 +526,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -608,12 +582,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Result">
@@ -642,12 +614,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -672,10 +642,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StatusText">
@@ -704,12 +672,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст, который отображается в строке при поля формы имеет фокус состояния.</summary>
+        <summary>Возвращает или задает текст, отображаемый в строке состояния, когда фокус находится на поле формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.FormField.OwnStatus" /> задано значение <b>True</b>, свойство <b>StatusText</b> задает текст строки состояния. Если свойство <b>OwnStatus</b> имеет значение <b>False</b>, свойство <b>StatusText</b> указывает имя записи автотекста, который содержит текст в строке состояния для поля формы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.FormField.OwnStatus" /> свойству присвоено значение <b>true</b>, свойство <b>StatusText</b> указывает текст строки состояния. Если для свойства <b>овнстатус</b> задано <b>значение false</b>, свойство <b>StatusText</b> указывает имя элемента автотекста, содержащего текст строки состояния для поля формы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextInput">
@@ -735,13 +701,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextInput</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объект, представляющий текстового поля формы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объект, представляющий текстовое поле формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>TextInput</b> применяется объект <b>FormField</b> , который не будет поля раскрывающегося списка формы, свойство не ошибка, но <see cref="P:Microsoft.Office.Interop.Word.TextInput.Valid" /> свойства для возвращенного объекта будет иметь <b>значение False</b>.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.FormField.Result" /> свойства с помощью объекта <b>FormField</b> для возвращения или задания содержимое <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объект.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если свойство <b>TextInput</b> применяется к объекту <b>FormField</b> , который не является полем раскрывающегося списка, то свойство не будет выполнено, но <see cref="P:Microsoft.Office.Interop.Word.TextInput.Valid" /> свойство для возвращаемого объекта будет иметь <b>значение false</b>.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.FormField.Result" /> свойство с объектом <b>FormField</b> , чтобы вернуть или задать содержимое <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">

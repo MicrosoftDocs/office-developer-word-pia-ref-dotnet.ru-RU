@@ -1,13 +1,5 @@
 <Type Name="EmailSignatureEntry" FullName="Microsoft.Office.Interop.Word.EmailSignatureEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a89f08ca49e7b1c70f4815e7700e8cfe466191bd" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672968" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface EmailSignatureEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3a2a49fcbc1ccb42587be259f378ddc8386b3506" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148105" /></Metadata><TypeSignature Language="C#" Value="public interface EmailSignatureEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract EmailSignatureEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.EmailSignatureEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface EmailSignatureEntry" />
@@ -26,9 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет запись подпись электронной почты.</summary>
-    <remarks>
-      <para>Объект <b>EmailSignatureEntry</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.EmailSignatureEntries" /> семейства сайтов. Коллекция <b>EmailSignatureEntries</b> содержит все электронной почты подписи записи для Microsoft Word.</para> Использование <b>EmailSignatureEntries</b><para>(<paramref name="index" />), где <paramref name="index" /> электронной почты подписи запись имени или элемент номер, чтобы возвратить объект <b>EmailSignatureEntry</b> . Должны совпадать точно правописания (но не обязательно заглавные буквы) имя.</para><para /></remarks>
+    <summary>Представляет одну запись подписи электронной почты.</summary>
+    <remarks><para>Объект <b>EmailSignatureEntry</b> является членом <see cref="T:Microsoft.Office.Interop.Word.EmailSignatureEntries" /> коллекции. Коллекция <b>EmailSignatureEntries</b> содержит все записи подписей электронной почты, доступные в Microsoft Word.</para>
+      <para>Используйте <b>EmailSignatureEntries</b>(<paramref name="index" />), где <paramref name="index" /> — это имя записи подписи электронной почты или номер элемента, чтобы вернуть один объект <b>EmailSignatureEntry</b> . Необходимо точно соответствовать орфографии (но не обязательно заменять прописными буквами) имени.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,12 +75,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -197,7 +188,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

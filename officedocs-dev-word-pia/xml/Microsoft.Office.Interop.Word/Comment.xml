@@ -1,13 +1,5 @@
 <Type Name="Comment" FullName="Microsoft.Office.Interop.Word.Comment">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fda4beac7d470cea977cadf0e9685141efef399b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672780" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Comment" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6adea5e853e9646a801465cf9cca29730ebb1600" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146173" /></Metadata><TypeSignature Language="C#" Value="public interface Comment" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Comment" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Comment" />
   <TypeSignature Language="VB.NET" Value="Public Interface Comment" />
@@ -26,9 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одного примечания.</summary>
-    <remarks>
-      <para>Объект <b>комментария</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Comments" /> семейства сайтов. Коллекция <b>примечаний</b> содержит комментарии в выделение, диапазон или документа.</para> Используйте <b>комментарии</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>комментария</b> . Номер индекса предоставляет позицию комментария в указанный выделения, диапазон или документа.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для добавления комментария в указанном диапазоне.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.Comment.Reference" /> свойство для возвращения знак сноски, связанный с заданным комментарием. Использование <see cref="P:Microsoft.Office.Interop.Word.Comment.Range" /> свойство для возвращения текст, связанный с заданным комментарием.</para><para /></remarks>
+    <summary>Представляет один комментарий.</summary>
+    <remarks><para>Объект <b>comment</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Comments" /> коллекции. Коллекция <b>Comments</b> содержит комментарии в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <b></b>Comments<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>comment</b> . Номер индекса представляет положение комментария в указанном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод, чтобы добавить комментарий в указанный диапазон.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Comment.Reference" /> свойство, чтобы возвратить знак сноски, связанный с заданным комментарием. Используйте <see cref="P:Microsoft.Office.Interop.Word.Comment.Range" /> свойство, чтобы возвратить текст, связанный с заданным комментарием.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Ancestor">
@@ -54,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Comment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Примечания, которые являются ответами на существующие комментарии возвращает родительский объект <b>комментария</b> ; для новых примечаний (верхнего уровня) возвращает <b>значение Nothing</b> (пустая ссылка (Nothing в Visual Basic) .in C#) только для чтения.</summary>
+        <summary>Для комментариев, которые являются ответами на существующие комментарии, возвращает родительский объект <b>комментария</b> ; для новых (верхнего уровня) комментариев, <b>ничего не</b> возвращает (пустая ссылка (Nothing в Visual Basic). в C#) только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,7 +142,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объект, представляющий автора заданным комментарием. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объект, представляющий автора указанного комментария. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,11 +170,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Date">
@@ -205,7 +200,7 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает дату и время, который был введен комментарий.</summary>
+        <summary>Возвращает дату и время ввода комментария.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -259,7 +254,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный комментарий и все ответы, связанные с ним.</summary>
+        <summary>Удаляет указанный комментарий и все связанные с ним ответы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -289,7 +284,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> (<b>bool</b> в C#), значение которого равно <b>true</b> , если указанный комментарий был помечен закрытой. Чтение и запись.</summary>
+        <summary>Возвращает или задает <b>логическое</b> значение (<b>bool</b> в C#), значение которого равно <b>true</b> , если заданный комментарий помечен как закрытый. Чтение и запись.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -407,12 +402,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , которое указывает, находится ли комментарий рукописные примечания.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, является ли комментарий рукописным.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Примечания, которые являются ответами на существующие комментарии возвращает родительский объект <b>комментария</b> ; для новых примечаний (верхнего уровня) возвращает <b>значение Nothing</b> (пустая ссылка (Nothing в Visual Basic) в C#). Только для чтения.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для комментариев, которые являются ответами на существующие комментарии, возвращает родительский объект <b>комментария</b> ; для новых (верхнего уровня) комментариев, <b>ничего не</b> возвращает (пустая ссылка (Nothing в Visual Basic) в C#). Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -438,7 +431,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -466,12 +459,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="P:Microsoft.Office.Interop.Word.Comment.Range" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="P:Microsoft.Office.Interop.Word.Comment.Range" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reference">
@@ -497,7 +488,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий сноску или знак.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий знак сноски или примечания.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -525,8 +516,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Comments</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Comments" /> коллекцию объектов <b>комментария</b> , которые являются дочерними заданным комментарием. Только для чтения.</summary>
-        <value>Вызов <see cref="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод возвращенной коллекцией ответов, добавляет новый ответ, если не было получить доступ к коллекции из ответа на ответ. <see cref="P:Microsoft.Office.Interop.Word.Comments.ShowBy" /> Свойство происходит сбой при вызове <b>комментарии</b> коллекции, возвращаемой свойством <b>ответов</b> .</value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Comments" /> коллекцию объектов <b>comment</b> , которые являются дочерними по отношению к заданному комментарию. Только для чтения.</summary>
+        <value>При вызове <see cref="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метода для возвращенной коллекции ответов добавляется новый ответ, если к коллекции не был получен ответ. Не <see cref="P:Microsoft.Office.Interop.Word.Comments.ShowBy" /> удается выполнить свойство при вызове коллекции <b>комментариев</b> , возвращаемой свойством " <b>ответы</b> ".</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -553,7 +544,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста, помеченные с заданным комментарием.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста, помеченный указанным комментарием.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

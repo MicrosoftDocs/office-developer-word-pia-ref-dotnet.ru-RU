@@ -1,13 +1,5 @@
 <Type Name="Trendline" FullName="Microsoft.Office.Interop.Word.Trendline">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9b82db86a793f5b37594ba6a159598dc18ac5a7e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673676" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Trendline" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="daa5f65be508f63497b12aec2cbb8833c613a49e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143786" /></Metadata><TypeSignature Language="C#" Value="public interface Trendline" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Trendline" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Trendline" />
   <TypeSignature Language="VB.NET" Value="Public Interface Trendline" />
@@ -26,15 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет линии тренда на диаграмме.</summary>
-    <remarks>
-      <para>Линии тренда показывает тренда или направление данные в виде последовательности. <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> Семейства сайтов содержит все <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объекты для одного ряда.</para>
-      <para />
-    </remarks>
-    <example>
-      <para>Использование <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> (<paramref name="Index" />), где <paramref name="Index" /> — номер индекса линия тренда, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объект.</para>
-      <para>Номер индекса указывает порядок, в котором тренда были добавлены к моделям серии. Trendlines(1) — это первый линия тренда, добавляется в серию и Trendlines(Trendlines.Count) — это последний из добавляемых.</para> Следующий пример 
-      <para>изменяет тип линии тренда первого ряда первую диаграмму в активный документ. Серия имеет не линия тренда, в этом примере завершится с ошибкой.</para></example>
+    <summary>Представляет линию тренда на диаграмме.</summary>
+    <remarks><para>Линия тренда отображает тенденцию или направление данных в ряде. <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> Коллекция содержит все <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объекты для одного ряда.</para>
+      <para> </para></remarks>
+    <example><para>Используйте <see cref="T:Microsoft.Office.Interop.Word.Trendlines" /> (<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса линии тренда, чтобы вернуть <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> один объект.</para>
+      <para>Номер индекса указывает порядок, в котором линии тренда были добавлены в ряд. Линии тренда (1) — это первая линия тренда, добавленная к ряду, а линии тренда (аппроксимация. число) — последний добавленный элемент.</para>
+      <para>В следующем примере изменяется тип линии тренда для первого ряда первой диаграммы в активном документе. Если у ряда нет линии тренда, этот пример завершится ошибкой.</para></example>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,9 +49,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Application (приложение</b> ) (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,10 +86,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц измерения на диаграмме), линия тренда расширяет назад.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется обратно.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -131,10 +117,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц измерения на диаграмме), линия тренда расширяет назад. Для чтения и записи, <b>Double</b>.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется обратно. Для чтения и записи, <b>Double</b>.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -161,10 +145,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /> объект, представляющий границы объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /> объект, представляющий границу объекта. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -190,9 +172,7 @@
       <Parameters />
       <Docs>
         <summary>Очищает форматирование объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -219,14 +199,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataLabel">
@@ -252,14 +228,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.DataLabel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект, представляющий метки данных, связанный с линии тренда. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.DataLabel" />
-        </value>
-        <remarks>
-          <para>Чтобы включить метки данных для линии тренда необходимо задать <see cref="P:Microsoft.Office.Interop.Word.Trendline.DisplayEquation" /> свойство или <see cref="P:Microsoft.Office.Interop.Word.Trendline.DisplayRSquared" /> значение <b>True</b>.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект, представляющий метку данных, связанную с линией тренда. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.DataLabel" /></value>
+        <remarks><para>Чтобы включить метки данных для линии тренда, необходимо присвоить <see cref="P:Microsoft.Office.Interop.Word.Trendline.DisplayEquation" /> свойству или <see cref="P:Microsoft.Office.Interop.Word.Trendline.DisplayRSquared" /> свойству <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -284,9 +256,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -316,11 +286,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображается формулу для линии тренда на диаграмме (в совпадает с меткой данных R-квадрат). Задание этого свойства <b>значения true</b> автоматически включает для метки данных. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>Значение true</b> , если формула для линии тренда отображается на диаграмме (в той же метке данных, что и значение R-квадрат). Если для этого свойства задано <b>значение true</b> , метки данных автоматически включаются. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -350,11 +317,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если значение R-квадрат линии тренда отображается на диаграмме (в совпадает с меткой данных уравнение). Задание этого свойства <b>значения true</b> автоматически включает для метки данных. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Значение <b>true</b> , если значение аппроксимации линии тренда отображается на диаграмме (в той же метке данных, что и формула). Если для этого свойства задано <b>значение true</b> , метки данных автоматически включаются. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -381,11 +345,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
-Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
+Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -421,10 +383,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц измерения на диаграмме), охватывающий линии тренда вперед.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется вперед.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -454,10 +414,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц измерения на диаграмме), охватывающий линии тренда вперед. Для чтения и записи, <b>Double</b>.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется вперед. Для чтения и записи, <b>Double</b>.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -484,9 +442,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса.</summary>
-        <value>
-          <b>Целое число</b>.</value>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
+        <value><b>Целое число</b>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -516,14 +473,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает точку пересечения линии тренда оси значений. Для чтения и записи, <b>Double</b>.</summary>
-        <value>
-          <b>Double</b>
-        </value>
-        <remarks>
-          <para>Это свойство задает параметр <see cref="P:Microsoft.Office.Interop.Word.Trendline.InterceptIsAuto" /> значение <b>False</b>.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает точку, в которой линия тренда пересекает ось значений. Для чтения и записи, <b>Double</b>.</summary>
+        <value><b>Double</b></value>
+        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Word.Trendline.InterceptIsAuto" /> свойству присваивается <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InterceptIsAuto">
@@ -552,15 +505,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если точка пересечения оси значений линия тренда автоматически определяется регрессии. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Word.Trendline.Intercept" /> свойство этому свойству значение <b>False</b>.</para>
-          <para />
-        </remarks>
+        <summary><b>True</b> , если точка, в которой линия тренда пересекает ось значений, автоматически определяется регрессией. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Установка <see cref="P:Microsoft.Office.Interop.Word.Trendline.Intercept" /> свойства задает для этого свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -590,9 +538,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <b>строковое</b> значение, представляющее имя объекта.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -622,15 +568,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Word автоматически определяет имя линии тренда. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary><b>Значение true</b> , если Microsoft Word автоматически определяет название линии тренда. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере задается Microsoft Word автоматически определить имя для линии тренда один из первого диаграмму в активный документ. Пример следует запускать на диаграмме Гистограмма, содержащий один серии тренда.</para>
-        </example>
+        <example><para>В этом примере для Microsoft Word задается автоматическое определение имени для линии тренда 1 первой диаграммы в активном документе. Пример должен выполняться на двумерной гистограммы, содержащей один ряд с линией тренда.</para></example>
       </Docs>
     </Member>
     <Member MemberName="Order">
@@ -659,10 +600,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целочисленное</b> значение, представляющее порядок линия тренда (целое число больше 1) при линия тренда <see cref="P:Microsoft.Office.Interop.Word.Trendline.Type" /> — это <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlPolynomial" />.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает <b>целое</b> значение, представляющее последовательность линии тренда (целое число больше 1), когда <see cref="P:Microsoft.Office.Interop.Word.Trendline.Type" /> линия <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlPolynomial" />тренда имеет значение.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -689,10 +628,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -722,10 +659,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает период для линии тренда перемещение среднего значения. Может быть в диапазоне от 2 до 255. Чтение и запись <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает период для скользящего среднего значения аппроксимации. Может принимать значение от 2 до 255. Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -750,10 +685,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -784,9 +717,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.XlTrendlineType" /> значение, представляющее тип линии тренда.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.XlTrendlineType" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.XlTrendlineType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

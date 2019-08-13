@@ -1,13 +1,5 @@
 <Type Name="Rectangle" FullName="Microsoft.Office.Interop.Word.Rectangle">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="74c49e1052dd5117e8e3d3146cbc28af58e2f384" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672563" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Rectangle" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="822aaf72779d605103ffbe8e7e7c32e66b3cab6a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147699" /></Metadata><TypeSignature Language="C#" Value="public interface Rectangle" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Rectangle" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Rectangle" />
   <TypeSignature Language="VB.NET" Value="Public Interface Rectangle" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет фрагмент текста или рисунок на странице. Используйте объект <b>прямоугольника</b> и связанные методы и свойства для программного определения макета страницы в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Rectangles.Item(System.Int32)" /> метод возвращает объект определенного <b>прямоугольника</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Rectangle.RectangleType" /> свойства для определения типа прямоугольника.</para>
-      <para />
-    </remarks>
+    <summary>Представляет часть текста или графику на странице. Используйте объект <b>Rectangle</b> и связанные с ним методы и свойства для программного определения макета страницы в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Rectangles.Item(System.Int32)" /> метод, чтобы возвратить определенный объект <b>Rectangle</b> .</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Rectangle.RectangleType" /> свойство, чтобы определить тип прямоугольника.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,11 +75,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -115,7 +105,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту заданного прямоугольника в точках.</summary>
+        <summary>Возвращает или задает высоту указанного прямоугольника в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,7 +133,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает целое число, представляющее горизонтальную позицию заданного прямоугольника, измеряемую в точках.</summary>
+        <summary>Возвращает или задает целое число, представляющее горизонтальную позицию указанного прямоугольника, измеряемую в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,12 +161,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Lines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Lines" /> коллекции, представляющей линии в заданную часть текста на странице.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Lines" /> коллекцию, представляющую строки в указанном фрагменте текста на странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте коллекцию <b>строк</b> и связанные объекты и свойства программными средствами определить макет страницы в документе.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте коллекцию <b>строк</b> и связанные объекты и свойства, чтобы программно определить макет страницы в документе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -202,7 +190,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +218,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,61 +246,61 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRectangleType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdRectangleType" /> константа, представляющий тип для указанного прямоугольника.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdRectangleType" /> константу, представляющую тип указанного прямоугольника.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство<b>RectangleType</b> может иметь одно из следующих констант <b>WdRectangleType</b> .</para>
+        <remarks><para>Свойство<b>ректанглетипе</b> может быть одной из следующих констант <b>вдректанглетипе</b> .</para>
           <list type="table">
             <item>
               <description>
-                <b>wdLineBetweenColumnRectangle</b>
+                <b>вдлинебетвинколумнректангле</b>
               </description>
-              <description>представляет регион, соответствующий линии между столбцом.</description>
+              <description>Представляет область, соответствующую строке, в которой разделяются столбцы.</description>
             </item>
             <item>
               <description>
-                <b>wdMarkupRectangle</b>
+                <b>вдмаркупректангле</b>
               </description>
-              <description>представляет пространства, занимаемый выноске.</description>
+              <description>Представляет пространство, занятое всплывающим комментарием.</description>
             </item>
             <item>
               <description>
-                <b>wdMarkupRectangleButton</b>
+                <b>вдмаркупректанглебуттон</b>
               </description>
-              <description>представляет пространства, занимаемый дополнительные индикатор (...), который отображается в выноске при наличии дополнительный текст комментария.</description>
+              <description>Представляет пространство, занятое индикатором больше (...), которое отображается в выноске комментария, если для комментария имеется дополнительный текст.</description>
             </item>
             <item>
               <description>
-                <b>wdPageBorderRectangle</b>
+                <b>вдпажебордерректангле</b>
               </description>
-              <description>представляет пространства, занимаемый границы страницы.</description>
+              <description>Представляет пространство, занятое границей страницы.</description>
             </item>
             <item>
               <description>
-                <b>wdSelection</b>
+                <b>вдселектион</b>
               </description>
-              <description>представляет пространства, занимаемый выделение, например средство выбора в таблице в левом верхнем углу таблицы или привязки для образа.</description>
+              <description>Представляет пространство, занятое инструментом выделения, например инструмент выделения таблицы в левом верхнем углу таблицы или привязку изображения.</description>
             </item>
             <item>
               <description>
-                <b>wdShapeRectangle</b>
+                <b>вдшаперектангле</b>
               </description>
-              <description>представляет пространства, занимаемый фигуры.</description>
+              <description>Представляет пространство, занятое фигурой.</description>
             </item>
             <item>
               <description>
-                <b>wdSystem</b>
+                <b>вдсистем</b>
               </description>
-              <description>неприменимо.</description>
+              <description>Неприменимо.</description>
             </item>
             <item>
               <description>
-                <b>wdTextRectangle</b>
+                <b>вдтекстректангле</b>
               </description>
-              <description>представляет пространства, занимаемый текста.</description>
+              <description>Представляет пространство, занятое текстом.</description>
             </item>
-          </list> Прямоугольники 
-          <para>в Microsoft Word, разделы на странице таблицы, которые содержат определенные виды данных. Некоторые разделы являются части текста; остальные являются фигур. Прямоугольники предназначен для позволяют контролировать макет страницы программный.</para><para /></remarks>
+          </list>
+          <para>Прямоугольники в Microsoft Word — это разделы на странице документа, содержащие определенные типы сведений. Некоторые разделы являются частями текста; другие фигуры — фигуры. С помощью прямоугольников можно обеспечить более полный контроль над макетом страницы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Top">
@@ -338,7 +326,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает вертикальную позицию заданного прямоугольника в точках.</summary>
+        <summary>Возвращает или задает вертикальную позицию указанного прямоугольника в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -366,7 +354,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину указанного прямоугольника в точках.</summary>
+        <summary>Возвращает или задает ширину указанного прямоугольника в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="ColorFormat" FullName="Microsoft.Office.Interop.Word.ColorFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="dcf4bb34b09a1742a595fe81e3cf40a11a84fc5b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673520" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ColorFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="009c7bf5816a06a2dbe1390b58db24c3e4dfd954" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147199" /></Metadata><TypeSignature Language="C#" Value="public interface ColorFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ColorFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorFormat" />
@@ -26,9 +18,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет цвет переднего плана или объект один цвет или цвет фона объекта с градиента и узорные заливки.</summary>
-    <remarks>
-      <para>Выполните одну из свойства, перечисленные в следующей таблице, чтобы возвратить объект <b>ColorFormat</b> .</para>
+    <summary>Представляет цвет объекта с одним цветом или переднего плана или цвета фона объекта с градиентной или узорной заливкой.</summary>
+    <remarks><para>Используйте одно из свойств, приведенных в следующей таблице, для возврата объекта <b>ColorFormat</b> .</para>
       <list type="table">
         <item>
           <description>
@@ -36,7 +27,8 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.FillFormat" />
-          </description>Фона (используется в затемненные или узорную заливку)
+          </description>
+          <description>Цвет заливки фона (используется в затененной или узорной заливки)</description>
         </item>
         <item>
           <description>
@@ -45,7 +37,7 @@
           <description>
             <b>FillFormat</b>
           </description>
-          <description>переднего плана заливки цвет (или просто цвет заливки сплошной заливке)</description>
+          <description>Цвет заливки переднего плана (или просто цвет заливки для сплошной заливки)</description>
         </item>
         <item>
           <description>
@@ -53,7 +45,8 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.LineFormat" />
-          </description>фона цвет (используется в узорная линия) линии
+          </description>
+          <description>Цвет линии фона (используется в узорной линии)</description>
         </item>
         <item>
           <description>
@@ -62,7 +55,7 @@
           <description>
             <b>LineFormat</b>
           </description>
-          <description>Линия основной цвет (или просто цвет линии сплошной линии)</description>
+          <description>Цвет линии переднего плана (или просто цвет линии для сплошной линии)</description>
         </item>
         <item>
           <description>
@@ -70,7 +63,8 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.ShadowFormat" />
-          </description>тень цвет
+          </description>
+          <description>Цвет тени</description>
         </item>
         <item>
           <description>
@@ -78,12 +72,12 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" />
-          </description>цвет сторонах вытянутый объекта
+          </description>
+          <description>Цвет сторон вытянутого объекта</description>
         </item>
       </list>
-      <para>использования <see cref="P:Microsoft.Office.Interop.Word.ColorFormat.RGB" /> свойство, чтобы задать цвет явного значения красный зеленый синий.</para>
-      <para />
-    </remarks>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.ColorFormat.RGB" /> свойство, чтобы установить для цвета значение, заданное в явном виде: красный — зеленый — синий.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -146,7 +140,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее компонент черного цвета CMYK.</summary>
+        <summary>Возвращает или задает значение, представляющее черный компонент цвета CMYK.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,12 +171,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает яркость цвета указанного фигуры.</summary>
-        <value>Яркость цвета указанного фигуры.</value>
-        <remarks>
-          <para>Чтение и запись. Можно ввести номер от -1 (самый темный) 1 (очень светлый) для этого свойства, нулю, нейтральный.</para>
-          <para />
-        </remarks>
+        <summary>Получает яркость указанного цвета фигуры.</summary>
+        <value>Яркость указанного цвета фигуры.</value>
+        <remarks><para>Для чтения и записи. Можно ввести число от-1 (самая темная) до 1 (самое светлое) для этого свойства, нуль — нейтральный.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -208,11 +200,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cyan">
@@ -247,7 +239,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее голубой компонента цвета CMYK.</summary>
+        <summary>Возвращает или задает значение, представляющее голубой компонент цвета CMYK.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,8 +279,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Число рукописный ввод.</param>
-        <summary>Возвращает или задает значение, представляющее угол насыщенность для указанного рукописного ввода.</summary>
+        <param name="Index">Номер рукописного фрагмента.</param>
+        <summary>Возвращает или задает значение, представляющее степень насыщенности для указанного рукописного фрагмента.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -325,7 +317,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее пурпурный компонента цвета CMYK.</summary>
+        <summary>Возвращает или задает значение, представляющее пурпурный компонент цвета CMYK.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -393,10 +385,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdThemeColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет темы для формата цвет. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdThemeColorIndex" />
-        </value>
+        <summary>Возвращает или задает цвет темы для цветового формата. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdThemeColorIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -432,7 +422,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, при создании формы для профессиональной печати указанного фигура не печатается на формах разделение, где уровень рукописного ввода фигуры имеет значение нуль (0).</summary>
+        <summary>Возвращает или задает значение, указывающее, когда создаются формы цветоделения для профессиональной печати, указанная фигура не печатается на формах цветоделения, где для фигуры задан уровень рукописного фрагмента "0" (ноль).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -460,7 +450,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -491,7 +481,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение красный зеленый синий (RGB) указанного цвета.</summary>
+        <summary>Возвращает или задает значение красного-зеленого-синего (RGB) указанного цвета.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -528,7 +518,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее цвет в применяемые цветовой схеме, связанную с указанным объектом.</summary>
+        <summary>Возвращает или задает значение, представляющее цвет в примененной цветовой схеме, связанной с указанным объектом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -562,11 +552,11 @@
         <Parameter Name="Black" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Cyan">Значение, представляющее голубой компонента цвета. Может быть любое значение от 0 до 255.</param>
-        <param name="Magenta">Значение, представляющее пурпурный компонента цвета. Может быть любое значение от 0 до 255.</param>
-        <param name="Yellow">Значение, представляющее компонент желтый цвет. Может быть любое значение от 0 до 255.</param>
-        <param name="Black">Значение, представляющее компонент черного цвета. Может быть любое значение от 0 до 255.</param>
-        <summary>Задает значение голубой пурпурный желтый черный цвет (CMYK).</summary>
+        <param name="Cyan">Значение, представляющее голубой компонент цвета. Может принимать любое значение от 0 до 255.</param>
+        <param name="Magenta">Значение, представляющее пурпурный компонент цвета. Может принимать любое значение от 0 до 255.</param>
+        <param name="Yellow">Значение, представляющее желтый компонент цвета. Может принимать любое значение от 0 до 255.</param>
+        <param name="Black">Значение, представляющее черный компонент цвета. Может принимать любое значение от 0 до 255.</param>
+        <summary>Задает значение цвета голубого пурпурного цвета (CMYK).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -596,12 +586,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее добавляемого освещения или затемнения цвета указанного фигуры.</summary>
+        <summary>Возвращает или задает значение, представляющее Осветление или затемнение указанного цвета фигуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для свойства <b>TintAndShade</b> нуль (0), нейтральный.</para>
-          <para />
-        </remarks>
+        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для свойства <b>тинтандшаде</b> , 0 (ноль) — нейтральный.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -627,7 +615,7 @@
         <ReturnType>Microsoft.Office.Core.MsoColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип цвет фигуры.</summary>
+        <summary>Возвращает тип цвета фигуры.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -664,7 +652,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, представляющее желтый компонента цвета CMYK.</summary>
+        <summary>Возвращает или задает значение, представляющее желтый компонент цвета CMYK.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

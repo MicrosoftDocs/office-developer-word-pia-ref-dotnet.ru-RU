@@ -1,13 +1,5 @@
 <Type Name="TabStop" FullName="Microsoft.Office.Interop.Word.TabStop">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="6b088ecca52ac6b33337fa1643b74eb4f6121cce" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672801" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TabStop" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="56a10ea770b5716d55d205fab36ee4d9b04667f9" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146054" /></Metadata><TypeSignature Language="C#" Value="public interface TabStop" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TabStop" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TabStop" />
   <TypeSignature Language="VB.NET" Value="Public Interface TabStop" />
@@ -26,9 +18,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один позиции табуляции.</summary>
-    <remarks>
-      <para>Объект <b>TabStop</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.TabStops" /> семейства сайтов. Коллекция <b>TabStops</b> представляет все пользовательские и табуляции по умолчанию в абзаца или группы абзацев.</para> Использование <b>TabStops</b><para>(<paramref name="index" />), где <paramref name="index" /> — это расположение табуляции (в пунктах) или номер индекса для возврата объекта <b>TabStop</b> . Табуляции индексируются числовым слева направо на линейке.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.TabStops.Add(System.Single,System.Object@,System.Object@)" /> метод, чтобы добавить позиции табуляции.</para><para>Табуляции также можно добавить путем указания расположения с помощью свойства <b>TabStops</b> .</para><para><b>Примечание</b> Set <see cref="P:Microsoft.Office.Interop.Word._Document.DefaultTabStop" /> свойство интервал табуляции по умолчанию.</para><para /></remarks>
+    <summary>Представляет одну позицию табуляции.</summary>
+    <remarks><para>Объект <b>TabStop</b> является членом <see cref="T:Microsoft.Office.Interop.Word.TabStops" /> коллекции. Коллекция <b>TabStops</b> представляет все настраиваемые и заданные по умолчанию позиции табуляции в абзаце или группе абзацев.</para>
+      <para>Используйте <b>TabStops</b>(<paramref name="index" />), где <paramref name="index" /> — расположение позиции табуляции (в пунктах) или номера индекса, чтобы вернуть один объект <b>TabStop</b> . Позиции табуляции индексируются в числовом виде слева направо вдоль линейки.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TabStops.Add(System.Single,System.Object@,System.Object@)" /> метод для добавления позиции табуляции.</para>
+      <para>Вы также можете добавить позицию табуляции, указав расположение с помощью свойства <b>TabStops</b> .</para>
+      <para>
+        <b>Note (Примечание</b> )   Задайте <see cref="P:Microsoft.Office.Interop.Word._Document.DefaultTabStop" /> свойство, чтобы изменить интервалы по умолчанию для табуляции.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Alignment">
@@ -57,31 +54,29 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTabAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение константы, представляющий выравнивание для заданной позиции табуляции.</summary>
+        <summary>Возвращает или задает константу, представляющую выравнивание для указанной позиции табуляции.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTabAlignment" />может быть одной из этих констант <b>вдтабалигнмент</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTabAlignment" />может иметь одно из следующих констант <b>WdTabAlignment</b> . </para>
-          <para>
-            <b>wdAlignTabRight</b>
+            <b>вдалигнтаббар</b>
           </para>
           <para>
-            <b>wdAlignTabBar </b>
+            <b>вдалигнтабцентер</b>
           </para>
           <para>
-            <b>wdAlignTabCenter </b>
+            <b>вдалигнтабдеЦимал</b>
           </para>
           <para>
-            <b>wdAlignTabDecimal </b>
+            <b>вдалигнтаблефт</b>
           </para>
           <para>
-            <b>wdAlignTabLeft </b>
+            <b>вдалигнтаблист</b>
           </para>
           <para>
-            <b>wdAlignTabList </b>
+            <b>вдалигнтабригхт</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -133,7 +128,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный настраиваемых позиции табуляции.</summary>
+        <summary>Удаляет указанную настраиваемую позицию табуляции.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -160,11 +155,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomTab">
@@ -190,8 +185,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если заданной позиции табуляции — это пользовательская вкладка stop.</summary>
+        <summary><b>Значение true</b> , если указанная позиция табуляции — настраиваемая позиция табуляции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -224,29 +218,27 @@
       <Docs>
         <summary>Возвращает или задает заполнитель для указанного <see cref="T:Microsoft.Office.Interop.Word.TabStop" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может быть одной из этих констант <b>вдтаблеадер</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может иметь одно из следующих констант <b>WdTabLeader</b> . </para>
-          <para>
-            <b>wdTabLeaderSpaces</b>
+            <b>вдтаблеадердашес</b>
           </para>
           <para>
-            <b>wdTabLeaderDashes </b>
+            <b>вдтаблеадердотс</b>
           </para>
           <para>
-            <b>wdTabLeaderDots </b>
+            <b>вдтаблеадерхеави</b>
           </para>
           <para>
-            <b>wdTabLeaderHeavy </b>
+            <b>вдтаблеадерлинес</b>
           </para>
           <para>
-            <b>wdTabLeaderLines </b>
+            <b>вдтаблеадермиддледот</b>
           </para>
           <para>
-            <b>wdTabLeaderMiddleDot </b>
+            <b>вдтаблеадерспацес</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -300,7 +292,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,7 +323,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по позиции табуляции относительно левого поля.</summary>
+        <summary>Возвращает или задает позицию табуляции относительно левого поля.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

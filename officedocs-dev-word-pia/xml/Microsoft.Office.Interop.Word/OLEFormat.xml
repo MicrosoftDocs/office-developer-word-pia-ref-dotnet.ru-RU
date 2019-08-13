@@ -1,13 +1,5 @@
 <Type Name="OLEFormat" FullName="Microsoft.Office.Interop.Word.OLEFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="67318725a843161eb77654b732cf7c9e63c73493" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673420" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OLEFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="209f601ba96966afbaf1e2c89c3e30b339f7d58f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144409" /></Metadata><TypeSignature Language="C#" Value="public interface OLEFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OLEFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OLEFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface OLEFormat" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет характеристики OLE (отличного от компоновки) для объекта OLE, элемент управления ActiveX или поля.</summary>
-    <remarks>
-      <para>Используйте свойство <b>OLEFormat</b> для <see cref="T:Microsoft.Office.Interop.Word.Shape" />, <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />, или <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект для возврата объекта <b>OLEFormat</b> .</para>
-      <para>Не все типы фигур, встроенных фигур и полей имеют возможности OLE. Используйте свойство <b>типа</b><b>фигуры</b> и <b>InlineShape</b> объекта для определения, какой категории указанные форму или встроенная фигура попадает в. Свойство <b>Type</b> для объекта <b>поля</b> возвращает тип поля.</para>
-      <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Activate" />, <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Edit" />, <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Open" />, и <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.DoVerb(System.Object@)" /> методы для автоматизации объекта OLE.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.Object" /> свойство возвращает объект, который представляет элемент управления ActiveX или объекта OLE. С помощью данного объекта, можно использовать свойства и методы контейнер приложения или элемента управления ActiveX.</para>
-      <para />
-    </remarks>
+    <summary>Представляет характеристики OLE (кроме ссылки) для объекта OLE, элемента управления ActiveX или поля.</summary>
+    <remarks><para>Используйте свойство <b>OLEFormat</b> для объекта a <see cref="T:Microsoft.Office.Interop.Word.Shape" />, <see cref="T:Microsoft.Office.Interop.Word.InlineShape" />или <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекта, чтобы возвратить объект <b>OLEFormat</b> .</para>
+      <para>Не все типы фигур, встроенные фигуры и поля имеют возможности OLE. Используйте свойство <b>Type</b> для объектов <b>Shape</b> и <b>InlineShape</b> , чтобы определить, к какой категории относится заданная фигура или встроенная фигура. Свойство <b>Type</b> для объекта <b>field</b> Возвращает тип поля.</para>
+      <para>Для автоматизации объекта OLE <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Activate" />можно <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Edit" />использовать <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.Open" />методы, <see cref="M:Microsoft.Office.Interop.Word.OLEFormat.DoVerb(System.Object@)" /> , и.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.Object" /> свойство, чтобы возвратить объект, представляющий элемент управления ActiveX или объект OLE. С помощью этого объекта можно использовать свойства и методы приложения контейнера или элемента управления ActiveX.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -84,9 +74,8 @@
         <Parameter Name="ClassType" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="ClassType">
-          <b>Строковое значение.</b> Имя приложения, в котором будет открыта объекта OLE. Чтобы просмотреть список типов объектов, объект OLE может быть активирован как щелкните объект, а затем откройте диалоговое окно Convert (меню "Правка", объект подменю). Вы можете найти <paramref name="ClassType" /> строку, вставляя объекта как встроенная фигура и выберите Просмотр коды полей. Класс тип объекта, исходя из word «Внедрить» или word «Ссылка».</param>
-        <summary>Задает значение реестра Windows, определяющее приложения по умолчанию, используемый для активации на указанный объект OLE.</summary>
+        <param name="ClassType">Обязательный атрибут типа <b>String</b>. Имя приложения, в котором открыт объект OLE. Чтобы просмотреть список типов объектов, которые можно активировать с помощью объекта OLE, щелкните объект, а затем откройте диалоговое окно Преобразование (меню "Правка", подменю "объект"). Вы можете найти <paramref name="ClassType" /> строку, вставив объект в качестве встроенной фигуры и затем просматривая коды полей. Тип класса объекта соответствует либо слову "EMBED", либо слову "LINK".</param>
+        <summary>Задает значение реестра Windows, которое определяет приложение по умолчанию, используемое для активации указанного объекта OLE.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,13 +133,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип класса для указанного объекта OLE, рисунков или поля.</summary>
+        <summary>Возвращает или задает тип класса для указанного объекта OLE, рисунка или поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство доступно только для чтения для связанных объектов, отличных от связи DDE.</para>
-          <para>Можно просмотреть список доступных приложений в поле Тип объекта на вкладке Создать в диалоговое окно "объект" (меню "Вставка"). Вы можете найти <paramref name="ClassType" /> строку, вставляя объекта как встроенная фигура и выберите Просмотр коды полей. Класс тип объекта, исходя из word «Внедрить» или word «Ссылка».</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство доступно только для чтения для связанных объектов, отличных от ссылок DDE.</para>
+          <para>Список доступных приложений можно просмотреть в поле Тип объекта на вкладке Создать новую в диалоговом окне объект (меню "Вставка"). Вы можете найти <paramref name="ClassType" /> строку, вставив объект в качестве встроенной фигуры и затем просматривая коды полей. Тип класса объекта соответствует либо слову "EMBED", либо слову "LINK".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConvertTo">
@@ -179,12 +166,12 @@
         <Parameter Name="IconLabel" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ClassType">Необязательный элемент <b>Object</b>. Имя приложения, используемого для активации объекта OLE. Можно просмотреть список доступных приложений в поле Тип объекта на вкладке Создать в диалоговое окно "объект" (меню "Вставка"). Вы можете найти <paramref name="ClassType" /> строку, вставляя объекта как встроенная фигура и выберите Просмотр коды полей. Класс тип объекта, исходя из word «Внедрить» или word «Ссылка».</param>
-        <param name="DisplayAsIcon">Необязательный элемент <b>Object</b>. <b>Значение true</b> для отображения объекта OLE в виде значка. Значение по умолчанию — <b>False</b>.</param>
-        <param name="IconFileName">Необязательный элемент <b>Object</b>. Файл, содержащий значок для отображения.</param>
-        <param name="IconIndex">Необязательный элемент <b>Object</b>. Номер индекса значка в пределах <paramref name="IconFileName" />. Порядок значков в указанном файле соответствует порядке, в котором отображаются значки, в диалоговом окне Изменить значок (меню "Вставка", диалоговое окно "объект") при выборе отображения как значок флажок. Значок первого в файле имеет номер индекса нуль (0). Если значок с заданным индексом не существует в <paramref name="IconFileName" />, используется значок с индекса 1 (второй значок в файле). Значение по умолчанию — нуль (0).</param>
-        <param name="IconLabel">Необязательный элемент <b>Object</b>. Подпись (caption) для отображения под значок.</param>
-        <summary>Преобразует указанный объект OLE из одного класса в другой, что позволяет изменить объект в другой сервер приложений или изменить способ отображения объекта в документе.</summary>
+        <param name="ClassType">Необязательный <b>объект</b>. Имя приложения, используемого для активации объекта OLE. Список доступных приложений можно просмотреть в поле Тип объекта на вкладке Создать новую в диалоговом окне объект (меню "Вставка"). Вы можете найти <paramref name="ClassType" /> строку, вставив объект в качестве встроенной фигуры и затем просматривая коды полей. Тип класса объекта соответствует либо слову "EMBED", либо слову "LINK".</param>
+        <param name="DisplayAsIcon">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы ОТОБРАЗИТЬ объект OLE в виде значка. Значение по умолчанию — <b>False</b>.</param>
+        <param name="IconFileName">Необязательный <b>объект</b>. Файл, содержащий отображаемый значок.</param>
+        <param name="IconIndex">Необязательный <b>объект</b>. Номер индекса значка в элементе <paramref name="IconFileName" />. Порядок значков в указанном файле соответствует порядку, в котором значки отображаются в диалоговом окне Изменение значка (меню "Вставка", диалоговое окно "объект"), если установлен флажок "в виде значка". Первый значок в файле имеет индекс 0 (ноль). Если значок с указанным номером не существует в <paramref name="IconFileName" />, используется значок с номером 1 (второй значок в файле). Значение по умолчанию: 0 (ноль).</param>
+        <param name="IconLabel">Необязательный <b>объект</b>. Метка (Подпись), которая будет отображаться под значком.</param>
+        <summary>Преобразует указанный объект OLE из одного класса в другой, позволяя редактировать объект в другом серверном приложении или изменять способ отображения объекта в документе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,11 +198,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayAsIcon">
@@ -244,8 +231,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный объект отображается в виде значка.</summary>
+        <summary><b>Значение true</b> , если указанный объект отображается в виде значка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,8 +258,8 @@
         <Parameter Name="VerbIndex" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="VerbIndex">Необязательный элемент <b>Object</b>. Команда, которая должна выполнять объекта OLE. Если этот аргумент указан, посылается команда по умолчанию. Если объект OLE не поддерживает запрошенный команды, произойдет ошибка. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdOLEVerb" /> константу.</param>
-        <summary>Запросы на том, что объект OLE выполните одно из его доступных команд — действия объекта OLE использует для активизации его содержимого. Каждый объект OLE поддерживает набор команд, которые относятся к этому объекту.</summary>
+        <param name="VerbIndex">Необязательный <b>объект</b>. Команда, которую должен выполнить объект OLE. Если этот аргумент опущен, отправляется команда по умолчанию. Если объект OLE не поддерживает запрашиваемую команду, возникнет ошибка. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdOLEVerb" /> константой.</param>
+        <summary>Запрашивает выполнение объектом OLE одной из доступных команд — действий, которые выполняет объект OLE для активации его содержимого. Каждый объект OLE поддерживает набор глаголов, относящихся к этому объекту.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -298,7 +284,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Открывает указанный объект OLE для редактирования в приложении, в которой он был создан.</summary>
+        <summary>Открывает указанный объект OLE для редактирования в приложении, в котором оно было создано.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -328,7 +314,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значок, который использовался при <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.DisplayAsIcon" /> свойство имеет <b>значение True</b>: 0 (ноль) соответствует первый значок, 1 соответствует второй значок и т. д. Если этот аргумент задан, используется первый значок (по умолчанию).</summary>
+        <summary>Возвращает или задает значок, который используется, если <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.DisplayAsIcon" /> свойство имеет <b>значение true</b>: 0 (ноль) соответствует первому значку, 1 соответствует второму значку и т. д. Если этот аргумент не указан, используется первый значок (по умолчанию).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -390,7 +376,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает файл программы, в которой хранится значок для объекта OLE.</summary>
+        <summary>Возвращает или задает файл программы, в котором хранится значок для объекта OLE.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -446,12 +432,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, которая используется для идентификации часть к исходному файлу, связанным. Например если исходный файл в Microsoft Excel, свойство <b>метки</b> может возвращать «Workbook1! R3C1:R4C2» Если объект OLE содержит только несколько ячеек из таблицы.</summary>
+        <summary>Возвращает строку, используемую для определения части исходного файла, к которой выполняется связывание. Например, если исходный файл является книгой Microsoft Excel, свойство <b>Label</b> может возвращать значение "Workbook1! R3C1: R4C2 "Если объект OLE содержит только несколько ячеек листа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство работает только для фигур, встроенных фигур или поля, которые связанные объекты OLE.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство применимо только к фигурам, встроенным фигурам или полям, связанным с объектами OLE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Object">
@@ -477,7 +461,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий интерфейс верхнего уровня на указанный объект OLE. Это свойство позволяет получить доступ к свойствам и методам элемента управления ActiveX или приложения, в котором был создан объект OLE. Объект OLE должна поддерживать OLE-автоматизации для этого свойства для работы.</summary>
+        <summary>Возвращает <b>объект</b> , представляющий интерфейс верхнего уровня УКАЗАННОГО объекта OLE. Это свойство позволяет получить доступ к свойствам и методам элемента управления ActiveX или приложения, в котором был создан объект OLE. Для работы этого свойства объект OLE должен поддерживать автоматизацию OLE.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -530,7 +514,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -561,13 +545,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> сохраняется форматирование выполнено в Microsoft Word, чтобы связанного объекта, таких как таблицы, связанные с электронную таблицу Microsoft Excel.</summary>
+        <summary><b>True</b> сохраняет форматирование, выполненное в Microsoft Word, в связанном объекте OLE, например в таблице, связанной с электронной таблицей Microsoft Excel.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Когда <b>PreserveFormattingOnUpdate</b> имеет значение <b>True</b>, форматирование изменений, внесенных в объект в Word сохраняется при обновлении объекта. Word обновляет только содержимое в связанный объект.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для <b>пресервеформаттингонупдате</b> задано <b>значение true</b>, то изменения, внесенные в объект в Word, сохраняются при обновлении объекта. Word обновляет только содержимое связанного объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ProgID">
@@ -595,10 +576,10 @@
       <Docs>
         <summary>Возвращает программный идентификатор (ProgID) для указанного объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para><b>ProgID</b> и <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.ClassType" /> свойства будут (по умолчанию) возвращать одну и ту же строку. Однако свойство <b>класстипе</b> для ссылок DDE можно изменить.</para>
           <para>
-            <b>ProgID</b> и <see cref="P:Microsoft.Office.Interop.Word.OLEFormat.ClassType" /> свойства (по умолчанию) возвращает ту же строку. Тем не менее, можно изменить свойство <b>ClassType</b> для связи DDE.</para> Exchange 
-          <para><b>безопасности</b> динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para><para /></remarks>
+            <b>Безопасность</b>  Динамический обмен данными (DDE) это старая небезопасная технология. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

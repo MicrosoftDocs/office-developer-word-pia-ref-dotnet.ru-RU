@@ -1,13 +1,5 @@
 <Type Name="EndnoteOptions" FullName="Microsoft.Office.Interop.Word.EndnoteOptions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="56bb9412afa52ca93265ac74042f236306e64bb5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673433" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface EndnoteOptions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9b6115c21b97b1da3f0f82fc55f916a693aa07f8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148098" /></Metadata><TypeSignature Language="C#" Value="public interface EndnoteOptions" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract EndnoteOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.EndnoteOptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface EndnoteOptions" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет свойства, назначенные диапазон или выбора концевые сноски в документе.</summary>
-    <remarks>
-      <para>Используйте свойство <b>EndnoteOptions</b><see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> для возвращаемого объекта <b>EndnoteOptions</b> объекта. С помощью объекта <b>EndnoteOptions</b> , можно назначить разные концевая сноска свойства разных областей документа. Например можно концевые сноски в введение длинный документ будет отображаться как строчные Roman цифры, пока в остальной части документа они отображаются как арабские цифры.</para>
-      <para />
-    </remarks>
+    <summary>Представляет свойства, назначенные диапазону или выделению концевых сносок в документе.</summary>
+    <remarks><para>Чтобы вернуть объект <b>EndnoteOptions</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> свойство <see cref="T:Microsoft.Office.Interop.Word.Selection" /> <b>EndnoteOptions</b> объекта или. С помощью объекта <b>EndnoteOptions</b> можно назначить различные свойства концевой сноски разным областям документа. Например, вы можете использовать концевые сноски в вводе длинного документа, который будет отображаться в виде латинских цифр в нижнем регистре, а в остальной части документа они отображаются как арабские цифры.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,11 +74,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Location">
@@ -117,7 +107,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdEndnoteLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по все концевые сноски.</summary>
+        <summary>Возвращает или задает положение всех концевых сносок.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,7 +138,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdNumberingRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ сноски нумеруются после разрывов страниц или разрывы.</summary>
+        <summary>Возвращает или задает способ нумерации обычных или концевых сносок после разрывов страниц или разрывов разделов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,12 +169,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdNoteNumberStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль числа для диапазона или набора концевые сноски в документе.</summary>
+        <summary>Возвращает или задает стиль чисел для диапазона или выбора концевых сносок в документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>NumberStyle</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdNoteNumberStyle" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>нумберстиле</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdNoteNumberStyle" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -210,7 +198,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,7 +229,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает начальный номер Примечание.</summary>
+        <summary>Возвращает или задает номер начальной заметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="OMathRad" FullName="Microsoft.Office.Interop.Word.OMathRad">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ad569173c4d067176056e112e0701693d888ff98" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673166" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathRad" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ccf06316d085d50abb2effc445e258ac7ec95200" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147762" /></Metadata><TypeSignature Language="C#" Value="public interface OMathRad" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathRad" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathRad" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathRad" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет математических ключи объект, состоящий из корню, базового и необязательные степень.</summary>
+    <summary>Представляет объект математического радикала, состоящий из радикала, основания и дополнительной степени.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,11 +73,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathRad.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathRad.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Deg">
@@ -113,10 +103,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий степени для корню. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий степень для радикала. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,10 +131,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий базовый объект указанного формулы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий основу указанного объекта уравнения. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,10 +162,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть степень для корню. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть степень радикала. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -206,10 +190,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский указанного <see cref="T:Microsoft.Office.Interop.Word.OMathRad" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathRad" /> объекта.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

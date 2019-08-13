@@ -1,13 +1,5 @@
 <Type Name="FootnoteOptions" FullName="Microsoft.Office.Interop.Word.FootnoteOptions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="afa244e8f33d66e6f1a213fbf7cc5676ca9dd931" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673959" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FootnoteOptions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="385ec4a0271787482158a7c78174dd9e535e1997" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146796" /></Metadata><TypeSignature Language="C#" Value="public interface FootnoteOptions" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FootnoteOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FootnoteOptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface FootnoteOptions" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет свойства, назначенные диапазон или выбора сноски в документе.</summary>
-    <remarks>
-      <para>Используйте свойство <b>FootnoteOptions</b><see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта возвращает объект <b>FootnoteOptions</b> . С помощью объекта <b>FootnoteOptions</b> , можно назначить разные нижнего колонтитула свойства разных областей документа. Например вы можете сноски в введение длинный документ будет отображаться в строчные буквы, пока в остальной части документа они отображаются в виде звездочки.</para>
-      <para />
-    </remarks>
+    <summary>Представляет свойства, назначенные диапазону или набору сносок в документе.</summary>
+    <remarks><para>Чтобы вернуть объект <b>FootnoteOptions</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> свойство <see cref="T:Microsoft.Office.Interop.Word.Selection" /> <b>FootnoteOptions</b> объекта или. С помощью объекта <b>FootnoteOptions</b> можно назначить различные свойства сносок разным областям документа. Например, может потребоваться, чтобы сноски в начале длинного документа отображались в виде строчных букв, а в остальном документе они отображаются в виде звездочек.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,11 +74,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LayoutColumns">
@@ -117,7 +107,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ сноски располагаются в столбцах, когда раздел, содержащий знак сноски имеет несколько столбцов. Режим чтения-записи <b>Integer</b> (<b>int</b> в C#).</summary>
+        <summary>Возвращает или задает способ расположения сносок в столбцах, когда раздел, содержащий знак сноски, содержит несколько столбцов. Чтение и запись <b>целое число</b> (<b>int</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,12 +138,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFootnoteLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по всем сносок.</summary>
+        <summary>Возвращает или задает положение всех сносок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Location</b> может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdFootnoteLocation" /> константу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Location</b> может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdFootnoteLocation" /> константой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberingRule">
@@ -182,12 +170,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdNumberingRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ сноски нумеруются после разрывов страниц или разрывы.</summary>
+        <summary>Возвращает или задает способ нумерации обычных или концевых сносок после разрывов страниц или разрывов разделов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>NumberingRule</b> может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdNumberingRule" /> константу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>нумберингруле</b> может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdNumberingRule" /> константным.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberStyle">
@@ -216,12 +202,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdNoteNumberStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль числа для диапазона или набора сноски в документе.</summary>
+        <summary>Возвращает или задает стиль чисел для диапазона или выбора сносок в документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>NumberStyle</b> может быть любым <see cref="T:Microsoft.Office.Interop.Word.FootnoteOptions" /> константу. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>нумберстиле</b> может быть любым <see cref="T:Microsoft.Office.Interop.Word.FootnoteOptions" /> константным. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -247,7 +231,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -278,7 +262,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает начальный номер Примечание.</summary>
+        <summary>Возвращает или задает номер начальной заметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="Sources" FullName="Microsoft.Office.Interop.Word.Sources">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a89c23450c5d71860b1950fdeba17e6a433102e2" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672796" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Sources : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="633ba23158f0c498b750b9b23e679d4c44a3805f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146090" /></Metadata><TypeSignature Language="C#" Value="public interface Sources : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Sources implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Sources" />
   <TypeSignature Language="VB.NET" Value="Public Interface Sources&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию объектов <see cref="T:Microsoft.Office.Interop.Word.Source" /> объектов.</summary>
-    <remarks>
-      <para>Дополнительные сведения можно <see cref="WorkingwithBibliographies#SameCHM" />.</para>
-      <para />
-    </remarks>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Word.Source" /> объектов.</summary>
+    <remarks><para>Дополнительные сведения см. в разделе <see cref="WorkingwithBibliographies#SameCHM" />.    </para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -60,8 +50,8 @@
         <Parameter Name="Data" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Data">XML-строка, которая представляет значения поля для нового источника.</param>
-        <summary>Добавьте новый источник источников, перечисленные в диалоговом окне Диспетчер источников.</summary>
+        <param name="Data">XML-строка, представляющая значения полей для нового источника.</param>
+        <summary>Добавьте новый источник в источники, перечисленные в диалоговом окне Диспетчер источников.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -89,9 +79,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -118,10 +106,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в коллекции <b>источников</b> . Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в коллекции Sources <b></b> . Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,16 +134,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -220,9 +202,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Выражение, возвращающее <see cref="T:Microsoft.Office.Interop.Word.Source" /> объект</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Source" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Source" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,10 +229,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>источников</b> .</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта Sources <b></b> .</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

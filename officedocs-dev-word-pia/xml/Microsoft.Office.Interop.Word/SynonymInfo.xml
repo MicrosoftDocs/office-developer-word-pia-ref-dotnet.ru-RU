@@ -1,13 +1,5 @@
 <Type Name="SynonymInfo" FullName="Microsoft.Office.Interop.Word.SynonymInfo">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2912f319ea857dd7183dd4989af962bcd735c1a1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673495" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SynonymInfo" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ada3374fbdbeb68d182821597276e5a9f0ea1732" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146068" /></Metadata><TypeSignature Language="C#" Value="public interface SynonymInfo" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SynonymInfo" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SynonymInfo" />
   <TypeSignature Language="VB.NET" Value="Public Interface SynonymInfo" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет сведения о синонимов, антонимов, связанных с ними слова или связанных с ними выражений для заданного диапазона или заданной строки.</summary>
-    <remarks>
-      <para>Используйте свойство <b>SynonymInfo</b><see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта возвращает объект <b>SynonymInfo</b> . Объект <b>SynonymInfo</b> можно получить из или из Microsoft Word. Если он возвращается из Microsoft Word, можно указать найти слово или фразу и средства проверки правописания код языка. Если он возвращается из диапазона ячеек, Word использует указанный диапазон как найти слово.</para>
-      <para>Многие из свойства объекта <b>SynonymInfo</b> возвращает <b>объект</b> , содержащий массив строк. При работе с помощью этих свойств можно присвоить переменной возвращаемый массив и затем индексировать переменной для просмотра элементов в массиве.</para>
-      <para>Можно проверить значение <see cref="P:Microsoft.Office.Interop.Word.SynonymInfo.MeaningCount" /> свойство, чтобы избежать потенциальных ошибок в вашей программе.</para>
-      <para />
-    </remarks>
+    <summary>Представляет сведения о синонимах, антонимс, связанных словах или связанных выражениях для указанного диапазона или указанной строки.</summary>
+    <remarks><para>Чтобы вернуть объект <b>SynonymInfo</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> свойство <see cref="T:Microsoft.Office.Interop.Word.Application" /> <b>SynonymInfo</b> объекта или. Объект <b>SynonymInfo</b> может возвращаться либо из диапазона, либо из Microsoft Word. Если он возвращается из Word, вы указываете слово или фразу для поиска и идентификатор языка проверки правописания. Если он возвращается из диапазона, Word использует указанный диапазон в качестве искомого слова.</para>
+      <para>Многие свойства объекта <b>SynonymInfo</b> возвращают <b>объект</b> , который содержит массив строк. При работе с этими свойствами можно присвоить возвращаемый массив переменной, а затем индексировать переменную для просмотра элементов в массиве.</para>
+      <para>Можно проверить значение <see cref="P:Microsoft.Office.Interop.Word.SynonymInfo.MeaningCount" /> свойства, чтобы предотвратить возможные ошибки в коде.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AntonymList">
@@ -58,12 +48,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает список антонимы слова или фразы. Список возвращается как массив строк.</summary>
+        <summary>Возвращает список антонимс для слова или фразы. Список возвращается в виде массива строк.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>AntonymList</b> является свойством <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> объекта, которое может быть возвращено из диапазона или приложения. Если этот объект возвращается из приложения, необходимо указать слово для поиска и язык, используемый. Возвращаемый объект из диапазона диапазон выполняется поиск с использованием языка диапазона.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>антонимлист</b> — это свойство <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> объекта, которое может быть возвращено либо из диапазона, либо из приложения. Если этот объект возвращается из приложения, вы указываете слово для поиска и используемый язык. Когда объект возвращается из диапазона, выполняется поиск диапазона, использующего язык диапазона.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -117,11 +105,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Found">
@@ -147,8 +135,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если тезаурус поиск синонимов, антонимов, связанные слова или связанные выражений для слово или фразу.</summary>
+        <summary><b>Имеет значение true</b> , если тезаурус находит синонимы, антонимс, связанные слова или связанные выражения для слова или фразы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,13 +163,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число записей в списке значения, найденные в тезаурусе слова или фразы. Возвращает нуль (0), если нет значения не найдены.</summary>
+        <summary>Возвращает число элементов в списке значений, найденных в тезаурусе для слова или фразы. Возвращает значение 0 (ноль), если значения не найдены.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Каждого значение представляет уникальное список синонимов слово или фраза.</para>
-          <para>Списки связанные слова, связанных с ними выражений и антонимы не учитывается в качестве записей в списке значения.</para>
-          <para />
-        </remarks>
+        <remarks><para>Каждое значение представляет собой уникальный список синонимов для слова или фразы.</para>
+          <para>Списки связанных слов, связанных выражений и антонимс не учитываются как записи в списке значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MeaningList">
@@ -208,12 +193,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает список значений для слова или фразы. Список возвращается как массив строк.</summary>
+        <summary>Возвращает список значений для слова или фразы. Список возвращается в виде массива строк.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Списки связанные слова, связанных с ними выражений и антонимы не учитывается в качестве записей в список значений.</para>
-          <para />
-        </remarks>
+        <remarks><para>Списки связанных слов, связанных выражений и антонимс не учитываются как записи в списке значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -239,7 +222,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -267,12 +250,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает список части речи, соответствующие значения, найти слово или фразу, поиск в тезаурусе. Список возвращается в виде массива целых чисел.</summary>
+        <summary>Возвращает список частей речи, соответствующих приведенным выше значениям для слова или фразы, которые ищутся в тезаурусе. Список возвращается в виде массива целых чисел.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Список части речи возвращается как массив, состоящий из следующих <see cref="T:Microsoft.Office.Interop.Word.WdPartOfSpeech" /> констант: <b>wdAdjective</b>, <b>wdAdverb</b>, <b>wdConjunction</b>, <b>wdIdiom</b>, <b>wdInterjection</b>, <b>wdNoun</b>, <b>wdOther</b><b>wdPreposition</b>, <b>wdPronoun</b>и <b>wdVerb</b>. Элементы массива упорядочены в соответствии с элементы, возвращенные <see cref="P:Microsoft.Office.Interop.Word.SynonymInfo.MeaningList" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Список <see cref="T:Microsoft.Office.Interop.Word.WdPartOfSpeech" /> частей речи возвращается в виде массива, состоящего из следующих констант: <b>вдаджективе</b>, <b>вдадверб</b>, <b>вдконжунктион</b>, <b>вдидиом</b>, <b>вдинтержектион</b>, <b>вднаун</b>, <b>вдосер</b>, <b>вдпрепоситион</b>, <b>вдпронаун</b>и <b>вдверб</b>. Элементы массива упорядочиваются в соответствии с элементами, возвращаемыми <see cref="P:Microsoft.Office.Interop.Word.SynonymInfo.MeaningList" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelatedExpressionList">
@@ -298,12 +279,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает список выражений, связанные с указанной слово или фразу. Список возвращается как массив строк.</summary>
+        <summary>Возвращает список выражений, относящихся к указанному слову или фразе. Список возвращается в виде массива строк.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Как правило существует лишь несколько связанных с ними выражения, расположенные в тезаурусе.</para>
-          <para />
-        </remarks>
+        <remarks><para>Как правило, в тезаурусе обнаружено очень мало связанных выражений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelatedWordList">
@@ -329,7 +308,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает список слова, связанные с указанной слово или фразу. Список возвращается как массив строк.</summary>
+        <summary>Возвращает список слов, относящихся к указанному слову или фразе. Список возвращается в виде массива строк.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -360,8 +339,8 @@
         <Parameter Name="Meaning" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Meaning">Требуется <b>объект</b>. Значение, что строка или номер индекса в массиве возможных значения.</param>
-        <summary>Возвращает список синонимов для указанного значения слова или фразы. Список возвращается как массив строк.</summary>
+        <param name="Meaning">Обязательный <b>объект</b>. Значение в виде строки или номера индекса в массиве возможных значений.</param>
+        <summary>Возвращает список синонимов для указанного значения слова или фразы. Список возвращается в виде массива строк.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -389,12 +368,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает слово или фразу, поиск в тезаурусе.</summary>
+        <summary>Возвращает слово или фразу, поиск которых выполнен тезаурусом.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Тезаурус иногда поиск сокращенную версию строки или диапазон, используемый для возврата <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> объекта. Свойство <b>Word</b> позволяет видеть точной строки, который использовался.</para>
-          <para />
-        </remarks>
+        <remarks><para>Иногда тезаурус ищет сокращенную версию строки или диапазона, используемую для возврата <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> объекта. Свойство <b>Word</b> позволяет увидеть точную строку, которая использовалась.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

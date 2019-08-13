@@ -1,13 +1,5 @@
 <Type Name="ListLevel" FullName="Microsoft.Office.Interop.Word.ListLevel">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="40804d3d1c4f0bf8f247c8b34546720ff5855ffd" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672558" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ListLevel" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bba67b72f79c6b6f79e34d7a683261fcb43b7fc0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144500" /></Metadata><TypeSignature Language="C#" Value="public interface ListLevel" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListLevel" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListLevel" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListLevel" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один список уровень, либо уровень только для нумерованном или маркированном списке, либо один из девяти уровней многоуровневый список.</summary>
-    <remarks>
-      <para>Объект <b>ListLevel</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> семейства.</para>
-      <para>Использования <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы возвратить объект <b>ListLevel</b> .</para>
-      <para>Объект <b>ListLevel</b> предоставляет доступ к все свойства форматирования для указанного списка уровня, таких как <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />, и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /> свойств.</para>
-      <para>Для применения уровень списка, сначала определите диапазон или список и затем с помощью <see cref="M:Microsoft.Office.Interop.Word.List.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@)" /> метод. Каждой вкладки в начале абзаца преобразуется в одном уровне списка. К примеру, абзаца, который начинается с трех вкладок, станут абзац списка третьего уровня после используется метод <b>ApplyListTemplate</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет один уровень списка, либо единственный уровень для маркированного или нумерованного списка, либо один из девяти уровней многоуровневой нумерованного списка.</summary>
+    <remarks><para>Объект <b>ListLevel</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекции.</para>
+      <para>Используйте <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один объект <b>ListLevel</b> .</para>
+      <para>Объект <b>ListLevel</b> предоставляет доступ ко всем свойствам форматирования для указанного уровня списка, таких как <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />,,, и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /> свойства.</para>
+      <para>Чтобы применить уровень списка, сначала определите диапазон или список, а затем используйте <see cref="M:Microsoft.Office.Interop.Word.List.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@)" /> метод. Каждая вкладка в начале абзаца преобразуется в уровень списка. Например, абзац, начинающийся с трех вкладок, станет абзацем списка "уровень-третий" после использования метода <b>апплилисттемплате</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Alignment">
@@ -62,7 +52,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdListLevelAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdListLevelAlignment" /> константа, которая представляет выравнивание для уровня списка шаблона списка.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdListLevelAlignment" /> константу, представляющую выравнивание для уровня списка шаблона списка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,9 +108,8 @@
         <Parameter Name="FileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="FileName">
-          <b>Строковое значение.</b> Путь и имя файла изображения.</param>
-        <summary>Форматирование абзаца или несколько абзацев с маркер.</summary>
+        <param name="FileName">Обязательный атрибут типа <b>String</b>. Путь и имя файла изображения.</param>
+        <summary>Форматирует абзац или диапазон абзацев с помощью рисованного маркера.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,11 +137,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Font">
@@ -181,12 +170,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий форматирование знаков на указанный объект.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий форматирование символов указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать это свойство, укажите выражение, возвращающее объект <b>Font</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать это свойство, укажите выражение, возвращающее объект <b>Font</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -243,7 +230,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя стиля со связанными в указанный <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает имя стиля, связанного с указанным <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объектом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -274,13 +261,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает формат для уровня указанного списка.</summary>
+        <summary>Возвращает или задает числовой формат для указанного уровня списка.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Знак процента (%) следовать любое число от 1 до 9 представляет номер стиля из соответствующих списков уровня. Например, если вы хотите, чтобы формат для первого уровня «Статья I,» «Статьи II,» и т. д строку для свойства <b>Формат числа</b> бы «Статьи %1» и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" /> свойство будет иметь значение <b>wdListNumberStyleUpperCaseRoman</b>.</para>
-          <para>Если <b>NumberStyle</b> задано значение <b>wdListNumberStyleBullet</b>, строки для свойства <b>Формат числа</b> может содержать только один знак.</para>
-          <para />
-        </remarks>
+        <remarks><para>Знак процента (%) за которыми следует любое число от 1 до 9, соответствует стилю чисел на соответствующем уровне списка. Например, если нужно, чтобы формат первого уровня "статья I", "статья II" и т. д., то строка для свойства <b>NumberFormat</b> будет иметь значение "article% 1", а <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" /> свойству будет присвоено значение <b>вдлистнумберстилеупперкасероман</b>.</para>
+          <para>Если для свойства <b>нумберстиле</b> задано значение <b>вдлистнумберстилебуллет</b>, строка для свойства <b>NumberFormat</b> может содержать только один символ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberPosition">
@@ -309,12 +294,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию (в пунктах) число или маркер для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает положение (в пунктах) числа или маркера для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для каждого уровня списка можно задать положение число или маркер, положение вкладки и положение текста, который является оболочкой.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для каждого уровня списка можно задать положение номера или маркера, положение вкладки и положение текста, который будет переноситься в оболочку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberStyle">
@@ -343,12 +326,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdListNumberStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число стилей для <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает стиль чисел для <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>NumberStyle</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdListNumberStyle" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>нумберстиле</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdListNumberStyle" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -374,7 +355,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -402,7 +383,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.InlineShape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, который представляет маркер.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий графический маркер.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -433,12 +414,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает уровень списка, который должен отображаться перед повторным нумерации 1 уровень указанного списка. Отображается <b>значение false,</b> Если нумерация по-прежнему производится последовательно при каждом уровне списка.</summary>
+        <summary>Задает или возвращает уровень списка, который должен отображаться перед перезапуском указанного уровня списка с 1. <b>Значение false</b> , если нумерация последовательно продолжается каждый раз, когда отображается уровень списка.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Эта функция позволяет списков, чтобы поочередно, обслуживание числовой последовательности. Нельзя задать свойство <b>ResetOnHigher</b> списка уровня значение больше или равно его индекса в <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> семейства сайтов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Эта функция позволяет использовать списки для чередования, сохраняя числовые последовательности. Невозможно задать для свойства <b>ресетонхигхер</b> уровня списка значение, большее или равное индексу в <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ResetOnHigherOld">
@@ -504,7 +483,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает начальный номер для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает начальный номер указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -535,7 +514,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию вкладки для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает позицию табуляции для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -566,7 +545,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию (в пунктах) для во второй строке перенос текста для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
+        <summary>Возвращает или задает позицию (в пунктах) для второй строки переноса текста для указанного <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -597,12 +576,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTrailingCharacter</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символ, вставленный после номер уровня указанного списка.</summary>
+        <summary>Возвращает или задает символ, вставленный после числа для указанного уровня списка.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>TrailingCharacter</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdTrailingCharacter" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>траилингчарактер</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdTrailingCharacter" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

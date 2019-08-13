@@ -1,13 +1,5 @@
 <Type Name="Zoom" FullName="Microsoft.Office.Interop.Word.Zoom">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2f2dc9d4d63de913f860ff43cbd70f73c583211b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673154" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Zoom" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b34a8e7ae4961d46b3b63e6a6227446fc79b0348" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145263" /></Metadata><TypeSignature Language="C#" Value="public interface Zoom" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Zoom" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Zoom" />
   <TypeSignature Language="VB.NET" Value="Public Interface Zoom" />
@@ -26,11 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит параметры увеличения (например, масштаба) окна или панели.</summary>
-    <remarks>
-      <para>
-        <b>Отобразить</b> объект является членом <see cref="T:Microsoft.Office.Interop.Word.Zooms" /> семейства.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.View.Zoom" /> свойства <see cref="T:Microsoft.Office.Interop.Word.View" /> объект, который требуется вернуть объект <b>отобразить</b> объект.</para> Использование <b>увеличивает</b><para>(<paramref name="index" />), где <paramref name="index" /> идентифицирует тип представления, чтобы вернуть объект <b>отобразить</b> объект. Тип представления, заданный по индексу, может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Word.WdViewType" /> констант: <b>wdMasterView</b>, <b>wdNormalView</b>, <b>wdOutlineView</b>, <b>wdPrintPreview</b>, <b>wdPrintView</b>или <b>wdWebView</b>.</para> Метод <b>Add</b><para>недоступен для коллекции <b>увеличивает</b> . Коллекция <b>увеличивает</b> включает single <b>отобразить</b> объект для каждого из различных типов представления (структуры, обычный, макет страницы и т.д.).</para><para /></remarks>
+    <summary>Содержит параметры масштаба (например, масштаб в процентах) для окна или области.</summary>
+    <remarks><para>Объект <b>Zoom</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Zooms" /> коллекции.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.View.Zoom" /> свойство <see cref="T:Microsoft.Office.Interop.Word.View" /> объекта, чтобы вернуть один объект <b>масштаба</b> .</para>
+      <para>Используйте <b>масштабирование</b>(<paramref name="index" />), где <paramref name="index" /> определяет тип представления, чтобы вернуть один объект <b>масштаба</b> . Типом представления, указанным индексом, может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdViewType" /> констант: <b>вдмастервиев</b>, <b>вднормалвиев</b>, <b>вдаутлиневиев</b>, <b>вдпринтпревиев</b>, <b>вдпринтвиев</b>или <b>вдвебвиев</b>.</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>масштабирования</b> . Коллекция <b>Zoom</b> содержит один объект <b>масштаба</b> для каждого типа представления (структура, обычный, макет страницы и т. д.).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,11 +77,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageColumns">
@@ -117,7 +110,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество отображаемых страниц рядом друг с другом на экране в то же время в режиме разметки или в режиме предварительного просмотра.</summary>
+        <summary>Возвращает или задает количество страниц, одновременно отображаемых на экране, в режиме разметки или предварительного просмотра.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,28 +141,25 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPageFit</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает масштаб окна, чтобы вся страница отображается или всю ширину страницы будет отображаться.</summary>
+        <summary>Возвращает или задает масштаб окна, чтобы отображалась вся страница либо видна вся ширина страницы.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdPageFit" />может быть одной из следующих констант <b>вдпажефит</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdPageFit" />может иметь одно из следующих констант <b>WdPageFit</b> : </para>
-          <para>
-            <b>wdPageFitBestFit </b>
+            <b>вдпажефитбестфит</b>
           </para>
           <para>
-            <b>wdPageFitFullPage </b>
+            <b>вдпажефитфуллпаже</b>
           </para>
           <para>
-            <b>wdPageFitNone </b>
+            <b>вдпажефитноне</b>
           </para>
           <para>
-            <b>wdPageFitTextFit</b>
+            <b>вдпажефиттекстфит</b>
           </para>
-          <para>
-            <b>wdPageFitFullPage</b> константа не оказывает влияния, если документ не находится в Печать представления.</para>
-          <para>При <b>PageFit</b> задано значение <b>wdPageFitBestFit</b>, масштаб автоматически пересчитывается каждый раз при изменении размеров окна документа. Установка для этого свойства <b>wdPageFitNone</b> предотвращает перерасчет каждый раз, когда это масштаб.</para>
-          <para />
-        </remarks>
+          <para>Константа <b>вдпажефитфуллпаже</b> не оказывает никакого действия, если документ не находится в режиме печати.</para>
+          <para>Если для свойства <b>пажефит</b> задано значение <b>вдпажефитбестфит</b>, то масштабный процент автоматически пересчитывается каждый раз при изменении размера окна документа. Если задать для этого свойства значение <b>вдпажефитноне</b> , то в случае этого изменения процент масштабирования будет пересчитано.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageRows">
@@ -198,7 +188,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер страницы на экране будет отображаются одним над другим в то же время в режиме разметки или в режиме предварительного просмотра.</summary>
+        <summary>Возвращает или задает количество страниц, которые будут отображаться на экране одновременно в режиме разметки или предварительного просмотра.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,7 +216,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,7 +247,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает масштаб для окна в процентном выражении.</summary>
+        <summary>Возвращает или задает масштаб окна в процентах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="Trendlines" FullName="Microsoft.Office.Interop.Word.Trendlines">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4677ea796f02bb8de0655ac078e65a42f7c9be02" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672692" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Trendlines : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d5d8e0ba867d614dca0f443355bc975b7ca84d93" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143745" /></Metadata><TypeSignature Language="C#" Value="public interface Trendlines : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Trendlines implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Trendlines" />
   <TypeSignature Language="VB.NET" Value="Public Interface Trendlines&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объекты для указанного ряда.</summary>
-    <remarks>
-      <para>Каждый <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объект представляет линии тренда на диаграмме. Линии тренда показывает тренда или направление данные в виде последовательности.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объектов для указанного ряда.</summary>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объект представляет линию тренда на диаграмме. Линия тренда отображает тенденцию или направление данных в ряде.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -64,7 +54,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Trendline" />.</returns>
+        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Trendline" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -98,19 +88,17 @@
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Необязательные <see cref="T:Microsoft.Office.Interop.Word.XlTrendlineType" />. Тип линии тренда.</param>
-        <param name="Order">Необязательный элемент <b>Object</b>. Требуется, если тип — <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlPolynomial" />. Порядок линия тренда. Должно быть целое число от 2 до 6 включительно.</param>
-        <param name="Period">Необязательный элемент <b>Object</b>. Требуется, если тип — <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlMovingAvg" />. Период, линия тренда. Должно быть целое число, больше 1 и меньше, чем число точек данных в серии, добавляемым линии тренда.</param>
-        <param name="Forward">Необязательный элемент <b>Object</b>. Число периодов (или единиц измерения на диаграмме), охватывающий линии тренда вперед.</param>
-        <param name="Backward">Необязательный элемент <b>Object</b>. Число периодов (или единиц измерения на диаграмме), линия тренда расширяет назад.</param>
-        <param name="Intercept">Необязательный элемент <b>Object</b>. Отрезка линии тренда. Если этот аргумент задан, расчета отрезка автоматически устанавливается с регрессии.</param>
-        <param name="DisplayEquation">Необязательный элемент <b>Object</b>. <b>Значение true</b> для отображения формула линии тренда на диаграмме (в совпадает с меткой данных R-квадрат). Значение по умолчанию — <b>False</b>.</param>
-        <param name="DisplayRSquared">Необязательный элемент <b>Object</b>. Значение true, чтобы отображаемое значение R-квадрат линии тренда на диаграмме (в совпадает с меткой данных уравнение). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Name">Необязательный элемент <b>Object</b>. Имя линии тренда как текст. Если этот аргумент указан, Microsoft Excel создает имя.</param>
-        <summary>Создает новый линии тренда. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объекта.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.Trendline" />
-        </returns>
+        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Word.XlTrendlineType" />параметр. Тип линии тренда.</param>
+        <param name="Order">Необязательный <b>объект</b>. Обязательный, если <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlPolynomial" />тип —. Порядок линии тренда. Должно быть целым числом от 2 до 6 включительно.</param>
+        <param name="Period">Необязательный <b>объект</b>. Обязательный, если <see cref="F:Microsoft.Office.Interop.Word.XlTrendlineType.xlMovingAvg" />тип —. Период линии тренда линии тренда. Должно быть целым числом больше 1 и меньшим, чем число точек данных в ряду, к которым добавляется линия тренда.</param>
+        <param name="Forward">Необязательный <b>объект</b>. Количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется вперед.</param>
+        <param name="Backward">Необязательный <b>объект</b>. Количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется обратно.</param>
+        <param name="Intercept">Необязательный <b>объект</b>. Пересечение с линией тренда. Если этот аргумент опущен, то Конст автоматически задается регрессией.</param>
+        <param name="DisplayEquation">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить формулу линии тренда на диаграмме (в той же метке данных, что и значение R-квадрат). Значение по умолчанию — <b>False</b>.</param>
+        <param name="DisplayRSquared">Необязательный <b>объект</b>. Значение true для отображения значения аппроксимации линии тренда на диаграмме (в той же метке данных, что и формула). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Name">Необязательный <b>объект</b>. Название линии тренда в виде текста. Если этот аргумент опущен, Microsoft Excel создает имя.</param>
+        <summary>Создает новую линию тренда. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Trendline" /> объект.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.Trendline" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,9 +125,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Application (приложение</b> ) (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -166,10 +153,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое</b> значение, представляющее количество объектов в коллекции.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает <b>целое</b> значение, представляющее число объектов в коллекции.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -196,14 +181,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Trendlines.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Trendlines.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -234,7 +215,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -264,10 +245,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
-        <summary>Возвращает объект из коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Trendline" />.</value>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <summary>Возвращает один объект из коллекции.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Trendline" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -294,10 +274,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="PageNumber" FullName="Microsoft.Office.Interop.Word.PageNumber">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="84335aeefbe91fe9d5f4003bc39813a7196ba593" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673362" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PageNumber" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b811b0b2c2b1792d369b2150ed58810310943396" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144216" /></Metadata><TypeSignature Language="C#" Value="public interface PageNumber" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PageNumber" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.PageNumber" />
   <TypeSignature Language="VB.NET" Value="Public Interface PageNumber" />
@@ -26,9 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет номер страницы в верхнего или нижнего колонтитула.</summary>
-    <remarks>
-      <para>Объект <b>PageNumber</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> семейства сайтов. Коллекция <b>PageNumbers</b> включает все номера страниц в одном верхних и нижних колонтитулов.</para> Использование <b>PageNumbers</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>PageNumber</b> . В большинстве случаев верхних и нижних колонтитулов будет содержать только одну страницу номер, который является номер индекса 1.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод, чтобы добавить номер страницы (поле страницы) для верхних и нижних колонтитулов.</para><para /></remarks>
+    <summary>Представляет номер страницы в верхнем или нижнем колонтитуле.</summary>
+    <remarks><para>Объект <b>PageNumber</b> является членом <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> коллекции. Коллекция <b>PageNumbers</b> включает все номера страниц в один верхний или нижний колонтитул.</para>
+      <para>Используйте <b>PageNumbers</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>PageNumber</b> . В большинстве случаев верхний или нижний колонтитул будет содержать только один номер страницы, который является индексом 1.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод для добавления номера страницы (поля страницы) в верхний или нижний колонтитул.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Alignment">
@@ -57,7 +51,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPageNumberAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberAlignment" /> константа, которая представляет выравнивание для номера страницы.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberAlignment" /> константу, представляющую Выравнивание номера страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -138,11 +132,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -246,7 +240,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -273,10 +267,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

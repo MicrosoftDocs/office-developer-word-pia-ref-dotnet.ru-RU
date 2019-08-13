@@ -1,13 +1,5 @@
 <Type Name="CoAuthor" FullName="Microsoft.Office.Interop.Word.CoAuthor">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a54fc1ec631ea87a62d012687dd65c54b7edee9d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672772" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CoAuthor" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f0255cfbbf0271c447cea6351afd1bdc1f6eca9f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147234" /></Metadata><TypeSignature Language="C#" Value="public interface CoAuthor" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthor" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthor" />
   <TypeSignature Language="VB.NET" Value="Public Interface CoAuthor" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один совместное редактирование документа. <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> Коллекция содержит все совместного авторов в документе (авторов, которые активно редактирования документа).</summary>
-    <remarks>
-      <para>Используйте <b>соавторов</b>(<paramref name="Index" />), где <paramref name="Index" /> — номер индекса для возврата объекта <b>соавтором</b> .</para>
+    <summary>Представляет одного совместного автора в документе. <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.CoAuthors" /> Коллекция содержит все совместно редактируемые авторы в документе (авторы, которые активно редактируют документ).</summary>
+    <remarks><para>Используйте <b></b>соавторы (<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса, который возвращает один объект <b>совместного редактирования</b> .</para>
       <para>
-        <b>Осторожность</b>: после начала нового совместное редактирование для редактирования документа может потребоваться до одного минут или больше времени для совместное редактирование в документе.</para>
-      <para />
-    </remarks>
+        <b>Внимание!</b>когда новый соавтор начнет редактировать документ, он может занять до одной минуты или больше, чтобы соавтор отображался в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -59,12 +49,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -90,15 +77,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>:</para>
-          <para>Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание</b>: </para>
+          <para>Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EmailAddress">
@@ -124,12 +109,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает строку, которая указывает адрес электронной почты указанного совместное редактирование.</summary>
-        <value>Адрес электронной почты указанного совместное редактирование.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает строку, указывающую адрес электронной почты указанного совместного автора.</summary>
+        <value>Адрес электронной почты указанного совместного автора.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ID">
@@ -155,12 +138,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает уникальный идентификатор для указанного автора.</summary>
+        <summary>Получает уникальный идентификатор указанного автора.</summary>
         <value>Уникальный идентификатор для указанного автора.</value>
-        <remarks>
-          <para>Только для чтения. Уникальный идентификатор, возвращаемых этим свойством следует считать не определенного длина или формат.</para>
-          <para />
-        </remarks>
+        <remarks><para>Только для чтения. Уникальный идентификатор, возвращаемый этим свойством, не должен иметь определенную длину или формат.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsMe">
@@ -186,13 +167,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли этот автор представляет текущего пользователя.</summary>
-        <value>
-          <b>значение true,</b> Если автор представляет текущего пользователя; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, указывающее, представляет ли автор текущего пользователя.</summary>
+        <value><b>имеет значение true</b> , если автор представляет текущего пользователя; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Locks">
@@ -218,12 +196,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthLocks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекции, представляющей блокировок в документе, связанные с указанной совместное редактирование.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекции, представляющей блокировок в документе, связанные с указанной совместное редактирование.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекцию, которая представляет блокировку в документе, связанную с указанным совместным редактированием.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> Коллекция, представляющая блокировки в документе, которые связаны с указанным совместным редактированием.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -249,12 +225,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает отображаемое имя указанного совместное редактирование.</summary>
-        <value>Отображаемое имя указанного совместное редактирование.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает отображаемое имя указанного совместного редактирования.</summary>
+        <value>Отображаемое имя указанного совместного редактирования.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -280,9 +254,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthor" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

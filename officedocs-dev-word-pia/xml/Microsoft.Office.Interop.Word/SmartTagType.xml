@@ -1,13 +1,5 @@
 <Type Name="SmartTagType" FullName="Microsoft.Office.Interop.Word.SmartTagType">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="42dcabef8b7b97589d5327b23896d8ea6d46375a" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673579" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTagType" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="be0009d07ada538632f62700e62de5b182eb910c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143989" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagType" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagType" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTagType" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTagType" />
@@ -27,13 +19,11 @@
   </Attributes>
   <Docs>
     <summary>Представляет тип смарт-тега.</summary>
-    <remarks>
-      <para>Тип смарт-тега — один элемент в списке смарт-тег. Списки смарт-тег может содержать несколько типов смарт-тег. Например смарт-тега списка адресов по умолчанию устанавливаются в английской систем содержит тип смарт-тега имени, тип улицы смарт-тега и типом смарт-тега Город других.</para>
+    <remarks><para>Тип смарт-тега является отдельным элементом в списке смарт-тегов. Списки смарт-тегов могут содержать несколько типов смарт-тегов. Например, список смарт-тегов Address, установленный в английской системе по умолчанию, содержит тип смарт-тега имени, тип смарт-тега улицы и тип смарт-тега City, чтобы присвоить имя только несколько.</para>
       <para>
-        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <see cref="T:Microsoft.Office.Interop.Word.SmartTagAction" />, и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> , то есть каждого элемента, распознает смарт-тег компонент — это объект <b>SmartTagType</b> связанные объекты. К примеру «Город» в компоненте смарт-тег адрес является объектом определенного <b>SmartTagType</b> . Тип смарт-тега Город затем имеет связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тег, который распознает смарт-теги типа «Город» в документах) и <b>SmartTagAction</b> (часть смарт-тега компонента, предоставляющий действия, связанные с тип определенный смарт-тег, который может включать поиск распознанных Город в Microsoft MapPoint на MSN). Поместить просто, средства распознавания делает пометки, обработчика события предоставляет функциональные возможности конечных пользователей и что связывает их является типом смарт-тега, они работают.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.SmartTagTypes.Item(System.Object@)" /> метод, возвращающий тип конкретного смарт-тега в коллекцию типов смарт-тег. Затем с помощью <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.SmartTagRecognizers" /> свойство для возврата всех распознавателями смарт-тег, связанный с указанного типа смарт-тега и использования <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.SmartTagActions" /> свойство для возвращения всех смарт-тега действия, связанные с указанным типом смарт-тег.</para>
-      <para />
-    </remarks>
+        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <see cref="T:Microsoft.Office.Interop.Word.SmartTagAction" />и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекты связаны в том, что каждый элемент, распознаваемый компонентом смарт-тега, является объектом <b>smartTagType</b> . Например, "City" в компоненте "адрес смарт-тега" — это определенный объект <b>smartTagType</b> . После этого смарт-тег City имеет связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тега, который распознает смарт-теги типа "City" в документах) и объекты <b>SmartTagAction</b> (часть компонента смарт-тега, которая предоставляет действия, связанные с определенным типом смарт-тега, которые могут включать Поиск известного города в Microsoft MapPoint в MSN. Отметьте, что распознаватель выполняет маркировку, обработчик действий обеспечивает функцию конечного пользователя, а то, что объединяет их, это тип смарт-тега, над которым они работают.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagTypes.Item(System.Object@)" /> метод, чтобы вернуть определенный тип смарт-тега в коллекцию типов смарт-тегов. Затем используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.SmartTagRecognizers" /> свойство, чтобы возвратить все распознаватели смарт-тегов, связанные с указанным типом смарт-тега, и <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.SmartTagActions" /> использовать свойство, чтобы возвратить все действия смарт-тегов, связанные с указанным типом смарт-тега.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -93,11 +83,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FriendlyName">
@@ -128,13 +118,11 @@
       <Docs>
         <summary>Возвращает <b>строку</b> , представляющую понятное имя для типа смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Смарт-тег Имена типов, как определено в <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.Name" /> свойства, отформатированные в имена универсальный код ресурса (URN). Понятное имя Удаляет URN и оставляет имя после решетки (#). Например, тип адреса смарт-тег возвращает следующие URN для <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.Name" /> свойство.</para>
-          <para>urn: schemas-microsoft-com:office:smarttags #address</para>
-          <para>Свойства <b>FriendlyName</b> удаляет все элементы, включая знак решетки (#) и оставляет следующую <b>строку</b>:</para>
-          <para>адрес</para>
-          <para />
-        </remarks>
+        <remarks><para>Имена типов смарт-тегов, как указано в <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.Name" /> свойстве, форматируются как универсальные имена ресурсов (URN). Понятное имя удаляет URN и оставляет имя после знака решетки (#). Например, тип смарт-тега Address возвращает следующий URN для <see cref="P:Microsoft.Office.Interop.Word.SmartTagType.Name" /> свойства.</para>
+          <para>urn: schemas-microsoft-com: Office: SmartTags # Address</para>
+          <para>Свойство <b>FriendlyName</b> удаляет все до и включая знак фунта (#) и оставляет следующую <b>строку</b>:</para>
+          <para>address</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -194,7 +182,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -225,7 +213,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.SmartTagActions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекции, представляющей коллекцию действий, доступных на смарт-тег.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекцию, представляющую коллекцию действий, доступных для смарт-тега.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -256,7 +244,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.SmartTagRecognizers</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizers" /> семейство сайтов для приложения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizers" /> коллекцию для приложения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

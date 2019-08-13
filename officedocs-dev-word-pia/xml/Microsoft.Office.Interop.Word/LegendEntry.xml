@@ -1,13 +1,5 @@
 <Type Name="LegendEntry" FullName="Microsoft.Office.Interop.Word.LegendEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a77193ef54e946d0aa957ead0685d6bff35e8048" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673851" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface LegendEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="059f71dc3edd40069b1147fe21cabdefa3e8042d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146628" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LegendEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.LegendEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface LegendEntry" />
@@ -26,15 +18,15 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет элемент легенды в условных обозначениях диаграммы.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> Семейства сайтов содержит все <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> объекты в легенде.</para>
-      <para>Каждой записи легенды состоит из двух частей: текст запись, которая является именем серии, связанный с легенды; и маркер записи, визуально связывает легенды с его соответствующего ряда или линии тренда на диаграмме. Свойства форматирования для маркер записи и его соответствующего ряда или линия тренда находятся в <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> объект.</para> Нельзя изменить 
-      <para>текста элемента легенды. <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> объекты поддержки форматирование шрифта, и они могут быть удалены. Форматирование шаблон не поддерживается для записи легенды. Предопределенные положение и размер записей.</para><para>Нет возможности прямого для возврата серии или соответствующий элемент легенды линия тренда.</para><para>После удаления записи легенды — это единственный способ восстановить их удалить и повторно создать условные обозначения, где их, установив <see cref="P:Microsoft.Office.Interop.Word.Chart.HasLegend" /> свойства для диаграммы значение <b>False</b> и обратно в <b>значение True</b>.</para><para /></remarks>
-    <example>
-      <para>Использования <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" />(<paramref name="index" />), где <paramref name="index" /> — это номер индекса запись условные обозначения, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> объекта. Не может возвратить элементы легенды по имени.</para> Номер 
-      <para>индекс представляет положение элемента легенды в легенде. LegendEntries(1) — в верхней части легенды, а LegendEntries(LegendEntries.Count) — в нижней. </para></example>
+    <summary>Представляет запись легенды в условных обозначениях диаграммы.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> коллекции. <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> Коллекция содержит все <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> объекты в условных обозначениях.</para>
+      <para>Каждая запись условного обозначения состоит из двух частей: текста записи, представляющего собой имя ряда, связанного с записью легенды; и маркер записи, визуально связывающий запись легенды со связанной с ней серией или линией тренда в диаграмме. Свойства форматирования для маркера входа и связанного с ним ряда или линии тренда находятся <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> в объекте.</para>
+      <para>Текст записи легенды не может быть изменен. <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" />объекты поддерживают форматирование шрифтов и могут быть удалены. Для записей условных обозначений не поддерживается форматирование шаблона. Положение и размер записей зафиксированы.</para>
+      <para>Нет прямого способа вернуть ряд или линию тренда, соответствующие записи легенды.</para>
+      <para>После удаления записей условных обозначений единственным способом их восстановления является удаление и повторное создание условных обозначений, содержащих их, путем присвоения <see cref="P:Microsoft.Office.Interop.Word.Chart.HasLegend" /> свойству диаграммы значения <b>false</b> и обратного значения <b>true</b>.</para>
+      <para> </para></remarks>
+    <example><para>Используйте <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" />(<paramref name="index" />), где <paramref name="index" /> — это номер индекса для записи условных обозначений, <see cref="T:Microsoft.Office.Interop.Word.LegendEntry" /> чтобы вернуть один объект. Вы не можете возвращать записи условных обозначений по имени.</para>
+      <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries (1) находится в верхней части условных обозначений, а LegendEntries (LegendEntries. Count) находится в нижней части. </para></example>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,10 +52,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,11 +89,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст в объекте изменяет размер шрифта, когда изменяется размер объекта. Значение по умолчанию — <b>True</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary><b>Значение true</b> , если текст в объекте изменяет размер шрифта при изменении размера объекта. Значение по умолчанию — <b>True</b>.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -130,14 +117,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -162,9 +145,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -191,10 +172,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartFont" /> объект, представляющий шрифт указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFont" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ChartFont" /> объект, представляющий шрифт указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -221,11 +200,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
-Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
+Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -252,10 +229,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Double</b> , представляющее высоту в точках объекта.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает значение <b>типа Double</b> , представляющее высоту объекта (в пунктах).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -282,10 +257,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -312,10 +285,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Double</b> , который представляет расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает значение <b>типа Double</b> , представляющее расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -342,10 +313,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.LegendKey</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> объект, представляющий раздел условные обозначения, связанные с операцией.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.LegendKey" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> объект, представляющий ключ легенды, связанный с записью.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.LegendKey" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -372,10 +341,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения, <b>объект</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. <b>Объект</b>только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -400,10 +367,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -430,10 +395,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Double</b> , указывающее расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает значение <b>типа Double</b> , представляющее расстояние от верхнего края объекта до верха строки 1 (на листе) или в верхней части области диаграммы (на диаграмме).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -460,10 +423,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Double</b> , представляющее ширину в точках объекта.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает значение <b>типа Double</b> , представляющее ширину объекта в пунктах.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

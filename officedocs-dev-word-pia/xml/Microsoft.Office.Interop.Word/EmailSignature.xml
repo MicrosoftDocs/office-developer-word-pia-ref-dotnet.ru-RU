@@ -1,13 +1,5 @@
 <Type Name="EmailSignature" FullName="Microsoft.Office.Interop.Word.EmailSignature">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="487c351a1c820ffc35f9a29cfb139805967bf5cc" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674017" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface EmailSignature" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f8fa72f41d1c7b3b628bdb1bf116b5317693ce9e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144528" /></Metadata><TypeSignature Language="C#" Value="public interface EmailSignature" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract EmailSignature" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.EmailSignature" />
   <TypeSignature Language="VB.NET" Value="Public Interface EmailSignature" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит сведения о подписи электронной почты, используемую в Microsoft Word, если создавать и изменять сообщения электронной почты и ответы.</summary>
-    <remarks>
-      <para>Нет EmailSignatures семейства сайтов; Каждый <see cref="T:Microsoft.Office.Interop.Word.EmailOptions" /> объект содержит только один объект <b>EmailSignature</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.EmailOptions.EmailSignature" /> свойство для возврата объекта <b>EmailSignature</b> .</para>
-      <para />
-    </remarks>
+    <summary>Содержит сведения о подписях электронной почты, используемых в Microsoft Word при создании и редактировании сообщений электронной почты и ответов.</summary>
+    <remarks><para>Коллекция Емаилсигнатурес отсутствует; Каждый <see cref="T:Microsoft.Office.Interop.Word.EmailOptions" /> объект содержит только один объект <b>EmailSignature</b> .</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.EmailOptions.EmailSignature" /> свойство, чтобы возвратить объект <b>EmailSignature</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,11 +75,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EmailSignatureEntries">
@@ -115,12 +105,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.EmailSignatureEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.EmailSignatureEntries" /> объект, представляющий записей подпись электронной почты в Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.EmailSignatureEntries" /> объект, представляющий записи подписи электронной почты в Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Подпись сообщения электронной почты — стандартный текст, который заканчивается сообщения электронной почты, таких как ваше имя и номер телефона. Свойство <b>EmailSignatureEntries</b> используется для создания и управления семейство подписей электронной почты, которые будут использовать Word при создании сообщений электронной почты.</para>
-          <para />
-        </remarks>
+        <remarks><para>Подпись электронной почты — это стандартный текст, который завершает сообщение электронной почты, например имя и номер телефона. Используйте свойство <b>EmailSignatureEntries</b> для создания и управления коллекцией подписей электронной почты, которые будут использоваться Word при создании сообщений электронной почты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NewMessageSignature">
@@ -149,12 +137,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает подпись, Microsoft Word добавляет новые сообщения электронной почты.</summary>
+        <summary>Возвращает или задает подпись, которую Microsoft Word добавляет к новым сообщениям электронной почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если для свойства, необходимо использовать имя подпись сообщения электронной почты, созданный в окне Параметры электронной почты, доступные на вкладке Общие диалогового окна Параметры (меню "Сервис").</para>
-          <para />
-        </remarks>
+        <remarks><para>При задании этого свойства необходимо использовать имя подписи электронной почты, созданной в диалоговом окне Параметры электронной почты, доступном на вкладке Общие диалогового окна Параметры (меню Сервис).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -180,7 +166,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -211,12 +197,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает подпись, Microsoft Word добавляет ответы на сообщения электронной почты.</summary>
+        <summary>Возвращает или задает подпись, которая добавляется в Microsoft Word для ответов на сообщения электронной почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если для свойства, необходимо использовать имя подпись сообщения электронной почты, созданный в окне Параметры электронной почты, доступные на вкладке Общие диалогового окна Параметры (меню "Сервис").</para>
-          <para />
-        </remarks>
+        <remarks><para>При задании этого свойства необходимо использовать имя подписи электронной почты, созданной в диалоговом окне Параметры электронной почты, доступном на вкладке Общие диалогового окна Параметры (меню Сервис).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

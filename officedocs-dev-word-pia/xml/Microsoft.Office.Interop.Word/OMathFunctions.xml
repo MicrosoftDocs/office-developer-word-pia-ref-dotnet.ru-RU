@@ -1,13 +1,5 @@
 <Type Name="OMathFunctions" FullName="Microsoft.Office.Interop.Word.OMathFunctions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="251e37f0700f852eabe59b08119f35f0842a15eb" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672554" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathFunctions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f9dd73b5c31b36fb270ed019c2844a18dc9255cc" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147790" /></Metadata><TypeSignature Language="C#" Value="public interface OMathFunctions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathFunctions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathFunctions" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathFunctions&#xA;Implements IEnumerable" />
@@ -30,7 +22,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию функций или структуры, которые поддерживает Microsoft Office Word, таких как дробная часть, целых чисел, сумм и радикалы.</summary>
+    <summary>Представляет коллекцию функций или структур, поддерживаемых Microsoft Office Word, таких как дроби, интегралы, суммы и радикалы.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -58,14 +50,12 @@
         <Parameter Name="NumCols" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> место, в котором для insrt формулы.</param>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdOMathFunctionType" />тип уравнения для вставки.</param>
-        <param name="NumArgs">Необязательный <b>объект</b> число аргументов в формулу.</param>
-        <param name="NumCols">Необязательный <b>объект</b> количество столбцов в формулу.</param>
-        <summary>Вставляет новой структуры, такие как дроби, в формулу в заданной позиции и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /> объект, представляющий структуру.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" />
-        </returns>
+        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> место, в котором инсрт уравнение.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdOMathFunctionType" />тип уравнения для вставки.</param>
+        <param name="NumArgs">Необязательный <b>объект</b> число аргументов в формуле.</param>
+        <param name="NumCols">Необязательный <b>объект</b> число столбцов в формуле.</param>
+        <summary>Вставляет новую структуру, например дробь, в формулу в указанную позицию и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /> объект, представляющий структуру.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -93,9 +83,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -122,10 +110,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathFunctions" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathFunctions" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,11 +138,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathFunctions.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathFunctions.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -217,11 +203,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется указывает <b>целое число</b> порядковый номер объекта в коллекции.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" />
-        </value>
+        <param name="Index">Обязательное <b>целое значение</b> указывает порядковый номер объекта в коллекции.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMathFunction" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,9 +233,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathFunctions" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

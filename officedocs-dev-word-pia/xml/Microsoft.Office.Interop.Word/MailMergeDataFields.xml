@@ -1,13 +1,5 @@
 <Type Name="MailMergeDataFields" FullName="Microsoft.Office.Interop.Word.MailMergeDataFields">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f58ae1284d9489d9a8a782ed4399362a0986a576" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673834" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeDataFields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="155897d713a836ac770479c6b90e80d9c3067f1a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144479" /></Metadata><TypeSignature Language="C#" Value="public interface MailMergeDataFields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeDataFields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMergeDataFields" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMergeDataFields&#xA;Implements IEnumerable" />
@@ -30,9 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataField" /> объекты, которые представляют полей данных в источнике данных.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.DataFields" /> свойство для возврата коллекции <b>MailMergeDataFields</b> .</para> Не удается добавить поля в коллекцию <b>MailMergeDataFields</b><para>. При добавлении поля данных в источнике данных, это поле автоматически включается в коллекции <b>MailMergeDataFields</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.MailMerge.EditDataSource" /> метод для изменения содержимого в источнике данных.</para> Использование <b>DataFields</b><para>(<paramref name="index" />), где <paramref name="index" /> — это имя поля данных или номер индекса для возврата объекта <b>MailMergeDataField</b> . Номер индекса представляет позицию поля данных в источнике данных слияния почты.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataField" /> объектов, представляющих поля данных в источнике данных слияния.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.DataFields" /> свойство, чтобы возвратить коллекцию <b>MailMergeDataFields</b> .</para>
+      <para>Вы не можете добавлять поля в коллекцию <b>MailMergeDataFields</b> . При добавлении поля данных в источник данных поле автоматически включается в коллекцию <b>MailMergeDataFields</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMerge.EditDataSource" /> метод для изменения содержимого источника данных.</para>
+      <para>Используйте <b>поля</b>данных (<paramref name="index" />), где <paramref name="index" /> — это имя поля данных или номер индекса, чтобы вернуть один объект <b>MailMergeDataField</b> . Номер индекса представляет положение поля данных в источнике данных слияния.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,7 +80,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,11 +108,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -179,9 +173,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,7 +202,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

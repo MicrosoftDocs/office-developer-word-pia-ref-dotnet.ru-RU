@@ -1,13 +1,5 @@
 <Type Name="ChartCharacters" FullName="Microsoft.Office.Interop.Word.ChartCharacters">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0201661352937f8642817ba72ac6a71b16dfaba3" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672685" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartCharacters" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="91f49ab172734f23f2839e7fd38c0277a2ca51c0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147279" /></Metadata><TypeSignature Language="C#" Value="public interface ChartCharacters" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartCharacters" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartCharacters" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartCharacters" />
@@ -26,14 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет символы в объект, который содержит текст.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> Объекта позволяет изменять любые последовательности символов, содержащиеся в строке полный текст.</para>
-      <para>
-        <b>Символов</b>(<paramref name="Start" />, <paramref name="Length" />), где <paramref name="Start" /> — это начальное число символов и <paramref name="Length" /> — это число знаков, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объект.</para>
-      <para />
-    </remarks>
+    <summary>Представляет символы в объекте, содержащем текст.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> Объект позволяет изменить любую последовательность символов, содержащуюся в строке Full Text.</para>
+      <para>Используйте <b>символы</b>(<paramref name="Start" />, <paramref name="Length" />), где <paramref name="Start" /> — это номер начального символа и <paramref name="Length" /> число символов, чтобы вернуть <see cref="T:Microsoft.Office.Interop.Word.ChartCharacters" /> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -59,10 +47,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект). Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий создателя указанного объекта (это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта). Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -92,10 +78,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает текст этот диапазон символов.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает текст из этого диапазона символов.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -123,9 +107,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает число объектов в коллекции.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,14 +134,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartCharacters.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartCharacters.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -184,9 +162,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,10 +189,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает шрифт указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFont" />
-        </value>
+        <summary>Возвращает шрифт указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -242,11 +216,9 @@
         <Parameter Name="String" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="String">Строку, которую нужно вставить.</param>
-        <summary>Вставляет строку перед выбранные символы.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <param name="String">Строка для вставки.</param>
+        <summary>Вставляет строку перед выбранными символами.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -273,10 +245,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -306,10 +276,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает фонетическое текст для объекта. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает или задает фонетическое текстовое поле для объекта. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -340,9 +308,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает текст для указанного объекта. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

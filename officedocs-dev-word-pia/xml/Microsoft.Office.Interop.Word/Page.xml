@@ -1,13 +1,5 @@
 <Type Name="Page" FullName="Microsoft.Office.Interop.Word.Page">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="89b8ef148f01e9d3f0c12f2806f50476efc1f370" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673463" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Page" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8d472e16e6aba91d640b12e000710035de65e0ab" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144241" /></Metadata><TypeSignature Language="C#" Value="public interface Page" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Page" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Page" />
   <TypeSignature Language="VB.NET" Value="Public Interface Page" />
@@ -26,14 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет страницы в документе. Используйте объект <b>Page</b> и связанные методы и свойства для программного определения макета страницы в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Pages.Item(System.Int32)" /> метод для доступа к определенным страницы в документе.</para>
-      <para>Для доступа к номер страницы, используйте <see cref="P:Microsoft.Office.Interop.Word.Range.Information(Microsoft.Office.Interop.Word.WdInformation)" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта, или <see cref="P:Microsoft.Office.Interop.Word.Break.PageIndex" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Break" /> объекта, которому принадлежит <see cref="T:Microsoft.Office.Interop.Word.Breaks" /> коллекции указанного объекта <b>Page</b> .</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Page.Top" /> И <see cref="P:Microsoft.Office.Interop.Word.Page.Left" /> свойства объекта <b>Page</b> всегда возвращает нуль (0), указывающее, левого верхнего угла страницы. <see cref="P:Microsoft.Office.Interop.Word.Page.Height" /> И <see cref="P:Microsoft.Office.Interop.Word.Page.Width" /> свойства возвращают высоту и ширину в точках (72 пункта = 1 дюйм), указанного в диалоговом окне Параметры страницы, или до размера бумаги <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта. Например для страницы дюйма 8-1/2 по 11 в нем, свойство <b>Height</b> возвращает 792 и свойство <b>Width</b> возвращает 612. Все четыре эти свойства доступны только для чтения.</para>
-      <para />
-    </remarks>
+    <summary>Представляет страницу в документе. Используйте объект <b>Page</b> и связанные с ним методы и свойства для программного определения макета страницы в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Pages.Item(System.Int32)" /> метод для доступа к определенной странице в документе.</para>
+      <para>Чтобы получить доступ к номеру страницы, <see cref="P:Microsoft.Office.Interop.Word.Range.Information(Microsoft.Office.Interop.Word.WdInformation)" /> используйте свойство объекта <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> <see cref="P:Microsoft.Office.Interop.Word.Break.PageIndex" /> свойства <see cref="T:Microsoft.Office.Interop.Word.Break" /> объекта, принадлежащего <see cref="T:Microsoft.Office.Interop.Word.Breaks" /> коллекции указанного объекта <b>Page</b> .</para>
+      <para>Свойства <see cref="P:Microsoft.Office.Interop.Word.Page.Top" /> и <see cref="P:Microsoft.Office.Interop.Word.Page.Left" /> объекта <b>Page</b> всегда возвращают значение 0 (ноль), обозначающее левый верхний угол страницы. Свойства <see cref="P:Microsoft.Office.Interop.Word.Page.Height" /> и <see cref="P:Microsoft.Office.Interop.Word.Page.Width" /> свойства возвращают высоту и ширину в пунктах (72 пунктов = 1 дюйм) размера бумаги, указанного в диалоговом окне Параметры страницы или с <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> помощью объекта. Например, для страницы 8-1/2 на 11 дюймов в режиме книжной ориентации свойство <b>Height</b> возвращает 792, а свойство <b>Width</b> — значение 612. Все четыре из этих свойств доступны только для чтения.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,12 +76,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Breaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Breaks" /> коллекции, представляющей разбиение на страницы. Коллекция <b>разрывов</b> включает, столбец, разрывы страниц и разделов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Breaks" /> коллекцию, представляющую разрывы на странице. Коллекция <b>Breaks</b> включает разрывы страниц, столбцов и разделов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте коллекцию <b>разрывов</b> и связанные объекты и свойства программными средствами определить макет страницы в документе.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте коллекцию <b>Breaks</b> и связанные объекты и свойства, чтобы программно определить макет страницы в документе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -118,11 +105,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnhMetaFileBits">
@@ -148,15 +135,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий представление изображения как отображается страница текста. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.Page.EnhMetaFileBits" /> Свойство возвращает массив байтов, который можно использовать с Microsoft Windows 32 Application Programming Interface из среды разработки Microsoft Visual Basic или Microsoft C++.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает <b>объект</b> , представляющий графическое представление того, как отображается страница текста. Только для чтения.</summary>
+        <value><b>Object</b></value>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.Page.EnhMetaFileBits" /> Свойство возвращает массив байтов, который можно использовать с программным интерфейсом приложений microsoft Windows 32 в среде разработки Microsoft Visual Basic или Microsoft C++.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -182,12 +164,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство <b>Height</b> возвращает высота в пунктах (72 пункта = 1 дюйм) размер бумаги, указанный в диалоговом окне Параметры страницы, или до <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
+        <summary>Свойство <b>Height</b> Возвращает высоту в пунктах (72 пунктов = 1 дюйм) размера бумаги, указанного в диалоговом окне Параметры страницы или с помощью <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например для страницы дюйма 8-1/2 по 11 в нем, свойство <b>Height</b> возвращает 792 и свойство <b>Width</b> возвращает 612.</para>
-          <para />
-        </remarks>
+        <remarks><para>Например, для страницы 8-1/2 на 11 дюймов в режиме книжной ориентации свойство <b>Height</b> возвращает 792, а свойство <b>Width</b> — значение 612.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Left">
@@ -213,7 +193,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает нуль (0), указывающее, левого верхнего угла страницы.</summary>
+        <summary>Возвращает значение 0 (ноль), обозначающее левый верхний угол страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,7 +221,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -269,12 +249,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Rectangles</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Rectangles" /> коллекции, представляющей часть текст или графику на странице в документе.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Rectangles" /> коллекцию, представляющую часть текста или графики на странице документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте коллекцию <b>прямоугольники</b> и связанные объекты и свойства для программного определения макета страницы в документе. Прямоугольники соответствующих части текст или графику на страницу в документе.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте коллекцию <b>Rectangle</b> и связанные объекты и свойства для программного определения макета страницы в документе. Прямоугольники соответствуют фрагментам текста или рисунков на странице документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SaveAsPNG">
@@ -303,7 +281,7 @@
         <Parameter Name="FileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="FileName">deprecatedobjectmember</param>
+        <param name="FileName">депрекатедобжектмембер</param>
         <summary>Этот объект или элемент устарел и не предназначен для использования в коде.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,7 +309,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает нуль (0), указывающее, левого верхнего угла страницы.</summary>
+        <summary>Возвращает значение 0 (ноль), обозначающее левый верхний угол страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -359,12 +337,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ширину в точках (72 пункта = 1 дюйм) из размер бумаги, указанный в диалоговом окне Параметры страницы, или до <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
+        <summary>Возвращает ширину в пунктах (72 пунктов = 1 дюйм) размера бумаги, указанного в диалоговом окне Параметры страницы или с помощью <see cref="T:Microsoft.Office.Interop.Word.PageSetup" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например для страницы дюйма 8-1/2 по 11 в нем, свойство <b>Height</b> возвращает 792 и свойство <b>Width</b> возвращает 612.</para>
-          <para />
-        </remarks>
+        <remarks><para>Например, для страницы 8-1/2 на 11 дюймов в режиме книжной ориентации свойство <b>Height</b> возвращает 792, а свойство <b>Width</b> — значение 612.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="Paragraph" FullName="Microsoft.Office.Interop.Word.Paragraph">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="eb6fc32f516a2111c9909f04cf35b9f2026b1635" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673213" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Paragraph" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c0eabea100e5c4a8348271768adcd33704731223" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147748" /></Metadata><TypeSignature Language="C#" Value="public interface Paragraph" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Paragraph" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Paragraph" />
   <TypeSignature Language="VB.NET" Value="Public Interface Paragraph" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один абзац в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Объект <b>абзаца</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Paragraphs" /> семейства сайтов. Коллекция <b>абзацы</b> включает все абзацы в выделение, диапазон или документа.</para>
-      <para>Использования <b>абзацев</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>абзаца</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Paragraphs.Add(System.Object@)" />, <b>InsertParagraph</b>, <b>InsertParagraphAfter</b>или <b>InsertParagraphBefore</b> метод, чтобы добавить новый абзац в документ.</para>
-      <para />
-    </remarks>
+    <summary>Представляет один абзац в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Объект <b>абзаца</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Paragraphs" /> коллекции. Коллекция <b>абзацев</b> включает все абзацы в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <b></b>абзацы<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один <b></b> объект абзаца.</para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Word.Paragraphs.Add(System.Object@)" />, <b>InsertParagraph</b>, <b>инсертпараграфафтер</b>или <b>инсертпараграфбефоре</b> для добавления в документ нового пустого абзаца.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddSpaceBetweenFarEastAndAlpha">
@@ -61,13 +51,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word присваивается автоматически добавлять пробелы между японской и латиница текст для указанного абзацев.</summary>
+        <summary>Определяет, настроено ли в Microsoft Word автоматическое добавление пробелов между японским и латинскими текстами для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word — это значение автоматически добавлять пробелы между японской и латиница текст для указанного абзаца и <b>значение False</b> , если это не так. Значение этого свойства равно <b>True</b> или <b>False</b> для включения или отключения функциональные возможности.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если в Word задано автоматическое добавление пробелов между японским и латинскими текстами для указанных абзацев, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для некоторых из указанных абзацев задано <b>значение true</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddSpaceBetweenFarEastAndDigit">
@@ -96,13 +84,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word присваивается автоматически добавлять пробелы между японский текст и числа для указанного абзацев.</summary>
+        <summary>Определяет, настроено ли в Microsoft Word автоматическое добавление пробелов между японским текстом и числами для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word задано значение автоматически добавлять пробелы между японский текст и номера для указанного абзаца и <b>значение False</b> , если это не так. </para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если в Word задано автоматическое добавление пробелов между японским текстом и числами для указанных абзацев, и <b>false</b> , если нет. </para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для некоторых из указанных абзацев задано <b>значение true</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Alignment">
@@ -131,41 +117,39 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdParagraphAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdParagraphAlignment" /> константа, которая представляет выравнивание для указанного абзацев.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdParagraphAlignment" /> константу, представляющую выравнивание для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <b>Вдпараграфалигнмент</b> может быть одной из следующих констант: </para>
           <para>
-            <b>WdParagraphAlignment</b> может иметь одно из следующих констант: </para>
-          <para>
-            <b>wdAlignParagraphCenter </b>
+            <b>вдалигнпараграфцентер</b>
           </para>
           <para>
-            <b>wdAlignParagraphDistribute </b>
+            <b>вдалигнпараграфдистрибуте</b>
           </para>
           <para>
-            <b>wdAlignParagraphJustify </b>
+            <b>вдалигнпараграфжустифи</b>
           </para>
           <para>
-            <b>wdAlignParagraphJustifyHi</b>
+            <b>вдалигнпараграфжустифихи</b>
           </para>
           <para>
-            <b> wdAlignParagraphJustifyLow </b>
+            <b>вдалигнпараграфжустифилов</b>
           </para>
           <para>
-            <b>wdAlignParagraphJustifyMed </b>
+            <b>вдалигнпараграфжустифимед</b>
           </para>
           <para>
-            <b>wdAlignParagraphLeft </b>
+            <b>вдалигнпараграфлефт</b>
           </para>
           <para>
-            <b>wdAlignParagraphRight </b>
+            <b>вдалигнпараграфригхт</b>
           </para>
           <para>
-            <b>wdAlignParagraphThaiJustify</b>
+            <b>вдалигнпараграфсаижустифи</b>
           </para>
-          <para>некоторые из перечисленных выше констант могут быть недоступны для Вы, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+          <para>Некоторые из перечисленных выше констант могут быть недоступны, в зависимости от того, какой языковой параметр (например, Английский (США)) выбран или установлен.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -222,13 +206,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word присваивается автоматически изменять отступ справа для указанного абзацы, при указании заданное количество знаков в строке.</summary>
+        <summary>Определяет, настроена ли для Microsoft Word автоматическое изменение отступа для указанных абзацев, если указано заданное число символов в строке.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word — это значение автоматически изменять отступ справа для указанного абзацы, при указании заданное количество знаков в строке и <b>значение False,</b> Если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если свойство <b>AutoAdjustRightIndent</b> имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если в Word задано автоматическое изменение отступа для указанных абзацев, если задано заданное число символов в строке, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для свойства <b>Аутоаджустригхтиндент</b> задано <b>значение true</b> только для некоторых из указанных абзацев.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseLineAlignment">
@@ -257,28 +239,26 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdBaselineAlignment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdBaselineAlignment" /> константа, которая представляет вертикальную позицию шрифты в строке.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdBaselineAlignment" /> константу, представляющую вертикальное положение шрифтов в строке.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <b>Вдбаселинеалигнмент</b> может быть одной из следующих констант: </para>
           <para>
-            <b>WdBaselineAlignment</b> может иметь одно из следующих констант: </para>
-          <para>
-            <b>wdBaselineAlignAuto </b>
+            <b>вдбаселинеалигнауто</b>
           </para>
           <para>
-            <b>wdBaselineAlignCenter </b>
+            <b>вдбаселинеалигнцентер</b>
           </para>
           <para>
-            <b>wdBaselineAlignTop </b>
+            <b>вдбаселинеалигнтоп</b>
           </para>
           <para>
-            <b>wdBaselineAlignBaseline </b>
+            <b>вдбаселинеалигнбаселине</b>
           </para>
           <para>
             <b>wdBaselineAlignFarEast50</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Borders">
@@ -307,7 +287,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -338,12 +318,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение (в знаках) для первой строки или изменение отступа.</summary>
+        <summary>Возвращает или задает значение (в знаках) для первой строки или выступа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте положительное значение для установки отступа первой строки и используйте отрицательное значение, чтобы задать красную строку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для установки отступа первой строки укажите положительное значение и используйте отрицательное значение, чтобы задать выступ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CharacterUnitLeftIndent">
@@ -372,7 +350,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение отступа (в знаках) для указанного абзацев.</summary>
+        <summary>Возвращает или задает значение отступа слева (в знаках) для указанных абзацев.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -403,7 +381,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение отступ справа (в знаках) для указанного абзацев.</summary>
+        <summary>Возвращает или задает значение отступа справа (в знаках) для указанных абзацев.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -429,7 +407,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет любые интервалов до указанного абзацев.</summary>
+        <summary>Удаляет любой интервал перед указанным абзацем.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -459,7 +437,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, является ли указанный абзац в настоящее время в свернутом состоянии. Режим чтения записи <b>типа Boolean</b> (<b>bool</b> в C#).</summary>
+        <summary>Возвращает или задает значение, указывающее, находится ли указанный абзац в данный момент в свернутом состоянии. Чтение и запись <b>Boolean</b> (<b>bool</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -490,7 +468,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, является ли указанный абзац свернута по умолчанию при загрузке документа. Режим чтения записи <b>типа Boolean</b> (<b>bool</b> в C#).</summary>
+        <summary>Возвращает или задает значение, указывающее, является ли указанный абзац свернутым по умолчанию при загрузке документа. Чтение и запись <b>Boolean</b> (<b>bool</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -518,11 +496,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisableLineHeightGrid">
@@ -551,13 +529,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, Microsoft Word выравнивает указанных символов в указанном абзацев по сетке строки, когда заданное количество строк на странице.</summary>
+        <summary>Определяет, выравнивает ли Microsoft Word символы в указанных абзацах в сетке строк, если задано заданное число строк на странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word выравнивание символов в указанный абзацы линии сетки при указании заданное количество строк на странице, и <b>значение False</b> в противном случае.  Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если свойство <b>DisableLineHeightGrid</b> имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word выравнивает символы в указанных абзацах по сетке строк, если задано заданное число строк на странице, и <b>false</b> в противном случае.  Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для свойства <b>Дисаблелинехеигхтгрид</b> задано <b>значение true</b> только для некоторых из указанных абзацев.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DropCap">
@@ -583,7 +559,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.DropCap</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DropCap" /> объект, представляющий буквицы для указанного абзаца.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DropCap" /> объект, представляющий отброшенную заглавную букву для указанного абзаца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -614,13 +590,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word применяются восточно-азиатских правил переноса строк для указанного абзацев.</summary>
+        <summary>Определяет, применяет ли Microsoft Word правила переноса строк восточно-азиатских языков к указанным абзацам.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word применяется восточно-азиатских правил переноса строк указанного абзаца и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если свойство <b>FarEastLineBreakControl</b> имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word применяет Восточно-азиатские правила переноса строк к указанным абзацам, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для свойства <b>Фареастлинебреакконтрол</b> задано <b>значение true</b> только для некоторых из указанных абзацев.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FirstLineIndent">
@@ -649,12 +623,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение (в пунктах) для первой строки или Величина отступа.</summary>
+        <summary>Возвращает или задает значение (в пунктах) для первой строки или выступа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте положительное значение для установки отступа первой строки и используйте отрицательное значение, чтобы задать красную строку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для установки отступа первой строки укажите положительное значение и используйте отрицательное значение, чтобы задать выступ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Format">
@@ -683,7 +655,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ParagraphFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ParagraphFormat" /> объект, представляющий форматирования указанной один или несколько абзацев.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.ParagraphFormat" /> объект, представляющий форматирование указанного абзаца или абзаца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -714,13 +686,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word изменений препинания в начале строки половинной ширины символов для указанного абзацев.</summary>
+        <summary>Определяет, изменяются ли в Microsoft Word символы пунктуации в начале строки до символов половинной ширины для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word изменяет препинания в начале строки половинной ширины символов для указанного абзаца и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word изменяет символы пунктуации в начале строки до символов половинной ширины для указанных абзацев, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для некоторых из указанных абзацев задано <b>значение true</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HangingPunctuation">
@@ -749,13 +719,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, включена ли препинания для указанного абзацев.</summary>
+        <summary>Определяет, включены ли для указанных абзацев висячая пунктуация.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если препинания включен для указанного абзаца и <b>значение False</b> , если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если для указанных абзацев включена висячая пунктуация, и <b>значение false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для некоторых из указанных абзацев задано <b>значение true</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Hyphenation">
@@ -784,13 +752,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный абзацы включены в автоматической расстановки переносов.</summary>
+        <summary>Определяет, включены ли указанные абзацы в автоматическое расстановка переносов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если указанный абзацы включаются в автоматической расстановки переносов и <b>значение False</b> , если указанный абзацы, чтобы исключить из автоматической расстановки переносов. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Возможных возврата значения: <b>True</b>, <b>False</b> или <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанные абзацы включены в автоматическую расстановку переносов, и <b>false</b> , если указанные абзацы должны быть исключены из автоматической расстановки переносов. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные возвращаемые значения: <b>true</b>, <b>false</b> или <b>вдундефинед</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ID">
@@ -819,13 +785,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает метку для указанного объекта при сохранении текущего документа в качестве веб-страницы.</summary>
+        <summary>Возвращает или задает идентифицирующую метку для указанного объекта, когда текущий документ сохраняется в качестве веб-страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>За исключением элемента <see cref="T:Microsoft.Office.Interop.Word.Editor" /> объекта, метки можно использовать как гиперссылку из других веб-страниц или из текущего документа.</para>
-          <para>Microsoft Word не сохраняет значение для свойства <b>ID</b><see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Если значение свойства <b>ID</b> и возвращать его значение, возвращаемое значение будет пустая <b>строка</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>За исключением <see cref="T:Microsoft.Office.Interop.Word.Editor" /> объекта, вы можете использовать метку в качестве ссылки на гиперссылку с других веб-страниц или из текущего документа.</para>
+          <para>Microsoft Word не сохраняет значение свойства <b>ID</b> для <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Если вы задаете свойство <b>ID</b> и затем возвращаете его значение, возвращаемое значение будет пустой <b>строкой</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Indent">
@@ -849,11 +813,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отступы одного или нескольких абзацев на один уровень.</summary>
-        <remarks>
-          <para>С помощью этого метода эквивалентно кнопки Увеличить отступ на панели инструментов Форматирование.</para>
-          <para />
-        </remarks>
+        <summary>Добавляет отступ одного или нескольких абзацев на один уровень.</summary>
+        <remarks><para>Использование этого метода эквивалентно нажатию кнопки увеличить отступ на панели инструментов Форматирование.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IndentCharWidth">
@@ -879,12 +841,10 @@
         <Parameter Name="Count" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Count">Требуется <b>целое число</b>. Число знаков, которые должны быть с отступом указанного абзацев.</param>
-        <summary>Отступы одного или нескольких абзацев указанное число символов.</summary>
-        <remarks>
-          <para>С помощью этого метода эквивалентно кнопки Увеличить отступ на панели инструментов Форматирование.</para>
-          <para />
-        </remarks>
+        <param name="Count">Обязательный атрибут типа <b>Integer</b>. Количество символов, по которым будут добавляться отступы для указанных абзацев.</param>
+        <summary>Задает отступ одного или нескольких абзацев по заданному числу символов.</summary>
+        <remarks><para>Использование этого метода эквивалентно нажатию кнопки увеличить отступ на панели инструментов Форматирование.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IndentFirstLineCharWidth">
@@ -910,12 +870,10 @@
         <Parameter Name="Count" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Count">Требуется <b>целое число</b>. Число знаков, которые должны быть с отступом указанного абзацев.</param>
-        <summary>Отступы одного или нескольких абзацев указанное число символов.</summary>
-        <remarks>
-          <para>С помощью этого метода эквивалентно кнопки Увеличить отступ на панели инструментов Форматирование.</para>
-          <para />
-        </remarks>
+        <param name="Count">Обязательный атрибут типа <b>Integer</b>. Количество символов, по которым будут добавляться отступы для указанных абзацев.</param>
+        <summary>Задает отступ одного или нескольких абзацев по заданному числу символов.</summary>
+        <remarks><para>Использование этого метода эквивалентно нажатию кнопки увеличить отступ на панели инструментов Форматирование.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsStyleSeparator">
@@ -941,12 +899,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, содержит ли абзац специальные скрытого маркера абзаца, обеспечивающий Microsoft Word отображаться для присоединения к абзацы разные стили.</summary>
+        <summary>Определяет, содержит ли абзац Специальный знак скрытого абзаца, позволяющий Microsoft Word отображать абзацы для объединения абзацев разных стилей абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если абзац содержит особые скрытого маркера абзаца, которая обеспечивает Word отображаться для присоединения к абзацы различные стили и <b>значение False,</b> Если это не так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если абзац содержит специальный знак скрытого абзаца, позволяющий Word отображать абзацы для объединения абзацев разных стилей абзацев, и <b>false</b> , если нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="JoinList">
@@ -970,7 +926,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Операторы абзац списка с ближайшим списка выше или ниже указанного абзаца.</summary>
+        <summary>Присоединяет абзац списка к ближайшему списку выше или ниже указанного абзаца.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1000,13 +956,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если все строки в указанном абзацы, остаются на той же странице при repaginates документа Microsoft Word.</summary>
+        <summary>Определяет, должны ли все строки в указанных абзацах оставались на одной странице, когда Microsoft Word репагинатес документ.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если все строки в указанном абзацы, остаются на той же странице при Word repaginates документа и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Возможных возврата значения: <b>True</b>, <b>False</b>или <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если все строки в указанных абзацах оставались на одной странице, когда Word репагинатес документ, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные возвращаемые значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KeepWithNext">
@@ -1035,13 +989,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный абзац остается на одну страницу вместе с непосредственно после его при repaginates документа Microsoft Word.</summary>
+        <summary>Определяет, остается ли указанный абзац на той же странице, что и абзац, который следует за ним, когда Microsoft Word репагинатес документ.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если указанный абзац остается на одну страницу вместе с непосредственно после его при Word repaginates документов и <b>значение False,</b> Если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Возможные значения: <b>True</b>, <b>False</b>или <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанный абзац остается на той же странице, что и следующий абзац, когда Word репагинатес документ, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LeftIndent">
@@ -1070,7 +1022,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>один</b> , который представляет значение отступа (в пунктах) для указанного абзацы, строк таблицы или раздела HTML.</summary>
+        <summary>Возвращает или задает значение типа <b>Single</b> , представляющее значение левого отступа (в пунктах) для указанных абзацев, строк таблицы или HTML-подразделения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1101,19 +1053,17 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает междустрочным интервалом (в пунктах) для указанного абзацев.</summary>
+        <summary>Возвращает или задает междустрочный интервал (в пунктах) для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно задать свойство <b>LineSpacing</b> после <see cref="P:Microsoft.Office.Interop.Word.Paragraph.LineSpacingRule" /> свойства следующему:</para>
+        <remarks><para>Свойство <b>линеспаЦинг</b> можно задать после того, <see cref="P:Microsoft.Office.Interop.Word.Paragraph.LineSpacingRule" /> как свойству присвоено следующее:</para>
           <para>
-            <b>wdLineSpaceAtLeast</b> - междустрочным интервалом может быть больше или равно, но никогда не меньше, чем, заданному значению <b>LineSpacing</b> .</para>
+            <b>вдлинеспацеатлеаст</b> — междустрочный интервал может быть больше или равен, но не меньше, чем заданное значение <b>линеспаЦинг</b> .</para>
           <para>
-            <b>wdLineSpaceExactly</b> - междустрочным интервалом никогда не изменяется с указанного значения <b>LineSpacing</b> даже в том случае, если размер шрифта используется в абзаце.</para>
+            <b>вдлинеспацеексактли</b> — междустрочный интервал никогда не изменяется из указанного значения <b>линеспаЦинг</b> , даже если в абзаце используется крупный шрифт.</para>
           <para>
-            <b>wdLineSpaceMultiple</b> — значение свойства <b>LineSpacing</b> должно быть указано в пунктах.</para>
-          <para>Используйте метод <b>LinesToPoints</b> для преобразования число строк в соответствующее значение в пунктах.</para>
-          <para />
-        </remarks>
+            <b>вдлинеспацемултипле</b> — в пункт Points должно быть указано значение свойства <b>линеспаЦинг</b> .</para>
+          <para>Используйте метод <b>линестопоинтс</b> , чтобы преобразовать число строк в соответствующее значение в пунктах.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LineSpacingRule">
@@ -1142,30 +1092,30 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLineSpacing</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает междустрочным интервалом для указанного абзацев.</summary>
+        <summary>Возвращает или задает междустрочный интервал для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdLineSpacing" /> может иметь одно из следующих констант:</para>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdLineSpacing" />может быть одной из следующих констант:</para>
           <para>
             <b>wdLineSpace1pt5</b>
           </para>
           <para>
-            <b>wdLineSpaceAtLeast</b>
+            <b>вдлинеспацеатлеаст</b>
           </para>
           <para>
-            <b>wdLineSpaceDouble</b>
+            <b>вдлинеспацедаубле</b>
           </para>
           <para>
-            <b>wdLineSpaceExactly</b>
+            <b>вдлинеспацеексактли</b>
           </para>
           <para>
-            <b>wdLineSpaceMultiple</b>
+            <b>вдлинеспацемултипле</b>
           </para>
           <para>
-            <b>wdLineSpaceSingle</b>
-          </para> Использование 
-          <para><b>wdLineSpaceSingle</b>, <b>wdLineSpace1pt5</b>или <b>wdLineSpaceDouble</b> Установка междустрочным интервалом для одно из следующих значений. Чтобы задать междустрочным интервалом точное число точек или нескольких число строк, необходимо также установить <see cref="P:Microsoft.Office.Interop.Word.Paragraph.LineSpacing" /> свойство.</para><para /></remarks>
+            <b>вдлинеспацесингле</b>
+          </para>
+          <para>Используйте <b>вдлинеспацесингле</b>, <b>wdLineSpace1pt5</b>или <b>вдлинеспацедаубле</b> , чтобы задать для междустрочного интервала одно из этих значений. Чтобы задать для междустрочного интервала точное число точек или несколько строк, необходимо также задать <see cref="P:Microsoft.Office.Interop.Word.Paragraph.LineSpacing" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LineUnitAfter">
@@ -1194,7 +1144,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер интервала (в линии сетки) после указанного абзацев.</summary>
+        <summary>Возвращает или задает расстояние между заданными абзацами (в линиях сетки).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1225,7 +1175,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер интервала (в линии сетки) до указанного абзацев.</summary>
+        <summary>Возвращает или задает расстояние между заданными абзацами (в линиях сетки).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1269,11 +1219,9 @@
         <param name="Level7">To be added.</param>
         <param name="Level8">To be added.</param>
         <param name="Level9">To be added.</param>
-        <summary>Задает уровни списка для абзаца в виде списка.</summary>
-        <remarks>
-          <para>Microsoft Office Word регулировка нумерации значение, которое будет использоваться для нумерации каждый уровень списка для указанного абзаца, вставив необходимые промежуточных абзацы как скрытый текст между указанного абзаца и выше.</para>
-          <para />
-        </remarks>
+        <summary>Задает уровни списка для абзаца в списке.</summary>
+        <remarks><para>Microsoft Office Word настраивает значение нумерации, которое будет использоваться для нумерации каждого уровня списка для указанного абзаца путем вставки необходимых промежуточных абзацев в виде скрытого текста между указанным абзацем и предыдущим абзацем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListNumberOriginal">
@@ -1302,8 +1250,8 @@
         <Parameter Name="Level" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Level">Указывает уровень списка.</param>
-        <summary>Возвращает <b>целое число</b> , представляющее уровень исходного списка для абзаца. Только для чтения.</summary>
+        <param name="Level">Задает уровень списка.</param>
+        <summary>Возвращает <b>целое число</b> , представляющее исходный уровень списка для абзаца. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1334,10 +1282,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее ли влево и вправо отступы имеют одинаковую ширину. Может иметь <b>значение True</b>, <b>False</b>или <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdUndefined" />. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает <b>целое число</b> , которое указывает, совпадают ли отступы слева и справа. Может иметь <b>значение true</b>, <b>false</b>или <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdUndefined" />. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1363,7 +1309,7 @@
         <Parameter Name="Count" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Count">Необязательный элемент <b>Object</b>. Число абзацы, которые необходимо переместить вперед. Значение по умолчанию — это один.</param>
+        <param name="Count">Необязательный <b>объект</b>. Число абзацев, на которые вы хотите перейти вперед. Значение по умолчанию — один.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объект, представляющий следующий абзац.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1395,14 +1341,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если номера строк repressed для указанного абзацев.</summary>
+        <summary>Определяет, будут ли перенажаты номера строк для указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если для указанного абзаца и <b>значение False,</b> Если не являются repressed номера строк. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Возможные значения: <b>True</b>, <b>False</b>или <b>wdUndefined</b>.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LineNumbering" /> свойство, чтобы задать номера строк.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если номера строк добавляются для указанных абзацев, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.PageSetup.LineNumbering" /> свойство, чтобы задать номера строк.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OpenOrCloseUp">
@@ -1426,7 +1370,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Если интервалов до указанного абзацы нуль (0), этого метода можно задать интервалы до 12 пунктов. Если интервалы перед абзацами больше 0 (ноль), этого метода можно задать интервалы в нуль (0).</summary>
+        <summary>Если отступ перед указанным абзацами равен 0 (ноль), этот метод задает для интервала значение в 12 пунктов. Если интервал перед абзацами больше 0 (ноль), этот метод задает для интервала значение 0 (ноль).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1451,7 +1395,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает интервал до указанного абзацы 12 пунктов.</summary>
+        <summary>Задает интервал перед заданным абзацами, равным 12 точкам.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1477,10 +1421,8 @@
       <Parameters />
       <Docs>
         <summary>Удаляет один уровень отступа для одного или нескольких абзацев.</summary>
-        <remarks>
-          <para>С помощью этого метода эквивалентно нажать кнопку "уменьшить отступ" на панели инструментов Форматирование.</para>
-          <para />
-        </remarks>
+        <remarks><para>Использование этого метода эквивалентно нажатию кнопки уменьшить отступ на панели инструментов Форматирование.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OutlineDemote">
@@ -1504,11 +1446,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Далее стилем (Заголовок 1 – 8 заголовок) применяется к указанной один или несколько абзацев.</summary>
-        <remarks>
-          <para>Например если абзац отформатирован стиль Заголовок 2, этот метод понижает уровень абзаца, изменив стиль Заголовок 3.</para>
-          <para />
-        </remarks>
+        <summary>Применяет следующий стиль уровня заголовка (заголовок 1 — заголовок 8) к указанному абзацу или абзацам.</summary>
+        <remarks><para>Например, если абзац отформатирован в стиле заголовка 2, этот метод понижает уровень абзаца, изменяя стиль на заголовку 3.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OutlineDemoteToBody">
@@ -1532,7 +1472,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает указанный один или несколько абзацев в основной текст путем применения стиля Normal.</summary>
+        <summary>Понижение уровня заданных абзацев или абзацев до основного текста с применением стиля Normal.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1562,15 +1502,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOutlineLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает уровень структуры для указанного абзацев.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdOutlineLevel" />
-        </value>
-        <remarks>
-          <para>Если абзаца стиль заголовка, примененного (Заголовок 1 – 9 заголовок), уровень структуры — это то же, что стиль заголовка и не может быть изменено.</para>
-          <para>Уровни структуры отображаются только в режиме структуры или панель схемы документа.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает уровень структуры для указанных абзацев.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdOutlineLevel" /></value>
+        <remarks><para>Если к абзацу применен стиль заголовка (заголовок 1 — заголовок 9), то он будет совпадать со стилем заголовка и не может быть изменен.</para>
+          <para>Уровни структуры отображаются только в режиме структуры или в области схемы документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OutlinePromote">
@@ -1594,11 +1530,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Применяет предыдущей стилем (Заголовок 1 – 8 заголовок) для указанного один или несколько абзацев.</summary>
-        <remarks>
-          <para>Например если абзац отформатирован стиль Заголовок 2, этот метод можно повысить уровень абзаца, изменив стиль Заголовок 1.</para>
-          <para />
-        </remarks>
+        <summary>Применяет предыдущий стиль уровня заголовка (заголовок 1 — заголовок 8) к указанному абзацу или абзацам.</summary>
+        <remarks><para>Например, если абзац отформатирован в стиле заголовка 2, этот метод повышает уровень абзаца, изменяя стиль на стиль "Заголовок 1".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageBreakBefore">
@@ -1627,13 +1561,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, будет распространяться разрывы страниц до указанного абзацев.</summary>
+        <summary>Определяет, принудительно ли разрыв страницы перед указанными абзацами.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если разрывы страниц принудительно до указанного абзаца и <b>значение False</b> , если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функциональные возможности</para>
-          <para>возможных возврата значения: <b>True</b>, <b>False</b>или <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если разрыв страницы принудительно форсирован до указанных абзацев, и <b>значение false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные возвращаемые значения: <b>true</b>, <b>false</b>или <b>вдундефинед</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ParaID">
@@ -1690,7 +1622,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1717,8 +1649,8 @@
         <Parameter Name="Count" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Count">Необязательный элемент <b>Object</b>. Число абзацы, которые необходимо переместить назад. Значение по умолчанию — 1.</param>
-        <summary>Возвращает выше как <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объекта.</summary>
+        <param name="Count">Необязательный <b>объект</b>. Число абзацев, на которые нужно переместиться назад. Значение по умолчанию равно 1.</param>
+        <summary>Возвращает предыдущий абзац в качестве <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объекта.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1746,12 +1678,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadingOrder">
@@ -1780,20 +1710,18 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdReadingOrder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок чтения указанного абзацев без изменения их выравнивания.</summary>
+        <summary>Возвращает или задает порядок чтения указанных абзацев без изменения их выравнивания.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdReadingOrder" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdReadingOrder" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdReadingOrderLtr</b>
+            <b>вдреадингордерлтр</b>
           </para>
           <para>
-            <b>wdReadingOrderRtl</b>
+            <b>вдреадингордерртл</b>
           </para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Selection.LtrPara" />, <see cref="M:Microsoft.Office.Interop.Word.Selection.LtrRun" />, <see cref="M:Microsoft.Office.Interop.Word.Selection.RtlPara" />, и <see cref="M:Microsoft.Office.Interop.Word.Selection.RtlRun" /> методы для изменения выравнивания абзаца, а также порядок чтения.</para>
-          <para />
-        </remarks>
+          <para>Используйте методы <see cref="M:Microsoft.Office.Interop.Word.Selection.LtrPara" />, <see cref="M:Microsoft.Office.Interop.Word.Selection.LtrRun" />, <see cref="M:Microsoft.Office.Interop.Word.Selection.RtlPara" />и <see cref="M:Microsoft.Office.Interop.Word.Selection.RtlRun" /> , чтобы изменить выравнивание абзаца вместе с порядком чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reset">
@@ -1817,11 +1745,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление форматирования вручную абзаца (форматирование, не применяются с помощью стиля).</summary>
-        <remarks>
-          <para>Если вы вручную правом Выровнять абзац и базовый стиль его различных выравнивание, метод <b>Сброс</b> Изменение выравнивания в соответствии с форматированием базового стиля.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет форматирование абзацев вручную (форматирование не применяется, используя стиль).</summary>
+        <remarks><para>Если абзац выровнен вручную, а базовый стиль имеет другое выравнивание, метод <b>Reset</b> изменяет выравнивание так, чтобы оно соответствовало форматированию базового стиля.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ResetAdvanceTo">
@@ -1845,11 +1771,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает абзаца, использующий настраиваемый список уровней исходные параметры уровня.</summary>
-        <remarks>
-          <para>Microsoft Office Word регулировка нумерации значение, которое будет использоваться для нумерации каждый уровень списка для указанного абзаца путем удаления любого промежуточных скрытых абзацев между указанного абзаца и выше.</para>
-          <para />
-        </remarks>
+        <summary>Сбрасывает абзац, использующий настраиваемые уровни списков, к параметрам исходного уровня.</summary>
+        <remarks><para>Microsoft Office Word настраивает значение нумерации, которое будет использоваться для нумерации каждого уровня списка для указанного абзаца, удалив все промежуточные скрытые абзацы между указанным абзацем и предыдущим абзацем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RightIndent">
@@ -1878,7 +1802,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отступ справа (в пунктах) для указанного абзацев.</summary>
+        <summary>Возвращает или задает отступ справа для указанных абзацев (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1904,11 +1828,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбирает число или маркер из списка.</summary>
-        <remarks>
-          <para>Если этот метод <b>SelectNumber</b> вызывается из абзаца, Выбор или диапазон, не содержит список, отображается сообщение об ошибке.</para>
-          <para />
-        </remarks>
+        <summary>Выбор номера или маркера в списке.</summary>
+        <remarks><para>Если метод <b>селектнумбер</b> вызывается из абзаца, выделенного фрагмента или диапазона, который не содержит список, отображается сообщение об ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SeparateList">
@@ -1932,7 +1854,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Разделяет список в двух отдельных списков.  Нумерованный список нового списка перезагрузки с начального номера обычно 1.</summary>
+        <summary>Разделяет список на два отдельных списка.  Для нумерованных списков новый список перезапускает нумерацию с начального номера, как правило, на 1.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1959,7 +1881,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1985,7 +1907,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Single-Spaces указанного абзацев. Точный интервал определяется размер шрифта наибольшее символов в каждом абзаце.</summary>
+        <summary>Одинарные пробелы для указанных абзацев. Точное расстояние зависит от размера шрифта самых наибольших символов в каждом абзаце.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2010,11 +1932,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Форматирует указанный абзацы с частотой 1,5 междустрочным интервалом.</summary>
-        <remarks>
-          <para>Точный интервал определяется путем добавления 6 пунктах размер наибольшего символа в каждом абзаце.</para>
-          <para />
-        </remarks>
+        <summary>Форматирует заданные абзацы с интервалом в 1,5 строк.</summary>
+        <remarks><para>Точное расстояние определяется путем добавления 6 точек к размеру шрифта наибольшего символа в каждом абзаце.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Space2">
@@ -2038,11 +1958,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Двойные пробелы содержатся указанного абзацев.</summary>
-        <remarks>
-          <para>Точный интервал определяется путем добавления 12 пунктов размер наибольшего символа в каждом абзаце.</para>
-          <para />
-        </remarks>
+        <summary>Два пробела в указанных абзацах.</summary>
+        <remarks><para>Точное расстояние определяется путем добавления 12 точек к размеру шрифта наибольшего символа в каждом абзаце.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SpaceAfter">
@@ -2071,7 +1989,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер интервала (в пунктах) после указанного столбца абзаца или текст.</summary>
+        <summary>Возвращает или задает величину интервала (в пунктах) после указанного абзаца или столбца текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2102,15 +2020,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word автоматически задает размер интервала после указанного абзацев.</summary>
+        <summary>Определяет, будет ли Microsoft Word автоматически определять величину интервала после заданных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word автоматически устанавливается значение интервала после указанного абзаца и <b>значение False</b> , если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если свойство <b>SpaceAfterAuto</b> имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para>При открытии документа в формате HTML без каскадные таблицы стилей, Word автоматически устанавливает для свойства <b>SpaceAfterAuto</b> значение <b>True</b> для вывода абзацами точно так же, как в веб-браузере.</para>
-          <para>Если <b>SpaceAfterAuto</b> имеет значение <b>True</b>, <see cref="P:Microsoft.Office.Interop.Word.Paragraph.SpaceAfter" /> свойство будет пропущено.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word автоматически задает величину интервала после заданных абзацев, и <b>значение false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для свойства <b>Спацеафтерауто</b> задано <b>значение true</b> только для некоторых из указанных абзацев.</para>
+          <para>При открытии HTML-документа без каскадных таблиц стилей Word автоматически устанавливает для свойства <b>Спацеафтерауто</b> <b>значение true</b> , чтобы отображать интервалы абзацев точно так, как они будут выглядеть в веб-браузере.</para>
+          <para>Если для <b>спацеафтерауто</b> задано <b>значение true</b>, <see cref="P:Microsoft.Office.Interop.Word.Paragraph.SpaceAfter" /> свойство игнорируется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SpaceBefore">
@@ -2139,7 +2055,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает интервал (в точках) до указанного абзацев.</summary>
+        <summary>Возвращает или задает интервал между заданными абзацами (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2170,15 +2086,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word автоматически устанавливает расстояние до указанного абзацев.</summary>
+        <summary>Определяет, будет ли Microsoft Word автоматически настраивает расстояние до указанных абзацев.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word автоматически устанавливает расстояние до указанного абзаца и <b>значение False</b> , если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если свойство <b>SpaceBeforeAuto</b> имеет значение <b>True</b> для только некоторые из указанного абзацев.</para>
-          <para>При открытии документа в формате HTML без каскадные таблицы стилей, Word автоматически устанавливает для свойства <b>SpaceBeforeAuto</b> значение <b>True</b> для вывода абзацами точно так же, как в веб-браузере.</para>
-          <para>Если <b>SpaceBeforeAuto</b> имеет значение <b>True</b>, <see cref="P:Microsoft.Office.Interop.Word.Paragraph.SpaceBefore" /> свойство будет пропущено.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word автоматически устанавливает расстояние перед указанным абзацем, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для свойства <b>Спацебефореауто</b> задано <b>значение true</b> только для некоторых из указанных абзацев. </para>
+          <para>При открытии HTML-документа без каскадных таблиц стилей Word автоматически устанавливает для свойства <b>Спацебефореауто</b> <b>значение true</b> , чтобы отображать интервалы абзацев точно так, как они будут выглядеть в веб-браузере.</para>
+          <para>Если для <b>спацебефореауто</b> задано <b>значение true</b>, <see cref="P:Microsoft.Office.Interop.Word.Paragraph.SpaceBefore" /> свойство игнорируется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Style">
@@ -2207,13 +2121,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль для указанного объекта.</summary>
+        <summary>Возвращает или задает стиль указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>К этому свойству присвоено, укажите локальное имя стиля, целое число, <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или объект, который представляет стиль.</para>
-          <para>При возврате стиля для диапазона, который содержит несколько стилей, возвращается только первый стиль символов и абзацев.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать это свойство, укажите локальное имя стиля, целое число, <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константу или объект, представляющий стиль.</para>
+          <para>При возврате стиля диапазона, включающего более одного стиля, возвращается только первый знак или стиль абзаца.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TabHangingIndent">
@@ -2239,12 +2151,10 @@
         <Parameter Name="Count" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Count">Требуется <b>целое число</b>. Число вкладки останавливается (если положительное) или номер позиции табуляции для удаления из отступ (если отрицательное).</param>
-        <summary>Задает выступ для указанного количества табуляции.</summary>
-        <remarks>
-          <para>Можно использовать для удаления из выступ табуляции, если значение <paramref name="Count" /> является отрицательным.</para>
-          <para />
-        </remarks>
+        <param name="Count">Обязательный атрибут типа <b>Integer</b>. Число элементов табуляции для отступа (если положительное) или количество элементов табуляции, удаляемых из отступа (если отрицательно).</param>
+        <summary>Задает выступ на заданное число единиц табуляции.</summary>
+        <remarks><para>Можно использовать для удаления позиции табуляции из выступа, если значение <paramref name="Count" /> является отрицательным числом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TabIndent">
@@ -2270,12 +2180,10 @@
         <Parameter Name="Count" Type="System.Int16" />
       </Parameters>
       <Docs>
-        <param name="Count">Требуется <b>целое число</b>. Число вкладки останавливается (если положительное) или номер позиции табуляции для удаления из отступ (если отрицательное).</param>
-        <summary>Наборы останавливает отступа для указанного абзацев для указанного количества вкладки.</summary>
-        <remarks>
-          <para>Этот метод можно использовать для удаления отступа, если значение <paramref name="Count" /> является отрицательным.</para>
-          <para />
-        </remarks>
+        <param name="Count">Обязательный атрибут типа <b>Integer</b>. Число элементов табуляции для отступа (если положительное) или количество элементов табуляции, удаляемых из отступа (если отрицательно).</param>
+        <summary>Задает указанное число единиц табуляции для отступа слева для указанных абзацев.</summary>
+        <remarks><para>Этот метод можно использовать для удаления отступа, если значение <paramref name="Count" /> равно отрицательному числу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TabStops">
@@ -2304,7 +2212,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.TabStops</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.TabStops" /> коллекции, представляющей пользовательская вкладка останавливается для указанного абзацев.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.TabStops" /> коллекцию, которая представляет все настраиваемые позиции табуляции для указанных абзацев.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2335,10 +2243,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTextboxTightWrap</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdTextboxTightWrap" /> константа, которая представляет как тесно обтекания фигур и текстовых полей. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdTextboxTightWrap" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdTextboxTightWrap" /> константу, которая представляет степень обтекания текста вокруг фигур или текстовых полей. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdTextboxTightWrap" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2399,13 +2305,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если имя и фамилию строк в указанном абзаца, остаются на одну страницу вместе с остальной частью абзаца при repaginates документа Microsoft Word.</summary>
+        <summary>Определяет, будут ли первая и последняя строки в указанном абзаце оставались на той же странице, что и Microsoft Word репагинатес документ.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если имя и фамилию строки в указанном абзаце остаются на одну страницу вместе с остальной частью абзаца, когда Word repaginates документа и <b>значение False</b> в противном случае. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Возможные значения: <b>True</b>, <b>False</b> и <b>wdUndefined</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если первая и последняя строки в указанном абзаце остались на той же странице, что и в Word репагинатес документе, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Возможные значения: <b>true</b>, <b>false</b> и <b>вдундефинед</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WordWrap">
@@ -2434,13 +2338,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word инкапсулирует латиница середину слова в указанном абзацев или текстовые рамки.</summary>
+        <summary>Определяет, будет ли Microsoft Word переносить текст на Латинский текст в середине слова в указанных абзацах или текстовых фреймах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если Word охватывает латиница середину слова в указанном абзацев или рамок текста и <b>значение False</b> , если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Данное свойство возвращает <b>wdUndefined</b> , если он имеет значение <b>True</b> для только некоторые из указанного абзацев или текстовые рамки. В этом использования могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если Word заключает текст в Латинский текст в середине слова в указанных абзацах или текстовых фреймах, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Это свойство возвращает <b>вдундефинед</b> , если для него задано <b>значение true</b> только для некоторых заданных абзацев или текстовых фреймов. Это может быть недоступно в зависимости от того, какой язык (например, английский) выбран или установлен.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

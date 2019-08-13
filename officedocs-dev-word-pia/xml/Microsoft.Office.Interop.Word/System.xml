@@ -1,13 +1,5 @@
 <Type Name="System" FullName="Microsoft.Office.Interop.Word.System">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="93f16faece022e960122bec04316f252825147e5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674079" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface System" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ed58d5c3d2752ce883fdb2461eb9995959a5ba2c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143912" /></Metadata><TypeSignature Language="C#" Value="public interface System" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract System" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.System" />
   <TypeSignature Language="VB.NET" Value="Public Interface System" />
@@ -27,10 +19,8 @@
   </Attributes>
   <Docs>
     <summary>Содержит сведения о системе компьютера.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.System" /> свойство для возврата объекта <b>системы</b> .</para>
-      <para />
-    </remarks>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.System" /> свойство, чтобы возвратить <b>системный</b> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,7 +74,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Вы запросили справки для ключевого слова, используется только на компьютерах Macintosh. Сведения об этом ключевое слово обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</summary>
+        <summary>Вы запросили справку для ключевого слова, используемого только для Macintosh. Для получения сведений об этом ключевом слове обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,17 +103,14 @@
         <Parameter Name="Password" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Path">
-          <b>Строковое значение.</b> Путь для сетевого диска (например, "\\Project\Info»).</param>
-        <param name="Drive">Необязательный элемент <b>Object</b>. Число, соответствующее буквы, которые необходимо назначить для сетевого диска, где нуль (0) соответствует первому символу доступных дисков, 1 соответствует второй доступная буква диска и т. д. Если этот аргумент задан, используется следующая доступная буква.</param>
-        <param name="Password">Необязательный элемент <b>Object</b>. Пароль, если сетевой диск защищен паролем.</param>
-        <summary>Устанавливает подключение к сетевого диска.</summary>
-        <remarks>
-          <para>
-            <b>Безопасность</b>   Избегайте использования жестко паролей в приложениях. Если в процедуре необходим пароль, запрашивать пароль пользователя, сохраните его в переменной и затем использовать эту переменную в вашем коде.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word._Application.Dialogs" /> свойство с константой <b>wdDialogConnect</b> , чтобы открыть диалоговое окно подключения для сетевого диска.</para>
-          <para />
-        </remarks>
+        <param name="Path">Обязательный атрибут типа <b>String</b>. Путь к сетевому диску (например, "\\прожект\инфо").</param>
+        <param name="Drive">Необязательный <b>объект</b>. Число, соответствующее букве, которую вы хотите назначить сетевому диску, где 0 (ноль) соответствует первой доступной букве диска, 1 соответствует второй доступной букве диска и т. д. Если этот аргумент не указан, используется следующая доступная буква.</param>
+        <param name="Password">Необязательный <b>объект</b>. Пароль, если сетевой диск защищен паролем.</param>
+        <summary>Устанавливает подключение к сетевому диску.</summary>
+        <remarks><para>
+            <b>Безопасность</b>   Избегайте использования жестко запрограммированных паролей в приложениях. Если в процедуре требуется пароль, запросите пароль у пользователя, сохраните его в переменной, а затем используйте эту переменную в коде.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.Dialogs" /> свойство с константой <b>вддиалогконнект</b> для отображения диалогового окна Подключение к сетевому диску.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Country">
@@ -180,85 +167,83 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCountry</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает название страны или региона системы.</summary>
+        <summary>Возвращает обозначение страны или региона системы.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdCountry" />может быть одной из этих констант <b>вдкаунтри</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdCountry" />может иметь одно из следующих констант <b>WdCountry</b> . </para>
-          <para>
-            <b>wdArgentina </b>
+            <b>вдаржентина</b>
           </para>
           <para>
-            <b>wdCanada </b>
+            <b>вдканада</b>
           </para>
           <para>
-            <b>wdChina </b>
+            <b>вдчина</b>
           </para>
           <para>
-            <b>wdFinland </b>
+            <b>вдфинланд</b>
           </para>
           <para>
-            <b>wdGermany </b>
+            <b>вджермани</b>
           </para>
           <para>
-            <b>wdItaly </b>
+            <b>вдитали</b>
           </para>
           <para>
-            <b>wdKorea </b>
+            <b>вдкореа</b>
           </para>
           <para>
-            <b>wdMexico </b>
+            <b>вдмексико</b>
           </para>
           <para>
-            <b>wdNorway </b>
+            <b>вднорвай</b>
           </para>
           <para>
-            <b>wdSpain </b>
+            <b>вдспаин</b>
           </para>
           <para>
-            <b>wdTaiwan </b>
+            <b>вдтаиван</b>
           </para>
           <para>
-            <b>wdUS</b>
+            <b>вдус</b>
           </para>
           <para>
-            <b>wdBrazil</b>
+            <b>вдбразил</b>
           </para>
           <para>
-            <b>wdChile</b>
+            <b>вдчиле</b>
           </para>
           <para>
-            <b>wdDenmark</b>
+            <b>вдденмарк</b>
           </para>
           <para>
-            <b>wdFrance</b>
+            <b>вдфранце</b>
           </para>
           <para>
-            <b>wdIceland</b>
+            <b>вдицеланд</b>
           </para>
           <para>
-            <b>wdJapan</b>
+            <b>вджапан</b>
           </para>
           <para>
-            <b>wdLatinAmerica</b>
+            <b>вдлатинамерика</b>
           </para>
           <para>
-            <b>wdNetherlands</b>
+            <b>вднесерландс</b>
           </para>
           <para>
-            <b>wdPeru</b>
+            <b>вдперу</b>
           </para>
           <para>
-            <b>wdSweden</b>
+            <b>вдсведен</b>
           </para>
           <para>
-            <b>wdUK</b>
+            <b>вдук</b>
           </para>
           <para>
-            <b>wdVenezuela</b>
+            <b>вдвенезуела</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -284,11 +269,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cursor">
@@ -317,7 +302,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdCursorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает состояние (фигуры) указателя. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdCursorType" /> констант: <b>wdCursorIBeam</b>, <b>wdCursorNormal</b>, <b>wdCursorNorthwestArrow</b>или <b>wdCursorWait</b>.</summary>
+        <summary>Возвращает или задает состояние (фигуру) указателя. Может быть одной <see cref="T:Microsoft.Office.Interop.Word.WdCursorType" /> из следующих констант: <b>вдкурсорибеам</b>, <b>вдкурсорнормал</b>, <b>вдкурсорнорсвестарров</b>или <b>вдкурсорваит</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -345,13 +330,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает свободного места на диске для текущего диска в байтах.</summary>
+        <summary>Возвращает свободное место на диске для текущего диска в байтах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Существует 1024 байта в килобайт и 1 048 576 байт в МБ. Максимальная возвращаемое значение для свойства <b>FreeDiskSpace</b> — 2 147 483 647. Таким образом даже если у вас есть четыре гигабайт свободного места на диске, возвращается 2147483647.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Размер 1024 байт в килобайтах и 1 048 576 байт в мегабайте. Максимальное возвращаемое значение для свойства <b>фридискспаце</b> — 2 147 483 647. Таким образом, даже если у вас четыре гигабайта свободного места на диске, возвращается 2147483647.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HorizontalResolution">
@@ -377,7 +360,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает разрешение горизонтальной экрана в точках.</summary>
+        <summary>Возвращает горизонтальное разрешение дисплея в пикселях.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -405,7 +388,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанное язык системного программного обеспечения.</summary>
+        <summary>Возвращает назначенный язык системного программного обеспечения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -433,7 +416,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Вы запросили справки для ключевого слова, используется только на компьютерах Macintosh. Сведения об этом ключевое слово обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</summary>
+        <summary>Вы запросили справку для ключевого слова, используемого только для Macintosh. Для получения сведений об этом ключевом слове обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -461,8 +444,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если в системе установлена сопроцессор.</summary>
+        <summary><b>Имеет значение true</b> , если в системе установлен математический сопроцессор.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -488,7 +470,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Запускает сведения о системе Microsoft приложения, если он еще не запущен или переключение на его, если она уже запущена.</summary>
+        <summary>Запускает приложение "сведения о системе", если оно не запущено, или переходит к нему, если он уже запущен.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -515,7 +497,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя текущего операционной системы (например, «Windows» или «Windows NT»).</summary>
+        <summary>Возвращает имя текущей операционной системы (например, "Windows" или "Windows NT").</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -543,7 +525,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -579,18 +561,13 @@
         <Parameter Name="Key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="FileName">
-          <b>Строковое значение.</b> Имя файла для файла настроек. Если путь не указан, подразумевается папки Windows.</param>
-        <param name="Section">
-          <b>Строковое значение.</b> Имя раздела в файле параметров, содержащий <paramref name="Key" />. В файле параметров Windows отображается имя раздела квадратных скобках перед связанных ключей (не включайте скобки с <paramref name="Section" />). Возвращая значение записи из реестра Windows, <paramref name="Section" /> должен быть полный путь к подразделу, включая поддерева (например, «HKEY_CURRENT_USER\Software\Microsoft\Office\version \Word\Options»).</param>
-        <param name="Key">
-          <b>Строковое значение.</b> Параметр раздела или параметра реестра, которую необходимо получить. В файле параметров Windows имя раздела следуют знак равенства (=) и параметр. Возвращая значение записи из реестра Windows, <paramref name="Key" /> должно быть имя записи в подразделе, указанного идентификатором <paramref name="Section" /> (например, «ЗАПУСКА-путь к»).</param>
-        <summary>Возвращает или задает строку в файле параметров или реестра Windows.</summary>
+        <param name="FileName">Обязательный атрибут типа <b>String</b>. Имя файла для файла параметров. Если путь не указан, предполагается, что используется папка Windows.</param>
+        <param name="Section">Обязательный атрибут типа <b>String</b>. Имя раздела в файле параметров, который содержит <paramref name="Key" />. В файле параметров Windows имя раздела отображается между квадратными скобками перед связанными ключами (не включайте квадратные <paramref name="Section" />скобки с). Если вы возвращаете значение записи из реестра Windows, <paramref name="Section" /> необходимо указать полный путь к подразделу, включая поддерево (например, "HKEY_CURRENT_USER\Software\Microsoft\Office\version \ворд\оптионс").</param>
+        <param name="Key">Обязательный атрибут типа <b>String</b>. Параметр key или значение записи реестра, которые требуется получить. В файле параметров Windows имя ключа сопровождается знаком равенства (=) и параметром. Если вы возвращаете значение записи из реестра Windows, <paramref name="Key" /> должно быть именем записи в подразделе, заданном параметром <paramref name="Section" /> (например, "Startup-Path").</param>
+        <summary>Возвращает или задает строку в файле параметров или реестре Windows.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно написать код, который использует файл параметров для хранения и извлечения параметров. Например можно хранить имя активного документа при завершении работы Word, чтобы его можно повторно открыть автоматически при загрузке Microsoft Word. Файл параметров является текстовым файлом со сведениями, упорядоченные как сведения, приведенные в Windows 3.x WIN. INI-файл.</para>
-          <para />
-        </remarks>
+        <remarks><para>Вы можете написать код, который использует файл параметров для хранения и извлечения параметров. Например, вы можете сохранить имя активного документа при выходе из Word, чтобы его можно было повторно открыть автоматически при следующем запуске Microsoft Word. Файл параметров — это текстовый файл со сведениями, упорядоченными так, как в Windows 3. x WIN. INI-файл.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ProcessorType">
@@ -619,7 +596,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип процессором, в системе используется (например, i486).</summary>
+        <summary>Возвращает тип процессора, который использует система (например, i486).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -654,11 +631,9 @@
         <Parameter Name="Key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Section">
-          <b>Строковое значение.</b> Подраздел в подраздел «HKEY_CURRENT_USER\Software\Microsoft\Office\version \Word» в реестре Windows.</param>
-        <param name="Key">
-          <b>Строковое значение.</b> Имя записи в подразделе, указанного идентификатором <paramref name="Section" /> (например, «BackgroundPrint» в разделе Параметры).</param>
-        <summary>Возвращает или задает значение для записи в следующем подразделе реестра Windows: HKEY_CURRENT_USER\Software\Microsoft\Office\version\Word.</summary>
+        <param name="Section">Обязательный атрибут типа <b>String</b>. Подраздел под подразделом "HKEY_CURRENT_USER\Software\Microsoft\Office\version \Ворд" в реестре Windows.</param>
+        <param name="Key">Обязательный атрибут типа <b>String</b>. Имя записи в подразделе, заданном параметром <paramref name="Section" /> (например, "баккграундпринт" в подразделе Options).</param>
+        <summary>Возвращает или задает значение для записи в реестре Windows в следующем подразделе: HKEY_CURRENT_USER\Software\Microsoft\Office\version\Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -686,7 +661,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Вы запросили справки для ключевого слова, используется только на компьютерах Macintosh. Сведения об этом ключевое слово обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</summary>
+        <summary>Вы запросили справку для ключевого слова, используемого только для Macintosh. Для получения сведений об этом ключевом слове обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -742,7 +717,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает разрешение вертикальной экрана в точках.</summary>
+        <summary>Возвращает вертикальное разрешение экрана в пикселях.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

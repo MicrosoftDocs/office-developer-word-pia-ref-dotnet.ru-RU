@@ -1,13 +1,5 @@
 <Type Name="TablesOfFigures" FullName="Microsoft.Office.Interop.Word.TablesOfFigures">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fe1e1f21bffd98afe08b6b1953eec4af668b2331" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673386" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TablesOfFigures : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a47dc8aab96b5338c26c58900de20ee909636d5e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146012" /></Metadata><TypeSignature Language="C#" Value="public interface TablesOfFigures : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TablesOfFigures implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TablesOfFigures" />
   <TypeSignature Language="VB.NET" Value="Public Interface TablesOfFigures&#xA;Implements IEnumerable" />
@@ -30,10 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.TableOfFigures" /> объекты, которые представляют таблицами значений в документе.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.TablesOfFigures" /> свойство для возврата коллекции <b>TablesOfFigures</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.TablesOfFigures.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для добавления списка иллюстраций в документ. Список иллюстраций перечислены названия рисунков в том порядке, в котором они отображаются в документе.</para> Использование <b>TablesOfFigures</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>TableOfFigures</b> . Номер индекса представляет положение список иллюстраций в документе.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.TableOfFigures" /> объектов, представляющих собой таблицы иллюстраций в документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.TablesOfFigures" /> свойство, чтобы возвратить коллекцию <b>TablesOfFigures</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfFigures.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить в документ таблицу иллюстраций. В таблице иллюстраций показано, как будут выглядеть подписи в том порядке, в котором они отображаются в документе.</para>
+      <para>Используйте <b>TablesOfFigures</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>TableOfFigures</b> . Номер индекса представляет положение таблицы иллюстраций в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -69,20 +62,20 @@
         <Parameter Name="HidePageNumbersInWeb" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон, где будут оглавления отображаться.</param>
-        <param name="Caption">Необязательный элемент <b>Object</b>. Метка, которая определяет элементы, которые необходимо включить в список иллюстраций. Соответствующий ключ \c для поля в таблице содержимое (Оглавление). Значение по умолчанию — «Рисунок».</param>
-        <param name="IncludeLabel">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы включить в список иллюстраций название и порядковый номер. Значение по умолчанию — <b>True</b>.</param>
-        <param name="UseHeadingStyles">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы использовать встроенные стили заголовков для создания списка иллюстраций. Значение по умолчанию — <b>False</b>.</param>
-        <param name="UpperHeadingLevel">Необязательный элемент <b>Object</b>. Запуск заголовок уровня для список иллюстраций, если <paramref name="UseHeadingStyles" /> имеет значение <b>True</b>. Соответствует начальное значение используется с параметром \o для поля в таблице содержимое (Оглавление). Значение по умолчанию — 1.</param>
-        <param name="LowerHeadingLevel">Необязательный элемент <b>Object</b>. Заголовок уровня для список иллюстраций, если завершение <paramref name="UseHeadingStyles" /> имеет значение <b>True</b>. Соответствует конечное значение, используемые с параметром \o для поля в таблице содержимое (Оглавление). Значение по умолчанию — 9.</param>
-        <param name="UseFields">Необязательный элемент <b>Object</b>. <b>Значение true</b> для использования поля в таблице из содержимого запись (ТРАД.) чтобы создать список иллюстраций. Использование <see cref="M:Microsoft.Office.Interop.Word.TablesOfFigures.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы пометить как записи, которую требуется включить в список иллюстраций. Значение по умолчанию — <b>False</b>.</param>
-        <param name="TableID">Необязательный элемент <b>Object</b>. Идентификатор одной буквы, используемые для создания оглавления из полей таблицы из содержимого запись (ТРАД.). Соответствующий параметр \f для поля в таблице содержимое (Оглавление). Например «i» выполняет построение оглавления рисунок.</param>
-        <param name="RightAlignPageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true,</b> выровнять номера страниц с правого поля в таблице рисунков. Значение по умолчанию — <b>True</b>.</param>
-        <param name="IncludePageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если номера страниц включены в список иллюстраций. Значение по умолчанию — <b>True</b>.</param>
-        <param name="AddedStyles">Необязательный элемент <b>Object</b>. Имя строки для дополнительных стилей, используемых для компиляции оглавления (стили отличный от заголовок 1 — Заголовок 9 стили).</param>
-        <param name="UseHyperlinks">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если элементы в таблице данные следует форматируются как гиперссылки, при публикации в Интернете. Значение по умолчанию — <b>True</b>.</param>
-        <param name="HidePageNumbersInWeb">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если номеров страниц в таблице данные должны быть скрыты при публикации в Интернете. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableOfFigures" /> объект, представляющий оглавления, добавлены в документ.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, в котором будет отображаться таблица иллюстраций.</param>
+        <param name="Caption">Необязательный <b>объект</b>. Метка, определяющая элементы, которые необходимо включить в список иллюстраций. Соответствует параметру \c для поля содержания (TOC). Значение по умолчанию — "Рисунок".</param>
+        <param name="IncludeLabel">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы включить подпись заголовка и номер заголовка в список иллюстраций. Значение по умолчанию — <b>True</b>.</param>
+        <param name="UseHeadingStyles">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать встроенные стили заголовков для создания таблицы иллюстраций. Значение по умолчанию — <b>False</b>.</param>
+        <param name="UpperHeadingLevel">Необязательный <b>объект</b>. Начальный уровень заголовка для таблицы иллюстраций, если <paramref name="UseHeadingStyles" /> задано <b>значение true</b>. Соответствует начальному значению, используемому с параметром \o для поля содержания (TOC). Значение по умолчанию равно 1.</param>
+        <param name="LowerHeadingLevel">Необязательный <b>объект</b>. Конечный уровень заголовка для таблицы иллюстраций, если <paramref name="UseHeadingStyles" /> задано <b>значение true</b>. Соответствует конечному значению, используемому с параметром \o для поля содержания (TOC). По умолчанию параметр имеет значение 9.</param>
+        <param name="UseFields">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы использовать поля элемента оглавления (TC) для создания таблицы иллюстраций. Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfFigures.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы пометить записи, которые нужно включить в список иллюстраций. Значение по умолчанию — <b>False</b>.</param>
+        <param name="TableID">Необязательный <b>объект</b>. Однобуквенный идентификатор, который используется для создания таблицы иллюстраций из полей элемента оглавления (TC). Соответствует параметру \f для поля оглавления (TOC). Например, "i" создает таблицу иллюстраций для иллюстрации.</param>
+        <param name="RightAlignPageNumbers">Необязательный <b>объект</b>. <b>Значение true</b> выравнивает номера страниц по правому полю в таблице иллюстраций. Значение по умолчанию — <b>True</b>.</param>
+        <param name="IncludePageNumbers">Необязательный <b>объект</b>. <b>Значение true</b> , если номера страниц включены в таблицу иллюстраций. Значение по умолчанию — <b>True</b>.</param>
+        <param name="AddedStyles">Необязательный <b>объект</b>. Имя строки для дополнительных стилей, используемых для компиляции таблицы иллюстраций (стили, отличные от стиля заголовка 1 – заголовок 9).</param>
+        <param name="UseHyperlinks">Необязательный <b>объект</b>. <b>Значение true</b> , если записи в таблице иллюстраций следует отформатировать как гиперссылки при публикации в Интернете. Значение по умолчанию — <b>True</b>.</param>
+        <param name="HidePageNumbersInWeb">Необязательный <b>объект</b>. <b>Имеет значение true</b> , если номера страниц в таблице иллюстраций должны быть скрыты при публикации в Интернете. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableOfFigures" /> объект, представляющий таблицу иллюстраций, добавленных в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -188,7 +181,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -216,11 +209,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Format">
@@ -249,31 +242,29 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTofFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает форматирование таблиц фигуры в указанный документ.</summary>
+        <summary>Возвращает или задает форматирование для таблиц иллюстраций в указанном документе.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTofFormat" />может быть одной из этих констант <b>вдтофформат</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTofFormat" />может иметь одно из следующих констант <b>WdTofFormat</b> . </para>
-          <para>
-            <b>wdTOFTemplate</b>
+            <b>вдтофцентеред</b>
           </para>
           <para>
-            <b>wdTOFCentered </b>
+            <b>вдтофдистинктиве</b>
           </para>
           <para>
-            <b>wdTOFDistinctive </b>
+            <b>вдтофсимпле</b>
           </para>
           <para>
-            <b>wdTOFSimple </b>
+            <b>вдтофклассик</b>
           </para>
           <para>
-            <b>wdTOFClassic </b>
+            <b>вдтофформал</b>
           </para>
           <para>
-            <b>wdTOFFormal </b>
+            <b>вдтофтемплате</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -334,9 +325,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -366,12 +356,12 @@
         <Parameter Name="Level" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Расположение записи. Поле TC вставляется после <paramref name="Range" />.</param>
-        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, который отображается в оглавлении или оглавления. Чтобы указать дополнительный элемент, включают текст основного элемента, а затем текст, разделенных точкой с запятой (:) (например, «введение: продукт»).</param>
-        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, который включает в себя текст для индекса, иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
-        <param name="TableID">Необязательный элемент <b>Object</b>. Идентификатор одной буквы для иллюстраций или таблице содержимое элемента (например, «i» для «рисунок»).</param>
-        <param name="Level">Необязательный элемент <b>Object</b>. Уровень для записи в оглавлении или оглавления.</param>
-        <summary>Вставка поля TC (элемент таблицы содержимое) после указанного диапазона. Метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле ТРАД.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Расположение записи. Поле TC вставляется после <paramref name="Range" />.</param>
+        <param name="Entry">Необязательный <b>объект</b>. Текст, отображаемый в содержании или таблице иллюстраций. Чтобы указать подзапись, добавьте основной текст записи и текст подзаписи, разделив их двоеточием (:) (например, "Введение: продукт").</param>
+        <param name="EntryAutoText">Необязательный <b>объект</b>. Имя элемента автотекста, которое содержит текст для индекса, таблицы иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
+        <param name="TableID">Необязательный <b>объект</b>. Однобуквенный идентификатор для таблицы иллюстраций или элемента оглавления (например, "i" для "иллюстрации").</param>
+        <param name="Level">Необязательный <b>объект</b>. Уровень для записи в содержании или таблице иллюстраций.</param>
+        <summary>Вставляет поле TC (элемент оглавления) после указанного диапазона. Метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле TC.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -399,7 +389,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

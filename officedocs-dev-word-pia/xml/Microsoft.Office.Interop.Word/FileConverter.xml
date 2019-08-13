@@ -1,13 +1,5 @@
 <Type Name="FileConverter" FullName="Microsoft.Office.Interop.Word.FileConverter">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b895588fe75d88bfa9fe9416f0d5c82af0369a00" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673887" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FileConverter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e5e73be359807266e9514d8b613947bcb2065ec8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146852" /></Metadata><TypeSignature Language="C#" Value="public interface FileConverter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FileConverter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FileConverter" />
   <TypeSignature Language="VB.NET" Value="Public Interface FileConverter" />
@@ -27,12 +19,12 @@
   </Attributes>
   <Docs>
     <summary>Представляет конвертер файлов, используемый для открытия или сохранения файлов.</summary>
-    <remarks>
-      <para>Объект <b>FileConverter</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.FileConverters" /> семейства сайтов. Коллекция <b>FileConverters</b> содержит все конвертеры установленный файл для открытия и сохранения файлов.</para>
-      <para>Использования <b>FileConverters</b>(<paramref name="index" />), где <paramref name="index" /> — это имя класса или номер индекса, чтобы возвратить объект <b>FileConverter</b> .</para>
+    <remarks><para>Объект <b>FileConverter</b> является членом <see cref="T:Microsoft.Office.Interop.Word.FileConverters" /> коллекции. Коллекция <b>FileConverters</b> содержит все установленные конвертеры файлов для открытия и сохранения файлов.</para>
+      <para>Используйте <b>FileConverters</b>(<paramref name="index" />), где <paramref name="index" /> — это имя класса или номер индекса, чтобы вернуть один объект <b>FileConverter</b> .</para>
       <para>Номер индекса представляет положение конвертера файлов в коллекции <b>FileConverters</b> .</para>
-      <para>Не удается создать нового конвертера файлов или добавьте его в коллекцию <b>FileConverters</b> . Объекты <b>FileConverter</b> добавляются во время установки системы Microsoft Office или установив конвертеры дополнительных файлов. Использовать один <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanSave" /> или <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanOpen" /> свойства, чтобы определить, используется ли объект <b>FileConverter</b> для открытия или сохранения документа.</para> Конвертеры 
-      <para>файла для сохранения документов, перечислены в диалоговом окне Сохранить как. Конвертеры файлов для открытия документов отображаются в диалоговом окне, если Подтверждать преобразование при Open флажок установлен на вкладке Общие в диалоговое окно "Параметры" (меню "Сервис").</para><para /></remarks>
+      <para>Вы не можете создать новый конвертер файлов или добавить его в коллекцию <b>FileConverters</b> . Объекты <b>FileConverter</b> добавляются во время установки Microsoft Office или путем установки конвертеров дополнительных файлов. Используйте свойство или <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanSave" /> <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanOpen" /> , чтобы определить, можно ли использовать объект <b>FileConverter</b> для открытия или сохранения документа.</para>
+      <para>Конвертеры файлов для сохранения документов отображаются в диалоговом окне "Сохранить как". Конвертеры файлов для открытия документов отображаются в диалоговом окне, если установлен флажок подтверждать преобразование при открытии на вкладке Общие диалогового окна Параметры (меню Сервис).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,14 +78,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный файл конвертера предназначено для открытия файлов.</summary>
+        <summary>Определяет, предназначен ли указанный конвертер файлов для открытия файлов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если указанный файл конвертера предназначена для открытия файлов и <b>значение False,</b> Если это не так.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanSave" /> Свойство возвращает <b>значение True</b> , если указанный файл конвертер может использоваться для сохранения файлов (экспорта).</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанный конвертер файлов предназначен для открытия файлов, и <b>false</b> , если нет.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanSave" /> Свойство возвращает <b>значение true</b> , если указанный конвертер файлов можно использовать для сохранения (экспорта) файлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CanSave">
@@ -119,13 +108,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный файл конвертера предназначен для сохранения файлов.</summary>
+        <summary>Определяет, предназначен ли указанный конвертер файлов для сохранения файлов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanOpen" /> Свойство возвращает <b>значение True</b> , если указанный файл конвертер может использоваться для открытия файлов (импорт).</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.FileConverter.CanOpen" /> Свойство возвращает <b>значение true</b> , если указанный конвертер файлов можно использовать для открытия (импорта) файлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassName">
@@ -151,7 +137,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уникальное имя, которое идентифицирует конвертера файлов.</summary>
+        <summary>Возвращает уникальное имя, идентифицирующее конвертер файлов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,11 +165,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Extensions">
@@ -209,7 +195,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает файл расширения имен, связанный с заданным <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объекта.</summary>
+        <summary>Возвращает расширения имен файлов, связанные с указанным <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -237,12 +223,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя конвертера указанного файла.</summary>
+        <summary>Возвращает имя указанного конвертера файлов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Имена форматов отображаются в разделе сохранить тип файла в диалоговом окне Сохранить как (меню "файл").</para>
-          <para />
-        </remarks>
+        <remarks><para>Имена форматов отображаются в поле Тип файла в диалоговом окне Сохранить как (меню "файл").</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -296,12 +280,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает формат файла конвертера указанного файла.</summary>
+        <summary>Возвращает формат файла указанного конвертера файлов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>OpenFormat</b> может быть любым допустимым <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> константа, или она может быть уникальный номер, который представляет внешнее средство преобразование файлов.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>опенформат</b> может быть любой допустимой <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> константой или может быть уникальным числом, представляющим преобразователь внешних файлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -327,7 +309,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -355,13 +337,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанный объект диска или веб-путь.</summary>
+        <summary>Возвращает диск или веб-путь к указанному объекту.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака — например, «C:\MSOffice» или "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Использование <see cref="P:Microsoft.Office.Interop.Word.FileConverter.Name" /> свойство возвращает имя файла без путь.</para>
-          <para>Свойство <b>PathSeparator</b> можно использовать для построения веб-адреса, несмотря на то, что они содержат косую черту (/) и значения по умолчанию свойства <b>PathSeparator</b> для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+        <remarks><para>Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте <see cref="P:Microsoft.Office.Interop.Word.FileConverter.Name" /> свойство, чтобы возвратить имя файла без пути.</para>
+          <para>Свойство <b>пассепаратор</b> можно использовать для создания веб-адресов, несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SaveFormat">
@@ -387,12 +367,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает формат файла конвертера указанного файла.</summary>
+        <summary>Возвращает формат файла указанного конвертера файлов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Возвращаемое значение будет уникальный номер, который определяет внешнее средство преобразование файлов или <see cref="T:Microsoft.Office.Interop.Word.WdSaveFormat" /> константу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Возвращаемое значение будет уникальным числом, определяющим внешний конвертер файлов или <see cref="T:Microsoft.Office.Interop.Word.WdSaveFormat" /> константу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

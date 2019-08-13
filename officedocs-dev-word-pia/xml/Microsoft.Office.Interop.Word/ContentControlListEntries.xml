@@ -1,13 +1,5 @@
 <Type Name="ContentControlListEntries" FullName="Microsoft.Office.Interop.Word.ContentControlListEntries">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a961b46486a0ec821d76f588800bb27c7ac81740" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673220" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ContentControlListEntries : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2a65daa51ebf37c0bb3b93d5a9f9094e1b8a6931" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147286" /></Metadata><TypeSignature Language="C#" Value="public interface ContentControlListEntries : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ContentControlListEntries implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ContentControlListEntries" />
   <TypeSignature Language="VB.NET" Value="Public Interface ContentControlListEntries&#xA;Implements IEnumerable" />
@@ -30,14 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекты, которые представляют элементы в раскрывающемся списке списка или поля со списком элемент управления содержимым.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Add(System.String,System.String,System.Int32)" /> метод для добавления элемента в раскрывающемся списке списка или поля со списком. </para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntries.Item(System.Int32)" /> метод или <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DropdownListEntries" /> свойства <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объект, который требуется получить доступ к отдельного элемента в коллекции.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Clear" /> метод, чтобы удалить все элементы из раскрывающегося списка или поля со списком поля. Следующий пример удаляет все элементы из первого элемента управления контентом в активном документе.</para>
-      <para />
-    </remarks>
+    <summary><see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> Коллекция содержит <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекты, представляющие элементы в раскрывающемся списке или элементе управления содержимым поля со списком.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Add(System.String,System.String,System.Int32)" /> метод, чтобы добавить элемент в раскрывающийся список или поле со списком. </para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntries.Item(System.Int32)" /> метода или <see cref="P:Microsoft.Office.Interop.Word.ContentControl.DropdownListEntries" /> свойства <see cref="T:Microsoft.Office.Interop.Word.ContentControl" /> объекта для доступа к отдельному элементу списка в коллекции. </para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ContentControlListEntries.Clear" /> метод, чтобы удалить все элементы из раскрывающегося списка или поля со списком. В следующем примере удаляются все элементы из первого элемента управления содержимым в активном документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -64,17 +53,13 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Text">Задает отображаемый текст для элемента списка. Соответствует <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта.</param>
-        <param name="Value">Задает значение элемента списка.  Соответствует <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта. Если этот параметр опущен, <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойства установлено значение <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойства.</param>
-        <param name="Index">Указывает порядковый номер нового элемента в списке. Если существует элемент в указанной позиции, существующий элемент помещается в списке. Если этот параметр опущен, новый элемент добавляется в конец списка.</param>
-        <summary>Добавляет новый элемент списка в раскрывающемся списке или поле со списком поле элемента управления контентом и возвращает <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" />
-        </returns>
-        <remarks>
-          <para>Записи списка необходимо иметь уникальные отображаемые имена.  Попытка добавить элемент списка, который уже существует вызывает ошибку времени выполнения.</para>
-          <para />
-        </remarks>
+        <param name="Text">Задает отображаемый текст для элемента списка. Соответствует <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойству <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта.</param>
+        <param name="Value">Указывает значение элемента списка.  Соответствует <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойству <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объекта. Если этот параметр опущен, <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Value" /> свойство равно <see cref="P:Microsoft.Office.Interop.Word.ContentControlListEntry.Text" /> свойству.</param>
+        <param name="Index">Задает порядковый номер нового элемента в списке. Если элемент существует по указанному положению, существующий элемент перемещается в списке. Если этот параметр не указан, новый элемент добавляется в конец списка.</param>
+        <summary>Добавляет новый элемент списка в раскрывающийся список или элемент управления содержимым поля со списком и возвращает <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /> объект.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /></returns>
+        <remarks><para>Записи списка должны иметь уникальные отображаемые имена.  При попытке добавить уже существующий элемент списка возникает ошибка во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -101,9 +86,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,7 +111,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет все элементы из раскрывающегося списка или поля со списком поле элемента управления контентом.</summary>
+        <summary>Удаляет все элементы из раскрывающегося списка или элемента управления содержимым поля со списком.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -155,10 +138,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -185,16 +166,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -255,11 +232,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Указывает порядковый номер объекта в коллекции.</param>
+        <param name="Index">Задает порядковый номер объекта в коллекции.</param>
         <summary>Возвращает указанный элемент в коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntry" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -287,9 +262,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ContentControlListEntries" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="ChartColorFormat" FullName="Microsoft.Office.Interop.Word.ChartColorFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2cbca0bca2527cc63516d8972ee2ec068238e367" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674011" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartColorFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="55a04dd1372bae2f5242c5656e5564517b5a2549" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142280" /></Metadata><TypeSignature Language="C#" Value="public interface ChartColorFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartColorFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartColorFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartColorFormat" />
@@ -26,9 +18,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет цвет переднего плана или объект один цвет или цвет фона объекта с градиента и узорные заливки.</summary>
-    <remarks>
-      <para>Выполните одну из свойства, перечисленные в следующей таблице для возврата <see cref="T:Microsoft.Office.Interop.Word.ChartColorFormat" /> объект.</para>
+    <summary>Представляет цвет объекта с одним цветом или переднего плана или цвета фона объекта с градиентной или узорной заливкой.</summary>
+    <remarks><para>Используйте одно из свойств, приведенных в следующей таблице, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ChartColorFormat" /> объект.</para>
       <list type="table">
         <item>
           <description>
@@ -36,7 +27,8 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />
-          </description>Фона (используется в затемненные или узорную заливку)
+          </description>
+          <description>Цвет заливки фона (используется в затененной или узорной заливки)</description>
         </item>
         <item>
           <description>
@@ -44,11 +36,11 @@
           </description>
           <description>
             <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />
-          </description>переднего плана заливки цвет (или просто цвет заливки сплошной заливке)
+          </description>
+          <description>Цвет заливки переднего плана (или только цвет заливки для сплошной заливки)</description>
         </item>
       </list>
-      <para />
-    </remarks>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -105,10 +97,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект). Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий создателя указанного объекта (это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта). Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,14 +125,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartColorFormat.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartColorFormat.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -168,10 +154,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,10 +182,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число</b> , представляющее значение красный зеленый синий указанного цвета.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает <b>целое число</b> , представляющее значение красного, зеленого и синего цвета указанного цвета.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -231,10 +213,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает индекс цвета текущей цветовой схемы.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает индекс цвета в текущей цветовой схеме.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -261,12 +241,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое</b> значение, что представляет цвет формате введите.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Данное свойство возвращает один из следующих <see cref="T:Microsoft.Office.Core.MsoColorType" /> значений перечисления:</para>
+        <summary>Возвращает <b>целое</b> значение, представляющее тип цветового формата.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Это свойство возвращает одно из следующих <see cref="T:Microsoft.Office.Core.MsoColorType" /> значений перечисления:</para>
           <list type="bullet">
             <item>
               <para>
@@ -279,8 +256,7 @@
               </para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="Hyperlink" FullName="Microsoft.Office.Interop.Word.Hyperlink">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b20d04082a16f963ccc15d9f6d80fa09a9949c11" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673940" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Hyperlink" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b605957f028ab3eb567ae3d9d066ecf695f2ce45" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146712" /></Metadata><TypeSignature Language="C#" Value="public interface Hyperlink" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Hyperlink" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Hyperlink" />
   <TypeSignature Language="VB.NET" Value="Public Interface Hyperlink" />
@@ -26,14 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет гиперссылки.</summary>
-    <remarks>
-      <para>Объект <b>гиперссылки</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Hyperlinks" /> семейства.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Shape.Hyperlink" /> свойство возвращает объект <b>гиперссылок</b> , связанных с фигурой (фигура может иметь только одну гиперссылку).</para>
-      <para>
-        <b>Гиперссылки</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>гиперссылки</b> из документа, диапазон или выделить фрагмент.</para>
-      <para />
-    </remarks>
+    <summary>Представляет гиперссылку.</summary>
+    <remarks><para>Объект <b>Hyperlink</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Hyperlinks" /> коллекции.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Hyperlink" /> свойство, чтобы возвратить объект <b>гиперссылки</b> , связанный с фигурой (фигура может иметь только одну гиперссылку).</para>
+      <para>Используйте <b>гиперссылки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Hyperlink</b> из документа, диапазона или выделенного фрагмента.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Address">
@@ -62,7 +51,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает адрес (например, имя файла или URL-адрес) из указанного гиперссылки.</summary>
+        <summary>Возвращает или задает адрес (например, имя файла или URL-адрес) указанной гиперссылки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,7 +108,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Создается ярлык для документа или гиперссылки и добавляет его в папку "Избранное".</summary>
+        <summary>Создает ярлык для документа или гиперссылки и добавляет их в папку "Избранное".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,11 +165,10 @@
         <Parameter Name="Overwrite" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="FileName">
-          <b>Строковое значение.</b> Имя файла, указанного документа.</param>
-        <param name="EditNow">Требуется <b>Boolean</b>. <b>Значение true</b> для указанного документа сразу же открыть в его связанного среды редактирования. Значение по умолчанию — <b>True</b>.</param>
-        <param name="Overwrite">Требуется <b>Boolean</b>. <b>Значение true,</b> чтобы перезаписать существующий файл с таким же именем в той же папке. <b>Значение false,</b> Если сохраняется существующий файл с таким же именем и <paramref name="FileName" /> аргумент указывает новое имя файла. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Создает новый документ, связанный с указанным гиперссылки.</summary>
+        <param name="FileName">Обязательный атрибут типа <b>String</b>. Имя файла указанного документа.</param>
+        <param name="EditNow">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы указанный документ открывался непосредственно в связанной среде редактирования. Значение по умолчанию — <b>True</b>.</param>
+        <param name="Overwrite">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы перезаписать существующий файл с тем же именем в той же папке. <b>False</b> , если существующий файл с тем же именем сохраняется, а <paramref name="FileName" /> аргумент задает новое имя файла. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Создает новый документ, связанный с указанной гиперссылкой.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -207,11 +195,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -265,12 +253,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку текста для указанного гиперссылки в строку темы. Строка темы используется в качестве адреса Интернета гиперссылки или URL-адрес.</summary>
+        <summary>Возвращает или задает текстовую строку для строки темы указанной гиперссылки. Строка темы добавляется к адресу в Интернете гиперссылки или к URL-адресу.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство обычно используется с гиперссылками электронной почты. Значение этого свойства имеют приоритет над любой тему сообщения электронной почты, указанный в <see cref="P:Microsoft.Office.Interop.Word.Hyperlink.Address" /> свойство того же <see cref="P:Microsoft.Office.Interop.Word.Shape.Hyperlink" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство обычно используется с гиперссылками электронной почты. Значение этого свойства имеет приоритет перед любой темой сообщения, указанной в <see cref="P:Microsoft.Office.Interop.Word.Hyperlink.Address" /> свойстве того же <see cref="P:Microsoft.Office.Interop.Word.Shape.Hyperlink" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ExtraInfoRequired">
@@ -296,13 +282,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если дополнительный сведения, необходимые для разрешения указанного гиперссылки.</summary>
+        <summary><b>Значение true</b> , если для разрешения указанной гиперссылки требуются дополнительные сведения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения можно указать с помощью <paramref name="ExtraInfo" /> аргумент с <see cref="M:Microsoft.Office.Interop.Word.Hyperlink.Follow(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word._Document.FollowHyperlink(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод. Например, можно использовать <paramref name="ExtraInfo" /> для указания координат гиперкарты, содержимого формы или имени файла FAT.</para>
-          <para />
-        </remarks>
+        <remarks><para>С помощью <paramref name="ExtraInfo" /> аргумента с методом <see cref="M:Microsoft.Office.Interop.Word.Hyperlink.Follow(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word._Document.FollowHyperlink(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> можно указать дополнительные сведения. Например, вы можете <paramref name="ExtraInfo" /> указать координаты карты изображения, содержимое формы или имя файла FAT.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Follow">
@@ -331,16 +314,14 @@
         <Parameter Name="HeaderInfo" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="NewWindow">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы отобразить конечный документ в новом окне. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AddHistory">Необязательный элемент <b>Object</b>. Этот аргумент зарезервирован для будущего использования.</param>
-        <param name="ExtraInfo">Необязательный элемент <b>Object</b>. Строку или массив байтов, который указывает Дополнительные сведения для протокола HTTP, используемого для разрешения гиперссылки. Например, можно использовать <paramref name="ExtraInfo" /> для указания координат гиперкарты, содержимого формы или имени файла FAT. Строка учтена или добавляться в зависимости от <paramref name="Method" />. Использование <see cref="P:Microsoft.Office.Interop.Word.Hyperlink.ExtraInfoRequired" /> свойство, чтобы определить необходимость дополнительных сведений.</param>
-        <param name="Method">Необязательный элемент <b>Object</b>. Указывает, что обрабатывается как Дополнительные сведения для протокола HTTP. Может быть любым <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> константу.</param>
-        <param name="HeaderInfo">Необязательный элемент <b>Object</b>. Строка, определяющая сведения заголовка для запроса HTTP. Значение по умолчанию — пустая строка. Можно совмещать несколько строк заголовка в одну строку. Заданная строка автоматически преобразуется в знаки ANSI. Обратите внимание, что <paramref name="HeaderInfo" /> аргумент может перезаписать поля заголовков HTTP по умолчанию.</param>
-        <summary>Отображает кэшированный документ, связанный с заданным <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объекта, если он уже загружен. В противном случае этот метод разрешает гиперссылку, загружает целевой документ и отображает документа в соответствующем приложении.</summary>
-        <remarks>
-          <para>Если в гиперссылке используется протокол файла, этот метод открывает документ вместо загрузки.</para>
-          <para />
-        </remarks>
+        <param name="NewWindow">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить целевой документ в новом окне. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AddHistory">Необязательный <b>объект</b>. Этот аргумент зарезервирован для использования в будущем.</param>
+        <param name="ExtraInfo">Необязательный <b>объект</b>. Строка или байтовый массив, указывающий дополнительные сведения об использовании HTTP для разрешения гиперссылки. Например, вы можете <paramref name="ExtraInfo" /> указать координаты карты изображения, содержимое формы или имя файла FAT. Строка либо публикуется, либо добавляется в зависимости от значения свойства <paramref name="Method" />. Используйте <see cref="P:Microsoft.Office.Interop.Word.Hyperlink.ExtraInfoRequired" /> свойство, чтобы определить, требуются ли дополнительные сведения.</param>
+        <param name="Method">Необязательный <b>объект</b>. Указывает способ обработки дополнительных сведений для HTTP. Может быть любой <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> константой.</param>
+        <param name="HeaderInfo">Необязательный <b>объект</b>. Строка, задающая сведения о заголовке HTTP-запроса. Значение по умолчанию: пустая строка. В одну строку можно объединить несколько строк заголовков. Указанная строка автоматически преобразуется в символы ANSI. Обратите внимание <paramref name="HeaderInfo" /> , что аргумент может перезаписать поля заголовков HTTP по умолчанию.</param>
+        <summary>Отображает кэшированный документ, связанный с указанным <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объектом, если он уже был загружен. В противном случае этот метод разрешает гиперссылку, загружает целевой документ и отображает документ в соответствующем приложении.</summary>
+        <remarks><para>Если гиперссылка использует файловый протокол, этот метод открывает документ, а не его загрузку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -394,7 +375,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -422,12 +403,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScreenTip">
@@ -456,7 +435,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст, который отображается в виде всплывающей подсказки при наведении указателя мыши над указанным гиперссылки.</summary>
+        <summary>Возвращает или задает текст, отображаемый в виде всплывающей подсказки при помещении указателя мыши на указанную гиперссылку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -484,12 +463,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект для указанного гиперссылки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект для указанной гиперссылки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если гиперссылка не представленные фигуры, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если гиперссылка не представлена фигурой, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SubAddress">
@@ -518,12 +495,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает именованное расположение на целевом указанного гиперссылки.</summary>
+        <summary>Возвращает или задает именованное расположение указанной гиперссылки в месте назначения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Именованное расположение может быть закладку в документе Microsoft Word, именованные ячейки или ссылка на ячейку на листе Microsoft Excel, именованный объект в базе данных Microsoft Access или номер слайда в презентации Microsoft PowerPoint.</para>
-          <para />
-        </remarks>
+        <remarks><para>Именованное расположение может представлять собой закладку в документе Microsoft Word, именованную ячейку или ссылку на ячейку в таблице Microsoft Excel, именованный объект в базе данных Microsoft Access или номер слайда в презентации Microsoft PowerPoint.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SubAddressOld">
@@ -583,7 +558,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя фрейма или окна для загрузки гиперссылки.</summary>
+        <summary>Возвращает или задает имя фрейма или окна, в который загружается гиперссылка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -614,7 +589,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает гиперссылку указанного текста в документе.</summary>
+        <summary>Возвращает или задает отображаемый текст указанной гиперссылки в документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -644,10 +619,8 @@
       <Docs>
         <summary>Возвращает тип гиперссылки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Core.MsoHyperlinkType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Core.MsoHyperlinkType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

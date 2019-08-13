@@ -1,13 +1,5 @@
 <Type Name="ListEntry" FullName="Microsoft.Office.Interop.Word.ListEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1d89cf6c617af843338ae18827509a86e36d9a8c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674034" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ListEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3ce5e066aaa8a27420cee5f4174fb1ab23f7c2c3" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146565" /></Metadata><TypeSignature Language="C#" Value="public interface ListEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListEntry" />
@@ -26,9 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет элемент в поле со списком.</summary>
-    <remarks>
-      <para>Объект <b>ListEntry</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.ListEntries" /> семейства сайтов. Коллекция <b>ListEntries</b> включает все элементы в поле со списком.</para> Использование <b>ListEntries</b><para>(<paramref name="index" />), где <paramref name="index" /> — это имя записи списка или номер индекса для возврата объекта <b>ListEntry</b> . Номер индекса представляет положение запись в раскрывающемся поле формы (первый элемент — номер индекса 1).</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.ListEntries.Add(System.String,System.Object@)" /> метод для добавления элемента в поле списком.</para><para /></remarks>
+    <summary>Представляет элемент в раскрывающемся поле формы.</summary>
+    <remarks><para>Объект <b>ListEntry</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListEntries" /> коллекции. Коллекция <b>ListEntries</b> включает все элементы в раскрывающемся поле формы.</para>
+      <para>Используйте <b>ListEntries</b>(<paramref name="index" />), где <paramref name="index" /> — имя записи списка или номер индекса, чтобы вернуть один объект <b>ListEntry</b> . Номер индекса представляет положение записи в раскрывающемся поле формы (первый элемент имеет индекс 1).</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListEntries.Add(System.String,System.Object@)" /> метод, чтобы добавить элемент в раскрывающееся поле формы.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -196,7 +190,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="OMathNary" FullName="Microsoft.Office.Interop.Word.OMathNary">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5131483c9155c458e904980a5155768ea9b23242" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673136" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathNary" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="05967caf7afd8d7f04187c02216d56fe874729d5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147771" /></Metadata><TypeSignature Language="C#" Value="public interface OMathNary" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathNary" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathNary" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathNary" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет математических n местная объект, состоящий из <paramref name="n" />-Местная объекта, base (или операнд) и необязательные верхние границы и ниже ограничения.</summary>
+    <summary>Представляет математический n-арный объект, состоящий из <paramref name="n" />-арных объекта, базового (или операнда), а также дополнительных верхних и нижних пределов.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,10 +76,8 @@
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>Краткое</b> , представляющий знак, используемый как <paramref name="n" />-Местная оператор. Для чтения и записи.</summary>
-        <value>
-          <b>Короткие</b>
-        </value>
+        <summary>Возвращает или задает значение <b>Short</b> , которое представляет символ, используемый в <paramref name="n" />качестве оператора арности. Для чтения и записи.</summary>
+        <value><b>Сроки</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,14 +104,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathNary.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathNary.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="E">
@@ -149,10 +133,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий базовый объект указанного формулы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий основу указанного объекта уравнения. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -182,10 +164,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляющий ли <paramref name="n" />-Местная операторы расти всей высоте аргументы, которые они содержат. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает <paramref name="n" />, увеличиваются ли неарное операторы до полной высоты аргументов, содержащихся в них. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,10 +195,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть нижний предел <paramref name="n" />-Местная оператор. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть нижнюю границу <paramref name="n" />оператора. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -248,10 +226,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляет ли скрыть верхний предел <paramref name="n" />-Местная оператор. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, следует ли скрыть верхний предел оператора <paramref name="n" />, не входящего в число арных. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -279,9 +255,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathNary" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -308,10 +282,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий нижний предел <paramref name="n" />-Местная оператор. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий нижнюю границу <paramref name="n" />оператора с арностью. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,10 +313,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , который представляет положение <paramref name="n" />-Местная ограничений в положение Надстрочный индекс или верхний предел нижний предел. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , представляющее <paramref name="n" />положение неарных ограничений в позиции "подстрочный — надстрочный" или "верхний предел — Нижняя граница". Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -371,10 +341,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, который представляет верхнюю границу <paramref name="n" />-Местная оператор. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий верхнюю <paramref name="n" />границу оператора с арностью. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

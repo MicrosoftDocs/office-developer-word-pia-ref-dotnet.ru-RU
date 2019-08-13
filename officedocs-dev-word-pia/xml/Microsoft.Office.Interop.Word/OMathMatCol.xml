@@ -1,13 +1,5 @@
 <Type Name="OMathMatCol" FullName="Microsoft.Office.Interop.Word.OMathMatCol">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a5ce6b5cd1f1e6a45917927a502a259bc8b39e08" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673267" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathMatCol" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="80bbce3ccd164f22269daeb63946077d61ce5c14" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147783" /></Metadata><TypeSignature Language="C#" Value="public interface OMathMatCol" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathMatCol" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathMatCol" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathMatCol" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет столбец матрицы. <see cref="T:Microsoft.Office.Interop.Word.OMathMatCol" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.OMathMatCols" /> семейства сайтов.</summary>
+    <summary>Представляет столбец матрицы. <see cref="T:Microsoft.Office.Interop.Word.OMathMatCol" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Word.OMathMatCols" /> коллекции.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -56,10 +48,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOMathHorizAlignType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathHorizAlignType" /> константа, которая представляет горизонтальное выравнивание для аргументов в столбце матрицы. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdOMathHorizAlignType" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathHorizAlignType" /> константу, представляющую горизонтальное выравнивание для аргументов в столбце матрицы. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdOMathHorizAlignType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,9 +77,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,9 +105,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> объект, представляющий аргументы в столбце матрицы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -147,9 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>целое число</b> , представляющее порядковый номер столбца в коллекции столбцов в матрице. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -176,11 +160,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathMatCol.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathMatCol.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -204,7 +188,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный матрицы столбец.</summary>
+        <summary>Удаляет указанный столбец матрицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -232,9 +216,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathMatCol" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

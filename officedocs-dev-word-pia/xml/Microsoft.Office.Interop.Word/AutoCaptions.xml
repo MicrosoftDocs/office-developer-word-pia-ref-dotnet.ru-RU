@@ -1,13 +1,5 @@
 <Type Name="AutoCaptions" FullName="Microsoft.Office.Interop.Word.AutoCaptions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="74d97fe89e92ad9d55ecdb2317420b7cb669f960" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673700" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AutoCaptions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="af4b784079a29a8b09c8c69168bf562a79768384" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146271" /></Metadata><TypeSignature Language="C#" Value="public interface AutoCaptions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoCaptions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AutoCaptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoCaptions&#xA;Implements IEnumerable" />
@@ -30,10 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.AutoCaption" /> объекты, которые представляют заголовки, которые могут быть добавлены автоматически при вставке элементы, например таблицы, изображения или объекты OLE в документ.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.AutoCaptions" /> свойство для возврата коллекции <b>AutoCaptions</b> .</para> Коллекция 
-      <para><b>AutoCaptions</b> содержит все заголовки, перечисленные в диалоговом окне '' Автоназвание (меню "Вставка"). Объекты <b>'' Автоназвание</b> нельзя программными средствами добавляется или удаляется из коллекции <b>AutoCaptions</b> .</para> Использование <b>AutoCaptions</b><para>(<paramref name="index" />), где <paramref name="index" /> — заголовок имя или номер индекса, чтобы возвратить объект <b>'' Автоназвание</b> . Имена caption соответствуют элементы, перечисленные в диалоговом окне '' Автоназвание (меню "Вставка"). Должен полностью совпадать орфографии (но не обязательно заглавные буквы) из имени, как показано в диалоговом окне '' Автоназвание.</para><para>Номер индекса представляет позиции объекта <b>'' Автоназвание</b> в списке подписей в диалоговом окне '' Автоназвание.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.AutoCaption" /> объектов, представляющих заголовки, которые можно автоматически добавить при вставке элементов, таких как таблицы, рисунки или OLE-объекты, в документ.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.AutoCaptions" /> свойство, чтобы возвратить <b></b> коллекцию автоназваний.</para>
+      <para>Коллекция <b></b> автоназваний содержит все заголовки, перечисленные в диалоговом окне автоподписи (меню "Вставка"). <b></b> Объекты автоназваний нельзя программным способом добавлять в коллекцию автоназваний или удалять из нее. <b></b></para>
+      <para>Используйте <b>автоподписи</b>(<paramref name="index" />), где <paramref name="index" /> — это имя заголовка или номер индекса, чтобы вернуть один объект автоназваний. <b></b> Имена заголовков соответствуют элементам, перечисленным в диалоговом окне автоподписи (меню "Вставка"). Необходимо точно соответствовать орфографии (но не обязательно заменять регистр букв) имени, как оно отображается в диалоговом окне автоподписи.</para>
+      <para>Номер индекса представляет положение объекта автозаголовка в <b></b> списке заголовков в диалоговом окне автоподписи.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -59,12 +53,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Visual Basic <b>CreateObject</b> и функции <b>GetObject</b> предоставляется доступ к объекту автоматизации из проекта Visual Basic.</para>
-          <para />
-        </remarks>
+        <remarks><para>Функции <b>CreateObject</b> и <b>GetObject</b> в Visual Basic предоставляют доступ к объекту автоматизации из проекта Visual Basic.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CancelAutoInsert">
@@ -88,7 +80,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Запрещает Microsoft Word автоматически добавлять заголовки к любому типу элемента.</summary>
+        <summary>Запрещает Microsoft Word автоматически добавлять подписи для элементов любого типа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -115,7 +107,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,11 +135,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -208,8 +200,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">Имя отдельного объекта должно быть возвращено.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index">Имя возвращаемого отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -237,7 +229,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

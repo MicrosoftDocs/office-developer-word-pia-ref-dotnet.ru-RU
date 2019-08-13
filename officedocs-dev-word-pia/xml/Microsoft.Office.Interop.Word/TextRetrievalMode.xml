@@ -1,13 +1,5 @@
 <Type Name="TextRetrievalMode" FullName="Microsoft.Office.Interop.Word.TextRetrievalMode">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3c05807c4b3080e4b3b90b36cba7f16d48329f62" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673934" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TextRetrievalMode" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0c1ee93d1968c1b9fe8eb8a0db78df0c1c441410" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143800" /></Metadata><TypeSignature Language="C#" Value="public interface TextRetrievalMode" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextRetrievalMode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextRetrievalMode" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextRetrievalMode" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет параметры, которые управляют как текст извлекается из <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Range.TextRetrievalMode" /> свойство возвращает объект <b>TextRetrievalMode</b> .</para>
-      <para>Changing <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeHiddenText" /> , <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeHiddenText" /> , или <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeFieldCodes" /> свойства объекта <b>TextRetrievalMode</b> не изменяется на экране. Вместо этого изменение одного из этих свойств определяет, какой текст извлекается из объекта <b>Range</b> при <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойство служит.</para>
-      <para />
-    </remarks>
+    <summary>Представляет параметры, определяющие способ извлечения текста из <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.TextRetrievalMode" /> свойство, чтобы возвратить объект <b>TextRetrievalMode</b> .</para>
+      <para>Изменение свойства <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeHiddenText" /> , <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeHiddenText" /> или <see cref="P:Microsoft.Office.Interop.Word.TextRetrievalMode.IncludeFieldCodes" /> свойства объекта <b>TextRetrievalMode</b> не приводит к изменению экрана. Вместо этого, изменение одного из этих свойств определяет, какой текст извлекается из объекта <b>Range</b> при <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> использовании свойства.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,11 +75,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Duplicate">
@@ -115,13 +105,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextRetrievalMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает доступный только для чтения <see cref="T:Microsoft.Office.Interop.Word.TextRetrievalMode" /> объект, представляющий параметры, связанные с извлечением текст из указанного <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</summary>
+        <summary>Возвращает объект, предназначенный <see cref="T:Microsoft.Office.Interop.Word.TextRetrievalMode" /> только для чтения и представляющий параметры, связанные с извлечением текста <see cref="T:Microsoft.Office.Interop.Word.Range" /> из указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно использовать свойство <b>дублирующиеся</b> для сбора параметры всех свойств повторяющееся <see cref="T:Microsoft.Office.Interop.Word.Font" />, <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />, или <see cref="T:Microsoft.Office.Interop.Word.ParagraphFormat" /> объекта. Можно назначить объект, возвращенный свойством <b>дублирующиеся</b> другой объект того же типа, для применения этих параметров за один раз. Перед назначением повторяющихся объектов на другой объект, можно изменить любые свойства объекта повторяющихся без воздействия на исходной.</para>
-          <para>, Связанные с дублированием объекта <b>Range</b> , можно изменить начальной или конечной позиции повторяющихся диапазон без изменения исходного диапазона.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>дублирует</b> можно использовать для получения параметров всех свойств <see cref="T:Microsoft.Office.Interop.Word.Font" />дубликата, <see cref="T:Microsoft.Office.Interop.Word.LetterContent" />или <see cref="T:Microsoft.Office.Interop.Word.ParagraphFormat" /> объекта. Вы можете назначить объект, возвращенный свойством <b>повторения</b> , другому объекту того же типа, чтобы применить эти параметры сразу. Перед назначением дубликата объекта другому объекту можно изменить любое из его свойств, не влияя на исходный объект.</para>
+          <para>Путем дублирования объекта <b>Range</b> можно изменить положение начального или конечного символа для повторяющегося диапазона, не изменяя исходный диапазон.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeFieldCodes">
@@ -150,14 +138,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст извлекается из указанного диапазона включает в себя коды полей.</summary>
+        <summary><b>Значение true</b> , если текст, извлеченный из указанного диапазона, содержит коды полей.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Значение по умолчанию — то же, что значения параметра коды полей на вкладке Вид в диалоговое окно "Параметры" (меню "Сервис") до имеет значение этого свойства. Использование <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектов для извлечения текста из указанного диапазона.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Значение по умолчанию это то же самое, что и параметр Параметры кодов полей на вкладке Вид в диалоговом окне Параметры (меню Сервис), пока не будет задано это свойство. Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом для извлечения текста из указанного диапазона.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeHiddenText">
@@ -186,14 +171,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст извлекается из указанного диапазона включает в себя скрытый текст.</summary>
+        <summary><b>Значение true</b> , если текст, извлеченный из указанного диапазона, включает скрытый текст.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Значение по умолчанию — то же, что текущего значения параметра скрытый текст на вкладке Вид в диалоговое окно "Параметры" (меню "Сервис") до имеет значение этого свойства. Использование <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектов для извлечения текста из указанного диапазона.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Значение по умолчанию это то же самое, что и текущее значение параметра скрытый текст на вкладке Вид в диалоговом окне Параметры (меню Сервис), пока не будет задано это свойство. Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом для извлечения текста из указанного диапазона.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -219,7 +201,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -252,30 +234,28 @@
       <Docs>
         <summary>Возвращает или задает представление для <see cref="T:Microsoft.Office.Interop.Word.TextRetrievalMode" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />может быть одной из этих констант <b>вдвиевтипе</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />может иметь одно из следующих констант <b>WdViewType</b> . </para>
-          <para>
-            <b>wdMasterView </b>
+            <b>вдмастервиев</b>
           </para>
           <para>
-            <b>wdNormalView </b>
+            <b>вднормалвиев</b>
           </para>
           <para>
-            <b>wdOutlineView </b>
+            <b>вдаутлиневиев</b>
           </para>
           <para>
-            <b>wdPrintPreview </b>
+            <b>вдпринтпревиев</b>
           </para>
           <para>
-            <b>wdPrintView </b>
+            <b>вдпринтвиев</b>
           </para>
           <para>
-            <b>wdWebView</b>
+            <b>вдвебвиев</b>
           </para>
-          <para>Изменение представления для объекта <b>TextRetrievalMode</b> не изменить способ отображения документ на экране. Он лишь определяет, какие символы в документе включаются при извлечении диапазон.</para>
-          <para />
-        </remarks>
+          <para>Изменение представления для объекта <b>TextRetrievalMode</b> не приводит к изменению отображения документа на экране. Вместо этого он определяет, какие символы в документе будут включены при получении диапазона.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

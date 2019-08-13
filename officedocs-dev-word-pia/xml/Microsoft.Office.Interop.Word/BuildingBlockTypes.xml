@@ -1,13 +1,5 @@
 <Type Name="BuildingBlockTypes" FullName="Microsoft.Office.Interop.Word.BuildingBlockTypes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="293d3fc18e0491e85269f5fcd27be8ebf24cb185" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672807" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface BuildingBlockTypes" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8c4a2389e9721f4c8948dc95c730b4c330ebafec" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146180" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlockTypes" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlockTypes" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" />
   <TypeSignature Language="VB.NET" Value="Public Interface BuildingBlockTypes" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию объектов <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объектов.</summary>
-    <remarks>
-      <para>Типы стандартного блока, представлены <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> константы. Использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockTypes.Item(Microsoft.Office.Interop.Word.WdBuildingBlockTypes)" /> метод для доступа к определенного типа в коллекции <b>BuildingBlockTypes</b> . Дополнительные сведения о стандартных блоках в разделе <a href="HV10120827">Работа с стандартные блоки</a></para>
-      <para />
-    </remarks>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объектов.</summary>
+    <remarks><para>Стандартные типы блоков представлены <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> константами. Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockTypes.Item(Microsoft.Office.Interop.Word.WdBuildingBlockTypes)" /> метод для доступа к определенному типу в коллекции <b>BuildingBlockTypes</b> . Дополнительные сведения о стандартных блоках см <a href="HV10120827">в разделе Работа с строительными блоками</a></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,9 +47,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,10 +74,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,17 +102,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlockTypes.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
-          <para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlockTypes.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>:</para>
-          <para />
-        </remarks>
+            <b>Примечание.</b> </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -152,11 +134,9 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Word.WdBuildingBlockTypes" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> указывает тип стандартных блоков элемента в коллекции.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" />
-        </returns>
+        <param name="Index">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdBuildingBlockTypes" /> указывает тип стандартного блока элемента в коллекции.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -183,10 +163,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский указанного <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> объекта.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

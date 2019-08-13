@@ -1,13 +1,5 @@
 <Type Name="CoAuthLock" FullName="Microsoft.Office.Interop.Word.CoAuthLock">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="60e38fdacba2a46adfe9f5062c855a6e94317926" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674201" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CoAuthLock" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6aaadd2e6d6106e1de5d69cd13baf0beed987346" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142238" /></Metadata><TypeSignature Language="C#" Value="public interface CoAuthLock" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthLock" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthLock" />
   <TypeSignature Language="VB.NET" Value="Public Interface CoAuthLock" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет блокировки в документе. Объект <b>CoAuthLock</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> семейства сайтов.</summary>
-    <remarks>
-      <para>Только для чтения. Использование <b>блокировки</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>CoAuthLock</b> . При добавлении объекта <b>CoAuthLock</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> перечисление, чтобы указать тип блокировки.</para>
-      <para />
-    </remarks>
+    <summary>Представляет блокировку в документе. Объект <b>CoAuthLock</b> является членом <see cref="T:Microsoft.Office.Interop.Word.CoAuthLocks" /> коллекции.</summary>
+    <remarks><para>Только для чтения. Используйте <b></b>locks<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы возвратить объект <b>CoAuthLock</b> . При добавлении объекта <b>CoAuthLock</b> используйте <see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> перечисление, чтобы указать тип блокировки.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,11 +47,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value>Объект <see cref="T:Microsoft.Office.Interop.Word.Application" />.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -87,12 +75,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>Указывает приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например Word содержит код создателя MSWD.</para>
-          <para />
-        </remarks>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HeaderFooter">
@@ -118,13 +104,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли блокировки — блокировка нижний колонтитул заголовка для документа.</summary>
-        <value>
-          <b>значение true,</b> Если блокировка блокировку нижний колонтитул заголовка для документа. в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, указывающее, является ли блокировка блокировкой нижнего колонтитула для документа.</summary>
+        <value><b>значение true</b> , если блокировка является блокировкой нижнего колонтитула для документа; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Owner">
@@ -150,9 +133,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.CoAuthor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <b>соавтором</b> , которому принадлежит указанный блокировки.</summary>
-        <value>
-          <b>Соавтором</b> , которому принадлежит указанный блокировки.</value>
+        <summary>Получает <b>соавтор</b> , который владеет указанной блокировкой.</summary>
+        <value><b>Соавтор</b> , который владеет указанной блокировкой.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,9 +161,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthLock" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthLock" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthLock" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthLock" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -208,12 +189,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Range" /> Объект, представляющий часть документа, содержащуюся в указанном объекте.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -239,8 +218,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLockType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> константа, которая указывает тип блокировки.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> константа, которая указывает тип блокировки.</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> константу, определяющую тип блокировки.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdLockType" /> Константа, указывающая тип блокировки.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -265,11 +244,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Разблокирует указанного блокировки.</summary>
-        <remarks>
-          <para>Этот метод разблокирует указанного блокировки даже в том случае, если он принадлежит пользователя, отличного от текущего.</para>
-          <para />
-        </remarks>
+        <summary>Разблокировка указанной блокировки.</summary>
+        <remarks><para>Этот метод отменяет блокировку указанной блокировки, даже если она принадлежит пользователю, отличному от текущего.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

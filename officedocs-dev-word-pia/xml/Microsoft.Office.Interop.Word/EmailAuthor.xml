@@ -1,13 +1,5 @@
 <Type Name="EmailAuthor" FullName="Microsoft.Office.Interop.Word.EmailAuthor">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="580d2c441a6e8ba3d7636871d970a2990b328195" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673294" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface EmailAuthor" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="89f6380e47fe92edd6979fd0e534ac1e37fcf1f2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144542" /></Metadata><TypeSignature Language="C#" Value="public interface EmailAuthor" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract EmailAuthor" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.EmailAuthor" />
   <TypeSignature Language="VB.NET" Value="Public Interface EmailAuthor" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет автор сообщения электронной почты.</summary>
-    <remarks>
-      <para>Нет EmailAuthors семейства сайтов; Каждый <see cref="T:Microsoft.Office.Interop.Word.Email" /> объект содержит только один объект <b>EmailAuthor</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Email.CurrentEmailAuthor" /> свойство для возврата объекта <b>EmailAuthor</b> . Объект <b>EmailAuthor</b> и его свойства действительны только в том случае, если активный документ является неотправленные вперед, ответ или новое сообщение электронной почты.</para>
-      <para />
-    </remarks>
+    <summary>Представляет автора сообщения электронной почты.</summary>
+    <remarks><para>Коллекция Емаилаусорс отсутствует; Каждый <see cref="T:Microsoft.Office.Interop.Word.Email" /> объект содержит только один объект <b>EmailAuthor</b> .</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Email.CurrentEmailAuthor" /> свойство, чтобы возвратить объект <b>EmailAuthor</b> . Объект <b>EmailAuthor</b> и его свойства действительны только в том случае, если активный документ является неотправленным переадресованным, ответным или новым сообщением электронной почты.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,11 +75,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -115,7 +105,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,7 +133,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Style</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Style" /> объект, представляющий стиля, связанного с текущим автором электронной почты для неотправленных ответов, пересылки или новые сообщения электронной почты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Style" /> объект, представляющий стиль, связанный с текущим автором электронной почты для неотправленных ответов, пересылаемых или новых сообщений электронной почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

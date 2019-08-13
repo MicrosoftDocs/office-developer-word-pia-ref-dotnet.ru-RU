@@ -1,13 +1,5 @@
 <Type Name="CategoryCollection" FullName="Microsoft.Office.Interop.Word.CategoryCollection">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ee25f7d6bcafb86ab6bc607146240b4471d6182b" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672953" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CategoryCollection : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="052e1ecd3f49b8cef31b9fe053bbf1756f558de4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147323" /></Metadata><TypeSignature Language="C#" Value="public interface CategoryCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CategoryCollection implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CategoryCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface CategoryCollection&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию категорий видимым диаграммы в документ.</summary>
-    <remarks>
-      <para>Категории являются видимыми, если они не исключены из диаграммы.</para>
-      <para />
-    </remarks>
+    <summary>Представляет коллекцию видимых категорий диаграмм в документе.</summary>
+    <remarks><para>Категории отображаются, если они не отфильтрованы с диаграммы.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -120,7 +110,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает аргумент <b>Integer</b> (<b>int</b> в C#), который представляет число категорий в коллекции. Только для чтения.</summary>
+        <summary>Возвращает <b>целое</b> число (<b>int</b> в C#), представляющее количество категорий в коллекции. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,14 +138,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>Integer</b> (<b>целое</b> в C#).</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. <b>Целое число</b> , доступное только для чтения (<b>int</b> в C#).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к справке Office для Mac. Справочник по языку</para>
+        <remarks><para>Если объект был создан в Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Office для Mac.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -185,7 +173,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Получает объект, который может выполнять итерацию объектов в этой коллекции.</summary>
+        <summary>Получает объект, который может выполнять итерацию по объектам в этой коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -217,7 +205,7 @@
       </Parameters>
       <Docs>
         <param name="Index">Имя или номер индекса для объекта.</param>
-        <summary>Возвращает категорию диаграммы.</summary>
+        <summary>Возвращает отдельную категорию диаграммы.</summary>
         <value>CHARTCATEGORY</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -245,7 +233,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>CategoryCollection</b> .</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>CategoryCollection</b> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

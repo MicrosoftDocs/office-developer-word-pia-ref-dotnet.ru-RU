@@ -1,13 +1,5 @@
 <Type Name="XMLNode" FullName="Microsoft.Office.Interop.Word.XMLNode">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a72a2d631a6f2ec507d0a855eff12afd3295dbe8" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673307" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLNode" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9972982e927ab7d392fa88967c808138fa36eb51" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145424" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNode" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLNode" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLNode" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один элемент XML, примененная к документу.</summary>
-    <remarks>
-      <para>Каждый элемент XML, которая была применена к документу отображается в виде узла в дерево в области задач Структура XML. Каждый узел в дереве является экземпляром <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта. Иерархия в древовидном представлении показывает, содержит ли узел дочерние узлы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.XMLNodes.Item(System.Int32)" /> свойства <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> сбора, чтобы вернуться к отдельной <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта. Использование <see cref="M:Microsoft.Office.Interop.Word.XMLNode.Validate" /> метод, чтобы проверить, что элемент XML является допустимым для применения схемы и что необходимые дочерние элементы существуют и требуемые порядок. После выполнения <see cref="M:Microsoft.Office.Interop.Word.XMLNode.Validate" /> метод использования <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> свойство для проверки действительности элемента и использовать <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> свойство для отображения сведений о пользователь должен выполнить, чтобы сделать документов, которые соответствуют правилам схемы XML.</para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельный XML-элемент, примененный к документу.</summary>
+    <remarks><para>Каждый элемент XML, примененный к документу, отображается в виде узла в элементе управления иерархического представления в области задач Структура XML. Каждый узел в представлении в виде дерева является экземпляром <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта. Иерархия в представлении в виде дерева указывает, содержит ли узел дочерние узлы.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNodes.Item(System.Int32)" /> свойство <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, чтобы возвратить отдельный <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект. Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLNode.Validate" /> метод, чтобы проверить, является ли элемент XML допустимым в соответствии с примененными схемами, а также в том, что все обязательные дочерние элементы существуют и находятся в нужном порядке. После выполнения <see cref="M:Microsoft.Office.Interop.Word.XMLNode.Validate" /> метода используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> свойство, чтобы проверить, является ли элемент допустимым, и используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> свойство для отображения сведений о том, что пользователь должен сделать, чтобы документ соответствовал правилам схемы XML.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,12 +75,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, представляющей атрибуты для заданного элемента.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекцию, представляющую атрибуты указанного элемента.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Все <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекты в <b>XMLNodes</b> коллекции, возвращаемой с помощью свойства <b>атрибуты</b> имеют <see cref="P:Microsoft.Office.Interop.Word.XMLNode.NodeType" /> значение свойства <b>wdXMLNodeAttribute</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Все <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекты в коллекции <b>XMLNodes</b> , возвращаемые с помощью <b></b> свойства Attributes, <see cref="P:Microsoft.Office.Interop.Word.XMLNode.NodeType" /> имеют значение свойства <b>вдксмлнодеаттрибуте</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseName">
@@ -116,7 +104,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую имя элемента без префикс.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую имя элемента без префикса.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -144,7 +132,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNodes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, представляющей дочерние элементы из указанного элемента.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекцию, представляющую дочерние элементы указанного элемента.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,12 +163,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLChildNodeSuggestions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> коллекции, представляющей в список разрешенных элементов для <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект (который возвращает дочерние элементы элемента).</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> коллекцию, представляющую список разрешенных элементов для <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта (которые возвращает дочерние элементы указанного элемента).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Каждый <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion" /> объект в <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> семейства сайтов — это элемент в списке разрешенных возможные XML-элементы в нижней части области задач XML-структура.</para>
-          <para />
-        </remarks>
+        <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion" /> объект в <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestions" /> коллекции является элементом в списке разрешенных элементов XML в нижней части области задач Структура XML.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Copy">
@@ -231,14 +217,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также могут быть представлены константу <b>wdCreatorCode</b>. </para>
-          <para>
-            <b>Создателя</b> свойство в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>. </para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -316,10 +299,8 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий первый дочерний узел родительского узла.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.XMLNode.LastChild" /> свойство для доступа к последнего дочернего узла. Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство для доступа к родительского узла в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNode.LastChild" /> свойство, чтобы получить доступ к последнему дочернему узлу. Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство, чтобы получить доступ к родительскому узлу в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasChildNodes">
@@ -345,12 +326,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если указанный XML-элемент имеет дочерние элементы.</summary>
+        <summary>Определяет, есть ли у указанного элемента XML дочерние элементы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если указанный XML-элемент имеет дочерние элементы и <b>значение False,</b> Если это не так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанный элемент XML имеет дочерние элементы, и <b>false</b> , если нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LastChild">
@@ -376,12 +355,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта, представляющего последнего дочернего узла родительского узла.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий последний дочерний узел родительского узла.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.XMLNode.FirstChild" /> свойство для доступа к первого дочернего узла в схеме. Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство для доступа к родительского узла в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNode.FirstChild" /> свойство, чтобы получить доступ к первому дочернему узлу в схеме. Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство, чтобы получить доступ к родительскому узлу в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Level">
@@ -407,7 +384,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdXMLNodeLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень указанного элемента XML в иерархии элементов, примененная к документу.</summary>
+        <summary>Возвращает уровень указанного элемента XML в иерархии элементов, примененных к документу.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -437,10 +414,8 @@
       <Docs>
         <summary>Возвращает <b>строку</b> , представляющую универсальный код ресурса (URI) пространства имен схемы для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если редактирования XML-схемы для использования с Microsoft Word, настоятельно рекомендуется указать параметр <b>targetNamespace</b> в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы используете XML-схемы для использования с Microsoft Word, настоятельно рекомендуем указать параметр <b>targetNamespace</b> в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NextSibling">
@@ -466,12 +441,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий следующий элемент в документе, который находится на том же уровне, что указанного элемента.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий следующий элемент в документе, который находится на том же уровне, что и указанный элемент.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный элемент является к последнему элементу в <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> семейства сайтов, данное свойство возвращает <b>значение Nothing</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанный элемент является последним элементом в <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, это свойство не возвращает <b>значение Nothing</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NodeType">
@@ -497,18 +470,16 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdXMLNodeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" /> константа, представляющий тип узла.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" /> константу, представляющую тип узла.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" />может быть одной из следующих констант <b>вдксмлнодетипе</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdXMLNodeType" />может иметь одно из следующих констант <b>wdXMLNodeType</b> :</para>
+            <b>вдксмлнодеаттрибуте</b> — указывает узел атрибута.</para>
           <para>
-            <b>wdXMLNodeAttribute</b> – указывает узел атрибута.</para>
-          <para>
-            <b>wdXMLNodeElement</b> — указывает узел элемента.</para>
-          <para>A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта может быть XML-элемент или атрибут элемента. Свойство <b>NodeType</b> позволяет определить, какой тип узла, работе с таким образом, чтобы не пытайтесь выполнение недопустимых операций на узле. Например <see cref="P:Microsoft.Office.Interop.Word.XMLNode.Attributes" /> свойство применяется только к узлов элементов, несмотря на то, что оно будет отображаться в списке доступных свойств для объекта <b>XMLNode</b> .</para>
-          <para />
-        </remarks>
+            <b>вдксмлнодилемент</b> — указывает узел Element.</para>
+          <para><see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> Объект может быть либо элементом XML, либо атрибутом элемента. Используйте свойство <b>NodeType</b> , чтобы определить тип узла, с которым вы работаете, чтобы вы не пытались выполнить недопустимую операцию на узле. Например, <see cref="P:Microsoft.Office.Interop.Word.XMLNode.Attributes" /> свойство применяется только к узлам элементов, хотя и будет отображаться в списке доступных свойств для объекта <b>XmlNode</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NodeValue">
@@ -539,11 +510,9 @@
       <Docs>
         <summary>Возвращает или задает <b>строку</b> , представляющую значение атрибута.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>A <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта может быть XML-элемент или атрибут элемента. Использование <see cref="P:Microsoft.Office.Interop.Word.XMLNode.NodeType" /> свойства, чтобы определить, какой тип узла, вы работаете с.</para>
-          <para>Для объектов <b>XMLNode</b> со значением <b>NodeType</b><b>wdXMLNodeElement</b>, свойство <b>NodeValue</b> возвращает значение nothing.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> Объект может быть либо элементом XML, либо атрибутом элемента. Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNode.NodeType" /> свойство, чтобы определить тип узла, с которым вы работаете.</para>
+          <para>Для объектов <b>XmlNode</b> со значением <b>NodeType</b> объекта <b>вдксмлнодилемент</b>свойство <b>нодевалуе</b> не возвращает значение Nothing.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OwnerDocument">
@@ -569,12 +538,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Document</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий родительский документ для указанного XML-элемента.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий родительский документ УКАЗАННОГО элемента XML.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>OwnerDocument</b> возвращает одинаковые результаты как <see cref="P:Microsoft.Office.Interop.Word.XMLNode.Parent" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>овнердокумент</b> возвращает те же результаты, что и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.Parent" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -600,7 +567,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -659,12 +626,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , которая представляет собой текст, отображаемый для элемента, который не содержит текста.</summary>
+        <summary>Возвращает или задает <b>строку</b> , представляющую текст, отображаемый для элемента, который не содержит текста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Замещающий текст отображается в Microsoft Word, только если Показывать XML-теги в поле документа в области задач XML-структура снят. Показывать XML-теги в поле документа, соответствует <see cref="P:Microsoft.Office.Interop.Word.View.ShowXMLMarkup" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Замещающий текст отображается в Microsoft Word только в том случае, если флажок Показывать Теги XML в документе в области задач Структура XML снят. Флажок Показывать XML-теги в документе соответствует <see cref="P:Microsoft.Office.Interop.Word.View.ShowXMLMarkup" /> свойству.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PreviousSibling">
@@ -690,12 +655,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий предыдущий элемент в документе, который находится на том же уровне, что указанного элемента.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий предыдущий элемент в документе, который находится на том же уровне, что и указанный элемент.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный элемент является первый элемент в <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> семейства сайтов, данное свойство возвращает <b>значение Nothing</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанный элемент является первым элементом в <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, это свойство не возвращает <b>значение Nothing</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -721,12 +684,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возврате диапазон из документа, в разделе <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа, можно <see cref="M:Microsoft.Office.Interop.Word._Document.Range(System.Object@,System.Object@)" /> узнать в методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveChild">
@@ -752,7 +713,7 @@
         <Parameter Name="ChildElement" Type="Microsoft.Office.Interop.Word.XMLNode" />
       </Parameters>
       <Docs>
-        <param name="ChildElement">Требуется <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />. Дочерний элемент, который требуется удалить.</param>
+        <param name="ChildElement">Обязательный <see cref="T:Microsoft.Office.Interop.Word.XMLNode" />. Дочерний элемент, который требуется удалить.</param>
         <summary>Удаляет указанный дочерний элемент из указанного элемента.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -781,16 +742,13 @@
         <Parameter Name="FastSearchSkippingTextNodes" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="XPath">
-          <b>Строковое значение.</b> Допустимая строка XPath. Дополнительные сведения о XPath см XPath ссылку на веб-сайте Microsoft Developer Network (MSDN).</param>
-        <param name="PrefixMapping">Необязательный элемент <b>Object</b>. Предоставляет префикс в схеме, в которой выполняется поиск. Использование <paramref name="PrefixMapping" /> параметр Если вашей <paramref name="XPath" /> параметр использует имена для поиска элементов.</param>
-        <param name="FastSearchSkippingTextNodes">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> пропуска всех текстовых узлов при поиске указанного узла. <b>Значение false,</b> включает в себя текстовых узлов в поиск. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекции, представляющей всех узлов, которые соответствуют указанной строке XPath в том порядке, в котором они отображаются.</summary>
+        <param name="XPath">Обязательный атрибут типа <b>String</b>. Допустимая строка XPath. Дополнительные сведения о XPath приведены в справочной документации по XPath на веб-сайте Microsoft Developer Network (MSDN).</param>
+        <param name="PrefixMapping">Необязательный <b>объект</b>. Предоставляет префикс в схеме, с которой выполняется поиск. Используйте параметр <paramref name="PrefixMapping" /> , если <paramref name="XPath" /> параметр использует имена для поиска элементов.</param>
+        <param name="FastSearchSkippingTextNodes">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> пропускает все текстовые узлы при поиске указанного узла. <b>False</b> включает текстовые узлы в поиск. Значение по умолчанию — <b>false</b>.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNodes" /> коллекцию, которая представляет все узлы, которые совпадают с указанной строкой XPath в том порядке, в котором они отображаются.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Установка <paramref name="FastSearchSkippingTextNodes" /> параметра значение <b>True,</b> снижает производительность, так как Microsoft Word ищет все узлы в документе с текстом, содержащихся в узле.</para>
-          <para />
-        </remarks>
+        <remarks><para>Установка для <paramref name="FastSearchSkippingTextNodes" /> параметра значения <b>true</b> уменьшает производительность, так как Microsoft Word ищет все узлы в документе относительно текста, содержащегося в узле.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SelectSingleNode">
@@ -817,16 +775,13 @@
         <Parameter Name="FastSearchSkippingTextNodes" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="XPath">
-          <b>Строковое значение.</b> Допустимая <paramref name="XPath" /> строку. Для получения дополнительных сведений о <paramref name="XPath" />, видеть <paramref name="XPath" /> справочную документацию на веб-сайте Microsoft Developer Network (MSDN).</param>
-        <param name="PrefixMapping">Необязательный элемент <b>Object</b>. Предоставляет префикс в схеме, в которой выполняется поиск. Использование <paramref name="PrefixMapping" /> параметр Если вашей <paramref name="XPath" /> параметр использует имена для поиска элементов.</param>
-        <param name="FastSearchSkippingTextNodes">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> пропуска всех текстовых узлов при поиске указанного узла. <b>Значение false,</b> включает в себя текстовых узлов в поиск. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий первый узел, соответствующий указанной строки XPath в указанный документ.</summary>
+        <param name="XPath">Обязательный атрибут типа <b>String</b>. Допустимая <paramref name="XPath" /> строка. Дополнительные сведения <paramref name="XPath" />см. в <paramref name="XPath" /> справочной документации на веб-сайте Microsoft Developer Network (MSDN).</param>
+        <param name="PrefixMapping">Необязательный <b>объект</b>. Предоставляет префикс в схеме, с которой выполняется поиск. Используйте параметр <paramref name="PrefixMapping" /> , если <paramref name="XPath" /> параметр использует имена для поиска элементов.</param>
+        <param name="FastSearchSkippingTextNodes">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> пропускает все текстовые узлы при поиске указанного узла. <b>False</b> включает текстовые узлы в поиск. Значение по умолчанию — <b>true</b>.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объект, представляющий первый узел, соответствующий указанной строке XPath в указанном документе.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Установка <paramref name="FastSearchSkippingTextNodes" /> параметр значение <b>False</b> снижает производительности, так как Microsoft Word ищет все узлы в документе с текстом, содержащихся в узле.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если задать <paramref name="FastSearchSkippingTextNodes" /> для параметра <b>значение false</b> , производительность будет снижена, так как Microsoft Word ищет все узлы в документе относительно текста, содержащегося в узле.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetValidationError">
@@ -853,10 +808,10 @@
         <Parameter Name="ClearedAutomatically" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Status">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" />. Указывает, следует ли установить текст ошибки проверки состояния (<b>wdXMLValidationStatusCustom</b>) или очистить текст ошибки проверки состояния (<b>wdXMLValidationStatusOK</b>).</param>
-        <param name="ErrorText">Необязательный элемент <b>Object</b>. Текст, отображаемый для пользователя. Параметр <b>Status</b> имеет значение <b>wdXMLValidationStatusOK</b>оставьте поле пустым.</param>
-        <param name="ClearedAutomatically">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> автоматически удаляет сообщение об ошибке сразу же возникает следующее событие проверки на указанном узле. <b>Значение false,</b> необходимо запустить метод <b>SetValidationError</b> с <paramref name="Status" /> параметр <b>wdXMLValidationStatusOK</b> для удаления текста настраиваемых ошибок.</param>
-        <summary>Изменение текста ошибки проверки, отображаемое для пользователя, для указанного узла и принудительно Microsoft Word, чтобы сообщить о узел как недопустимый.</summary>
+        <param name="Status">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" />. Указывает, следует ли задать текст сообщения об ошибке состояния проверки (<b>вдксмлвалидатионстатускустом</b>) или очистить текст сообщения об ошибке состояния проверки (<b>вдксмлвалидатионстатусок</b>).</param>
+        <param name="ErrorText">Необязательный <b>объект</b>. Текст, отображаемый пользователю. Оставьте пустым, если для параметра <b>Status</b> задано значение <b>вдксмлвалидатионстатусок</b>.</param>
+        <param name="ClearedAutomatically">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> автоматически очищает сообщение об ошибке, как только при возникновении следующего события проверки на указанном узле. <b>Значение false</b> требует запуска метода <b>сетвалидатионеррор</b> с <paramref name="Status" /> параметром <b>вдксмлвалидатионстатусок</b> для очистки текста настраиваемой ошибки.</param>
+        <summary>Изменяет текст ошибки проверки, отображаемый для пользователя на указанном узле, и заставляет Microsoft Word сообщить об узле как недопустимый.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -888,10 +843,8 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SmartTag" /> объект, представляющий смарт-тег, связанный с элементом XML.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>XML-элементы могут иметь через внешние компоненты, реализующие интерфейс <b>ISmartTag</b> действия смарт-тегов. Дополнительные сведения о смарт-теги и о создании распознавателями и обработчиков действие обратитесь к средств разработки программного обеспечения смарт-тег на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Элементам XML могут быть назначены действия смарт-тегов через внешние компоненты, реализующие интерфейс <b>исмарттаг</b> . Для получения дополнительных сведений о смарт-тегах, а также о том, как создавать распознаватели и обработчики действий, обратитесь к пакету Разработка программного обеспечения смарт-тегов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -920,7 +873,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , которая представляет текст, отображаемый для XML-элемента.</summary>
+        <summary>Возвращает или задает <b>строку</b> , представляющую текст, отображаемый для элемента XML.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -946,12 +899,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Проверяет отдельных XML-элемент или весь документ от вложенные схемы XML и схемы.</summary>
-        <remarks>
-          <para>Используйте метод <b>Validate</b> с <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> свойства, чтобы определить допустимость XML-элемент с примененной схемы и какие текст ошибки, который отображается для пользователя. Использование <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод для переопределения нарушение схемы с ошибками настраиваемую проверку.</para>
-          <para>При выполнении метод <b>Validate</b> , Microsoft Word заполняет <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations" /> семейства сайтов с помощью XML-узлов с ошибками проверки подлинности.</para>
-          <para />
-        </remarks>
+        <summary>Проверяет отдельный элемент XML или весь документ по отношению к присоединенной схеме XML или схемам.</summary>
+        <remarks><para>Используйте метод <b>проверки</b> с свойствами <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> , чтобы определить, является ли элемент XML допустимым для примененной схемы, а также какой текст ошибки отобразить для пользователя. Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод, чтобы переопределить нарушения схемы с пользовательскими ошибками проверки.</para>
+          <para>При запуске метода <b>проверки</b> Microsoft Word заполняет <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations" /> коллекцию узлами XML с ошибками проверки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ValidationErrorText">
@@ -980,8 +931,8 @@
         <Parameter Name="Advanced" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Advanced">Необязательный атрибут типа <b>Boolean</b>.  Указывает, что текст ошибки, отображаемый расширенной версии описание ошибки проверки, поступающие из компонента MSXML 5.0, включенные в состав Microsoft Word.</param>
-        <summary>Возвращает <b>строку</b> , представляющую описание ошибки проверки на <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта.</summary>
+        <param name="Advanced">Необязательный атрибут типа <b>Boolean</b>. Указывает, что отображаемый текст сообщения об ошибке — это расширенная версия описания ошибки проверки, которая поступает из компонента MSXML 5,0, включенного в Microsoft Word.</param>
+        <summary>Возвращает <b>строку</b> , представляющую описание ошибки проверки <see cref="T:Microsoft.Office.Interop.Word.XMLNode" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1009,18 +960,16 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdXMLValidationStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> константу, представляет ли элемент или атрибут является допустимым вложенные схемы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdXMLValidationStatus" /> константу, показывающую, является ли элемент или атрибут допустимым в соответствии с присоединенной схемой.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <b>Вдксмлвалидатионстатус</b> может быть одной из следующих констант:</para>
           <para>
-            <b>WdXMLValidationStatus</b> может иметь одно из следующих констант:</para>
+            <b>вдксмлвалидатионстатускустом</b> Указывает, что <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод использовался для присвоения <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> свойству настраиваемой текстовой строки. </para>
           <para>
-            <b>wdXMLValidationStatusCustom</b> указывает, что <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод используется для задания <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> строковое значение настраиваемого текста.</para>
-          <para>
-            <b>wdXMLValidationStatusOK</b> указывает XML-элемент или атрибут является допустимым согласно схеме присоединенные.</para>
-          <para>, Хотя это только два именованных констант, свойство <b>ValidationStatus</b> позволяет много более неименованного значений, полученные из компонента MSXML 5.0, включенные в состав Microsoft Word. Для более полный список возможных значений и их соответствующее значение, обратитесь к Microsoft Word XML пакета разработчика на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+            <b>вдксмлвалидатионстатусок</b> Указывает, что XML-элемент или атрибут является допустимым в соответствии с присоединенной схемой.</para>
+          <para>Несмотря на то что это единственные именованные константы, допускающие свойство <b>валидатионстатус</b> , существует множество неименованных значений, которые берутся из компонента MSXML 5,0, включенного в Microsoft Word. Чтобы получить более полный список возможных значений и соответствующее значение, обратитесь к пакету разработки XML-содержимого Microsoft Word на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WordOpenXML">
@@ -1047,13 +996,9 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>строку</b> , представляющую XML-код для узла в формате Microsoft Office Word Open XML. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Данное свойство возвращает только код XML в документе, который необходим для представления указанного узла XML.</para>
-          <para />
-        </remarks>
+        <value><b>String</b></value>
+        <remarks><para>Это свойство возвращает только XML в документе, который необходим для представления указанного узла XML.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="XML">
@@ -1082,8 +1027,8 @@
         <Parameter Name="DataOnly" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="DataOnly">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> возвращает текст XML без разметки Word XML. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Возвращает <b>строку</b> , представляющую XML-текста в указанном объекте.</summary>
+        <param name="DataOnly">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> ВОЗВРАЩАЕТ текст XML без XML-разметки Word. Значение по умолчанию: <b>False</b>.</param>
+        <summary>Возвращает <b>строку</b> , ПРЕДСТАВЛЯЮЩУЮ XML-текст в указанном объекте.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

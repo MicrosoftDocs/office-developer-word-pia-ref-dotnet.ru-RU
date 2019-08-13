@@ -1,13 +1,5 @@
 <Type Name="CalloutFormat" FullName="Microsoft.Office.Interop.Word.CalloutFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c04c571668cd9e557fbce92649a5a632d6c743de" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672954" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CalloutFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3e225a3d98b4c368d5c9c0b464dfefb3fd25e89a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147328" /></Metadata><TypeSignature Language="C#" Value="public interface CalloutFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalloutFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CalloutFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalloutFormat" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, которые применяются к строке выносок.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Shape.Callout" /> свойство возвращает объект <b>CalloutFormat</b> .</para>
-      <para />
-    </remarks>
+    <summary>Содержит свойства и методы, применяемые к вызываемым линиям.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Callout" /> свойство, чтобы возвратить объект <b>CalloutFormat</b> . </para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Accent">
@@ -59,7 +49,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если вертикальная черта разделяет выноски текст из строки выноски.</summary>
+        <summary>Возвращает или задает значение, указывающее, отделяет ли вертикальная черта текст выноски от линии выноски.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -90,13 +80,11 @@
         <ReturnType>Microsoft.Office.Core.MsoCalloutAngleType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, угол линии выноски.</summary>
+        <summary>Возвращает или задает значение, указывающее угол линии выноски.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если выноски строка содержит более одного сегмента линии, это свойство Возвращает или задает угол сегмент, дальше всего от текстовое поле выноски.</para>
-          <para>При установке значения этого свойства отличное от <b>msoCalloutAngleAutomatic</b>линии выноски поддерживает фиксированный угол при перетаскивании выноске.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если линия выноски содержит несколько сегментов линии, это свойство возвращает или задает угол в самом крайнем интервале от текстового поля выноски.</para>
+          <para>Если для этого свойства задано значение, отличное от <b>мсокаллаутанглеаутоматик</b>, в линии выноски сохраняется фиксированный угол при перетаскивании выноски.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -159,13 +147,11 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если место, где линии выноски подключает текстовое поле выноски изменяется в зависимости от того, является ли origin линии выноски (где выноски навести указатель мыши) слева или справа от надписи выноски.</summary>
+        <summary>Возвращает или задает значение, указывающее, изменяется ли место выноски линии выноски в текстовом поле выноски, в зависимости от того, находится ли источник линии выноски (где указывает выноску) слева или справа от текстового поля выноски.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если значение этого свойства имеет <b>значение True</b>, значение перетаскивания (вертикальной расстояние от края текстовое поле выноски в то место, где подключает линии выноски) отсчитывается от верхней части текстового поля при текстовое поле справа от происхождения , и измеряется в нижней части текстового поля слева от происхождения при текстовое поле. Если значение этого свойства имеет <b>значение False</b>, значение перетаскивания всегда отсчитывается от верхней части текстового поля, независимо от того, относительное расположение текстовое поле и источник. Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение перетаскивания и использовать <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> свойства, чтобы возвратить значение перетаскивания.</para>
-          <para>Этого свойства влияет на выноске только в том случае, если он имеет явным образом установлен перетащите значение, то есть, если значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /><b>msoCalloutDropCustom</b>— это свойство. По умолчанию, выноски заданы в явном виде значения размещения сообщений во время создания.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если значение этого свойства равно <b>true</b>, то пустое значение (вертикальное расстояние от края текстового поля выноски до того места, где находится линия выноски) измеряется от верхнего края текстового поля, когда текстовое поле находится справа от начала координат , и он измеряется от нижнего края текстового поля, когда текстовое поле находится слева от начала координат. Если для этого свойства задано значение <b>false</b>, то пустое значение всегда измеряется от верхнего края текстового поля, независимо от относительного положения текстового поля и источника. Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение Drop, и используйте <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> свойство для возврата значения сброса.</para>
+          <para>Задание этого свойства влияет на выноску только в том случае, если у него явно задано пустое значение, то есть <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /> если значение свойства равно <b>мсокаллаутдропкустом</b>. По умолчанию выноски явно задают значения перетаскивания при их создании.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoLength">
@@ -191,12 +177,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, следует ли автоматически задать длину линии выноски.</summary>
+        <summary>Возвращает значение, которое указывает, следует ли автоматически устанавливать длину линии выноски.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод этому свойству присвоено значение <b>msoTrue</b>и использовать <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод к этому свойству присвоено значение <b>msoFalse</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы присвоить этому свойству значение <b>мсотруе</b>, <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> и используйте метод, чтобы задать для этого свойства значение <b>мсофалсе</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutomaticLength">
@@ -223,12 +207,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Указывает, что первый сегмент линии выноски (сегмент, подключенного к поле выноски) масштабироваться автоматически, при перемещении выноске.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы указать, что первый сегмент линии выноски сохранять фиксированной длины, возвращенное <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> свойство при каждом перемещении выноске. Применяется только к выноски, чьи строки состоят из нескольких сегментов (типы <b>msoCalloutThree</b> и <b>msoCalloutFour</b>).</para>
-          <para>Применения этого метода можно задать <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> значение <b>True</b>.</para>
-          <para />
-        </remarks>
+        <summary>Указывает, что первый сегмент линии выноски (сегмента, присоединенного к текстовому полю выноски) должен быть автоматически масштабирован при перемещении выноски.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы указать, что первый сегмент линии выноски сохраняет фиксированную длину, возвращаемую <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> свойством при каждом перемещении выноски. Применяется только к выноскам, строки которых состоят из нескольких сегментов (Types <b>мсокаллаутсри</b> и <b>мсокаллаутфаур</b>).</para>
+          <para>При применении этого метода <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> свойству присваивается <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Border">
@@ -257,7 +239,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, является ли текст в указанном выноски заключается в границы.</summary>
+        <summary>Возвращает или задает значение, указывающее, окружена ли граница текстом в заданной выноске.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -285,11 +267,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomDrop">
@@ -315,13 +297,11 @@
         <Parameter Name="Drop" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Drop">Размещения расстояние в пунктах.</param>
-        <summary>Задает расстояние по вертикали (в точках) от края текста, ограничивающий прямоугольник в то место, где линии выноски подключает текстовое поле.</summary>
-        <remarks>
-          <para>Это расстояние отсчитывается от верхней части текстового поля, если не <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> задано значение <b>True,</b> и надпись находится слева от происхождения линии выноски (место, которое указывает выноски), в котором case раскрывающегося расстояния измеряется в нижней части надписи.</para>
-          <para>Если <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод ранее был использован для размещения сообщений для указанного выноски значение, вызовите метод <b>PresetDrop</b> , используя аргумент <b>msoCalloutDropCustom</b> перед с помощью метода <b>CustomDrop</b> , чтобы удалить пользовательский параметр вступает в силу.</para>
-          <para />
-        </remarks>
+        <param name="Drop">Шаг перетаскивания в пунктах.</param>
+        <summary>Задает расстояние по вертикали (в пунктах) от края ограничительной рамки текста до того места, где выноски прикрепляется к текстовому полю.</summary>
+        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> если для свойства не задано <b>значение true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска); в этом случае расстояние между перетаскиванием измеряется снизу текстового поля.</para>
+          <para>Если <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод использовался ранее для установки параметра Drop для указанной выноски, вызовите метод <b>пресетдроп</b> еще раз с помощью аргумента <b>мсокаллаутдропкустом</b> , прежде чем использовать метод <b>кустомдроп</b> , чтобы пользовательский параметр DROP применялся вступают.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomLength">
@@ -348,12 +328,10 @@
       </Parameters>
       <Docs>
         <param name="Length">Длина первого сегмента выноски в пунктах.</param>
-        <summary>Указывает, что первый сегмент линии выноски (сегмент, подключенного к поле выноски) присваиваться фиксированной длины при каждом перемещении выноске.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы указать, что первый сегмент линии выноски масштабироваться автоматически при каждом перемещении выноске. Применяется только к выноски, чьи строки состоят из нескольких сегментов (типы <b>msoCalloutThree</b> и <b>msoCalloutFour</b>).</para>
-          <para>Применения этого метода можно задать <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> значение <b>False</b> и наборы <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> значение, указанное для свойства <paramref name="Length" /> аргумент.</para>
-          <para />
-        </remarks>
+        <summary>Указывает, что первый сегмент линии выноски (сегмент, присоединенный к текстовому полю выноски) сохраняет фиксированную длину при перемещении выноски.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы указать, что первый сегмент линии выноски должен масштабироваться автоматически при перемещении выноски. Применяется только к выноскам, строки которых состоят из нескольких сегментов (Types <b>мсокаллаутсри</b> и <b>мсокаллаутфаур</b>).</para>
+          <para>При <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> применении этого метода свойству присваивается значение <b>false</b> , <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> а свойству присваивается значение, <paramref name="Length" /> заданное для аргумента.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Drop">
@@ -379,14 +357,12 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Для выносок с явным образом установлен перетащите значение, данное свойство возвращает расстояние по вертикали (в точках) от края текста, ограничивающий прямоугольник в то место, где линии выноски подключает текстовое поле.</summary>
+        <summary>Для выносок с явно заданным значением Drop это свойство возвращает расстояние по вертикали (в пунктах) от края ограничительной рамки текста до того места, где линия выноски присоединяется к текстовому полю.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это расстояние отсчитывается от верхней части текстового поля, если не <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> задано значение <b>True,</b> и надпись находится слева от происхождения линии выноски (место, которое указывает выноски), в котором case раскрывающегося расстояния измеряется в нижней части надписи.</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение этого свойства.</para>
-          <para>Значение этого свойства точно отражает положение вложения выноски строки в текстовом поле только в том случае, если выноски имеет явным образом установлен перетащите значение, то есть, если значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /><b>msoCalloutDropCustom</b>— это свойство. Использование <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод с аргументом <b>msoCalloutCustomDrop</b> для свойства <b>DropType</b> значение <b>msoCalloutDropCustom</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> если для свойства не задано <b>значение true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска); в этом случае расстояние между перетаскиванием измеряется снизу текстового поля.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение этого свойства.</para>
+          <para>Значение этого свойства точно отражает положение вложения линии выноски в текстовом поле, только если выноски имеет явно заданное значение Drop (то есть если значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /> свойства равно <b>мсокаллаутдропкустом</b>). Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод с аргументом <b>мсокаллауткустомдроп</b> , чтобы присвоить свойству <b>дроптипе</b> значение <b>мсокаллаутдропкустом</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DropType">
@@ -412,13 +388,11 @@
         <ReturnType>Microsoft.Office.Core.MsoCalloutDropType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, где линии выноски подключает текстовое поле выноски.</summary>
+        <summary>Возвращает значение, которое указывает, когда линия выноски присоединяется к текстовому полю выноски.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если тип переноса выноски является <b>msoCalloutDropCustom</b>, значения <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> и <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойства и порядок выноски текстовое поле и происхождение строки выноски (место, которое указывает выноски) используются для определения места выноски Подключает текстовое поле строку.</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод, чтобы задать значение этого свойства.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если тип перетаскивания выноски — <b>мсокаллаутдропкустом</b>, то значения свойств <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> , <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> и относительное положение текстового поля выноски и начала линии выноски (места, на который указывает выноску) используются для определения места выноски. Строка подсоединяется к текстовому полю.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод, чтобы задать значение этого свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Gap">
@@ -447,7 +421,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее расстояние по горизонтали (в точках) между в конец строки выноски и текст, ограничивающий прямоугольник.</summary>
+        <summary>Возвращает или задает значение, указывающее горизонтальное расстояние (в пунктах) между концом линии выноски и ограничительной рамкой текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -475,13 +449,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> указанного выноски задано значение <b>False</b>, свойство <b>Length</b> возвращает длину (в пунктах) первого сегмента линии выноски (сегмент, подключенного к поле выноски).</summary>
+        <summary>Если <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> свойство указанной выноски имеет значение <b>false</b>, свойство <b>length</b> возвращает длину (в пунктах) первого сегмента линии выноски (сегмента, присоединенного к текстовому выноски).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Применяется только к выноски, чьи строки состоят из нескольких сегментов (типы <b>msoCalloutThree</b> и <b>msoCalloutFour</b>).</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы задать значение этого свойства для <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объект.</para>
-          <para />
-        </remarks>
+        <remarks><para>Применяется только к выноскам, строки которых состоят из нескольких сегментов (Types <b>мсокаллаутсри</b> и <b>мсокаллаутфаур</b>).</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы задать значение этого свойства для <see cref="T:Microsoft.Office.Interop.Word.CalloutFormat" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -507,7 +479,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -535,12 +507,10 @@
         <Parameter Name="DropType" Type="Microsoft.Office.Core.MsoCalloutDropType" />
       </Parameters>
       <Docs>
-        <param name="DropType">Начальная позиция линии выноски по отношению к тексту, ограничивающий прямоугольник.</param>
-        <summary>Указывает, будет ли линии выноски подключает верхней, нижней или центр текстовое поле выноски или его подключает на момент, который является определенное расстояние между верхней или нижней части текстового поля.</summary>
-        <remarks>
-          <para>Если указать <b>msoCalloutDropCustom</b> для <paramref name="DropType" /> параметр, значения <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> и <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойства и относительное расположение выноски текстовое поле и происхождение строки выноски (место, которое указывает выноски), используемых для определения где линии выноски подключает текстовое поле.</para>
-          <para />
-        </remarks>
+        <param name="DropType">Начальная позиция линии выноски относительно ограничительной рамки текста.</param>
+        <summary>Указывает, подсоединяется ли линия выноски к верхнему, нижнему или центру текстового поля выноски или к точке с указанным расстоянием от верхнего или нижнего края текстового поля.</summary>
+        <remarks><para>Если для <paramref name="DropType" /> параметра задано значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> <b>мсокаллаутдропкустом</b> , значения <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойств, и относительные положения текстового поля выноски и начала линии выноски (места, на которые указывает выноску) используются для определения где линия выноски присоединяется к текстовому полю.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">

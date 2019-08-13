@@ -1,13 +1,5 @@
 <Type Name="Columns" FullName="Microsoft.Office.Interop.Word.Columns">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c007cc7ae474302abe84669e0809beb36b236122" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672905" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Columns : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3ae32a4fd4b94ca8c949579a32bc324ed5723ab8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147259" /></Metadata><TypeSignature Language="C#" Value="public interface Columns : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Columns implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Columns" />
   <TypeSignature Language="VB.NET" Value="Public Interface Columns&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Column" /> объекты, которые представляют столбцы в таблице.</summary>
-    <remarks>
-      <para>Используйте свойство <b>столбцов</b> для возврата коллекции <b>столбцов</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Columns.Add(System.Object@)" /> метод, чтобы добавить столбец в таблицу.</para>
-      <para>Использования <b>столбцов</b>(<paramref name="index" />), где <b>индекс</b> — номер индекса, чтобы возвратить объект одного <b>столбца</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Column" /> объектов, представляющих столбцы в таблице.</summary>
+    <remarks><para>Используйте свойство <b>Columns</b> , чтобы возвратить коллекцию <b>Columns</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Columns.Add(System.Object@)" /> метод, чтобы добавить столбец в таблицу.</para>
+      <para>Используйте <b></b>Columns<paramref name="index" />(), где <b>index</b> — это номер индекса, чтобы вернуть один объект <b>Column</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -61,8 +51,8 @@
         <Parameter Name="BeforeColumn" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="BeforeColumn">A <see cref="T:Microsoft.Office.Interop.Word.Column" /> объекта, представляющего столбец, который будет отображаться немедленно справа от нового столбца.</param>
-        <summary>Добавление столбца в таблицу.</summary>
+        <param name="BeforeColumn"><see cref="T:Microsoft.Office.Interop.Word.Column" /> Объект, представляющий столбец, который будет отображаться непосредственно справа от нового столбца.</param>
+        <summary>Добавляет столбец в таблицу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -90,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -116,11 +106,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Изменения является оболочкой ширины столбца таблицы для учета ширины текста без изменения текста в ячейках.</summary>
-        <remarks>
-          <para>Если в таблице по ширине расстояние между левое и правое поля, этот метод не оказывает влияния.</para>
-          <para />
-        </remarks>
+        <summary>Изменяет ширину столбца таблицы в соответствии с шириной текста, не изменяя способ переноса текста в ячейках.</summary>
+        <remarks><para>Если таблица уже имеет ширину, равную расстоянию между левым и правым полями, этот метод не оказывает никакого действия.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Borders">
@@ -149,7 +137,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,7 +165,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,11 +193,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -285,7 +273,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Column</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Columns" /> семейства сайтов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объект, представляющий первый элемент в <see cref="T:Microsoft.Office.Interop.Word.Columns" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -348,8 +336,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Значение, указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index">Значение, указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -377,7 +365,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Column</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объекта, представляющего последнего элемента в <see cref="T:Microsoft.Office.Interop.Word.Columns" /> семейства сайтов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объект, представляющий последний элемент в <see cref="T:Microsoft.Office.Interop.Word.Columns" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -407,10 +395,8 @@
       <Docs>
         <summary>Возвращает уровень вложенности указанных столбцов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Внешняя таблица имеет вложения уровня 1. Уровень вложенности каждой последовательно вложенные таблицы — это один выше, чем в предыдущей таблице.</para>
-          <para />
-        </remarks>
+        <remarks><para>Внешняя таблица имеет уровень вложения 1. Уровень вложенности каждой последующей вложенной таблицы — это на один уровень выше предыдущей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -436,7 +422,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -467,7 +453,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину (в точках или в процентах от ширины окна) для указанных столбцов.</summary>
+        <summary>Возвращает или задает предпочтительную ширину (в пунктах или в процентах от ширины окна) для заданных столбцов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -498,7 +484,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPreferredWidthType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает предпочитаемый единицы измерения для ширины указанных столбцов.</summary>
+        <summary>Возвращает или задает предпочтительную единицу измерения для ширины указанных столбцов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -525,10 +511,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetWidth">
@@ -555,14 +539,11 @@
         <Parameter Name="RulerStyle" Type="Microsoft.Office.Interop.Word.WdRulerStyle" />
       </Parameters>
       <Docs>
-        <param name="ColumnWidth">Ширина столбцов, указанного в пунктах.</param>
-        <param name="RulerStyle">Значение, определяют, как Microsoft Word регулировка ширины ячеек.</param>
+        <param name="ColumnWidth">Ширина заданных столбцов в точках.</param>
+        <param name="RulerStyle">Значение, определяющее способ регулирования ширины ячеек в Microsoft Word.</param>
         <summary>Задает ширину столбцов в таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> Поведение применяется к по левому краю таблицы. Поведение <b>WdRulerStyle</b> для центр и по правому краю таблиц может быть непредвиденным; в таких случаях метод <b>SetWidth</b> должен использоваться с осторожностью.</para>
-          <para />
-        </remarks>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> Поведение применяется к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в таких случаях метод <b>сетвидс</b> следует использовать с осторожностью.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shading">
@@ -588,7 +569,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

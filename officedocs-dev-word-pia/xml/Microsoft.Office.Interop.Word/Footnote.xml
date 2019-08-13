@@ -1,13 +1,5 @@
 <Type Name="Footnote" FullName="Microsoft.Office.Interop.Word.Footnote">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="45ece3408c4d3718e87d615152a5a54015787e1f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673706" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Footnote" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="50cf85c804e083cb3f2277cf406a348b3a3b6c73" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148056" /></Metadata><TypeSignature Language="C#" Value="public interface Footnote" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Footnote" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Footnote" />
   <TypeSignature Language="VB.NET" Value="Public Interface Footnote" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет нижнего колонтитула, находящийся в нижней части страницы или под строкой текста. Объект <b>нижнего колонтитула</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Footnotes" /> семейства сайтов. Коллекция <b>сноски</b> представляет сноски в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Использование <b>сносок</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>нижнего колонтитула</b> . Номер индекса представляет положение нижнего колонтитула в выделение, диапазон или документа.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Footnotes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@)" /> способ добавления нижнего колонтитула в коллекцию <b>сносок</b> .</para>
-      <para>Сноски, размещенный в конце документа или раздела считаются концевые сноски и включены в <see cref="T:Microsoft.Office.Interop.Word.Endnotes" /> семейства.</para>
-      <para />
-    </remarks>
+    <summary>Представляет положение сноски в нижней части страницы или под текстом. Объект <b>сноске</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Footnotes" /> коллекции. Коллекция <b>сносок</b> представляет сноски в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Используйте <b>сноски</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>сноски</b> . Номер индекса представляет положение сноски в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Footnotes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@)" /> метод, чтобы добавить сноску в коллекцию <b>сносок</b> .</para>
+      <para>Сноски, расположенные в конце документа или раздела, считаются концевыми и включаются в <see cref="T:Microsoft.Office.Interop.Word.Endnotes" /> коллекцию.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -169,7 +159,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -197,12 +187,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="P:Microsoft.Office.Interop.Word.Footnote.Range" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="P:Microsoft.Office.Interop.Word.Footnote.Range" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reference">
@@ -228,7 +216,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий сноску или знак.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий знак сноски или примечания.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

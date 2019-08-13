@@ -1,13 +1,5 @@
 <Type Name="AutoCaption" FullName="Microsoft.Office.Interop.Word.AutoCaption">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="31b4ea8bafcfbd501cd64c8d3338f2bc08bbaaf8" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672911" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AutoCaption" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3109344f5a410ce2a910d0c31881fbca7986b697" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146236" /></Metadata><TypeSignature Language="C#" Value="public interface AutoCaption" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoCaption" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AutoCaption" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoCaption" />
@@ -26,10 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один заголовок, могут быть добавлены автоматически при вставке элементы, например таблицы, изображения или объекты OLE в документ.</summary>
-    <remarks>
-      <para>Объект <b>'' Автоназвание</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.AutoCaptions" /> семейства сайтов. Коллекция <b>AutoCaptions</b> содержит все заголовки, перечисленные в диалоговом окне '' Автоназвание (меню "Вставка").</para> Использование <b>AutoCaptions</b><para>(<paramref name="index" />), где <paramref name="index" /> — заголовок имя или номер индекса, чтобы возвратить объект <b>'' Автоназвание</b> . Имена caption соответствуют элементы, перечисленные в диалоговом окне '' Автоназвание (меню "Вставка"). Должен полностью совпадать орфографии (но не обязательно заглавные буквы) из имени, как показано в диалоговом окне '' Автоназвание.</para><para>Номер индекса представляет позиции объекта <b>'' Автоназвание</b> в список элементов в диалоговом окне '' Автоназвание.</para><para>Объекты 
-        <b>'' Автоназвание</b> нельзя программными средствами добавляется или удаляется из коллекции <b>AutoCaptions</b> .</para><para /></remarks>
+    <summary>Представляет один заголовок, который можно автоматически добавить при вставке элементов, таких как таблицы, рисунки или OLE, в документ.</summary>
+    <remarks><para>Объект <b></b> автоназвания является членом <see cref="T:Microsoft.Office.Interop.Word.AutoCaptions" /> коллекции. Коллекция <b></b> автоназваний содержит все заголовки, перечисленные в диалоговом окне автоподписи (меню "Вставка").</para>
+      <para>Используйте <b>автоподписи</b>(<paramref name="index" />), где <paramref name="index" /> — это имя заголовка или номер индекса, чтобы вернуть один объект автоназваний. <b></b> Имена заголовков соответствуют элементам, перечисленным в диалоговом окне автоподписи (меню "Вставка"). Необходимо точно соответствовать орфографии (но не обязательно заменять регистр букв) имени, как оно отображается в диалоговом окне автоподписи.</para>
+      <para>Номер индекса представляет положение объекта автосубтитра <b></b> в списке элементов диалогового окна автоподписи.</para>
+      <para>
+        <b></b> Объекты автоназваний нельзя программным способом добавлять в коллекцию автоназваний или удалять из нее. <b></b></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -55,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, представляющее <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает значение, представляющее <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,7 +81,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, является ли заголовка добавляется автоматически при вставке элемента в документ.</summary>
+        <summary>Возвращает или задает значение, указывающее, добавляется ли заголовок автоматически при вставке элемента в документ.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,12 +112,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок label («рисунок» «Таблица» или «Формула», например) указанного заголовка.</summary>
+        <summary>Возвращает или задает метку заголовка ("Рисунок", "Таблица" или "уравнение", например) указанной подписи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно задать в заголовок названия или <see cref="T:Microsoft.Office.Interop.Word.WdCaptionLabelID" /> константу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этому свойству можно присвоить метку заголовка или <see cref="T:Microsoft.Office.Interop.Word.WdCaptionLabelID" /> константу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -148,11 +141,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -234,7 +227,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

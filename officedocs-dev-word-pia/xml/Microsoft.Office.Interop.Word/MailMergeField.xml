@@ -1,13 +1,5 @@
 <Type Name="MailMergeField" FullName="Microsoft.Office.Interop.Word.MailMergeField">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3826a46a79d1953bf36de88c393620df167dba62" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672542" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeField" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="740faaaa800da0c930fd0ad3e0101c4ed0cd4585" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144465" /></Metadata><TypeSignature Language="C#" Value="public interface MailMergeField" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeField" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMergeField" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMergeField" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одного поля данных в документе.</summary>
-    <remarks>
-      <para>Объект <b>MailMergeDataField</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> семейства сайтов. Коллекция <b>MailMergeDataFields</b> включает все слияния почты связанные поля в документе.</para>
-      <para>Использование <b>полей</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>MailMergeField</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.Add(Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы добавить поле слияния в коллекцию <b>MailMergeFields</b> .</para>
-      <para>Коллекция <b>MailMergeFields</b> имеет дополнительные методы, такие как <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.AddAsk(Microsoft.Office.Interop.Word.Range,System.String,System.Object@,System.Object@,System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.AddFillIn(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" />, для добавления поля, относящиеся к операции слияния.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одно поле слияния почты в документе.</summary>
+    <remarks><para>Объект <b>MailMergeDataField</b> является членом <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> коллекции. Коллекция <b>MailMergeDataFields</b> включает все связанные поля слияния почты в документе.</para>
+      <para>Используйте <b></b>Fields<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>MailMergeField</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.Add(Microsoft.Office.Interop.Word.Range,System.String)" /> метод, чтобы добавить поле слияния в коллекцию <b>MailMergeFields</b> .</para>
+      <para>Коллекция <b>MailMergeFields</b> имеет дополнительные методы, например <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.AddAsk(Microsoft.Office.Interop.Word.Range,System.String,System.Object@,System.Object@,System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.MailMergeFields.AddFillIn(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" />, для добавления полей, связанных с операцией слияния почты.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,12 +80,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет код поля.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий код поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Код поля — это все, что заключенные знаками поля (<b>{}</b>), включая пространство начальные и конечные пробелы. Можно получить доступ к код поля без изменения представления из значений полей.</para>
-          <para />
-        </remarks>
+        <remarks><para>Код поля — это все, что заключено в символы поля (<b>{}</b>), включая начальные и конечные пробелы. Вы можете получить доступ к коду поля, не изменяя представление "результаты поля".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Copy">
@@ -146,11 +134,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -229,8 +217,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если заблокированный указанного поля. Если поле заблокирован, не удается обновить значения поля.</summary>
+        <summary><b>Значение true</b> , если указанное поле заблокировано. Если поле заблокировано, результаты поля невозможно обновить.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -286,7 +273,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -341,10 +328,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -372,10 +357,8 @@
       <Docs>
         <summary>Возвращает тип поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

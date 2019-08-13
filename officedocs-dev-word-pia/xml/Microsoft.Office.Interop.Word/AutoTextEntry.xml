@@ -1,13 +1,5 @@
 <Type Name="AutoTextEntry" FullName="Microsoft.Office.Interop.Word.AutoTextEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ec70f5beca361e5203612870f616a3ba39891001" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674185" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AutoTextEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0b55f0ca8e547da196123bbcdcfdca77303d0dfb" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146285" /></Metadata><TypeSignature Language="C#" Value="public interface AutoTextEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoTextEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AutoTextEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoTextEntry" />
@@ -26,10 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один элемент списка автотекста.</summary>
-    <remarks>
-      <para>Объект <b>AutoTextEntry</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntries" /> семейства сайтов. Коллекция <b>AutoTextEntries</b> содержит всех элементов автотекста в указанный шаблон. Записи перечислены на вкладке автотекста в диалоговое окно "Автозамена" (меню "Сервис").</para> Использование 
-      <para><see cref="P:Microsoft.Office.Interop.Word.Template.AutoTextEntries" />(<paramref name="index" />), где <paramref name="index" /> — это имя записи автотекста или номер индекса, чтобы возвратить объект <b>AutoTextEntry</b> . Должен полностью совпадать орфографии (но не обязательно заглавные буквы) из имени, как показано на вкладке автотекста в диалоговом окне Автозамена.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.AutoTextEntries.Add(System.String,Microsoft.Office.Interop.Word.Range)" /> метод, чтобы добавить объект <b>AutoTextEntry</b> в коллекцию <b>AutoTextEntries</b> .</para><para /></remarks>
+    <summary>Представляет отдельный элемент автотекста.</summary>
+    <remarks><para>Объект <b>AutoTextEntry</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntries" /> коллекции. Коллекция <b>AutoTextEntries</b> содержит все записи автотекста в указанном шаблоне. Записи отображаются на вкладке Автотекст в диалоговом окне Автозамена (меню "Сервис").</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Template.AutoTextEntries" />(<paramref name="index" />), где <paramref name="index" /> — это имя элемента автотекста или номер индекса, чтобы вернуть один объект <b>AutoTextEntry</b> . Необходимо точно соответствовать орфографии (но не обязательно) имени, так как она отображается на вкладке Автотекст диалогового окна автозамены.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.AutoTextEntries.Add(System.String,Microsoft.Office.Interop.Word.Range)" /> метод, чтобы добавить объект <b>AutoTextEntry</b> в коллекцию <b>AutoTextEntries</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -83,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -166,14 +159,12 @@
         <Parameter Name="RichText" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Where">Расположение автотекста.</param>
-        <param name="RichText">Требуется ли для вставки автотекста с его форматирование.</param>
-        <summary>Вставка автотекста вместо указанного диапазона.</summary>
+        <param name="Where">Расположение элемента автотекста.</param>
+        <param name="RichText">Указывает, следует ли вставить элемент автотекста с первоначальным форматированием.</param>
+        <summary>Вставляет элемент автотекста вместо указанного диапазона.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если вы не хотите заменить диапазона, используйте <see cref="M:Microsoft.Office.Interop.Word.Range.Collapse(System.Object@)" /> метод перед использованием этого метода.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы не хотите заменять диапазон, используйте <see cref="M:Microsoft.Office.Interop.Word.Range.Collapse(System.Object@)" /> метод перед использованием этого метода.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -230,7 +221,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,7 +249,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя стиль для указанного автотекста.</summary>
+        <summary>Возвращает имя стиля, примененного к указанному элементу автотекста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -291,10 +282,8 @@
       <Docs>
         <summary>Возвращает или задает значение элемента автотекста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntry" /> объекты, свойства <b>Value</b> возвращает только первые 255 знаков значение объекта. Присвоить свойству <b>Value</b> значение 255 знаков, приведет к ошибке.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для <see cref="T:Microsoft.Office.Interop.Word.AutoTextEntry" /> объектов свойство <b>value</b> возвращает только первые 255 символов значения объекта. Если для свойства <b>value</b> задано значение длиннее 255 символов, возникнет ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

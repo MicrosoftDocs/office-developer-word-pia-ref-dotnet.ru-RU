@@ -1,13 +1,5 @@
 <Type Name="SpellingSuggestions" FullName="Microsoft.Office.Interop.Word.SpellingSuggestions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c30fd4820009953509a43ffbb37abf5462125885" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673720" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SpellingSuggestions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4cee29ad3d8de668efc42731bf2fa1ab75a7b415" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146096" /></Metadata><TypeSignature Language="C#" Value="public interface SpellingSuggestions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SpellingSuggestions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SpellingSuggestions" />
   <TypeSignature Language="VB.NET" Value="Public Interface SpellingSuggestions&#xA;Implements IEnumerable" />
@@ -30,8 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.SpellingSuggestion" /> объекты, которые представляют предложения для указанного слова или первое слово в указанном диапазоне.</summary>
-    <remarks>Метод <para>использования <b>GetSpellingSuggestions</b><see cref="T:Microsoft.Office.Interop.Word.Application" /> или <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект для возврата коллекции <b>SpellingSuggestions</b> . Метод <b>SpellingSuggestions</b> , при применении к объекту <b>приложения</b> необходимо указать word для проверки. При применении метода <b>GetSpellingSuggestions</b> к диапазону первое слово в диапазоне проверяется.</para><para>Нельзя добавить предложения или сообщите remove из коллекции проверки орфографии предложений. Предлагаемые исправления являются производными от файлы главного и пользовательских словарей.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.SpellingSuggestion" /> объектов, представляющих все предложения для указанного слова или первого слова в заданном диапазоне.</summary>
+    <remarks><para>Используйте метод <b>жетспеллингсугжестионс</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Application" /> или <see cref="T:Microsoft.Office.Interop.Word.Range" /> , чтобы возвратить коллекцию <b>SpellingSuggestions</b> . При применении метода <b>SpellingSuggestions</b> к объекту <b>Application</b> необходимо указать слово, которое требуется проверить. Когда метод <b>жетспеллингсугжестионс</b> применяется к диапазону, проверяется первое слово в диапазоне.</para>
+      <para>Вы не можете добавлять предложения в коллекцию предложений правописания или удалять их из нее. Варианты правописания являются производными от файлов основного и вспомогательного словаря.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,7 +79,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,11 +107,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -178,9 +172,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,7 +201,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -236,23 +229,21 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSpellingErrorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип орфографические ошибки.</summary>
+        <summary>Возвращает тип ошибки правописания.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdSpellingErrorType" />может быть одной из этих констант <b>вдспеллинжеррортипе</b> .</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdSpellingErrorType" />может иметь одно из следующих констант <b>WdSpellingErrorType</b> .</para>
-          <para>
-            <b>wdSpellingCapitalization</b>
+            <b>вдспеллингкапитализатион</b>
           </para>
           <para>
-            <b>wdSpellingCorrect</b>
+            <b>вдспеллингкоррект</b>
           </para>
           <para>
-            <b>wdSpellingNotInDictionary</b>
+            <b>вдспеллингнотиндиктионари</b>
           </para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Word._Application.GetSpellingSuggestions(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для возврата коллекции из слов, предложенных как замен. Если неправильно написано слово <see cref="M:Microsoft.Office.Interop.Word._Application.CheckSpelling(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод возвращает <b>значение True</b>.</para>
-          <para />
-        </remarks>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Word._Application.GetSpellingSuggestions(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы возвратить коллекцию слов, предлагаемых как варианты замены. Если слово написано с ошибкой, <see cref="M:Microsoft.Office.Interop.Word._Application.CheckSpelling(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод возвращает <b>значение true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

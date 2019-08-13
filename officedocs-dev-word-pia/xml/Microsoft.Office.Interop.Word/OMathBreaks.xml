@@ -1,13 +1,5 @@
 <Type Name="OMathBreaks" FullName="Microsoft.Office.Interop.Word.OMathBreaks">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f9c72f843364011a8216932603f09101b9463d96" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673658" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathBreaks" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="57096ad1b41af4f6a8d95ffbf0b00ee20b306376" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147809" /></Metadata><TypeSignature Language="C#" Value="public interface OMathBreaks" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathBreaks" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathBreaks" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathBreaks" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию объектов <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объекты, которые представляют все разрывы в формулу.</summary>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объектов, представляющих все разрывы строк в формуле.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -52,11 +44,9 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <b>целое число</b> , положение которого необходимо вставить разрыв в формулу.</param>
-        <summary>Вставка разрыва в формулу и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объект, представляющий приостановки выполнения.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" />
-        </returns>
+        <param name="Range">Обязательное <b>целое число</b> позиция, в которой вставляется разрыв в формуле.</param>
+        <summary>Вставляет разрыв в формулу и возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объект, представляющий разрыв.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,9 +74,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -113,10 +101,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathBreaks" /> семейства сайтов. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.OMathBreaks" /> коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,11 +129,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathBreaks.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para><para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathBreaks.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />. </para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -173,11 +159,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется указывает <b>целое число</b> порядковый номер объекта в коллекции.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" />
-        </returns>
+        <param name="Index">Обязательное <b>целое значение</b> указывает порядковый номер объекта в коллекции.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.OMathBreak" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -205,9 +189,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathBreaks" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

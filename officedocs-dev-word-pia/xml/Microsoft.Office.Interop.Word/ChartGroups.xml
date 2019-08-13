@@ -1,13 +1,5 @@
 <Type Name="ChartGroups" FullName="Microsoft.Office.Interop.Word.ChartGroups">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c1eae1ad84eba37ae4a3a9946acbcb5c23a1752c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673421" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartGroups : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8bebc47132f81850e7ac6d28b26efb7bbad92e07" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142252" /></Metadata><TypeSignature Language="C#" Value="public interface ChartGroups : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartGroups implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartGroups" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartGroups&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один или несколько рядов на диаграмме с тот же формат.</summary>
-    <remarks>
-      <para>A <see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> коллекции представляет собой коллекцию всех <see cref="T:Microsoft.Office.Interop.Word.ChartGroup" /> объектов в указанную диаграмму.  Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек. Отдельных диаграмм может содержать, например, группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartGroups(System.Object)" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> семейства.</para>
-      <para>Использования <b>коллекцию ChartGroups</b>(<paramref name="index" />), где <paramref name="Index" /> — это номер индекса группы диаграммы, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.ChartGroup" /> объект.</para>
-      <para />
-    </remarks>
+    <summary>Представляет один или несколько рядов, построенных на диаграмме с одинаковым форматом.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> Коллекция — это коллекция всех <see cref="T:Microsoft.Office.Interop.Word.ChartGroup" /> объектов в указанной диаграмме.  Диаграмма содержит одну или несколько групп диаграмм, каждая группа диаграммы содержит один или несколько рядов, а каждый ряд содержит одну или несколько точек. Например, одна диаграмма может содержать как группу графиков, содержащую все ряды, построенные с помощью линейного формата диаграммы, так и группу линейчатой диаграммы, содержащую все ряды, построенные с помощью формата линейчатой диаграммы.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartGroups(System.Object)" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ChartGroups" /> коллекцию. </para>
+      <para>Используйте <b>ChartGroups</b>(<paramref name="index" />), где <paramref name="Index" /> — это номер индекса группы диаграммы, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ChartGroup" /> объект. </para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -62,10 +52,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -92,10 +80,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число</b> , представляющее количество объектов в коллекции.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает <b>целое</b> число, представляющее число объектов в коллекции.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -122,15 +108,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан указанный объект. Только для чтения</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>, Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para>В первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан указанный объект. Только для чтения</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -191,11 +173,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b> указывает порядковый номер объекта в коллекции.</param>
+        <param name="Index">Обязательный <b>объект</b> указывает порядковую позицию объекта в коллекции.</param>
         <summary>Возвращает указанный элемент из коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartGroup" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartGroup" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -222,10 +202,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

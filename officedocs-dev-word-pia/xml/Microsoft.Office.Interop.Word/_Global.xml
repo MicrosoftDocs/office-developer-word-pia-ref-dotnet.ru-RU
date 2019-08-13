@@ -1,13 +1,5 @@
 <Type Name="_Global" FullName="Microsoft.Office.Interop.Word._Global">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="97dfc9ba551e678188886c5d83bb455dc809f189" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672580" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface _Global" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="97dfc9ba551e678188886c5d83bb455dc809f189" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34141979" /></Metadata><TypeSignature Language="C#" Value="public interface _Global" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _Global" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word._Global" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Global" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Это основной интерфейс в компонентном классе COM, необходимые для управляемого кода для взаимодействия с соответствующим COM-объектом. Этот основной интерфейс используется только в том случае, если метод, который будет использоваться совместно совпадает с именем событие COM-объектом; в этом случае преобразовывается этот интерфейс для вызова метода и приведены последние интерфейс события для подключения к событию. В противном случае используется интерфейс .NET, который является производным от компонентного класса COM для доступа к методы, свойства и события COM-объектом. Дополнительные сведения о COM-объектом, можно <see cref="T:Microsoft.Office.Interop.Word.Global" />.</summary>
+    <summary>Это основной интерфейс в компонентном классе COM, который требуется управляемому программному коду для взаимодействия с соответствующим объектом COM. Используйте этот основной интерфейс только в тех случаях, когда метод, который предполагается использовать, имеет такое же имя, как событие объекта COM; в таких случаях для вызова метода приведите к этому интерфейсу, для соединения с событием приведите к интерфейсу последних событий. Иначе используйте интерфейс .NET, который создается но основе компонентного класса COM для доступа к методам, свойствам и событиям объекта COM. Для получения дополнительных сведений об объекте COM см <see cref="T:Microsoft.Office.Interop.Word.Global" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -53,7 +45,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Document</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий активных документов (document фокус). При наличии открыть доступ к документам, возникает ошибка.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий активный документ (документ с фокусом). Если документы не открыты, возникает ошибка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -112,12 +104,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ProtectedViewWindow</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объект, представляющий окно, активный защищенный просмотр (окно защищенный просмотр фокус).</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения. При наличии не windows, с помощью этого свойства приводит к ошибке.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объект, представляющий активное защищенное окно просмотра (окно защищенного просмотра с фокусом).</summary>
+        <value>Объект <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" />.</value>
+        <remarks><para>Только для чтения. Если окна не открыты, использование этого свойства приводит к ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ActiveWindow">
@@ -143,12 +133,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Window</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект, представляющий активное окно (окно фокус).</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект, представляющий активное окно (окно с фокусом).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При наличии откройте не windows, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>При отсутствии открытых окон возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddIns">
@@ -174,12 +162,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.AddIns</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции, представляющей все доступные надстройки, независимо от того, является ли они в настоящее время загрузки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию, которая представляет все доступные надстройки независимо от того, загружены они или нет.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Коллекция <b>AddIns</b> включает в себя общие шаблоны и Microsoft Word библиотеки надстроек (файлы WLL) из списка в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
-          <para />
-        </remarks>
+        <remarks><para>Коллекция <b>AddIns</b> включает в себя глобальные шаблоны и библиотеки надстроек Microsoft Word (вллс), перечисленные в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AnswerWizard">
@@ -208,7 +194,7 @@
         <ReturnType>Microsoft.Office.Core.AnswerWizard</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.AnswerWizard" /> объект, который содержит файлы, используемые системой поиска интерактивной справки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.AnswerWizard" /> объект, который содержит файлы, используемые поисковой системой справки в Интернете.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -295,7 +281,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.AutoCaptions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCaptions" /> коллекции, представляющей заголовки, которые автоматически добавляются запрошенные элементы, такие как таблицы и рисунки, вставленные в документ.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCaptions" /> коллекцию, представляющую заголовки, которые автоматически добавляются при вставке элементов, таких как таблицы и рисунки, в документ.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -323,7 +309,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.AutoCorrect</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCorrect" /> объект, содержащий текущий параметры автозамены, записей и исключения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCorrect" /> объект, который содержит текущие параметры автозамены, записи и исключения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -351,7 +337,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.AutoCorrect</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCorrect" /> объект, представляющий автоматические изменения, внесенные в сообщения электронной почты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.AutoCorrect" /> объект, который представляет автоматические исправления, внесенные в сообщения электронной почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -381,11 +367,11 @@
         <Parameter Name="Arg4" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Arg1">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdKey" />. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="Arg2">Необязательные <b>WdKey</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="Arg3">Необязательные <b>WdKey</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="Arg4">Необязательные <b>WdKey</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <summary>Возвращает уникальное число, заданное сочетание клавиш.</summary>
+        <param name="Arg1">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdKey" />. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="Arg2">Необязательный <b>вдкэй</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="Arg3">Необязательный <b>вдкэй</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="Arg4">Необязательный <b>вдкэй</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <summary>Возвращает уникальный номер для указанного сочетания клавиш.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -413,7 +399,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.CaptionLabels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CaptionLabels" /> коллекции, представляющей все доступные заголовки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.CaptionLabels" /> коллекцию, которая представляет все доступные метки заголовков.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -441,13 +427,11 @@
         <Parameter Name="Centimeters" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Centimeters">Требуется <b>один</b>. Значение сантиметр для преобразования в пунктах.</param>
-        <summary>Преобразует измерения из см в точках (1 cm = 28.35 точек).</summary>
+        <param name="Centimeters">Обязательное <b>одно</b>. Значение сантиметра, которое необходимо преобразовать в точки.</param>
+        <summary>Преобразует измерения из сантиметров в точки (1 см = 28,35 очков).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данное свойство возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает преобразованное измерение в виде <b>одного</b>элемента.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChangeFileOpenDirectory">
@@ -473,14 +457,11 @@
         <Parameter Name="Path" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Path">
-          <b>Строковое значение.</b> Путь к папке, в которой будет выполнен поиск документов.</param>
-        <summary>Задает папку, в которой Microsoft Word выполняется поиск документов.</summary>
-        <remarks>
-          <para>Указанной папки перечисленные далее времени, отображается диалоговое окно "Открыть" (меню "файл").</para>
-          <para>Поиск указанной папки для документов, пока пользователь изменяет папку в диалоговом окне Открытие документа или завершения текущего сеанса Word. Использование <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойства для изменения папки по умолчанию для документов в каждом сеансе Word.</para>
-          <para />
-        </remarks>
+        <param name="Path">Обязательный атрибут типа <b>String</b>. Путь к папке, в которой Word ищет документы.</param>
+        <summary>Задает папку, в которой Microsoft Word ищет документы.</summary>
+        <remarks><para>Содержимое указанной папки отображается в следующий раз при отображении диалогового окна открытия (меню "файл").</para>
+          <para>Word ищет в указанной папке документы до тех пор, пока пользователь не изменит папку в диалоговом окне Открыть или не закончится текущий сеанс Word. Используйте <see cref="P:Microsoft.Office.Interop.Word.Options.DefaultFilePath(Microsoft.Office.Interop.Word.WdDefaultFilePath)" /> свойство, чтобы изменить папку по умолчанию для документов в каждом сеансе Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CheckSpelling">
@@ -517,26 +498,23 @@
         <Parameter Name="CustomDictionary10" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Word">
-          <b>Строковое значение.</b> Текст, чьи правописания — для проверки.</param>
-        <param name="CustomDictionary">Необязательный элемент <b>Object</b>. Либо выражение, возвращающее <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объекта или имя файла вспомогательного словаря.</param>
-        <param name="IgnoreUppercase">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Если учитывается регистр букв. Если этот аргумент указан, текущее значение <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> используется свойство.</param>
-        <param name="MainDictionary">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имени файла из основного словаря.</param>
-        <param name="CustomDictionary2">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
-        <param name="CustomDictionary3">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary4">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary5">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary6">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary7">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary8">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary9">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary10">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <summary>Проверяет, находятся в строку для орфографические ошибки.</summary>
+        <param name="Word">Обязательный атрибут типа <b>String</b>. Текст, для которого проверяется Орфография.</param>
+        <param name="CustomDictionary">Необязательный <b>объект</b>. Выражение, возвращающее <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект или имя файла настраиваемого словаря.</param>
+        <param name="IgnoreUppercase">Необязательный <b>объект</b>. <b>Значение true</b> , если регистр символов игнорируется. Если этот аргумент не указан, используется текущее значение <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> свойства.</param>
+        <param name="MainDictionary">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла основного словаря.</param>
+        <param name="CustomDictionary2">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
+        <param name="CustomDictionary3">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary4">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary5">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary6">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary7">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary8">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary9">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary10">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <summary>Проверяет строку на наличие орфографических ошибок.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если строки не орфографические ошибки и <b>значение False,</b> Если это так.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если в строке нет орфографических ошибок, и <b>false</b> в противном случае.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CleanString">
@@ -561,53 +539,50 @@
         <Parameter Name="String" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="String">
-          <b>Строковое значение.</b> Строке source.</param>
-        <summary>Удаляет из указанной строки непечатаемых знаков (1-29 коды знаков) и специальных символов, Microsoft Word или изменения их пробелов (код знака 32).</summary>
+        <param name="String">Обязательный атрибут типа <b>String</b>. Исходная строка.</param>
+        <summary>Удаление непечатаемых символов (кодов символов 1 – 29) и специальных символов Microsoft Word из указанной строки или их изменение на пробелы (код знака 32).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данное свойство возвращает результат в виде <b>строки</b>.</para>
-          <para>Преобразуются следующие символы, как описано в следующей таблице.</para>
+        <remarks><para>Это свойство возвращает результат в виде <b>строки</b>.</para>
+          <para>Следующие символы преобразуются в соответствии с описанием в этой таблице.</para>
           <list type="table">
             <item>
               <description>7 (beep)</description>
-              <description>удалены, если стоять знак 13 (абзаца), а затем преобразуется в символ 9 (вкладка).</description>
+              <description>Удаляется, если не предшествует символ 13 (абзац), а затем преобразуется в символ 9 (TAB).</description>
             </item>
             <item>
               <description>10 (перевод строки)</description>
-              <description>преобразуется в символ 13 (абзаца), если не стоять знак 13, а затем удалено.</description>
+              <description>Преобразуется в символ 13 (абзац), если перед ним не указан символ 13, а затем удаляется.</description>
             </item>
             <item>
-              <description>13 (абзаца)</description>
-              <description>Unchanged.</description>
+              <description>13 (абзац)</description>
+              <description>Без изменений.</description>
             </item>
             <item>
               <description>31 (необязательный дефис)</description>
-              <description>удалены.</description>
+              <description>Удалены.</description>
             </item>
             <item>
-              <description>160 (неразрывного пробела)</description>
-              <description>преобразуется в символ 32 (пробел).</description>
+              <description>160 (неразрывный пробел)</description>
+              <description>Преобразуется в символ 32 (пробел).</description>
             </item>
             <item>
               <description>172 (необязательный дефис)</description>
-              <description>удалены.</description>
+              <description>Удалены.</description>
             </item>
             <item>
-              <description>176 (неразрывного пробела)</description>
-              <description>преобразуется в символ 32 (пробел).</description>
+              <description>176 (неразрывный пробел)</description>
+              <description>Преобразуется в символ 32 (пробел).</description>
             </item>
             <item>
               <description>182 (знак абзаца)</description>
-              <description>удалены.</description>
+              <description>Удалены.</description>
             </item>
             <item>
-              <description>183 (маркер)</description>
-              <description>преобразуется в символ 32 (пробел).</description>
+              <description>183 (маркированный список)</description>
+              <description>Преобразуется в символ 32 (пробел).</description>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CommandBars">
@@ -633,12 +608,10 @@
         <ReturnType>Microsoft.Office.Core.CommandBars</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.CommandBars" /> коллекции, представляющей строки меню и панели инструментов в Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.CommandBars" /> коллекцию, представляющую строку меню и все панели инструментов в Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Global.CustomizationContext" /> свойство, чтобы задать контекст документ или шаблон перед доступом к коллекции <b>CommandBars</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Global.CustomizationContext" /> свойство, чтобы задать контекст шаблона или документа перед обращением к коллекции <b>CommandBars</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -664,11 +637,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomDictionaries">
@@ -694,7 +667,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Dictionaries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> объект, представляющий коллекцию active пользовательских словарей. Флажок в диалоговом окне Вспомогательные словари помечается Active пользовательских словарей.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> объект, представляющий коллекцию активных настраиваемых словарей. Активные настраиваемые словари помечаются флажком в диалоговом окне Дополнительные словари.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -725,12 +698,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Template" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий шаблон или документ сохранены изменения для строки меню, панели инструментов и привязки клавиш.</summary>
+        <summary>Возвращает или задает объект <see cref="T:Microsoft.Office.Interop.Word.Template" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, который представляет шаблон или документ, в котором хранятся изменения в строках меню, панелях инструментов и привязках клавиш.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Соответствует значению сохранить в поле на вкладке команды в диалоговое окно "Настройка" (меню "Сервис").</para>
-          <para />
-        </remarks>
+        <remarks><para>Соответствует значению поля "сохранить в" на вкладке Команды диалогового окна "Настройка" (меню "Сервис").</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDEExecute">
@@ -757,14 +728,11 @@
         <Parameter Name="Command" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Channel">Требуется <b>целое число</b>. Номер канала, возвращаемые <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> метод.</param>
-        <param name="Command">
-          <b>Строковое значение.</b> Команда или последовательность команд, распознаваемых приложение-получатель (сервер DDE). Если приложение-получатель не удается выполнить указанную команду, возникает ошибка.</param>
-        <summary>Отправляет команду или последовательность команд приложения через канал указанного динамический обмен данными (DDE) exchange.</summary>
-        <remarks>
-          <para>Динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para>
-          <para />
-        </remarks>
+        <param name="Channel">Обязательный атрибут типа <b>Integer</b>. Номер канала, возвращенный <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> методом.</param>
+        <param name="Command">Обязательный атрибут типа <b>String</b>. Команда или ряд команд, распознаваемых принимающим приложением (сервером DDE). Если принимающее приложение не может выполнить указанную команду, возникает ошибка.</param>
+        <summary>Отправляет в приложение команду или серию команд с помощью указанного канала динамического обмена данными (DDE).</summary>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDEInitiate">
@@ -791,13 +759,13 @@
         <Parameter Name="Topic" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="App">
-          <b>Строковое значение.</b> Имя приложения.</param>
-        <param name="Topic">
-          <b>Строковое значение.</b> Имя темы, DDE — например, имя документа в формате open — распознанные для приложения, к которому в случае открытия канала.</param>
-        <summary>Открывает канала exchange (DDE) динамических данных для другого приложения и возвращает номер канала.</summary>
+        <param name="App">Обязательный атрибут типа <b>String</b>. Имя приложения.</param>
+        <param name="Topic">Обязательный атрибут типа <b>String</b>. Имя раздела DDE (например, имя открытого документа), распознаваемое приложением, в которое вы открываете канал.</param>
+        <summary>Открывает канал динамического обмена данными (DDE) с другим приложением и возвращает номер канала.</summary>
         <returns>To be added.</returns>
-        <remarks>Exchange <para>динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para><para>, Если операция будет успешна, метод <b>DDEInitiate</b> возвращает номер open канала. Все последующие функции DDE используйте этот номер, чтобы указать в канале.</para><para /></remarks>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para>При успешном выполнении метод <b>ддеинитиате</b> возвращает номер открытого канала. Все последующие функции DDE используют этот номер для указания канала.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDEPoke">
@@ -825,13 +793,13 @@
         <Parameter Name="Data" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Channel">Требуется <b>целое число</b>. Номер канала, возвращаемые <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> метод.</param>
-        <param name="Item">
-          <b>Строковое значение.</b> Элемент в раздел DDE, к которым будет отправляться указанные данные.</param>
-        <param name="Data">
-          <b>Строковое значение.</b> Данные отправляются в приложение-получатель (сервер DDE).</param>
-        <summary>Канал open динамический обмен данными (DDE) exchange используется для отправки данных в приложение.</summary>
-        <remarks>Exchange <para>динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para><para>Если метод <b>DDEPoke</b> не будет успешно, возникает ошибка.</para><para /></remarks>
+        <param name="Channel">Обязательный атрибут типа <b>Integer</b>. Номер канала, возвращенный <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> методом.</param>
+        <param name="Item">Обязательный атрибут типа <b>String</b>. Элемент в разделе DDE, в который отправляются указанные данные.</param>
+        <param name="Data">Обязательный атрибут типа <b>String</b>. Данные, отправляемые принимающему приложению (серверу DDE).</param>
+        <summary>Использует канал DDE (Open Dynamic Data Exchange) для отправки данных в приложение.</summary>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para>Если метод <b>ддепоке</b> не выполнен, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDERequest">
@@ -858,12 +826,28 @@
         <Parameter Name="Item" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Channel">Требуется <b>целое число</b>. Номер канала, возвращаемые <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> метод.</param>
-        <param name="Item">
-          <b>Строковое значение.</b> Элемент, чтобы запросить.</param>
-        <summary>Использует канал open динамический обмен данными (DDE) exchange для запроса сведений от приложение-получатель и возвращает полученные данные в виде строки.</summary>
+        <param name="Channel">Обязательный атрибут типа <b>Integer</b>. Номер канала, возвращенный <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> методом.</param>
+        <param name="Item">Обязательный атрибут типа <b>String</b>. Элемент, который требуется запросить.</param>
+        <summary>Использует канал DDE (Open Dynamic Data Exchange) для запроса информации из принимающего приложения и возвращает сведения в виде строки.</summary>
         <returns>To be added.</returns>
-        <remarks>Exchange <para>динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para><para>При запросе сведения из раздела в серверное приложение, необходимо указать элемент в этой теме, содержимое которого запрашивается. В Microsoft Excel, например ячеек, допустимые элементы и обращаться к ним с помощью любого формата «R1C1» или с именем ссылки.</para><para>Microsoft Excel и других приложений, которые поддерживают DDE распознает раздел с именем «Система». В следующей таблице описаны три стандартные элементы в разделе системы. Обратите внимание на то, что можно получить список элементов в разделе системы с помощью элемента <b>SysItems</b> .</para><list type="table"><item><description>SysItems</description><description>возвращает список всех элементов в разделе System.</description></item><item><description>Разделы</description><description>возвращает список всех доступных разделов.</description></item><item><description>Форматы</description><description>возвращает список всех форматов буфера обмена, поддерживаемых приложением Microsoft Word.</description></item></list><para /></remarks>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para>При запросе информации из раздела в серверном приложении необходимо указать в этом разделе элемент, содержимое которого вы запрашиваете. Например, в Microsoft Excel ячейки являются допустимыми элементами и указывают на них, используя формат R1C1 или именованные ссылки.</para>
+          <para>Microsoft Excel и другие приложения, поддерживающие DDE, распознают раздел под названием "System". В следующей таблице описаны три стандартных элемента раздела System. Обратите внимание, что вы можете получить список других элементов в разделе System с помощью элемента <b>сиситемс</b> .</para>
+          <list type="table">
+            <item>
+              <description>сиситемс</description>
+              <description>Возвращает список всех элементов раздела System.</description>
+            </item>
+            <item>
+              <description>Темы</description>
+              <description>Возвращает список всех доступных разделов.</description>
+            </item>
+            <item>
+              <description>Различных</description>
+              <description>Возвращает список всех форматов буфера обмена, поддерживаемых в Microsoft Word.</description>
+            </item>
+          </list>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDETerminate">
@@ -889,12 +873,10 @@
         <Parameter Name="Channel" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Channel">Требуется <b>целое число</b>. Номер канала, возвращаемые <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> метод.</param>
-        <summary>Закрытие канала exchange (DDE) указанного динамический обмен данными в другом приложении.</summary>
-        <remarks>
-          <para>Динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para>
-          <para />
-        </remarks>
+        <param name="Channel">Обязательный атрибут типа <b>Integer</b>. Номер канала, возвращенный <see cref="M:Microsoft.Office.Interop.Word._Global.DDEInitiate(System.String,System.String)" /> методом.</param>
+        <summary>Закрывает указанный канал динамического обмена данными (DDE) с другим приложением.</summary>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DDETerminateAll">
@@ -918,10 +900,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Закрывает все динамический обмен данными (DDE) каналов, открытых в Microsoft Word.</summary>
-        <remarks>
-          <para>Этот метод не закройте каналы открыто в Word с клиентскими приложениями. С помощью этого метода совпадает с помощью <see cref="M:Microsoft.Office.Interop.Word._Global.DDETerminate(System.Int32)" /> метод для каждого канала open.</para> Exchange 
-          <para>динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para><para>Если прерывать код, который открывает канала DDE, вы может случайно не закрывайте канала. Открыть каналы не закрывается автоматически при макроса или программа будет закрыта и каждый откройте канала использует системные ресурсы. По этой причине рекомендуется использовать этот метод при отладке кода, который открывает один или несколько каналов DDE.</para><para /></remarks>
+        <summary>Закрывает все каналы динамического обмена данными (DDE), открытые Microsoft Word.</summary>
+        <remarks><para>Этот метод не закрывает каналы, открытые в Word клиентскими приложениями. Использование этого метода аналогично использованию <see cref="M:Microsoft.Office.Interop.Word._Global.DDETerminate(System.Int32)" /> метода для каждого открытого канала.</para>
+          <para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para>Если вы прерываете код, который открывает канал DDE, вы можете случайно оставить канал открытым. Открытые каналы не закрываются автоматически при завершении макроса или программы, а каждый открытый канал использует системные ресурсы. По этой причине рекомендуется использовать этот метод при отладке кода, который открывает один или несколько каналов DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Dialogs">
@@ -947,7 +930,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Dialogs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dialogs" /> полей коллекции, представляющей встроенных диалоговых окон в Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Dialogs" /> коллекцию, которая представляет все встроенные диалоговые окна в Microsoft Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -975,7 +958,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Documents</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Documents" /> коллекции, представляющей все открытые документы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Documents" /> коллекцию, которая представляет все открытые документы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1003,7 +986,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FileConverters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FileConverters" /> коллекции, представляющей все доступные конвертеры файлов Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FileConverters" /> коллекцию, которая представляет все доступные конвертеры файлов для Microsoft Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1035,14 +1018,12 @@
         <Parameter Name="KeyCode2" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCode">Требуется <b>целое число</b>. Ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <param name="KeyCode2">Необязательный элемент <b>Object</b>. Второй ключ указывается с помощью одной из констант <b>WdKey</b> .</param>
+        <param name="KeyCode">Обязательный атрибут типа <b>Integer</b>. Ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <param name="KeyCode2">Необязательный <b>объект</b>. Второй ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий заданное сочетание клавиш.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word._Global.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метод для создания <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> аргумент.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для создания аргумента <see cref="M:Microsoft.Office.Interop.Word._Global.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> можно использовать метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FontNames">
@@ -1068,7 +1049,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FontNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объекта, который содержит имена всех доступных шрифтов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объект, включающий имена всех доступных шрифтов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1108,27 +1089,24 @@
         <Parameter Name="CustomDictionary10" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Word">
-          <b>Строковое значение.</b> Слово, которого правописания — для проверки.</param>
-        <param name="CustomDictionary">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла вспомогательного словаря.</param>
-        <param name="IgnoreUppercase">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы пропускать слова из прописных букв. Если этот аргумент указан, текущее значение <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> используется свойство.</param>
-        <param name="MainDictionary">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имени файла из основного словаря. Если не указан основного словаря, Microsoft Word использует основного словаря, соответствующий языковый формат <paramref name="Word" /> или первого слова в диапазоне.</param>
-        <param name="SuggestionMode">Необязательный элемент <b>Object</b>. Указывает способ Word делает предлагаемые исправления. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdSpellingWordType" /> константы. Значение по умолчанию — <b>WdSpellword</b>.</param>
-        <param name="CustomDictionary2">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
-        <param name="CustomDictionary3">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary4">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary5">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary6">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary7">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary8">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary9">Необязательный элемент <b>Object</b>. Либо выражение, которое возвращает объект <b>словаря</b> или имя файла дополнительные вспомогательного словаря.</param>
-        <param name="CustomDictionary10">Необязательный элемент <b>Object</b>. Либо выражение, возвращающее <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объекта или имя файла дополнительные вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SpellingSuggestions" /> коллекции, представляющей слова, предложенных как замен для данного слова.</summary>
+        <param name="Word">Обязательный атрибут типа <b>String</b>. Слово, для которого проверяется Орфография.</param>
+        <param name="CustomDictionary">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла настраиваемого словаря.</param>
+        <param name="IgnoreUppercase">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы пропускать слова из прописных букв. Если этот аргумент не указан, используется текущее значение <see cref="P:Microsoft.Office.Interop.Word.Options.IgnoreUppercase" /> свойства.</param>
+        <param name="MainDictionary">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла основного словаря. Если не указать основной словарь, Microsoft Word использует основной словарь, соответствующий языку форматирования <paramref name="Word" /> первого слова в диапазоне.</param>
+        <param name="SuggestionMode">Необязательный <b>объект</b>. Указывает способ, с помощью которого Word выполняет проверку правописания. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdSpellingWordType" /> констант. Значение по умолчанию — <b>вдспеллворд</b>.</param>
+        <param name="CustomDictionary2">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
+        <param name="CustomDictionary3">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary4">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary5">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary6">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary7">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary8">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary9">Необязательный <b>объект</b>. Выражение, возвращающее объект <b>Dictionary</b> или имя файла дополнительного вспомогательного словаря.</param>
+        <param name="CustomDictionary10">Необязательный <b>объект</b>. Выражение, возвращающее <see cref="T:Microsoft.Office.Interop.Word.Dictionary" /> объект или имя файла дополнительного вспомогательного словаря. Можно указать до девяти дополнительных словарей.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SpellingSuggestions" /> коллекцию, представляющую слова, предложенные для проверки правописания для определенного слова.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если слово написано правильно, <see cref="P:Microsoft.Office.Interop.Word.SpellingSuggestions.Count" /> свойства объекта <b>SpellingSuggestions</b> возвращает нуль (0).</para>
-          <para />
-        </remarks>
+        <remarks><para>Если слово написано правильно, <see cref="P:Microsoft.Office.Interop.Word.SpellingSuggestions.Count" /> свойство объекта <b>SpellingSuggestions</b> возвращает значение 0 (ноль).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HangulHanjaDictionaries">
@@ -1154,12 +1132,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.HangulHanjaConversionDictionaries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HangulHanjaConversionDictionaries" /> коллекции, представляющей все словари active пользовательского преобразования.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HangulHanjaConversionDictionaries" /> коллекцию, которая представляет все активные настраиваемые словари преобразования.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Словари Active пользовательского преобразования отмеченные флажок в диалоговом окне Вспомогательные словари (в меню Сервис выберите пункт Параметры, а затем нажмите кнопку орфографии &amp; грамматики вкладки, а затем нажмите кнопку пользовательских словарей).</para>
-          <para />
-        </remarks>
+        <remarks><para>Активные настраиваемые словари преобразования помечаются флажком в диалоговом окне Дополнительные словари (в меню Сервис выберите пункт Параметры, а затем откройте &amp; вкладку грамматика правописания, а затем нажмите кнопку пользовательские словари).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Help">
@@ -1185,12 +1161,10 @@
         <Parameter Name="HelpType" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="HelpType">Требуется <b>объект</b>. Окне или интерактивной справки. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdHelpType" /> константу.</param>
-        <summary>Сведения о интерактивной справки.</summary>
-        <remarks>
-          <para>Некоторые <b>WdHelpType</b> константы могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <param name="HelpType">Обязательный <b>объект</b>. Раздел справки или окно справки. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdHelpType" /> константой.</param>
+        <summary>Отображение справочной информации.</summary>
+        <remarks><para>Некоторые константы <b>вдхелптипе</b> могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InchesToPoints">
@@ -1216,13 +1190,11 @@
         <Parameter Name="Inches" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Inches">Требуется <b>один</b>. Значение дюйма для преобразования в пунктах.</param>
-        <summary>Преобразует измерения из дюймов точек (1 дюйм = 72 точки).</summary>
+        <param name="Inches">Обязательное <b>одно</b>. Значение в дюймах, которое необходимо преобразовать в точки.</param>
+        <summary>Преобразует измерение из дюймов в точки (1 дюйм = 72 точек).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsObjectValid">
@@ -1251,13 +1223,11 @@
         <Parameter Name="Object" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Object">Требуется <b>объект</b>. Переменная, которая ссылается на объект.</param>
-        <summary>Определяет, является ли допустимый указанной переменной, которая ссылается на объект.</summary>
+        <param name="Object">Обязательный <b>объект</b>. Переменная, ссылающаяся на объект.</param>
+        <summary>Определяет, является ли указанная переменная, ссылающаяся на объект, допустимым.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если указанной переменной, которая ссылается на объект является допустимым и <b>False</b> , если был удален объект ссылается переменная.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанная переменная, которая ссылается на объект, является допустимой, и <b>false</b> , если объект, на который ссылается переменная, был удален.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSandboxed">
@@ -1283,13 +1253,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли окно приложения является защищенный просмотр.</summary>
-        <value>
-          <b>значение true,</b> Если окно приложения является защищенный просмотр; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает значение, указывающее, является ли окно приложения защищенным окном просмотра.</summary>
+        <value><b>значение true</b> , если окно приложения является защищенным окном просмотра; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyBindings">
@@ -1315,7 +1282,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.KeyBindings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> коллекции, представляющей настроены назначения клавиш, которые включают код клавиши, основные категории и команды.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> коллекцию, которая представляет настраиваемое назначение клавиш, включающее код клавиши, ключевую категорию и команду.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1348,11 +1315,10 @@
         <Parameter Name="CommandParameter" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCategory">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Категория сочетание клавиш.</param>
-        <param name="Command">
-          <b>Строковое значение.</b> Имя команды.</param>
-        <param name="CommandParameter">Необязательный элемент <b>Object</b>. Дополнительный текст, при их наличии, необходимые для команды, заданной параметром <paramref name="Command" />. Дополнительные сведения можно <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод для <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeysBoundTo" /> объект, представляющий все сочетания клавиш, назначенные для заданного элемента.</summary>
+        <param name="KeyCategory">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Категория сочетания клавиш.</param>
+        <param name="Command">Обязательный атрибут типа <b>String</b>. Имя команды.</param>
+        <param name="CommandParameter">Необязательный <b>объект</b>. Дополнительный текст (при наличии), необходимый для команды, заданной параметром <paramref name="Command" />. Для получения дополнительных сведений обратитесь к <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> методу <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекта.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeysBoundTo" /> объект, который представляет все сочетания клавиш, назначенные указанному элементу.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1380,14 +1346,12 @@
         <Parameter Name="KeyCode2" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCode">Требуется <b>целое число</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="KeyCode2">Необязательный элемент <b>Object</b>. Второй ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <summary>Возвращает строку сочетание клавиш для указанных ключей (например, CTRL + SHIFT + A).</summary>
+        <param name="KeyCode">Обязательный атрибут типа <b>Integer</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="KeyCode2">Необязательный <b>объект</b>. Второй ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <summary>Возвращает строку сочетаний клавиш для заданных ключей (например, CTRL + SHIFT + A).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word._Global.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метод для создания <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> аргумент.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для создания аргумента <see cref="M:Microsoft.Office.Interop.Word._Global.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> можно использовать метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LandscapeFontNames">
@@ -1413,7 +1377,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FontNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объекта, который содержит имена всех доступных альбомная шрифты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объект, включающий имена всех доступных альбомных шрифтов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1441,12 +1405,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Languages</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Languages" /> коллекции, представляющей языки проверки правописания, перечисленные в диалоговом окне язык.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Languages" /> коллекцию, представляющую языки проверки правописания, перечисленные в диалоговом окне язык.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для доступа к диалоговому окну языка выберите в меню Сервис выберите язык и нажмите кнопку Выбрать язык.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы открыть диалоговое окно язык, в меню Сервис выберите пункт язык, а затем щелкните пункт Выбрать язык.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageSettings">
@@ -1472,7 +1434,7 @@
         <ReturnType>Microsoft.Office.Core.LanguageSettings</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.LanguageSettings" /> объект, который содержит сведения о параметрах языка в Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.LanguageSettings" /> объект, который содержит сведения о языковых параметрах в Microsoft Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1500,13 +1462,11 @@
         <Parameter Name="Lines" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Lines">Требуется <b>один</b>. Значение строки, который следует преобразовать в пунктах.</param>
-        <summary>Преобразует измерения из строки в пунктах (1 строка = 12 точек).</summary>
+        <param name="Lines">Обязательное <b>одно</b>. Значение строки, которое необходимо преобразовать в точки.</param>
+        <summary>Преобразует измерения из линий в точки (1 строка = 12 баллов).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListGalleries">
@@ -1532,12 +1492,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListGalleries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> коллекции, представляющей трех список галереи шаблона: <b>Маркированный</b>, <b>Нумерованный</b>и <b>Многоуровневый</b>.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> коллекцию, представляющую три коллекции шаблонов списков: <b>Маркированный</b>, <b>Нумерованный</b>и структурированный <b></b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Каждая коллекция соответствует вкладки в маркеры и диалоговое окно находится в меню "Формат".</para>
-          <para />
-        </remarks>
+        <remarks><para>Каждая коллекция соответствует вкладке в диалоговом окне маркеры и нумерация, расположенном в меню Формат.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MacroContainer">
@@ -1563,7 +1521,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Template" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий шаблон или документ, в котором хранится модуль, содержащий выполнение процедуры.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.Template" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий шаблон или документ, в котором хранится модуль, содержащий выполняемую процедуру.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1591,13 +1549,11 @@
         <Parameter Name="Millimeters" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Millimeters">Требуется <b>один</b>. Значение мм для преобразования в пунктах.</param>
-        <summary>Преобразует измерения из мм точек (1 мм = 2,85 точек).</summary>
+        <param name="Millimeters">Обязательное <b>одно</b>. Значение миллиметра, которое необходимо преобразовать в точки.</param>
+        <summary>Преобразует измерение из миллиметров в точки (1 мм = 2,85 баллов).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -1649,13 +1605,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Откроется новое окно с одного документа в указанном окне.</summary>
+        <summary>Открывает новое окно с тем же документом, что и в указанном окне.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект.</para>
-          <para>Двоеточие (:) и числа отображаются в заголовке окна при открытии документа более одного окна.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает <see cref="T:Microsoft.Office.Interop.Word.Window" /> объект.</para>
+          <para>Двоеточие (:) Кроме того, если для документа открыто несколько окон, в заголовке окна отображается число.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NormalTemplate">
@@ -1681,7 +1635,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Template</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Template" /> объект, представляющий шаблона Normal.dot.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Template" /> объект, представляющий обычный шаблон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1737,7 +1691,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1765,13 +1719,11 @@
         <Parameter Name="Picas" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Picas">Требуется <b>один</b>. Значение пика для преобразования в пунктах.</param>
-        <summary>Преобразует измерения из пики в точках (1 пика = 12 точек).</summary>
+        <param name="Picas">Обязательное <b>одно</b>. Значение пика, которое необходимо преобразовать в точки.</param>
+        <summary>Преобразует измерение с пиками в баллы (1 пика = 12 очков).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PixelsToPoints">
@@ -1797,14 +1749,12 @@
         <Parameter Name="fVertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Pixels">Требуется <b>один</b>. Значение в пикселях для преобразования в пунктах.</param>
-        <param name="fVertical">Необязательный элемент <b>Object</b>. <b>Значение true</b> для преобразования вертикальной точек; <b>Значение false</b> для преобразования точек по горизонтали.</param>
-        <summary>Преобразует измерения из точек в пунктах.</summary>
+        <param name="Pixels">Обязательное <b>одно</b>. Значение пикселя, которое необходимо преобразовать в точки.</param>
+        <param name="fVertical">Необязательный <b>объект</b>. <b>Значение true</b> для преобразования вертикальных пикселов; <b>Значение false</b> для преобразования горизонтальных пикселов.</param>
+        <summary>Преобразует измерения из точек в точки.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToCentimeters">
@@ -1830,13 +1780,11 @@
         <Parameter Name="Points" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Измерения в точках.</param>
-        <summary>Преобразует измерения из точки см (1 сантиметр = 28.35 точек).</summary>
+        <param name="Points">Обязательное <b>одно</b>. Единица измерения (в пунктах).</param>
+        <summary>Преобразует измерения из точек в сантиметры (1 сантиметр = 28,35 очков).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToInches">
@@ -1862,13 +1810,11 @@
         <Parameter Name="Points" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Измерения в точках.</param>
-        <summary>Преобразует измерения из точки дюйма (1 дюйм = 72 точки).</summary>
+        <param name="Points">Обязательное <b>одно</b>. Единица измерения (в пунктах).</param>
+        <summary>Преобразует измерения из точек в дюймы (1 дюйма = 72 точек).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToLines">
@@ -1894,13 +1840,11 @@
         <Parameter Name="Points" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Измерения в точках.</param>
-        <summary>Преобразует измерения из точки на линии (1 строка = 12 точек).</summary>
+        <param name="Points">Обязательное <b>одно</b>. Единица измерения (в пунктах).</param>
+        <summary>Преобразует измерения из точек в линии (1 строка = 12 баллов).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToMillimeters">
@@ -1926,13 +1870,11 @@
         <Parameter Name="Points" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Измерения в точках.</param>
-        <summary>Преобразует измерения из точки мм (1 мм = 2.835 точек).</summary>
+        <param name="Points">Обязательное <b>одно</b>. Единица измерения (в пунктах).</param>
+        <summary>Преобразует измерения из точек в миллиметры (1 миллиметр = 2,835 точек).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данное свойство возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает преобразованное измерение в виде <b>одного</b>элемента.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToPicas">
@@ -1958,13 +1900,11 @@
         <Parameter Name="Points" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Измерения в точках.</param>
-        <summary>Преобразует измерения из точки пики (1 пика = 12 точек).</summary>
+        <param name="Points">Обязательное <b>одно</b>. Единица измерения (в пунктах).</param>
+        <summary>Преобразует измерение от точек к пикам (1 пика = 12 очков).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PointsToPixels">
@@ -1990,14 +1930,12 @@
         <Parameter Name="fVertical" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Points">Требуется <b>один</b>. Значение точки для преобразования в пикселях.</param>
-        <param name="fVertical">Необязательный элемент <b>Object</b>. <b>Значение true</b> для возвращения результатов в виде вертикальной точек; <b>Значение false</b> для возвращения результата следующим горизонтальной пикселей.</param>
-        <summary>Преобразует измерения из точки в пикселях.</summary>
+        <param name="Points">Обязательное <b>одно</b>. Значение точки, которое необходимо преобразовать в точки.</param>
+        <param name="fVertical">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы вернуть результат в виде вертикальных пикселов; <b>Значение false</b> , чтобы вернуть результат в виде горизонтальных пикселов.</param>
+        <summary>Преобразует измерения из точек в пиксели.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает преобразованные измерения как <b>один</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает преобразованное измерение в виде <b>одного</b>объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PortraitFontNames">
@@ -2023,7 +1961,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FontNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объекта, который содержит имена всех доступных Книжная шрифты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FontNames" /> объект, включающий имена всех доступных портретных шрифтов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2054,12 +1992,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли предварительного просмотра текущего представления.</summary>
+        <summary>Определяет, является ли предварительный просмотр текущим представлением.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если предварительного просмотра текущего представления и <b>значение False,</b> Если это не так. Укажите <b>значение True</b> или <b>False</b> для включения или отключения функциональные возможности.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если предварительный просмотр является текущим представлением, и <b>false</b> , если нет. Задайте <b>значение true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ProtectedViewWindows">
@@ -2085,12 +2021,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.ProtectedViewWindows</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объект, представляющий open защищенный просмотр windows.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объект, представляющий открытые окна защищенного просмотра.</summary>
+        <value>Объект <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" />.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RecentFiles">
@@ -2116,7 +2050,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.RecentFiles</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.RecentFiles" /> коллекции, представляющей наиболее часто используемых файлов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.RecentFiles" /> коллекцию, которая представляет последние доступ к файлам.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2143,14 +2077,12 @@
         <Parameter Name="Times" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Times">Необязательный элемент <b>Object</b>. Сколько раз необходимо повторить последняя команда.</param>
-        <summary>Повтор последнего действия редактирования один или несколько раз.</summary>
+        <param name="Times">Необязательный <b>объект</b>. Сколько раз вы хотите повторить последнюю команду.</param>
+        <summary>Повторяет Последнее действие редактирования один или несколько раз.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод возвращает <b>значение True,</b> Если команды были успешно повторяется.</para>
-          <para>С помощью этого метода — это эквивалентно использованию в меню Правка команду повторить.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод возвращает <b>значение true</b> , если команды были успешно повторены.</para>
+          <para>Использование этого метода эквивалентно использованию команды повторить в меню Правка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Selection">
@@ -2176,7 +2108,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Selection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, который представляет выбранный диапазон или точку вставки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, представляющий выбранный диапазон или точку вставки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2207,12 +2139,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если отображается окно редактора Visual Basic.</summary>
+        <summary>Определяет, отображается ли окно редактора Visual Basic.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если отображается окно редактора Visual Basic и <b>значение False</b> в противном случае. Укажите <b>значение True</b> или <b>False</b> для включения или отключения видимости.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если окно редактора Visual Basic видимо, и <b>false</b> , если нет. Задайте <b>значение true</b> или <b>false</b> , чтобы включить или отключить видимость.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StatusBar">
@@ -2270,10 +2200,9 @@
         <Parameter Name="LanguageID" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Word">
-          <b>Строковое значение.</b> Указанное слово или фраза.</param>
-        <param name="LanguageID">Необязательный элемент <b>Object</b>. Язык, используемый в тезаурусе. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы (несмотря на то, что некоторые из перечисленных констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен).</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> , содержащий сведения из тезаурус на синонимов, антонимов, или связанные слова и выражения для указанного слова или фразы.</summary>
+        <param name="Word">Обязательный атрибут типа <b>String</b>. Указанное слово или фраза.</param>
+        <param name="LanguageID">Необязательный <b>объект</b>. Язык, используемый для тезауруса. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант (хотя некоторые из перечисленных констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена).</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.SynonymInfo" /> объект, который содержит сведения из тезауруса для синонимов, антонимс или связанных слов и выражений для указанного слова или фразы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2301,7 +2230,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.System</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.System" /> объект, который можно использовать для возвращения сведения, связанные с системы и выполнения задач, связанных с системой.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.System" /> объект, который можно использовать для возврата информации, связанной с системой, и выполнения задач, связанных с системой.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2329,7 +2258,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Tasks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Tasks" /> коллекции, представляющей всех приложений, работающих под управлением.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Tasks" /> коллекцию, которая представляет все запущенные приложения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2357,7 +2286,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Templates</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Templates" /> коллекции, представляющей все доступные шаблоны — Общие шаблоны, а также тех, подключенного к открывать документы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Templates" /> коллекцию, которая представляет все доступные шаблоны — глобальные шаблоны, а также те, которые присоединены к открытым документам.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2385,7 +2314,7 @@
         <ReturnType>Microsoft.Vbe.Interop.VBE</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="P:Microsoft.Office.Interop.Word._Application.VBE" /> объект, представляющий редактора Visual Basic.</summary>
+        <summary>Возвращает <see cref="P:Microsoft.Office.Interop.Word._Application.VBE" /> объект, представляющий редактор Visual Basic.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2413,7 +2342,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Windows</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекции, представляющей все окна документа. Коллекции соответствует имен окон, которые отображаются в нижней части меню окно.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Windows" /> коллекцию, которая представляет все окна документов. Коллекция соответствует именам окон, которые отображаются в нижней части меню окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2441,13 +2370,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>автоматизации</b> (Word.Basic), который содержит методы, позволяющие WordBasic операторы и функции, доступные в Microsoft Word версии 6.0 и Word для Windows 95.</summary>
+        <summary>Возвращает объект <b>автоматизации</b> (Word. Basic), включающий методы для всех операторов и функций WordBasic, доступных в Microsoft word версии 6,0 и Word для Windows 95.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>В Word 2000 и более поздних версий, при открытии Word версии 6.0 или Word для Windows 95 шаблон, содержащий макросы WordBasic макросы автоматически преобразуются в модулей Visual Basic. Каждый оператор WordBasic и функции в макросе преобразуется в соответствующий метод Word.Basic.</para>
-          <para>Сведения о WordBasic инструкции и функции, обратитесь к справке WordBasic в Word с версией 6.0 или Word 95.</para>
-          <para />
-        </remarks>
+        <remarks><para>В Word 2000 и более поздних версиях при открытии шаблона Word версии 6,0 или Word для Windows 95 макросы, содержащие макросы WordBasic, автоматически преобразуются в модули Visual Basic. Каждый оператор WordBasic и функция в макросе преобразуются в соответствующий метод Word. Basic.</para>
+          <para>Сведения о операторах и функциях языка WordBasic приведены в статье WordBasic Help в Word версии 6,0 или Word для Windows 95.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

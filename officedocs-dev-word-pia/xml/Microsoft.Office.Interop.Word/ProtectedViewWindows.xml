@@ -1,13 +1,5 @@
 <Type Name="ProtectedViewWindows" FullName="Microsoft.Office.Interop.Word.ProtectedViewWindows">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="506d1829c1c4c6385365d719f17a17c3f44c87a3" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673880" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ProtectedViewWindows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2e9ac6ba9dba7949a597ac1a0f57c956ed0366db" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144157" /></Metadata><TypeSignature Language="C#" Value="public interface ProtectedViewWindows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ProtectedViewWindows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" />
   <TypeSignature Language="VB.NET" Value="Public Interface ProtectedViewWindows&#xA;Implements IEnumerable" />
@@ -30,12 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объекты, которые в настоящий момент открываться в Word 2010.</summary>
-    <remarks>
-      <para>Документов, которые отображаются в окне защищенный просмотр не могут быть изменены и не имеют полномочий на запуск активного содержимого, такие как макросы и данные подключений.</para>
-      <para>Использования <b>ProtectedViewWindows</b>(<paramref name="Index" />), где <paramref name="Index" /> — номер индекса для возврата одной <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объект.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объектов, которые в данный момент открыты в Word 2010.</summary>
+    <remarks><para>Документы, отображаемые в защищенном режиме просмотра, не могут редактироваться и запрещены для запуска активного содержимого, например макросов и подключений к данным.</para>
+      <para>Используйте <b>ProtectedViewWindows</b>(<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса для возврата одного <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -62,12 +52,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -93,12 +80,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число защищенный просмотр окон в коллекции.</summary>
-        <value>Число защищенный просмотр окон в коллекции.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает количество окон с защищенным просмотром в коллекции.</summary>
+        <value>Количество окон с защищенным просмотром в коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -124,14 +109,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание!</b>это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -162,7 +145,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -192,9 +175,9 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">Отдельный объект которого требуется получить.</param>
-        <summary>Возвращает объект отдельных <b>ProtectedViewWindows</b> в семействе сайтов.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" />.</value>
+        <param name="Index">Возвращаемый отдельный объект.</param>
+        <summary>Возвращает отдельный объект <b>ProtectedViewWindows</b> в коллекции.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -224,20 +207,15 @@
         <Parameter Name="OpenAndRepair" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="FileName">Имя документа (допускаются пути).</param>
-        <param name="AddToRecentFiles">
-          <b>значение true,</b> Чтобы добавить имя файла в список недавно использованных файлов в нижней части меню "файл"; в противном случае — <b>false</b>.</param>
+        <param name="FileName">Имя документа (пути принимаются).</param>
+        <param name="AddToRecentFiles"><b>значение true</b> , чтобы добавить имя файла в список недавно использовавшихся файлов в нижней части меню файл; в противном случае — <b>false</b>.</param>
         <param name="PasswordDocument">Пароль для открытия документа.</param>
-        <param name="Visible">
-          <b>значение true,</b> Если документ открыт в окне видимым. в противном случае — <b>false</b>. Значение по умолчанию — True.</param>
-        <param name="OpenAndRepair">
-          <b>значение true,</b> Чтобы восстановить документ, чтобы предотвратить повреждение документа; в противном случае — <b>false</b>.</param>
-        <summary>Открывает указанный документ в новом окне защищенный просмотр.</summary>
-        <returns>A <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" /> объекта.</returns>
-        <remarks>
-          <para>Избегайте использования жестко паролей в приложениях. Если в процедуре необходим пароль, запрашивать пароль пользователя, сохраните его в переменной и затем использовать эту переменную в коде.</para>
-          <para />
-        </remarks>
+        <param name="Visible"><b>значение true</b> , если документ открыт в видимом окне; в противном случае — <b>false</b>. Значение по умолчанию — True.</param>
+        <param name="OpenAndRepair"><b>значение true</b> для восстановления документа, чтобы предотвратить повреждение документа; в противном случае — <b>false</b>.</param>
+        <summary>Открывает указанный документ в новом окне защищенного просмотра.</summary>
+        <returns>Объект <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindow" />.</returns>
+        <remarks><para>Избегайте использования в приложениях жестко заданных паролей. Если в процедуре необходим пароль, запросите пароль от пользователя, сохраните его в переменной, а затем используйте переменную в коде.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -263,9 +241,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.ProtectedViewWindows" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

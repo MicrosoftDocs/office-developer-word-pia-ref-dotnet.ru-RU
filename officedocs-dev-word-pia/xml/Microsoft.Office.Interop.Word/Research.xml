@@ -1,13 +1,5 @@
 <Type Name="Research" FullName="Microsoft.Office.Interop.Word.Research">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f3053e80208307ba476ee3813e42cec9f34c18c4" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672529" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Research" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="09c7f2651f0df71c7549952dfe0bc63e7b6d09f1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147685" /></Metadata><TypeSignature Language="C#" Value="public interface Research" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Research" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Research" />
   <TypeSignature Language="VB.NET" Value="Public Interface Research" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Предоставляет доступ к службе со справочными материалами приложения Microsoft Office Word.</summary>
+    <summary>Предоставляет доступ к функции справочных служб Microsoft Office Word.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -54,9 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,16 +73,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Research.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Integer</b>.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Research.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FavoriteService">
@@ -121,13 +107,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает строку, которая определяет службу избранные справочных материалов.</summary>
-        <value>Задает службу избранные справочных материалов.</value>
-        <remarks>
-          <para>Строку, изменять или возвращаются для это свойство определяет идентификатор GUID для службы любимые исследования.</para>
-          <para>Этого свойства имеет тот же эффект, как выбор службы любимые исследования в диалоговом окне Параметры справочных материалов в Microsoft Word 2010.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает строку, задающую службу поиска избранного.</summary>
+        <value>Указывает службу избранного поиска.</value>
+        <remarks><para>Строка, которая задается или возвращается для этого свойства, указывает идентификатор GUID службы поиска в избранном.</para>
+          <para>Задание этого свойства аналогично выбору избранной службы поиска в диалоговом окне "Параметры справочных материалов" в Microsoft Word 2010.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsResearchService">
@@ -153,11 +137,9 @@
         <Parameter Name="ServiceID" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="ServiceID">Задает идентификатор GUID, определяющий службу поиска.</param>
-        <summary>Указывает, является ли указанный идентификатор GUID в <paramref name="ServiceID" /> параметр соответствует настроенный в данный момент служба.</summary>
-        <returns>
-          <b>Boolean</b>
-        </returns>
+        <param name="ServiceID">Указывает идентификатор GUID, определяющий службу поиска.</param>
+        <summary>Указывает, соответствует ли идентификатору GUID <paramref name="ServiceID" /> , указанному в параметре, текущей настроенной службе.</summary>
+        <returns><b>Boolean</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -185,9 +167,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Research" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -217,14 +197,12 @@
         <Parameter Name="LaunchQuery" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="ServiceID">Задает идентификатор GUID, определяющий службу поиска.</param>
+        <param name="ServiceID">Указывает идентификатор GUID, определяющий службу поиска.</param>
         <param name="QueryString">Указывает строку запроса.</param>
-        <param name="QueryLanguage">Указывает язык запросов из строки запроса.</param>
-        <param name="UseSelection">
-          <b>Значение true</b> для использования текущего выделения в качестве строки запроса.  Это переопределяет <paramref name="QueryString" /> параметр Если задать. Значение по умолчанию — <b>False</b>.</param>
-        <param name="LaunchQuery">
-          <b>Значение true,</b> запускает запрос. False отображается область задач Справочные материалы, областью действия указанного research служба поиска.</param>
-        <summary>Определяет запрос справочных материалов.</summary>
+        <param name="QueryLanguage">Указывает язык запросов для строки запроса.</param>
+        <param name="UseSelection"><b>Значение true</b> , чтобы использовать выделенный фрагмент в качестве строки запроса.  Это переопределяет <paramref name="QueryString" /> параметр, если он задан. Значение по умолчанию — <b>false</b>.</param>
+        <param name="LaunchQuery"><b>True</b> запускает запрос. False отображение области задач справочных материалов для поиска в указанной службе справочных материалов.</param>
+        <summary>Указывает запрос справочных материалов.</summary>
         <returns>Объект</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -253,12 +231,10 @@
         <Parameter Name="LanguageTo" Type="Microsoft.Office.Interop.Word.WdLanguageID" />
       </Parameters>
       <Docs>
-        <param name="LanguageFrom">Задает язык перевода из.</param>
-        <param name="LanguageTo">Задает язык перевода.</param>
+        <param name="LanguageFrom">Указывает язык, с которого осуществляется перевод.</param>
+        <param name="LanguageTo">Указывает язык, на который требуется перевести.</param>
         <summary>Задает языки для службы перевода.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="Hyperlinks" FullName="Microsoft.Office.Interop.Word.Hyperlinks">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8d151b1c999c955b2def6c04b13e872538ebe676" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674020" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Hyperlinks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6826833cc30e7cdb396aeda67c34be780ae7876a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147979" /></Metadata><TypeSignature Language="C#" Value="public interface Hyperlinks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Hyperlinks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Hyperlinks" />
   <TypeSignature Language="VB.NET" Value="Public Interface Hyperlinks&#xA;Implements IEnumerable" />
@@ -30,16 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объекты в документе, диапазон или выбора.</summary>
-    <remarks>
-      <para>Используйте свойство <b>гиперссылки</b><see cref="T:Microsoft.Office.Interop.Word.Document" />, <see cref="T:Microsoft.Office.Interop.Word.Range" />, или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект для возврата коллекции <b>гиперссылки</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Hyperlinks.Add(System.Object,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод создать гиперссылку и добавляет его в коллекцию <b>гиперссылки</b> .</para>
-      <para>
-        <b>Гиперссылки</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>гиперссылки</b> в документе, диапазон или выделение.</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Hyperlinks.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалов, используйте коллекцию с помощью объекта <b>Range</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объектов в документе, диапазоне или выделенном фрагменте.</summary>
+    <remarks><para>Используйте свойство <b>гиперссылки</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" />a <see cref="T:Microsoft.Office.Interop.Word.Range" />, или <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта, чтобы возвратить коллекцию <b>гиперссылок</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Hyperlinks.Add(System.Object,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы создать гиперссылку и добавить ее в коллекцию <b>гиперссылок</b> .</para>
+      <para>Используйте <b>гиперссылки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>гиперссылки</b> в документе, диапазоне или выделенном фрагменте.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Hyperlinks.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Add">
@@ -104,13 +92,13 @@
         <Parameter Name="Target" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Anchor">Требуется <b>объект</b>. Текст или рисунок, который будет преобразован в гиперссылки.</param>
-        <param name="Address">Необязательный элемент <b>Object</b>. Адрес для указанной ссылки. Адрес может быть адресом электронной почты, адрес в Интернете или имя файла. Обратите внимание на то, что Microsoft Word не Проверьте правильность адреса.</param>
-        <param name="SubAddress">Необязательный элемент <b>Object</b>. Имя в месте назначения файла, например закладки, значок с именем диапазон или номер слайда.</param>
-        <param name="ScreenTip">Необязательный элемент <b>Object</b>. Текст, который отображается в виде всплывающей подсказки при наведении указателя мыши над указанным гиперссылки. Значение по умолчанию — <paramref name="Address" />.</param>
-        <param name="TextToDisplay">Необязательный элемент <b>Object</b>. Отображаемый текст указанного гиперссылки. Значение этого аргумента заменяет текст или рисунок, указанного идентификатором <paramref name="Anchor" />.</param>
-        <param name="Target">Необязательный элемент <b>Object</b>. Имя фрейма или окна, в котором требуется загрузить указанный гиперссылки.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий новую гиперссылку, добавлены в диапазон, выделенный фрагмент или документа.</summary>
+        <param name="Anchor">Обязательный <b>объект</b>. Текст или рисунок, который требуется включить в гиперссылку.</param>
+        <param name="Address">Необязательный <b>объект</b>. Адрес для указанной ссылки. Адрес может быть адресом электронной почты, адресом в Интернете или именем файла. Обратите внимание, что Microsoft Word не проверяет точность адреса.</param>
+        <param name="SubAddress">Необязательный <b>объект</b>. Имя расположения в конечном файле, например, закладки, именованного диапазона или номера слайда.</param>
+        <param name="ScreenTip">Необязательный <b>объект</b>. Текст, который отображается как всплывающая подсказка, когда указатель мыши наведен на указанную гиперссылку. Значение по умолчанию — <paramref name="Address" />.</param>
+        <param name="TextToDisplay">Необязательный <b>объект</b>. Отображаемый текст указанной гиперссылки. Значение этого аргумента заменяет текст или рисунок, заданный параметром <paramref name="Anchor" />.</param>
+        <param name="Target">Необязательный <b>объект</b>. Имя фрейма или окна, в которое требуется загрузить указанную гиперссылку.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Hyperlink" /> объект, представляющий новую гиперссылку, добавленную к диапазону, выделению или документу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -166,7 +154,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -194,11 +182,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -259,9 +247,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -289,7 +276,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

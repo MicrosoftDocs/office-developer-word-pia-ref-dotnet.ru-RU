@@ -1,13 +1,5 @@
 <Type Name="FileConverters" FullName="Microsoft.Office.Interop.Word.FileConverters">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a9991499cc222e4107034dfd282d099eaf96e217" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673194" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FileConverters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="32cfd447f3ab9be6786784ffbe11bd117040831a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148070" /></Metadata><TypeSignature Language="C#" Value="public interface FileConverters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FileConverters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FileConverters" />
   <TypeSignature Language="VB.NET" Value="Public Interface FileConverters&#xA;Implements IEnumerable" />
@@ -30,10 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объекты, которые представляют все конвертеры файлов, доступных для открытия и сохранения файлов.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.FileConverters" /> свойство для возврата коллекции <b>FileConverters</b> .</para> Метод <b>Add</b><para>недоступен для коллекции <b>FileConverters</b> . Объекты <b>FileConverter</b> добавляются во время установки системы Microsoft Office или при установке дополнительных конвертеров.</para><para>Использования <b>FileConverters</b>(<paramref name="index" />), где <paramref name="index" /> — это имя класса или номер индекса, чтобы возвратить объект <b>FileConverter</b> .</para><para>Номер индекса представляет положение конвертера файлов в коллекции <b>FileConverters</b> .</para> Конвертеры 
-      <para>файла для сохранения документов, перечислены в диалоговом окне Сохранить как. Конвертеры файлов для открытия документов отображаются в диалоговом окне, если Подтверждать преобразование при Open флажок установлен на вкладке Общие в диалоговое окно "Параметры" (меню "Сервис").</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектов, представляющих все конвертеры файлов, доступные для открытия и сохранения файлов.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.FileConverters" /> свойство, чтобы возвратить коллекцию <b>FileConverters</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>FileConverters</b> . Объекты <b>FileConverter</b> добавляются во время установки Microsoft Office или путем установки дополнительных конвертеров.</para>
+      <para>Используйте <b>FileConverters</b>(<paramref name="index" />), где <paramref name="index" /> — это имя класса или номер индекса, чтобы вернуть один объект <b>FileConverter</b> .</para>
+      <para>Номер индекса представляет положение конвертера файлов в коллекции <b>FileConverters</b> .</para>
+      <para>Конвертеры файлов для сохранения документов отображаются в диалоговом окне "Сохранить как". Конвертеры файлов для открытия документов отображаются в диалоговом окне, если установлен флажок подтверждать преобразование при открытии на вкладке Общие диалогового окна Параметры (меню Сервис).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,12 +85,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdChevronConvertRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, включена ли текст в шеврон символов («») преобразуется в поля слияния.</summary>
+        <summary>Определяет, преобразуется ли текст, заключенный в знаки шеврона (""), в поля слияния.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Microsoft Word для Macintosh версии 4.0 и 5.x документов используйте шеврон символов для обозначения полей слияния почты.</para>
-          <para />
-        </remarks>
+        <remarks><para>В Microsoft Word для Macintosh версий 4,0 и 5. x для обозначения полей слияния почты используются знаки шеврона.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -121,7 +114,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,11 +142,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -214,9 +207,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -244,7 +236,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

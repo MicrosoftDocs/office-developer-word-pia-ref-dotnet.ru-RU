@@ -1,13 +1,5 @@
 <Type Name="TableOfContents" FullName="Microsoft.Office.Interop.Word.TableOfContents">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="053fb8945387416b2c4e96275be1372a3daede59" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673721" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TableOfContents" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c492d44ba42b0c2c8ad50242bb67c9ac83678194" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143884" /></Metadata><TypeSignature Language="C#" Value="public interface TableOfContents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TableOfContents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TableOfContents" />
   <TypeSignature Language="VB.NET" Value="Public Interface TableOfContents" />
@@ -26,9 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один оглавления в документе.</summary>
-    <remarks>
-      <para>Объект <b>TableOfContents</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> семейства сайтов. Коллекция <b>TablesOfContents</b> включает все таблицы содержимого в документе.</para> Использование <b>TablesOfContents</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>TableOfContents</b> . Номер индекса представляет положение оглавления в документе.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для добавления в документ оглавления.</para><para /></remarks>
+    <summary>Представляет одно оглавление в документе.</summary>
+    <remarks><para>Объект <b>TableOfContents</b> является членом <see cref="T:Microsoft.Office.Interop.Word.TableOfContents" /> коллекции. Коллекция <b>TablesOfContents</b> включает все оглавления в документе.</para>
+      <para>Используйте <b>TablesOfContents</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>TableOfContents</b> . Номер индекса представляет положение оглавления в документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TablesOfContents.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить оглавление в документ.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -137,7 +131,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.HeadingStyles</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadingStyles" /> объект, представляющий дополнительных стилей, используемых для компиляции оглавления (стили отличный от заголовок 1 — Заголовок 9 стили).</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HeadingStyles" /> объект, представляющий дополнительные стили, используемые для компиляции оглавления (стили, отличные от стиля заголовка 1 – заголовок 9).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -168,7 +162,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номера страниц в таблице содержимого должен быть скрыт при публикации в Интернете.</summary>
+        <summary>Возвращает или задает значение, указывающее, следует ли скрывать номера страниц в оглавлении при публикации в Интернете.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,8 +193,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если номера страниц включены в оглавление.</summary>
+        <summary><b>Значение true</b> , если номера страниц включены в оглавление.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -231,13 +224,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает конечного уровня заголовка для содержания.</summary>
+        <summary>Возвращает или задает конечный уровень заголовка для оглавления.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>LowerHeadingLevel</b> соответствует конечное значение, используемые с параметром \o для поля в таблице содержимое (Оглавления).</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.UpperHeadingLevel" /> свойство для задания начальной уровень заголовка. Например установка синтаксис поля Оглавления {TOC \o «1-3»}, задайте свойству <b>LowerHeadingLevel</b> значение 3 и свойство <b>UpperHeadingLevel</b> значение 1.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>ловерхеадинглевел</b> соответствует конечному значению, используемому с параметром \o для поля содержания (TOC).</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.UpperHeadingLevel" /> свойство, чтобы задать уровень начального заголовка. Например, чтобы задать синтаксис поля ОГЛАВЛЕНИя {TOC \o "1-3"}, задайте для свойства <b>ловерхеадинглевел</b> значение 3, а свойству <b>упперхеадинглевел</b> — значение 1.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -263,7 +254,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -291,12 +282,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур в разделе <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.Range" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа или возвращать диапазон фигуры из коллекции фигур, можно узнать в <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.Range" /> методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RightAlignPageNumbers">
@@ -325,8 +314,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если номера страниц выравнивается правого поля в таблице оглавления.</summary>
+        <summary><b>Имеет значение true</b> , если номера страниц выровнены по правому полю в содержании.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,31 +345,29 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdTabLeader</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает символ между операциями и номера страниц в оглавления.</summary>
+        <summary>Возвращает или задает символ между записями и их номерами страниц в содержании.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может быть одной из этих констант <b>вдтаблеадер</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdTabLeader" />может иметь одно из следующих констант <b>WdTabLeader</b> . </para>
-          <para>
-            <b>wdTabLeaderSpaces</b>
+            <b>вдтаблеадердашес</b>
           </para>
           <para>
-            <b>wdTabLeaderDashes </b>
+            <b>вдтаблеадердотс</b>
           </para>
           <para>
-            <b>wdTabLeaderDots </b>
+            <b>вдтаблеадерхеави</b>
           </para>
           <para>
-            <b>wdTabLeaderHeavy </b>
+            <b>вдтаблеадерлинес</b>
           </para>
           <para>
-            <b>wdTabLeaderLines </b>
+            <b>вдтаблеадермиддледот</b>
           </para>
           <para>
-            <b>wdTabLeaderMiddleDot </b>
+            <b>вдтаблеадерспацес</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TableID">
@@ -410,12 +396,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает идентификатор одной буквы, который используется для создания оглавления из полей Оглавления.</summary>
+        <summary>Возвращает или задает однобуквенный идентификатор, который используется для построения оглавления из полей ОГЛАВЛЕНИя.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>идентификатор таблицы</b> соответствует на параметр \f поле Оглавления. Например «T» включает оглавление из поля Оглавления, используя идентификатор таблицы т.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>tableid</b> соответствует параметру \f для поля оглавления. Например, "T" создает оглавление из полей ОГЛАВЛЕНИя с помощью идентификатора таблицы T.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -439,12 +423,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет записи, приведенные в указанной таблице содержимое.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>   Использование <see cref="M:Microsoft.Office.Interop.Word.TableOfContents.UpdatePageNumbers" /> метода обновления номера страниц элементов в таблице содержимое.</para>
-          <para />
-        </remarks>
+        <summary>Обновляет записи, показанные в указанном оглавлении.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )   Используйте метод <see cref="M:Microsoft.Office.Interop.Word.TableOfContents.UpdatePageNumbers" /> , чтобы обновить номера страниц элементов в содержании.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UpdatePageNumbers">
@@ -468,7 +450,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет номера страниц для элементов в указанной таблице содержимое.</summary>
+        <summary>Обновляет номера страниц для элементов в указанном оглавлении.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -498,13 +480,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает начальный уровень заголовка для содержания.</summary>
+        <summary>Возвращает или задает начальный уровень заголовка для оглавления.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>UpperHeadingLevel</b> соответствует начальному значению, используемый с параметром \o для поля в таблице содержимое (Оглавления).</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.LowerHeadingLevel" /> свойства конечного уровня заголовка. Например установка синтаксис поля Оглавления {TOC \o «1-3»}, задайте свойству <b>LowerHeadingLevel</b> значение 3 и свойство <b>UpperHeadingLevel</b> значение 1.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>упперхеадинглевел</b> соответствует начальному значению, используемому с параметром \o для поля содержания (TOC).</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.TableOfContents.LowerHeadingLevel" /> свойство для установки конечного уровня заголовка. Например, чтобы задать синтаксис поля ОГЛАВЛЕНИя {TOC \o "1-3"}, задайте для свойства <b>ловерхеадинглевел</b> значение 3, а свойству <b>упперхеадинглевел</b> — значение 1.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UseFields">
@@ -533,8 +513,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если поля в таблице из содержимого запись (ТРАД.) используются для создания оглавления.</summary>
+        <summary><b>Значение true</b> , если поля элемента оглавления (TC) используются для создания оглавления.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -565,8 +544,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если встроенные стили заголовков используются для создания оглавления.</summary>
+        <summary><b>Значение true</b> , если для создания оглавления используются встроенные стили заголовков.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -597,7 +575,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает записей в оглавления следует форматируются как гиперссылки, при публикации в Интернете.</summary>
+        <summary>Возвращает или задает значение, указывающее, следует ли форматировать записи в содержании в виде гиперссылок при публикации в Интернете.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

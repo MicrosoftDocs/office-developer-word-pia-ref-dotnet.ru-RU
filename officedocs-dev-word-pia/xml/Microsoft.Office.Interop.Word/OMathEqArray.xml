@@ -1,13 +1,5 @@
 <Type Name="OMathEqArray" FullName="Microsoft.Office.Interop.Word.OMathEqArray">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5f8c93bfea6bb1b92bac0e51b222b4a44ff19e00" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673764" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMathEqArray" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f7a23f8136cf5a11d252bbff81718d40600b92aa" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147797" /></Metadata><TypeSignature Language="C#" Value="public interface OMathEqArray" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMathEqArray" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMathEqArray" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMathEqArray" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет объект массива математические формулы, состоящий из одного или нескольких формул, которые можно по вертикали краю как единое целое, относящиеся к окружающим текстом в строке.</summary>
+    <summary>Представляет объект математического массива уравнения, состоящий из одного или нескольких формул, которые можно выравнивать по вертикали в соответствии с окружающим текстом в строке.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -56,10 +48,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOMathVertAlignType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathVertAlignType" /> , представляющий тип вертикальное выравнивание для массива формул относительно текста, охватывающего массива. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdOMathVertAlignType" />
-        </value>
+        <summary>Возвращает или задает значение <see cref="T:Microsoft.Office.Interop.Word.WdOMathVertAlignType" /> , представляющее тип выравнивания по вертикали для массива формул относительно текста, окруженного массивом. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdOMathVertAlignType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,9 +77,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -116,11 +104,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>Если объект был создан в Microsoft Word, <para><see cref="P:Microsoft.Office.Interop.Word.OMathEqArray.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" /></para><para>в первую очередь это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMathEqArray.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это значение также может быть представлено константой<see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" /></para>
+          <para>Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="E">
@@ -146,10 +134,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.OMathArgs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> объект, представляющий список аргументов для объект указанного формулы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /> объект, представляющий список аргументов для указанного объекта уравнения. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMathArgs" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,14 +165,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляющий одинаково распределенного формул массива формул в рамках полей контейнера, например, столбец, ячейки или ширины страницы. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Контейнер для массива формул может быть поля страницы, поля ячейки таблицы, или другой контейнер, в котором могут существовать формула.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, что уравнения в массиве формул равномерно распределяются между полями контейнера, такими как столбец, ячейка или ширина страницы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Контейнером для массива формул могут быть поля страницы, поля в ячейке таблицы или другой контейнер, в котором может существовать формула.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ObjDist">
@@ -215,10 +197,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли формул массива формула, расположенные на максимальное значение формула массива. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, размещаются ли уравнения в массиве формул до максимальной ширины массива формул. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -246,9 +226,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.OMathEqArray" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -278,10 +256,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее интервал между строк в массиве формула. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает <b>целое число</b> , представляющее интервал между строками в массиве формул. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -311,10 +287,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdOMathSpacingRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdOMathSpacingRule" /> , который представляет правило, которое определяет интервал формула массива. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdOMathSpacingRule" />
-        </value>
+        <summary>Возвращает или задает значение <see cref="T:Microsoft.Office.Interop.Word.WdOMathSpacingRule" /> , представляющее правило, которое определяет интервалы в массиве формул. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdOMathSpacingRule" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="KeyBindings" FullName="Microsoft.Office.Interop.Word.KeyBindings">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="82a4dc883d5b7257bb70e07ee869a0f2dba9b2f1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673350" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface KeyBindings : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c0bf61c2c56c0399c987bf635fa00d822963862c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146670" /></Metadata><TypeSignature Language="C#" Value="public interface KeyBindings : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract KeyBindings implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.KeyBindings" />
   <TypeSignature Language="VB.NET" Value="Public Interface KeyBindings&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объекты, которые представляют настраиваемые назначения клавиш в текущем контексте. Настраиваемые ключевые назначений в диалоговом окне Настройка клавиатуры.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.KeyBindings" /> свойство для возврата коллекции <b>сочетания клавиш</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод, чтобы добавить <b>соответствующие клавиши</b> объект в коллекцию <b>сочетания клавиш</b> .</para>
-      <para>Использования <b>сочетания клавиш</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>соответствующие клавиши</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объектов, представляющих настраиваемые сочетания клавиш в текущем контексте. Настраиваемые сочетания клавиш вносятся в диалоговом окне Настройка клавиатуры.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.KeyBindings" /> свойство, чтобы возвратить коллекцию <b>KeyBindings</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод, чтобы добавить объект <b>KeyBinding</b> в коллекцию <b>KeyBindings</b> .</para>
+      <para>Используйте <b>KeyBindings</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>KeyBinding</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -65,67 +55,64 @@
         <Parameter Name="CommandParameter" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCategory">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Категория назначение ключа.</param>
-        <param name="Command">
-          <b>Строковое значение.</b> Команда, которая выполняет заданное сочетание клавиш.</param>
-        <param name="KeyCode">Требуется <b>целое число</b>. Ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <param name="KeyCode2">Необязательный элемент <b>Object</b>. Второй ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <param name="CommandParameter">Необязательный элемент <b>Object</b>. Дополнительный текст, при их наличии, необходимые для команды, заданной параметром <paramref name="Command" />. Дополнительные сведения см в примечания.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, который представляет новое сочетание клавиш для макросов, встроенной команды, шрифта, автотекст запись, стиль или символов.</summary>
+        <param name="KeyCategory">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdKeyCategory" />. Категория назначения ключа.</param>
+        <param name="Command">Обязательный атрибут типа <b>String</b>. Команда, в которой выполняется заданное сочетание клавиш.</param>
+        <param name="KeyCode">Обязательный атрибут типа <b>Integer</b>. Ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <param name="KeyCode2">Необязательный <b>объект</b>. Второй ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <param name="CommandParameter">Необязательный <b>объект</b>. Дополнительный текст (при наличии), необходимый для команды, заданной параметром <paramref name="Command" />. Дополнительные сведения см. в разделе "Примечания" ниже.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий новый сочетания клавиш для макроса, встроенной команды, шрифта, элемента автотекста, стиля или символа.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метод для создания <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> аргумент.</para>
-          <para>В следующей таблице, левый столбец содержит команды, которые требуют значение команды и правом столбце описывает, что необходимо сделать, чтобы указать <paramref name="CommandParameter" /> для каждой из этих команд. (Эквивалентный действие в диалоговом окне Настройка клавиатуры (меню "Сервис"), чтобы задание <paramref name="CommandParameter" /> выбирает элемент в списке, который отображается, если необходимо выбрать один из следующих команд в поле команды.)</para>
+        <remarks><para>Для создания аргумента <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> можно использовать метод.</para>
+          <para>В приведенной ниже таблице в левом столбце содержатся команды, для которых требуется значение команды, а в правом столбце указаны действия, которые необходимо выполнить для <paramref name="CommandParameter" /> каждой из этих команд. (Эквивалентным действием в диалоговом окне Настройка клавиатуры (меню Сервис) <paramref name="CommandParameter" /> является выбор элемента в списке, который отображается при выборе одной из следующих команд в поле команды.)</para>
           <list type="table">
             <item>
               <description>
-                <b>Границы</b>, <b>цвет</b>или <b>затенение</b></description>
-              <description>числа — указан как текст, соответствующий позиции параметра, выбранного в поле со списком, который содержит значения, где 0 (ноль) — это первый элемент, 1 — это второй элемент и т. д</description>
+                <b>Границы</b>, <b>Цвет</b>и <b>Заливка</b></description>
+              <description>Число — заданное как текст, соответствующее позиции параметра, выбранного в списке, который содержит значения, где 0 (ноль) — первый элемент, 1 — второй элемент и т. д.</description>
             </item>
             <item>
               <description>
-                <b>столбцы</b>
+                <b>Столбца</b>
               </description>
-              <description>число в диапазоне от 1 до 45 — указан как текст, соответствующий число столбцов, которую нужно применить</description>
+              <description>Число от 1 до 45 — заданное как текст, соответствующее количеству столбцов, которое нужно применить</description>
             </item>
             <item>
               <description>
-                <b>Уплотненный</b>
+                <b>Сжатую</b>
               </description>
-              <description>измерения текста между 0,1 и 12.75 точек указан с шагом 0,05 точка (72 пункта = 1 дюйм)</description>
+              <description>Измерение текста между 0,1 и 12,75 точек, указанных в шагах с шагом 0,05 (72 пт = 1 дюйм)</description>
             </item>
             <item>
               <description>
-                <b>Expanded</b>
+                <b>Виде</b>
               </description>
-              <description>измерения текста между 0,1 точка и 12.75 пунктов шагом 0,05 точка (72 пункта = 1 дюйм)</description>
+              <description>Измерение текста между 0,1 и 12,75 точек, указанных в шагах с шагом 0,05 (72 пт = 1 дюйм)</description>
             </item>
             <item>
               <description>
-                <b>FileOpenFile</b>
+                <b>филеопенфиле</b>
               </description>
-              <description> Путь и имя файла для открытия. Если путь не определен, используется текущей папки.</description>
+              <description>Путь и имя файла, который требуется открыть. Если путь не указан, используется текущая папка.</description>
             </item>
             <item>
               <description>
                 <b>Размер шрифта</b>
               </description>
-              <description>измерения положительное текста, указанного в шагом точка 0,5 (72 пункта = 1 дюйм)</description>
+              <description>Положительное измерение текста, заданное с шагом в 0,5 пт (72 пт = 1 дюйм)</description>
             </item>
             <item>
               <description>
-                <b>Снижение</b>, <b>Приподнятое</b></description>
-              <description>A text измерения между 1 пункт и 64 точки, указан с шагом точка 0,5 (72 пункта = 1 дюйм)</description>
+                <b>Понизить</b>, <b></b> приподнятые</description>
+              <description>Текстовое измерение от 1 точки до 64 баллов, заданное в шагах 0,5-пт (72 пунктов = 1 дюйм)</description>
             </item>
             <item>
               <description>
-                <b>Символ</b>
+                <b>Знаки</b>
               </description>
-              <description>строку, созданную путем объединения <b>Chr()</b> инструкции и имя символа шрифта (например, Chr(167) &amp; «Символ»)</description>
+              <description>Строка, созданная с помощью сцепления инструкции <b>Chr ()</b> и имени шрифта символов (например, Chr (167) &amp; "Symbol")</description>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -177,11 +164,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает все настроенные ключевые назначения и восстанавливает исходный Microsoft Word назначения сочетаний клавиш.</summary>
-        <remarks>
-          <para>После применения метода <b>ClearAll</b><see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> object назначений клавиш в указанного шаблона или документа восстанавливаются значения по умолчанию. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.CustomizationContext" /> свойство, чтобы указать контекст до с помощью метода <b>ClearAll</b> документа или шаблона.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет все назначенные клавиши и восстанавливает исходные сочетания клавиш Microsoft Word.</summary>
+        <remarks><para>После применения метода <b>ClearAll</b> к <see cref="T:Microsoft.Office.Interop.Word.KeyBindings" /> объекту в указанном шаблоне или документе сбрасываются значения по умолчанию. Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.CustomizationContext" /> свойство, чтобы указать контекст документа или шаблона перед использованием метода <b>ClearAll</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Context">
@@ -207,12 +192,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет место хранения ключа указанную привязку. Это свойство можно вернуть <see cref="T:Microsoft.Office.Interop.Word.Document" />, <see cref="T:Microsoft.Office.Interop.Word.Template" />, или <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта.</summary>
+        <summary>Возвращает объект, представляющий место хранения указанной привязки клавиш. Это свойство может возвращать <see cref="T:Microsoft.Office.Interop.Word.Document" />объект <see cref="T:Microsoft.Office.Interop.Word.Template" />a, <see cref="T:Microsoft.Office.Interop.Word.Application" /> или Object.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Встроенные сочетания клавиш (например, CTRL + I для <b>курсива</b>) возврата объекта <b>приложения</b> в контексте. Все ключевые привязки, добавлении возвращает объект <b>документа</b> или <b>шаблона</b> в зависимости от контекста настройки фактически при <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект был добавлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Встроенные сочетания клавиш (например, CTRL + I для курсива <b></b>) возвращают объект <b>Application</b> в качестве контекста. Все добавленные вами привязки будут возвращать объект <b>Document</b> или <b>template</b> , в зависимости от контекста настройки, действующего при добавлении <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -238,7 +221,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -266,11 +249,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -331,9 +314,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -361,14 +343,12 @@
         <Parameter Name="KeyCode2" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCode">Требуется <b>целое число</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="KeyCode2">Необязательный элемент <b>Object</b>. Второй ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий указанного настраиваемого сочетание клавиш. Если сочетание клавиш не существует, этот метод возвращает <b>значение Nothing</b>.</summary>
+        <param name="KeyCode">Обязательный атрибут типа <b>Integer</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="KeyCode2">Необязательный <b>объект</b>. Второй ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий заданное пользовательское сочетание клавиш. Если сочетание клавиш не существует, этот метод не возвращает <b>значение Nothing</b>.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метод для создания <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> аргумент.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для создания аргумента <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> можно использовать метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -394,7 +374,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

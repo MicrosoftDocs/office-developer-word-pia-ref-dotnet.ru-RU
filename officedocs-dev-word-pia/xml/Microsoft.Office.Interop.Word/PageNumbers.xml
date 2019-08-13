@@ -1,13 +1,5 @@
 <Type Name="PageNumbers" FullName="Microsoft.Office.Interop.Word.PageNumbers">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="adb56d4e750693d1d8699cecc33bae23d2bf773c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673132" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PageNumbers : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a31fe618fee1b2b001540181189751da6020270b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144220" /></Metadata><TypeSignature Language="C#" Value="public interface PageNumbers : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PageNumbers implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.PageNumbers" />
   <TypeSignature Language="VB.NET" Value="Public Interface PageNumbers&#xA;Implements IEnumerable" />
@@ -30,11 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.PageNumber" /> объекты, которые представляют номера страниц в одном верхнего или нижнего колонтитула.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.PageNumbers" /> свойство для возврата коллекции <b>PageNumbers</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод для добавления номеров страниц в верхних и нижних колонтитулов.</para>
-      <para>Для добавления или изменения номера страниц в документе, используя несколько разделов, изменить номера страниц в каждом разделе или задать <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" /> значение <b>True</b>.</para> Использование <b>PageNumbers</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>PageNumber</b> . В большинстве случаев верхнего или нижнего колонтитула содержит только одну страницу номер, который является номер индекса 1.</para><para /></remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.PageNumber" /> объектов, представляющих номера страниц в отдельном верхнем или нижнем колонтитуле.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.PageNumbers" /> свойство, чтобы возвратить коллекцию <b>PageNumbers</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.PageNumbers.Add(System.Object@,System.Object@)" /> метод, чтобы добавить номера страниц к верхнему или нижнему колонтитулу.</para>
+      <para>Чтобы добавить или изменить номера страниц в документе с несколькими разделами, измените номера страниц в каждом разделе или установите для <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" /> свойства <b>значение true</b>.</para>
+      <para>Используйте <b>PageNumbers</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>PageNumber</b> . В большинстве случаев верхний или нижний колонтитул содержит только один номер страницы, который является индексом 1.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -60,14 +53,12 @@
         <Parameter Name="FirstPage" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="PageNumberAlignment">Необязательный элемент <b>Object</b>. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberAlignment" /> константу.</param>
-        <param name="FirstPage">Необязательный элемент <b>Object</b>. , <b>Значение false,</b> чтобы первая страница заголовок и нижний колонтитул первой страницы отличаются от верхних и нижних колонтитулов на всех последующих страниц в документе. Если <paramref name="FirstPage" /> задано значение <b>False</b>, не будет добавлен номер страницы на первой странице. Если этот аргумент задан, параметр управляет <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> свойство.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageNumber" /> объекта, что представляет номера, добавляемого верхних и нижних колонтитулов в разделе страниц.</summary>
+        <param name="PageNumberAlignment">Необязательный <b>объект</b>. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberAlignment" /> константой.</param>
+        <param name="FirstPage">Необязательный <b>объект</b>. <b>False</b> , чтобы верхний колонтитул первого и нижнего колонтитула, отличный от верхнего и нижнего колонтитула, на всех последующих страницах документа. Если <paramref name="FirstPage" /> задано значение <b>false</b>, то номер страницы не добавляется на первую страницу. Если этот аргумент опущен, этот параметр управляется <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> свойством.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.PageNumber" /> объект, представляющий номера страниц, добавленные к верхнему или нижнему колонтитулу в разделе.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекта имеет значение <b>True</b>, номера страниц будет продолжать последовательно из одного раздела далее в документе.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для <see cref="P:Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" /> свойства <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекта задано значение <b>true</b>, Номера страниц будут последовательно продолжены с одного раздела на следующий в документе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -124,12 +115,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSeparatorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает разделитель, используемый между числом главы и номер страницы. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdSeparatorType" /> константы.</summary>
+        <summary>Возвращает или задает символ-разделитель, используемый между номером главы и номером страницы. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSeparatorType" /> констант.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Перед созданием номеров страниц, включения номера главы заголовков в документе должны иметь формат нумерованный структуры, применяется, что использование стилей с маркеры и нумерация диалоговое окно. Чтобы сделать это программным способом, используйте метод <b>ApplyListTemplate</b><see cref="T:Microsoft.Office.Interop.Word.List" /> или <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Прежде чем создавать номера страниц, содержащие номера глав, в заголовках документов должен быть применен пронумерованный формат структуры, использующий стили из диалогового окна "маркеры и нумерация". Чтобы сделать это программным способом, используйте метод <b>апплилисттемплате</b> объекта <see cref="T:Microsoft.Office.Interop.Word.List" /> или <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -155,7 +144,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -183,11 +172,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DoubleQuote">
@@ -216,13 +205,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Word содержит указанный <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> объект в двойные кавычки ("«).</summary>
+        <summary><b>Значение true</b> , если приложение Microsoft Word заключает <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> указанный объект в двойные кавычки (").</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать Word для обозначения номера страниц в двойные кавычки по умолчанию, используйте <see cref="P:Microsoft.Office.Interop.Word.Options.AddHebDoubleQuote" /> свойство.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы настроить Word для заключения номеров страниц в двойные кавычки по умолчанию, используйте <see cref="P:Microsoft.Office.Interop.Word.Options.AddHebDoubleQuote" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -283,12 +269,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль уровня заголовка, которая применяется к главе заголовков в документе. Может быть числом между 0 (ноль) – 8, соответствующий заголовок уровни 1 – 9.</summary>
+        <summary>Возвращает или задает стиль уровня заголовка, который применяется к заголовкам глав в документе. Может представлять собой число от 0 (ноль) до 8, соответствующее уровням заголовков 1 – 9.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Перед созданием номеров страниц, включения номера главы заголовков в документе должны иметь формат нумерованный структуры, применяется, что использование стилей с маркеры и нумерация диалоговое окно. Чтобы сделать это программным способом, используйте метод <b>ApplyListTemplate</b><see cref="T:Microsoft.Office.Interop.Word.List" /> или <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Прежде чем создавать номера страниц, содержащие номера глав, в заголовках документов должен быть применен пронумерованный формат структуры, использующий стили из диалогового окна "маркеры и нумерация". Чтобы сделать это программным способом, используйте метод <b>апплилисттемплате</b> объекта <see cref="T:Microsoft.Office.Interop.Word.List" /> или <see cref="T:Microsoft.Office.Interop.Word.ListFormat" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeChapterNumber">
@@ -317,8 +301,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если номер главы входит в состав номера страниц или задано название.</summary>
+        <summary><b>Значение true</b> , если номер главы включен с номерами страниц или подписью заголовка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -349,9 +332,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -382,12 +364,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPageNumberStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число стилей для <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> объекта.</summary>
+        <summary>Возвращает или задает стиль чисел для <see cref="T:Microsoft.Office.Interop.Word.PageNumbers" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>NumberStyle</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberStyle" /> константы. Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>нумберстиле</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdPageNumberStyle" /> констант. Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -413,7 +393,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -444,13 +424,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если нумерация страниц начинается с 1 в начале указанного раздела.</summary>
+        <summary><b>Значение true</b> , если нумерация страниц начинается с 1 в начале указанного раздела.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если задано значение <b>False</b>, свойство <b>RestartNumberingAtSection</b> переопределяет <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.StartingNumber" /> свойство так, чтобы нумерация страниц можно продолжить из предыдущего раздела.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если задано значение <b>false</b>, свойство <b>рестартнумберингатсектион</b> будет переопределять <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.StartingNumber" /> свойство, чтобы можно было продолжить нумерацию страниц из предыдущего раздела.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowFirstPageNumber">
@@ -479,13 +456,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если номер страницы отображается на первой странице в разделе.</summary>
+        <summary><b>Значение true</b> , если номер страницы отображается на первой странице раздела.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка для этого свойства <b>значения True</b> автоматически добавляет номера страниц в отдельный раздел.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для этого свойства задано <b>значение true</b> , Номера страниц автоматически добавляются в раздел.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartingNumber">
@@ -514,13 +488,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает начальный номер примечание, номер строки или номер страницы.</summary>
+        <summary>Возвращает или задает номер начальной заметки, номер строки или номер страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Должен быть в режиме разметки для просмотра нумерация.</para>
-          <para>При применении номеров страниц, это свойство Возвращает или задает первый номер страницы для указанного <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекта. Этот номер может отображаться или не отображаться на первой странице, в зависимости от настройки <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.ShowFirstPageNumber" /> свойство. <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.RestartNumberingAtSection" /> Свойства, если задано значение <b>False</b>, переопределение свойства <b>номер1</b> так, страницы нумерации можно будет из предыдущего раздела.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для просмотра нумерации строк необходимо перейти в режим разметки.</para>
+          <para>При применении к номерам страниц это свойство возвращает или задает номер начальной страницы для указанного <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекта. Этот номер может отображаться на первой странице, в зависимости от значения <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.ShowFirstPageNumber" /> свойства. Если <see cref="P:Microsoft.Office.Interop.Word.PageNumbers.RestartNumberingAtSection" /> задано значение <b>false</b>, свойство <b>StartingNumber</b> будет переопределяться таким образом, что нумерация страниц может продолжаться из предыдущего раздела.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

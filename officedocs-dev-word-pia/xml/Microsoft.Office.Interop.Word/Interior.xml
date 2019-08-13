@@ -1,13 +1,5 @@
 <Type Name="Interior" FullName="Microsoft.Office.Interop.Word.Interior">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="2fdd19513e9bb7a65e73c523dc7e9cf5aac03313" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674027" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Interior" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9ea9eed597dfec4553e666373b193716a8eb9534" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146677" /></Metadata><TypeSignature Language="C#" Value="public interface Interior" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Interior" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Interior" />
   <TypeSignature Language="VB.NET" Value="Public Interface Interior" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет внутреннюю объекта.</summary>
+    <summary>Представляет внутреннюю часть объекта.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -53,10 +45,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,9 +77,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает основной цвет объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,26 +107,22 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет внутренней.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Цвет указан как набор <b>объектов</b> значение индекса для текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант:</para>
+        <summary>Возвращает или задает цвет внутренней области.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Цвет задается как <b>объект</b> , для которого задано значение индекса текущей цветовой палитры, или одна из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант:</para>
           <list type="bullet">
             <item>
               <para>
-                <b>xlColorIndexAutomatic</b>
+                <b>кслколориндексаутоматик</b>
               </para>
             </item>
             <item>
               <para>
-                <b>xlColorIndexNone</b>
+                <b>кслколориндексноне</b>
               </para>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -164,14 +148,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InvertIfNegative">
@@ -200,9 +180,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если Microsoft Word инвертирует шаблон в объекте, когда он соответствует отрицательное значение. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b> задать значение <b>True</b> , если шаблон Обращенный, когда это отрицательно, в противном случае — <b>значение False</b></value>
+        <summary>Определяет, будет ли Microsoft Word инвертировать шаблон в объекте, если он соответствует отрицательному числу. Для чтения и записи.</summary>
+        <value><b>Объект</b> имеет значение <b>true</b> , если шаблон инвертирован, если он отрицательный; в противном случае — <b>false</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -229,10 +208,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,10 +239,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>объект</b>, содержащий <see cref="T:Microsoft.Office.Interop.Word.XlPattern" /> константу, представляет внутренний шаблон.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает или задает <b>объект</b>, содержащий <see cref="T:Microsoft.Office.Interop.Word.XlPattern" /> константу, которая представляет собой внутренний шаблон.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,10 +270,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет фона шаблона как значение RGB. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает или задает цвет внутреннего узора в виде значения RGB. Для чтения и записи.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -328,14 +301,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет внутренней шаблон как индекс в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант: <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Word.Interior.PatternColorIndex" /> для <b>xlColorIndexAutomatic</b> для задания стиля Автозаполнение графические объекты. Задайте для него значение <b>xlColorIndexNone</b> , чтобы указать, что требуется шаблон (это то же самое, что и параметр <see cref="P:Microsoft.Office.Interop.Word.Interior.Pattern" /> для <b>xlPatternNone</b>).</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает цвет внутреннего узора в виде индекса в текущей цветовой палитре или в виде одной из следующих <see cref="T:Microsoft.Office.Interop.Word.XlColorIndex" /> констант: <b>кслколориндексаутоматик</b> или <b>кслколориндексноне</b>. Для чтения и записи.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Задайте <see cref="P:Microsoft.Office.Interop.Word.Interior.PatternColorIndex" /> значение <b>кслколориндексаутоматик</b> , чтобы указать автоматический стиль заливки для графических объектов. Задайте для него значение <b>кслколориндексноне</b> , чтобы не использовать шаблон (то же, что и для параметра значение <see cref="P:Microsoft.Office.Interop.Word.Interior.Pattern" /> <b>кслпаттернноне</b>).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

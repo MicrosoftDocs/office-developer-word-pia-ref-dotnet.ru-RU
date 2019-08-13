@@ -1,13 +1,5 @@
 <Type Name="Indexes" FullName="Microsoft.Office.Interop.Word.Indexes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c47d895ce1ab76c08d23df7218a98cbdbcccf8ed" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674032" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Indexes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7b57b53793778d56fdc6da5059ee8398d3e740c4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147963" /></Metadata><TypeSignature Language="C#" Value="public interface Indexes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Indexes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Indexes" />
   <TypeSignature Language="VB.NET" Value="Public Interface Indexes&#xA;Implements IEnumerable" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Index" /> объекты, которые представляют все индексы в указанный документ.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Document.Indexes" /> свойство для возвращения коллекции <b>индексов</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для создания индекса и добавить его в коллекцию <b>индексов</b> .</para>
-      <para>Использования <b>индексов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>индекса</b> . Номер индекса представляет позиции объекта <b>индекса</b> в документе.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Index" /> объектов, представляющих все индексы в указанном документе.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Indexes" /> свойство, чтобы возвратить коллекцию <b>индексов</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Indexes.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод для создания индекса и добавления его в коллекцию <b>indexes</b> .</para>
+      <para>Используйте <b></b>индексы<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>индекса</b> . Номер индекса представляет положение объекта <b>index</b> в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -67,20 +57,18 @@
         <Parameter Name="IndexLanguage" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется объект <b>Range</b> . Диапазон, место индекса для отображения. Индекс заменяет диапазона, если не будет свернуть в диапазоне.</param>
-        <param name="HeadingSeparator">Необязательный элемент <b>Object</b>. Текст между группами буквам и цифрам (записи, которые начинаются с буквы же) в индексе. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdHeadingSeparator" /> констант: <b>wdHeadingSeparatorBlankLine</b>, <b>wdHeadingSeparatorLetter</b>, <b>wdHeadingSeparatorLetterFull</b>, <b>wdHeadingSeparatorLetterLow</b>или <b>wdHeadingSeparatorNone</b>.</param>
-        <param name="RightAlignPageNumbers">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы выровнять номера страниц с правого поля.</param>
-        <param name="Type">Необязательный элемент <b>Object</b>. Указывает, являются ли дополнительные элементы в той же строке (run-in), что и основные элементы или на отдельной строке (с отступом) из основной записи. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexType" /> констант: <b>wdIndexIndent</b> или <b>wdIndexRunin</b>.</param>
-        <param name="NumberOfColumns">Необязательный элемент <b>Object</b>. Число столбцов для каждой страницы индекса. Указать значение 0 (ноль) задает число столбцов в индексе на тот же номер, как и в документе.</param>
-        <param name="AccentedLetters">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы включить отдельные заголовки для букв с надстрочными знаками в индексе (для отдельных заголовкам указаны пример, слова, начинающиеся с «А» и слова, начинающиеся с «A»).</param>
-        <param name="SortBy">Необязательный элемент <b>Object</b>. Критерии сортировки, которое будет использоваться для указанного индекса. Может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexSortBy" /> констант: <b>wdIndexSortByStroke</b> или <b>wdIndexSortBySyllable</b>.</param>
-        <param name="IndexLanguage">Необязательный элемент <b>Object</b>. Сортировки язык, используемый в указанном индексе. Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константы.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Index" /> объект, представляющий новый индекс добавлен в документ.</summary>
+        <param name="Range">Обязательный объект <b>Range</b> . Диапазон, в котором должен отображаться индекс. Индекс заменяет диапазон, если диапазон не свернут.</param>
+        <param name="HeadingSeparator">Необязательный <b>объект</b>. Текст между алфавитными группами (записями, начинающимися с той же буквой) в индексе. Может <see cref="T:Microsoft.Office.Interop.Word.WdHeadingSeparator" /> быть одной из следующих констант: <b>вдхеадингсепараторбланклине</b>, <b>вдхеадингсепараторлеттер</b>, <b>вдхеадингсепараторлеттерфулл</b>, <b>wdHeadingSeparatorLetterLow</b>или <b>wdHeadingSeparatorNone</b>.</param>
+        <param name="RightAlignPageNumbers">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы выровнять номера страниц по правому полю.</param>
+        <param name="Type">Необязательный <b>объект</b>. Указывает, находятся ли подзаписи в одной строке (в процессе выполнения) в качестве основной записи или в отдельной строке (с отступом) из основной записи. Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexType" /> констант: <b>вдиндексиндент</b> или <b>вдиндексрунин</b>.</param>
+        <param name="NumberOfColumns">Необязательный <b>объект</b>. Число столбцов для каждой страницы индекса. При указании значения 0 (ноль) количество столбцов в индексе будет совпадать с числом в документе.</param>
+        <param name="AccentedLetters">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы включить отдельные заголовки для букв с надстрочными знаками (например, слова, начинающиеся с "à", а слова, начинающиеся с "A", перечислены под отдельными заголовками).</param>
+        <param name="SortBy">Необязательный <b>объект</b>. Критерии сортировки, которые будут использоваться для указанного индекса. Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Word.WdIndexSortBy" /> констант: <b>вдиндекссортбистроке</b> или <b>вдиндекссортбисиллабле</b>.</param>
+        <param name="IndexLanguage">Необязательный <b>объект</b>. Язык сортировки, используемый для указанного индекса. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константой.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Index" /> объект, представляющий новый индекс, добавленный в документ.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Индекс построен из индекса запись () полями в документе. Использование <see cref="M:Microsoft.Office.Interop.Word.Indexes.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы отметить элементы указателя, включаемых в индекс.</para>
-          <para />
-        </remarks>
+        <remarks><para>Индекс строится на основе полей элемента индекса (XE) в документе. Используйте <see cref="M:Microsoft.Office.Interop.Word.Indexes.MarkEntry(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> метод, чтобы пометить элементы индекса, включаемые в индекс.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddOld">
@@ -174,13 +162,10 @@
         <Parameter Name="ConcordanceFileName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="ConcordanceFileName">
-          <b>Строковое значение.</b> Имя файла словаря, который содержит список элементов для индексирования.</param>
-        <summary>Автоматически добавляет полями (запись в индекс) в указанный документ, с помощью сведений из файла словаря.</summary>
-        <remarks>
-          <para>Файл словаря является документ Microsoft Word, содержащий таблицу два столбца с условиями индекс, в первый столбец и индекс записи во втором столбце.</para>
-          <para />
-        </remarks>
+        <param name="ConcordanceFileName">Обязательный атрибут типа <b>String</b>. Имя файла словаря, содержащего список индексируемых элементов.</param>
+        <summary>Автоматически добавляет поля XE (элемент указателя) в указанный документ, используя записи из словаря.</summary>
+        <remarks><para>Файл словаря — это документ Microsoft Word, который содержит таблицу из двух столбцов, с терминами для индексирования в первом столбце, а записи индекса — во втором столбце.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -206,7 +191,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -234,11 +219,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Например, если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Format">
@@ -267,12 +252,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdIndexFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает форматирование для индексов в указанный документ.</summary>
+        <summary>Возвращает или задает форматирование для индексов в указанном документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Format</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdIndexFormat" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Format</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdIndexFormat" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -333,9 +316,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -368,15 +350,15 @@
         <Parameter Name="Italic" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется объект <b>Range</b> . Диапазон, чьи текст помечается поля XE в документе.</param>
-        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, которое будет отображаться в индексе, <paramref name="MainEntry[:Subentry]" />.</param>
-        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Автотекста, который содержит текст, которое будет отображаться в индексе (Если этот параметр задан, <paramref name="Entry" /> игнорируется).</param>
-        <param name="CrossReference">Необязательный элемент <b>Object</b>. Перекрестная ссылка, которое будет отображаться в индексе.</param>
-        <param name="CrossReferenceAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, содержащая текст для перекрестная ссылка (Если этот параметр задан, <paramref name="CrossReference" /> игнорируется).</param>
-        <param name="BookmarkName">Необязательный элемент <b>Object</b>. Имя закладки, обозначающий диапазон страниц, которое будет отображаться в индексе. Если этот аргумент указан, номер страницы, которая содержит поле XE отображается в индексе.</param>
-        <param name="Bold">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить полужирным шрифтом на странице номера для записи индекса.</param>
-        <param name="Italic">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить курсивом номеров страниц для записи индекса.</param>
-        <summary>Вставка поля XE (запись в индекс) после все вхождения текста в <paramref name="Range" />.</summary>
+        <param name="Range">Обязательный объект <b>Range</b> . Диапазон, текст которого помечен полем XE во всем документе.</param>
+        <param name="Entry">Необязательный <b>объект</b>. Текст, который должен отображаться в индексе, в форме <paramref name="MainEntry[:Subentry]" />.</param>
+        <param name="EntryAutoText">Необязательный <b>объект</b>. Элемент автотекста, содержащий текст, который должен отображаться в индексе (при указании <paramref name="Entry" /> этого аргумента игнорируется).</param>
+        <param name="CrossReference">Необязательный <b>объект</b>. Перекрестная ссылка, которая будет отображаться в индексе.</param>
+        <param name="CrossReferenceAutoText">Необязательный <b>объект</b>. Имя элемента автотекста, содержащего текст для перекрестной ссылки (если этот аргумент указан, <paramref name="CrossReference" /> игнорируется).</param>
+        <param name="BookmarkName">Необязательный <b>объект</b>. Имя закладки, обозначающее диапазон страниц, которые должны отображаться в индексе. Если этот аргумент опущен, в индексе отображается номер страницы, содержащей поле XE.</param>
+        <param name="Bold">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить полужирное начертание к номерам страниц для записей индекса.</param>
+        <param name="Italic">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить курсивное начертание номеров страниц для записей индекса.</param>
+        <summary>Вставляет поле XE (элемент указателя) после всех экземпляров текста в <paramref name="Range" />.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -409,16 +391,16 @@
         <Parameter Name="Reading" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется объект <b>Range</b> . Расположение записи. Чтобы вставить поле XE после <paramref name="Range" />.</param>
-        <param name="Entry">Необязательный элемент <b>Object</b>. Текст, отображаемый в индексе. Чтобы указать дополнительный элемент, включают текст основного элемента, а затем текст, разделенных точкой с запятой (:) (например, «введение: продукт»).</param>
-        <param name="EntryAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, который включает в себя текст для индекса, иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
-        <param name="CrossReference">Необязательный элемент <b>Object</b>. Перекрестная ссылка, которое будет отображаться в индексе (например, «просмотреть "apples"»).</param>
-        <param name="CrossReferenceAutoText">Необязательный элемент <b>Object</b>. Имя записи автотекста, содержащая текст для перекрестная ссылка (<paramref name="CrossReference" /> игнорируется).</param>
-        <param name="BookmarkName">Необязательный элемент <b>Object</b>. Имя закладки, обозначающий диапазон страниц будет отображаться в индексе. Если этот аргумент указан, номер страницы, содержащей поле XE отображается в индексе.</param>
-        <param name="Bold">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить полужирным шрифтом на номера страницы входа в индексе.</param>
-        <param name="Italic">Необязательный элемент <b>Object</b>. <b>Значение true</b> для добавления курсивом номера страницы операций в индексе.</param>
-        <param name="Reading">Необязательный элемент <b>Object</b>. <b>Значение true</b> показывает запись индекса в определенного расположения при индексы сортируются произношении (только для восточно-азиатских языков).</param>
-        <summary>Вставка поля XE (запись в индекс) после указанного диапазона. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекта, представляющего поле XE.</summary>
+        <param name="Range">Обязательный объект <b>Range</b> . Расположение записи. Поле XE вставляется после <paramref name="Range" />.</param>
+        <param name="Entry">Необязательный <b>объект</b>. Текст, который отображается в индексе. Чтобы указать подзапись, добавьте основной текст записи и текст подзаписи, разделив их двоеточием (:) (например, "Введение: продукт").</param>
+        <param name="EntryAutoText">Необязательный <b>объект</b>. Имя элемента автотекста, которое содержит текст для индекса, таблицы иллюстраций или оглавления (<paramref name="Entry" /> игнорируется).</param>
+        <param name="CrossReference">Необязательный <b>объект</b>. Перекрестная ссылка, которая будет отображаться в индексе (например, "Просмотреть яблоки").</param>
+        <param name="CrossReferenceAutoText">Необязательный <b>объект</b>. Имя элемента автотекста, содержащее текст для перекрестной ссылки (<paramref name="CrossReference" /> игнорируется).</param>
+        <param name="BookmarkName">Необязательный <b>объект</b>. Имя закладки, которая отмечает диапазон страниц, которые должны отображаться в индексе. Если этот аргумент опущен, в индексе отображается номер страницы, содержащей поле XE.</param>
+        <param name="Bold">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить полужирное начертание к номерам страниц записей в индексе.</param>
+        <param name="Italic">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить курсивное начертание к номерам страниц записей в индексе.</param>
+        <param name="Reading">Необязательный <b>объект</b>. <b>Значение true</b> показывает запись индекса в правильном расположении, если индексы сортируются в фонетическом виде (только для восточноазиатских языков).</param>
+        <summary>Вставляет поле XE (элемент указателя) после указанного диапазона. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Field" /> объект, представляющий поле XE.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -446,7 +428,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

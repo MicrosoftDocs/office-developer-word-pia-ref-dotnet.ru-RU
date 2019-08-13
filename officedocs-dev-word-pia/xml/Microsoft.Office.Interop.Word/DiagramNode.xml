@@ -1,13 +1,5 @@
 <Type Name="DiagramNode" FullName="Microsoft.Office.Interop.Word.DiagramNode">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="781ae7dde743bb26d8b688f166e2d47c3047c43d" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672668" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DiagramNode" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9738bbfbf5c67a83fbc7807283833051a5fadce7" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147097" /></Metadata><TypeSignature Language="C#" Value="public interface DiagramNode" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DiagramNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DiagramNode" />
   <TypeSignature Language="VB.NET" Value="Public Interface DiagramNode" />
@@ -26,10 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет узел одной схемы в диаграмме.</summary>
-    <remarks>
-      <para>Объект <b>DiagramNode</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.DiagramNodes" /> семейства.</para> Свойство 
-      <para>использования <b>DiagramNode</b><see cref="T:Microsoft.Office.Interop.Word.Shape" /> или <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекта возвращает объект <b>DiagramNode</b> . Использование <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> метод, чтобы добавить узел в схеме.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.Delete" /> метод, чтобы удалить узел из схемы.</para><para /></remarks>
+    <summary>Представляет один узел схемы в схеме.</summary>
+    <remarks><para>Объект <b>диаграмноде</b> является членом <see cref="T:Microsoft.Office.Interop.Word.DiagramNodes" /> коллекции.</para>
+      <para>Чтобы вернуть объект <b>диаграмноде</b> , используйте <see cref="T:Microsoft.Office.Interop.Word.Shape" /> свойство <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> <b>диаграмноде</b> объекта или. Используйте <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> метод, чтобы добавить узел в схему.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.Delete" /> метод для удаления узла из схемы.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNode">
@@ -55,9 +48,9 @@
         <Parameter Name="NodeType" Type="Microsoft.Office.Core.MsoDiagramNodeType" />
       </Parameters>
       <Docs>
-        <param name="Pos">Необязательные <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />. Указывает, где будет добавлен узел, относящиеся к вызову узел.</param>
-        <param name="NodeType">Необязательные <see cref="T:Microsoft.Office.Core.MsoDiagramNodeType" />. Указывает тип узла.</param>
-        <summary>Создает узел диаграммы, возвращая <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий новый узел схемы. Для концептуальной схемы объект <b>DiagramNode</b> добавляется в конец списка.</summary>
+        <param name="Pos">Необязательный <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />параметр. Указывает, куда будет добавлен узел относительно вызывающего узла.</param>
+        <param name="NodeType">Необязательный <see cref="T:Microsoft.Office.Core.MsoDiagramNodeType" />параметр. Указывает тип узла.</param>
+        <summary>Создает узел схемы, возвращая <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий новый узел схемы. Для концептуальных схем объект <b>диаграмноде</b> добавляется в конец списка фигур.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,7 +106,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.DiagramNodeChildren</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNodeChildren" /> объект, который содержит все дочерние элементы схемы указанного узла.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNodeChildren" /> объект, который содержит все дочерние элементы указанного узла схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -142,10 +135,10 @@
         <Parameter Name="Pos" Type="Microsoft.Office.Core.MsoRelativeNodePosition" />
       </Parameters>
       <Docs>
-        <param name="copyChildren">Требуется <b>Boolean</b>. Значение true, следует скопировать также дочерние элементы узла диаграммы.</param>
-        <param name="TargetNode">Необязательный объект <b>DiagramNode</b> . Узел, где будет размещаться новый узел.</param>
-        <param name="Pos">Необязательные <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />. Если <paramref name="TargetNode" /> указано, указывает, что относительно, в которую будет добавлен узел <paramref name="TargetNode" />.</param>
-        <summary>Точно копирует узел указанной схемы. Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий копию.</summary>
+        <param name="copyChildren">Обязательный атрибут типа <b>Boolean</b>. Значение true, чтобы клонировать дочерние узлы узла схемы.</param>
+        <param name="TargetNode">Необязательный объект <b>диаграмноде</b> . Узел, на котором будет размещаться новый узел.</param>
+        <param name="Pos">Необязательный <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />параметр. Если <paramref name="TargetNode" /> указан, указывает, куда будет добавлен узел относительно <paramref name="TargetNode" />.</param>
+        <summary>Создает точную копию указанного узла схемы. Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий клон.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -173,11 +166,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Например, если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -228,7 +221,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Diagram</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Diagram" /> объекта, к которому принадлежит узел диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Diagram" /> объект, к которому относится узел схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -259,7 +252,7 @@
         <ReturnType>Microsoft.Office.Core.MsoOrgChartLayoutType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoOrgChartLayoutType" /> константа, чтобы указать форматирование дочерних узлов в организационной диаграммы.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoOrgChartLayoutType" /> константу, определяющую форматирование дочерних узлов на организационной диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -288,9 +281,9 @@
         <Parameter Name="Pos" Type="Microsoft.Office.Core.MsoRelativeNodePosition" />
       </Parameters>
       <Docs>
-        <param name="TargetNode">Требуется <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта. Схема узел, где будут перемещены указанного узла.</param>
-        <param name="Pos">Требуется <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />. Указывает, где будет добавлен узел относительно <paramref name="TargetNode" />.</param>
-        <summary>Перемещает узел диаграммы и его дочерних узлов в схеме.</summary>
+        <param name="TargetNode">Обязательный <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект. Узел схемы, в который перемещается указанный узел.</param>
+        <param name="Pos">Обязательный <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />. Указывает, куда будет добавлен узел относительно <paramref name="TargetNode" />.</param>
+        <summary>Перемещает узел схемы и все его дочерние узлы в схеме.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -315,12 +308,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает следующий <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект в коллекцию узлов схемы.</summary>
+        <summary>Возвращает следующий <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект в коллекции узлов схемы.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.PrevNode" /> метод, чтобы вернуться к предыдущему объекту <b>DiagramNode</b> в коллекции узлов схемы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.PrevNode" /> метод, чтобы возвратить предыдущий объект <b>диаграмноде</b> в коллекции узлов схемы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -346,7 +337,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -372,12 +363,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий предыдущей схеме узел в коллекции узлов схемы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий предыдущий узел схемы в коллекции узлов схемы.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.NextNode" /> метод для возврата к следующему объекту <b>DiagramNode</b> в коллекции узлов схемы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.DiagramNode.NextNode" /> метод, чтобы возвратить следующий объект <b>диаграмноде</b> в коллекции узлов схемы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReplaceNode">
@@ -403,12 +392,10 @@
         <Parameter Name="TargetNode" Type="Microsoft.Office.Interop.Word.DiagramNode&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="TargetNode">Требуется <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта. Узел схемы для замены.</param>
-        <summary>Заменяет узел диаграммы конечного узла диаграммы источника.</summary>
-        <remarks>
-          <para>Удален конечного узла диаграммы и схема узла источника, включая все его дочерние узлы, перемещаются в которых был конечного узла диаграммы.</para>
-          <para />
-        </remarks>
+        <param name="TargetNode">Обязательный <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект. Узел схемы, который необходимо заменить.</param>
+        <summary>Заменяет целевой узел схемы узлом исходной схемы.</summary>
+        <remarks><para>Узел целевой диаграммы удален, а узел исходной схемы, включая все дочерние узлы, перемещается в место целевого узла схемы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Root">
@@ -434,7 +421,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.DiagramNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий корневой узел схемы, к которой принадлежит узел схема источника.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий корневой узел диаграммы, к которому относится узел исходной схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -462,7 +449,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект для указанной схемы узла.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект для указанного узла схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -490,13 +477,11 @@
         <Parameter Name="Pos" Type="Microsoft.Office.Core.MsoRelativeNodePosition" />
       </Parameters>
       <Docs>
-        <param name="TargetNode">Требуется <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта. Узел для замены.</param>
-        <param name="Pos">Необязательные <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />. Положение узла относительно узла, с которым его следует заменить.</param>
-        <summary>Меняет местами узла диаграммы конечного узла схема источника.</summary>
-        <remarks>
-          <para>Дочерние узлы схема перемещаются вместе с их соответствующих корневого узла.</para>
-          <para />
-        </remarks>
+        <param name="TargetNode">Обязательный <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект. Узел, с которым осуществляется переключение.</param>
+        <param name="Pos">Необязательный <see cref="T:Microsoft.Office.Core.MsoRelativeNodePosition" />параметр. Положение узла относительно узла, с которым выполняется переключение.</param>
+        <summary>Заменяет узел целевой схемы на узел исходной схемы.</summary>
+        <remarks><para>Все дочерние узлы схемы перемещаются вместе с соответствующими корневыми узлами.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextShape">
@@ -522,7 +507,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий фигуру текстовое поле, связанный с узла диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий форму текстового поля, связанного с узлом схемы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -550,8 +535,8 @@
         <Parameter Name="ReceivingNode" Type="Microsoft.Office.Interop.Word.DiagramNode&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="ReceivingNode">Требуется <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта. Узел, к которому следует переключить дочерние узлы.</param>
-        <summary>Перемещает дочерних узлов узла схема источника узел схема целевой (получение).</summary>
+        <param name="ReceivingNode">Обязательный <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект. Узел, на который переносятся дочерние узлы.</param>
+        <summary>Перемещает дочерние узлы узла исходной схемы в целевой узел схемы (получение).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

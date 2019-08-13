@@ -1,13 +1,5 @@
 <Type Name="Pane" FullName="Microsoft.Office.Interop.Word.Pane">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a6da467368e532f2064abfe444b232f810bf1434" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673269" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Pane" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2c6d2b532972458c15ddcaf3f76f72a0ddd27d36" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147741" /></Metadata><TypeSignature Language="C#" Value="public interface Pane" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Pane" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Pane" />
   <TypeSignature Language="VB.NET" Value="Public Interface Pane" />
@@ -26,9 +18,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет область окна. Объект <b>области</b> является элементом коллекции <b>областей</b> . <see cref="Panes#SameCHM" /> Коллекция включает все области окна для одного окна.</summary>
-    <remarks>
-      <para>Использование <b>областей</b>(<paramref name="Index" />), где <paramref name="Index" /> — номер индекса для возврата объекта <b>области</b> . В следующем примере закрывается активной.</para>
+    <summary>Представляет область окна. Объект <b>Pane</b> является членом коллекции <b>областей</b> . <see cref="Panes#SameCHM" /> Коллекция включает все области окна для одного окна.</summary>
+    <remarks><para>Используйте <b>области</b>(<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса, чтобы вернуть один объект <b>области</b> . В следующем примере закрывается активная область.</para>
       <code>&lt;span class="label"&gt;If ActiveDocument.ActiveWindow.Panes.Count &amp;gt;= 2 Then _ 
 
 
@@ -286,12 +277,13 @@
 
 
     ActiveDocument.ActiveWindow.ActivePane.Close&lt;/span&gt;</code>
-      <para>Использования <b>Добавить</b> метод или свойство <b>разделения</b> для добавления области окна. Следующий пример Разделение окна на 20 процентов от текущего размера окна.</para>
+      <para>Добавьте область окна с помощью метода <b>Add</b> или свойства <b>Split</b> . В приведенном ниже примере показано, как разделить активное окно по 20 процентов текущего размера окна.</para>
       <code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.Panes.Add SplitVertical:=20&lt;/span&gt;</code>
-      <para>Следующий пример Разделение окна вдвое.</para>
+      <para>В приведенном ниже примере активное окно разделяется на половину.</para>
       <code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.Split = True&lt;/span&gt;</code>
-      <para>Можно использовать свойство <b>SplitSpecial</b> , чтобы показать примечания, сноски и концевые сноски в отдельной области.</para> Окно A 
-      <para>имеет более одной области, если окно разделено или представление не режим разметки и сведения, такие как сноски или примечания отображаются. В следующем примере отображается область комментариев в обычном режиме, а затем выдает запрос, чтобы закрыть область.</para><code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.View.Type = wdNormalView 
+      <para>Свойство <b>сплитспеЦиал</b> можно использовать для отображения примечаний, сносок или концевых сносок в отдельной области.</para>
+      <para>Окно содержит несколько областей, если окно разделено или представление не является режимом разметки, и отображаются такие сведения, как сноски или комментарии. В следующем примере область примечаний отображается в обычном режиме, а затем запрашивается закрытие области.</para>
+      <code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.View.Type = wdNormalView 
 
 
 
@@ -2083,7 +2075,8 @@ If ActiveDocument.Comments.Count &amp;gt;= 1 Then
 
 
 
-End If&lt;/span&gt;</code><para /></remarks>
+End If&lt;/span&gt;</code>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -2107,10 +2100,9 @@ End If&lt;/span&gt;</code><para /></remarks>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активация указанной области.</summary>
+        <summary>Активирует указанную область.</summary>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере Разделение окна, а затем активирует первую область.</para>
+        <example><para>В этом примере показано, как разделить активное окно и активировать первую область.</para>
           <code>&lt;span class="label"&gt;Sub SplitWindow() 
 
 
@@ -2881,8 +2873,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
     .Panes(1).&lt;/span&gt;
 &lt;span class="label"&gt;Activate&lt;/span&gt;
-&lt;span class="label"&gt;End WithEnd Sub&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;End WithEnd Sub&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -2910,10 +2901,8 @@ End If&lt;/span&gt;</code><para /></remarks>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Visual Basic CreateObject и GetObject функции предоставляют доступ к объекту автоматизации OLE из проекта Visual Basic для приложений.</para>
-          <para />
-        </remarks>
+        <remarks><para>Функции CreateObject и GetObject в Visual Basic предоставляют доступ к объекту OLE Automation из проекта Visual Basic для приложений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoScroll">
@@ -2940,7 +2929,7 @@ End If&lt;/span&gt;</code><para /></remarks>
       </Parameters>
       <Docs>
         <param name="Velocity">Скорость прокрутки.</param>
-        <summary>Выполняет прокрутку автоматически указанной области.</summary>
+        <summary>Выполняет прокрутку автоматически через указанную область.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3004,12 +2993,10 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ширину (в точках) области, в какой текст переносится в указанной области. Только для чтения <b>времени</b>.</summary>
+        <summary>Возвращает ширину (в пунктах) области, в которой текст переносится в указанную область. Только для чтения, <b>Long</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство работает только в том случае, если вы находитесь в режиме веб-документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство работает только в режиме веб-документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Close">
@@ -3033,10 +3020,9 @@ End If&lt;/span&gt;</code><para /></remarks>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Закрывает указанного источника данных, области или задач.</summary>
+        <summary>Закрывает указанный источник данных слияния, область или задачу.</summary>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере закрывает активную область, если активное окно разделено.</para>
+        <example><para>В этом примере активная область закрывается, если активное окно разделено.</para>
           <code>&lt;span class="label"&gt;If ActiveDocument.ActiveWindow.Panes.Count &amp;gt;= 2 Then _ 
 
 
@@ -3294,8 +3280,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
 
     ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
-&lt;span class="label"&gt;Close&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;Close&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -3321,12 +3306,10 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>времени</b>.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Long</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayRulers">
@@ -3355,15 +3338,11 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если линейки отображаются для указанной области. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если линейки отображаются для указанной области. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DisplayRulers</b> является аналогом команду Линейка в меню Вид. Если <b>DisplayRulers</b> имеет <b>значение False</b>, горизонтальных и вертикальных линеек не будут отображаться, вне зависимости от состояния свойства <b>DisplayVerticalRuler</b> .</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере переключает активной области в режим разметки и отображает горизонтальных и вертикальных линейки.</para>
+        <remarks><para>Свойство <b>дисплайрулерс</b> эквивалентно команде линейка в меню Вид. Если <b>дисплайрулерс</b> имеет <b>значение false</b>, горизонтальная и вертикальная линейки не будут отображаться независимо от состояния свойства <b>дисплайвертикалрулер</b> .</para>
+          <para> </para></remarks>
+        <example><para>В этом примере показано переключение активной области в режим разметки и отображение горизонтальной и вертикальной линеек.</para>
           <code>&lt;span class="label"&gt;With ActiveDocument.ActiveWindow.ActivePane 
 
 
@@ -3878,8 +3857,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
     .&lt;/span&gt;
 &lt;span class="label"&gt;DisplayRulers&lt;/span&gt;
-&lt;span class="label"&gt;= True    .DisplayVerticalRuler = TrueEnd With&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;= True    .DisplayVerticalRuler = TrueEnd With&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="DisplayVerticalRuler">
@@ -3908,15 +3886,11 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для указанной области отображается вертикальная линейки. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если вертикальная линейка отображается для указанной области. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Вертикальная линейка отображается только в режиме разметки и только в том случае, если свойство <b>DisplayRulers</b> имеет значение <b>True</b>.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере переключает активной области в режим разметки и отображает горизонтальных и вертикальных линейки.</para>
+        <remarks><para>Вертикальная линейка отображается только в режиме разметки и только в том случае, если для свойства <b>дисплайрулерс</b> задано <b>значение true</b>.</para>
+          <para> </para></remarks>
+        <example><para>В этом примере показано переключение активной области в режим разметки и отображение горизонтальной и вертикальной линеек.</para>
           <code>&lt;span class="label"&gt;With ActiveDocument.ActiveWindow.ActivePane 
 
 
@@ -4687,8 +4661,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
     .&lt;/span&gt;
 &lt;span class="label"&gt;DisplayVerticalRuler&lt;/span&gt;
-&lt;span class="label"&gt;= TrueEnd With&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;= TrueEnd With&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Document">
@@ -4714,7 +4687,7 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>Microsoft.Office.Interop.Word.Document</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, связанный с указанной области. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, связанный с указанной областью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4742,19 +4715,15 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>Microsoft.Office.Interop.Word.Frameset</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий всей страницы рамок или один кадр страницы рамок. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frameset" /> объект, представляющий целую страницу рамок или один кадр на странице рамок. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения о создании страницы рамок, см <see cref="Creatingframespages#SameCHM" />.</para>
-          <para />
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере добавляется новый фрейм интерпретации справа от указанного кадра.</para>
+        <remarks><para>Более подробную информацию о создании страниц рамок можно <see cref="Creatingframespages#SameCHM" />узнать в статье.</para>
+          <para> </para>
+          <para> </para></remarks>
+        <example><para>В этом примере показано, как добавить новую рамку непосредственно справа от указанного кадра.</para>
           <code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
 &lt;span class="label"&gt;Frameset&lt;/span&gt;
-&lt;span class="label"&gt;_    .AddNewFrame wdFramesetNewRight&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;_    .AddNewFrame wdFramesetNewRight&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="HorizontalPercentScrolled">
@@ -4783,11 +4752,10 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по горизонтальные полосы прокрутки в процентах от ширины документа. Чтение и запись <b>времени</b>.</summary>
+        <summary>Возвращает или задает позицию горизонтальной прокрутки в процентах от ширины документа. Для чтения и записи, <b>Long</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере по горизонтали прокрутка active панели окна для Документ1 до слева.</para>
+        <example><para>В этом примере горизонтальная полоса прокручивается в активной области окна для document1 до левой стороны.</para>
           <code>&lt;span class="label"&gt;With Windows("Document1") 
 
 
@@ -5302,8 +5270,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
     .ActivePane.&lt;/span&gt;
 &lt;span class="label"&gt;HorizontalPercentScrolled&lt;/span&gt;
-&lt;span class="label"&gt;= 0End With&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;= 0End With&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -5329,7 +5296,7 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение типа <b>Long</b> , представляющее положение элемента в коллекции. Только для чтения.</summary>
+        <summary>Возвращает значение <b>типа Long</b> , представляющее положение элемента в коллекции. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5359,15 +5326,13 @@ End If&lt;/span&gt;</code><para /></remarks>
         <Parameter Name="ToLeft" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Количество окна для прокрутите окно вниз.</param>
-        <param name="Up">Число экранов прокрутка окна вверх.</param>
-        <param name="ToRight">Количество окна для прокрутите окно вправо.</param>
-        <param name="ToLeft">Число экранов для прокрутки окна слева.</param>
-        <summary>Прокрутка окна или панели указанное число экранов.</summary>
-        <remarks>
-          <para>Этот метод является эквивалентом щелкните только что перед или после поля прокрутки на горизонтальные и вертикальные полосы прокрутки.</para>
-          <para />
-        </remarks>
+        <param name="Down">Количество экранов, в течение которых окно прокручивается вниз.</param>
+        <param name="Up">Количество экранов для прокрутки окна вверх.</param>
+        <param name="ToRight">Количество экранов для прокрутки окна вправо.</param>
+        <param name="ToLeft">Количество экранов для прокрутки окна влево.</param>
+        <summary>Прокручивает окно или область на указанное число экранов.</summary>
+        <remarks><para>Этот метод эквивалентен щелчку до или сразу после ползунков на горизонтальной и вертикальной полосах прокрутки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinimumFontSize">
@@ -5396,14 +5361,11 @@ End If&lt;/span&gt;</code><para /></remarks>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает минимальный размер шрифта (в пунктах), отображаемых для указанной области. Чтение и запись <b>времени</b>.</summary>
+        <summary>Возвращает или задает минимальный размер шрифта (в пунктах), отображаемый для указанной области. Для чтения и записи, <b>Long</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство относится только текст, как показано в этом режиме. Размеры, которые отображаются на панели инструментов Форматирование и используется для печати остаются прежними.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере показана активного окна online представление и затем минимальный размер шрифта для активной до 12 пунктов.</para>
+        <remarks><para>Это свойство влияет только на текст, отображаемый в режиме веб-документа. Размеры точек, которые отображаются на панели инструментов форматирования и используются для печати, не изменяются.</para>
+          <para> </para></remarks>
+        <example><para>В этом примере активное окно задается в интерактивном режиме, а затем устанавливается минимальный размер шрифта для активной области равным 12 точкам.</para>
           <code>&lt;span class="label"&gt;With ActiveDocument.ActiveWindow 
 
 
@@ -5919,7 +5881,7 @@ End If&lt;/span&gt;</code><para /></remarks>
     .ActivePane.&lt;/span&gt;
 &lt;span class="label"&gt;MinimumFontSize&lt;/span&gt;
 &lt;span class="label"&gt;= 12End With&lt;/span&gt;</code>
-          <para>В этом примере возвращается минимальный размер шрифта для активной.</para>
+          <para>В этом примере возвращается минимальный размер шрифта для активной области.</para>
           <code>&lt;span class="label"&gt;Msgbox _ 
 
 
@@ -6177,8 +6139,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
 
     ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
-&lt;span class="label"&gt;MinimumFontSize&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;MinimumFontSize&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="NewFrameset">
@@ -6203,12 +6164,9 @@ End If&lt;/span&gt;</code><para /></remarks>
       <Parameters />
       <Docs>
         <summary>Создает новую страницу рамок на основе указанной области.</summary>
-        <remarks>
-          <para>Дополнительные сведения о создании страницы рамок, см <see cref="Creatingframespages#SameCHM" />.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере открывается документ с именем «Temp.doc», а затем создается новая страница рамок, единственным кадр содержит «Temp.doc».</para>
+        <remarks><para>Более подробную информацию о создании страниц рамок можно <see cref="Creatingframespages#SameCHM" />узнать в статье.</para>
+          <para> </para></remarks>
+        <example><para>В этом примере открывается документ с именем "Temp. doc", после чего создается страница рамок, содержащая только фрейм "Temp. doc".</para>
           <code>&lt;span class="label"&gt;Documents.Open "C:\Documents\Temp.doc" 
 
 
@@ -6466,8 +6424,7 @@ End If&lt;/span&gt;</code><para /></remarks>
 
 
 ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
-&lt;span class="label"&gt;NewFrameset&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;NewFrameset&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -6493,7 +6450,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.Pane</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>области</b> , который представляет следующую область документа в коллекции. Только для чтения.</summary>
+        <summary>Возвращает объект <b>области</b> , представляющий следующую область документа в коллекции. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6521,7 +6478,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.Pages</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pages" /> коллекции, представляющей страниц в документе.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Pages" /> коллекцию, представляющую страницы в документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6549,9 +6506,9 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <Parameter Name="Up" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Число страниц для прокрутки вниз.</param>
-        <param name="Up">Число страниц для прокрутке вверх.</param>
-        <summary>Выполняет прокрутку окне страницу по или указанной области.</summary>
+        <param name="Down">Количество страниц, прокручиваемых вниз.</param>
+        <param name="Up">Количество страниц, прокручиваемых вверх.</param>
+        <summary>Выполняет прокрутку указанной области или страницы окна с помощью страницы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6578,7 +6535,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект объекта указанной <b>области</b> .</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>области</b> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6606,7 +6563,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.Pane</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>области</b> , представляющий предыдущей области документа в коллекции. Только для чтения.</summary>
+        <summary>Возвращает объект <b>области</b> , представляющий предыдущую область документа в коллекции. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6634,7 +6591,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.Selection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>Selection</b> , который представляет выделение или точку вставки в область документа. Только для чтения.</summary>
+        <summary>Возвращает объект <b>Selection</b> , представляющий выделенный фрагмент или точку вставки в области документа. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6664,11 +6621,11 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <Parameter Name="ToLeft" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Down">Номер строки, чтобы прокрутите окно вниз.</param>
-        <param name="Up">Количество строк для прокрутки окна вверх.</param>
-        <param name="ToRight">Количество строк для прокрутки окна справа.</param>
-        <param name="ToLeft">Количество строк для прокрутки окна слева.</param>
-        <summary>Прокрутка окна или области, указанное число строк.</summary>
+        <param name="Down">Число строк, прокручиваемых вниз по окну.</param>
+        <param name="Up">Число строк, в течение которых окно будет прокручиваться вверх.</param>
+        <param name="ToRight">Число строк для прокрутки окна вправо.</param>
+        <param name="ToLeft">Число строк для прокрутки окна влево.</param>
+        <summary>Прокручивает окно или область на указанное число строк.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6693,13 +6650,10 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Создает оглавление на основе указанного документа и помещает его в новый фрейм в левой части страницы рамок.</summary>
-        <remarks>
-          <para>Дополнительные сведения о создании страницы рамок, см <see cref="Creatingframespages#SameCHM" />.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере открывает файл с именем «Proposal.doc», создает страницу рамок на основе файла и добавляет frame (в левой части страницы) содержащий оглавление для файла.</para>
+        <summary>Создает оглавление на основе указанного документа и размещает его в новом фрейме в левой части страницы рамок.</summary>
+        <remarks><para>Более подробную информацию о создании страниц рамок можно <see cref="Creatingframespages#SameCHM" />узнать в статье.</para>
+          <para> </para></remarks>
+        <example><para>В этом примере открывается файл с именем "предложений. doc", создается страница рамок на основе файла и добавляется рамка (в левой части страницы), содержащая оглавление для файла.</para>
           <code>&lt;span class="label"&gt;Documents.Open "C:\Documents\Proposal.doc" 
 
 
@@ -7213,8 +7167,7 @@ ActiveDocument.ActiveWindow.ActivePane.NewFrameset
 
 
 ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
-&lt;span class="label"&gt;TOCInFrameset&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;TOCInFrameset&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="VerticalPercentScrolled">
@@ -7243,11 +7196,10 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает позицию вертикальной прокрутки в процентном соотношении от длина документа. Чтение и запись <b>времени</b>.</summary>
+        <summary>Возвращает или задает позицию вертикальной прокрутки в процентах от длины документа. Для чтения и записи, <b>Long</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере по вертикали прокрутка active панели окна для Документ1 к концу.</para>
+        <example><para>В этом примере показана вертикальная полоса прокрутки активной области окна для document1 до конца.</para>
           <code>&lt;span class="label"&gt;With Windows("Document1") 
 
 
@@ -7762,8 +7714,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
 
     .ActivePane.&lt;/span&gt;
 &lt;span class="label"&gt;VerticalPercentScrolled&lt;/span&gt;
-&lt;span class="label"&gt;= 100End With&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;= 100End With&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="View">
@@ -7789,11 +7740,10 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.View</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>представления</b> , представляющий представление для указанной области.</summary>
+        <summary>Возвращает объект <b>View</b> , представляющий представление для указанной области.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В этом примере показано Непечатаемые знаки для области, связанные с окном первого семейства <b>Windows</b> .</para>
+        <example><para>В этом примере показаны все непечатаемые символы для областей, связанных с первым окном в коллекции <b>Windows</b> .</para>
           <code>&lt;span class="label"&gt;For Each myPane In Windows(1).Panes 
 
 
@@ -8052,8 +8002,7 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
 
     myPane.&lt;/span&gt;
 &lt;span class="label"&gt;View&lt;/span&gt;
-&lt;span class="label"&gt;.ShowAll = TrueNext myPane&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;.ShowAll = TrueNext myPane&lt;/span&gt;</code></example>
       </Docs>
     </Member>
     <Member MemberName="Zooms">
@@ -8079,14 +8028,11 @@ ActiveDocument.ActiveWindow.ActivePane.&lt;/span&gt;
         <ReturnType>Microsoft.Office.Interop.Word.Zooms</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="Zooms#SameCHM" /> коллекции, представляющей параметры масштаба для каждого представления (например, стандартное представление, структура или режим разметки).</summary>
+        <summary>Возвращает <see cref="Zooms#SameCHM" /> коллекцию, представляющую параметры масштаба для каждого представления (например, "обычный просмотр", "структура" или "режим разметки").</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возврате один элемент коллекции можно <see cref="ReturninganObjectfromaCollection#SameCHM" />.</para>
-          <para />
-        </remarks>
-        <example>
-          <para>В этом примере задается масштаб в обычном режиме до 100 процентов для каждого открытого окна.</para>
+        <remarks><para>Сведения о возврате одного элемента коллекции приведены в разделе <see cref="ReturninganObjectfromaCollection#SameCHM" />.</para>
+          <para> </para></remarks>
+        <example><para>В этом примере для каждого открытого окна устанавливается масштаб в обычном режиме в 100 процентов.</para>
           <code>&lt;span class="label"&gt;Dim wndLoop as Window 
 
 
@@ -8858,11 +8804,10 @@ For Each wndLoop In Windows
     wndLoop.ActivePane.&lt;/span&gt;
 &lt;span class="label"&gt;Zooms&lt;/span&gt;
 &lt;span class="label"&gt;(wdNormalView).Percentage = 100Next wndLoop&lt;/span&gt;</code>
-          <para>В этом примере задается масштаб в режим разметки, чтобы вся страница отображается.</para>
+          <para>В этом примере показано, как задать масштаб в режиме разметки, чтобы видна вся страница.</para>
           <code>&lt;span class="label"&gt;ActiveDocument.ActiveWindow.Panes(1).&lt;/span&gt;
 &lt;span class="label"&gt;Zooms&lt;/span&gt;
-&lt;span class="label"&gt;(wdPrintView).PageFit = _    wdPageFitFullPage&lt;/span&gt;</code>
-        </example>
+&lt;span class="label"&gt;(wdPrintView).PageFit = _    wdPageFitFullPage&lt;/span&gt;</code></example>
       </Docs>
     </Member>
   </Members>

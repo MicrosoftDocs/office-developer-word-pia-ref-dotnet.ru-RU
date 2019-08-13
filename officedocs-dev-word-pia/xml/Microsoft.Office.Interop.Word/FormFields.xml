@@ -1,13 +1,5 @@
 <Type Name="FormFields" FullName="Microsoft.Office.Interop.Word.FormFields">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="46b21510386a35e4547b988b64b574860cd58ca2" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673124" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FormFields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="89a396030811c12cb95f62e8636d76407d533478" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148084" /></Metadata><TypeSignature Language="C#" Value="public interface FormFields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormFields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FormFields" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormFields&#xA;Implements IEnumerable" />
@@ -30,14 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекты, которые представляют все поля формы в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Используйте свойство <b>FormFields</b> для возврата коллекции <b>FormFields</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields</b> для добавления поля формы.</para>
-      <para>Использования <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы возвратить объект <b>FormField</b> .</para>
-      <para>Номер индекса представляет позицию поля формы в выделение, диапазон или документа.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объектов, представляющих все поля формы в выделении, диапазоне или документе.</summary>
+    <remarks><para>Используйте свойство <b>FormFields</b> , чтобы возвратить коллекцию <b>FormFields</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields</b> для добавления поля формы.</para>
+      <para>Используйте <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>FormField</b> .</para>
+      <para>Номер индекса представляет положение поля формы в выделенном фрагменте, диапазоне или документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -63,9 +53,9 @@
         <Parameter Name="Type" Type="Microsoft.Office.Interop.Word.WdFieldType" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон, где требуется добавить поле формы. Если диапазон не будет свернут, поле формы заменяет диапазон.</param>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" />. Тип поля формы для добавления.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объект, который представляет новое поле формы добавлены в диапазон.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, в который требуется добавить поле формы. Если диапазон не свернут, поле формы заменит диапазон.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" />. Тип добавляемого поля формы.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объект, представляющий новое поле формы, добавленное в диапазон.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,7 +111,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,11 +139,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -214,9 +204,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -244,7 +233,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -275,13 +264,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если заливка применяется к поля формы.</summary>
+        <summary>Определяет, применяется ли заливка к полям формы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство возвращает <b>значение True</b> , если заливка применяется к поля формы и <b>значение False,</b> Если это не так. Задайте свойство значение <b>True</b> или <b>False</b> для включения или отключения функции.</para>
-          <para>Затенение облегчает поля формы для поиска в документе и не влияет на результаты печати.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если заливка применяется к полям форм, и <b>false</b> , если нет. Присвойте свойству значение <b>true</b> или <b>false</b> , чтобы включить или отключить функциональные возможности.</para>
+          <para>Заливка полей формы упрощает их размещение в документе и не влияет на напечатанный результат.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

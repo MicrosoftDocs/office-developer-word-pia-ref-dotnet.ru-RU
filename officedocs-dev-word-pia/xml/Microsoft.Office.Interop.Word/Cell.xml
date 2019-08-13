@@ -1,13 +1,5 @@
 <Type Name="Cell" FullName="Microsoft.Office.Interop.Word.Cell">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8ad0130c14870aad4b806b0703212d56fec37a14" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672907" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Cell" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5c545e74b89b7677ca1439554a6927ae25fd8a91" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142371" /></Metadata><TypeSignature Language="C#" Value="public interface Cell" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Cell" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Cell" />
   <TypeSignature Language="VB.NET" Value="Public Interface Cell" />
@@ -26,15 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одну ячейку.</summary>
-    <remarks>
-      <para>Объект <b>Cell</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.Cells" /> семейства сайтов. Представляет коллекцию <b>ячеек</b> всем ячейкам в указанном объекте.</para>
-      <para>Использования <b>ячейки</b>(<paramref name="row" />, <paramref name="column" />), где <paramref name="row" /> — номер строки и <paramref name="column" /> — это число столбцов или <b>ячеек</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>ячейки</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Cells.Add(System.Object@)" /> метод для добавления объекта <b>ячейки</b> в <b>коллекции</b> . Вы также можете использовать <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertCells(System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, который требуется добавить новые ячейки.</para>
-      <para>Воспользоваться методом <b>Add</b> с <see cref="T:Microsoft.Office.Interop.Word.Rows" /> или <see cref="T:Microsoft.Office.Interop.Word.Columns" /> семейства сайтов для добавления строки или столбца ячеек.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Selection.Information(Microsoft.Office.Interop.Word.WdInformation)" /> свойства с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объект, который требуется вернуть текущее число строк и столбцов.</para>
-      <para />
-    </remarks>
+    <summary>Представляет одну ячейку таблицы.</summary>
+    <remarks><para>Объект <b>Cell</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Cells" /> коллекции. Коллекция <b>Cells</b> представляет все ячейки в указанном объекте.</para>
+      <para>Используйте <b>ячейку</b>(<paramref name="row" />, <paramref name="column" />), где <paramref name="row" /> — это номер строки, <paramref name="column" /> а — номер столбца, или <b>ячейки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Cell</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Cells.Add(System.Object@)" /> метод, чтобы добавить объект <b>Cell</b> в коллекцию <b>Cells</b> . Для вставки новых ячеек можно <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertCells(System.Object@)" /> также использовать метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта.</para>
+      <para>Чтобы добавить строку или столбец ячеек <see cref="T:Microsoft.Office.Interop.Word.Rows" /> , <see cref="T:Microsoft.Office.Interop.Word.Columns" /> используйте метод <b>Add</b> с коллекцией or.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Selection.Information(Microsoft.Office.Interop.Word.WdInformation)" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объектом, чтобы возвратить текущую строку и номер столбца.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,11 +76,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вставляет поле = (Формула), которая вычисляет и отображает сумму значений в ячейки таблицы выше или слева от ячейки, указанное в выражении.</summary>
-        <remarks>
-          <para>Сведения о том, как Microsoft Word определяет значения, которые должны добавить можно <see cref="M:Microsoft.Office.Interop.Word.Cell.Formula(System.Object@,System.Object@)" /> метод.</para>
-          <para />
-        </remarks>
+        <summary>Вставляет поле = (формула), которое вычисляется и отображает сумму значений в ячейках таблицы выше или слева от ячейки, указанной в выражении.</summary>
+        <remarks><para>Сведения о том, как Microsoft Word определяет, какие значения следует добавить, <see cref="M:Microsoft.Office.Interop.Word.Cell.Formula(System.Object@,System.Object@)" /> можно узнать в методе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Borders">
@@ -119,7 +107,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,12 +138,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает интервал (в пунктах) для добавления под содержимое ячейки.</summary>
+        <summary>Возвращает или задает объем места (в пунктах) для добавления под содержимым ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение свойства <b>BottomPadding</b> для одной ячейки переопределяет настройки <see cref="P:Microsoft.Office.Interop.Word.Table.BottomPadding" /> свойства для всей таблицы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значение свойства <b>боттомпаддинг</b> для отдельной ячейки переопределяет значение <see cref="P:Microsoft.Office.Interop.Word.Table.BottomPadding" /> свойства для всей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Column">
@@ -181,7 +167,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Column</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объекта, представляющего столбец таблицы с указанной ячейке.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Column" /> объект, представляющий столбец таблицы, содержащий указанную ячейку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,7 +195,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее число столбцов в таблице, содержащее указанную ячейку.</summary>
+        <summary>Возвращает значение, которое указывает номер столбца таблицы, содержащего указанную ячейку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -237,11 +223,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -266,8 +252,8 @@
         <Parameter Name="ShiftCells" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ShiftCells">Направление, в котором планируется перемещать остальные ячейки. Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdDeleteCells" /> константу. Если этот параметр опущен, ячеек справа от последней ячейке удаленных сдвинуто влево.</param>
-        <summary>Удаляет ячейку таблицы и при необходимости определяет, как сдвинуто остальные ячейки.</summary>
+        <param name="ShiftCells">Направление сдвига оставшихся ячеек. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdDeleteCells" /> константой. Если этот параметр опущен, ячейки справа от последней удаленной ячейки сдвигаются влево.</param>
+        <summary>Удаляет ячейку таблицы и при необходимости управляет сдвигом оставшихся ячеек.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -297,12 +283,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если Microsoft Word визуально уменьшает размер текст, введенный в ячейку, чтобы он соответствовал ширины столбца.</summary>
+        <summary>Возвращает или задает значение, указывающее, может ли Microsoft Word визуально уменьшить размер вводимого в ячейку текста, чтобы он поместился в пределах ширины столбца.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если свойство <b>FitText</b> имеет значение <b>True</b>, размер шрифта текста не изменяется, но visual ширину знаков, корректируется в соответствии со всех типизированных текста в ячейку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для свойства <b>фиттекст</b> задано <b>значение true</b>, размер шрифта текста не изменяется, но визуальная ширина символов корректируется, чтобы вместить весь вводимый текст в ячейку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Formula">
@@ -328,18 +312,16 @@
         <Parameter Name="NumFormat" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Formula">Математические формулы, которое поле = (Формула) для вычисления. Тип электронной таблицы ссылок на ячейки таблицы являются допустимыми. Например «= SUM(A4:C4)» указывает первые три значения в четвертой строки.</param>
-        <param name="NumFormat">Формат результата в поле = (Формула).</param>
-        <summary>Вставляет поле = (Формула), содержащее указанную формулу в ячейку таблицы.</summary>
-        <remarks>
-          <para>
-            <b>Формула</b> является необязательным, поскольку существует хотя бы одну ячейку, которое содержит значение выше или слева от ячейки, содержащей точку вставки. Если ячейки над точку вставки содержат значения, вставленный поле — {= SUM(ABOVE)}; Если пункт ячеек слева от вставки содержать значения, вставленный поля, {= SUM(LEFT)}. Если ячейки над точку вставки и ячеек слева от точки вставки содержит значения, Microsoft Word использует следующие правила, чтобы определить, какие функции <b>SUM</b> для вставки:</para>
-          <para>, если элемент ячейки непосредственно над вставки содержит значение вставки Word {= SUM(ABOVE)}.</para>
-          <para>Если ячейка непосредственно над курсор не содержит значение и ячейки слева от его Word вставки {= SUM(LEFT)}.</para>
-          <para>Если ни один из прилегающей ячейка содержит значение вставки Word {= SUM(ABOVE)}.</para>
-          <para>Если не указан, <b>формулы</b> и ячеек выше и слева от точки вставки пустой, поля, происходит ошибка.</para>
-          <para />
-        </remarks>
+        <param name="Formula">Математическая формула, для которой требуется вычислить поле = (формула). Электронные таблицы — допустимые ссылки на ячейки таблицы. Например, "= SUM (A4: C4)" указывает первые три значения в четвертой строке.</param>
+        <param name="NumFormat">Формат результата поля = (формула).</param>
+        <summary>Вставляет поле = (формула), содержащее указанную формулу, в ячейку таблицы.</summary>
+        <remarks><para>
+            <b>Формула</b> является необязательной, пока есть хотя бы одна ячейка, содержащая значение выше или слева от ячейки, содержащей точку вставки. Если ячейки над точкой вставки содержат значения, то вставленное поле будет {= SUM (выше)}; Если ячейка слева от точки вставки содержит значения, то вставленное поле — {= SUM (LEFT)}. Если ячейки над точкой вставки и ячейки слева от точки вставки содержат значения, Microsoft Word использует следующие правила, чтобы определить, какую функцию <b>Sum</b> нужно вставить:</para>
+          <para>Если ячейка, находящийся непосредственно над точкой вставки, содержит значение, Word вставляет {= SUM (выше)}.</para>
+          <para>Если ячейка, находящийся непосредственно над точкой вставки, не содержит значения и ячейка слева от нее, Word вставляет {= SUM (LEFT)}.</para>
+          <para>Если ни одна ячейка не содержит значение, Word вставляет {= SUM (выше)}.</para>
+          <para>Если <b>Формула</b> не указана, а все ячейки выше и слева от точки вставки пусты, то результатом этого поля будет ошибка. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -368,12 +350,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту указанный объект (в пунктах не указано иное).</summary>
+        <summary>Возвращает или задает высоту указанного объекта (в пунктах, если не указано иное).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.Row.HeightRule" /><b>wdRowHeightAuto</b>— это свойство указанной строки, <b>Высота</b> возвращает <b>wdUndefined</b>; Установка свойства <b>Height</b> задается <b>HeightRule</b><b>wdRowHeightAtLeast</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Row.HeightRule" /> свойство указанной строки имеет значение <b>вдровхеигхтауто</b>, то <b>Height</b> возвращает <b>вдундефинед</b>; Установка свойства <b>Height</b> устанавливает для <b>хеигхтруле</b> значение <b>вдровхеигхтатлеаст</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HeightRule">
@@ -402,12 +382,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRowHeightRule</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает правила для определения высоты указанной ячейке.</summary>
+        <summary>Возвращает или задает правило для определения высоты указанной ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Задание для свойства <b>HeightRule</b><see cref="T:Microsoft.Office.Interop.Word.Cell" /> объекта автоматически задает свойство для всей строки.</para>
-          <para />
-        </remarks>
+        <remarks><para>При установке свойства <b>хеигхтруле</b> <see cref="T:Microsoft.Office.Interop.Word.Cell" /> объекта автоматически задается свойство для всей строки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ID">
@@ -436,7 +414,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает правила для определения высоты указанной ячейке.</summary>
+        <summary>Возвращает или задает правило для определения высоты указанной ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -467,12 +445,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает дискового пространства (в пунктах) для добавления слева от содержимое одной ячейки.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах), которое добавляется слева от содержимого одной ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Параметр <see cref="P:Microsoft.Office.Interop.Word.Cell.LeftPadding" /> свойства для одной ячейки переопределяет настройки <see cref="P:Microsoft.Office.Interop.Word.Table.LeftPadding" /> свойства для всей таблицы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значение <see cref="P:Microsoft.Office.Interop.Word.Cell.LeftPadding" /> свойства для отдельной ячейки переопределяет значение <see cref="P:Microsoft.Office.Interop.Word.Table.LeftPadding" /> свойства для всей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Merge">
@@ -498,12 +474,10 @@
         <Parameter Name="MergeTo" Type="Microsoft.Office.Interop.Word.Cell" />
       </Parameters>
       <Docs>
-        <param name="MergeTo">Ячейка для объединения с.</param>
-        <summary>Объединяет указанной ячейке таблицы с другой ячейки.</summary>
-        <remarks>
-          <para>Результат вызова этого свойства — это одну ячейку.</para>
-          <para />
-        </remarks>
+        <param name="MergeTo">Ячейка, с которой выполняется объединение.</param>
+        <summary>Объединяет указанную ячейку таблицы с другой ячейкой.</summary>
+        <remarks><para>Результат вызова этого свойства является одной ячейкой таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NestingLevel">
@@ -529,12 +503,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень вложенности указанной ячейке.</summary>
+        <summary>Возвращает уровень вложенности указанной ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Внешняя таблица имеет вложения уровня 1. Уровень вложенности каждой последовательно вложенные таблицы — это один выше, чем в предыдущей таблице.</para>
-          <para />
-        </remarks>
+        <remarks><para>Внешняя таблица имеет уровень вложения 1. Уровень вложенности каждой последующей вложенной таблицы — это на один уровень выше предыдущей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -588,7 +560,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -619,7 +591,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину (в точках или в процентах от ширины окна) для указанной ячейке.</summary>
+        <summary>Возвращает или задает предпочтительную ширину (в пунктах или в процентах от ширины окна) для указанной ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -650,7 +622,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPreferredWidthType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает предпочтительную единицы измерения для ширины указанной ячейке.</summary>
+        <summary>Возвращает или задает предпочтительную единицу измерения для ширины указанной ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -706,7 +678,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -737,12 +709,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает дискового пространства (в пунктах) для добавления в правой части содержимого ячейки.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах), добавляемое к правому краю содержимого ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение свойства <b>RightPadding</b> для одной ячейки переопределяет настройки <see cref="P:Microsoft.Office.Interop.Word.Table.RightPadding" /> свойства для всей таблицы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значение свойства <b>ригхтпаддинг</b> для отдельной ячейки переопределяет значение <see cref="P:Microsoft.Office.Interop.Word.Table.RightPadding" /> свойства для всей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Row">
@@ -768,7 +738,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Row</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, который представляет строку, содержащую указанную ячейку.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Row" /> объект, представляющий строку, содержащую указанную ячейку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -796,7 +766,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число строк, содержащий указанную ячейку.</summary>
+        <summary>Возвращает номер строки, содержащей указанную ячейку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -823,10 +793,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetHeight">
@@ -853,13 +821,11 @@
         <Parameter Name="HeightRule" Type="Microsoft.Office.Interop.Word.WdRowHeightRule" />
       </Parameters>
       <Docs>
-        <param name="RowHeight">Высота строки в точках.</param>
-        <param name="HeightRule">Правила для определения высоты указанной ячейке.</param>
-        <summary>Задает высоту ячеек в таблице.</summary>
-        <remarks>
-          <para>Задание для свойства <b>SetHeight</b><see cref="T:Microsoft.Office.Interop.Word.Cell" /> объекта автоматически задает свойство для всей строки.</para>
-          <para />
-        </remarks>
+        <param name="RowHeight">Высота строки в пунктах.</param>
+        <param name="HeightRule">Правило для определения высоты указанной ячейки.</param>
+        <summary>Задает высоту ячейки таблицы.</summary>
+        <remarks><para>При установке свойства <b>сесеигхт</b> <see cref="T:Microsoft.Office.Interop.Word.Cell" /> объекта автоматически задается свойство для всей строки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetWidth">
@@ -886,14 +852,11 @@
         <Parameter Name="RulerStyle" Type="Microsoft.Office.Interop.Word.WdRulerStyle" />
       </Parameters>
       <Docs>
-        <param name="ColumnWidth">Ширина указанного столбца в точках.</param>
-        <param name="RulerStyle">Управляет тем, как Microsoft Word изменяет ширину ячеек.</param>
+        <param name="ColumnWidth">Ширина указанного столбца (в пунктах).</param>
+        <param name="RulerStyle">Управляет тем, как Microsoft Word регулирует ширину ячейки.</param>
         <summary>Задает ширину ячейки в таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> Поведение, описанных выше применяется к по левому краю таблицы. Поведение <b>WdRulerStyle</b> для центр и по правому краю таблиц может быть непредвиденным; в таких случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> должен использоваться с осторожностью.</para>
-          <para />
-        </remarks>
+        <remarks><para>Описанное выше <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> поведение относится к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в этих случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> метод следует использовать с осторожностью.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shading">
@@ -919,7 +882,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -947,9 +910,9 @@
         <Parameter Name="NumColumns" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="NumRows">Количество строк, которые ячейку можно разбить на.</param>
-        <param name="NumColumns">Число столбцов, которые ячейку можно разбить на.</param>
-        <summary>Разделяет одну ячейку на несколько ячеек.</summary>
+        <param name="NumRows">Количество строк, на которые должна быть разделена ячейка.</param>
+        <param name="NumColumns">Количество столбцов, на которые должна быть разделена ячейка.</param>
+        <summary>Разделяет одну ячейку таблицы на несколько ячеек.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -976,7 +939,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Tables</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Tables" /> коллекции, представляющей все таблицы в указанной ячейке.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Tables" /> коллекцию, которая представляет все таблицы в указанной ячейке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1007,12 +970,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает дискового пространства (в пунктах) для добавления выше содержимое одной ячейки или всех ячеек в таблице.</summary>
+        <summary>Возвращает или задает расстояние (в пунктах), добавляемое над содержимым одной ячейки или всех ячеек в таблице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение свойства <b>TopPadding</b> для одной ячейки переопределяет настройки <see cref="P:Microsoft.Office.Interop.Word.Table.TopPadding" /> свойства для всей таблицы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Значение свойства <b>топпаддинг</b> для отдельной ячейки переопределяет значение <see cref="P:Microsoft.Office.Interop.Word.Table.TopPadding" /> свойства для всей таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalAlignment">
@@ -1103,7 +1064,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если Microsoft Word перенос текста в несколько строк и удлинения этой ячейки, чтобы ширина ячейки не меняется.</summary>
+        <summary>Возвращает или задает значение, указывающее, будет ли Microsoft Word переносить текст в несколько строк и удлинить ячейку, чтобы ширина ячейки осталась прежней.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

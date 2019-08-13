@@ -1,13 +1,5 @@
 <Type Name="Subdocument" FullName="Microsoft.Office.Interop.Word.Subdocument">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="474871ab0e9bcec0803236bb55c332236b2e7d60" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672916" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Subdocument" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c62a47b9e81261c6e830b9e0cc33dec363fa4210" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146075" /></Metadata><TypeSignature Language="C#" Value="public interface Subdocument" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Subdocument" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Subdocument" />
   <TypeSignature Language="VB.NET" Value="Public Interface Subdocument" />
@@ -26,14 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет вложенный документ внутри документа или диапазона.</summary>
-    <remarks>
-      <para>
-        <b>Вложенный</b> объект является членом <see cref="T:Microsoft.Office.Interop.Word.Subdocuments" /> семейства сайтов. Коллекция <b>вложенные документы</b> включает все вложенные документы в диапазон или документов.</para>
-      <para>Использования <b>вложенные документы</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>вложенный</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromFile(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromRange(Microsoft.Office.Interop.Word.Range)" /> способ добавления вложенного документа в документ.</para>
-      <para />
-    </remarks>
+    <summary>Представляет вложенный документ в документе или диапазоне.</summary>
+    <remarks><para>Объект <b>вложенного документа</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Subdocuments" /> коллекции. Коллекция вложенных <b>документов</b> включает все вложенные документы в диапазоне или документе.</para>
+      <para>Используйте <b>вложенные документы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>вложенного документа</b> .</para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromFile(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.Subdocuments.AddFromRange(Microsoft.Office.Interop.Word.Range)" /> для добавления вложенного документа в документ.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -142,8 +131,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный вложенный документ был сохранен в файл.</summary>
+        <summary><b>Значение true</b> , если указанный вложенный документ был сохранен в файл.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,7 +159,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень заголовка, используемые для создания документа.</summary>
+        <summary>Возвращает уровень заголовков, используемый для создания вложенного документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -202,7 +190,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Значение true, если вложенный документ в главный документ заблокирован.</summary>
+        <summary>Значение true, если вложенный документ в главном документе заблокирован.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -256,7 +244,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Открывает указанный объект. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> , который представляет открытый объект.</summary>
+        <summary>Открывает указанный объект. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Document" /> объект, представляющий открытый объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,7 +272,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -312,14 +300,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает указанный объект диска или веб-путь.</summary>
+        <summary>Возвращает диск или веб-путь к указанному объекту.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Путь не содержит знака — например, «C:\MSOffice» или "http://MyServer«. Использование <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Использование <see cref="P:Microsoft.Office.Interop.Word.Subdocument.Name" /> свойство возвращает имя файла без путь.</para>
+        <remarks><para>Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска. Используйте <see cref="P:Microsoft.Office.Interop.Word.Subdocument.Name" /> свойство, чтобы возвратить имя файла без пути.</para>
           <para>
-            <b>Примечание</b> свойство <b>PathSeparator</b> можно использовать для построения веб-адреса, несмотря на то, что они содержат косую черту (/) и свойство <b>PathSeparator</b> параметры по умолчанию для обратной косой черты (\).</para>
-          <para />
-        </remarks>
+            <b>Note (Примечание</b> )  Свойство <b>пассепаратор</b> можно использовать для создания веб-адресов, несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -345,12 +331,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур, см <b>диапазон</b> из <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о возврате диапазона из документа или возврате диапазона фигуры из коллекции фигур представлены в разделе метод <b>Range</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Split">
@@ -375,12 +359,10 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон, если разбить вложенный документ, становится отдельный вложенный документ.</param>
-        <summary>Существующие вложенный документ делится на два вложенные документы на том же уровне в режиме главного документа или структуры.</summary>
-        <remarks>
-          <para>Подразделение находится в начале указанного диапазона. Если активный документ не находится в главный документ или в режиме структуры или диапазон не в начале абзаца в вложенный документ, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, который, когда вложенный документ был разделен, становится отдельным вложенным документом.</param>
+        <summary>Разделяет существующий вложенный документ на два вложенных документа на том же уровне в режиме главного документа или структуры.</summary>
+        <remarks><para>Подразделение находится в начале указанного диапазона. Если активный документ не находится ни в главном документе, ни в режиме структуры или если диапазон не находится в начале абзаца вложенного документа, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

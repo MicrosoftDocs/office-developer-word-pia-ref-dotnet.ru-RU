@@ -1,13 +1,5 @@
 <Type Name="Task" FullName="Microsoft.Office.Interop.Word.Task">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a293fe302e518f71d73a2b60dd8cf985017ecc8a" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673595" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Task" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="475c1671362444c8d7ebcb134d01290da862e462" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143877" /></Metadata><TypeSignature Language="C#" Value="public interface Task" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Task" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Task" />
   <TypeSignature Language="VB.NET" Value="Public Interface Task" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одну задачу работу в системе.</summary>
-    <remarks>
-      <para>Объект <b>задачи</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Tasks" /> семейства сайтов. Коллекция <b>задачи</b> включает все приложения, которые в настоящее время работает в системе.</para>
-      <para>Использования <b>задачи</b>(<paramref name="index" />), где <paramref name="index" /> — это имя приложения или номер индекса для возврата объекта <b>задачи</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет одну задачу, выполняемую в системе.</summary>
+    <remarks><para>Объект <b>Task</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Tasks" /> коллекции. Коллекция <b>tasks</b> включает все приложения, которые в данный момент работают в системе.</para>
+      <para>Используйте <b></b>Tasks<paramref name="index" />(), <paramref name="index" /> где — это имя приложения или номер индекса, чтобы вернуть один объект <b>Task</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -56,8 +46,8 @@
         <Parameter Name="Wait" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Wait">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы дождаться, пока пользователь был активирован Microsoft Word, перед активацией задачи. <b>Значение false</b> сразу же активировать задачу, даже в том случае, если Word не является активным.</param>
-        <summary>Активирует <see cref="T:Microsoft.Office.Interop.Word.Task" /> объекта.</summary>
+        <param name="Wait">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы подождать, пока пользователь не активировал Microsoft Word перед активацией задачи. <b>Значение false</b> для немедленной активации задачи, даже если Word не активен.</param>
+        <summary>Активирует <see cref="T:Microsoft.Office.Interop.Word.Task" /> объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,7 +100,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Закрывает указанной задачи.</summary>
+        <summary>Закрывает указанную задачу.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,11 +127,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -170,7 +160,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту окна указанной задачи в пунктах.</summary>
+        <summary>Возвращает или задает высоту указанного окна задачи в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -201,7 +191,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее горизонтальную позицию указанной задачи, измеряемую в точках.</summary>
+        <summary>Возвращает или задает <b>целое число</b> , представляющее горизонтальную позицию указанной задачи, измеряемую в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,9 +220,9 @@
         <Parameter Name="Top" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Left">Требуется <b>целое число</b>. Экран горизонтальную позицию окна, указанного.</param>
-        <param name="Top">Требуется <b>целое число</b>. Вертикальная экранная позицию окна, указанного.</param>
-        <summary>Располагает окно задач.</summary>
+        <param name="Left">Обязательный атрибут типа <b>Integer</b>. Горизонтальная позиция указанного окна.</param>
+        <param name="Top">Обязательный атрибут типа <b>Integer</b>. Вертикальная позиция экрана указанного окна.</param>
+        <summary>Располагает окно задачи.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -287,7 +277,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -316,14 +306,12 @@
         <Parameter Name="Height" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Width">Требуется <b>целое число</b>. Ширина окна в точках.</param>
-        <param name="Height">Требуется <b>целое число</b>. Высота окна в точках.</param>
-        <summary>Изменение размеров окна указанной задачи. Если окно свернуто или развернуто, возникает ошибка.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Использование <see cref="P:Microsoft.Office.Interop.Word.Task.Width" /> или <see cref="P:Microsoft.Office.Interop.Word.Task.Height" /> свойства высоты и ширины окна независимо друг от друга.</para>
-          <para />
-        </remarks>
+        <param name="Width">Обязательный атрибут типа <b>Integer</b>. Ширина окна в пунктах.</param>
+        <param name="Height">Обязательный атрибут типа <b>Integer</b>. Высота окна в пунктах.</param>
+        <summary>Изменяет размер указанного окна задачи. Если окно развернуто или свернуто, возникает ошибка.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.Task.Width" /> или <see cref="P:Microsoft.Office.Interop.Word.Task.Height" /> для задания ширины и высоты окна независимо друг от друга.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SendWindowMessage">
@@ -351,10 +339,10 @@
         <Parameter Name="lParam" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Message">Требуется <b>целое число</b>. Шестнадцатеричное число, соответствующее сообщение, которое требуется отправить. Если у вас есть пакет SDK платформы Майкрософт, можно просмотреть вверх имя сообщения в файлах заголовка (например, Winuser.h) для связанного шестнадцатеричный номер (предшествовать шестнадцатеричное значение с &amp;h).</param>
-        <param name="wParam">Требуется <b>целое число</b>. Параметры для сообщения, отправляемого. Сведения о какие эти значения представляют, приведены в разделе ссылки для этого сообщения в документации, поставляемой с помощью пакета SDK платформы Microsoft. Чтобы получить соответствующие значения, необходимо использовать программу Spy (определяется с помощью набора).</param>
-        <param name="lParam">Требуется <b>целое число</b>. Параметры для сообщения, отправляемого. Сведения о какие эти значения представляют, приведены в разделе ссылки для этого сообщения в документации, поставляемой с помощью пакета SDK платформы Microsoft. Чтобы получить соответствующие значения, необходимо использовать программу Spy (определяется с помощью набора).</param>
-        <summary>Отправляет сообщения Windows и связанными параметрами для указанной задачи.</summary>
+        <param name="Message">Обязательный атрибут типа <b>Integer</b>. Шестнадцатеричное число, соответствующее отправляемому сообщению. Если у вас есть пакет средств разработки программного обеспечения для платформы Майкрософт, можно найти имя сообщения в файлах заголовков (например, Winuser. h), чтобы найти соответствующее шестнадцатеричное число (перед шестнадцатеричным значением с &amp;h).</param>
+        <param name="wParam">Обязательный атрибут типа <b>Integer</b>. Параметры, подходящие для отправляемого сообщения. Сведения об этих значениях представлены в справочном разделе по этому сообщению в документации, входящей в комплект разработки программного обеспечения Майкрософт для платформы. Чтобы получить соответствующие значения, может потребоваться использование служебной программы Spy (которая поставляется вместе с пакетом).</param>
+        <param name="lParam">Обязательный атрибут типа <b>Integer</b>. Параметры, подходящие для отправляемого сообщения. Сведения об этих значениях представлены в справочном разделе по этому сообщению в документации, входящей в комплект разработки программного обеспечения Майкрософт для платформы. Чтобы получить соответствующие значения, может потребоваться использование служебной программы Spy (которая поставляется вместе с пакетом).</param>
+        <summary>Отправляет сообщение Windows и связанные с ним параметры для указанной задачи.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -384,7 +372,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает вертикальную позицию указанной задачи в пунктах.</summary>
+        <summary>Возвращает или задает вертикальное положение указанной задачи в пунктах.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -415,13 +403,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный объект является видимым.</summary>
+        <summary><b>Значение true</b> , если указанный объект является видимым.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Некоторые методы и свойства могут быть недоступны, если свойство <b>Visible</b> имеет <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -481,23 +466,21 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdWindowState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает состояние окна указанной задачи.</summary>
+        <summary>Возвращает или задает состояние указанного окна задачи.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdWindowState" />может быть одной из этих констант <b>вдвиндовстате</b> . </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdWindowState" />может иметь одно из следующих констант <b>WdWindowState</b> . </para>
-          <para>
-            <b>wdWindowStateNormal </b>
+            <b>вдвиндовстатемаксимизе</b>
           </para>
           <para>
-            <b>wdWindowStateMaximize </b>
+            <b>вдвиндовстатенормал</b>
           </para>
           <para>
-            <b>wdWindowStateMinimize</b>
+            <b>вдвиндовстатеминимизе</b>
           </para>
-          <para>константу <b>wdWindowStateNormal</b> указывает окно, не свернуто или развернуто. Не удается установить состояние неактивного окна. Использование <see cref="M:Microsoft.Office.Interop.Word.Task.Activate(System.Object@)" /> метод активации окно до настройки состояния окна.</para>
-          <para />
-        </remarks>
+          <para>Константа <b>вдвиндовстатенормал</b> указывает, что окно не развернуто или свернуто. Невозможно задать состояние неактивного окна. Используйте <see cref="M:Microsoft.Office.Interop.Word.Task.Activate(System.Object@)" /> метод для активации окна перед настройкой состояния окна.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

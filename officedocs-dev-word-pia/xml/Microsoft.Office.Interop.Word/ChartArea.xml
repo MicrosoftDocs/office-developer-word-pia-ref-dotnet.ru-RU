@@ -1,13 +1,5 @@
 <Type Name="ChartArea" FullName="Microsoft.Office.Interop.Word.ChartArea">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8e5d44c3a54c0c92e6359a881f578146ce4e4e38" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672687" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartArea" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b5d50c1c6f0528c3eb76e6313abe633c1d55e70f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142308" /></Metadata><TypeSignature Language="C#" Value="public interface ChartArea" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartArea" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartArea" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartArea" />
@@ -27,11 +19,9 @@
   </Attributes>
   <Docs>
     <summary>Представляет область диаграммы.</summary>
-    <remarks>
-      <para>Область диаграммы включает в себя все, включая область построения. Тем не менее <see cref="T:Microsoft.Office.Interop.Word.PlotArea" /> объект имеет свой собственный форматирование, поэтому форматирование области построения не формат области диаграммы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartArea" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.ChartArea" /> объект.</para>
-      <para />
-    </remarks>
+    <remarks><para>Область диаграммы включает все, включая область построения. Однако <see cref="T:Microsoft.Office.Interop.Word.PlotArea" /> объект имеет собственное форматирование, поэтому форматирование области построения не форматирует область диаграммы.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartArea" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ChartArea" /> объект. </para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,10 +47,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект). Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий создателя указанного объекта (это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта). Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -96,13 +84,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если текст в объекте изменяет размер шрифта, когда изменяется размер объекта.</summary>
-        <value>
-          <b>Объект</b> установите значение <b>True</b> , если текст в объекте изменяет размер шрифта, когда изменяется размер объекта.</value>
-        <remarks>
-          <para>Значение по умолчанию: <b>True</b></para>
-          <para />
-        </remarks>
+        <summary>Определяет, изменяется ли размер текста в объекте при изменении размера объекта.</summary>
+        <value><b>Объект</b> имеет значение <b>true</b> , если текст в объекте изменяет размер шрифта при изменении размера объекта.</value>
+        <remarks><para>Значение по умолчанию: <b>True</b></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Border">
@@ -131,10 +116,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает границы объекта.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartBorder" />
-        </value>
+        <summary>Возвращает границу объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartBorder" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -160,9 +143,7 @@
       <Parameters />
       <Docs>
         <summary>Очищает весь объект.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -187,10 +168,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет данные из диаграммы, но оставляет форматирования.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Удаляет данные из диаграммы, но оставляет форматирование.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -216,9 +195,7 @@
       <Parameters />
       <Docs>
         <summary>Очищает форматирование объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -243,10 +220,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирование объекта в буфер обмена.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Копирует объект в буфер обмена.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -273,14 +248,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartArea.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Macintosh выпуск Microsoft Office.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.ChartArea.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Fill">
@@ -309,9 +280,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект для указанного фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, содержащий заливки параметры форматирования для фигуры или диаграммы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />.</value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FillFormat" /> объект указанной фигуры или <see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" /> объект для указанной диаграммы, который содержит свойства форматирования заливки для фигуры или диаграммы.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFillFormat" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -341,10 +311,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает атрибуты шрифта (шрифт, размер шрифта и цвет) для области диаграммы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFont" />
-        </value>
+        <summary>Возвращает атрибуты шрифта (имя, размер и цвет шрифта) для области диаграммы.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -371,11 +339,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, заливки и влияние форматирования для объекта.
+        <summary>Возвращает для объекта форматирование линии, заливки и применения.
 Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -405,10 +371,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , представляющее высоту в точках объекта.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает значение <b>Double</b> , представляющее высоту объекта в точках.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -438,10 +402,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает внутреннюю указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Interior" />
-        </value>
+        <summary>Возвращает внутреннюю часть указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Interior" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -471,10 +433,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , который представляет расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает <b>Двойное</b> значение, представляющее расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -502,9 +462,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <b>строковое</b> значение, представляющее имя объекта.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -531,10 +489,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -559,10 +515,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <summary>Выбирает объект.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -593,9 +547,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <b>логическое</b> значение, которое определяет, имеет ли объект тень.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -625,10 +577,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , указывающее расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает <b>Двойное</b> значение, представляющее расстояние от верхнего края объекта до верха строки 1 (на листе) или в верхней части области диаграммы (на диаграмме).</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -658,10 +608,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>типа Double</b> , представляющее ширину в точках объекта.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает значение <b>Double</b> , представляющее ширину объекта в пунктах.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

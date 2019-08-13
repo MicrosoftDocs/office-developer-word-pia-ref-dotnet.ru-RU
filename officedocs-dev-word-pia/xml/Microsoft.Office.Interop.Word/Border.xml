@@ -1,13 +1,5 @@
 <Type Name="Border" FullName="Microsoft.Office.Interop.Word.Border">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="61a9e103fed3395528d8e87f68453123f0ee4180" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672767" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Border" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bdd51dcf5bee087b8afe2a4b3e9384bb47359ecc" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146327" /></Metadata><TypeSignature Language="C#" Value="public interface Border" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Border" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Border" />
   <TypeSignature Language="VB.NET" Value="Public Interface Border" />
@@ -26,11 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет границы объекта.</summary>
-    <remarks>
-      <para>
-        <b>Границы</b> объекта является членом <see cref="T:Microsoft.Office.Interop.Word.Borders" /> семейства.</para> Использование <b>границы</b><para>(<paramref name="index" />), где <paramref name="index" /> определяет границы, чтобы возвратить объект <b>границы</b> . <paramref name="Index" /> может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdBorderType" /> констант: <b>wdBorderBottom</b>, <b>wdBorderDiagonalDown</b>, <b>wdBorderDiagonalUp</b>, <b>wdBorderHorizontal</b>, <b>wdBorderLeft</b>, <b>wdBorderRight</b>, <b> wdBorderTop</b>, или <b>wdBorderVertical</b>. Использование <see cref="P:Microsoft.Office.Interop.Word.Border.LineStyle" /> свойство для применения линии границы объекта <b>границы</b> .</para> Объекты 
-      <para><b>границы</b> нельзя добавить в коллекцию <b>границы</b> . Количество элементов в коллекции <b>границы</b> конечно и может отличаться в зависимости от типа объекта. Например, таблица имеет шесть элементов в коллекции <b>границы</b> , в то время как абзац содержит четыре.</para><para /></remarks>
+    <summary>Представляет границу объекта.</summary>
+    <remarks><para>Объект <b>border</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции.</para>
+      <para>Используйте <b></b>Borders<paramref name="index" />(), <paramref name="index" /> где определяет границу, чтобы получить одиночный объект <b>border</b> . <paramref name="Index" />может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdBorderType" /> констант: <b>вдбордерботтом</b>, <b>вдбордердиагоналдовн</b>, <b>вдбордердиагоналуп</b>, <b>вдбордерхоризонтал</b>, <b>вдбордерлефт</b>, <b>wdBorderRight</b>, <b>wdBorderTop</b>или <b> Вдбордервертикал</b>. Используйте <see cref="P:Microsoft.Office.Interop.Word.Border.LineStyle" /> свойство, чтобы применить линию границы к объекту <b>border</b> .</para>
+      <para>Объекты 
+        <b>border</b> невозможно добавить в коллекцию <b>Borders</b> . Число элементов в коллекции Borders <b></b> является конечным и варьируется в зависимости от типа объекта. Например, таблица содержит шесть элементов в коллекции Borders <b></b> , а в абзаце — четыре.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPageBorderArt</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает проект графического границы страницы для документа.</summary>
+        <summary>Возвращает или задает графическое оформление границы страницы для документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,7 +111,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину (в точках) границы указанного графического страницы.</summary>
+        <summary>Возвращает или задает ширину (в пунктах) указанной границы графической страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,12 +142,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает 24-разрядный цвет для указанного <see cref="T:Microsoft.Office.Interop.Word.Border" /> объекта.</summary>
+        <summary>Возвращает или задает 24 – битовый цвет для указанного <see cref="T:Microsoft.Office.Interop.Word.Border" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может быть любым допустимым <see cref="T:Microsoft.Office.Interop.Word.WdColor" /> константа или значение, возвращаемое функцией RGB Visual Basic.</para>
-          <para />
-        </remarks>
+        <remarks><para>Может быть любой допустимой <see cref="T:Microsoft.Office.Interop.Word.WdColor" /> константой или значением, возвращаемым функцией RGB Visual Basic.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ColorIndex">
@@ -183,7 +174,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет для указанной границы объекта.</summary>
+        <summary>Возвращает или задает цвет указанного объекта Border.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -211,11 +202,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Inside">
@@ -241,7 +232,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает изнутри границы, который можно применять на указанный объект.</summary>
+        <summary>Возвращает внутреннюю границу, которую можно применить к указанному объекту.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,15 +263,12 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLineStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип линии границы для указанного объекта.</summary>
+        <summary>Возвращает или задает стиль линии границы для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>линии</b> для диапазона, на который ссылается отдельные символы или слова применяется Граница знака.</para>
-          <para>
-            <b>Линии</b> свойств одному или нескольким абзацев применяется границы абзаца. Использование <see cref="P:Microsoft.Office.Interop.Word.Borders.InsideLineStyle" /> свойство, чтобы отобразить границы между последовательными абзацами.</para>
-          <para>Для раздела относятся страницы границы страницы в разделе свойства <b>линии</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Установка свойства <b>lineStyle</b> для диапазона, который ссылается на отдельные символы или слова, применяет границу символа.</para>
+          <para>При установке свойства <b>lineStyle</b> для абзаца или диапазона абзацев применяется граница абзаца. Используйте <see cref="P:Microsoft.Office.Interop.Word.Borders.InsideLineStyle" /> свойство, чтобы применить границу между последовательными абзацами.</para>
+          <para>Установка свойства <b>lineStyle</b> для раздела применяет границы страницы к страницам в разделе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LineWidth">
@@ -309,13 +297,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLineWidth</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину линии границы объекта.</summary>
+        <summary>Возвращает или задает толщину линии границы объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdLineWidth" /> константа или <b>wdUndefined</b> Если объект нет границ или имеет границы более одного толщины.</para>
-          <para>, Если указанный толщины недоступно для типа линии границы, это свойство приводит к ошибке. Чтобы определить, толщина линии, доступные для конкретной линии, видеть границы и заливка диалоговое окно "" (меню "Формат").</para>
-          <para />
-        </remarks>
+        <remarks><para>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdLineWidth" /> константу или <b>вдундефинед</b> , если объект не имеет обрамлений или содержит границы с более чем одной строкой.</para>
+          <para>Если указанная ширина линии недоступна для стиля линии границы, это свойство создает ошибку. Чтобы определить ширину линий, доступных для определенного стиля линии, просмотрите диалоговое окно границы и заливка (меню Формат).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -341,7 +327,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -372,7 +358,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, если указанный <see cref="T:Microsoft.Office.Interop.Word.Border" /> объект является видимым.</summary>
+        <summary>Возвращает или задает значение, указывающее, является ли указанный <see cref="T:Microsoft.Office.Interop.Word.Border" /> объект видимым.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="Revision" FullName="Microsoft.Office.Interop.Word.Revision">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="19a4a8beaa52c27421cb617ffa9da73b2b75908e" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672562" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Revision" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f8799ae269a5dff96f44f56fb3d688f17d795494" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144038" /></Metadata><TypeSignature Language="C#" Value="public interface Revision" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Revision" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Revision" />
   <TypeSignature Language="VB.NET" Value="Public Interface Revision" />
@@ -26,10 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет изменение помеченные знаком редакции.</summary>
-    <remarks>
-      <para>Объект <b>версия</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Revisions" /> семейства сайтов. Коллекция <b>исправлений</b> включает все исправления в документе или диапазон.</para>
-      <para>Использования <b>исправлений</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>редакции</b> . Номер индекса представляющее номер версии в диапазон или документов.</para> Метод <b>Add</b><para>недоступен для <b>редакций</b> коллекции. <b>Версия</b> объекты добавляются, когда включено отслеживание изменений. Установка <see cref="P:Microsoft.Office.Interop.Word._Document.TrackRevisions" /> свойства, <b>значение True,</b> чтобы отслеживать изменения, внесенные в текст документа.</para><para /></remarks>
+    <summary>Представляет изменение, помеченное с помощью метки исправлений.</summary>
+    <remarks><para>Объект <b>Revision</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Revisions" /> коллекции. Коллекция <b>Revisions</b> включает все отметки исправлений в диапазоне или документе.</para>
+      <para>Используйте <b>Revisions</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Revision</b> . Номер индекса представляет положение редакции в диапазоне или документе.</para>
+      <para>Метод <b>Add</b> недоступен для коллекции <b>Revisions</b> . Объекты <b>Revision</b> добавляются, когда включено отслеживание изменений. Задайте для <see cref="P:Microsoft.Office.Interop.Word._Document.TrackRevisions" /> свойства <b>значение true</b> , чтобы отслеживать изменения, внесенные в текст документа.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Accept">
@@ -53,7 +46,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Принимает указанного отслеживаемых изменений. Исправлений удаляются, и является включены в документ.</summary>
+        <summary>Принимает указанное отслеживаемое изменение. Отметка исправлений удаляется, а изменение внедряется в документ.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -108,7 +101,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя пользователя, выполнившего указанного отслеживаемых изменений.</summary>
+        <summary>Возвращает имя пользователя, который внес указанное отслеживаемое изменение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -136,14 +129,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Cells</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Cells" /> коллекции, представляющей ячейки таблицы, которые помечены с учетом исправлений. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Cells" />
-        </value>
-        <remarks>
-          <para>Сведения о возврате один элемент коллекции можно <a href="HV10056838">возврата объекта из семейства сайтов</a></para>
-          <para />
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Cells" /> коллекцию, которая представляет ячейки таблицы, помеченные метками исправлений. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Cells" /></value>
+        <remarks><para>Сведения о возврате одного элемента коллекции приведены в статье <a href="HV10056838">возвращение объекта из коллекции</a></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -169,11 +158,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Date">
@@ -199,7 +188,7 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Дата и время, отслеживаемые изменения.</summary>
+        <summary>Дата и время внесения отслеженного изменения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -227,7 +216,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую описание отслеживается форматирования изменения в версии.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую описание отслеживаемых изменений форматирования в редакции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -283,10 +272,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст, который был перемещен из одного места в другое в документе с помощью отслеживаемых изменений. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста, перемещенный из одного места в другое в документе с отслеживаемыми изменениями. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -313,7 +300,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -341,12 +328,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о возвращение диапазон из документа или возвращение диапазона фигуры из коллекции фигур, см <b>диапазон</b> из <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> объекта.</para>
-          <para />
-        </remarks>
+        <remarks><para>Сведения о возврате диапазона из документа или возврате диапазона фигуры из коллекции фигур представлены в разделе метод <b>Range</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" /> или <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reject">
@@ -370,12 +355,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отклоняет указанного отслеживаемых изменений. Удаляются исправлений, отправляемых из исходного текста без изменений.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Не удается Отклонено изменений форматирования.</para>
-          <para />
-        </remarks>
+        <summary>Отклоняет указанное отслеживаемое изменение. Исправления удаляются, оставляя исходный текст без изменений.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Изменения форматирования не могут быть отклонены.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Style">
@@ -401,7 +384,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Style</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Style" /> объект, представляющий стиля, связанного с текущим автором для редакций.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Style" /> объект, представляющий стиль, связанный с текущим автором для изменений.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -429,55 +412,53 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип версии.</summary>
+        <summary>Возвращает тип редакции.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" />может быть одной из этих констант <b>вдревисионтипе</b> .</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" />может иметь одно из следующих констант <b>WdRevisionType</b> .</para>
-          <para>
-            <b>wdNoRevision</b>
+            <b>вдноревисион</b>
           </para>
           <para>
-            <b>wdRevisionDelete</b>
+            <b>вдревисионделете</b>
           </para>
           <para>
-            <b>wdRevisionInsert</b>
+            <b>вдревисионинсерт</b>
           </para>
           <para>
-            <b>wdRevisionParagraphProperty</b>
+            <b>вдревисионпараграфпроперти</b>
           </para>
           <para>
-            <b>wdRevisionReconcile</b>
+            <b>вдревисионреконЦиле</b>
           </para>
           <para>
-            <b>wdRevisionSectionProperty</b>
+            <b>вдревисионсектионпроперти</b>
           </para>
           <para>
-            <b>wdRevisionStyleDefinition</b>
+            <b>вдревисионстиледефинитион</b>
           </para>
           <para>
-            <b>wdRevisionConflict</b>
+            <b>вдревисионконфликт</b>
           </para>
           <para>
-            <b>wdRevisionDisplayField</b>
+            <b>вдревисиондисплайфиелд</b>
           </para>
           <para>
-            <b>wdRevisionParagraphNumber</b>
+            <b>вдревисионпараграфнумбер</b>
           </para>
           <para>
-            <b>wdRevisionProperty</b>
+            <b>вдревисионпроперти</b>
           </para>
           <para>
-            <b>wdRevisionReplace</b>
+            <b>вдревисионреплаце</b>
           </para>
           <para>
-            <b>wdRevisionStyle</b>
+            <b>вдревисионстиле</b>
           </para>
           <para>
-            <b>wdRevisionTableProperty</b>
+            <b>вдревисионтаблепроперти</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

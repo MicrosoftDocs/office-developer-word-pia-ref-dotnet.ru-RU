@@ -1,13 +1,5 @@
 <Type Name="HangulAndAlphabetExceptions" FullName="Microsoft.Office.Interop.Word.HangulAndAlphabetExceptions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d994d312bcc3da48f2902558b973accfbef8dba4" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674170" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface HangulAndAlphabetExceptions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="966d834709ca0c3d2213d2d27a81de74e705cc2e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146747" /></Metadata><TypeSignature Language="C#" Value="public interface HangulAndAlphabetExceptions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HangulAndAlphabetExceptions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.HangulAndAlphabetExceptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface HangulAndAlphabetExceptions&#xA;Implements IEnumerable" />
@@ -30,14 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.HangulAndAlphabetException" /> объекты, которые представляют все хангыль и алфавита автозамены исключения. В этом списке соответствует в список исключений автозамены на вкладке корейский в диалоговом окне исключения автозамены (команда автозамены, меню "Сервис").</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetExceptions" /> свойство для возврата коллекции <b>HangulAndAlphabetExceptions</b> .</para>
-      <para>Если значение <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetAutoAdd" /> свойство имеет <b>значение True</b>, слова автоматически добавляются в список хангыль и алфавита исключения автозамены. Использование <see cref="M:Microsoft.Office.Interop.Word.HangulAndAlphabetExceptions.Add(System.String)" /> метод, чтобы добавить элемент в коллекцию <b>HangulAndAlphabetExceptions</b> .</para>
-      <para>Использования <b>HangulAndAlphabetExceptions</b>(<paramref name="index" />), где <paramref name="index" /> — это хангыль алфавита автозамены исключение имя или номер индекса для возврата объекта <b>HangulAndAlphabetException</b> .</para>
-      <para>Номер индекса представляет положение хангыль или алфавита исключений автозамены в коллекции <b>HangulAndAlphabetExceptions</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.HangulAndAlphabetException" /> объектов, представляющих все исключения автозамены "хангыль" и "алфавит". Этот список соответствует списку исключений при автозамене на вкладке Корейский в диалоговом окне "исключения при автозамене" (команда "Автозамена", меню "Сервис").</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetExceptions" /> свойство, чтобы возвратить коллекцию <b>HangulAndAlphabetExceptions</b> .</para>
+      <para>Если значение <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetAutoAdd" /> свойства равно <b>true</b>, слова автоматически добавляются в список исключений автозамены хангыль и алфавитов. Используйте <see cref="M:Microsoft.Office.Interop.Word.HangulAndAlphabetExceptions.Add(System.String)" /> метод, чтобы добавить элемент в коллекцию <b>HangulAndAlphabetExceptions</b> .</para>
+      <para>Используйте <b>HangulAndAlphabetExceptions</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или идентификатор исключения автозамены хангыль или алфавита, чтобы вернуть один объект <b>HangulAndAlphabetException</b> .</para>
+      <para>Номер индекса представляет положение исключения автозамены хангыль или алфавита в коллекции <b>HangulAndAlphabetExceptions</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -63,14 +53,11 @@
         <Parameter Name="Name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Word, которые не требуется Microsoft Word, чтобы исправить автоматически.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HangulAndAlphabetException" /> объект, который представляет новое исключение в список исключений автозамены.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Слово, которое не должно автоматически исправляться в Microsoft Word.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.HangulAndAlphabetException" /> объект, представляющий новое исключение в списке исключений автозамены.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetAutoAdd" /> задано значение <b>True</b>, слова автоматически добавляются в список хангыль и алфавита исключения автозамены.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если для <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.HangulAndAlphabetAutoAdd" /> свойства задано <b>значение true</b>, слова автоматически добавляются в список исключений автозамены хангыль и алфавитов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -124,7 +111,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -152,11 +139,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -217,9 +204,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -247,7 +233,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

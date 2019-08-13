@@ -1,13 +1,5 @@
 <Type Name="RepeatingSectionItem" FullName="Microsoft.Office.Interop.Word.RepeatingSectionItem">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e951aef451ef7f40156f1704b3da559404614c0f" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673367" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface RepeatingSectionItem" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a9f459112b2a15f59477147b596dc386a138bb6a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144102" /></Metadata><TypeSignature Language="C#" Value="public interface RepeatingSectionItem" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RepeatingSectionItem" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.RepeatingSectionItem" />
   <TypeSignature Language="VB.NET" Value="Public Interface RepeatingSectionItem" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет элемент Повторяющийся раздел в элементе управления содержимым.</summary>
+    <summary>Представляет элемент повторяющегося раздела в элементе управления содержимым.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -81,14 +73,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>Integer</b> (<b>целое</b> в C#).</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. <b>Целое число</b> , доступное только для чтения (<b>int</b> в C#).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Office Macintosh выпуск.</para>
+        <remarks><para>Если объект был создан в Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константной <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -112,7 +102,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный элемент Повторяющийся раздел.</summary>
+        <summary>Удаляет указанный элемент повторяющегося раздела.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,13 +127,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Добавление повторяющегося раздела элемента после указанного элемента и возвращает новый элемент.</summary>
+        <summary>Добавляет элемент повторяющегося раздела после указанного элемента и возвращает новый элемент.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод можно вызвать в повторяющийся раздел элемент элементов управления контентом только.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.ContentControl.AllowInsertDeleteSection" /> свойство имеет значение <b>False</b>, этот метод возвращает ошибку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод можно вызывать только для элементов управления содержимым "элемент повторяющегося раздела".</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Word.ContentControl.AllowInsertDeleteSection" /> свойству присвоено значение <b>false</b>, этот метод возвратит ошибку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InsertItemBefore">
@@ -167,13 +155,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Добавляет элемент Повторяющийся раздел до указанного элемента и возвращает новый элемент.</summary>
+        <summary>Добавляет элемент повторяющегося раздела перед указанным элементом и возвращает новый элемент.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод можно вызвать в повторяющийся раздел элемент элементов управления контентом только.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Word.ContentControl.AllowInsertDeleteSection" /> свойство имеет значение <b>False</b>, этот метод возвращает ошибку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Этот метод можно вызывать только для элементов управления содержимым "элемент повторяющегося раздела".</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Word.ContentControl.AllowInsertDeleteSection" /> свойству присвоено значение <b>false</b>, этот метод возвратит ошибку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -199,7 +185,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>RepeatingSectionItem</b> .</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>RepeatingSectionItem</b> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -227,7 +213,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает диапазон указанного элемента повторяющегося раздела, за исключением открывающих и закрывающих тегов. Только для чтения.</summary>
+        <summary>Возвращает диапазон указанного элемента повторяющегося раздела за исключением открывающего и закрывающего тегов. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="AutoCorrectEntry" FullName="Microsoft.Office.Interop.Word.AutoCorrectEntry">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a8639360e979edffcee1cc059238ce8aaf63a838" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673506" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AutoCorrectEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0a3a172351b8c23700ecf22b9e70fafa5b84be51" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146250" /></Metadata><TypeSignature Language="C#" Value="public interface AutoCorrectEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoCorrectEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AutoCorrectEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoCorrectEntry" />
@@ -26,10 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один элемент списка автозамены.</summary>
-    <remarks>
-      <para>Объект <b>AutoCorrectEntry</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.AutoCorrectEntries" /> семейства сайтов. Коллекция <b>AutoCorrectEntries</b> включает операции в диалоговое окно "Автозамена" (меню "Сервис").</para> Использование 
-      <para><see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.Entries" />(<paramref name="index" />), где <paramref name="index" /> — это имя элемента или номер индекса, чтобы возвратить объект <b>AutoCorrectEntry</b> . Должен полностью совпадать орфографии (но не обязательно заглавные буквы) из имени, как показано в разделе заменить в диалоговом окне Автозамена.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntry.Apply(Microsoft.Office.Interop.Word.Range)" /> метод для вставки автозамены в указанном диапазоне.</para><para>Использовать один <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntries.Add(System.String,System.String)" /> или <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntries.AddRichText(System.String,Microsoft.Office.Interop.Word.Range)" /> метод для добавления в список доступных записей автозамены.</para><para /></remarks>
+    <summary>Представляет одну запись автозамены.</summary>
+    <remarks><para>Объект <b>AutoCorrectEntry</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AutoCorrectEntries" /> коллекции. Коллекция <b>AutoCorrectEntries</b> содержит записи в диалоговом окне "Автозамена" (меню "Сервис").</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.AutoCorrect.Entries" />(<paramref name="index" />), где <paramref name="index" /> — это имя элемента списка автозамены или номер индекса, чтобы вернуть один объект <b>AutoCorrectEntry</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в разделе заменить в диалоговом окне автозамены.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntry.Apply(Microsoft.Office.Interop.Word.Range)" /> метод для вставки записи автозамены в указанный диапазон.</para>
+      <para>С помощью метода <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntries.Add(System.String,System.String)" /> или <see cref="M:Microsoft.Office.Interop.Word.AutoCorrectEntries.AddRichText(System.String,Microsoft.Office.Interop.Word.Range)" /> можно добавить запись автозамены в список доступных записей.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,8 +76,8 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</param>
-        <summary>Заменяет диапазон значение указанного элемента автозамены.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект.</param>
+        <summary>Заменяет диапазон значением указанной записи автозамены.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,11 +104,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -224,7 +218,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного объекта.</summary>
+        <summary>Возвращает родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -252,7 +246,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, если форматирование хранится текста замещающим запись автозамены.</summary>
+        <summary>Возвращает значение, которое указывает, хранится ли форматирование с замещающим текстом записи автозамены.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -283,12 +277,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение элемента автозамены.</summary>
+        <summary>Возвращает или задает значение записи автозамены.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для <see cref="T:Microsoft.Office.Interop.Word.AutoCorrectEntry" /> объекты, свойства <b>Value</b> возвращает только первые 255 знаков значение объекта. Присвоить свойству <b>Value</b> значение 255 знаков, приведет к ошибке.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для <see cref="T:Microsoft.Office.Interop.Word.AutoCorrectEntry" /> объектов свойство <b>value</b> возвращает только первые 255 символов значения объекта. Если для свойства <b>value</b> задано значение длиннее 255 символов, возникнет ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

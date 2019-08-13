@@ -1,13 +1,5 @@
 <Type Name="XMLSchemaReference" FullName="Microsoft.Office.Interop.Word.XMLSchemaReference">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="acaac46d8cdaa975c35ab2d3b765efb532a14120" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672559" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XMLSchemaReference" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="eda28c551cfb233a178c64483141f2ff3f4a18e4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145410" /></Metadata><TypeSignature Language="C#" Value="public interface XMLSchemaReference" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLSchemaReference" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLSchemaReference" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLSchemaReference" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет схему отдельных, подключенный к документу.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion.XMLSchemaReference" /> свойство возвращает объект XMLSchemaReference для <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion" /> объекта.</para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельную схему, вложенную в документ.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion.XMLSchemaReference" /> свойство, чтобы возвратить объект XMLSchemaReference для <see cref="T:Microsoft.Office.Interop.Word.XMLChildNodeSuggestion" /> объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -84,11 +74,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -139,7 +129,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , указывающую расположение указанного XML-схему.</summary>
+        <summary>Возвращает <b>строку</b> , указывающую расположение указанной схемы XML.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -169,10 +159,8 @@
       <Docs>
         <summary>Возвращает <b>строку</b> , представляющую универсальный код ресурса (URI) пространства имен схемы для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если редактирования XML-схемы для использования с Microsoft Word, настоятельно рекомендуется указать параметр <b>targetNamespace</b> в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы используете XML-схемы для использования с Microsoft Word, настоятельно рекомендуем указать параметр <b>targetNamespace</b> в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -198,7 +186,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -224,11 +212,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Перезагружает кэшированный документ, разрешения гиперссылки на документ и загрузки.</summary>
-        <remarks>
-          <para>Этот метод перезагружает документ асинхронно; то есть инструкции, следующие метод <b>перезагрузить</b> процедуры может выполняться перед фактически загружается документ. Таким образом вы получаете непредвиденных результатов с помощью этого метода в коде.</para>
-          <para />
-        </remarks>
+        <summary>Перезагрузка кэшированного документа путем разрешения гиперссылки на документ и его загрузки.</summary>
+        <remarks><para>Этот метод асинхронно перезагружает документ; Это означает, что операторы, <b></b> следующие за методом Reload в процедуре, могут выполняться до фактической перезагрузки документа. Из-за этого вы можете получить непредвиденные результаты из-за использования этого метода в коде.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

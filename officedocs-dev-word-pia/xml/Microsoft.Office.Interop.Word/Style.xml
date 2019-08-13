@@ -1,13 +1,5 @@
 <Type Name="Style" FullName="Microsoft.Office.Interop.Word.Style">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f00a0a687c5ad4964390a068d041ec8490b3eecf" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673594" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Style" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="74f93bf5a3bfe99659200d0b7c65cb0b82d3670e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146117" /></Metadata><TypeSignature Language="C#" Value="public interface Style" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Style" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Style" />
   <TypeSignature Language="VB.NET" Value="Public Interface Style" />
@@ -26,9 +18,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один встроенных или пользовательских стилей.</summary>
-    <remarks>
-      <para>Объект <b>стиля</b> содержит атрибуты стиля (шрифт, стиль шрифта, абзацами и т.д.) в качестве свойства объекта <b>стиля</b> . Объект <b>стиля</b> , который входит в состав <see cref="T:Microsoft.Office.Interop.Word.Styles" /> семейства сайтов. Коллекция <b>стилей</b> включает в себя все стили в указанный документ.</para> Использование <b>стилей</b><para>(<paramref name="index" />), где <paramref name="index" /> — это имя стиля <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или номер индекса, чтобы возвратить объект <b>стиля</b> . Должен полностью совпадать правописания и интервал по имени стиля, но не обязательно его капитализации.</para><para>Номер индекса стиль представляет положение стиль в списке отсортированный по алфавиту названия стилей.</para><para>Для применения стиля к диапазона, или несколько абзацев, для свойства <b>Style</b> имя пользовательских или встроенных стилей.</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word._Application.OrganizerCopy(System.String,System.String,System.String,Microsoft.Office.Interop.Word.WdOrganizerObject)" /> метод для копирования стилей из документов и шаблонов. Использование <see cref="M:Microsoft.Office.Interop.Word._Document.UpdateStyles" /> метода обновления стилей в активном документе в соответствии с определения стилей в шаблоне. Использование <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метод, чтобы открыть шаблон как документ, чтобы вы могли изменять стили шаблона.</para><para /></remarks>
+    <summary>Представляет один встроенный или определенный пользователем стиль.</summary>
+    <remarks><para>Объект <b>Style</b> включает атрибуты стиля (шрифт, начертание шрифта, интервалы между абзацами и т. д.), а также свойства объекта <b>Style</b> . Объект <b>Style</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Styles" /> коллекции. Коллекция <b>styles</b> включает все стили в указанном документе.</para>
+      <para>Используйте <b></b>Styles<paramref name="index" />(), <paramref name="index" /> где — это имя стиля, <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или номер индекса, чтобы вернуть один объект <b>Style</b> . Необходимо точно совпадать с написанием и интервалом имени стиля, но не обязательно заменять его прописными буквами.</para>
+      <para>Номер индекса стиля представляет положение стиля в алфавитно отсортированном списке имен стилей.</para>
+      <para>Чтобы применить стиль к диапазону, абзацу или нескольким абзацам, задайте для свойства <b>Style</b> значение, заданное пользователем или встроенное имя стиля.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word._Application.OrganizerCopy(System.String,System.String,System.String,Microsoft.Office.Interop.Word.WdOrganizerObject)" /> метод для копирования стилей между документами и шаблонами. С помощью <see cref="M:Microsoft.Office.Interop.Word._Document.UpdateStyles" /> метода обновите стили в активном документе, чтобы они были согласованы с определениями стилей в присоединенном шаблоне. Используйте <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метод, чтобы открыть шаблон в виде документа, чтобы можно было изменять стили шаблонов.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -85,13 +81,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если стиль автоматически переопределяется на основе выбора. <b>Значение false,</b> Если запрос подтверждения перед переопределения на основе выбранного стиля Microsoft Word. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если стиль автоматически переопределяется на основе выделенного фрагмента. <b>False</b> , если Microsoft Word запрашивает подтверждение перед переопределением стиля на основе выбранных элементов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При применении параметр, который имеет тот же стиль, но различных вручную форматирования стиля можно переопределить.</para>
-          <para />
-        </remarks>
+        <remarks><para>Стиль можно переопределить при применении к выделенному фрагменту, который имеет тот же стиль, но и другое ручное форматирование.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseStyle">
@@ -120,12 +113,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает существующий стиль, на котором можно производить форматирование другого стиля. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает существующий стиль, на котором можно основать форматирование другого стиля. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>К этому свойству присвоено, укажите локальное имя базового стиля целое число или в <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или объект, который представляет базовый стиль.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать это свойство, укажите либо локальное имя базового стиля, целое число или <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константу, либо объект, представляющий базовый стиль.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Borders">
@@ -154,7 +145,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекции, представляющей все границы для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Borders" /> коллекцию, которая представляет все границы для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,13 +173,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный объект является одной из встроенных стилей или названиями в Microsoft Word. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если указанный объект является одним из встроенных стилей или меток заголовков в Microsoft Word. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Вы можете указать встроенных стилей для всех языков, с помощью <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константы или в пределах языка с помощью имени стиля языковой версии Microsoft Word.</para>
-          <para />
-        </remarks>
+        <remarks><para>Встроенные стили можно задать для всех языков с помощью <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> констант или на языке с помощью имени стиля для языковой версии Microsoft Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -214,11 +202,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -271,10 +259,8 @@
       <Docs>
         <summary>Возвращает описание указанного стиля. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например, может быть типичное описание стиль Заголовок 2 «Normal + шрифт: Arial, 12 pt, полужирный, курсив, пространство до 12 pt после 3 pt, KeepWithNext, на уровне 2.»</para>
-          <para />
-        </remarks>
+        <remarks><para>Например, типичным описанием стиля Заголовок 2 может быть "обычный + шрифт: Arial, 12 пт, полужирный, курсив, пространство до 12 пт после 3 пт, Кипвиснекст, уровень 2".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Font">
@@ -303,12 +289,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий форматирование знаков на указанный объект. Чтение и запись <b>шрифта</b>.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.Font" /> объект, представляющий форматирование символов указанного объекта. Чтение и запись <b>шрифта</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать это свойство, укажите выражение, возвращающее объект <b>Font</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать это свойство, укажите выражение, возвращающее объект <b>Font</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Frame">
@@ -334,7 +318,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Frame</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frame" /> объект, представляющий frame, форматирование для указанного стиля. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Frame" /> объект, представляющий форматирование рамки для указанного стиля. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -399,13 +383,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный стиль встроенных стилей, были изменены или применяется в документе или новый стиль, который был создан в документе. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если указанный стиль является встроенным стилем, который был изменен или применен в документе, или новым стилем, созданным в документе. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не обязательно, применяется ли в настоящее время стиля для любого текста в документе. Например при удалении текст, который отформатирован со стилем свойства <b>может быть каталогом</b> стиля остается равным <b>True</b>. Для встроенных стилей, которые никогда не были использованы в документе это свойство возвращает <b>значение False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство не обязательно указывает, применен ли стиль к любому тексту в документе. Например, если был удален текст, отформатированный с помощью стиля, свойство <b>inuse</b> стиля будет иметь <b>значение true</b>. Для встроенных стилей, которые никогда не использовались в документе, это свойство возвращает <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageID">
@@ -436,11 +417,9 @@
       <Docs>
         <summary>Возвращает или задает язык для указанного объекта. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может быть любым <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константу.</para>
-          <para>Некоторые <b>WdLanguageID</b> константы могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константой.</para>
+          <para>Некоторые константы <b>вдлангуажеид</b> могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageIDFarEast">
@@ -469,13 +448,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает восточно-азиатских языков для указанного объекта.</summary>
+        <summary>Возвращает или задает восточно-азиатский язык для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константу.</para>
-          <para>Этот способ рекомендуется использовать для возвращения или задания язык Восточной Азии текста в документе, созданном в восточно-азиатских версиях Microsoft Word.</para>
-          <para />
-        </remarks>
+        <remarks><para>Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> константой.</para>
+          <para>Это рекомендуемый способ возврата или установки языка для восточно-азиатского текста в документе, созданном в восточно-азиатской версии Microsoft Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Linked">
@@ -501,15 +478,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , которое указывает, находится ли стиля связанный стиль, который может использоваться для абзаца и формата. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>
-            <b>Значение true</b> указывает, что тип стиль в диалоговом окне Изменение стиля включен режим «Связанные (символов и абзацев)».</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, является ли стиль связанным стилем, который можно использовать как для форматирования абзаца, так и для форматирования символов. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>
+            <b>Значение true</b> указывает, что параметр тип стиля в диалоговом окне Изменение стиля имеет значение "связанный (абзац и символ)".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinkStyle">
@@ -538,12 +511,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает <b>объект</b> , представляющий связь между абзац и стиль знака. Для чтения и записи.</summary>
+        <summary>Задает или возвращает <b>объект</b> , представляющий ссылку между абзацем и стилем символов. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При связаны стиль знака и стиль абзаца, в то же форматирование выполнять два стиля.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если стиль символов и стиль абзаца связаны, два стиля принимают одинаковое форматирование знаков.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinkToListTemplate">
@@ -568,9 +539,9 @@
         <Parameter Name="ListLevelNumber" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="ListTemplate">Требуется <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объекта. Шаблон списка, который должен быть связан с стиль.</param>
-        <param name="ListLevelNumber">Необязательный элемент <b>Object</b>. Целое число, соответствующее уровень списка, который должен быть связан с стиль. Если этот аргумент указан, используется уровень стиля.</param>
-        <summary>Ссылки указанный стиль, чтобы шаблон списка, чтобы форматирования стиля может применяться к спискам.</summary>
+        <param name="ListTemplate">Обязательный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект. Шаблон списка, с которым будет связан стиль.</param>
+        <param name="ListLevelNumber">Необязательный <b>объект</b>. Целое число, соответствующее уровню списка, с которым будет связан стиль. Если этот аргумент не указан, используется уровень стиля.</param>
+        <summary>Связывает указанный стиль с шаблоном списка, чтобы форматирование стиля можно было применить к спискам.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -597,7 +568,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уровень списка для указанного стиля. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает уровень списка для указанного стиля. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -625,9 +596,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект, представляющий форматирования для указанного списка <see cref="T:Microsoft.Office.Interop.Word.Style" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект, представляющий форматирование списка для указанного <see cref="T:Microsoft.Office.Interop.Word.Style" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>Шаблон списка <para>A содержит все форматирование, определяющий конкретного списка. Каждая из семи форматов (не включая None) на каждый из вкладки в маркеры и нумерация диалоговое окно "" (меню "Формат") соответствует шаблона списка. Документы и шаблоны также может содержать коллекции шаблонов списков.</para><para>Если первый абзац в диапазоне для объекта <b>ListFormat</b> не отформатированным в виде списка, свойство <b>ListTemplate</b> возвращает <b>значение Nothing</b>.</para><para /></remarks>
+        <remarks><para>Шаблон списка включает все параметры форматирования, которые определяют определенный список. Каждый из семи форматов (не включая None), найденных на каждой из вкладок диалогового окна "маркеры и нумерация" (меню "формат") соответствует шаблону списка. Документы и шаблоны также могут содержать коллекции шаблонов списков.</para>
+          <para>Если первый абзац в диапазоне для объекта <b>ListFormat</b> не отформатирован в виде списка, свойство <b>ListTemplate</b> не возвращает <b>значение Nothing</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Locked">
@@ -656,8 +629,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный стиль заблокирован.</summary>
+        <summary><b>Значение true</b> , если указанный стиль заблокирован.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -688,12 +660,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя встроенных стилей на языке пользователя. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает имя встроенного стиля на языке пользователя. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка для этого свойства переименовывает пользовательский стиль или добавляет псевдоним встроенных стилей.</para>
-          <para />
-        </remarks>
+        <remarks><para>Задание этого свойства переименовывает пользовательский стиль или добавляет псевдоним к встроенному стилю.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NextParagraphStyle">
@@ -722,12 +692,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль, автоматически применяются к новый абзац, вставленный после абзаца форматирования с помощью указанного стиля. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает стиль, который автоматически применяется к новому абзацу, вставленному после абзаца, отформатированного с указанным стилем. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>К этому свойству присвоено, укажите локальное имя следующий стиль целое число или в <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или объект, представляющий следующий стиль.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы задать это свойство, укажите либо локальное имя следующего стиля, целое число или <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константу, либо объект, представляющий следующий стиль.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NoProofing">
@@ -756,8 +724,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если проверки орфографии и грамматики игнорирует текст отформатирован этот стиль. Чтение и запись <b>целое число</b>.</summary>
+        <summary><b>True</b> , если средство проверки орфографии и грамматики игнорирует текст, отформатированный с помощью этого стиля. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -788,8 +755,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> Удалить интервалы между абзацы, отформатированные с помощью одного стиля приложение Microsoft Word. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True</b> для Microsoft Word для удаления интервала между абзацами, отформатированными с использованием того же стиля. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -848,7 +814,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -879,10 +845,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее приоритет для сортировки стили в области задач Стили. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает или задает <b>целое число</b> , представляющее приоритет сортировки стилей в области задач Стили. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -912,10 +876,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли стиль соответствует доступные экспресс-стилей. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, соответствует ли стиль доступному быстрому стилю. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -942,7 +904,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объекта, на который ссылается форматирования затенения для указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shading" /> объект, который ссылается на форматирование заливки для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -970,7 +932,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.TableStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableStyle" /> объект, представляющий свойства, которые могут быть применены к таблице, с помощью стиля таблицы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.TableStyle" /> объект, представляющий свойства, которые можно применить к таблице с помощью стиля таблицы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -998,25 +960,23 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdStyleType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип стиля. Только для чтения <see cref="T:Microsoft.Office.Interop.Word.Style" />.</summary>
+        <summary>Возвращает тип стиля. Только <see cref="T:Microsoft.Office.Interop.Word.Style" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <b>Вдстилетипе</b> может быть одной из следующих констант:</para>
           <para>
-            <b>WdStyleType</b> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdStyleTypeCharacter</b>
+            <b>вдстилетипечарактер</b>
           </para>
           <para>
-            <b>wdStyleTypeList</b>
+            <b>вдстилетипелист</b>
           </para>
           <para>
-            <b>wdStyleTypeParagraph</b>
+            <b>вдстилетипепараграф</b>
           </para>
           <para>
-            <b>wdStyleTypeTable</b>
+            <b>вдстилетипетабле</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UnhideWhenUsed">
@@ -1045,8 +1005,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задайте <b>значение True,</b> Чтобы очистить <see cref="P:Microsoft.Office.Interop.Word.Style.Hidden" /> свойства при использовании этого стиля.</summary>
-        <value>Логический</value>
+        <summary>Установите <b>значение true</b> , чтобы <see cref="P:Microsoft.Office.Interop.Word.Style.Hidden" /> очистить свойство при использовании этого стиля.</summary>
+        <value>Boolean</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

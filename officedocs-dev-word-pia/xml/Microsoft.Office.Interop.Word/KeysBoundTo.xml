@@ -1,13 +1,5 @@
 <Type Name="KeysBoundTo" FullName="Microsoft.Office.Interop.Word.KeysBoundTo">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="02cafc90a1c0a3770d824ab66219c000d0bdfca1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673847" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface KeysBoundTo : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dfe9e4cdcccebb30e78d26aff4d592343ed850a0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147930" /></Metadata><TypeSignature Language="C#" Value="public interface KeysBoundTo : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract KeysBoundTo implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.KeysBoundTo" />
   <TypeSignature Language="VB.NET" Value="Public Interface KeysBoundTo&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объектов, назначенных для команды, стиль, макрос или другой элемент в текущем контексте.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word._Application.KeysBoundTo(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Object@)" /> свойство для возврата коллекции <b>KeysBoundTo</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объектов, назначенных команде, стилю, макросу или другому элементу в текущем контексте.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.KeysBoundTo(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Object@)" /> свойство, чтобы возвратить коллекцию <b>KeysBoundTo</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -88,7 +78,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает команду, назначенную заданное сочетание клавиш.</summary>
+        <summary>Возвращает команду, назначенную заданному сочетанию клавиш.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -116,12 +106,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает параметр команды, назначенных для указанного сочетания клавиш.</summary>
+        <summary>Возвращает параметр команды, назначенный заданному сочетанию клавиш.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Сведения о командах, использующие параметры в разделе <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> метод <see cref="T:Microsoft.Office.Interop.Word.KeyBindingsObject" />. Использование <see cref="P:Microsoft.Office.Interop.Word.KeyBinding.Command" /> свойство для возвращения команду имя, присвоенное указанного сочетания клавиш.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для получения сведений о командах, которые принимают параметры <see cref="M:Microsoft.Office.Interop.Word.KeyBindings.Add(Microsoft.Office.Interop.Word.WdKeyCategory,System.String,System.Int32,System.Object@,System.Object@)" /> , обратитесь к <see cref="T:Microsoft.Office.Interop.Word.KeyBindingsObject" />методу. Используйте <see cref="P:Microsoft.Office.Interop.Word.KeyBinding.Command" /> свойство, чтобы возвратить имя команды, назначенное заданному сочетанию клавиш.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Context">
@@ -147,12 +135,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет место хранения ключа указанную привязку. Это свойство можно вернуть <see cref="T:Microsoft.Office.Interop.Word.Document" />, <see cref="T:Microsoft.Office.Interop.Word.Template" />, или <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта.</summary>
+        <summary>Возвращает объект, представляющий место хранения указанной привязки клавиш. Это свойство может возвращать <see cref="T:Microsoft.Office.Interop.Word.Document" />объект <see cref="T:Microsoft.Office.Interop.Word.Template" />a, <see cref="T:Microsoft.Office.Interop.Word.Application" /> или Object.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Встроенные сочетания клавиш (например, CTRL + I для <b>курсива</b>) возврата объекта <b>приложения</b> в контексте. Все ключевые привязки, добавлении возвращает объект <b>документа</b> или <b>шаблона</b> в зависимости от контекста настройки фактически при <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект был добавлен.</para>
-          <para />
-        </remarks>
+        <remarks><para>Встроенные сочетания клавиш (например, CTRL + I для курсива <b></b>) возвращают объект <b>Application</b> в качестве контекста. Все добавленные вами привязки будут возвращать объект <b>Document</b> или <b>template</b> , в зависимости от контекста настройки, действующего при добавлении <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -178,7 +164,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -206,11 +192,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -271,9 +257,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Целое число</b> , указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -301,14 +286,12 @@
         <Parameter Name="KeyCode2" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="KeyCode">Требуется <b>целое число</b>. Укажите с помощью одной из констант <b>WdKey</b> ключа.</param>
-        <param name="KeyCode2">Необязательный элемент <b>Object</b>. Второй ключ, укажите с помощью одного из <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> константы.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий указанного настраиваемого сочетание клавиш. Если сочетание клавиш не существует, этот метод возвращает <b>значение Nothing</b>.</summary>
+        <param name="KeyCode">Обязательный атрибут типа <b>Integer</b>. Ключ, который вы указываете с помощью одной из констант <b>вдкэй</b> .</param>
+        <param name="KeyCode2">Необязательный <b>объект</b>. Второй ключ, который вы указываете с помощью одной <see cref="T:Microsoft.Office.Interop.Word.WdKey" /> из констант.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.KeyBinding" /> объект, представляющий заданное пользовательское сочетание клавиш. Если сочетание клавиш не существует, этот метод не возвращает <b>значение Nothing</b>.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно использовать <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> метод для создания <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> аргумент.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для создания аргумента <see cref="M:Microsoft.Office.Interop.Word._Application.BuildKeyCode(Microsoft.Office.Interop.Word.WdKey,System.Object@,System.Object@,System.Object@)" /> <paramref name="KeyCode" /> или <paramref name="KeyCode2" /> можно использовать метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="KeyCategory">
@@ -334,7 +317,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdKeyCategory</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип элемента, назначенный указанную привязку ключа.</summary>
+        <summary>Возвращает тип элемента, назначенный указанной ключевой привязке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -362,7 +345,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

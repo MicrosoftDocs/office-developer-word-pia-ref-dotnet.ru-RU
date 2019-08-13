@@ -1,13 +1,5 @@
 <Type Name="Bibliography" FullName="Microsoft.Office.Interop.Word.Bibliography">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8cc6801a489e0b3acf0509f8400e33174873485c" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672771" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Bibliography" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="036a097987b0b8447132cbca8a45c0b2489acd6f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146292" /></Metadata><TypeSignature Language="C#" Value="public interface Bibliography" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Bibliography" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Bibliography" />
   <TypeSignature Language="VB.NET" Value="Public Interface Bibliography" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет список доступных источников подключенного к документов (в текущем списке) или список источников, доступных в приложении (в главном списке).</summary>
-    <remarks>
-      <para>Biblographies состоят из источников.  Также обратиться к разделу <see cref="T:Microsoft.Office.Interop.Word.Source" /> объекта и <see cref="T:Microsoft.Office.Interop.Word.Sources" /> семейства сайтов. Для получения дополнительных сведений см <a href="HV10118297">Стандартные блоки</a></para>
-      <para />
-    </remarks>
+    <summary>Представляет список доступных источников, подключенных к документу (в текущем списке) или список источников, доступных в приложении (в основном списке).</summary>
+    <remarks><para>Библографиес состоит из источников.  Кроме того, <see cref="T:Microsoft.Office.Interop.Word.Source" /> вы увидите объект <see cref="T:Microsoft.Office.Interop.Word.Sources" /> и коллекцию. Дополнительные сведения см в разделе <a href="HV10118297">Работа с строительными блоками</a></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -57,9 +47,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -89,14 +77,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя активного стиля для списка литературы. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Для получения дополнительных сведений см <a href="HV10118297">Стандартные блоки</a></para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает имя активного стиля, который будет использоваться для списка литературы. Для чтения и записи.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Дополнительные сведения см в разделе <a href="HV10118297">Работа с строительными блоками</a></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -122,16 +106,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GenerateUniqueTag">
@@ -155,14 +135,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Создает тег уникальный идентификатор источника список литературы и возвращает тега.</summary>
-        <returns>
-          <b>Строка</b>
-        </returns>
-        <remarks>
-          <para>Для получения дополнительных сведений см <a href="HV10118297">Стандартные блоки</a></para>
-          <para />
-        </remarks>
+        <summary>Создает уникальный тег идентификации для источника списка литературы и возвращает тег.</summary>
+        <returns><b>String</b></returns>
+        <remarks><para>Дополнительные сведения см в разделе <a href="HV10118297">Работа с строительными блоками</a></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -189,9 +165,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Bibliography" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -218,10 +192,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.Sources</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Sources" /> коллекции, представляющей все источники, содержащихся в список литературы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Sources" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Sources" /> коллекцию, которая представляет все источники списка литературы. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Sources" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

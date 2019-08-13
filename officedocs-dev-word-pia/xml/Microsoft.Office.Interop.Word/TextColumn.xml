@@ -1,13 +1,5 @@
 <Type Name="TextColumn" FullName="Microsoft.Office.Interop.Word.TextColumn">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0f7fe58dd0c3656b702f57924033d3dda5aa80ae" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673199" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface TextColumn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="015769d0ee569bc60722ccfff3efdbf14527bd9a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143863" /></Metadata><TypeSignature Language="C#" Value="public interface TextColumn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextColumn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextColumn" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextColumn" />
@@ -26,9 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один столбец.</summary>
-    <remarks>
-      <para>Объект <b>TextColumn</b> входит в состав <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> семейства сайтов. Коллекция <b>TextColumns</b> включает все столбцы в документе или разделе документа.</para> Использование <b>TextColumns</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>TextColumn</b> . Номер индекса представляет положение столбца в коллекции <b>TextColumns</b> (начиная с слева направо).</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить столбец в коллекцию столбцов. По умолчанию существует один столбец текста в коллекции <b>TextColumns</b> .</para><para>Использования <see cref="M:Microsoft.Office.Interop.Word.TextColumns.SetCount(System.Int32)" /> метод, чтобы поместить текст в столбцах.</para><para /></remarks>
+    <summary>Представляет один текстовый столбец.</summary>
+    <remarks><para>Объект <b>TextColumn</b> является членом <see cref="T:Microsoft.Office.Interop.Word.TextColumns" /> коллекции. Коллекция <b>TextColumns</b> включает все столбцы документа или раздела документа.</para>
+      <para>Используйте <b>TextColumns</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>TextColumn</b> . Номер индекса представляет положение столбца в коллекции <b>TextColumns</b> (считая слева направо).</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TextColumns.Add(System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить столбец в коллекцию столбцов. По умолчанию в коллекции <b>TextColumns</b> существует один текстовый столбец.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.TextColumns.SetCount(System.Int32)" /> метод для выравнивания текста по столбцам.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -82,11 +77,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -112,7 +107,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,7 +138,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер интервала (в пунктах) после столбца указанный текст.</summary>
+        <summary>Возвращает или задает расстояние между заданным текстовым столбцом (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

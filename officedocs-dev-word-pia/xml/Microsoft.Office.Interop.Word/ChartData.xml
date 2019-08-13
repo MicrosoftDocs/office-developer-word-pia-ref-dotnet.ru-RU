@@ -1,13 +1,5 @@
 <Type Name="ChartData" FullName="Microsoft.Office.Interop.Word.ChartData">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e54b6ef3e865f4d45416239e0540b97861b4eefc" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674229" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartData" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="20de20835218a229a3e2ed120eb0d1a884f4bd73" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147236" /></Metadata><TypeSignature Language="C#" Value="public interface ChartData" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartData" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ChartData" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartData" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет доступ к данным связанного или внедренного, связанной с диаграммой.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartData" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Word.ChartData" /> объекта.</para>
-      <para />
-    </remarks>
+    <summary>Представляет доступ к связанным или внедренным данным, связанным с диаграммой.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Chart.ChartData" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.ChartData" /> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -54,13 +44,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активирует окно первого книги, связанной с диаграммой.</summary>
-        <remarks>
-          <para>Если диаграмма связана в Microsoft Excel, этот метод не выполняется Auto_Activate или Auto_Deactivate макросы, которые могут быть присоединены к книге (использовать <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска этих макросов).</para>
+        <summary>Активизирует первое окно книги, связанной с диаграммой.</summary>
+        <remarks><para>Если диаграмма связана с книгой Microsoft Excel, этот метод не запускает макросы Auto_Activate или Auto_Deactivate, которые могут быть присоединены к книге (используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска этих макросов).</para>
           <para>
-            <b>Примечание</b>: этот метод необходимо вызывать перед обращением <see cref="P:Microsoft.Office.Interop.Word.ChartData.Workbook" /> свойство.</para>
-          <para />
-        </remarks>
+            <b>Примечание</b>: Этот метод должен вызываться перед обращением <see cref="P:Microsoft.Office.Interop.Word.ChartData.Workbook" /> к свойству.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ActivateChartDataWindow">
@@ -84,12 +72,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Откроется окно сетка данных Excel, которая содержит полный источника данных для указанной диаграммы.</summary>
-        <remarks>
-          <para>Если окно сетки данных уже открыт, этот метод не оказывает влияния.</para>
-          <para>Метод <b>ActivateChartDataWindow</b> отличается от <see cref="M:Microsoft.Office.Interop.Word.ChartData.Activate" /> метода в том, что первый открывает ее в окне Excel в Word, с помощью Excel ленты недоступен, в то время как второй полная версия Excel, открывается с ленты доступны.</para>
-          <para />
-        </remarks>
+        <summary>Открывает окно таблицы данных Excel, содержащее полные исходные данные для указанной диаграммы.</summary>
+        <remarks><para>Если окно сетка данных уже открыто, этот метод не оказывает никакого действия.</para>
+          <para>Метод <b>активатечартдатавиндов</b> отличается от <see cref="M:Microsoft.Office.Interop.Word.ChartData.Activate" /> метода в том, что первый открывает диаграмму в окне Excel в Word, если лента Excel недоступна, а в последнем открывается полная версия Excel с доступной лентой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BreakLink">
@@ -113,11 +99,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет связь между данные для диаграммы и в Microsoft Excel.</summary>
-        <remarks>
-          <para>Вызов этого метода можно задать <see cref="P:Microsoft.Office.Interop.Word.ChartData.IsLinked" /> свойства <see cref="T:Microsoft.Office.Interop.Word.ChartData" /> объекта значение <b>False</b>.</para>
-          <para />
-        </remarks>
+        <summary>Удаляет связь между данными диаграммы и книгой Microsoft Excel.</summary>
+        <remarks><para>При вызове этого метода <see cref="P:Microsoft.Office.Interop.Word.ChartData.IsLinked" /> свойству <see cref="T:Microsoft.Office.Interop.Word.ChartData" /> объекта присваивается <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsLinked">
@@ -143,15 +127,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если данные для диаграммы связан с внешним книги Microsoft Excel. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>С помощью <see cref="M:Microsoft.Office.Interop.Word.ChartData.BreakLink" /> метод для удаления ссылки на книги Microsoft Excel этому свойству значение <b>False</b>.</para>
-          <para />
-        </remarks>
+        <summary><b>Имеет значение true</b> , если данные для диаграммы связаны с внешней книгой Microsoft Excel. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>С помощью <see cref="M:Microsoft.Office.Interop.Word.ChartData.BreakLink" /> метода для удаления ссылки на книгу Microsoft Excel этому свойству присваивается <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Workbook">
@@ -177,15 +156,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает книгу, содержащую диаграмму данных, связанных с диаграммой. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>
-            <b>Примечание</b>: <see cref="M:Microsoft.Office.Interop.Word.ChartData.Activate" /> метод необходимо вызывать перед обращением этого свойства. в противном случае возникает ошибка.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает книгу, содержащую данные диаграммы, связанные с диаграммой. Только для чтения.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>
+            <b>Note</b>: метод <see cref="M:Microsoft.Office.Interop.Word.ChartData.Activate" /> должен быть вызван перед обращением к этому свойству; в противном случае возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

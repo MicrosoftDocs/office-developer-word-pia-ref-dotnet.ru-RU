@@ -1,13 +1,5 @@
 <Type Name="XSLTransform" FullName="Microsoft.Office.Interop.Word.XSLTransform">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5afe73d6a3b568590a9d71b5f56818207a8810b5" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20674131" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XSLTransform" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="324dfb612385ddd52c1fa1790b0f5a2a602515b4" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34145403" /></Metadata><TypeSignature Language="C#" Value="public interface XSLTransform" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XSLTransform" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XSLTransform" />
   <TypeSignature Language="VB.NET" Value="Public Interface XSLTransform" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один зарегистрированных таблицы стилей преобразования (XSLT).</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.XSLTransforms.Add(System.String,System.Object@,System.Boolean)" /> метод <see cref="T:Microsoft.Office.Interop.Word.XSLTransforms" /> семейства сайтов для добавления отдельных XSLT в список преобразований XSLT, доступные для схемы.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.XSLTransforms.Item(System.Object@)" /> свойства <see cref="T:Microsoft.Office.Interop.Word.XSLTransforms" /> коллекции для возврата объекта <b>XSLTransform</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет отдельное зарегистрированное преобразование расширяемого языка стилей (XSLT).</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.XSLTransforms.Add(System.String,System.Object@,System.Boolean)" /> метод <see cref="T:Microsoft.Office.Interop.Word.XSLTransforms" /> коллекции, чтобы добавить отдельный XSLT в список доступных для схемы XSLT.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XSLTransforms.Item(System.Object@)" /> свойство <see cref="T:Microsoft.Office.Interop.Word.XSLTransforms" /> коллекции, чтобы вернуть один объект <b>XSLTransform</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Alias">
@@ -63,9 +53,8 @@
         <Parameter Name="AllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="AllUsers">
-          <b>значение true</b> для хранения псевдоним в раздел реестра HKEY_LOCAL_MACHINE; <b>значение false</b> для хранения псевдоним в раздел реестра HKEY_CURRENT_USER. Этот параметр используется только для задайте <see cref="P:Microsoft.Office.Interop.Word.XSLTransform.Alias(System.Boolean)" />  значение свойства, не для получения <see cref="P:Microsoft.Office.Interop.Word.XSLTransform.Alias(System.Boolean)" />  значение свойства.</param>
-        <summary>Возвращает <b>строку</b> , представляющую понятное имя для указанного объекта.</summary>
+        <param name="AllUsers"><b>значение true</b> , чтобы сохранить псевдоним в разделе реестра HKEY_LOCAL_MACHINE; <b>значение false</b> , чтобы сохранить псевдоним в разделе реестра HKEY_CURRENT_USER. Используйте этот параметр только для задания <see cref="P:Microsoft.Office.Interop.Word.XSLTransform.Alias(System.Boolean)" />  значения свойства, а не для получения <see cref="P:Microsoft.Office.Interop.Word.XSLTransform.Alias(System.Boolean)" />  значения свойства.</param>
+        <summary>Возвращает <b>строку</b> , представляющую понятное имя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,11 +110,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -176,7 +165,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, содержащее идентификатор GUID, назначенный текущий объект <b>XSLTransform</b> .</summary>
+        <summary>Возвращает значение, содержащее идентификатор GUID, назначенный текущему объекту <b>XSLTransform</b> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -210,7 +199,7 @@
         <Parameter Name="AllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="AllUsers">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true,</b> Если все пользователи имеют доступ на указанный объект.</param>
+        <param name="AllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Имеет значение true</b> , если все пользователи имеют доступ к указанному объекту.</param>
         <summary>Возвращает или задает расположение указанного преобразования.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -239,7 +228,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

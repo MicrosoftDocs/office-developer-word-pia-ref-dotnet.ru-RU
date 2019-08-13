@@ -1,13 +1,5 @@
 <Type Name="BuildingBlock" FullName="Microsoft.Office.Interop.Word.BuildingBlock">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fc15f7587aceebb7da5afc606fbedbd78e590230" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673519" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface BuildingBlock" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ca9bed40f87117ccf911469b9c1d874a575c9129" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146229" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlock" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlock" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.BuildingBlock" />
   <TypeSignature Language="VB.NET" Value="Public Interface BuildingBlock" />
@@ -26,14 +18,16 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет стандартный блок в шаблоне.  Стандартный блок — это готовые содержимое, аналогичное автотекст, которое может содержать текст, изображения и форматирование.</summary>
-    <remarks>
-      <para>Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> и <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> семейств сайтов. Стандартные блоки, хранятся в шаблоны Microsoft Office Word.  Таким образом для доступа к стандартные блоки, доступных для документа, необходимо получить доступ к присоединенного шаблона.  Встроенные стандартные блоки, хранятся в шаблоне с именем «Построение Blocks.dotx».</para>
+    <summary>Представляет стандартный блок в шаблоне.  Стандартный блок — это встроенный контент, похожий на Автотекст, который может содержать текст, изображения и форматирование.</summary>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом коллекции <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> и. <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> Стандартные блоки хранятся в шаблонах Microsoft Office Word.  Таким образом, для доступа к стандартным блокам, доступным для документа, необходимо получить доступ к присоединенному шаблону.  Встроенные стандартные блоки хранятся в шаблоне под названием "компоновочные блоки. dotx".</para>
       <para>
-        <b>Примечание</b>: использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> методу коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции для возврата отдельных стандартного блока. В зависимости от того, как можно получить доступ к коллекции возвращаемой коллекции может измениться.  Например, если доступ к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией «Общие», возвращенной коллекции может отличаться от коллекции, возвращаемой при доступе к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией «Custom». Различные из коллекции, возвращаемой при доступе к коллекции стандартные блоки с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией «Общие». Таким образом, первый элемент в коллекции, доступного из коллекции <b>BuildingBlockEntries</b> может отличаться от первого элемента в коллекции осуществляется из коллекции <b>BuildingBlocks</b> .</para>
-      <para>Для создания нового стандартного блока, можно использовать метод <b>Add</b> коллекции <b>BuildingBlockEntries</b> или <b>BuildingBlocks</b> коллекции.  Тем не менее, для создания нового стандартного блока рекомендуется с помощью <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метод <b>BuildingBlockEntries</b> семейства сайтов. </para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для вставки нового стандартного блока в документ. Использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> метод для удаления стандартного блока из шаблона.</para> Стандартные блоки 
-      <para>упорядочены по категории и типа.  Использование <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> семейства сайтов для отдельного клиента <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объектов. Использование <see cref="T:Microsoft.Office.Interop.Word.Categories" /> семейства сайтов для отдельного клиента <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> объектов. Затем используйте свойство <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> . </para><para>Каждого стандартный блок имеет свойства, которые содержат сведения, описывающие уникальным образом, таких как <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />, и <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />.</para><para>Дополнительные сведения о стандартных блоках в разделе <a href="HV10120827">Работа с стандартные блоки</a></para><para /></remarks>
+        <b>Note</b>: используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> метод коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции, чтобы возвратить отдельный Стандартный блок. В зависимости от того, как вы получите доступ к коллекции, возвращаемая коллекция может измениться.  Например, если вы обращаетесь к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией "Общие", возвращаемая коллекция может отличаться от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом Category <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> "Custom". Он также отличается от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией "Общие". Таким образом, первый элемент коллекции, к которому получен доступ из коллекции <b>BuildingBlockEntries</b> , может отличаться от первого элемента коллекции, к которому получен доступ из коллекции <b>BuildingBlocks</b> .</para>
+      <para>Для создания нового стандартного блока можно использовать метод <b>Add</b> для коллекции <b>BuildingBlockEntries</b> или коллекции <b>BuildingBlocks</b> .  Однако рекомендуемый способ создания нового стандартного блока — использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метода для коллекции <b>BuildingBlockEntries</b> . </para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для вставки нового стандартного блока в документ. Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> метод для удаления стандартного блока из шаблона.</para>
+      <para>Стандартные блоки организованы по категориям и типам.  Используйте эту <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекцию для доступа к <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> отдельным объектам. Используйте эту <see cref="T:Microsoft.Office.Interop.Word.Categories" /> коллекцию для доступа к <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> отдельным объектам. Затем используйте надлежащее <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> . </para>
+      <para>Каждый стандартный блок имеет свойства, которые содержат сведения, применимые к нему уникальным образом <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />например <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />,, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />, и.</para>
+      <para>Дополнительные сведения о стандартных блоках см <a href="HV10120827">в разделе Работа с строительными блоками</a></para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,9 +54,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -90,9 +82,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает категорию для стандартного блока. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Category" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Category" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,16 +109,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, свойство <b>создателя</b> Возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -152,7 +138,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление указанного стандартного блока.</summary>
+        <summary>Удаляет указанный Стандартный блок.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -182,10 +168,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает описание для стандартного блока. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <summary>Возвращает или задает описание стандартного блока. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,14 +197,9 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает внутренний идентификационный номер для стандартного блока. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> Свойство возвращает идентификационной строки, которая задается в форме: идентификатор GUID.</para>
-          <para />
-        </remarks>
+        <value><b>String</b></value>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> Свойство возвращает строку идентификации в виде идентификатора GUID.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -246,10 +225,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение элемента в коллекции. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает позицию элемента в коллекции. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -276,13 +253,10 @@
         <Parameter Name="RichText" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Where">Расположение поместить содержимое стандартного блока.</param>
-        <param name="RichText">
-          <b>Значение true,</b> Вставка стандартного блока как расширенными возможностями, форматированный текст.  <b>Значение false,</b> Вставка стандартного блока как обычный текст.</param>
-        <summary>Вставляет значение стандартный блок в документе и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет содержимое стандартного блока в документе.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Word.Range" />
-        </returns>
+        <param name="Where">Место размещения содержимого стандартного блока.</param>
+        <param name="RichText"><b>Значение true</b> вставляет Стандартный блок в виде форматированного форматированного текста.  <b>Значение false</b> вставляет Стандартный блок как обычный текст.</param>
+        <summary>Вставляет значение стандартного блока в документ и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий содержимое стандартного блока в документе.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.Range" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -312,14 +286,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее как будет вставлено содержимое стандартного блока в документ. Для чтения и записи.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> значений перечисления.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>целое число</b> , представляющее способ вставки содержимого стандартного блока в документ. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любым из значений <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> перечисления.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -349,9 +319,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает имя стандартного блока. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -379,9 +347,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объекта.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -409,9 +375,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает тип для стандартного блока. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -442,9 +406,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает содержимое стандартного блока. Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

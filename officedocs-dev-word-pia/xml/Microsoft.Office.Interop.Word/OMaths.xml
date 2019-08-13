@@ -1,13 +1,5 @@
 <Type Name="OMaths" FullName="Microsoft.Office.Interop.Word.OMaths">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="685a42bfb173039e651b1919cc37c2f65e9a3fae" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673656" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OMaths : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e14145376576379dc979fb6bbad86cad132778d8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144227" /></Metadata><TypeSignature Language="C#" Value="public interface OMaths : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OMaths implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.OMaths" />
   <TypeSignature Language="VB.NET" Value="Public Interface OMaths&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция формул. Использование <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> объект для доступа к отдельным элементам коллекции.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Word.OMaths.Add(Microsoft.Office.Interop.Word.Range)" />метод для создания формул и добавить его в документ, выделенный фрагмент или диапазон.  В следующем примере создается формулы и использует <see cref="M:Microsoft.Office.Interop.Word.OMaths.BuildUp" /> метод <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> семейства сайтов для преобразования формулы в профессиональный формат.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция уравнений. Используйте <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> объект для доступа к отдельным элементам коллекции.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.OMaths.Add(Microsoft.Office.Interop.Word.Range)" />метод, чтобы создать уравнение и добавить его в документ, выделенный фрагмент или диапазон.  В следующем примере показано, как создать уравнение <see cref="M:Microsoft.Office.Interop.Word.OMaths.BuildUp" /> и использовать метод <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> коллекции для преобразования уравнения в профессиональный формат.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -59,13 +49,11 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Указывает диапазон, который содержит текст формула.</param>
-        <summary>Создает формулы из формула текст, содержащийся в указанном диапазоне и возвращает объект <b>диапазон</b> , который содержит новую формулу.</summary>
-        <returns>Range</returns>
+        <param name="Range">Указывает диапазон, содержащий текстовое уравнение.</param>
+        <summary>Создает уравнение из текстового уравнения, содержащегося в указанном диапазоне, и возвращает объект <b>Range</b> , который содержит новое уравнение.</summary>
+        <returns>Диапазон</returns>
         <remarks>To be added.</remarks>
-        <example>
-          <para>В следующем примере вставляется формулы в документ в курсора или замены выбранного текста.</para>
-        </example>
+        <example><para>В приведенном ниже примере формула вставляется в документ в позицию курсора или заменяется выделенный текст.</para></example>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -92,9 +80,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Word._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,11 +105,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Преобразует все формулы в коллекции профессиональный.</summary>
-        <remarks>
-          <para>Чтобы изменить формулы в линейный формат, используйте <see cref="M:Microsoft.Office.Interop.Word.OMaths.Linearize" /> метод.</para>
-          <para />
-        </remarks>
+        <summary>Преобразует все уравнения в коллекции в профессиональный формат.</summary>
+        <remarks><para>Чтобы изменить вид уравнения на линейный, используйте <see cref="M:Microsoft.Office.Interop.Word.OMaths.Linearize" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -149,10 +133,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> семейства сайтов. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.OMaths" /> коллекции. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -179,16 +161,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое, которое указывает, приложения, в котором надстройки был создан. Только для чтения <b>целое число</b>.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMaths.Creator" /> свойство возвращает шестнадцатеричное число 4 d 535744, представляющее строку «MSWD».  В основном это свойство предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором была создана надстройка. Только для чтения, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.OMaths.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Примечание</b>: это значение также может быть представлен константу <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
-          <para />
-        </remarks>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -250,10 +228,8 @@
       </Parameters>
       <Docs>
         <param name="Index">To be added.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий указанного элемента в коллекции.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.OMath" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OMath" /> объект, представляющий указанный элемент в коллекции.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.OMath" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -278,12 +254,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Преобразует все формулы в коллекции линейно.
+        <summary>Преобразует все уравнения в коллекции в линейный формат.
 .</summary>
-        <remarks>
-          <para>Чтобы изменить формулы в профессиональный формат, используйте <see cref="M:Microsoft.Office.Interop.Word.OMaths.BuildUp" /> метод.</para>
-          <para />
-        </remarks>
+        <remarks><para>Чтобы изменить формат уравнения на профессиональный, используйте <see cref="M:Microsoft.Office.Interop.Word.OMaths.BuildUp" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">

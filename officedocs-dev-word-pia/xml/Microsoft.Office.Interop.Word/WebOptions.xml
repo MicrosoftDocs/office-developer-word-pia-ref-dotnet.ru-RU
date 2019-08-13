@@ -1,13 +1,5 @@
 <Type Name="WebOptions" FullName="Microsoft.Office.Interop.Word.WebOptions">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0dd920613af1fb3693498c891ecd9ed8d8ff5348" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672570" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface WebOptions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f88f221df7d67e0a725679f57bd1b9a883ba6147" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142733" /></Metadata><TypeSignature Language="C#" Value="public interface WebOptions" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WebOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.WebOptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface WebOptions" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит атрибуты уровня документов, используемые приложением Microsoft Word при сохранении документа как веб-страницу или открыть веб-страницу.</summary>
-    <remarks>
-      <para>Можно вернуть или задать атрибуты на уровне приложения (глобальные) или на уровне документа. (Обратите внимание на то, что значения атрибутов может отличаться от одного документа на другой, в зависимости от значения атрибута во время сохранения документа.) Параметры атрибута уровня документов переопределяют параметры атрибут уровня приложений. Атрибуты уровня приложения находятся в <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объект.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word._Document.WebOptions" /> свойство для возврата объекта <b>WebOptions</b> .</para>
-      <para />
-    </remarks>
+    <summary>Содержит атрибуты уровня документа, используемые Microsoft Word при сохранении документа в виде веб-страницы или при открытии веб-страницы.</summary>
+    <remarks><para>Вы можете вернуть или задать атрибуты либо на уровне приложения (на глобальном уровне), либо на уровне документа. (Обратите внимание, что значения атрибутов могут отличаться от одного документа к другому, в зависимости от значения атрибута во время сохранения документа.) Параметры атрибутов уровня документа переопределяют параметры атрибута уровня приложения. Атрибуты уровня приложения включены в <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объект.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.WebOptions" /> свойство для возврата объекта <b>Options</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AllowPNG">
@@ -60,13 +50,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если PNG (Portable Network Graphics) разрешенных в качестве формата изображения при сохранении документа как веб-страницу. <b>Значение false,</b> Если PNG не допускается выходной формат. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True</b> , если PNG (Portable Network Graphics) можно использовать в качестве формата изображений при сохранении документа в виде веб-страницы. <b>Значение false</b> , если PNG не разрешен в качестве выходного формата. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При сохранении изображения в формате PNG и, если целевой веб-браузеры поддерживают формат PNG, могут повысить качество изображения или уменьшения размера эти файлы изображений, а таким образом уменьшить время загрузки.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы сохраняете изображения в формате PNG, и если веб-браузеры поддерживают формат PNG, вы можете увеличить качество изображения или уменьшить размер этих файлов изображений, поэтому уменьшите время загрузки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -123,23 +110,21 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdBrowserLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение константы, представляющий уровень веб-браузера, в котором требуется предназначенных для указанного веб-страницы.</summary>
+        <summary>Возвращает или задает константу, представляющую уровень веб-браузера, на котором требуется назначить указанную веб-страницу.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OptimizeForBrowser" /> задано значение <b>False</b>. </para>
+        <remarks><para>Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OptimizeForBrowser" /> для свойства задано значение <b>false</b>. </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdBrowserLevel" /> может иметь одно из следующих констант <b>WdBrowserLevel</b> : </para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdBrowserLevel" />может быть одной из следующих констант <b>вдбровсерлевел</b> : </para>
           <para>
-            <b>wdBrowserLevelMicrosoftInternetExplorer5 </b>
+            <b>wdBrowserLevelMicrosoftInternetExplorer6</b>
           </para>
           <para>
-            <b>wdBrowserLevelMicrosoftInternetExplorer6 </b>
+            <b>wdBrowserLevelMicrosoftInternetExplorer5</b>
           </para>
           <para>
             <b>wdBrowserLevelV4</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -165,11 +150,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Encoding">
@@ -198,7 +183,7 @@
         <ReturnType>Microsoft.Office.Core.MsoEncoding</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает документ, кодировка (кодовая страница или набор знаков) для использования веб-обозревателем при просмотре сохраненный документ.</summary>
+        <summary>Возвращает или задает кодировку документа (кодовая страница или набор знаков), которая будет использоваться веб-браузером при просмотре сохраненного документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,32 +211,31 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает суффикс папки, который использует Microsoft Word при сохранении документа как веб-страницу, использовать длинные имена файлов и выберите Сохранить вспомогательные файлы в отдельной папке (то есть, в том случае, если <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> и <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> задано значение <b>True</b>).</summary>
+        <summary>Возвращает суффикс папки, который используется Microsoft Word при сохранении документа в виде веб-страницы, использование длинных имен файлов и сохранение вспомогательных файлов в отдельной папке (то есть если для свойств <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> и <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> задано значение <b>true</b>).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Вновь созданные документы использования суффикс, возвращаемые <see cref="P:Microsoft.Office.Interop.Word.DefaultWebOptions.FolderSuffix" /> свойства <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объекта. Значение свойства <b>FolderSuffix</b><see cref="T:Microsoft.Office.Interop.Word.WebOptions" /> объектов могут отличаться от свойств, объект <b>DefaultWebOptions</b> , если документ был изменен ранее в различные языковые версии Microsoft Word. Можно использовать <see cref="M:Microsoft.Office.Interop.Word.WebOptions.UseDefaultFolderSuffix" /> метод, чтобы изменить суффикс для языка, используемой в текущий момент в Microsoft Office.</para>
-          <para>По умолчанию имя вспомогательной папки — это имя веб-страницы, а также символ подчеркивания (_), точку (.), или дефис (-) и слова «files» (изображения которых появляются в языковой версии Word, в которой был сохранен файл как веб-страница). Предположим, например, используйте нидерландском языке версии Word для сохранения в файл с именем «Page1» на веб-странице. По умолчанию имя вспомогательной папки — Page1_bestanden.</para>
-          <para>Ниже таблице описываются каждый языковой версии Office и приводятся соответствующие <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> свойство суффикс значение и папки. Для языков, не указанные в таблице, используется суффикс «.files».</para>
+        <remarks><para>Только что созданные документы используют суффикс, возвращенный <see cref="P:Microsoft.Office.Interop.Word.DefaultWebOptions.FolderSuffix" /> свойством <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объекта. Значение свойства <b>фолдерсуффикс</b> <see cref="T:Microsoft.Office.Interop.Word.WebOptions" /> объекта может отличаться от значения объекта <b>DefaultWebOptions</b> , если документ был ранее изменен в версии Microsoft Word на другом языке. С помощью <see cref="M:Microsoft.Office.Interop.Word.WebOptions.UseDefaultFolderSuffix" /> метода можно изменить суффикс на язык, который в настоящее время используется в Microsoft Office.</para>
+          <para>По умолчанию имя вспомогательной папки — это имя веб-страницы, а также символ подчеркивания (_), точка (.) или дефис (-) и слово "Files" (отображается на языке версии Word, в которой файл был сохранен как веб-страница). Например, предположим, что вы используете голландскую языковую версию Word, чтобы сохранить файл с именем "элемент" в качестве веб-страницы. По умолчанию вспомогательной папке присвоено имя Page1_bestanden.</para>
+          <para>В приведенной ниже таблице перечислены языковые версии Office и приводятся <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> соответствующие значения свойства и суффикса папки. Для языков, не указанных в таблице, используется суффикс ". Files".</para>
           <list type="table">
             <item>
+              <description>Арабский</description>
               <description>1025</description>
-              <description>арабский</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
+              <description>Баскский</description>
               <description>1069</description>
-              <description>баскский</description>
               <description>_fitxategiak</description>
             </item>
             <item>
-              <description>португальский (Бразилия)</description>
+              <description>(</description>
               <description>1046</description>
               <description>_arquivos</description>
             </item>
             <item>
-              <description>болгарский</description>
+              <description>Болгарский</description>
               <description>1026</description>
-              <description>.Files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Каталанский</description>
@@ -259,14 +243,14 @@
               <description>_fitxers</description>
             </item>
             <item>
-              <description>Китайский — упрощенный</description>
+              <description>Китайский (упрощенное письмо)</description>
               <description>2052</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Китайский — традиционное письмо</description>
               <description>1028</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Хорватский</description>
@@ -274,14 +258,14 @@
               <description>_datoteke</description>
             </item>
             <item>
-              <description>Чешская</description>
-              <description>ѕ</description>
+              <description>Чешский</description>
+              <description>1029</description>
               <description>_soubory</description>
             </item>
             <item>
               <description>Датский</description>
               <description>1030</description>
-              <description>-filer</description>
+              <description>— файловый</description>
             </item>
             <item>
               <description>Голландский</description>
@@ -289,7 +273,7 @@
               <description>_bestanden</description>
             </item>
             <item>
-              <description>Английская</description>
+              <description>Английский</description>
               <description>1033</description>
               <description>_files</description>
             </item>
@@ -311,17 +295,17 @@
             <item>
               <description>Немецкий</description>
               <description>1031</description>
-              <description>-Dateien</description>
+              <description>— Датеиен</description>
             </item>
             <item>
               <description>Греческий</description>
               <description>1032</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Иврит</description>
               <description>1037</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Венгерский</description>
@@ -336,31 +320,31 @@
             <item>
               <description>Японский</description>
               <description>1041</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Корейский</description>
               <description>1042</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
           </list>
           <para>Значения свойств 
             <b>LanguageID</b></para>
-          <item>
-            <description>Латышский</description>
-            <description>1062</description>
-            <description>_fails</description>
-          </item>
           <list type="table">
             <item>
-              <description>литовский</description>
+              <description>Латышский</description>
+              <description>1062</description>
+              <description>_fails</description>
+            </item>
+            <item>
+              <description>Литовский</description>
               <description>1063</description>
               <description>_bylos</description>
             </item>
             <item>
               <description>Норвежский</description>
               <description>1044</description>
-              <description>-filer</description>
+              <description>— файловый</description>
             </item>
             <item>
               <description>Польский</description>
@@ -375,17 +359,17 @@
             <item>
               <description>Румынский</description>
               <description>1048</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Русский</description>
               <description>1049</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Сербский (кириллица)</description>
               <description>3098</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Сербский (латиница)</description>
@@ -393,9 +377,9 @@
               <description>_fajlovi</description>
             </item>
             <item>
-              <description>Словацкий</description>
+              <description>словакиан</description>
               <description>1051</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Словенский</description>
@@ -410,12 +394,12 @@
             <item>
               <description>Шведский</description>
               <description>1053</description>
-              <description>-filer</description>
+              <description>— файловый</description>
             </item>
             <item>
               <description>Тайский</description>
               <description>1054</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Турецкий</description>
@@ -423,18 +407,17 @@
               <description>_dosyalar</description>
             </item>
             <item>
-              <description>Ukranian</description>
+              <description>Украинский</description>
               <description>1058</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
             <item>
               <description>Вьетнамский</description>
               <description>1066</description>
-              <description>.files</description>
+              <description>. Files</description>
             </item>
           </list>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OptimizeForBrowser">
@@ -463,8 +446,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если приложение Microsoft Word оптимизирует новые веб-страницы в приложении Word для создается веб-браузера, указанного идентификатором <see cref="P:Microsoft.Office.Interop.Word.DefaultWebOptions.BrowserLevel" /> свойство (для <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объект). <b>Значение true,</b> Если Word оптимизирует указанного веб-страницы для веб-браузера, указанного идентификатором <see cref="P:Microsoft.Office.Interop.Word.WebOptions.BrowserLevel" /> свойство (для <see cref="T:Microsoft.Office.Interop.Word.WebOptions" /> объект).</summary>
+        <summary><b>Значение true</b> , если Microsoft Word оптимизирует новые веб-страницы, созданные в Word, для веб- <see cref="P:Microsoft.Office.Interop.Word.DefaultWebOptions.BrowserLevel" /> браузера, указанного свойством (для <see cref="T:Microsoft.Office.Interop.Word.DefaultWebOptions" /> объекта). <b>Значение true</b> , если Word оптимизирует указанную веб-страницу для веб-браузера, <see cref="P:Microsoft.Office.Interop.Word.WebOptions.BrowserLevel" /> указанного свойством ( <see cref="T:Microsoft.Office.Interop.Word.WebOptions" /> для объекта).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -495,15 +477,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если все вспомогательные файлы, такие как текстуры фона и рисунки, организованы в отдельную папку, при сохранении указанный документ в виде веб-страницы. <b>Значение false,</b> Если вспомогательные файлы сохраняются в ту же папку веб-страницы. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True</b> , если все вспомогательные файлы, такие как фоновые текстуры и графика, организуются в отдельную папку при сохранении указанного документа в виде веб-страницы. <b>False</b> , если вспомогательные файлы сохраняются в той же папке, что и веб-страница. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Новую папку в папке, в которой он был сохранен веб-страницы и совпадает с именем документа. Если используются длинные имена файлов, добавляется суффикс имя папки. <see cref="P:Microsoft.Office.Interop.Word.WebOptions.FolderSuffix" /> Возвращает устранить суффикс папки для поддержки языка выбранных или установленных или суффикс папки по умолчанию.</para>
-          <para>При сохранении документа, который ранее был сохранен с установленным свойством <b>OrganizeInFolder</b> с другим значением, Microsoft Word автоматически перемещает вспомогательные файлы в или из папки, соответствующим образом.</para>
-          <para>, Если вы не используете длинные имена файлов (то есть, в том случае, если <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> задано значение <b>False</b>), Microsoft Word автоматически сохраняет все вспомогательные файлы в отдельной папке. Невозможно сохранить файлы в той же папке, как веб-страницу.</para>
-          <para />
-        </remarks>
+        <remarks><para>Новая папка будет создана в папке, в которой вы сохранили веб-страницу, и будет называться после документа. Если используются длинные имена файлов, суффикс добавляется в имя папки. <see cref="P:Microsoft.Office.Interop.Word.WebOptions.FolderSuffix" /> Свойство возвращает сервере суффикса для выбранной или установленной поддержки языка или суффикса папки по умолчанию.</para>
+          <para>При сохранении документа, который ранее сохранялся со свойством <b>организеинфолдер</b> , для которого задано другое значение, Microsoft Word автоматически перемещает вспомогательные файлы в папку или из нее, если это необходимо.</para>
+          <para>Если не используются длинные имена файлов (то есть если для <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> свойства задано <b>значение false</b>), Word автоматически сохраняет все вспомогательные файлы в отдельной папке. Файлы невозможно сохранить в той же папке, что и веб-страница.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -529,7 +508,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -560,14 +539,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает плотность (точек на дюйм) графические изображения и ячейки таблицы на веб-странице.</summary>
+        <summary>Возвращает или задает плотность (пикселов на дюйм) графических изображений и ячеек таблицы на веб-странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Различных параметров обычно от 19 480, и общих параметров для популярных размеров экрана: 72, 96 и 120. Значение по умолчанию равно 96.</para>
-          <para>Это свойство определяет размер изображения и ячеек на веб-странице указанного размера текста, каждый раз, когда просмотра сохраненных документов в веб-браузере. Размеры конечного изображения или ячейки основаны на результатах исходного измерения (в дюймах) умножается на число точек на дюйм.</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Word.WebOptions.ScreenSize" /> свойство, чтобы задать размер оптимального экран для целевого веб-браузеров.</para>
-          <para />
-        </remarks>
+        <remarks><para>Диапазон параметров обычно от 19 до 480, а распространенные параметры популярных размеров экрана — 72, 96 и 120. Значение по умолчанию — 96.</para>
+          <para>Это свойство определяет размер изображений и ячеек на заданной веб-странице относительно размера текста при просмотре сохраненного документа в веб-браузере. Физические размеры полученного изображения или ячейки являются результатом умножения исходных размеров (в дюймах) на количество пикселов на дюйм.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.WebOptions.ScreenSize" /> свойство, чтобы задать оптимальный размер экрана для целевых веб-браузеров.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelyOnCSS">
@@ -596,14 +573,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если каскадные таблицы стилей (CSS), используемые для форматирования шрифта при просмотра сохраненных документов в веб-браузере.</summary>
+        <summary><b>Имеет значение true</b> , если для форматирования шрифтов при просмотре сохраненного документа в веб-браузере используются каскадные таблицы стилей (CSS).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Microsoft Word создает файла каскадных таблиц стилей и сохраняет его в указанную папку или в одной папке с веб-страницы, в зависимости от <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> свойство. <b>Значение false,</b> Если HTML-код &lt;ШРИФТА&gt; используются теги и каскадные таблицы стилей. Значение по умолчанию — <b>True</b>.</para>
-          <para>Необходимо присвоить этому свойству значение <b>True</b> , если поддерживается данным Web браузера, каскадные таблицы стилей, так как это позволит получить более точные макет и форматирование управления веб-страницы и сделать его выглядеть более документа (как оно отображается в Word).</para>
-          <para />
-        </remarks>
+        <remarks><para>Microsoft Word создает файл каскадной таблицы стилей и сохраняет его в указанной папке или в той же папке, что и веб-страница, в зависимости от значения <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> свойства. <b>False</b> , если &lt;используются&gt; Теги шрифта HTML и каскадные таблицы стилей. Значение по умолчанию — <b>True</b>.</para>
+          <para>Если веб-браузер поддерживает каскадные таблицы стилей, необходимо задать для этого свойства <b>значение true</b> , так как при этом будет отображаться более точный элемент управления макетом и форматированием на веб-странице, и он будет больше похож на документ (как он отображается в Word).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RelyOnVML">
@@ -632,14 +606,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если не создаются файлы изображений из графические объекты при сохранении документа как веб-страницу. <b>Значение false,</b> Если создаются изображения. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>Имеет значение true</b> , если файлы изображений не создаются из графических объектов при сохранении документа в виде веб-страницы. <b>Значение false</b> , если изображения создаются. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно уменьшить размеры файлов, не создавая изображения для графические объекты, если веб-браузер поддерживает Vector Markup Language (VML). Например Microsoft Internet Explorer 5 поддерживает эту возможность и следует установить свойство <b>RelyOnVML</b> значение <b>True</b> , если это обозревателя. Браузеров, не поддерживающих VML, изображение не отображаются при просмотре с веб-страниц с помощью этого свойства включена.</para>
-          <para>Не создают изображения, если веб-страница использует файлы изображений, которые созданы более ранних версий и расположение, где сохранить документ, отличается от конечное расположение страницы на веб-сервере.</para>
-          <para />
-        </remarks>
+        <remarks><para>Можно уменьшить размеры файлов, не создавая изображения для графических объектов, если веб-браузер поддерживает язык разметки VML. Например, Microsoft Internet Explorer 5 поддерживает эту функцию, и для свойства <b>релйонвмл</b> следует задать <b>значение true</b> , если вы нацелены на этот браузер. Для браузеров, не поддерживающих VML, изображение не отображается при просмотре веб-страницы, сохраненной с включенным этим свойством.</para>
+          <para>Не создавайте изображения, если на веб-странице используются файлы изображений, созданные ранее, и если место сохранения документа отличается от последнего расположения страницы на веб-сервере.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScreenSize">
@@ -668,45 +639,43 @@
         <ReturnType>Microsoft.Office.Core.MsoScreenSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер идеальная экрана (ширина, высота в точках), который следует использовать при просмотре сохраненный документ в веб-браузере.</summary>
+        <summary>Возвращает или задает идеальный минимальный размер экрана (ширина по высоте, в пикселях), который следует использовать при просмотре сохраненного документа в веб-браузере.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoScreenSize" />может быть одной из следующих констант <b>мсоскринсизе</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoScreenSize" />может иметь одно из следующих констант <b>MsoScreenSize</b> : </para>
-          <para>
-            <b>msoScreenSize1024x768 </b>
+            <b>msoScreenSize1024x768</b>
           </para>
           <para>
-            <b>msoScreenSize1152x882 </b>
+            <b>msoScreenSize1152x882</b>
           </para>
           <para>
-            <b>msoScreenSize1152x900 </b>
+            <b>msoScreenSize1152x900</b>
           </para>
           <para>
-            <b>msoScreenSize1280x1024 </b>
+            <b>msoScreenSize1280x1024</b>
           </para>
           <para>
             <b>msoScreenSize1600x1200</b>
           </para>
           <para>
-            <b> msoScreenSize1800x1440 </b>
+            <b>msoScreenSize1800x1440</b>
           </para>
           <para>
-            <b>msoScreenSize1920x1200 </b>
+            <b>msoScreenSize1920x1200</b>
           </para>
           <para>
-            <b>msoScreenSize544x376 </b>
+            <b>msoScreenSize544x376</b>
           </para>
           <para>
-            <b>msoScreenSize640x480 </b>
+            <b>msoScreenSize640x480</b>
           </para>
           <para>
-            <b>msoScreenSize720x512 </b>
+            <b>msoScreenSize720x512</b>
           </para>
           <para>
             <b>msoScreenSize800x600</b> по умолчанию</para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TargetBrowser">
@@ -735,22 +704,22 @@
         <ReturnType>Microsoft.Office.Core.MsoTargetBrowser</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает константу, представляющее обозреватель, документы, которые отображаются в веб-браузере.</summary>
+        <summary>Задает или возвращает константу, представляющую целевой браузер для документов, просматриваемых в веб-браузере.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTargetBrowser" />может быть одной из следующих констант <b>мсотаржетбровсер</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTargetBrowser" />может иметь одно из следующих констант <b>MsoTargetBrowser</b> : </para>
+            <b>msoTargetBrowserIE4</b> Microsoft Internet Explorer 4,0. </para>
           <para>
-            <b>msoTargetBrowserIE4</b> Microsoft Internet Explorer 4.0.</para>
+            <b>msoTargetBrowserIE5</b> Internet Explorer 5. </para>
           <para>
-            <b>msoTargetBrowserIE5</b> Internet Explorer 5.</para>
+            <b>msoTargetBrowserIE6</b> Internet Explorer 6. </para>
           <para>
-            <b>msoTargetBrowserIE6</b> Internet Explorer 6.</para>
-          <para>Навигатор 
-            <b>msoTargetBrowserV3</b> Netscape 3.x.</para>
+            <b>msoTargetBrowserV3</b> Netscape Navigator 3. x. </para>
           <para>
-            <b>msoTargetBrowserV4</b> навигатор Netscape 4.x.</para> Наборы свойств 
-          <para><b>TargetBrowser</b><see cref="P:Microsoft.Office.Interop.Word.WebOptions.BrowserLevel" /> свойства, но <b>BrowserLevel</b> важно только если <see cref="P:Microsoft.Office.Interop.Word._Document.DisableFeatures" /> свойству присвоено <b>значение True</b>. В противном случае игнорируется. Свойство <b>TargetBrowser</b> , однако не обрабатывается и устанавливается уровень браузера для всех веб-документов или для одного веб-документа.</para><para /></remarks>
+            <b>msoTargetBrowserV4</b> Netscape Navigator 4. x.</para>
+          <para>Свойство <b>таржетбровсер</b> задает <see cref="P:Microsoft.Office.Interop.Word.WebOptions.BrowserLevel" /> свойство, но <b>бровсерлевел</b> имеет значение только в том случае, <see cref="P:Microsoft.Office.Interop.Word._Document.DisableFeatures" /> если свойство имеет значение <b>true</b>. В противном случае он игнорируется. Однако свойство <b>таржетбровсер</b> не игнорируется и задает уровень браузера для всех веб-документов или для одного веб-документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UseDefaultFolderSuffix">
@@ -774,12 +743,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает суффикс по умолчанию для языковой поддержки выбранных или установленных суффикс папки для указанного документа.</summary>
-        <remarks>
-          <para>Microsoft Word использует суффикс папки при сохранении документа как веб-страницу, использовать длинные имена файлов и выберите Сохранить вспомогательные файлы в отдельной папке (то есть, в том случае, если <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> и <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> задано значение <b>True</b>).</para>
-          <para>Суффикс отображается в поле имя папки после имени документа. Например если документ называется «Doc1» и является английский язык, имя папки — Doc1_files. Суффиксы доступные папки, перечислены в <see cref="P:Microsoft.Office.Interop.Word.WebOptions.FolderSuffix" /> свойство Тема.</para>
-          <para />
-        </remarks>
+        <summary>Задает суффикс папки для указанного документа в качестве суффикса по умолчанию для выбранного или установленного языкового поддержки.</summary>
+        <remarks><para>Microsoft Word использует суффикс папки при сохранении документа в виде веб-страницы, использования длинных имен файлов и сохранения вспомогательных файлов в отдельной папке (то есть если для свойств <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> и <see cref="P:Microsoft.Office.Interop.Word.WebOptions.OrganizeInFolder" /> задано значение <b>true</b>).</para>
+          <para>После имени документа суффикс отображается в имени папки. Например, если документ называется "doc1", а языком является английский, имя папки — Doc1_files. Доступные суффиксы папок перечислены в разделе <see cref="P:Microsoft.Office.Interop.Word.WebOptions.FolderSuffix" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UseLongFileNames">
@@ -808,13 +775,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если длинные имена файлов используются при сохранении документа как веб-страницу. Используется <b>значение false,</b> Если не используются длинные имена файлов и формат имени файла DOS (8.3). Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>Значение true</b> , если при сохранении документа в качестве веб-страницы используются длинные имена файлов. <b>Значение false</b> , если длинные имена файлов не используются и используется формат имен файлов DOS (8,3). Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если не использовать длинные имена файлов и документ содержит вспомогательные файлы, Microsoft Word автоматически организует эти файлы в отдельную папку. В противном случае используйте <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> свойства, чтобы определить, является ли вспомогательные файлы, организованы в отдельную папку.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если вы не используете длинные имена файлов, а документ содержит вспомогательные файлы, Microsoft Word автоматически организует эти файлы в отдельной папке. В противном случае <see cref="P:Microsoft.Office.Interop.Word.WebOptions.UseLongFileNames" /> используйте свойство, чтобы определить, организованы ли вспомогательные файлы в отдельную папку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

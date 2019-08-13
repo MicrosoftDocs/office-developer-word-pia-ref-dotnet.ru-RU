@@ -1,13 +1,5 @@
 <Type Name="DropDown" FullName="Microsoft.Office.Interop.Word.DropDown">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d1aa9b15f2b37ab9a12aa1f385ead515fc2994b0" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672813" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DropDown" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="657342fc0405fbd6f204e36ef3b45bfddf99d76e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144577" /></Metadata><TypeSignature Language="C#" Value="public interface DropDown" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DropDown" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DropDown" />
   <TypeSignature Language="VB.NET" Value="Public Interface DropDown" />
@@ -26,13 +18,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет поле списка, который содержит список элементов в форме.</summary>
-    <remarks>
-      <para>Используйте <b>FormFields</b>(<paramref name="index" />), где индекс — индекс или имя закладки, связанное с поля формы раскрывающегося списка, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта. Использование <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" /> свойства с помощью объекта <b>FormField</b> возвращает объект <b>DropDown</b> .</para>
-      <para>Номер индекса представляет позицию поля формы в <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> семейства.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с <b>FormFields</b> коллекции, которую требуется добавить поле списком.</para>
-      <para />
-    </remarks>
+    <summary>Представляет поле раскрывающегося списка, содержащее список элементов в форме.</summary>
+    <remarks><para>Используйте <b>FormFields</b>(<paramref name="index" />), где index — это номер индекса или имя закладки, связанное с полем раскрывающегося списка, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объект. Используйте <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" /> свойство с объектом <b>FormField</b> , чтобы вернуть раскрывающийся объект. <b></b></para>
+      <para>Номер индекса представляет положение поля формы в <see cref="T:Microsoft.Office.Interop.Word.FormFields" /> коллекции.</para>
+      <para>Добавьте раскрывающееся поле формы с помощью <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метода с коллекцией <b>FormFields</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -86,11 +76,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Default">
@@ -119,12 +109,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает элемент списка по умолчанию.</summary>
+        <summary>Возвращает или задает раскрывающийся список по умолчанию.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Первый элемент в поле со списком — 1, второй — 2 и т. д.</para>
-          <para />
-        </remarks>
+        <remarks><para>Первый элемент в раскрывающемся поле формы имеет значение 1, второй элемент — 2 и т. д.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListEntries">
@@ -150,7 +138,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListEntries</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListEntries" /> коллекции, представляющей все элементы в <see cref="T:Microsoft.Office.Interop.Word.DropDown" /> объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListEntries" /> коллекцию, которая представляет все элементы в <see cref="T:Microsoft.Office.Interop.Word.DropDown" /> объекте.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -178,7 +166,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -206,13 +194,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли объект поля указанную форму допустимый флажок.</summary>
+        <summary>Определяет, является ли указанный объект поля формы допустимым полем формы с флажком.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если объект поля указанную форму — это допустимый флажок и <b>значение False</b> в противном случае.</para>
-          <para>Для <see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" />, и <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> объекты, используйте <see cref="P:Microsoft.Office.Interop.Word.FormField.Type" /> свойства <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта для определения типа поля формы (<b>wdFieldFormCheckBox</b>, <b>wdFieldFormDropDown</b>или <b>wdFieldFormTextInput</b>) перед Применение <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" />, <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" />, или <see cref="P:Microsoft.Office.Interop.Word.FormField.TextInput" /> свойство. Эти меры предосторожности, что объект <b>FormField</b> — ожидаемый тип.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если указанный объект поля формы является допустимым полем формы с флажком, и <b>false</b> , если нет.</para>
+          <para>Для объектов <see cref="T:Microsoft.Office.Interop.Word.CheckBox" />, <see cref="T:Microsoft.Office.Interop.Word.DropDown" /> <see cref="T:Microsoft.Office.Interop.Word.TextInput" /> <see cref="P:Microsoft.Office.Interop.Word.FormField.Type" /> и объектов используйте свойство <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объекта, чтобы определить тип поля формы (<b>вдфиелдформчеккбокс</b>, <b>вдфиелдформдропдовн</b>или <b>вдфиелдформтекстинпут</b>) перед применением Свойство <see cref="P:Microsoft.Office.Interop.Word.FormField.CheckBox" />, <see cref="P:Microsoft.Office.Interop.Word.FormField.DropDown" />или, <see cref="P:Microsoft.Office.Interop.Word.FormField.TextInput" /> или. Эта мера предосторожности гарантирует, что объект <b>FormField</b> является ожидаемым типом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -241,7 +227,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер элемента, выбранного в поле со списком.</summary>
+        <summary>Возвращает или задает номер выбранного элемента в раскрывающемся поле формы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="Characters" FullName="Microsoft.Office.Interop.Word.Characters">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="970f47e28fba4dae64b3146c852a17fe54ae01d1" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672809" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Characters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3ed2d642991aec68ae45afbf33e3cbb38e71bb89" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142322" /></Metadata><TypeSignature Language="C#" Value="public interface Characters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Characters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Characters" />
   <TypeSignature Language="VB.NET" Value="Public Interface Characters&#xA;Implements IEnumerable" />
@@ -30,14 +22,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Набор символов в выделение, диапазон или документа.</summary>
-    <remarks>
-      <para>Нет объекта <b>символов</b> ; Вместо этого каждого элемента в коллекции <b>символов</b> — это <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий один знак.</para>
-      <para>Используйте свойство <b>символов</b> для возврата коллекции <b>символов</b> .</para>
-      <para>
-        <b>Символов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса, чтобы возвратить объект <b>Range</b> , который представляет один символ. Номер индекса представляет позиции знака в наборе <b>символов</b> .</para>
-      <para>
-        <see cref="P:Microsoft.Office.Interop.Word.Characters.Count" /> Свойство для данного семейства сайтов в документе возвращает число элементов в только основную статью. Чтобы подсчитать количество элементов в других материалах используйте коллекции с помощью объекта <b>Range</b> .</para> Метод <b>Add</b><para>недоступен для коллекции символов. Используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> метод для добавления символов в объект <b>Range</b> .</para><para /></remarks>
+    <summary>Коллекция символов в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Объект <b>character</b> отсутствует; Вместо этого каждый элемент в коллекции <b>символов</b> является <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом, представляющим один символ.</para>
+      <para>Чтобы получить коллекцию <b>символов</b> , используйте свойство <b>characters</b> .</para>
+      <para>Используйте <b>знаки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Range</b> , представляющий один символ. Номер индекса представляет положение символа в коллекции <b>символов</b> .</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Characters.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции Characters. Вместо этого используйте метод <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> для добавления символов в объект <b>Range</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -63,7 +54,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объекта, представляющего создателя указанный объект.</summary>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -91,7 +82,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает число элементов в указанном семействе сайтов.</summary>
+        <summary>Получает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,11 +110,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, приложения, в котором был создан указанный объект.</summary>
+        <summary>Получает значение, указывающее приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="First">
@@ -212,8 +203,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Значение, указывающее, порядковый номер отдельных объектов.</param>
-        <summary>Получает отдельный объект в коллекцию.</summary>
+        <param name="Index">Значение, указывающее порядковый номер отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,7 +232,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта, представляющего последнего символа, word или предложение в документе.</summary>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий последний символ, слово или предложение в документе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -269,7 +260,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Получает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

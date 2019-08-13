@@ -1,13 +1,5 @@
 <Type Name="View" FullName="Microsoft.Office.Interop.Word.View">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c735dc24605c2be9a7ca3d58b9f0bc399f7d9a08" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672693" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface View" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5f9e0c4e9f7ec1021964e80672f2867a5ad16420" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143723" /></Metadata><TypeSignature Language="C#" Value="public interface View" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract View" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.View" />
   <TypeSignature Language="VB.NET" Value="Public Interface View" />
@@ -26,14 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит атрибуты, представление (Показать все, затенение полей, сетку и т. п.) окна или панели.</summary>
-    <remarks>
-      <para>Используйте свойство <b>представления</b><see cref="T:Microsoft.Office.Interop.Word.Window" /> или <see cref="T:Microsoft.Office.Interop.Word.Pane" /> объект, который требуется вернуть объект <b>View</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.View.Type" /> свойство для изменения представления.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Zoom.Percentage" /> свойства, чтобы изменить размер текста на экране.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.View.SeekView" /> свойство Просмотр комментариев, концевые сноски, сноски, или документа верхнего или нижнего колонтитула.</para>
-      <para />
-    </remarks>
+    <summary>Содержит атрибуты представления (Показать все, затенение полей, сетку таблицы и т. д.) для окна или области.</summary>
+    <remarks><para>Используйте свойство <b>View</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Window" /> или <see cref="T:Microsoft.Office.Interop.Word.Pane" /> для возврата объекта <b>View</b> .</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.View.Type" /> , чтобы изменить представление.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.Zoom.Percentage" /> , чтобы изменить размер текста на экране.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.View.SeekView" /> свойство для просмотра примечаний, концевых сносок, сносок или верхнего или нижнего колонтитула документа.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -122,11 +112,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сворачивание всех заголовков в документе.</summary>
-        <remarks>
-          <para>Этот метод соответствует команду <b>Свернуть все заголовки</b> из контекстного меню, которое отображается при щелчке правой кнопкой мыши заголовок подменю <b>Развернуть/свернуть</b> .</para>
-          <para />
-        </remarks>
+        <summary>Сворачивает все заголовки в документе.</summary>
+        <remarks><para>Этот метод соответствует команде <b>свертывание всех</b> заголовков в подменю <b>Развернуть/свернуть</b> подменю контекстного меню, которое появляется при щелчке заголовка правой кнопкой мыши.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CollapseOutline">
@@ -151,13 +139,11 @@
         <Parameter Name="Range" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Необязательные <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон абзацы будут свернуты. Если этот аргумент указан, все выделение свернут.</param>
-        <summary>Свертывание текста в разделе выбора или указанный диапазон по уровню одним заголовком.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Если документ не находится в структуре или режим главного документа, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <param name="Range">Необязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон свернутых абзацев. Если этот аргумент опущен, выделяется весь выделенный фрагмент.</param>
+        <summary>Сворачивает текст в выделенном фрагменте или указанном диапазоне на один уровень заголовка.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Если документ не находится в режиме структуры или главного документа, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ColumnWidth">
@@ -186,7 +172,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdColumnWidth</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или возвращает константу, задающее ширину столбцов в режиме чтения. Режим чтения записи<see cref="T:Microsoft.Office.Interop.Word.WdColumnWidth" /></summary>
+        <summary>Возвращает или возвращает константу, определяющую ширину столбца в режиме чтения. Чтение и запись<see cref="T:Microsoft.Office.Interop.Word.WdColumnWidth" /></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -217,13 +203,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает, является ли документ в режиме просмотра конфликтов.</summary>
-        <value>
-          <b>значение true,</b> Если документ находится в режиме просмотра конфликтов; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Чтение и запись.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает значение, указывающее, находится ли документ в режиме конфликтов.</summary>
+        <value><b>значение true</b> , если документ находится в режиме конфликта; в противном случае — <b>false</b>.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -249,11 +232,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayBackgrounds">
@@ -282,12 +265,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли цвета фона и рисунки отображаются при отображении документа в режим разметки.</summary>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, отображаются ли цвета и изображения фона при отображении документа в режиме разметки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DisplayBackgrounds</b> соответствует цвета фона и образы параметр (режим разметки), расположенного на вкладке Вид диалогового окна Параметры.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>дисплайбаккграундс</b> соответствует параметру Background Colors and Images (только представление для печати), расположенному на вкладке Вид диалогового окна Параметры.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayPageBoundaries">
@@ -316,13 +297,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> чтобы отобразить верхние и нижние поля (пробелы) и серый цвет области (промежутки) между страницами в документе. <b>Значение false,</b> Чтобы скрыть из представления пространства белый и серый, чтобы страницы складываются как один длинный страницы. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>Значение true</b> , чтобы отображать верхнее и нижнее поля (пробел) и серую область (серые пробелы) между страницами в документе. <b>False</b> для скрытия отображения белого и серого пробела, чтобы страницы перетекать в одну длинную страницу. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Эта функция доступна только в режиме разметки и влияет только на серый свободного пространства на верхней и нижней части страницы, не слева и справа страницы. Этот параметр влияет на документ в в указанном окне. При сохранении документа с ним сохранения состояния этого параметра.</para>
-          <para />
-        </remarks>
+        <remarks><para>Эта функция доступна только в режиме разметки и влияет только на серую область в верхней и нижней части страницы, а не на левую и правую стороны страницы. Этот параметр влияет на документ в указанном окне. При сохранении документа состояние этого параметра сохраняется вместе с ним.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplaySmartTags">
@@ -357,13 +335,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word для отображения подчеркивания под смарт-тегов в документе.</summary>
+        <summary><b>True</b> для Microsoft Word для отображения подчеркивания под смарт-тегами в документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Помечены как смарт-теги в документах пунктирной линией. Для свойства <b>DisplaySmartTags</b> значение <b>False,</b> не удаляйте смарт-тегов; только отключается отображение подчеркивания.</para>
-          <para />
-        </remarks>
+        <remarks><para>Смарт-теги помечаются в документах подчеркнутым пунктиром. Если задать <b></b> для свойства DisplaySmartTags <b>значение false</b> , смарт-теги не удаляются. Он только отключает отображение подчеркивания.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Draft">
@@ -392,8 +367,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображается весь текст в окне засечек шрифтом с минимальным форматированием для ускорения отображения.</summary>
+        <summary><b>Значение true</b> , если весь текст в окне отображается в том же шрифте без засечек с минимальным форматированием для ускорения отображения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -456,11 +430,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Развертывание всех заголовков в документе.</summary>
-        <remarks>
-          <para>Этот метод соответствует команда <b>Разверните все заголовки</b> из контекстного меню, которое отображается при щелчке правой кнопкой мыши заголовок подменю <b>Развернуть/свернуть</b> .</para>
-          <para />
-        </remarks>
+        <summary>Разворачивает все заголовки в документе.</summary>
+        <remarks><para>Этот метод соответствует команде <b>Развернуть все заголовки</b> в подменю <b>Развернуть/свернуть</b> подменю контекстного меню, которое появляется при щелчке заголовка правой кнопкой мыши.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ExpandOutline">
@@ -485,13 +457,11 @@
         <Parameter Name="Range" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Range">Необязательные <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта. Диапазон абзацев для расширения. Если этот аргумент указан, все выделение расширяется.</param>
-        <summary>Замена текста в разделе выбора или указанный диапазон по уровню одним заголовком.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Если документ не находится в структуре или режим главного документа, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <param name="Range">Необязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон развертываемых абзацев. Если этот аргумент опущен, выделяется весь выделенный фрагмент.</param>
+        <summary>Разворачивает текст в выделенном фрагменте или указанном диапазоне на один уровень заголовка.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Если документ не находится в режиме структуры или главного документа, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FieldShading">
@@ -520,22 +490,20 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdFieldShading</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает на экране заливка для поля формы.</summary>
+        <summary>Возвращает или задает затенение на экране для полей формы.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdFieldShading" />может быть одной из следующих констант <b>вдфиелдшадинг</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdFieldShading" />может иметь одно из следующих констант <b>WdFieldShading</b> : </para>
-          <para>
-            <b>wdFieldShadingNever </b>
+            <b>вдфиелдшадингалвайс</b>
           </para>
           <para>
-            <b>wdFieldShadingAlways </b>
+            <b>вдфиелдшадингневер</b>
           </para>
           <para>
-            <b>wdFieldShadingWhenSelected</b>
+            <b>вдфиелдшадингвхенселектед</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FullScreen">
@@ -564,8 +532,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если окно в полноэкранном режиме.</summary>
+        <summary><b>Значение true</b> , если окно находится в полноэкранном режиме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -596,13 +563,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> если указатель мыши отображается в виде увеличительного стекла в режиме предварительного просмотра, указывающего на то, что пользователь может щелкнуть для увеличить отдельную область страницы или масштаб для отображения всей страницы или распространения страниц.</summary>
+        <summary><b>Значение true</b> , если указатель отображается как лупа в режиме предварительного просмотра, что указывает на то, что пользователь может щелкнуть для увеличения определенной области страницы или уменьшить масштаб для отображения всей страницы или разворота страниц.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство приводит к ошибке, если представление не предварительного просмотра.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство создает ошибку, если представление не является предварительным.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MailMergeDataView">
@@ -631,13 +595,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если вместо полей слияния почты в указанном окне отображается слияния данных.</summary>
+        <summary><b>Значение true</b> , если вместо полей слияния почты в указанном окне отображаются данные слияния почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если в указанном окне не основной документ, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если указанное окно не является основным документом, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MarkupMode">
@@ -666,10 +627,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" /> константа, которая представляет режим отображения для отслеживаемых изменений. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" /> константу, представляющую режим отображения для отслеживаемых изменений. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -694,12 +653,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Если в заголовке выделение, этот метод перемещает следующий заголовок в пределах текущего раздела (например, от нечетной верхний колонтитул четной заголовок) или для первого заголовка в следующем разделе. Если выделение в нижнем колонтитуле, этот метод перемещает следующего нижнего колонтитула.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Если выделение, находится в последний верхних и нижних колонтитулов в последнем разделе документа или она не верхнего или нижнего колонтитула на всех, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <summary>Если выделенный фрагмент находится в заголовке, этот метод перемещается к следующему заголовку в текущем разделе (например, из нечетного заголовка в четное) или к первому заголовку в следующем разделе. Если выделенный фрагмент находится в нижнем колонтитуле, этот метод перемещается к следующему нижнему колонтитулу.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Если выделенный фрагмент находится в последнем верхнем или нижнем колонтитуле в последнем разделе документа, или если он не находится в верхнем или нижнем колонтитуле, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PageColor">
@@ -728,7 +685,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdPageColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает и задает цвет страницы в режиме чтения. Режим чтения и записи <see cref="T:Microsoft.Office.Interop.Word.WdPageColor" />.</summary>
+        <summary>Возвращает и задает цвет страницы в режиме чтения. Чтение и запись <see cref="T:Microsoft.Office.Interop.Word.WdPageColor" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -759,14 +716,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , которое указывает, находится ли Microsoft Office Word в режиме прокрутки. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Режим панорамирования изменяет указатель мыши руки и позволяет пользователю нажмите и перетащите его для прокрутки на страницах.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, находится ли Microsoft Office Word в режиме панорамирования. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Режим панорамирования изменяет указатель мыши на руки и позволяет пользователю нажать и перетащить документ для прокрутки страниц.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -792,7 +745,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -818,12 +771,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Если выделение в заголовке, этот метод перемещает предыдущей заголовка в пределах текущего раздела (например, от даже заголовка для нечетной заголовка) или к последнему верхнего колонтитула в предыдущем разделе. Если выделение в нижнем колонтитуле, этот метод перемещает предыдущей нижнего колонтитула.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Если выделение, находится в первой верхнего или нижнего колонтитула в первом разделе документа, или она не верхнего или нижнего колонтитула на всех, возникает ошибка.</para>
-          <para />
-        </remarks>
+        <summary>Если выделенный фрагмент находится в заголовке, этот метод перемещается к предыдущему заголовку в текущем разделе (например, из четного заголовка в нечетный) или к последнему заголовку в предыдущем разделе. Если выделенный фрагмент находится в нижнем колонтитуле, этот метод перемещается к предыдущему нижнему колонтитулу.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Если выделенный фрагмент находится в первом верхнем или нижнем колонтитуле в первом разделе документа, или если он не находится в верхнем или нижнем колонтитуле, возникает ошибка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadingLayout">
@@ -852,13 +803,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает значение <b>типа Boolean</b> , указывающий ли документ, просматриваемых в режиме чтения.</summary>
+        <summary>Задает или возвращает <b>логическое значение</b> , которое указывает, просматривается ли документ в режиме чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Значение true,</b> переходит в режим чтения. <b>False</b> закроется, в режиме чтения.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>True</b> — переключается в режим чтения документа. <b>False</b> — закрывает режим чтения макета.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadingLayoutActualView">
@@ -887,12 +836,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает значение <b>типа Boolean</b> , указывающий ли страницы, отображаемые в режиме чтения отображаются с помощью же макете виде печатных страниц.</summary>
+        <summary>Задает или возвращает <b>логическое значение</b> , которое указывает, отображаются ли страницы, отображаемые в режиме чтения, с использованием того же макета, что и на напечатанных страницах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>В режиме чтения, страницы, не отображаются с всего содержимого, содержащихся в литерал печатных страниц можно получить в обычном режиме или в режиме разметки. Вместо этого они отображаются в экранов. Если свойство <b>ReadingLayoutActualView</b> имеет значение <b>True</b>, документ отображается так же, как при выводе на печать. На небольших мониторов для этого необходимо масштаба, который делает трудно читать документ, но подходит для большего мониторов.</para>
-          <para />
-        </remarks>
+        <remarks><para>В режиме чтения страницы не отображаются с полным содержимым, которое хранится на страницах литералов, как в обычном режиме или в режиме разметки. Вместо этого они отображаются на экранах. Если для свойства <b>реадинглайаутактуалвиев</b> задано <b>значение true</b>, документ отображается так, как он будет выглядеть при печати. На небольших мониторах для этого необходим уровень масштабирования, который затрудняет чтение документа, но подходит для больших мониторов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadingLayoutAllowEditing">
@@ -995,10 +942,8 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdReadingLayoutMargin</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdReadingLayoutMargin" /> константа, представляет ли поля видимым или скрытым при просмотре документа в полноэкранном режиме. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.WdReadingLayoutMargin" />
-        </value>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Word.WdReadingLayoutMargin" /> константу, показывающую, видимы ли поля или скрыты, когда документ просматривается в полноэкранном режиме чтения. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.WdReadingLayoutMargin" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1059,8 +1004,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word для отображения соединительные линии из текста выноски исправления и комментарии.</summary>
+        <summary><b>True</b> для Microsoft Word для отображения соединительных линий из текста в выносках исправлений и примечаний.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1091,19 +1035,17 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsBalloonMargin</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает константу, указывающее, отображает ли Microsoft Word revision выноски левой или правом поле в документе.</summary>
+        <summary>Задает или возвращает константу, указывающую, отображаются ли в Microsoft Word всплывающие напоминания в левом или правом поле документа.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonMargin" />может быть одной из следующих констант <b>вдревисионсбаллунмаргин</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonMargin" />может иметь одно из следующих констант <b>WdRevisionsBalloonMargin</b> : </para>
-          <para>
-            <b>wdLeftMargin </b>
+            <b>вдлефтмаргин</b>
           </para>
           <para>
-            <b>wdRightMargin</b>
+            <b>вдригхтмаргин</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RevisionsBalloonWidth">
@@ -1132,12 +1074,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает <b>один</b> представляющее глобальных параметров в Microsoft Word, задающее ширину выноски версии.</summary>
+        <summary>Задает или возвращает значение <b></b> , представляющее собой значение, представляющее глобальную настройку в Microsoft Word, которая определяет ширину всплывающих подсказок.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Ширина выноски версия включает в себя внутренние поля Пол дюйма между полем документов и пограничного сервера в документе и одной восьмой дюйма между краем выноске и края бумаги. Microsoft Word добавляется пространство по левому или правому краю бумаги. В этом ширина расширяется в поле и не изменяет ширину размер документа или документ. Используйте <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonWidthType" /> свойство, чтобы указать измерения для использования при задании свойства <b>RevisionsBalloonWidth</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Ширина всплывающих подсказок включает заполнение одной половинной точки между полями документа и краем шарика и одной восьмой дюйма между краем выноски и краем бумаги. Microsoft Word добавляет свободное пространство вдоль левого или правого края бумаги. Эта ширина расширяется на поля и не изменяет ширину документа или размера бумаги. Используйте <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonWidthType" /> свойство, чтобы указать измерение, которое будет использоваться при задании свойства <b>ревисионсбаллунвидс</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RevisionsBalloonWidthType">
@@ -1166,18 +1106,16 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsBalloonWidthType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает константу, представляющий глобальный параметр, который определяет, как меры ширины выноски версия Microsoft Word.</summary>
+        <summary>Задает или возвращает константу, представляющую глобальный параметр, указывающий, как Microsoft Word измеряет ширину всплывающих подсказок.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonWidthType" />может быть одной из следующих констант <b>вдревисионсбаллунвидстипе</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsBalloonWidthType" />может иметь одно из следующих констант <b>WdRevisionsBalloonWidthType</b> : </para>
+            <b>вдбаллунвидсперцент</b> — измеряется в процентах от ширины документа. </para>
           <para>
-            <b>wdBalloonWidthPercent</b> – в процентах от ширины документа.</para>
-          <para>
-            <b>wdBalloonWidthPoints</b> – измеряется в точках.</para>
-          <para>Свойство <b>RevisionsBalloonWidthType</b> задает единицы измерения для использования при установке <see cref="P:Microsoft.Office.Interop.Word.View.RevisionsBalloonWidth" /> свойство.</para>
-          <para />
-        </remarks>
+            <b>вдбаллунвидспоинтс</b> — измеряется в точках. </para>
+          <para>Свойство <b>ревисионсбаллунвидстипе</b> задает единицу измерения, используемую при задании <see cref="P:Microsoft.Office.Interop.Word.View.RevisionsBalloonWidth" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RevisionsFilter">
@@ -1240,17 +1178,15 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdRevisionsMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает константу, представляющий глобальный параметр, указывающее, отображает ли Microsoft Word выноски в поле или в тексте документа.</summary>
+        <summary>Задает или возвращает константу, представляющую глобальную функцию, которая указывает, отображаются ли в Microsoft Word выноски на полях или во встроенном тексте документа.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" />может быть одной из следующих констант <b>вдревисионсмоде</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdRevisionsMode" />может иметь одно из следующих констант <b>WdRevisionsMode</b> : </para>
+            <b>вдбаллунревисионс</b> — отображение исправлений в выносках в левом или правом поле. </para>
           <para>
-            <b>wdBalloonRevisions</b> — отображает исправлений в выносках на поле левую или правую.</para>
-          <para>
-            <b>wdInLineRevisions</b> — отображает исправлений в тексте удалений с помощью зачеркивание и подчеркивание для вставки. Это значение по умолчанию для предыдущих версий Word.</para>
-          <para />
-        </remarks>
+            <b>вдинлинеревисионс</b> — отображение исправлений в тексте с использованием зачеркивания для вставок и подчеркивания для вставок. Это значение по умолчанию для предыдущих версий Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RevisionsView">
@@ -1316,47 +1252,45 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSeekView</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает элемент document, отображаемые в режим разметки.</summary>
+        <summary>Возвращает или задает элемент Document, отображаемый в режиме разметки.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdSeekView" />может быть одной из следующих констант <b>вдсиквиев</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdSeekView" />может иметь одно из следующих констант <b>WdSeekView</b> : </para>
-          <para>
-            <b>wdSeekCurrentPageFooter </b>
+            <b>вдсиккуррентпажефутер</b>
           </para>
           <para>
-            <b>wdSeekCurrentPageHeader </b>
+            <b>вдсиккуррентпажехеадер</b>
           </para>
           <para>
-            <b>wdSeekEndnotes </b>
+            <b>вдсикенднотес</b>
           </para>
           <para>
-            <b>wdSeekEvenPagesFooter </b>
+            <b>вдсикевенпажесфутер</b>
           </para>
           <para>
-            <b>wdSeekEvenPagesHeader </b>
+            <b>вдсикевенпажешеадер</b>
           </para>
           <para>
-            <b>wdSeekFirstPageFooter </b>
+            <b>вдсикфирстпажефутер</b>
           </para>
           <para>
-            <b>wdSeekFirstPageHeader </b>
+            <b>вдсикфирстпажехеадер</b>
           </para>
           <para>
-            <b>wdSeekFootnotes </b>
+            <b>вдсикфутнотес</b>
           </para>
           <para>
-            <b>wdSeekMainDocument </b>
+            <b>вдсикмаиндокумент</b>
           </para>
           <para>
-            <b>wdSeekPrimaryFooter </b>
+            <b>вдсикпримарифутер</b>
           </para>
           <para>
-            <b>wdSeekPrimaryHeader</b>
+            <b>вдсикпримарихеадер</b>
           </para>
-          <para>этого свойства, приведет к ошибке, если представление не режим разметки.</para>
-          <para />
-        </remarks>
+          <para>Это свойство создает ошибку, если представление не является режимом разметки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShadeEditableRanges">
@@ -1385,12 +1319,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее ли тени применяется к диапазоны в документе, для которого пользователи имеют разрешение на изменение. <b>Значение true,</b> выполняет затенение диапазоны в документе, пользователи смогут изменять.</summary>
+        <summary>Возвращает или задает <b>целое число</b> , которое указывает, применяется ли заливка к диапазонам в документе, для которых пользователи имеют разрешение на изменение. <b>True</b> — затенение диапазонов в документе, который пользователи могут изменять.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Диапазон затенение включено по умолчанию. При включенном затенение диапазон или свойству присвоено значение <b>True</b>, свойство <b>ShadeEditableRanges</b> возвращает значение 65535. Если свойству <b>ShadeEditableRanges</b> присвоено значение <b>False</b> она возвращает значение 0. Значения не имеют значения за пределы, указывающее, является ли свойство <b>True</b> или <b>False</b>.</para>
-          <para />
-        </remarks>
+        <remarks><para>Заливка диапазона включена по умолчанию. Если заливка диапазона включена, или если свойству присвоено значение <b>true</b>, свойство <b>шадидитаблеранжес</b> возвращает значение 65535. Если для свойства <b>шадидитаблеранжес</b> задано значение <b>false</b> , возвращается значение 0. Значения не имеют смысла, если указать, имеет ли свойство <b>значение true</b> или <b>false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowAll">
@@ -1419,8 +1351,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображаются все непечатаемые символы (такие как скрытый текст, табуляции, знаки пробелов и знаков абзацев).</summary>
+        <summary><b>Значение true</b> , если отображаются все непечатаемые символы (например, скрытый текст, знаки табуляции, пробелы и знаки абзаца).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1446,12 +1377,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Переключение между отображением весь текст (заголовки и текст) и отображение только заголовки.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Этот метод приводит к ошибке, если представление не находится в режиме структуры или режим главного документа.</para>
-          <para />
-        </remarks>
+        <summary>Переключается между отображением всего текста (заголовков и основного текста) и отображением только заголовков.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Этот метод создает ошибку, если представление не является представлением структуры или главного документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowAnimation">
@@ -1517,8 +1446,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если квадратные скобки, отображаются в начале и в конце каждой закладки.</summary>
+        <summary><b>True</b> , если в начале и конце каждой закладки отображаются квадратные скобки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1549,13 +1477,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word для отображения комментариев в документе.</summary>
+        <summary><b>True</b> для Microsoft Word для отображения комментариев в документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если пометки отображаются в выносках на поле вправо или влево, комментарии отображаются в выносках. Если пометки отображается в тексте, текст, к которому применяются комментарии заключается в угловые всей квадратных скобках, Когда пользователь наводит указатель мыши на текст внутри скобок, связанных с ними комментария отображается в квадратных всплывающее непосредственно указатель мыши.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если в выносках справа или левом поле отображаются метки исправлений, комментарии отображаются в выносках. Если метки исправлений отображаются встроенными, текст, к которому применяются комментарии, окружается квадратными квадратными скобками; Когда пользователь наводит указатель мыши на текст в квадратных скобках, связанный комментарий отображается в квадратной выноске непосредственно над указателем мыши.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowCropMarks">
@@ -1584,11 +1509,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , представляющий необходимость отображения меток обрезки в углу страницы, чтобы указать, где находятся поля. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>Метки обрезки отображение <para>не позволяет пользователю изменить поля, перетащив метки обрезки. Обрезка метки отображаются только для указания расположения полей на странице. Это свойство соответствует флажок на вкладке Дополнительно диалогового окна Параметры Word метки обрезки.</para><b>Примечание</b><para>: меток обрезки отображаемые по умолчанию в восточно-азиатских языков и по умолчанию в других langauges отключены.</para><para /></remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, отображаются ли обрезные метки в углах страниц, чтобы указать, где находятся поля. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Отображение меток кадрирования не позволяет пользователю изменять поля, перетаскивая обрезные метки. Метки обреза отображаются только для того, чтобы показать, где находятся поля на странице. Это свойство соответствует флажку обрезные метки на вкладке Дополнительно диалогового окна "Параметры Word".</para>
+          <para>
+            <b>Note</b>: обрезные метки отображаются по умолчанию на восточноазиатских языках и по умолчанию отключены во всех остальных лангаужес.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowDrawings">
@@ -1617,8 +1543,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объекты, созданные с помощью средства рисования отображаются в режим разметки.</summary>
+        <summary><b>Значение true</b> , если объекты, созданные с помощью инструментов рисования, отображаются в режиме разметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1649,8 +1574,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если коды полей отображаются.</summary>
+        <summary><b>Значение true</b> , если коды полей отображаются.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1681,13 +1605,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> если только первая строка основной текст отображается в режиме структуры.</summary>
+        <summary><b>Значение true</b> , если в режиме структуры отображается только первая строка основного текста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство приводит к ошибке, если представление не структуры или режим главного документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство создает ошибку, если представление не является представлением "структура" или "главный документ".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowFormat">
@@ -1716,13 +1637,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если форматирование знаков отображается в режиме структуры.</summary>
+        <summary><b>True</b> , если форматирование символов отображается в режиме структуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство приводит к ошибке, если представление не структуры или режим главного документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство создает ошибку, если представление не является представлением "структура" или "главный документ".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowFormatChanges">
@@ -1751,13 +1669,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если форматирование знаков отображается в режиме структуры.</summary>
+        <summary><b>True</b> , если форматирование символов отображается в режиме структуры.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство приводит к ошибке, если представление не структуры или режим главного документа.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство создает ошибку, если представление не является представлением "структура" или "главный документ".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowHeading">
@@ -1783,13 +1698,11 @@
         <Parameter Name="Level" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Level">Требуется <b>целое число</b>. Уровень заголовок структуры (число от 1 до 9).</param>
-        <summary>Показать все заголовки до уровня указанного заголовка и Скрыть подчиненных заголовков и текста.</summary>
-        <remarks>
-          <para>
-            <b>Примечание</b>  Этот метод приводит к ошибке, если представление не находится в режиме структуры или режим главного документа.</para>
-          <para />
-        </remarks>
+        <param name="Level">Обязательный атрибут типа <b>Integer</b>. Уровень заголовков "структура" (число от 1 до 9).</param>
+        <summary>Отображает все заголовки вплоть до указанного уровня заголовков и скрывает подчиненные заголовки и основной текст.</summary>
+        <remarks><para>
+            <b>Note (Примечание</b> )  Этот метод создает ошибку, если представление не является представлением структуры или главного документа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowHiddenText">
@@ -1818,8 +1731,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст, скрытый текст отображается.</summary>
+        <summary><b>Значение true</b> , если отображается текст, отформатированный в скрытом тексте.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1850,8 +1762,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> если выделение форматирование является отображения и печати с документом.</summary>
+        <summary><b>True</b> , если форматирование выделения отображается и печатается вместе с документом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1882,8 +1793,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображать переносы. Мягкий перенос указывает место перестать работать несколько слов, если они попадают в конце строки.</summary>
+        <summary><b>Значение true</b> , если отображаются необязательные дефисы. Необязательный дефис указывает, куда разбивается слово, когда оно попадает в конец строки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1914,12 +1824,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , которое отображает и скрывает рукописные примечания. <b>Значение true,</b> отображает рукописные примечания. <b>False</b> скрывает рукописные примечания.</summary>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое показывает или скрывает рукописные рукописные примечания. <b>True</b> отображение рукописных примечаний. <b>False</b> — скрывает рукописные примечания.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для работы с рукописные примечания, вы должны работать под управлением Microsoft Word на планшетном ПК.</para>
-          <para />
-        </remarks>
+        <remarks><para>Для работы с рукописными примечаниями необходимо запустить Microsoft Word на планшетном компьютере.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowInsertionsAndDeletions">
@@ -1948,8 +1856,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word для отображения, вставки и удаления, которые были внесены в документ при включенном параметре исправления.</summary>
+        <summary><b>True</b> для Microsoft Word для отображения вставок и удалений, внесенных в документ с включенными изменениями исправлений.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1980,13 +1887,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если при отображении области верхнего или нижнего колонтитула отображается текст в указанный документ.</summary>
+        <summary><b>Значение true</b> , если текст в указанном документе отображается при отображении областей верхнего и нижнего колонтитулов.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>ShowMainTextLayer</b> эквивалентно текст документа Показать или скрыть кнопки на панели инструментов Колонтитулы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>шовмаинтекстлайер</b> эквивалентно кнопке Показать или скрыть текст документа на панели инструментов Колонтитулы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowMarkupAreaHighlight">
@@ -2021,14 +1925,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , которое указывает, находится ли затемненные области разметки, показывающая выноски исправления и комментарии. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство соответствует параметру разметки область выделения в меню "Показать исправления" на ленте проверки.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое указывает, затенена ли область разметки, отображающая исправления и выноски примечаний. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство соответствует параметру выделения области разметки в меню Показать разметки на ленте "Рецензирование".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowObjectAnchors">
@@ -2057,8 +1957,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объект привязки отображаются рядом с элементами, которые могут размещаться в режим разметки.</summary>
+        <summary><b>Значение true</b> , если привязки объектов отображаются рядом с элементами, которые можно располагать в режиме разметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2089,8 +1988,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если на экране необязательно разрывы строки.</summary>
+        <summary><b>Значение true</b> , если в Microsoft Word отображаются необязательные разрывы строк.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2121,13 +2019,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает сведения о присутствии других авторов должны отображаться в документе.</summary>
-        <value>
-          <b>значение true,</b> Если сведения о присутствии других авторов должны отображаться в документе. в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Чтение и запись типа Boolean. Это свойство используется для включения и отключения отображения сведений о присутствии других авторов при совместной работы.</para>
-          <para />
-        </remarks>
+        <summary>Получает или задает значение, указывающее, следует ли отображать в документе сведения о присутствии других авторов.</summary>
+        <value><b>значение true</b> , если присутствие других авторов должно быть видимо в документе; в противном случае — <b>false</b>.</value>
+        <remarks><para>Для чтения и записи, Boolean. Используйте это свойство, чтобы переключать сведения о присутствии других авторов во время совместного редактирования.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowParagraphs">
@@ -2156,8 +2051,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображать служебные знаки.</summary>
+        <summary><b>Значение true</b> , если отображаются знаки абзаца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2188,8 +2082,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если пустые поля отображаются как заполнители для изображения.</summary>
+        <summary><b>Значение true</b> , если пустые поля отображаются как заполнители для изображений.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2220,8 +2113,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word отобразить исправления и комментарии, внесенные в документ при включенном параметре исправления.</summary>
+        <summary><b>True</b> для Microsoft Word для отображения исправлений и примечаний, внесенных в документ с включенной функцией отслеживания изменений.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2252,8 +2144,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если пробелов, которые отображаются.</summary>
+        <summary><b>Значение true</b> , если символы пробела отображаются.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2284,8 +2175,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображать знаки табуляции.</summary>
+        <summary><b>Значение true</b> , если символы табуляции отображаются.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2316,8 +2206,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если пунктирной линии отображаются вокруг поля страницы, текстовые столбцы, объектов и рамок в режим разметки.</summary>
+        <summary><b>True</b> , если пунктирные линии отображаются вокруг полей страниц, текстовых столбцов, объектов и фреймов в режиме разметки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2348,13 +2237,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число</b> , которое показывает, что выполняется просмотр XML-тегов в документе.</summary>
+        <summary>Возвращает <b>целое число</b> , которое указывает, просматриваются ли Теги XML в документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <b>Значение true</b> указывает, что теги отображаются. <b>Значение false</b> указывает, что теги являются скрытыми. <b>wdToggle</b> позволяет переключаться между отображение и скрытие разметки XML.</para>
-          <para />
-        </remarks>
+        <remarks><para>
+            <b>Значение true</b> указывает, что теги видимы. <b>Значение false</b> указывает, что теги являются скрытыми. <b>вдтоггле</b> позволяет переключаться между отображением и скрытием разметки XML.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SplitSpecial">
@@ -2383,70 +2270,68 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSpecialPane</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает область активного окна.</summary>
+        <summary>Возвращает или задает активную область окна.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdSpecialPane" />может быть одной из следующих констант <b>вдспеЦиалпане</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdSpecialPane" />может иметь одно из следующих констант <b>WdSpecialPane</b> :</para>
-          <para>
-            <b>wdPaneComments </b>
+            <b>вдпанекомментс</b>
           </para>
           <para>
-            <b>wdPaneCurrentPageFooter </b>
+            <b>вдпанекуррентпажефутер</b>
           </para>
           <para>
-            <b>wdPaneCurrentPageHeader </b>
+            <b>вдпанекуррентпажехеадер</b>
           </para>
           <para>
-            <b>wdPaneEndnoteContinuationNotice </b>
+            <b>вдпанинднотеконтинуатионнотице</b>
           </para>
           <para>
-            <b>wdPaneEndnoteContinuationSeparator </b>
+            <b>вдпанинднотеконтинуатионсепаратор</b>
           </para>
           <para>
-            <b>wdPaneEndnotes </b>
+            <b>вдпанинднотес</b>
           </para>
           <para>
-            <b>wdPaneEndnoteSeparator </b>
+            <b>вдпанинднотесепаратор</b>
           </para>
           <para>
-            <b>wdPaneEvenPagesFooter </b>
+            <b>вдпанивенпажесфутер</b>
           </para>
           <para>
-            <b>wdPaneEvenPagesHeader </b>
+            <b>вдпанивенпажешеадер</b>
           </para>
           <para>
-            <b>wdPaneFirstPageFooter </b>
+            <b>вдпанефирстпажефутер</b>
           </para>
           <para>
-            <b>wdPaneFirstPageHeader</b>
+            <b>вдпанефирстпажехеадер</b>
           </para>
           <para>
-            <b> wdPaneFootnoteContinuationNotice </b>
+            <b>вдпанефутнотеконтинуатионнотице</b>
           </para>
           <para>
-            <b>wdPanePrimaryHeader</b>
+            <b>вдпанефутнотеконтинуатионсепаратор</b>
           </para>
           <para>
-            <b>wdPaneFootnoteContinuationSeparator </b>
+            <b>вдпанефутнотес</b>
           </para>
           <para>
-            <b>wdPaneFootnotes </b>
+            <b>вдпанефутнотесепаратор</b>
           </para>
           <para>
-            <b>wdPaneFootnoteSeparator </b>
+            <b>вдпаненоне</b>
           </para>
           <para>
-            <b>wdPaneNone </b>
+            <b>вдпанепримарифутер</b>
           </para>
           <para>
-            <b>wdPanePrimaryFooter </b>
+            <b>вдпанепримарихеадер</b>
           </para>
           <para>
-            <b>wdPaneRevisions</b>
+            <b>вдпанеревисионс</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TableGridlines">
@@ -2475,8 +2360,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображать линии сетки в таблице.</summary>
+        <summary><b>Значение true</b> , если линии сетки таблицы отображаются.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2509,35 +2393,32 @@
       <Docs>
         <summary>Возвращает или задает тип представления.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />может быть одной из следующих констант <b>вдвиевтипе</b> : </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdViewType" />может иметь одно из следующих констант <b>WdViewType</b> : </para>
-          <para>
-            <b>wdMasterView </b>
+            <b>вдмастервиев</b>
           </para>
           <para>
-            <b>wdOutlineView </b>
+            <b>вдаутлиневиев</b>
           </para>
           <para>
-            <b>wdPrintView </b>
+            <b>вдпринтвиев</b>
           </para>
           <para>
-            <b>wdNormalView </b>
+            <b>вднормалвиев</b>
           </para>
           <para>
-            <b>wdPrintPreview </b>
+            <b>вдпринтпревиев</b>
           </para>
           <para>
-            <b>wdWebView </b>
+            <b>вдвебвиев</b>
           </para>
           <para>
-            <b>wdReadingView</b>
+            <b>вдреадингвиев</b>
           </para>
-          <para>
-            <b>Тип</b> свойство возвращает значение <b>wdMasterView</b> для всех документов, где текущее представление структуры или главного документа. Текущее представление никогда не возвращает <b>wdOutlineView</b> , если не явно задать сначала в коде.</para>
-          <para>Для проверки, является ли текущий документ структуры, используйте свойство <b>Type</b> и <see cref="T:Microsoft.Office.Interop.Word.Subdocuments" /> коллекции <see cref="P:Microsoft.Office.Interop.Word.Subdocuments.Count" /> свойство. Если свойство <b>Type</b> возвращает <b>wdOutlineView</b> или <b>wdMasterView</b> и свойство <b>Count</b> возвращает нуль, этот документ является структуры.</para>
-          <para />
-        </remarks>
+          <para>Свойство <b>Type</b> возвращает <b>вдмастервиев</b> для всех документов, в которых текущее представление является структурой или главным документом. Текущее представление никогда не возвратит <b>вдаутлиневиев</b> , если не явно задано значение First в коде.</para>
+          <para>Чтобы проверить, является ли текущий документ контуром, используйте свойство <b>Type</b> и <see cref="T:Microsoft.Office.Interop.Word.Subdocuments" /> <see cref="P:Microsoft.Office.Interop.Word.Subdocuments.Count" /> свойство Collection. Если свойство <b>Type</b> возвращает значение <b>вдаутлиневиев</b> или <b>вдмастервиев</b> , а свойство <b>Count</b> возвращает ноль, документ является структурой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="WrapToWindow">
@@ -2566,8 +2447,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если переносить строки по правому краю окна документа, а не в правого поля или границы правого столбца.</summary>
+        <summary><b>Имеет значение true</b> , если строки переносятся по правому краю окна документа, а не к правому или правому краю столбца.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2595,7 +2475,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Zoom</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объект, представляющий масштаба указанное представление.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Zoom" /> объект, представляющий увеличение для указанного представления.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

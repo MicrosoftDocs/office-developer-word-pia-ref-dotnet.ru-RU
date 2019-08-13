@@ -1,13 +1,5 @@
 <Type Name="SmartTagAction" FullName="Microsoft.Office.Interop.Word.SmartTagAction">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e5c4bc9e1f8c1df339fe6ea64518ce507e0f8afe" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672673" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTagAction" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ec49e7fe750928cbb025ed46930bedb2516ad95e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143996" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagAction" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagAction" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTagAction" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTagAction" />
@@ -27,8 +19,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет одно действие для смарт-тега.</summary>
-    <remarks>Действия для смарт-тегов <para>, процессы, которые запрограммирован в смарт-теги, позволяющие пользователям выполнять определенные функции, связанные с смарт-тег. Например, одно действие для смарт-тега может быть для доступа к веб-сайта, а другое действие вставляет контактных данных в Microsoft Outlook, в то время как, но при этом другой выводит карты и направления движения.</para> Действия для смарт-тегов 
-      <para>также связано для действий, встроенной в смарт-документы и элементы управления в области задач действия с документами. Например, возможно, элемент управления textbox, отображаемые в области задач для смарт-документ, который выполняет действие, когда пользователь изменяет содержимое текстового поля.</para><para><see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> связанные объекты в том, что каждый элемент, который распознает смарт-тега компонента <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекта. К примеру «Город» в компоненте смарт-тег адрес является объектом определенного <b>SmartTagType</b> . Тип смарт-тега city имеет связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тег, который распознает смарт-теги типа «Город» в документах) и <b>SmartTagAction</b> (часть смарт-тега компонента, предоставляющий действия связанные с тип определенный смарт-тег, который может включать поиск распознанных Город в Microsoft MapPoint на MSN). Поместить просто, средства распознавания делает пометки, обработчика события предоставляет функциональные возможности конечных пользователей и что связывает их является типом смарт-тега, они работают.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> метод, возвращающий объект <b>SmartTagAction</b> отдельных из <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> семейства.</para><para>Использования <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> свойства для определения типа элемента управления, связанного с объектом <b>SmartTagAction</b> .</para><para /></remarks>
+    <remarks><para>Действия смарт-тегов — это процессы, которые запрограммированы в смарт-тегах, которые позволяют пользователям выполнять определенные функции, связанные с смарт-тегом. Например, одному действию для смарт-тега может быть доступ к веб-сайту, а другое действие вставляет сведения о контакте в Microsoft Outlook, в то время как другие отображают карты и направления проезда.</para>
+      <para>Действия смарт-тегов также связаны с действиями, встроенными в смарт-документы, и элементами управления в области задач "действия с документами". Например, элемент управления TextBox может отображаться в области задач для смарт-документа, который выполняет действие, когда пользователь изменяет содержимое текстового поля.</para>
+      <para>
+        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекты связаны в том, что каждый элемент, распознаваемый компонентом смарт-тега <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> , является объектом. Например, "City" в компоненте "адрес смарт-тега" — это определенный объект <b>smartTagType</b> . Тип смарт-тега City содержит связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тега, который распознает смарт-теги типа "City" в документах) и объекты <b>SmartTagAction</b> (часть компонента смарт-тега, предоставляющая действия относится к определенному типу смарт-тега, который может включать Поиск известного города в Microsoft MapPoint в MSN. Отметьте, что распознаватель выполняет маркировку, обработчик действий обеспечивает функцию конечного пользователя, а то, что объединяет их, это тип смарт-тега, над которым они работают.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> метод, чтобы возвратить отдельный объект <b>SmartTagAction</b> из <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекции.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> свойство, чтобы определить тип элемента управления, связанного с объектом <b>SmartTagAction</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="ActiveXControl">
@@ -57,12 +54,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий элемент управления ActiveX, отображаемые в области задач действия с документами.</summary>
+        <summary>Возвращает <b>объект</b> , представляющий элемент управления ActiveX, отображаемый в области задач "действия с документами".</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения о смарт-документы видеть смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -128,13 +123,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающее, установлен ли флажок в смарт-документ.</summary>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, выбран ли флажок в смарт-документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> Если выбранный флажок установлен и <b>значение False</b> , если он установлен.</para>
-          <para>Дополнительные сведения о смарт-документах можно смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если установленный флажок установлен, и <b>значение false</b> , если оно снято.</para>
+          <para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -163,11 +156,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -194,7 +187,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет действие указанного смарт-тега.</summary>
+        <summary>Выполняет заданное действие смарт-тега.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -230,13 +223,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение <b>Boolean</b> , указывающий ли элемент управления фрагмент кода указанный документ развернут или свернут в области задач действия с документами.</summary>
+        <summary>Возвращает или задает <b>логическое значение</b> , которое определяет, развернут или свернут указанный элемент управления фрагмента документа в области задач "действия с документами".</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> чтобы указать, что элемент управления развернут и <b>значение False,</b> чтобы указать, что элемент управления свернут.</para>
-          <para>Дополнительные сведения о смарт-документы можно найти смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</para>
+          <para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ExpandHelp">
@@ -271,13 +262,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> , который представляет указанный смарт-документ элемента управления текст справки будет развернута или свернута в области задач действия с документами.</summary>
+        <summary>Возвращает или задает <b>логическое значение</b> , указывающее, развернут или свернут указанный элемент управления "Справка по смарт-документам" в области задач "действия с документами".</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True,</b> чтобы указать, что элемент управления развернут, и <b>значение False,</b> чтобы указать элемент управления свернут.</para>
-          <para>Дополнительные сведения о смарт-документы, ссылки средств разработки программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</para>
+          <para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ListSelection">
@@ -312,12 +301,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее номер индекса элемента, выбранного в элемент управления списка смарт-документ.</summary>
+        <summary>Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в элементе управления "список" смарт-документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения о смарт-документы можно найти смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -377,7 +364,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -408,7 +395,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>типа Boolean</b> , указывающий ли элемент управления смарт-документ отображается в области задач действия с документами.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, отображается ли в данный момент элемент управления смарт-документа в области задач "действия с документами".</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -445,12 +432,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое число</b> , представляющее номер индекса элемента, выбранного в группы переключателей в смарт-документ.</summary>
+        <summary>Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в группе элементов управления "переключатель" в смарт-документе.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения о смарт-документы можно найти смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextboxText">
@@ -485,12 +470,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , представляющую текста в элементе управления textbox смарт-документ.</summary>
+        <summary>Возвращает или задает <b>строку</b> , представляющую текст в элементе управления TextBox смарт-документа.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Дополнительные сведения о смарт-документы можно найти смарт-документа пакет средств разработки на веб-сайте Microsoft Developer Network (MSDN).</para>
-          <para />
-        </remarks>
+        <remarks><para>Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -519,61 +502,59 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSmartTagControlType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> , представляющий тип элемента управления смарт-документ, в области задач действия с документами.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> , который представляет тип элемента управления смарт-документом, отображаемый в области задач "действия с документами".</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" />может быть одной из следующих констант: </para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> может иметь одно из следующих констант:</para>
-          <para>
-            <b>wdControlActiveX</b>
+            <b>вдконтролактивекс</b>
           </para>
           <para>
-            <b>wdControlButton</b>
+            <b>вдконтролбуттон</b>
           </para>
           <para>
-            <b>wdControlCheckbox</b>
+            <b>вдконтролчеккбокс</b>
           </para>
           <para>
-            <b>wdControlCombo</b>
+            <b>вдконтролкомбо</b>
           </para>
           <para>
-            <b>wdControlDocumentFragment</b>
+            <b>вдконтролдокументфрагмент</b>
           </para>
           <para>
-            <b>wdControlDocumentFragmentURL</b>
+            <b>вдконтролдокументфрагментурл</b>
           </para>
           <para>
-            <b>wdControlHelp</b>
+            <b>вдконтролхелп</b>
           </para>
           <para>
-            <b>wdControlHelpURL</b>
+            <b>вдконтролхелпурл</b>
           </para>
           <para>
-            <b>wdControlImage</b>
+            <b>вдконтролимаже</b>
           </para>
           <para>
-            <b>wdControlLabel</b>
+            <b>вдконтроллабел</b>
           </para>
           <para>
-            <b>wdControlLink</b>
+            <b>вдконтроллинк</b>
           </para>
           <para>
-            <b>wdControlListbox</b>
+            <b>вдконтроллистбокс</b>
           </para>
           <para>
-            <b>wdControlRadioGroup</b>
+            <b>вдконтролрадиограуп</b>
           </para>
           <para>
-            <b>wdControlSeparator</b>
+            <b>вдконтролсепаратор</b>
           </para>
           <para>
-            <b>wdControlSmartTag</b>
+            <b>вдконтролсмарттаг</b>
           </para>
           <para>
-            <b>wdControlTextbox</b>
+            <b>вдконтролтекстбокс</b>
           </para>
-          <para />
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

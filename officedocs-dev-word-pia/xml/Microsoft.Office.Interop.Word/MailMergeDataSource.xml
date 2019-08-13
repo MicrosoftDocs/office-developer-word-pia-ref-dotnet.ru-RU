@@ -1,13 +1,5 @@
 <Type Name="MailMergeDataSource" FullName="Microsoft.Office.Interop.Word.MailMergeDataSource">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d2e937147dc7f6dd07ddb11fc242a7e8007f5285" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673866" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface MailMergeDataSource" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="263ac1a3dcb0cca2f828e652dcaa7b7f382a381b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144472" /></Metadata><TypeSignature Language="C#" Value="public interface MailMergeDataSource" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMergeDataSource" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMergeDataSource" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMergeDataSource" />
@@ -26,11 +18,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет источник данных слияния почты в ходе операции слияния почты.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.MailMerge.DataSource" /> свойство для возврата объекта <b>вывода</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет источник данных слияния почты в операции слияния почты.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.MailMerge.DataSource" /> свойство, чтобы возвратить объект <b>MailMergeDataSource</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="ActiveRecord">
@@ -59,13 +49,11 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdMailMergeActiveRecord</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает active записи данных.</summary>
+        <summary>Возвращает или задает активную запись с данными слияния.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>ActiveRecord</b> может быть либо номер записи допустимых данных, в результате запроса или одного из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeActiveRecord" /> константы.</para>
-          <para>Номер записи активных данных является положение записи в результатах запроса, созданные средством параметры текущего запроса; таким образом, этот номер не обязательно положение записи в источнике данных.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>активерекорд</b> может быть допустимым номером записи данных в результатах запроса или одной из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeActiveRecord" /> констант.</para>
+          <para>Номер активной записи данных — это позиция записи в результатах запроса, созданная текущими параметрами запроса; Таким образом, это число не обязательно должно быть позицией записи в источнике данных.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -117,7 +105,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Закрывает указанного источника данных, области или задач.</summary>
+        <summary>Закрывает указанный источник данных слияния, область или задачу.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,7 +132,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку подключения для указанного источника данных.</summary>
+        <summary>Возвращает строку подключения для указанного источника данных слияния почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -172,11 +160,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataFields">
@@ -202,7 +190,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.MailMergeDataFields</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> коллекции, представляющей полей в указанном источнике данных.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MailMergeDataFields" /> коллекцию, представляющую поля в указанном источнике данных слияния.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +218,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.MailMergeFieldNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MailMergeFieldNames" /> коллекции, представляющей имена всех полей в указанном источнике данных.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MailMergeFieldNames" /> коллекцию, представляющую имена всех полей в указанном источнике данных слияния.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,15 +246,13 @@
         <Parameter Name="Field" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="FindText">
-          <b>Строковое значение.</b> Текст, который выполнялся поиск.</param>
-        <param name="Field">
-          <b>Обязательно.</b> Имя поля для поиска.</param>
-        <summary>Осуществляет поиск содержимого источника данных указанного слияния почты для текста в отдельного поля. Возвращает <b>значение True</b> , если текст поиска найден.</summary>
+        <param name="FindText">Обязательный атрибут типа <b>String</b>. Текст, который необходимо найти.</param>
+        <param name="Field">Обязательный <b>вариант</b>. Имя поля, в котором выполняется поиск.</param>
+        <summary>Поиск текста в определенном поле в содержимом указанного источника данных слияния. Возвращает <b>значение true</b> , если искомый текст найден.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Метод <b>НайтиЗапись</b> соответствует кнопки найдите запись на панели инструментов слияния.</para> Метод 
-          <para><b>НайтиЗапись</b> выполняет только прямого поиска. Таким образом Если активная запись не является первой записи в источник данных и записи, для которого осуществляется поиск перед активной записи, метод <b>НайтиЗапись</b> возвращает результаты отсутствуют. Чтобы убедиться в том, что выполняется поиск во всем источнике данных, задайте <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.ActiveRecord" /> свойства <b>wdFirstRecord</b>.</para><para /></remarks>
+        <remarks><para>Метод <b>НайтиЗапись</b> соответствует кнопке Поиск записи на панели инструментов Слияние.</para>
+          <para>Метод <b>НайтиЗапись</b> выполняет только прямой поиск. Таким образом, если активная запись не является первой записью в источнике данных, а запись, для которой выполняется поиск, находится перед активной записью, метод <b>НайтиЗапись</b> не возвратит результаты. Чтобы убедиться в том, что поиск выполняется во всем источнике <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.ActiveRecord" /> данных, задайте для свойства значение <b>вдфирстрекорд</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FindRecord2000">
@@ -329,7 +315,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер первой записи данных, объединенных в операции слияния.</summary>
+        <summary>Возвращает или задает номер первой записи данных, которая будет объединена в операции слияния почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,7 +343,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает путь и имя исходного заголовка, подключенного к указанной основной документ.</summary>
+        <summary>Возвращает путь и имя файла источника заголовков, присоединенного к указанному основному документу слияния почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -385,12 +371,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdMailMergeDataSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, которое указывает, что способ исходный заголовок предоставляется для операции слияния почты.</summary>
+        <summary>Возвращает значение, указывающее способ поставки источника заголовков для операции слияния почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>HeaderSourceType</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeDataSource" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>хеадерсаурцетипе</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeDataSource" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Included">
@@ -419,13 +403,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если запись входит в слияния почты.</summary>
+        <summary><b>Значение true</b> , если запись включена в слияние почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllIncludedFlags(System.Boolean)" /> метод, чтобы включить или исключить все записи в источнике данных.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllIncludedFlags(System.Boolean)" /> метод, чтобы включить или исключить все записи в источнике данных слияния.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InvalidAddress">
@@ -454,13 +435,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true</b> для Microsoft Word отметить записи в источнике данных, если оно содержит недопустимые данные в поле адрес.</summary>
+        <summary><b>True</b> для Microsoft Word, чтобы пометить запись в источнике данных слияния, если она содержит недопустимые данные в поле адреса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllErrorFlags(System.Boolean,System.String)" /> метод для установки обоих <b>InvalidAddress</b> и <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidComments" /> свойства для всех записей в источнике данных.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllErrorFlags(System.Boolean,System.String)" /> метод, чтобы задать как <b>инвалидаддресс</b> , так <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidComments" /> и свойства для всех записей в источнике данных.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InvalidComments">
@@ -489,12 +467,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> свойство имеет <b>значение True</b>, возвращает или задает <b>строку</b> , которая содержит описание ошибки, недопустимый адрес.</summary>
+        <summary>Если <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> свойство имеет <b>значение true</b>, Возвращает или задает <b>строку</b> , которая описывает недопустимую ошибку адреса.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllErrorFlags(System.Boolean,System.String)" /> метод, позволяющий настраивать <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> и <b>InvalidComments</b> свойства для всех записей в источнике данных.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.MailMergeDataSource.SetAllErrorFlags(System.Boolean,System.String)" /> метод, чтобы задать свойства <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> и и <b>инвалидкомментс</b> для всех записей в источнике данных.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LastRecord">
@@ -523,7 +499,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер последней записи данных, объединенных в операции слияния.</summary>
+        <summary>Возвращает или задает номер последней записи данных для слияния в операции слияния почты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -551,7 +527,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.MappedDataFields</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MappedDataFields" /> объект, представляющий поля сопоставленные данные, доступные в Microsoft Word.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.MappedDataFields" /> объект, представляющий сопоставленные поля данных, доступные в Microsoft Word.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -607,7 +583,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -638,7 +614,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строки запроса (инструкция SQL), используемое для извлечения подмножества данных в источнике данных.</summary>
+        <summary>Возвращает или задает строку запроса (инструкцию SQL), используемую для получения подмножества данных в источнике данных слияния.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -666,12 +642,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое число</b> , представляющее количество записей в источнике данных.</summary>
+        <summary>Возвращает <b>целое</b> число, представляющее количество записей в источнике данных.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если Microsoft Word не может определить число записей в источнике данных, свойство <b>RecordCount</b> возвращает значение -1.</para>
-          <para />
-        </remarks>
+        <remarks><para>Если Microsoft Word не может определить число записей в источнике данных, свойство <b>RecordCount</b> возвратит значение – 1.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetAllErrorFlags">
@@ -698,14 +672,11 @@
         <Parameter Name="InvalidComment" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Invalid">Требуется <b>Boolean</b>. <b>Значение true,</b> помечает все записи в источнике данных слияния почты как недопустимый.</param>
-        <param name="InvalidComment">
-          <b>Строковое значение.</b> Текст с описанием недопустимый параметр.</param>
-        <summary>Помечает все записи в источнике данных, содержащее недопустимые данные в поле адрес.</summary>
-        <remarks>
-          <para>Отдельно можно пометить записей источника данных, содержащих недопустимые данные в поле адреса с помощью <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> и <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidComments" /> свойства.</para>
-          <para />
-        </remarks>
+        <param name="Invalid">Обязательный атрибут типа <b>Boolean</b>. <b>True</b> помечает все записи в источнике данных как недопустимые.</param>
+        <param name="InvalidComment">Обязательный атрибут типа <b>String</b>. Текст, описывающий недопустимый параметр.</param>
+        <summary>Помечает все записи в источнике данных слияния как содержащие недопустимые данные в поле адреса.</summary>
+        <remarks><para>Можно отдельно отметить записи источника данных, содержащие недопустимые данные, в поле адреса с помощью <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidAddress" /> свойств <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.InvalidComments" /> и.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetAllIncludedFlags">
@@ -731,13 +702,10 @@
         <Parameter Name="Included" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Included">Требуется <b>Boolean</b>. <b>Значение true,</b> Чтобы включить все записи источника данных при слиянии. <b>Значение false,</b> чтобы исключить все записи источника данных из слияния почты.</param>
-        <summary>
-          <b>Значение true,</b> Чтобы включить все записи источника данных при слиянии.</summary>
-        <remarks>
-          <para>Можно задать отдельные записи в источник данных, чтобы быть включены или исключены из слияния почты с помощью <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.Included" /> свойство.</para>
-          <para />
-        </remarks>
+        <param name="Included">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы включить все записи источника данных в слияние почты. <b>Значение false</b> , чтобы исключить все записи источника данных из слияния.</param>
+        <summary><b>Значение true</b> , чтобы включить все записи источника данных в слияние почты.</summary>
+        <remarks><para>Вы можете указать отдельные записи в источнике данных для включения в слияние или исключения из него с помощью <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.Included" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TableName">
@@ -763,7 +731,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> с SQL-запрос, используемый для извлечения записей на основе данных источника файла, вложенного в документ слияния почты. Может быть пустым, если имя таблицы неизвестна или не применим к текущему источнику данных.</summary>
+        <summary>Возвращает <b>строку</b> с ЗАПРОСом SQL, используемым для получения записей из файла источника данных, вложенного в документ слияния почты. Может быть пустым, если имя таблицы неизвестно или неприменимо к текущему источнику данных.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -791,12 +759,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdMailMergeDataSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип источника данных.</summary>
+        <summary>Возвращает тип источника данных слияния почты.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeDataSource" /> константы.</para>
-          <para />
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdMailMergeDataSource" /> констант.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

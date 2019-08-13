@@ -1,13 +1,5 @@
 <Type Name="DiagramNodeChildren" FullName="Microsoft.Office.Interop.Word.DiagramNodeChildren">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4320acfa18b50f692a11a011ff3c369f44d39933" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672811" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DiagramNodeChildren : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e509f1a815f12770b760243945da953cde10fa51" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147090" /></Metadata><TypeSignature Language="C#" Value="public interface DiagramNodeChildren : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DiagramNodeChildren implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DiagramNodeChildren" />
   <TypeSignature Language="VB.NET" Value="Public Interface DiagramNodeChildren&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция объектов <b>DiagramNode</b> , представляющий дочерние узлы в схеме.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Children" /> свойство для возвращения узлов в коллекции <b>DiagramNodeChildren</b> . Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.FirstChild" /> свойство для доступа к первого дочернего узла в схеме.</para>
-      <para />
-    </remarks>
+    <summary>Коллекция объектов <b>диаграмноде</b> , представляющих дочерние узлы в схеме.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Children" /> свойство, чтобы возвратить узлы в коллекции <b>диаграмнодечилдрен</b> . Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.FirstChild" /> свойство, чтобы получить доступ к первому дочернему узлу в схеме.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNode">
@@ -60,8 +50,8 @@
         <Parameter Name="NodeType" Type="Microsoft.Office.Core.MsoDiagramNodeType" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Расположение индекса where добавить новый узел схемы: 0 добавляет перед всех узлов, значение -1 добавляет после всех узлов и любых других <paramref name="Index" /> номер будет добавьте после этого узла в коллекции.</param>
-        <param name="NodeType">Необязательные <see cref="T:Microsoft.Office.Core.MsoDiagramNodeType" />. Указывает тип узла.</param>
+        <param name="Index">Необязательный <b>объект</b>. Расположение индекса, в котором добавляется новый узел диаграммы: 0 добавляет перед всеми узлами,-1 добавляет после всех узлов, а любое другое <paramref name="Index" /> число добавляет после этого узла в коллекцию.</param>
+        <param name="NodeType">Необязательный <see cref="T:Microsoft.Office.Core.MsoDiagramNodeType" />параметр. Указывает тип узла.</param>
         <summary>Добавляет <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект в коллекцию дочерних узлов схемы.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -118,7 +108,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в указанном семействе сайтов.</summary>
+        <summary>Возвращает количество элементов в указанной коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,11 +136,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Например если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Например, если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FirstChild">
@@ -178,10 +168,8 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий первый дочерний узел родительского узла.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.LastChild" /> свойство для доступа к последнего дочернего узла. Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство для доступа к родительского узла в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.LastChild" /> свойство, чтобы получить доступ к последнему дочернему узлу. Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство, чтобы получить доступ к родительскому узлу в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -242,9 +230,8 @@
         <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Index">
-          <b>Объект</b> , указывающий, порядковый номер или строка, представляющая имя отдельного объекта.</param>
-        <summary>Возвращает отдельный объект в коллекцию.</summary>
+        <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
+        <summary>Возвращает отдельный объект в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -272,12 +259,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.DiagramNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объекта, представляющего последнего дочернего узла родительского узла.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> объект, представляющий последний дочерний узел родительского узла.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.FirstChild" /> свойство для доступа к первого дочернего узла в схеме. Использование <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство для доступа к родительского узла в схеме.</para>
-          <para />
-        </remarks>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNodeChildren.FirstChild" /> свойство, чтобы получить доступ к первому дочернему узлу в схеме. Используйте <see cref="P:Microsoft.Office.Interop.Word.DiagramNode.Root" /> свойство, чтобы получить доступ к родительскому узлу в схеме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -303,7 +288,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -329,11 +314,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор всех фигур в основную статью, полотно или в верхних и нижних колонтитулов документа.</summary>
-        <remarks>
-          <para>Этот метод не выделяет <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объектов.</para>
-          <para />
-        </remarks>
+        <summary>Выделяет все фигуры в основной статье, на холсте или в верхних и нижних колонтитулах документа.</summary>
+        <remarks><para>Этот метод не выбирает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объекты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

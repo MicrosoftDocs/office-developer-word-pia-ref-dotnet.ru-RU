@@ -1,13 +1,5 @@
 <Type Name="DropCap" FullName="Microsoft.Office.Interop.Word.DropCap">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1cc16e8c2531497500ae1f66f8f7e1d16b06aef7" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673158" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DropCap" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8be543692f3e365608c2ab5b4f4acebd99f5992b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146908" /></Metadata><TypeSignature Language="C#" Value="public interface DropCap" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DropCap" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DropCap" />
   <TypeSignature Language="VB.NET" Value="Public Interface DropCap" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет буквицы в начале абзаца.</summary>
-    <remarks>
-      <para>Нет <b>DropCaps</b> семейства сайтов; Каждый <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объект содержит только один объект <b>буквицу</b> .</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Word.Paragraph.DropCap" /> свойство возвращает объект <b>буквицу</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет отброшенную прописную букву в начале абзаца.</summary>
+    <remarks><para>Коллекция <b>дропкапс</b> отсутствует; Каждый <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объект содержит только один объект <b>DropCap</b> .</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Paragraph.DropCap" /> свойство, чтобы возвратить объект <b>DropCap</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -83,7 +73,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет форматирование буквицы.</summary>
+        <summary>Удаляет форматирование, добавленное в прописную букву.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -110,11 +100,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DistanceFromText">
@@ -143,7 +133,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние между Буквицы и абзац текста (в точках).</summary>
+        <summary>Возвращает или задает расстояние между отброшенными заглавной буквой и текстом абзаца (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -169,7 +159,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Форматирует первым символом в указанном абзаца в виде буквицы.</summary>
+        <summary>Форматирует первый символ в заданном абзаце в виде отброшенной заглавной буквы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -199,7 +189,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя шрифта для буквицы.</summary>
+        <summary>Возвращает или задает имя шрифта, для которого была пропущена прописная буква.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +220,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает высоту (в строках) указанного буквицы.</summary>
+        <summary>Возвращает или задает высоту (в строках) заданной отбрасывания заглавной буквы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,7 +248,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -289,7 +279,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdDropPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию по буквицы.</summary>
+        <summary>Возвращает или задает положение отброшенной заглавной буквы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

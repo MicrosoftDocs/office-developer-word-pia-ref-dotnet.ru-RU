@@ -1,13 +1,5 @@
 <Type Name="Conflicts" FullName="Microsoft.Office.Interop.Word.Conflicts">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8acd040a46e32fdf2f9818dcf2eaace7cc901801" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672683" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Conflicts : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="51c75eb68c226ad55f02f5d6aaf9e02311ccbc95" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147246" /></Metadata><TypeSignature Language="C#" Value="public interface Conflicts : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Conflicts implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Conflicts" />
   <TypeSignature Language="VB.NET" Value="Public Interface Conflicts&#xA;Implements IEnumerable" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекты, которые представляют конфликтов в документе. Тип <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> заданного объекта с <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> перечисления.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Word.CoAuthoring.Conflicts" /> свойство для возвращения коллекции <b>конфликтов</b> для документа. Используйте <b>конфликтов</b>(<paramref name="Index" />), где <paramref name="Index" /> — номер индекса конфликта, чтобы возвратить объект <b>конфликта</b> .</para>
-      <para />
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объектов, представляющих конфликты в документе. Тип <see cref="T:Microsoft.Office.Interop.Word.Conflict" /> объекта задается <see cref="T:Microsoft.Office.Interop.Word.WdRevisionType" /> перечислением.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word.CoAuthoring.Conflicts" /> свойство, чтобы возвратить коллекцию <b>конфликтов</b> для документа. Используйте <b>конфликты</b>(<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса конфликта, чтобы вернуть один объект <b>конфликта</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AcceptAll">
@@ -58,7 +48,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Принимает все изменения конфликта, удаляется конфликтов и объединяет изменения в сервере копию документа.</summary>
+        <summary>Принимает все изменения конфликтов, удаляет конфликты и объединяет изменения в копии документа на сервере.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,12 +76,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -117,12 +104,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число элементов в <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> семейства сайтов.</summary>
-        <value>Количество элементов в <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> семейства сайтов.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> коллекции.</summary>
+        <value>Число элементов в <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -148,14 +133,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>: это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание!</b>это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -186,7 +169,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -216,9 +199,9 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Отдельный объект которого требуется получить.</param>
-        <summary>Возвращает объект отдельных <b>конфликтов</b> в семействе сайтов.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Conflict" />.</value>
+        <param name="Index">Возвращаемый отдельный объект.</param>
+        <summary>Возвращает отдельный объект <b>конфликтов</b> в коллекции.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Conflict" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -245,9 +228,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.Conflicts" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

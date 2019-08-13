@@ -1,13 +1,5 @@
 <Type Name="CoAuthUpdate" FullName="Microsoft.Office.Interop.Word.CoAuthUpdate">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8afbe4cb2bb4043cbb3dcabbe8ea7903fb2ee981" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20673830" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CoAuthUpdate" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cb489ae56e777a8913181f8d5be2c8d09a728cb2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142231" /></Metadata><TypeSignature Language="C#" Value="public interface CoAuthUpdate" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CoAuthUpdate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CoAuthUpdate" />
   <TypeSignature Language="VB.NET" Value="Public Interface CoAuthUpdate" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет текст, которая была обновлена с совместное редактирование.</summary>
-    <remarks>
-      <para>При редактировании документа с поддержкой совместной работы одновременно, изменения, внесенные с одной совместно редактировать доступны в авторами совместного как обновлений. Объект <b>CoAuthUpdate</b> представлены каждого изменения. Когда совместное редактирование сохраняет свою версию документа, изменения, внесенные другими авторами совместного объединяются в версии данного ко автора документа. До момента, когда совместное редактирование сохраняет версию документа, изменения, внесенные другими авторами совместного доступны в виде обновлений.</para>
-      <para>, Например когда двумя пользователями редактировании документа, который изначально содержит один абзац с текстом «Рыжая лиса». При первом совместное редактирование редактирует предложение для чтения, «выпей перескакивает через журнал» и затем сохраняет документ, слова «быстрый» и «через журнал» доступны для второй совместное редактирование как два обновляется в документ. Эти два обновления представлены в объектной модели Microsoft Word 2010 как два объекта <b>CoAuthUpdate</b> . При второй совместное редактирование сохраняет документ, обновлений из первого совместное редактирование объединяются в документе.</para>
-      <para />
-    </remarks>
+    <summary>Представляет диапазон текста, обновленный с помощью совместного редактирования.</summary>
+    <remarks><para>При одновременном редактировании документа с включенным совместным редактированием изменения, внесенные одним автором, доступны другим авторам как обновления. Каждое изменение представлено одним объектом <b>CoAuthUpdate</b> . Когда совместное редактирование сохраняет свою версию документа, изменения, внесенные другими авторами, будут объединены с этой версией документа совместного редактирования. До тех пор, пока автор сохраняет версию документа, изменения, внесенные другими авторами, становятся доступными в качестве обновлений.</para>
+      <para>Например, когда два пользователя редактируют документ, который изначально содержит один абзац с текстом "коричневая Fox". Если первый совместный автор редактирует предложение Read, "Быстрая Браун Fox перемещается по журналу", а затем сохраняет документ, слова "Quick" и "in log" доступны второму соавторам как два обновления документа. Эти два обновления представлены в объектной модели Microsoft Word 2010 как два объекта <b>CoAuthUpdate</b> . Когда второй совместное редактирование сохраняет документ, обновления из первого совместного автора сливаются с документом.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -58,12 +48,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Application" /> Объект, представляющий приложение Microsoft Word.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -89,15 +76,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
-        <value>32-разрядное целое число, обозначающее приложение, в котором был создан указанный объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>. Если объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». В основном это свойство предназначено для использования на компьютерах Macintosh Apple, где каждое приложение имеет код создателя четырех символов. Например, Word содержит код создателя MSWD.</para>
+        <summary>Получает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
+        <value>32 — разрядное целое число, указывающее приложение, в котором был создан указанный объект.</value>
+        <remarks><para>Доступно только для <b></b>чтения. Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, которое представляет строку "МСВД". Это свойство изначально предназначено для использования в Apple Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Word есть код создателя МСВД.</para>
           <para>
-            <b>Осторожность</b>:</para>
-          <para>Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para>
-          <para />
-        </remarks>
+            <b>Внимание</b>: </para>
+          <para>Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -123,9 +108,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:System.Object" /> , который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</summary>
-        <value>
-          <see cref="T:System.Object" /> , Который представляет родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</value>
+        <summary>Получает объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</summary>
+        <value>Объект <see cref="T:System.Object" /> , представляющий родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.CoAuthUpdate" /> объекта.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,12 +136,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</summary>
-        <value>A <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащиеся в указанном объекте.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para />
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном объекте.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Word.Range" /> Объект, представляющий часть документа, содержащуюся в указанном объекте.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

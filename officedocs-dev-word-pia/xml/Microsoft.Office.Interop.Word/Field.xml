@@ -1,13 +1,5 @@
 <Type Name="Field" FullName="Microsoft.Office.Interop.Word.Field">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5633f7ec58f8562a12268258d5304e52105599f0" />
-    <Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
-    <Meta Name="ms.locfileid" Value="20672689" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Field" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="eb89b13b172f6bebe2a7acf4902ad5ae662af0d8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146859" /></Metadata><TypeSignature Language="C#" Value="public interface Field" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Field" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Field" />
   <TypeSignature Language="VB.NET" Value="Public Interface Field" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет поле. Объект <b>поля</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Word.Fields" /> семейства сайтов. Коллекции <b>полей</b> представляет поля выбора, диапазон или документа.</summary>
-    <remarks>
-      <para>Использование <b>полей</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса для возврата объекта <b>поля</b> . Номер индекса представляет позицию поля выбора, диапазон или документов.</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Word.Fields.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить поля в коллекцию <b>полей</b> .</para>
-      <para />
-    </remarks>
+    <summary>Представляет поле. Объект <b>field</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Fields" /> коллекции. Коллекция <b>Fields</b> представляет поля в выделенном фрагменте, диапазоне или документе.</summary>
+    <remarks><para>Используйте <b></b>Fields<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>field</b> . Номер индекса представляет положение поля в выделенном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Fields.Add(Microsoft.Office.Interop.Word.Range,System.Object@,System.Object@,System.Object@)" /> метод, чтобы добавить поле в коллекцию <b>Fields</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -88,12 +78,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, который представляет код поля.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий код поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Код поля — это все, что заключенные знаками поля ({}), включая пространство начальные и конечные пробелы. Можно получить доступ к код поля без изменения представления из значений полей.</para>
-          <para />
-        </remarks>
+        <remarks><para>Код поля — это все, что заключено в символы поля ({}), включая начальные и конечные пробелы. Вы можете получить доступ к коду поля, не изменяя представление "результаты поля".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Copy">
@@ -144,11 +132,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект.</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанный объект был создан в Microsoft Word, данное свойство возвращает шестнадцатеричное число 4 d 535744, который представляет строку «MSWD». Это значение также может быть представлен константу <b>wdCreatorCode</b>.</para> Свойство 
-          <para><b>создателя</b> в основном предназначено для использования на компьютерах Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Word содержит код создателя MSWD. Для получения дополнительных сведений об этом свойстве обратитесь к Справочник по языку справки, включенные в состав Microsoft Office Macintosh выпуск.</para><para /></remarks>
+        <remarks><para>Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД". Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</para>
+          <para>Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -204,10 +192,8 @@
       <Docs>
         <summary>Возвращает или задает данные в поле ADDIN.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данные не отображается в поле код или результатов; она доступна только возвращает значение свойства <b>данных</b> . Если поле не является полем ADDIN, это свойство приведет к ошибке.</para>
-          <para />
-        </remarks>
+        <remarks><para>Данные не отображаются в коде поля или результат; Он доступен только в том случае, если возвращается значение свойства <b>Data</b> . Если поле не является полем ADDIN, это свойство приведет к ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -256,11 +242,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Кнопка указанного поля.</summary>
-        <remarks>
-          <para>Если поле поля GOTOBUTTON, этот метод перемещает точку вставки в указанное место или выбирает указанной закладке. Если поле MACROBUTTON поля, этот метод запускает указанный макрос. Если поле является полем ГИПЕРССЫЛКИ, этот метод переходит в целевом расположении.</para>
-          <para />
-        </remarks>
+        <summary>Щелкает заданное поле.</summary>
+        <remarks><para>Если поле является полем ГОТОБУТТОН, этот метод перемещает точку вставки в указанное место или выбирает указанную закладку. Если поле является полем МАКРОБУТТОН, этот метод выполняет указанный макрос. Если поле является полем ГИПЕРССЫЛКи, этот метод переходит к целевому расположению.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -314,12 +298,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.InlineShape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображение, объект OLE или элемент управления ActiveX, который производится в результате поля INCLUDEPICTURE или EMBED.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.InlineShape" /> объект, представляющий изображение, объект OLE или элемент управления ActiveX, который является результатом использования поля ИНКЛУДЕПИКТУРЕ или embed.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Объект <b>InlineShape</b> рассматривается как символов и размещенный символов в строке текста.</para>
-          <para />
-        </remarks>
+        <remarks><para>Объект <b>InlineShape</b> обрабатывается как символ и размещается в виде символа в текстовой строке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Kind">
@@ -347,16 +329,16 @@
       <Docs>
         <summary>Возвращает тип ссылки для <see cref="T:Microsoft.Office.Interop.Word.Field" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Word.WdFieldKind" /> констант:</para>
+        <remarks><para>Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdFieldKind" /> констант:</para>
           <para>
-            <b>wdFieldKindCold</b> A поля, не имеющим результатов, например, запись индекса (XE), таблицы из содержимого запись (ТРАД.) или частное поле.</para>
+            <b>вдфиелдкиндколд</b> Поле, не имеющее результата, например, запись индекса (XE), элемент оглавления (TC) или личное поле.</para>
           <para>
-            <b>wdFieldKindHot</b> A, который автоматически обновляется каждый раз, оно будет отображаться каждый раз странице отформатирован, либо которого можно также вручную обновить (например, INCLUDEPICTURE или FORMDROPDOWN).</para>
+            <b>вдфиелдкиндхот</b> Поле, которое автоматически обновляется каждый раз при его отображении или при каждом переформатировании страницы, но которое также можно обновить вручную (например, ИНКЛУДЕПИКТУРЕ или ФОРМДРОПДОВН).</para>
           <para>
-            <b>wdFieldKindNone</b> недопустимое поле (например, пары символов поля ничего не внутри).</para> поле 
-            <b>wdFieldKindWarm</b> A 
-          <para>, который имеет результат и могут быть обновлены. Этот тип содержит поля, которые обновляются автоматически при изменении источника, а также поля, которые можно обновлять вручную (например, даты или INCLUDETEXT).</para><para /></remarks>
+            <b>вдфиелдкиндноне</b> Недопустимое поле (например, сочетание символов поля, не содержащие ничего).</para>
+          <para>
+            <b>вдфиелдкиндварм</b> Поле, которое может быть обновлено и имеет результат. Этот тип включает поля, автоматически обновляемые при изменении источника, а также поля, которые могут быть обновлены вручную (например, дата или INCLUDETEXT).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LinkFormat">
@@ -382,7 +364,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.LinkFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, представляющий параметры связи указанного поля, встроенная фигура или фигуры, связанной с файлом.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.LinkFormat" /> объект, представляющий параметры связи указанного поля, встроенной фигуры или фигуры, которые связаны с файлом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -413,12 +395,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если заблокированный указанного поля.</summary>
+        <summary>Определяет, заблокировано ли заданное поле.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если заблокированный указанного поля и <b>значение False</b> в противном случае. Если поле заблокирован, не удается обновить значения поля.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если заданное поле заблокировано, и <b>false</b> , если нет. Если поле заблокировано, результаты поля невозможно обновить.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Next">
@@ -472,7 +452,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.OLEFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE (отличного от компоновки) для указанного поля.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.OLEFormat" /> объект, представляющий характеристики OLE (Кроме связывания) для указанного поля.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -500,7 +480,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий родительский объект для указанного объекта.</summary>
+        <summary>Возвращает объект, представляющий родительский объект указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -559,12 +539,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий поле результатов.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий результат поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно получить доступ к значения поля без изменения представления из кодов полей. Использование <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойство для возврата текста из объекта <b>Range</b> .</para>
-          <para />
-        </remarks>
+        <remarks><para>Вы можете получить доступ к результату поля, не изменяя представление кодов полей. Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.Text" /> свойство для возврата текста из объекта <b>Range</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -589,10 +567,8 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks>
-          <para>После с помощью этого метода, с помощью <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> свойство для работы с выбранные элементы.</para>
-          <para />
-        </remarks>
+        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowCodes">
@@ -621,12 +597,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, если коды полей отображаются для указанного поля вместо значений полей.</summary>
+        <summary>Определяет, отображаются ли коды полей для указанного поля, а не для значений полей.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если коды полей отображаются для указанного поля вместо значений полей и <b>значение False</b> , если коды полей, не отображаются.</para>
-          <para />
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если коды полей отображаются для указанного поля, а не для результатов поля, и <b>false</b> , если коды полей не отображаются.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -654,10 +628,8 @@
       <Docs>
         <summary>Возвращает тип поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Динамический обмен данными (DDE) — это устаревшая технология, которая не является безопасной. По возможности используйте более безопасные альтернативы DDE.</para>
-          <para />
-        </remarks>
+        <remarks><para>Динамический обмен данными (DDE) — это устаревшая технология, не обеспечивающая надежную защиту. Если это возможно, используйте более безопасную альтернативу DDE.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Unlink">
@@ -681,11 +653,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Заменяет указанное поле его последний результат.</summary>
-        <remarks>
-          <para>Когда вы разорвать связь с полем, текущий результат преобразуется в текст или графику и уже не могут быть обновлены автоматически. Обратите внимание на то, что некоторые поля, например полями (запись в индекс) и поля SEQ (последовательность) — не могут быть разорваны.</para>
-          <para />
-        </remarks>
+        <summary>Заменяет указанное поле последним результатом.</summary>
+        <remarks><para>При разрыве связи с полем текущий результат преобразуется в текст или графику и больше не может обновляться автоматически. Обратите внимание, что некоторые поля, например поля XE (элемент оглавления) и SEQ (Sequence) Fields, не могут быть несвязанными.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Update">
@@ -709,7 +679,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет result объекта поля.</summary>
+        <summary>Обновляет результат объекта Field.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -735,11 +705,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сохраняет изменения, внесенные в результатах поле INCLUDETEXT обратно в исходный документ.</summary>
-        <remarks>
-          <para>Исходный документ должен быть в формате документа Microsoft Word.</para>
-          <para />
-        </remarks>
+        <summary>Сохраняет изменения, внесенные в результаты поля INCLUDETEXT, обратно в исходный документ.</summary>
+        <remarks><para>Исходный документ должен быть отформатирован в виде документа Microsoft Word.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>
