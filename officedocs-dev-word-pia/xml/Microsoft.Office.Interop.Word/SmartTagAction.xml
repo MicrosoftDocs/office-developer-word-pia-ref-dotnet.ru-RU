@@ -1,9 +1,10 @@
 <Type Name="SmartTagAction" FullName="Microsoft.Office.Interop.Word.SmartTagAction">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ec49e7fe750928cbb025ed46930bedb2516ad95e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143996" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagAction" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ee2d08bbd1638fa6eeb5b1f00a6869d0f4abb9c0" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43926327" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTagAction" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTagAction" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SmartTagAction" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTagAction" />
   <TypeSignature Language="C++ CLI" Value="public interface class SmartTagAction" />
+  <TypeSignature Language="F#" Value="type SmartTagAction = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -18,14 +19,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="9344e-101">Представляет одно действие для смарт-тега.</span><span class="sxs-lookup"><span data-stu-id="9344e-101">Represents a single action for a smart tag.</span></span></summary>
-    <remarks><para><span data-ttu-id="9344e-102">Действия смарт-тегов — это процессы, которые запрограммированы в смарт-тегах, которые позволяют пользователям выполнять определенные функции, связанные с смарт-тегом.</span><span class="sxs-lookup"><span data-stu-id="9344e-102">Smart tag actions are processes that are programmed into smart tags that allow users to perform certain functions related to the smart tag.</span></span> <span data-ttu-id="9344e-103">Например, одному действию для смарт-тега может быть доступ к веб-сайту, а другое действие вставляет сведения о контакте в Microsoft Outlook, в то время как другие отображают карты и направления проезда.</span><span class="sxs-lookup"><span data-stu-id="9344e-103">For example, one action for a smart tag might be to access a Web site, while another action inserts contact information into Microsoft Outlook, while yet another displays a map and driving directions.</span></span></para>
-      <para><span data-ttu-id="9344e-104">Действия смарт-тегов также связаны с действиями, встроенными в смарт-документы, и элементами управления в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-104">Smart tag actions also relate to actions built into smart documents and to the controls in the Document Actions task pane.</span></span> <span data-ttu-id="9344e-105">Например, элемент управления TextBox может отображаться в области задач для смарт-документа, который выполняет действие, когда пользователь изменяет содержимое текстового поля.</span><span class="sxs-lookup"><span data-stu-id="9344e-105">For example, you might have a textbox control displayed in the task pane for a smart document that performs an action when a user changes the contents of the text box.</span></span></para>
-      <para><span data-ttu-id="9344e-106">
-        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекты связаны в том, что каждый элемент, распознаваемый компонентом смарт-тега <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> , является объектом.</span><span class="sxs-lookup"><span data-stu-id="9344e-106">
-        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>, and <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> objects are related in that each item that a smart tag component recognizes is a <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> object.</span></span> <span data-ttu-id="9344e-107">Например, "City" в компоненте "адрес смарт-тега" — это определенный объект <b>smartTagType</b> .</span><span class="sxs-lookup"><span data-stu-id="9344e-107">For example, "city" in the Address smart tag component is a specific <b>SmartTagType</b> object.</span></span> <span data-ttu-id="9344e-108">Тип смарт-тега City содержит связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тега, который распознает смарт-теги типа "City" в документах) и объекты <b>SmartTagAction</b> (часть компонента смарт-тега, предоставляющая действия относится к определенному типу смарт-тега, который может включать Поиск известного города в Microsoft MapPoint в MSN.</span><span class="sxs-lookup"><span data-stu-id="9344e-108">The city smart tag type has related <b>SmartTagRecognizer</b> objects (the part of the smart tag component that recognizes smart tags of type "city" in documents) and <b>SmartTagAction</b> objects (the part of the smart tag component that provides the actions related to the specific smart tag type, which may include looking up a recognized city in Microsoft MapPoint on MSN).</span></span> <span data-ttu-id="9344e-109">Отметьте, что распознаватель выполняет маркировку, обработчик действий обеспечивает функцию конечного пользователя, а то, что объединяет их, это тип смарт-тега, над которым они работают.</span><span class="sxs-lookup"><span data-stu-id="9344e-109">Put simply, the recognizer does the labeling, the action handler provides end-user functionality, and what ties them together is the type of smart tag they work on.</span></span></para>
-      <para><span data-ttu-id="9344e-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> метод, чтобы возвратить отдельный объект <b>SmartTagAction</b> из <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="9344e-110">Use the <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> method to return an individual <b>SmartTagAction</b> object from a <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> collection.</span></span></para>
-      <para><span data-ttu-id="9344e-111">Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> свойство, чтобы определить тип элемента управления, связанного с объектом <b>SmartTagAction</b> .</span><span class="sxs-lookup"><span data-stu-id="9344e-111">Use the <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> property to determine the type of control associated with a <b>SmartTagAction</b> object.</span></span></para>
+    <summary><span data-ttu-id="c05b2-101">Представляет одно действие для смарт-тега.</span><span class="sxs-lookup"><span data-stu-id="c05b2-101">Represents a single action for a smart tag.</span></span></summary>
+    <remarks><para><span data-ttu-id="c05b2-102">Действия смарт-тегов — это процессы, которые запрограммированы в смарт-тегах, которые позволяют пользователям выполнять определенные функции, связанные с смарт-тегом.</span><span class="sxs-lookup"><span data-stu-id="c05b2-102">Smart tag actions are processes that are programmed into smart tags that allow users to perform certain functions related to the smart tag.</span></span> <span data-ttu-id="c05b2-103">Например, одному действию для смарт-тега может быть доступ к веб-сайту, а другое действие вставляет сведения о контакте в Microsoft Outlook, в то время как другие отображают карты и направления проезда.</span><span class="sxs-lookup"><span data-stu-id="c05b2-103">For example, one action for a smart tag might be to access a Web site, while another action inserts contact information into Microsoft Outlook, while yet another displays a map and driving directions.</span></span></para>
+      <para><span data-ttu-id="c05b2-104">Действия смарт-тегов также связаны с действиями, встроенными в смарт-документы, и элементами управления в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-104">Smart tag actions also relate to actions built into smart documents and to the controls in the Document Actions task pane.</span></span> <span data-ttu-id="c05b2-105">Например, элемент управления TextBox может отображаться в области задач для смарт-документа, который выполняет действие, когда пользователь изменяет содержимое текстового поля.</span><span class="sxs-lookup"><span data-stu-id="c05b2-105">For example, you might have a textbox control displayed in the task pane for a smart document that performs an action when a user changes the contents of the text box.</span></span></para>
+      <para><span data-ttu-id="c05b2-106">
+        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>и <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объекты связаны в том, что каждый элемент, распознаваемый компонентом смарт-тега, является <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> объектом.</span><span class="sxs-lookup"><span data-stu-id="c05b2-106">
+        <see cref="T:Microsoft.Office.Interop.Word.SmartTagRecognizer" />, <b>SmartTagAction</b>, and <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> objects are related in that each item that a smart tag component recognizes is a <see cref="T:Microsoft.Office.Interop.Word.SmartTagType" /> object.</span></span> <span data-ttu-id="c05b2-107">Например, "City" в компоненте "адрес смарт-тега" — это определенный объект <b>smartTagType</b> .</span><span class="sxs-lookup"><span data-stu-id="c05b2-107">For example, "city" in the Address smart tag component is a specific <b>SmartTagType</b> object.</span></span> <span data-ttu-id="c05b2-108">Тип смарт-тега City содержит связанные объекты <b>SmartTagRecognizer</b> (часть компонента смарт-тега, который распознает смарт-теги типа "City" в документах) и объекты <b>SmartTagAction</b> (часть компонента смарт-тега, которая предоставляет действия, связанные с конкретным типом смарт-тега, который может включать Поиск известного города в Microsoft MapPoint в MSN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-108">The city smart tag type has related <b>SmartTagRecognizer</b> objects (the part of the smart tag component that recognizes smart tags of type "city" in documents) and <b>SmartTagAction</b> objects (the part of the smart tag component that provides the actions related to the specific smart tag type, which may include looking up a recognized city in Microsoft MapPoint on MSN).</span></span> <span data-ttu-id="c05b2-109">Отметьте, что распознаватель выполняет маркировку, обработчик действий обеспечивает функцию конечного пользователя, а то, что объединяет их, это тип смарт-тега, над которым они работают.</span><span class="sxs-lookup"><span data-stu-id="c05b2-109">Put simply, the recognizer does the labeling, the action handler provides end-user functionality, and what ties them together is the type of smart tag they work on.</span></span></para>
+      <para><span data-ttu-id="c05b2-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> метод, чтобы возвратить отдельный объект <b>SmartTagAction</b> из <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="c05b2-110">Use the <see cref="P:Microsoft.Office.Interop.Word.SmartTagActions.Item(System.Object@)" /> method to return an individual <b>SmartTagAction</b> object from a <see cref="T:Microsoft.Office.Interop.Word.SmartTagActions" /> collection.</span></span></para>
+      <para><span data-ttu-id="c05b2-111">Используйте <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> свойство, чтобы определить тип элемента управления, связанного с объектом <b>SmartTagAction</b> .</span><span class="sxs-lookup"><span data-stu-id="c05b2-111">Use the <see cref="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" /> property to determine the type of control associated with a <b>SmartTagAction</b> object.</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.ActiveXControl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveXControl As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ActiveXControl { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveXControl : obj" Usage="Microsoft.Office.Interop.Word.SmartTagAction.ActiveXControl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -55,9 +57,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-112">Возвращает <b>объект</b> , представляющий элемент управления ActiveX, отображаемый в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-112">Returns an <b>Object</b> that represents an ActiveX control displayed in the Document Actions task pane.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-112">Возвращает <b>объект</b> , представляющий элемент управления ActiveX, отображаемый в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-112">Returns an <b>Object</b> that represents an ActiveX control displayed in the Document Actions task pane.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-113">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-113">For more information on smart documents, see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-113">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-113">For more information on smart documents, see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.SmartTagAction.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -87,7 +90,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-114">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="9344e-114">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-114">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="c05b2-114">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -98,6 +101,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.CheckboxState" />
       <MemberSignature Language="VB.NET" Value="Public Property CheckboxState As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CheckboxState { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.CheckboxState : bool with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.CheckboxState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -124,10 +128,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-115">Возвращает или задает <b>логическое значение</b> , указывающее, выбран ли флажок в смарт-документе.</span><span class="sxs-lookup"><span data-stu-id="9344e-115">Returns or sets a <b>Boolean</b> that indicates whether a check box in a smart document is selected.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-115">Возвращает или задает <b>логическое значение</b> , указывающее, выбран ли флажок в смарт-документе.</span><span class="sxs-lookup"><span data-stu-id="c05b2-115">Returns or sets a <b>Boolean</b> that indicates whether a check box in a smart document is selected.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-116">Это свойство возвращает <b>значение true</b> , если установленный флажок установлен, и <b>значение false</b> , если оно снято.</span><span class="sxs-lookup"><span data-stu-id="9344e-116">This property returns <b>True</b> if the selected check box is marked, and <b>False</b> if it is cleared.</span></span></para>
-          <para><span data-ttu-id="9344e-117">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-117">For more information on smart documents, see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-116">Это свойство возвращает <b>значение true</b> , если установленный флажок установлен, и <b>значение false</b> , если оно снято.</span><span class="sxs-lookup"><span data-stu-id="c05b2-116">This property returns <b>True</b> if the selected check box is marked, and <b>False</b> if it is cleared.</span></span></para>
+          <para><span data-ttu-id="c05b2-117">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения для смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-117">For more information on smart documents, see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -137,6 +141,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.SmartTagAction.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -157,10 +162,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-118">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="9344e-118">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-118">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="c05b2-118">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-119">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="9344e-119">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="9344e-120">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="9344e-120">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="9344e-121">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="9344e-121">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="9344e-122">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="9344e-122">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="9344e-123">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="9344e-123">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-119">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="c05b2-119">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="c05b2-120">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="c05b2-120">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="c05b2-121">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="c05b2-121">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="c05b2-122">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="c05b2-122">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="c05b2-123">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="c05b2-123">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -170,6 +175,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SmartTagAction.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Sub Execute ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Execute();" />
+      <MemberSignature Language="F#" Value="abstract member Execute : unit -&gt; unit" Usage="smartTagAction.Execute " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -188,7 +194,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="9344e-124">Выполняет заданное действие смарт-тега.</span><span class="sxs-lookup"><span data-stu-id="9344e-124">Performs the specified smart tag action.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-124">Выполняет заданное действие смарт-тега.</span><span class="sxs-lookup"><span data-stu-id="c05b2-124">Performs the specified smart tag action.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,6 +204,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.ExpandDocumentFragment" />
       <MemberSignature Language="VB.NET" Value="Public Property ExpandDocumentFragment As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ExpandDocumentFragment { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpandDocumentFragment : bool with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.ExpandDocumentFragment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -224,10 +231,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-125">Возвращает или задает <b>логическое значение</b> , которое определяет, развернут или свернут указанный элемент управления фрагмента документа в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-125">Returns or sets a <b>Boolean</b> that represents whether the specified document fragment control is expanded or collapsed in the Document Actions task pane.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-125">Возвращает или задает <b>логическое значение</b> , которое определяет, развернут или свернут указанный элемент управления фрагмента документа в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-125">Returns or sets a <b>Boolean</b> that represents whether the specified document fragment control is expanded or collapsed in the Document Actions task pane.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-126">Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="9344e-126">This property returns <b>True</b> to indicate that the control is expanded, and <b>False</b> to indicate that the control is collapsed.</span></span></para>
-          <para><span data-ttu-id="9344e-127">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-127">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-126">Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="c05b2-126">This property returns <b>True</b> to indicate that the control is expanded, and <b>False</b> to indicate that the control is collapsed.</span></span></para>
+          <para><span data-ttu-id="c05b2-127">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-127">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -237,6 +244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.ExpandHelp" />
       <MemberSignature Language="VB.NET" Value="Public Property ExpandHelp As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ExpandHelp { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpandHelp : bool with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.ExpandHelp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -263,10 +271,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-128">Возвращает или задает <b>логическое значение</b> , указывающее, развернут или свернут указанный элемент управления "Справка по смарт-документам" в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-128">Returns or sets a <b>Boolean</b> that represents whether the specified smart document Help text control is expanded or collapsed in the Document Actions task pane.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-128">Возвращает или задает <b>логическое значение</b> , указывающее, развернут или свернут указанный элемент управления "Справка по смарт-документам" в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-128">Returns or sets a <b>Boolean</b> that represents whether the specified smart document Help text control is expanded or collapsed in the Document Actions task pane.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-129">Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="9344e-129">This property returns <b>True</b> to indicate that the control is expanded, and <b>False</b> to indicate the control is collapsed.</span></span></para>
-          <para><span data-ttu-id="9344e-130">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-130">For more information on smart documents, refer to the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-129">Это свойство возвращает <b>значение true</b> , указывающее, что элемент управления развернут, и <b>false</b> , чтобы показать, что элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="c05b2-129">This property returns <b>True</b> to indicate that the control is expanded, and <b>False</b> to indicate the control is collapsed.</span></span></para>
+          <para><span data-ttu-id="c05b2-130">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-130">For more information on smart documents, refer to the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -276,6 +284,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.ListSelection" />
       <MemberSignature Language="VB.NET" Value="Public Property ListSelection As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ListSelection { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ListSelection : int with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.ListSelection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -302,9 +311,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-131">Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в элементе управления "список" смарт-документа.</span><span class="sxs-lookup"><span data-stu-id="9344e-131">Returns or sets an <b>Integer</b> that represents the index number of the selected item in a smart document list box control.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-131">Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в элементе управления "список" смарт-документа.</span><span class="sxs-lookup"><span data-stu-id="c05b2-131">Returns or sets an <b>Integer</b> that represents the index number of the selected item in a smart document list box control.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-132">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-132">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-132">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-132">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -314,6 +323,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.Name" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.SmartTagAction.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -334,7 +344,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-133">Возвращает имя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="9344e-133">Returns the name of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-133">Возвращает имя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="c05b2-133">Returns the name of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -345,6 +355,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.SmartTagAction.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -365,7 +376,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-134">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="9344e-134">Returns an object that represents the parent object of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-134">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="c05b2-134">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -376,6 +387,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.PresentInPane" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresentInPane As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PresentInPane { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PresentInPane : bool" Usage="Microsoft.Office.Interop.Word.SmartTagAction.PresentInPane" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -396,7 +408,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-135">Возвращает <b>логическое значение</b> , которое указывает, отображается ли в данный момент элемент управления смарт-документа в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-135">Returns a <b>Boolean</b> that represents whether a smart document control is currently displayed in the Document Actions task pane.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-135">Возвращает <b>логическое значение</b> , которое указывает, отображается ли в данный момент элемент управления смарт-документа в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-135">Returns a <b>Boolean</b> that represents whether a smart document control is currently displayed in the Document Actions task pane.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -407,6 +419,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.RadioGroupSelection" />
       <MemberSignature Language="VB.NET" Value="Public Property RadioGroupSelection As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RadioGroupSelection { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.RadioGroupSelection : int with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.RadioGroupSelection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -433,9 +446,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-136">Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в группе элементов управления "переключатель" в смарт-документе.</span><span class="sxs-lookup"><span data-stu-id="9344e-136">Returns or sets an <b>Integer</b> that represents the index number of the selected item in a group of radio button controls in a smart document.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-136">Возвращает или задает <b>целое</b> число, представляющее номер индекса выбранного элемента в группе элементов управления "переключатель" в смарт-документе.</span><span class="sxs-lookup"><span data-stu-id="c05b2-136">Returns or sets an <b>Integer</b> that represents the index number of the selected item in a group of radio button controls in a smart document.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-137">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-137">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-137">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-137">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -445,6 +458,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.TextboxText" />
       <MemberSignature Language="VB.NET" Value="Public Property TextboxText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TextboxText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TextboxText : string with get, set" Usage="Microsoft.Office.Interop.Word.SmartTagAction.TextboxText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -471,9 +485,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-138">Возвращает или задает <b>строку</b> , представляющую текст в элементе управления TextBox смарт-документа.</span><span class="sxs-lookup"><span data-stu-id="9344e-138">Returns or sets a <b>String</b> that represents the text in a smart document textbox control.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-138">Возвращает или задает <b>строку</b> , представляющую текст в элементе управления TextBox смарт-документа.</span><span class="sxs-lookup"><span data-stu-id="c05b2-138">Returns or sets a <b>String</b> that represents the text in a smart document textbox control.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-139">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="9344e-139">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
+        <remarks><para><span data-ttu-id="c05b2-139">Для получения дополнительных сведений о смарт-документах обратитесь к разделу Разработка программного обеспечения смарт-документов на веб-сайте Microsoft Developer Network (MSDN).</span><span class="sxs-lookup"><span data-stu-id="c05b2-139">For more information on smart documents, please see the Smart Document Software Development Kit on the Microsoft Developer Network (MSDN) Web site.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -483,6 +497,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SmartTagAction.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As WdSmartTagControlType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdSmartTagControlType Type { Microsoft::Office::Interop::Word::WdSmartTagControlType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Interop.Word.WdSmartTagControlType" Usage="Microsoft.Office.Interop.Word.SmartTagAction.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -503,89 +518,89 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdSmartTagControlType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="9344e-140">Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> , который представляет тип элемента управления смарт-документом, отображаемый в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="9344e-140">Returns a <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> that represents the type of Smart Document control displayed in the Document Actions task pane.</span></span></summary>
+        <summary><span data-ttu-id="c05b2-140">Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> , который представляет тип элемента управления смарт-документом, отображаемый в области задач "действия с документами".</span><span class="sxs-lookup"><span data-stu-id="c05b2-140">Returns a <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> that represents the type of Smart Document control displayed in the Document Actions task pane.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="9344e-141">
-            <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" />может быть одной из следующих констант:</span><span class="sxs-lookup"><span data-stu-id="9344e-141">
+        <remarks><para><span data-ttu-id="c05b2-141">
+            <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" />может быть одной из следующих констант:</span><span class="sxs-lookup"><span data-stu-id="c05b2-141">
             <see cref="T:Microsoft.Office.Interop.Word.WdSmartTagControlType" /> can be one of the following constants:</span></span> </para>
-          <para><span data-ttu-id="9344e-142">
+          <para><span data-ttu-id="c05b2-142">
             <b>вдконтролактивекс</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-142">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-142">
             <b>wdControlActiveX </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-143">
+          <para><span data-ttu-id="c05b2-143">
             <b>вдконтролбуттон</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-143">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-143">
             <b>wdControlButton </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-144">
+          <para><span data-ttu-id="c05b2-144">
             <b>вдконтролчеккбокс</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-144">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-144">
             <b>wdControlCheckbox </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-145">
+          <para><span data-ttu-id="c05b2-145">
             <b>вдконтролкомбо</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-145">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-145">
             <b>wdControlCombo </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-146">
+          <para><span data-ttu-id="c05b2-146">
             <b>вдконтролдокументфрагмент</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-146">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-146">
             <b>wdControlDocumentFragment </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-147">
+          <para><span data-ttu-id="c05b2-147">
             <b>вдконтролдокументфрагментурл</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-147">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-147">
             <b>wdControlDocumentFragmentURL </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-148">
+          <para><span data-ttu-id="c05b2-148">
             <b>вдконтролхелп</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-148">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-148">
             <b>wdControlHelp </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-149">
+          <para><span data-ttu-id="c05b2-149">
             <b>вдконтролхелпурл</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-149">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-149">
             <b>wdControlHelpURL </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-150">
+          <para><span data-ttu-id="c05b2-150">
             <b>вдконтролимаже</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-150">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-150">
             <b>wdControlImage </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-151">
+          <para><span data-ttu-id="c05b2-151">
             <b>вдконтроллабел</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-151">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-151">
             <b>wdControlLabel </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-152">
+          <para><span data-ttu-id="c05b2-152">
             <b>вдконтроллинк</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-152">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-152">
             <b>wdControlLink </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-153">
+          <para><span data-ttu-id="c05b2-153">
             <b>вдконтроллистбокс</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-153">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-153">
             <b>wdControlListbox </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-154">
+          <para><span data-ttu-id="c05b2-154">
             <b>вдконтролрадиограуп</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-154">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-154">
             <b>wdControlRadioGroup </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-155">
+          <para><span data-ttu-id="c05b2-155">
             <b>вдконтролсепаратор</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-155">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-155">
             <b>wdControlSeparator </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-156">
+          <para><span data-ttu-id="c05b2-156">
             <b>вдконтролсмарттаг</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-156">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-156">
             <b>wdControlSmartTag </b>
           </span></span></para>
-          <para><span data-ttu-id="9344e-157">
+          <para><span data-ttu-id="c05b2-157">
             <b>вдконтролтекстбокс</b>
-          </span><span class="sxs-lookup"><span data-stu-id="9344e-157">
+          </span><span class="sxs-lookup"><span data-stu-id="c05b2-157">
             <b>wdControlTextbox</b>
           </span></span></para>
           <para> </para></remarks>

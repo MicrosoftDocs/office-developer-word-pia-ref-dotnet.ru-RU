@@ -1,9 +1,10 @@
 <Type Name="TextFrame" FullName="Microsoft.Office.Interop.Word.TextFrame">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9dc205fa2eb96a394cd184a865635344805cf9be" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143821" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7d3c2759c678340f923e96191454ec4ad2f716d0" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43926040" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextFrame" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.TextFrame" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextFrame" />
   <TypeSignature Language="C++ CLI" Value="public interface class TextFrame" />
+  <TypeSignature Language="F#" Value="type TextFrame = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -18,14 +19,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="8122e-101">Представляет текстовую рамку в <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекте.</span><span class="sxs-lookup"><span data-stu-id="8122e-101">Represents the text frame in a <see cref="T:Microsoft.Office.Interop.Word.Shape" /> object.</span></span> <span data-ttu-id="8122e-102">Содержит текст в текстовом фрейме, а также свойства, управляющие полями и ориентацией текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-102">Contains the text in the text frame as well as the properties that control the margins and orientation of the text frame.</span></span></summary>
-    <remarks><para><span data-ttu-id="8122e-103">Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> свойство, чтобы возвратить объект <b>TextFrame</b> для фигуры.</span><span class="sxs-lookup"><span data-stu-id="8122e-103">Use the <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> property to return the <b>TextFrame</b> object for a shape.</span></span> <span data-ttu-id="8122e-104"><see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" /> Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста в заданном текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="8122e-104">The <see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" /> property returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the range of text inside the specified text frame.</span></span></para>
-      <para><span data-ttu-id="8122e-105">
-        <b>Note (Примечание</b> )  Некоторые фигуры не поддерживают присоединенный текст (например, линии, полилинии, изображения и объекты OLE).</span><span class="sxs-lookup"><span data-stu-id="8122e-105">
-        <b>Note</b>  Some shapes don't support attached text (lines, freeforms, pictures, and OLE objects, for example).</span></span> <span data-ttu-id="8122e-106">Если вы попытаетесь вернуть или задать свойства, которые управляют текстом в текстовом фрейме для этих объектов, возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="8122e-106">If you attempt to return or set properties that control text in a text frame for those objects, an error occurs.</span></span></para>
-      <para><span data-ttu-id="8122e-107">Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> свойство, чтобы определить, содержит ли текстовая рамку текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-107">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> property to determine whether the text frame contains text.</span></span></para>
-      <para><span data-ttu-id="8122e-108">Текстовые фреймы можно связывать друг с другом, чтобы текст перетекать из текстового фрейма одной фигуры в текстовую рамку другой фигуры.</span><span class="sxs-lookup"><span data-stu-id="8122e-108">Text frames can be linked together so that the text flows from the text frame of one shape into the text frame of another shape.</span></span> <span data-ttu-id="8122e-109">Используйте свойства <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> и <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> для связывания текстовых фреймов.</span><span class="sxs-lookup"><span data-stu-id="8122e-109">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> and <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> properties to link text frames.</span></span></para>
-      <para><span data-ttu-id="8122e-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью, перенаправляемую между связанными текстовыми рамками.</span><span class="sxs-lookup"><span data-stu-id="8122e-110">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> property to return a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the entire story that flows between linked text frames.</span></span></para>
+    <summary><span data-ttu-id="993e8-101">Представляет текстовую рамку в <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекте.</span><span class="sxs-lookup"><span data-stu-id="993e8-101">Represents the text frame in a <see cref="T:Microsoft.Office.Interop.Word.Shape" /> object.</span></span> <span data-ttu-id="993e8-102">Содержит текст в текстовом фрейме, а также свойства, управляющие полями и ориентацией текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-102">Contains the text in the text frame as well as the properties that control the margins and orientation of the text frame.</span></span></summary>
+    <remarks><para><span data-ttu-id="993e8-103">Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> свойство, чтобы возвратить объект <b>TextFrame</b> для фигуры.</span><span class="sxs-lookup"><span data-stu-id="993e8-103">Use the <see cref="P:Microsoft.Office.Interop.Word.Shape.TextFrame" /> property to return the <b>TextFrame</b> object for a shape.</span></span> <span data-ttu-id="993e8-104"><see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" />Свойство возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий диапазон текста в заданном текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="993e8-104">The <see cref="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" /> property returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the range of text inside the specified text frame.</span></span></para>
+      <para><span data-ttu-id="993e8-105">
+        <b>Note (Примечание</b> )  Некоторые фигуры не поддерживают присоединенный текст (например, линии, полилинии, изображения и объекты OLE).</span><span class="sxs-lookup"><span data-stu-id="993e8-105">
+        <b>Note</b>  Some shapes don't support attached text (lines, freeforms, pictures, and OLE objects, for example).</span></span> <span data-ttu-id="993e8-106">Если вы попытаетесь вернуть или задать свойства, которые управляют текстом в текстовом фрейме для этих объектов, возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="993e8-106">If you attempt to return or set properties that control text in a text frame for those objects, an error occurs.</span></span></para>
+      <para><span data-ttu-id="993e8-107">Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> свойство, чтобы определить, содержит ли текстовая рамку текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-107">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.HasText" /> property to determine whether the text frame contains text.</span></span></para>
+      <para><span data-ttu-id="993e8-108">Текстовые фреймы можно связывать друг с другом, чтобы текст перетекать из текстового фрейма одной фигуры в текстовую рамку другой фигуры.</span><span class="sxs-lookup"><span data-stu-id="993e8-108">Text frames can be linked together so that the text flows from the text frame of one shape into the text frame of another shape.</span></span> <span data-ttu-id="993e8-109">Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> Свойства и <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> для связывания текстовых фреймов.</span><span class="sxs-lookup"><span data-stu-id="993e8-109">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Next" /> and <see cref="P:Microsoft.Office.Interop.Word.TextFrame.Previous" /> properties to link text frames.</span></span></para>
+      <para><span data-ttu-id="993e8-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью, перенаправляемую между связанными текстовыми рамками.</span><span class="sxs-lookup"><span data-stu-id="993e8-110">Use the <see cref="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" /> property to return a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the entire story that flows between linked text frames.</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.TextFrame.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -52,7 +54,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-111">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="8122e-111">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <summary><span data-ttu-id="993e8-111">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="993e8-111">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.AutoSize" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoSize As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int AutoSize { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoSize : int with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.AutoSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -83,7 +86,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-112">Возвращает или задает <b>целое число</b> , которое указывает, изменяется ли размер текстового фрейма автоматически.</span><span class="sxs-lookup"><span data-stu-id="8122e-112">Returns or sets an <b>Integer</b> that represents whether a text frame is sized automatically.</span></span></summary>
+        <summary><span data-ttu-id="993e8-112">Возвращает или задает <b>целое число</b> , которое указывает, изменяется ли размер текстового фрейма автоматически.</span><span class="sxs-lookup"><span data-stu-id="993e8-112">Returns or sets an <b>Integer</b> that represents whether a text frame is sized automatically.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.TextFrame.BreakForwardLink" />
       <MemberSignature Language="VB.NET" Value="Public Sub BreakForwardLink ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void BreakForwardLink();" />
+      <MemberSignature Language="F#" Value="abstract member BreakForwardLink : unit -&gt; unit" Usage="textFrame.BreakForwardLink " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -109,8 +113,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="8122e-113">Разбивает ссылку вперед для указанного текстового фрейма, если такая ссылка существует.</span><span class="sxs-lookup"><span data-stu-id="8122e-113">Breaks the forward link for the specified text frame, if such a link exists.</span></span></summary>
-        <remarks><para><span data-ttu-id="8122e-114">Применение этого метода к фигуре в середине цепочки фигур со связанными текстовыми рамками приведет к разрыву цепочки, оставив два набора связанных фигур.</span><span class="sxs-lookup"><span data-stu-id="8122e-114">Applying this method to a shape in the middle of a chain of shapes with linked text frames will break the chain, leaving two sets of linked shapes.</span></span> <span data-ttu-id="8122e-115">Однако весь текст останется в первом ряду связанных фигур.</span><span class="sxs-lookup"><span data-stu-id="8122e-115">All of the text, however, will remain in the first series of linked shapes.</span></span></para>
+        <summary><span data-ttu-id="993e8-113">Разбивает ссылку вперед для указанного текстового фрейма, если такая ссылка существует.</span><span class="sxs-lookup"><span data-stu-id="993e8-113">Breaks the forward link for the specified text frame, if such a link exists.</span></span></summary>
+        <remarks><para><span data-ttu-id="993e8-114">Применение этого метода к фигуре в середине цепочки фигур со связанными текстовыми рамками приведет к разрыву цепочки, оставив два набора связанных фигур.</span><span class="sxs-lookup"><span data-stu-id="993e8-114">Applying this method to a shape in the middle of a chain of shapes with linked text frames will break the chain, leaving two sets of linked shapes.</span></span> <span data-ttu-id="993e8-115">Однако весь текст останется в первом ряду связанных фигур.</span><span class="sxs-lookup"><span data-stu-id="993e8-115">All of the text, however, will remain in the first series of linked shapes.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Column" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Column As TextColumn2" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::TextColumn2 ^ Column { Microsoft::Office::Core::TextColumn2 ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Column : Microsoft.Office.Core.TextColumn2" Usage="Microsoft.Office.Interop.Word.TextFrame.Column" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -137,9 +142,9 @@
         <ReturnType>Microsoft.Office.Core.TextColumn2</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-116">Получает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, представляющий столбцы указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-116">Gets the <see cref="T:Microsoft.Office.Core.TextColumn2" /> object that represents the columns of the specified text frame.</span></span></summary>
-        <value><span data-ttu-id="8122e-117"><see cref="T:Microsoft.Office.Core.TextColumn2" /> Объект, представляющий столбцы указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-117">The <see cref="T:Microsoft.Office.Core.TextColumn2" /> object that represents the columns of the specified text frame.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-118">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="8122e-118">Read-only.</span></span></para>
+        <summary><span data-ttu-id="993e8-116">Получает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, представляющий столбцы указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-116">Gets the <see cref="T:Microsoft.Office.Core.TextColumn2" /> object that represents the columns of the specified text frame.</span></span></summary>
+        <value><span data-ttu-id="993e8-117"><see cref="T:Microsoft.Office.Core.TextColumn2" />Объект, представляющий столбцы указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-117">The <see cref="T:Microsoft.Office.Core.TextColumn2" /> object that represents the columns of the specified text frame.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-118">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="993e8-118">Read-only.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.ContainingRange" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainingRange As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ ContainingRange { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContainingRange : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.TextFrame.ContainingRange" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -166,7 +172,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-119">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью в наборе фигур со связанными текстовыми фреймами, к которым относится заданная текстовая рамка.</span><span class="sxs-lookup"><span data-stu-id="8122e-119">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the entire story in a series of shapes with linked text frames that the specified text frame belongs to.</span></span></summary>
+        <summary><span data-ttu-id="993e8-119">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий всю статью в наборе фигур со связанными текстовыми фреймами, к которым относится заданная текстовая рамка.</span><span class="sxs-lookup"><span data-stu-id="993e8-119">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the entire story in a series of shapes with linked text frames that the specified text frame belongs to.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,6 +183,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.TextFrame.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -194,10 +201,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-120">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="8122e-120">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="993e8-120">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="993e8-120">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="8122e-121">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="8122e-121">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="8122e-122">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="8122e-122">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="8122e-123">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="8122e-123">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="8122e-124">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="8122e-124">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="8122e-125">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="8122e-125">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="993e8-121">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="993e8-121">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="993e8-122">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="993e8-122">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="993e8-123">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="993e8-123">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="993e8-124">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="993e8-124">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="993e8-125">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="993e8-125">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -207,6 +214,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.TextFrame.DeleteText" />
       <MemberSignature Language="VB.NET" Value="Public Sub DeleteText ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeleteText();" />
+      <MemberSignature Language="F#" Value="abstract member DeleteText : unit -&gt; unit" Usage="textFrame.DeleteText " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -222,7 +230,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="8122e-126">Удаляет текст из текстового фрейма и все связанные с ним свойства текста, включая атрибуты шрифта.</span><span class="sxs-lookup"><span data-stu-id="8122e-126">Deletes the text from a text frame and all the associated properties of the text, including font attributes.</span></span></summary>
+        <summary><span data-ttu-id="993e8-126">Удаляет текст из текстового фрейма и все связанные с ним свойства текста, включая атрибуты шрифта.</span><span class="sxs-lookup"><span data-stu-id="993e8-126">Deletes the text from a text frame and all the associated properties of the text, including font attributes.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -232,6 +240,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.HasText" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasText As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int HasText { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.HasText : int" Usage="Microsoft.Office.Interop.Word.TextFrame.HasText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -249,7 +258,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-127"><b>Имеет значение true</b> , если указанная фигура имеет связанный с ней текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-127"><b>True</b> if the specified shape has text associated with it.</span></span></summary>
+        <summary><span data-ttu-id="993e8-127"><b>Имеет значение true</b> , если указанная фигура имеет связанный с ней текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-127"><b>True</b> if the specified shape has text associated with it.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -260,6 +269,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.HorizontalAnchor" />
       <MemberSignature Language="VB.NET" Value="Public Property HorizontalAnchor As MsoHorizontalAnchor" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoHorizontalAnchor HorizontalAnchor { Microsoft::Office::Core::MsoHorizontalAnchor get(); void set(Microsoft::Office::Core::MsoHorizontalAnchor value); };" />
+      <MemberSignature Language="F#" Value="member this.HorizontalAnchor : Microsoft.Office.Core.MsoHorizontalAnchor with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.HorizontalAnchor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -280,9 +290,9 @@
         <ReturnType>Microsoft.Office.Core.MsoHorizontalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-128">Получает или задает горизонтальное выравнивание текста в текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="8122e-128">Gets or sets the horizontal alignment of text in a text frame.</span></span></summary>
-        <value><span data-ttu-id="8122e-129">Горизонтальное выравнивание текста в текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="8122e-129">The horizontal alignment of text in a text frame.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-130">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" />.</span><span class="sxs-lookup"><span data-stu-id="8122e-130">Read/write <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" />.</span></span></para>
+        <summary><span data-ttu-id="993e8-128">Получает или задает горизонтальное выравнивание текста в текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="993e8-128">Gets or sets the horizontal alignment of text in a text frame.</span></span></summary>
+        <value><span data-ttu-id="993e8-129">Горизонтальное выравнивание текста в текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="993e8-129">The horizontal alignment of text in a text frame.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-130">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" /> .</span><span class="sxs-lookup"><span data-stu-id="993e8-130">Read/write <see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" />.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.MarginBottom" />
       <MemberSignature Language="VB.NET" Value="Public Property MarginBottom As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float MarginBottom { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.MarginBottom : single with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.MarginBottom" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -312,7 +323,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-131">Возвращает или задает расстояние (в пунктах) между нижней частью текстового фрейма и нижней частью прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-131">Returns or sets the distance (in points) between the bottom of the text frame and the bottom of the inscribed rectangle of the shape that contains the text.</span></span></summary>
+        <summary><span data-ttu-id="993e8-131">Возвращает или задает расстояние (в пунктах) между нижней частью текстового фрейма и нижней частью прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-131">Returns or sets the distance (in points) between the bottom of the text frame and the bottom of the inscribed rectangle of the shape that contains the text.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -323,6 +334,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.MarginLeft" />
       <MemberSignature Language="VB.NET" Value="Public Property MarginLeft As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float MarginLeft { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.MarginLeft : single with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.MarginLeft" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -343,7 +355,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-132">Возвращает или задает расстояние (в пунктах) между левым краем текстового фрейма и левым краем прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-132">Returns or sets the distance (in points) between the left edge of the text frame and the left edge of the inscribed rectangle of the shape that contains the text.</span></span></summary>
+        <summary><span data-ttu-id="993e8-132">Возвращает или задает расстояние (в пунктах) между левым краем текстового фрейма и левым краем прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-132">Returns or sets the distance (in points) between the left edge of the text frame and the left edge of the inscribed rectangle of the shape that contains the text.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,6 +366,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.MarginRight" />
       <MemberSignature Language="VB.NET" Value="Public Property MarginRight As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float MarginRight { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.MarginRight : single with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.MarginRight" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -374,7 +387,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-133">Возвращает или задает расстояние (в пунктах) между правым краем текстового фрейма и правым краем прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-133">Returns or sets the distance (in points) between the right edge of the text frame and the right edge of the inscribed rectangle of the shape that contains the text.</span></span></summary>
+        <summary><span data-ttu-id="993e8-133">Возвращает или задает расстояние (в пунктах) между правым краем текстового фрейма и правым краем прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-133">Returns or sets the distance (in points) between the right edge of the text frame and the right edge of the inscribed rectangle of the shape that contains the text.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -385,6 +398,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.MarginTop" />
       <MemberSignature Language="VB.NET" Value="Public Property MarginTop As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float MarginTop { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.MarginTop : single with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.MarginTop" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -405,7 +419,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-134">Возвращает или задает расстояние (в пунктах) между верхней частью текстового фрейма и верхней частью прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-134">Returns or sets the distance (in points) between the top of the text frame and the top of the inscribed rectangle of the shape that contains the text.</span></span></summary>
+        <summary><span data-ttu-id="993e8-134">Возвращает или задает расстояние (в пунктах) между верхней частью текстового фрейма и верхней частью прямоугольника инскрибед фигуры, содержащей текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-134">Returns or sets the distance (in points) between the top of the text frame and the top of the inscribed rectangle of the shape that contains the text.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -416,6 +430,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Next" />
       <MemberSignature Language="VB.NET" Value="Public Property Next As TextFrame" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::TextFrame ^ Next { Microsoft::Office::Interop::Word::TextFrame ^ get(); void set(Microsoft::Office::Interop::Word::TextFrame ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Next : Microsoft.Office.Interop.Word.TextFrame with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.Next" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -436,7 +451,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextFrame</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-135">Возвращает следующий объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="8122e-135">Returns the next object in the collection.</span></span></summary>
+        <summary><span data-ttu-id="993e8-135">Возвращает следующий объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="993e8-135">Returns the next object in the collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -447,6 +462,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.NoTextRotation" />
       <MemberSignature Language="VB.NET" Value="Public Property NoTextRotation As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState NoTextRotation { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.NoTextRotation : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.NoTextRotation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -467,9 +483,9 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-136">Получает или задает значение, указывающее, следует ли поворачивать текст в текстовом фрейме при вращении фигуры.</span><span class="sxs-lookup"><span data-stu-id="8122e-136">Gets or sets whether the text in the text frame should not rotate when the shape is rotated.</span></span></summary>
-        <value><span data-ttu-id="8122e-137">Объект <see cref="T:Microsoft.Office.Core.MsoTriState" />.</span><span class="sxs-lookup"><span data-stu-id="8122e-137">A <see cref="T:Microsoft.Office.Core.MsoTriState" /> object.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-138">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</span><span class="sxs-lookup"><span data-stu-id="8122e-138">Read/write <see cref="T:Microsoft.Office.Core.MsoTriState" />.</span></span> <span data-ttu-id="8122e-139">Для задания этого свойства можно использовать только константы <b>MsoTriState</b> <b>мсофалсе</b> и <b>мсотруе</b> .</span><span class="sxs-lookup"><span data-stu-id="8122e-139">Only the <b>MsoTriState</b> constants <b>msoFalse</b> and <b>msoTrue</b> can be used to set this property.</span></span></para>
+        <summary><span data-ttu-id="993e8-136">Получает или задает значение, указывающее, следует ли поворачивать текст в текстовом фрейме при вращении фигуры.</span><span class="sxs-lookup"><span data-stu-id="993e8-136">Gets or sets whether the text in the text frame should not rotate when the shape is rotated.</span></span></summary>
+        <value><span data-ttu-id="993e8-137">Объект <see cref="T:Microsoft.Office.Core.MsoTriState" />.</span><span class="sxs-lookup"><span data-stu-id="993e8-137">A <see cref="T:Microsoft.Office.Core.MsoTriState" /> object.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-138">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" /> .</span><span class="sxs-lookup"><span data-stu-id="993e8-138">Read/write <see cref="T:Microsoft.Office.Core.MsoTriState" />.</span></span> <span data-ttu-id="993e8-139">Для задания этого свойства можно использовать только константы <b>MsoTriState</b> <b>мсофалсе</b> и <b>мсотруе</b> .</span><span class="sxs-lookup"><span data-stu-id="993e8-139">Only the <b>MsoTriState</b> constants <b>msoFalse</b> and <b>msoTrue</b> can be used to set this property.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -479,6 +495,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Orientation" />
       <MemberSignature Language="VB.NET" Value="Public Property Orientation As MsoTextOrientation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTextOrientation Orientation { Microsoft::Office::Core::MsoTextOrientation get(); void set(Microsoft::Office::Core::MsoTextOrientation value); };" />
+      <MemberSignature Language="F#" Value="member this.Orientation : Microsoft.Office.Core.MsoTextOrientation with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.Orientation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -499,48 +516,48 @@
         <ReturnType>Microsoft.Office.Core.MsoTextOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-140">Возвращает или задает ориентацию текста внутри фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-140">Returns or sets the orientation of the text inside the frame.</span></span></summary>
+        <summary><span data-ttu-id="993e8-140">Возвращает или задает ориентацию текста внутри фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-140">Returns or sets the orientation of the text inside the frame.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="8122e-141">
-            <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />может быть одной из этих констант <b>мсотексториентатион</b> .</span><span class="sxs-lookup"><span data-stu-id="8122e-141">
+        <remarks><para><span data-ttu-id="993e8-141">
+            <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />может быть одной из этих констант <b>мсотексториентатион</b> .</span><span class="sxs-lookup"><span data-stu-id="993e8-141">
             <see cref="T:Microsoft.Office.Core.MsoTextOrientation" /> can be one of these <b>MsoTextOrientation</b> constants.</span></span> </para>
-          <para><span data-ttu-id="8122e-142">
+          <para><span data-ttu-id="993e8-142">
             <b>мсотексториентатиондовнвард</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-142">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-142">
             <b>msoTextOrientationDownward </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-143">
+          <para><span data-ttu-id="993e8-143">
             <b>мсотексториентатионхоризонтал</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-143">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-143">
             <b>msoTextOrientationHorizontal </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-144">
+          <para><span data-ttu-id="993e8-144">
             <b>мсотексториентатионхоризонталротатедфареаст</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-144">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-144">
             <b>msoTextOrientationHorizontalRotatedFarEast </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-145">
+          <para><span data-ttu-id="993e8-145">
             <b>мсотексториентатионмиксед</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-145">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-145">
             <b>msoTextOrientationMixed </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-146">
+          <para><span data-ttu-id="993e8-146">
             <b>мсотексториентатионупвард</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-146">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-146">
             <b>msoTextOrientationUpward </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-147">
+          <para><span data-ttu-id="993e8-147">
             <b>мсотексториентатионвертикал</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-147">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-147">
             <b>msoTextOrientationVertical </b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-148">
+          <para><span data-ttu-id="993e8-148">
             <b>мсотексториентатионвертикалфареаст</b>
-          </span><span class="sxs-lookup"><span data-stu-id="8122e-148">
+          </span><span class="sxs-lookup"><span data-stu-id="993e8-148">
             <b>msoTextOrientationVerticalFarEast</b>
           </span></span></para>
-          <para><span data-ttu-id="8122e-149">Некоторые из перечисленных выше констант могут быть недоступны, в зависимости от того, какой языковой параметр (например, Английский (США)) выбран или установлен.</span><span class="sxs-lookup"><span data-stu-id="8122e-149">Some of the constants listed above may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
-          <para><span data-ttu-id="8122e-150">Можно задать ориентацию для текстового фрейма или диапазона или выделения, которые происходят внутри текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-150">You can set the orientation for a text frame or for a range or selection that happens to occur inside a text frame.</span></span> <span data-ttu-id="8122e-151">Сведения о различиях между текстовыми и текстовыми рамками приведены в <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> разделе Object.</span><span class="sxs-lookup"><span data-stu-id="8122e-151">For information about the difference between a text frame and a text box, see the <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> object.</span></span></para>
+          <para><span data-ttu-id="993e8-149">Некоторые из перечисленных выше констант могут быть недоступны, в зависимости от того, какой языковой параметр (например, Английский (США)) выбран или установлен.</span><span class="sxs-lookup"><span data-stu-id="993e8-149">Some of the constants listed above may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
+          <para><span data-ttu-id="993e8-150">Можно задать ориентацию для текстового фрейма или диапазона или выделения, которые происходят внутри текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-150">You can set the orientation for a text frame or for a range or selection that happens to occur inside a text frame.</span></span> <span data-ttu-id="993e8-151">Сведения о различиях между текстовыми и текстовыми рамками приведены в разделе <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> Object.</span><span class="sxs-lookup"><span data-stu-id="993e8-151">For information about the difference between a text frame and a text box, see the <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> object.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -550,6 +567,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Overflowing" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Overflowing As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Overflowing { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Overflowing : bool" Usage="Microsoft.Office.Interop.Word.TextFrame.Overflowing" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -567,7 +585,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-152"><b>Значение true</b> , если текст внутри указанной текстовой рамки не подбирается в рамке.</span><span class="sxs-lookup"><span data-stu-id="8122e-152"><b>True</b> if the text inside the specified text frame doesn't all fit within the frame.</span></span></summary>
+        <summary><span data-ttu-id="993e8-152"><b>Значение true</b> , если текст внутри указанной текстовой рамки не подбирается в рамке.</span><span class="sxs-lookup"><span data-stu-id="993e8-152"><b>True</b> if the text inside the specified text frame doesn't all fit within the frame.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -578,6 +596,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Shape" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Shape ^ Parent { Microsoft::Office::Interop::Word::Shape ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : Microsoft.Office.Interop.Word.Shape" Usage="Microsoft.Office.Interop.Word.TextFrame.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -595,7 +614,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-153">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий родительскую фигуру текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-153">Returns a <see cref="T:Microsoft.Office.Interop.Word.Shape" /> object representing the parent shape of the text frame.</span></span></summary>
+        <summary><span data-ttu-id="993e8-153">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий родительскую фигуру текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-153">Returns a <see cref="T:Microsoft.Office.Interop.Word.Shape" /> object representing the parent shape of the text frame.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -606,6 +625,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.PathFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property PathFormat As MsoPathFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoPathFormat PathFormat { Microsoft::Office::Core::MsoPathFormat get(); void set(Microsoft::Office::Core::MsoPathFormat value); };" />
+      <MemberSignature Language="F#" Value="member this.PathFormat : Microsoft.Office.Core.MsoPathFormat with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.PathFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -626,49 +646,49 @@
         <ReturnType>Microsoft.Office.Core.MsoPathFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-154">Получает или задает тип пути для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-154">Gets or sets the path type for the specified text frame.</span></span></summary>
-        <value><span data-ttu-id="8122e-155">Тип пути для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-155">The path type for the specified text frame.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-156">Значение этого свойства может быть одной из следующих <see cref="T:Microsoft.Offic.Core.MsoPathType" /> констант:</span><span class="sxs-lookup"><span data-stu-id="8122e-156">The value of this property can be one of the following <see cref="T:Microsoft.Offic.Core.MsoPathType" /> constants:</span></span></para>
+        <summary><span data-ttu-id="993e8-154">Получает или задает тип пути для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-154">Gets or sets the path type for the specified text frame.</span></span></summary>
+        <value><span data-ttu-id="993e8-155">Тип пути для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-155">The path type for the specified text frame.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-156">Значение этого свойства может быть одной из следующих <see cref="T:Microsoft.Offic.Core.MsoPathType" /> констант:</span><span class="sxs-lookup"><span data-stu-id="993e8-156">The value of this property can be one of the following <see cref="T:Microsoft.Offic.Core.MsoPathType" /> constants:</span></span></para>
           <list type="bullet">
             <item>
-              <para><span data-ttu-id="8122e-157">
+              <para><span data-ttu-id="993e8-157">
                 <b>msoPathType1</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-157">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-157">
                 <b>msoPathType1</b>
               </span></span></para>
             </item>
             <item>
-              <para><span data-ttu-id="8122e-158">
+              <para><span data-ttu-id="993e8-158">
                 <b>msoPathType2</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-158">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-158">
                 <b>msoPathType2</b>
               </span></span></para>
             </item>
             <item>
-              <para><span data-ttu-id="8122e-159">
+              <para><span data-ttu-id="993e8-159">
                 <b>msoPathType3</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-159">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-159">
                 <b>msoPathType3</b>
               </span></span></para>
             </item>
             <item>
-              <para><span data-ttu-id="8122e-160">
+              <para><span data-ttu-id="993e8-160">
                 <b>msoPathType4</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-160">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-160">
                 <b>msoPathType4</b>
               </span></span></para>
             </item>
             <item>
-              <para><span data-ttu-id="8122e-161">
+              <para><span data-ttu-id="993e8-161">
                 <b>мсопастипемиксед</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-161">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-161">
                 <b>msoPathTypeMixed</b>
               </span></span></para>
             </item>
             <item>
-              <para><span data-ttu-id="8122e-162">
+              <para><span data-ttu-id="993e8-162">
                 <b>мсопастипеноне</b>
-              </span><span class="sxs-lookup"><span data-stu-id="8122e-162">
+              </span><span class="sxs-lookup"><span data-stu-id="993e8-162">
                 <b>msoPathTypeNone</b>
               </span></span></para>
             </item>
@@ -682,6 +702,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.Previous" />
       <MemberSignature Language="VB.NET" Value="Public Property Previous As TextFrame" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::TextFrame ^ Previous { Microsoft::Office::Interop::Word::TextFrame ^ get(); void set(Microsoft::Office::Interop::Word::TextFrame ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Previous : Microsoft.Office.Interop.Word.TextFrame with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.Previous" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -702,7 +723,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.TextFrame</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-163">Возвращает предыдущий объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="8122e-163">Returns the previous object in the collection.</span></span></summary>
+        <summary><span data-ttu-id="993e8-163">Возвращает предыдущий объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="993e8-163">Returns the previous object in the collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -713,6 +734,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.TextRange" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextRange As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ TextRange { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TextRange : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.TextFrame.TextRange" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -730,7 +752,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-164">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст в указанном текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="8122e-164">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the text in the specified text frame.</span></span></summary>
+        <summary><span data-ttu-id="993e8-164">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст в указанном текстовом фрейме.</span><span class="sxs-lookup"><span data-stu-id="993e8-164">Returns a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents the text in the specified text frame.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -741,6 +763,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.ThreeD" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ThreeD As ThreeDFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ThreeDFormat ^ ThreeD { Microsoft::Office::Interop::Word::ThreeDFormat ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ThreeD : Microsoft.Office.Interop.Word.ThreeDFormat" Usage="Microsoft.Office.Interop.Word.TextFrame.ThreeD" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -758,9 +781,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.ThreeDFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-165">Получает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который содержит объемные свойства форматирования указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-165">Gets a <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> object that contains 3-D effect formatting properties for the specified text frame.</span></span></summary>
-        <value><span data-ttu-id="8122e-166"><see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> Объект, содержащий объемные свойства форматирования для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-166">A <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> object that contains 3-D effect formatting properties for the specified text frame.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-167">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="8122e-167">Read-only.</span></span></para>
+        <summary><span data-ttu-id="993e8-165">Получает <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> объект, который содержит объемные свойства форматирования указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-165">Gets a <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> object that contains 3-D effect formatting properties for the specified text frame.</span></span></summary>
+        <value><span data-ttu-id="993e8-166"><see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" />Объект, содержащий объемные свойства форматирования для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-166">A <see cref="T:Microsoft.Office.Interop.Word.ThreeDFormat" /> object that contains 3-D effect formatting properties for the specified text frame.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-167">Только для чтения.</span><span class="sxs-lookup"><span data-stu-id="993e8-167">Read-only.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -770,6 +793,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.TextFrame.ValidLinkTarget(Microsoft.Office.Interop.Word.TextFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Function ValidLinkTarget (TargetTextFrame As TextFrame) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool ValidLinkTarget(Microsoft::Office::Interop::Word::TextFrame ^ TargetTextFrame);" />
+      <MemberSignature Language="F#" Value="abstract member ValidLinkTarget : Microsoft.Office.Interop.Word.TextFrame -&gt; bool" Usage="textFrame.ValidLinkTarget TargetTextFrame" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -787,10 +811,10 @@
         <Parameter Name="TargetTextFrame" Type="Microsoft.Office.Interop.Word.TextFrame" />
       </Parameters>
       <Docs>
-        <param name="TargetTextFrame"><span data-ttu-id="8122e-168">Обязательный <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект.</span><span class="sxs-lookup"><span data-stu-id="8122e-168">Required <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> object.</span></span> <span data-ttu-id="8122e-169">Целевой текстовый фрейм, с которым требуется связать заданный текстовый фрейм.</span><span class="sxs-lookup"><span data-stu-id="8122e-169">The target text frame to which you'd like to link the specified text frame.</span></span></param>
-        <summary><span data-ttu-id="8122e-170">Определяет, можно ли связать текстовый фрейм одной фигуры с текстовым фреймом другой фигуры.</span><span class="sxs-lookup"><span data-stu-id="8122e-170">Determines whether the text frame of one shape can be linked to the text frame of another shape.</span></span></summary>
+        <param name="TargetTextFrame"><span data-ttu-id="993e8-168">Обязательный <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> объект.</span><span class="sxs-lookup"><span data-stu-id="993e8-168">Required <see cref="T:Microsoft.Office.Interop.Word.TextFrame" /> object.</span></span> <span data-ttu-id="993e8-169">Целевой текстовый фрейм, с которым требуется связать заданный текстовый фрейм.</span><span class="sxs-lookup"><span data-stu-id="993e8-169">The target text frame to which you'd like to link the specified text frame.</span></span></param>
+        <summary><span data-ttu-id="993e8-170">Определяет, можно ли связать текстовый фрейм одной фигуры с текстовым фреймом другой фигуры.</span><span class="sxs-lookup"><span data-stu-id="993e8-170">Determines whether the text frame of one shape can be linked to the text frame of another shape.</span></span></summary>
         <returns>To be added.</returns>
-        <remarks><para><span data-ttu-id="8122e-171">Свойство <b>TextFrame</b> возвращает <b>значение true</b> , <paramref name="TargetTextFrame" /> если значение является допустимым целевым объектом.</span><span class="sxs-lookup"><span data-stu-id="8122e-171">The <b>TextFrame</b> property returns <b>True</b> if <paramref name="TargetTextFrame" /> is a valid target.</span></span> <span data-ttu-id="8122e-172">Возвращает <b>значение false</b> , <paramref name="TargetTextFrame" /> если элемент уже содержит текст или уже связан, или если фигура не поддерживает вложенный текст.</span><span class="sxs-lookup"><span data-stu-id="8122e-172">It returns <b>False</b> if <paramref name="TargetTextFrame" /> already contains text or is already linked, or if the shape doesn't support attached text.</span></span></para>
+        <remarks><para><span data-ttu-id="993e8-171">Свойство <b>TextFrame</b> возвращает <b>значение true</b> , если <paramref name="TargetTextFrame" /> значение является допустимым целевым объектом.</span><span class="sxs-lookup"><span data-stu-id="993e8-171">The <b>TextFrame</b> property returns <b>True</b> if <paramref name="TargetTextFrame" /> is a valid target.</span></span> <span data-ttu-id="993e8-172">Возвращает <b>значение false</b> <paramref name="TargetTextFrame" /> , если элемент уже содержит текст или уже связан, или если фигура не поддерживает вложенный текст.</span><span class="sxs-lookup"><span data-stu-id="993e8-172">It returns <b>False</b> if <paramref name="TargetTextFrame" /> already contains text or is already linked, or if the shape doesn't support attached text.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -800,6 +824,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.VerticalAnchor" />
       <MemberSignature Language="VB.NET" Value="Public Property VerticalAnchor As MsoVerticalAnchor" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoVerticalAnchor VerticalAnchor { Microsoft::Office::Core::MsoVerticalAnchor get(); void set(Microsoft::Office::Core::MsoVerticalAnchor value); };" />
+      <MemberSignature Language="F#" Value="member this.VerticalAnchor : Microsoft.Office.Core.MsoVerticalAnchor with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.VerticalAnchor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -820,8 +845,8 @@
         <ReturnType>Microsoft.Office.Core.MsoVerticalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-173">Возвращает или задает константу <b>мсовертикаланчор</b> , представляющую вертикальное выравнивание текста в фигуре.</span><span class="sxs-lookup"><span data-stu-id="8122e-173">Returns or sets an <b>MsoVerticalAnchor</b> constant that represents the vertical alignment of the text within a shape.</span></span> <span data-ttu-id="8122e-174">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="8122e-174">Read/write.</span></span></summary>
-        <value><span data-ttu-id="8122e-175"><b>MsoVerticalAnchor</b></span><span class="sxs-lookup"><span data-stu-id="8122e-175"><b>MsoVerticalAnchor</b></span></span></value>
+        <summary><span data-ttu-id="993e8-173">Возвращает или задает константу <b>мсовертикаланчор</b> , представляющую вертикальное выравнивание текста в фигуре.</span><span class="sxs-lookup"><span data-stu-id="993e8-173">Returns or sets an <b>MsoVerticalAnchor</b> constant that represents the vertical alignment of the text within a shape.</span></span> <span data-ttu-id="993e8-174">Для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="993e8-174">Read/write.</span></span></summary>
+        <value><span data-ttu-id="993e8-175"><b>MsoVerticalAnchor</b></span><span class="sxs-lookup"><span data-stu-id="993e8-175"><b>MsoVerticalAnchor</b></span></span></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -831,6 +856,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.WarpFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property WarpFormat As MsoWarpFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoWarpFormat WarpFormat { Microsoft::Office::Core::MsoWarpFormat get(); void set(Microsoft::Office::Core::MsoWarpFormat value); };" />
+      <MemberSignature Language="F#" Value="member this.WarpFormat : Microsoft.Office.Core.MsoWarpFormat with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.WarpFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -851,9 +877,9 @@
         <ReturnType>Microsoft.Office.Core.MsoWarpFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-176">Получает или задает формат деформации (способ деформации текста) для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-176">Gets or sets the warp format (how the text is warped) for the specified text frame.</span></span></summary>
-        <value><span data-ttu-id="8122e-177">Формат деформации (способ деформации текста) для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="8122e-177">The warp format (how the text is warped) for the specified text frame.</span></span></value>
-        <remarks><para><span data-ttu-id="8122e-178">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoWarpFormat" />.</span><span class="sxs-lookup"><span data-stu-id="8122e-178">Read/write <see cref="T:Microsoft.Office.Core.MsoWarpFormat" />.</span></span></para>
+        <summary><span data-ttu-id="993e8-176">Получает или задает формат деформации (способ деформации текста) для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-176">Gets or sets the warp format (how the text is warped) for the specified text frame.</span></span></summary>
+        <value><span data-ttu-id="993e8-177">Формат деформации (способ деформации текста) для указанного текстового фрейма.</span><span class="sxs-lookup"><span data-stu-id="993e8-177">The warp format (how the text is warped) for the specified text frame.</span></span></value>
+        <remarks><para><span data-ttu-id="993e8-178">Чтение и запись <see cref="T:Microsoft.Office.Core.MsoWarpFormat" /> .</span><span class="sxs-lookup"><span data-stu-id="993e8-178">Read/write <see cref="T:Microsoft.Office.Core.MsoWarpFormat" />.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -863,6 +889,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.TextFrame.WordWrap" />
       <MemberSignature Language="VB.NET" Value="Public Property WordWrap As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int WordWrap { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.WordWrap : int with get, set" Usage="Microsoft.Office.Interop.Word.TextFrame.WordWrap" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -883,10 +910,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="8122e-179"><b>True</b> , если Microsoft Word заключает текст на латинице в середине слова в указанных абзацах или текстовых фреймах.</span><span class="sxs-lookup"><span data-stu-id="8122e-179"><b>True</b> if Microsoft Word wraps Latin text in the middle of a word in the specified paragraphs or text frames.</span></span></summary>
+        <summary><span data-ttu-id="993e8-179"><b>True</b> , если Microsoft Word заключает текст на латинице в середине слова в указанных абзацах или текстовых фреймах.</span><span class="sxs-lookup"><span data-stu-id="993e8-179"><b>True</b> if Microsoft Word wraps Latin text in the middle of a word in the specified paragraphs or text frames.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="8122e-180">Свойство <b>WordWrap</b> возвращает <b>вдундефинед</b> , если для него задано <b>значение true</b> только для некоторых заданных абзацев или текстовых фреймов.</span><span class="sxs-lookup"><span data-stu-id="8122e-180">The <b>WordWrap</b> property returns <b>wdUndefined</b> if it’s set to <b>True</b> for only some of the specified paragraphs or text frames.</span></span></para>
-          <para><span data-ttu-id="8122e-181">Это может быть недоступно в зависимости от того, какой язык (например, английский) выбран или установлен.</span><span class="sxs-lookup"><span data-stu-id="8122e-181">This usage may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
+        <remarks><para><span data-ttu-id="993e8-180">Свойство <b>WordWrap</b> возвращает <b>вдундефинед</b> , если для него задано <b>значение true</b> только для некоторых заданных абзацев или текстовых фреймов.</span><span class="sxs-lookup"><span data-stu-id="993e8-180">The <b>WordWrap</b> property returns <b>wdUndefined</b> if it’s set to <b>True</b> for only some of the specified paragraphs or text frames.</span></span></para>
+          <para><span data-ttu-id="993e8-181">Это может быть недоступно в зависимости от того, какой язык (например, английский) выбран или установлен.</span><span class="sxs-lookup"><span data-stu-id="993e8-181">This usage may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
