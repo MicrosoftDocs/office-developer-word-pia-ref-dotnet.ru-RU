@@ -1,9 +1,10 @@
 <Type Name="ProofreadingErrors" FullName="Microsoft.Office.Interop.Word.ProofreadingErrors">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0c61f910fa45ca20cb739f36d01474a098c8703d" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144143" /></Metadata><TypeSignature Language="C#" Value="public interface ProofreadingErrors : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="674db7ee867162236a49a57099aa1330acc6551d" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924671" /></Metadata><TypeSignature Language="C#" Value="public interface ProofreadingErrors : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ProofreadingErrors implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ProofreadingErrors" />
   <TypeSignature Language="VB.NET" Value="Public Interface ProofreadingErrors&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class ProofreadingErrors : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type ProofreadingErrors = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -22,12 +23,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="b4327-101">Набор орфографических и грамматических ошибок для указанного документа или диапазона.</span><span class="sxs-lookup"><span data-stu-id="b4327-101">A collection of spelling and grammatical errors for the specified document or range.</span></span></summary>
-    <remarks><para><span data-ttu-id="b4327-102">Объект Пруфреадинжеррор отсутствует; Вместо этого каждый элемент в коллекции <b>ProofreadingErrors</b> является <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом, представляющим одну орфографиую или грамматическую ошибку.</span><span class="sxs-lookup"><span data-stu-id="b4327-102">There is no ProofreadingError object; instead, each item in the <b>ProofreadingErrors</b> collection is a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents one spelling or grammatical error.</span></span></para>
-      <para><span data-ttu-id="b4327-103">Используйте свойство <b>спеллинжеррорс</b> или <b>Грамматикалеррорс</b> объекта <see cref="T:Microsoft.Office.Interop.Word.Document" /> или диапазона, чтобы возвратить коллекцию <b>ProofreadingErrors</b> .</span><span class="sxs-lookup"><span data-stu-id="b4327-103">Use the <b>SpellingErrors</b> or <b>GrammaticalErrors</b> property of a <see cref="T:Microsoft.Office.Interop.Word.Document" /> or Range object to return the <b>ProofreadingErrors</b> collection.</span></span></para>
-      <para><span data-ttu-id="b4327-104">Используйте <b>спеллинжеррорс</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну ошибку правописания (представленную объектом <b>Range</b> ).</span><span class="sxs-lookup"><span data-stu-id="b4327-104">Use <b>SpellingErrors</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single spelling error (represented by a <b>Range</b> object).</span></span></para>
-      <para><span data-ttu-id="b4327-105">Используйте <b>граммареррорс</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну грамматическую ошибку (представленную объектом <b>Range</b> ).</span><span class="sxs-lookup"><span data-stu-id="b4327-105">Use <b>GrammarErrors</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single grammatical error (represented by a <b>Range</b> object).</span></span></para>
-      <para><span data-ttu-id="b4327-106"><see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье.</span><span class="sxs-lookup"><span data-stu-id="b4327-106">The <see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" /> property for this collection in a document returns the number of items in the main story only.</span></span> <span data-ttu-id="b4327-107">Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</span><span class="sxs-lookup"><span data-stu-id="b4327-107">To count items in other stories use the collection with the <b>Range</b> object.</span></span> <span data-ttu-id="b4327-108">Если все слова в документе или диапазоне написаны правильно и грамматикалли правильно, свойство <b>Count</b> объекта <b>ProofreadingErrors</b> возвращает значение 0 (ноль) и свойства <b>спеллингчеккед</b> и <b>граммарчеккед</b> Объект <b>Document</b> или <b>Range</b> возвращает <b>значение true</b>.</span><span class="sxs-lookup"><span data-stu-id="b4327-108">If all the words in the document or range are spelled correctly and are grammatically correct, the <b>Count</b> property for the <b>ProofreadingErrors</b> object returns 0 (zero) and the <b>SpellingChecked</b> and <b>GrammarChecked</b> properties of the <b>Document</b> or <b>Range</b> object return <b>True</b>.</span></span></para>
+    <summary><span data-ttu-id="03f8e-101">Набор орфографических и грамматических ошибок для указанного документа или диапазона.</span><span class="sxs-lookup"><span data-stu-id="03f8e-101">A collection of spelling and grammatical errors for the specified document or range.</span></span></summary>
+    <remarks><para><span data-ttu-id="03f8e-102">Объект Пруфреадинжеррор отсутствует; Вместо этого каждый элемент в коллекции <b>ProofreadingErrors</b> является <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом, представляющим одну орфографиую или грамматическую ошибку.</span><span class="sxs-lookup"><span data-stu-id="03f8e-102">There is no ProofreadingError object; instead, each item in the <b>ProofreadingErrors</b> collection is a <see cref="T:Microsoft.Office.Interop.Word.Range" /> object that represents one spelling or grammatical error.</span></span></para>
+      <para><span data-ttu-id="03f8e-103">Используйте свойство <b>спеллинжеррорс</b> или <b>Грамматикалеррорс</b> <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта или диапазона, чтобы возвратить коллекцию <b>ProofreadingErrors</b> .</span><span class="sxs-lookup"><span data-stu-id="03f8e-103">Use the <b>SpellingErrors</b> or <b>GrammaticalErrors</b> property of a <see cref="T:Microsoft.Office.Interop.Word.Document" /> or Range object to return the <b>ProofreadingErrors</b> collection.</span></span></para>
+      <para><span data-ttu-id="03f8e-104">Используйте <b>спеллинжеррорс</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну ошибку правописания (представленную объектом <b>Range</b> ).</span><span class="sxs-lookup"><span data-stu-id="03f8e-104">Use <b>SpellingErrors</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single spelling error (represented by a <b>Range</b> object).</span></span></para>
+      <para><span data-ttu-id="03f8e-105">Используйте <b>граммареррорс</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы возвратить одну грамматическую ошибку (представленную объектом <b>Range</b> ).</span><span class="sxs-lookup"><span data-stu-id="03f8e-105">Use <b>GrammarErrors</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single grammatical error (represented by a <b>Range</b> object).</span></span></para>
+      <para><span data-ttu-id="03f8e-106"><see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" />Свойство этой коллекции в документе возвращает количество элементов только в основной статье.</span><span class="sxs-lookup"><span data-stu-id="03f8e-106">The <see cref="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" /> property for this collection in a document returns the number of items in the main story only.</span></span> <span data-ttu-id="03f8e-107">Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</span><span class="sxs-lookup"><span data-stu-id="03f8e-107">To count items in other stories use the collection with the <b>Range</b> object.</span></span> <span data-ttu-id="03f8e-108">Если все слова в документе или диапазоне написаны правильно и грамматикалли правильно, свойство <b>Count</b> объекта <b>ProofreadingErrors</b> возвращает значение 0 (ноль), а свойства <b>спеллингчеккед</b> и <b>Граммарчеккед</b> объекта <b>Document</b> или <b>Range</b> возвращают <b>значение true</b>.</span><span class="sxs-lookup"><span data-stu-id="03f8e-108">If all the words in the document or range are spelled correctly and are grammatically correct, the <b>Count</b> property for the <b>ProofreadingErrors</b> object returns 0 (zero) and the <b>SpellingChecked</b> and <b>GrammarChecked</b> properties of the <b>Document</b> or <b>Range</b> object return <b>True</b>.</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -37,6 +38,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -54,7 +56,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="b4327-109">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="b4327-109">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <summary><span data-ttu-id="03f8e-109">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="03f8e-109">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -82,7 +85,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="b4327-110">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="b4327-110">Returns the number of items in the specified collection.</span></span></summary>
+        <summary><span data-ttu-id="03f8e-110">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="03f8e-110">Returns the number of items in the specified collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -110,10 +114,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="b4327-111">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="b4327-111">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="03f8e-111">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="03f8e-111">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="b4327-112">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="b4327-112">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="b4327-113">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="b4327-113">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="b4327-114">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="b4327-114">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="b4327-115">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="b4327-115">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="b4327-116">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="b4327-116">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="03f8e-112">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="03f8e-112">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="03f8e-113">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="03f8e-113">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="03f8e-114">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="03f8e-114">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="03f8e-115">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="03f8e-115">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="03f8e-116">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="03f8e-116">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -123,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ProofreadingErrors.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="proofreadingErrors.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -155,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ default[int] { Microsoft::Office::Interop::Word::Range ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -175,8 +181,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index"><span data-ttu-id="b4327-117"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="b4327-117">An <b>Integer</b> indicating the ordinal position of the individual object.</span></span></param>
-        <summary><span data-ttu-id="b4327-118">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="b4327-118">Returns an individual object in a collection.</span></span></summary>
+        <param name="Index"><span data-ttu-id="03f8e-117"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="03f8e-117">An <b>Integer</b> indicating the ordinal position of the individual object.</span></span></param>
+        <summary><span data-ttu-id="03f8e-118">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="03f8e-118">Returns an individual object in a collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -187,6 +193,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -204,7 +211,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="b4327-119">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="b4327-119">Returns an object that represents the parent object of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="03f8e-119">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="03f8e-119">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -215,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ProofreadingErrors.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As WdProofreadingErrorType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdProofreadingErrorType Type { Microsoft::Office::Interop::Word::WdProofreadingErrorType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Interop.Word.WdProofreadingErrorType" Usage="Microsoft.Office.Interop.Word.ProofreadingErrors.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -232,7 +240,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdProofreadingErrorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="b4327-120">Возвращает тип ошибки проверки правописания.</span><span class="sxs-lookup"><span data-stu-id="b4327-120">Returns the type of proofreading error.</span></span></summary>
+        <summary><span data-ttu-id="03f8e-120">Возвращает тип ошибки проверки правописания.</span><span class="sxs-lookup"><span data-stu-id="03f8e-120">Returns the type of proofreading error.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

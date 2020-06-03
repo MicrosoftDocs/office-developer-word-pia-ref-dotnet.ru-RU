@@ -1,9 +1,10 @@
 <Type Name="ListParagraphs" FullName="Microsoft.Office.Interop.Word.ListParagraphs">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f2ed5da4555633a8837f621bb30fd13601729534" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146152" /></Metadata><TypeSignature Language="C#" Value="public interface ListParagraphs : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="57d0102130b9bb46854110335107eedf669654e9" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43925277" /></Metadata><TypeSignature Language="C#" Value="public interface ListParagraphs : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListParagraphs implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListParagraphs" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListParagraphs&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class ListParagraphs : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type ListParagraphs = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -22,12 +23,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="2922f-101">Коллекция <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объектов, представляющих абзацы указанного документа, списка или диапазона, к которым применяется форматирование списка.</span><span class="sxs-lookup"><span data-stu-id="2922f-101">A collection of <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> objects that represents the paragraphs of the specified document, list, or range that have list formatting applied.</span></span></summary>
-    <remarks><para><span data-ttu-id="2922f-102">Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.ListParagraphs" /> свойство, чтобы возвратить коллекцию <b>ListParagraphs</b> .</span><span class="sxs-lookup"><span data-stu-id="2922f-102">Use the <see cref="P:Microsoft.Office.Interop.Word._Document.ListParagraphs" /> property to return the <b>ListParagraphs</b> collection.</span></span></para>
-      <para><span data-ttu-id="2922f-103">Используйте <b>ListParagraphs</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект абзаца с форматированием списка.</span><span class="sxs-lookup"><span data-stu-id="2922f-103">Use <b>ListParagraphs</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single Paragraph object with list formatting.</span></span></para>
-      <para><span data-ttu-id="2922f-104">Абзацы могут иметь два типа форматирования списка.</span><span class="sxs-lookup"><span data-stu-id="2922f-104">Paragraphs can have two types of list formatting.</span></span> <span data-ttu-id="2922f-105">Первый тип включает в себя автоматически добавленный номер или маркер в начале каждого абзаца в списке.</span><span class="sxs-lookup"><span data-stu-id="2922f-105">The first type includes an automatically added number or bullet at the beginning of each paragraph in the list.</span></span> <span data-ttu-id="2922f-106">Второй тип включает поля LISTNUM, которые можно поместить в любом месте абзаца.</span><span class="sxs-lookup"><span data-stu-id="2922f-106">The second type includes LISTNUM fields, which can be placed anywhere inside a paragraph.</span></span> <span data-ttu-id="2922f-107">Для одного абзаца может быть несколько полей LISTNUM.</span><span class="sxs-lookup"><span data-stu-id="2922f-107">There can be more than one LISTNUM field per paragraph.</span></span></para>
-      <para><span data-ttu-id="2922f-108">Чтобы добавить форматирование списка в абзацы, можно использовать метод <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" /> <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" /> , или <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> .</span><span class="sxs-lookup"><span data-stu-id="2922f-108">To add list formatting to paragraphs, you can use the <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" /> , or <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> method.</span></span> <span data-ttu-id="2922f-109">Доступ к этим методам осуществляется через объект <b>ListFormat</b> для указанного диапазона.</span><span class="sxs-lookup"><span data-stu-id="2922f-109">You access these methods through the <b>ListFormat</b> object for a specified range.</span></span></para>
-      <para><span data-ttu-id="2922f-110"><see cref="P:Microsoft.Office.Interop.Word.ListParagraphs.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье.</span><span class="sxs-lookup"><span data-stu-id="2922f-110">The <see cref="P:Microsoft.Office.Interop.Word.ListParagraphs.Count" /> property for this collection in a document returns the number of items in the main story only.</span></span> <span data-ttu-id="2922f-111">Чтобы подсчитать количество элементов в других статьях, используйте <see cref="T:Microsoft.Office.Interop.Word.Range" /> коллекцию с объектом.</span><span class="sxs-lookup"><span data-stu-id="2922f-111">To count items in other stories use the collection with the <see cref="T:Microsoft.Office.Interop.Word.Range" /> object.</span></span></para>
+    <summary><span data-ttu-id="793c4-101">Коллекция <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> объектов, представляющих абзацы указанного документа, списка или диапазона, к которым применяется форматирование списка.</span><span class="sxs-lookup"><span data-stu-id="793c4-101">A collection of <see cref="T:Microsoft.Office.Interop.Word.Paragraph" /> objects that represents the paragraphs of the specified document, list, or range that have list formatting applied.</span></span></summary>
+    <remarks><para><span data-ttu-id="793c4-102">Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.ListParagraphs" /> свойство, чтобы возвратить коллекцию <b>ListParagraphs</b> .</span><span class="sxs-lookup"><span data-stu-id="793c4-102">Use the <see cref="P:Microsoft.Office.Interop.Word._Document.ListParagraphs" /> property to return the <b>ListParagraphs</b> collection.</span></span></para>
+      <para><span data-ttu-id="793c4-103">Используйте <b>ListParagraphs</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект абзаца с форматированием списка.</span><span class="sxs-lookup"><span data-stu-id="793c4-103">Use <b>ListParagraphs</b>(<paramref name="index" />), where <paramref name="index" /> is the index number, to return a single Paragraph object with list formatting.</span></span></para>
+      <para><span data-ttu-id="793c4-104">Абзацы могут иметь два типа форматирования списка.</span><span class="sxs-lookup"><span data-stu-id="793c4-104">Paragraphs can have two types of list formatting.</span></span> <span data-ttu-id="793c4-105">Первый тип включает в себя автоматически добавленный номер или маркер в начале каждого абзаца в списке.</span><span class="sxs-lookup"><span data-stu-id="793c4-105">The first type includes an automatically added number or bullet at the beginning of each paragraph in the list.</span></span> <span data-ttu-id="793c4-106">Второй тип включает поля LISTNUM, которые можно поместить в любом месте абзаца.</span><span class="sxs-lookup"><span data-stu-id="793c4-106">The second type includes LISTNUM fields, which can be placed anywhere inside a paragraph.</span></span> <span data-ttu-id="793c4-107">Для одного абзаца может быть несколько полей LISTNUM.</span><span class="sxs-lookup"><span data-stu-id="793c4-107">There can be more than one LISTNUM field per paragraph.</span></span></para>
+      <para><span data-ttu-id="793c4-108">Чтобы добавить форматирование списка в абзацы, можно использовать <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> метод, <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" /> или <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> .</span><span class="sxs-lookup"><span data-stu-id="793c4-108">To add list formatting to paragraphs, you can use the <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@,System.Object@,System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyBulletDefault(System.Object@)" /> , <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyNumberDefault(System.Object@)" /> , or <see cref="M:Microsoft.Office.Interop.Word.ListFormat.ApplyOutlineNumberDefault(System.Object@)" /> method.</span></span> <span data-ttu-id="793c4-109">Доступ к этим методам осуществляется через объект <b>ListFormat</b> для указанного диапазона.</span><span class="sxs-lookup"><span data-stu-id="793c4-109">You access these methods through the <b>ListFormat</b> object for a specified range.</span></span></para>
+      <para><span data-ttu-id="793c4-110"><see cref="P:Microsoft.Office.Interop.Word.ListParagraphs.Count" />Свойство этой коллекции в документе возвращает количество элементов только в основной статье.</span><span class="sxs-lookup"><span data-stu-id="793c4-110">The <see cref="P:Microsoft.Office.Interop.Word.ListParagraphs.Count" /> property for this collection in a document returns the number of items in the main story only.</span></span> <span data-ttu-id="793c4-111">Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом.</span><span class="sxs-lookup"><span data-stu-id="793c4-111">To count items in other stories use the collection with the <see cref="T:Microsoft.Office.Interop.Word.Range" /> object.</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -37,6 +38,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListParagraphs.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.ListParagraphs.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -54,7 +56,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2922f-112">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="2922f-112">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <summary><span data-ttu-id="793c4-112">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="793c4-112">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListParagraphs.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.ListParagraphs.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -82,7 +85,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2922f-113">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="2922f-113">Returns the number of items in the specified collection.</span></span></summary>
+        <summary><span data-ttu-id="793c4-113">Возвращает количество элементов в указанной коллекции.</span><span class="sxs-lookup"><span data-stu-id="793c4-113">Returns the number of items in the specified collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListParagraphs.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.ListParagraphs.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -110,10 +114,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2922f-114">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="2922f-114">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="793c4-114">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="793c4-114">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="2922f-115">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="2922f-115">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="2922f-116">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="2922f-116">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="2922f-117">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="2922f-117">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="2922f-118">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="2922f-118">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="2922f-119">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="2922f-119">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="793c4-115">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="793c4-115">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="793c4-116">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="793c4-116">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="793c4-117">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="793c4-117">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="793c4-118">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="793c4-118">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="793c4-119">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="793c4-119">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -123,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ListParagraphs.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="listParagraphs.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -155,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListParagraphs.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Paragraph" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Paragraph ^ default[int] { Microsoft::Office::Interop::Word::Paragraph ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Paragraph" Usage="Microsoft.Office.Interop.Word.ListParagraphs.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -175,8 +181,8 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index"><span data-ttu-id="2922f-120"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="2922f-120">An <b>Integer</b> indicating the ordinal position of the individual object.</span></span></param>
-        <summary><span data-ttu-id="2922f-121">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="2922f-121">Returns an individual object in a collection.</span></span></summary>
+        <param name="Index"><span data-ttu-id="793c4-120"><b>Целое число</b> , указывающее порядковый номер отдельного объекта.</span><span class="sxs-lookup"><span data-stu-id="793c4-120">An <b>Integer</b> indicating the ordinal position of the individual object.</span></span></param>
+        <summary><span data-ttu-id="793c4-121">Возвращает отдельный объект в коллекции.</span><span class="sxs-lookup"><span data-stu-id="793c4-121">Returns an individual object in a collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -187,6 +193,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListParagraphs.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.ListParagraphs.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -204,7 +211,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="2922f-122">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="2922f-122">Returns an object that represents the parent object of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="793c4-122">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="793c4-122">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
