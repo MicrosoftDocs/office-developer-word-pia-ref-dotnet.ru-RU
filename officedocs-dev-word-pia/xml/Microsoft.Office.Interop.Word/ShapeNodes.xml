@@ -1,9 +1,10 @@
 <Type Name="ShapeNodes" FullName="Microsoft.Office.Interop.Word.ShapeNodes">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="35df8d05c8a08728b7df796ac68fa68a69de02c2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144003" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeNodes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c2fc3b2804f5f177fa94175681c724162f840aa2" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924538" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeNodes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShapeNodes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ShapeNodes" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShapeNodes&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class ShapeNodes : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type ShapeNodes = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -23,10 +24,10 @@
   </Attributes>
   <Docs>
     <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Word.ShapeNode" /> объектов в указанной полилинии.</summary>
-    <remarks><para>Каждый объект <b>ShapeNode</b> представляет узел между сегментами в полилинии или контрольную точку для криволинейного сегмента полилинии. Можно создать полилинию вручную или с помощью методов <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> и. <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /></para>
+    <remarks><para>Каждый объект <b>ShapeNode</b> представляет узел между сегментами в полилинии или контрольную точку для криволинейного сегмента полилинии. Можно создать полилинию вручную или с помощью <see cref="M:Microsoft.Office.Interop.Word.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> <see cref="M:Microsoft.Office.Interop.Word.InlineShape.ConvertToShape" /> методов и.</para>
       <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Nodes" /> свойство, чтобы возвратить коллекцию <b>ShapeNodes</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод, чтобы создать новый узел и добавить его в коллекцию <b>ShapeNodes</b> .</para>
-      <para>Используйте <b></b>Nodes<paramref name="index" />(), <paramref name="index" /> где — это номер индекса узла, чтобы вернуть один объект <b>ShapeNode</b> .</para>
+      <para>Используйте <b>nodes</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса узла, чтобы вернуть один объект <b>ShapeNode</b> .</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ShapeNodes.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.ShapeNodes.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ShapeNodes.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.ShapeNodes.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ShapeNodes.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.ShapeNodes.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -122,6 +126,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.Delete(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete (Index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete(int Index);" />
+      <MemberSignature Language="F#" Value="abstract member Delete : int -&gt; unit" Usage="shapeNodes.Delete Index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -150,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="shapeNodes.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -181,6 +187,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert([in]int32 Index, [in]valuetype Microsoft.Office.Core.MsoSegmentType SegmentType, [in]valuetype Microsoft.Office.Core.MsoEditingType EditingType, [in]float32 X1, [in]float32 Y1, [in]float32 X2, [in]float32 Y2, [in]float32 X3, [in]float32 Y3) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (Index As Integer, SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, Optional X2 As Single = 0, Optional Y2 As Single = 0, Optional X3 As Single = 0, Optional Y3 As Single = 0)" />
+      <MemberSignature Language="F#" Value="abstract member Insert : int * Microsoft.Office.Core.MsoSegmentType * Microsoft.Office.Core.MsoEditingType * single * single * single * single * single * single -&gt; unit" Usage="shapeNodes.Insert (Index, SegmentType, EditingType, X1, Y1, X2, Y2, X3, Y3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -207,14 +214,14 @@
       </Parameters>
       <Docs>
         <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер узла фигуры, после которого вставляется новый узел.</param>
-        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип линии, соединяющей вставленный узел с соседними узлами.</param>
-        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit для вставленного узла.</param>
-        <param name="X1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
-        <param name="Y1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
-        <param name="X2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="Y2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="X3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="Y3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" /> . Тип линии, соединяющей вставленный узел с соседними узлами.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" /> . Свойство Edit для вставленного узла.</param>
+        <param name="X1">Обязательное <b>одно</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="Y1">Обязательное <b>одно</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый узел — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="X2">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y2">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="X3">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y3">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (измеряется в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
         <summary>Вставляет узел в фигуру полилинии.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -225,6 +232,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ShapeNodes.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As ShapeNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ShapeNode ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::ShapeNode ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.ShapeNode" Usage="Microsoft.Office.Interop.Word.ShapeNodes.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -242,7 +250,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ShapeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -257,6 +265,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ShapeNodes.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.ShapeNodes.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -285,6 +294,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.SetEditingType(System.Int32,Microsoft.Office.Core.MsoEditingType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetEditingType (Index As Integer, EditingType As MsoEditingType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEditingType(int Index, Microsoft::Office::Core::MsoEditingType EditingType);" />
+      <MemberSignature Language="F#" Value="abstract member SetEditingType : int * Microsoft.Office.Core.MsoEditingType -&gt; unit" Usage="shapeNodes.SetEditingType (Index, EditingType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -304,7 +314,7 @@
       </Parameters>
       <Docs>
         <param name="Index">Обязательный атрибут типа <b>Integer</b>. Узел, для которого задается тип редактирования.</param>
-        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit для вершины.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" /> . Свойство Edit для вершины.</param>
         <summary>Задает тип редактирования указанного узла.</summary>
         <remarks><para>Если узел является контрольной точкой для криволинейного сегмента, этот метод задает тип редактирования соседнего узла, который присоединяется к двум сегментам. Обратите внимание, что в зависимости от типа редактирования этот метод может повлиять на положение смежных узлов.</para>
           <para> </para></remarks>
@@ -316,6 +326,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.SetPosition(System.Int32,System.Single,System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetPosition (Index As Integer, X1 As Single, Y1 As Single)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetPosition(int Index, float X1, float Y1);" />
+      <MemberSignature Language="F#" Value="abstract member SetPosition : int * single * single -&gt; unit" Usage="shapeNodes.SetPosition (Index, X1, Y1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -349,6 +360,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ShapeNodes.SetSegmentType(System.Int32,Microsoft.Office.Core.MsoSegmentType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetSegmentType (Index As Integer, SegmentType As MsoSegmentType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetSegmentType(int Index, Microsoft::Office::Core::MsoSegmentType SegmentType);" />
+      <MemberSignature Language="F#" Value="abstract member SetSegmentType : int * Microsoft.Office.Core.MsoSegmentType -&gt; unit" Usage="shapeNodes.SetSegmentType (Index, SegmentType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -368,7 +380,7 @@
       </Parameters>
       <Docs>
         <param name="Index">Обязательный атрибут типа <b>Integer</b>. Узел, для которого задается тип сегмента.</param>
-        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Указывает, является ли сегмент прямым или изогнутым.</param>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" /> . Указывает, является ли сегмент прямым или изогнутым.</param>
         <summary>Задает тип сегмента, который следует за указанным узлом.</summary>
         <remarks><para>Если узел является контрольной точкой для криволинейного сегмента, этот метод задает тип сегмента для этой кривой. Обратите внимание, что это может повлиять на общее число узлов, вставляя или удаляя соседние узлы.</para>
           <para> </para></remarks>

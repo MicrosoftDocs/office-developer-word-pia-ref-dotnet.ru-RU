@@ -1,9 +1,10 @@
 <Type Name="SeriesCollection" FullName="Microsoft.Office.Interop.Word.SeriesCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f6dd45f5fe33b8e5a1ece1fafb9e3ad6bbeab62c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144010" /></Metadata><TypeSignature Language="C#" Value="public interface SeriesCollection : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="31af8dc769c3ee3844f4d8736c89a0106a12c1ac" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924447" /></Metadata><TypeSignature Language="C#" Value="public interface SeriesCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SeriesCollection implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.SeriesCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface SeriesCollection&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class SeriesCollection : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type SeriesCollection = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SeriesCollection._Default(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function _Default (Index As Object) As Series" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::Series ^ _Default(System::Object ^ Index);" />
+      <MemberSignature Language="F#" Value="abstract member _Default : obj -&gt; Microsoft.Office.Interop.Word.Series" Usage="seriesCollection._Default Index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -56,7 +58,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Series" />значение.</returns>
+        <returns>Возвращает значение <see cref="T:Microsoft.Office.Interop.Word.Series" /> .</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -65,6 +67,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Series Add([in]object Source, [in]valuetype Microsoft.Office.Interop.Word.XlRowCol Rowcol, [in]object SeriesLabels, [in]object CategoryLabels, [in]object Replace) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SeriesCollection.Add(System.Object,Microsoft.Office.Interop.Word.XlRowCol,System.Object,System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Source As Object, Optional Rowcol As XlRowCol = Microsoft.Office.Interop.Word.XlRowCol.xlColumns, Optional SeriesLabels As Object, Optional CategoryLabels As Object, Optional Replace As Object) As Series" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * Microsoft.Office.Interop.Word.XlRowCol * obj * obj * obj -&gt; Microsoft.Office.Interop.Word.Series" Usage="seriesCollection.Add (Source, Rowcol, SeriesLabels, CategoryLabels, Replace)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -90,10 +93,10 @@
         <param name="Rowcol">Указывает, находятся ли новые значения в строках или столбцах указанного диапазона.</param>
         <param name="SeriesLabels"><b>Значение true</b> , если первая строка или столбец содержит имя ряда данных. <b>False</b> , если первая строка или столбец содержит первую точку данных ряда. Если этот аргумент опущен, Microsoft Word пытается определить расположение имени ряда на основе содержимого первой строки или столбца.</param>
         <param name="CategoryLabels"><b>Значение true</b> , если первая строка или столбец содержит имена подписей категорий. <b>False</b> , если первая строка или столбец содержит первую точку данных ряда. Если этот аргумент опущен, Microsoft Word пытается определить расположение метки категории на основе содержимого первой строки или столбца.</param>
-        <param name="Replace">Если <paramref name="CategoryLabels" /> параметр <b></b> имеет значение <paramref name="Replace" /> true и имеет <b>значение true</b>, указанные категории заменяют категории, которые в настоящее время существуют для ряда. Если <paramref name="Replace" /> имеет <b>значение false</b>, существующие категории не будут заменены. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Replace">Если <paramref name="CategoryLabels" /> параметр имеет <b>значение true</b> и <paramref name="Replace" /> имеет <b>значение true</b>, указанные категории заменяют категории, которые в настоящее время существуют для ряда. Если <paramref name="Replace" /> имеет <b>значение false</b>, существующие категории не будут заменены. Значение по умолчанию — <b>False</b>.</param>
         <summary>Добавляет один или несколько новых рядов в коллекцию.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Word.SeriesCollection" /> Объект, представляющий новый ряд.</returns>
-        <remarks><para>Этот метод фактически не возвращает <see cref="T:Microsoft.Office.Interop.Word.Series" /> объект, как указано в обозревателе объектов.</para>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.SeriesCollection" />Объект, представляющий новый ряд.</returns>
+        <remarks><para>Этот метод фактически не возвращает объект, <see cref="T:Microsoft.Office.Interop.Word.Series" /> как указано в обозревателе объектов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -103,6 +106,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SeriesCollection.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : obj" Usage="Microsoft.Office.Interop.Word.SeriesCollection.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -121,7 +125,7 @@
       </ReturnValue>
       <Docs>
         <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Word._Application" /> объект, представляющий приложение Microsoft Word. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
-        <value><b>Application (приложение</b> ) (см. выше)</value>
+        <value><b>Приложение</b> (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -131,6 +135,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SeriesCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.SeriesCollection.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -159,6 +164,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SeriesCollection.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.SeriesCollection.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -187,6 +193,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Extend([in]object Source, [in]object Rowcol, [in]object CategoryLabels) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SeriesCollection.Extend(System.Object,System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function Extend (Source As Object, Optional Rowcol As Object, Optional CategoryLabels As Object) As Object" />
+      <MemberSignature Language="F#" Value="abstract member Extend : obj * obj * obj -&gt; obj" Usage="seriesCollection.Extend (Source, Rowcol, CategoryLabels)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -207,7 +214,7 @@
       </Parameters>
       <Docs>
         <param name="Source">Новые данные, добавляемые в <see cref="T:Microsoft.Office.Interop.Word.SeriesCollection" /> объект, представленные в виде ссылки на диапазон в стиле a1.</param>
-        <param name="Rowcol">Указывает, находятся ли новые значения в строках или столбцах данного источника диапазона. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.XlRowCol" /> констант: <see cref="F:Microsoft.Office.Interop.Word.XlRowCol.xlRows" /> или. <see cref="F:Microsoft.Office.Interop.Word.XlRowCol.xlColumns" /> Если этот аргумент опущен, Microsoft Word пытается определить, где находятся значения: по размеру и по ориентации для выбранного диапазона или по размерам массива.</param>
+        <param name="Rowcol">Указывает, находятся ли новые значения в строках или столбцах данного источника диапазона. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.XlRowCol" /> констант: <see cref="F:Microsoft.Office.Interop.Word.XlRowCol.xlRows" /> или <see cref="F:Microsoft.Office.Interop.Word.XlRowCol.xlColumns" /> . Если этот аргумент опущен, Microsoft Word пытается определить, где находятся значения: по размеру и по ориентации для выбранного диапазона или по размерам массива.</param>
         <param name="CategoryLabels"><b>Значение true</b> , если первая строка или столбец содержит имена подписей категорий. <b>Значение false</b> , если первая строка или столбец содержит первую точку данных ряда. Если этот аргумент опущен, Microsoft Word пытается определить расположение метки категории на основе содержимого первой строки или столбца.</param>
         <summary>Добавляет новые точки данных в коллекцию существующих рядов.</summary>
         <returns>To be added.</returns>
@@ -221,6 +228,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SeriesCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="seriesCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -243,7 +251,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
+        <returns>Возвращает значение <see cref="T:System.Collections.IEnumerator" /> .</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -253,6 +261,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SeriesCollection.Item(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Object) As Series" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Series ^ default[System::Object ^] { Microsoft::Office::Interop::Word::Series ^ get(System::Object ^ Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.Series" Usage="Microsoft.Office.Interop.Word.SeriesCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -275,7 +284,7 @@
       <Docs>
         <param name="Index">Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Series" />значение.</value>
+        <value>Возвращает значение <see cref="T:Microsoft.Office.Interop.Word.Series" /> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -285,6 +294,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.SeriesCollection.NewSeries" />
       <MemberSignature Language="VB.NET" Value="Public Function NewSeries () As Series" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::Series ^ NewSeries();" />
+      <MemberSignature Language="F#" Value="abstract member NewSeries : unit -&gt; Microsoft.Office.Interop.Word.Series" Usage="seriesCollection.NewSeries " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -301,7 +311,7 @@
       <Parameters />
       <Docs>
         <summary>Создает новую серию.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Word.Series" /> Объект, представляющий новый ряд.</returns>
+        <returns><see cref="T:Microsoft.Office.Interop.Word.Series" />Объект, представляющий новый ряд.</returns>
         <remarks><para>Этот метод недоступен для диаграмм сводных диаграмм.</para>
           <para> </para></remarks>
       </Docs>
@@ -312,6 +322,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.SeriesCollection.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.SeriesCollection.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

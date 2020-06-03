@@ -1,9 +1,10 @@
 <Type Name="ListTemplate" FullName="Microsoft.Office.Interop.Word.ListTemplate">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1139c365cea882b428ac0f0075b3c20e4756cad2" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144507" /></Metadata><TypeSignature Language="C#" Value="public interface ListTemplate" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="16047960fe1fb0381a7a0dd0beb15ba49ebb8c81" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43925270" /></Metadata><TypeSignature Language="C#" Value="public interface ListTemplate" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListTemplate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListTemplate" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListTemplate" />
   <TypeSignature Language="C++ CLI" Value="public interface class ListTemplate" />
+  <TypeSignature Language="F#" Value="type ListTemplate = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -19,13 +20,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет один шаблон списка, включающий все форматирование, которое определяет список.</summary>
-    <remarks><para>Объект <b>ListTemplate</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекции. Каждый из семи форматов (не включая None), найденных на каждой из трех вкладок диалогового окна маркеры и нумерация соответствует объекту шаблона списка. Доступ к этим стандартным шаблонам списков можно получить <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> из трех объектов <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> в коллекции. Документы и шаблоны также могут содержать коллекции шаблонов списков.</para>
-      <para>Используйте <b>ListTemplates</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 7, чтобы получить один шаблон списка из коллекции списков.</para>
+    <remarks><para>Объект <b>ListTemplate</b> является членом <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> коллекции. Каждый из семи форматов (не включая None), найденных на каждой из трех вкладок диалогового окна маркеры и нумерация соответствует объекту шаблона списка. Доступ к этим стандартным шаблонам списков можно получить из трех <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объектов в <see cref="T:Microsoft.Office.Interop.Word.ListGalleries" /> коллекции. Документы и шаблоны также могут содержать коллекции шаблонов списков.</para>
+      <para>Используйте <b>ListTemplates</b>( <paramref name="index" /> ), где <paramref name="index" /> — это число от 1 до 7, чтобы получить один шаблон списка из коллекции списков.</para>
       <para>
-        <b>Note</b>: некоторые свойства и методы, <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" />, например, не будут работать с шаблонами списков, к которым можно получить доступ из коллекции списков. Вы можете изменить эти шаблоны списков, но не можете изменить тип коллекции списков (<b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>).</para>
+        <b>Note</b>: некоторые свойства и методы, <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> , например, не будут работать с шаблонами списков, к которым можно получить доступ из коллекции списков. Вы можете изменить эти шаблоны списков, но не можете изменить тип коллекции списков (<b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>).</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> метод, чтобы добавить шаблон списка в коллекцию шаблонов списков в документе или шаблоне.</para>
       <para>Чтобы определить, содержит ли указанный шаблон списка форматирование, встроенное в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойство с объектом <b>ListGallery</b> . Чтобы сбросить форматирование к исходному формату списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
-      <para>После возвращения объекта <b>ListTemplate</b> используйте <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объект. С помощью объекта <b>ListLevel</b> вы можете получить доступ ко всем свойствам форматирования для указанного уровня списка, например <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />,,, и. <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /></para>
+      <para>После возвращения объекта <b>ListTemplate</b> используйте <b>ListLevels</b>( <paramref name="index" /> ), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объект. С помощью объекта <b>ListLevel</b> вы можете получить доступ ко всем свойствам форматирования для указанного уровня списка, например,,,, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" /> и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> метод для преобразования шаблона списка с несколькими уровнями в шаблон с одним уровнем.</para>
       <para> </para></remarks>
   </Docs>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.ListTemplate.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -63,6 +65,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.ListTemplate Convert([in]object&amp; Level) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Convert (Optional ByRef Level As Object) As ListTemplate" />
+      <MemberSignature Language="F#" Value="abstract member Convert : obj -&gt; Microsoft.Office.Interop.Word.ListTemplate" Usage="listTemplate.Convert Level" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -77,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplate</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Level" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Level" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Level">Необязательный <b>объект</b>. Уровень, используемый для форматирования нового списка. При преобразовании многоуровневого списка в список с одним уровнем этот аргумент может быть числом от 1 до 9. При преобразовании списка из одного уровня в многоуровневый список 1 является единственным допустимым значением. Если этот аргумент опущен, значение по умолчанию — 1.</param>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.ListTemplate.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -123,6 +127,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.ListLevels" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListLevels As ListLevels" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ListLevels ^ ListLevels { Microsoft::Office::Interop::Word::ListLevels ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ListLevels : Microsoft.Office.Interop.Word.ListLevels" Usage="Microsoft.Office.Interop.Word.ListTemplate.ListLevels" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -140,7 +145,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListLevels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекцию, которая представляет все уровни для указанного <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" />объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListLevels" /> коллекцию, которая представляет все уровни для указанного объекта <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -151,6 +156,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Office.Interop.Word.ListTemplate.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -182,6 +188,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.OutlineNumbered" />
       <MemberSignature Language="VB.NET" Value="Public Property OutlineNumbered As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OutlineNumbered { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.OutlineNumbered : bool with get, set" Usage="Microsoft.Office.Interop.Word.ListTemplate.OutlineNumbered" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -202,7 +209,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> указанный объект имеет Многоуровневый номер.</summary>
+        <summary><b>Значение true</b> , если указанный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект имеет Многоуровневый номер.</summary>
         <value>To be added.</value>
         <remarks><para>Если задать для этого свойства <b>значение false</b> , шаблон списка будет преобразован в одноуровневый список, использующий форматирование первого уровня.</para>
           <para>Невозможно задать это свойство для объекта <b>ListTemplate</b> , возвращаемого из <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объекта.</para>
@@ -215,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplate.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.ListTemplate.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

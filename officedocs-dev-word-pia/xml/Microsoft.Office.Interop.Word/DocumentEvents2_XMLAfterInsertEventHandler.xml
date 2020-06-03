@@ -1,9 +1,10 @@
 <Type Name="DocumentEvents2_XMLAfterInsertEventHandler" FullName="Microsoft.Office.Interop.Word.DocumentEvents2_XMLAfterInsertEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6097d72a5b18382fc09cfcc7be258d3904b7e849" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144598" /></Metadata><TypeSignature Language="C#" Value="public delegate void DocumentEvents2_XMLAfterInsertEventHandler(XMLNode NewXMLNode, bool InUndoRedo);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cc6ce2f3b50f584341940a1a7598c60b52926762" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924384" /></Metadata><TypeSignature Language="C#" Value="public delegate void DocumentEvents2_XMLAfterInsertEventHandler(XMLNode NewXMLNode, bool InUndoRedo);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DocumentEvents2_XMLAfterInsertEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DocumentEvents2_XMLAfterInsertEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub DocumentEvents2_XMLAfterInsertEventHandler(NewXMLNode As XMLNode, InUndoRedo As Boolean)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void DocumentEvents2_XMLAfterInsertEventHandler(XMLNode ^ NewXMLNode, bool InUndoRedo);" />
+  <TypeSignature Language="F#" Value="type DocumentEvents2_XMLAfterInsertEventHandler = delegate of XMLNode * bool -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -29,9 +30,9 @@
   <Docs>
     <param name="NewXMLNode"><see cref="T:Microsoft.Office.Interop.Word.XMLNode" />. Недавно добавленный узел XML.</param>
     <param name="InUndoRedo"><b>Логическое значение</b>. <b>Значение true</b> указывает, что действие было выполнено с помощью функции отмены и возврата в Microsoft Word.</param>
-    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLAfterInsert" /> для события. Событие <b>ксмлафтеринсерт</b> возникает, когда пользователь добавляет новый элемент XML в документ.</summary>
+    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий для <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLAfterInsert" /> события. Событие <b>ксмлафтеринсерт</b> возникает, когда пользователь добавляет новый элемент XML в документ.</summary>
     <remarks><para>Если <paramref name="InUndoRedo" /> параметр имеет <b>значение true</b>, никогда не изменяйте XML в документе, пока выполняются события ксмлафтеринсерт и ксмлбефоределете. </para>
-      <para>Если для параметра Инундоредо задано значение false, вы можете вставить и удалить XML-код в документе, но будьте внимательны, <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLBeforeDelete" /> чтобы <b>ксмлафтеринсерт</b> и события не пытались отменить друг друга, что приведет к бесконечному циклу. Можно запретить бесконечные циклы, используя глобальную переменную <b>Boolean</b> и проверить ее на начало обработчика ошибок.</para>
+      <para>Если для параметра Инундоредо задано значение false, вы можете вставить и удалить XML-код в документе, но будьте внимательны, чтобы <b>ксмлафтеринсерт</b> и <see cref="E:Microsoft.Office.Interop.Word.DocumentEvents2_Event.XMLBeforeDelete" /> события не пытались отменить друг друга, что приведет к бесконечному циклу. Можно запретить бесконечные циклы, используя глобальную переменную <b>Boolean</b> и проверить ее на начало обработчика ошибок.</para>
       <para> </para></remarks>
   </Docs>
 </Type>

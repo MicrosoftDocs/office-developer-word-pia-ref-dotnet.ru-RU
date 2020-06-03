@@ -1,9 +1,10 @@
 <Type Name="Research" FullName="Microsoft.Office.Interop.Word.Research">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="09c7f2651f0df71c7549952dfe0bc63e7b6d09f1" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147685" /></Metadata><TypeSignature Language="C#" Value="public interface Research" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="017cbaec16c90778cdf08d855fc49b41296a33d1" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924573" /></Metadata><TypeSignature Language="C#" Value="public interface Research" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Research" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Research" />
   <TypeSignature Language="VB.NET" Value="Public Interface Research" />
   <TypeSignature Language="C++ CLI" Value="public interface class Research" />
+  <TypeSignature Language="F#" Value="type Research = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Research.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Research.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -56,6 +58,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Research.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Research.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -77,7 +80,7 @@
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
         <remarks><para>Если объект был создан в Microsoft Word, <see cref="P:Microsoft.Office.Interop.Word.Research.Creator" /> свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -87,6 +90,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Research.FavoriteService" />
       <MemberSignature Language="VB.NET" Value="Public Property FavoriteService As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FavoriteService { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FavoriteService : string with get, set" Usage="Microsoft.Office.Interop.Word.Research.FavoriteService" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Research.IsResearchService(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsResearchService (ServiceID As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsResearchService(System::String ^ ServiceID);" />
+      <MemberSignature Language="F#" Value="abstract member IsResearchService : string -&gt; bool" Usage="research.IsResearchService ServiceID" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -138,7 +143,7 @@
       </Parameters>
       <Docs>
         <param name="ServiceID">Указывает идентификатор GUID, определяющий службу поиска.</param>
-        <summary>Указывает, соответствует ли идентификатору GUID <paramref name="ServiceID" /> , указанному в параметре, текущей настроенной службе.</summary>
+        <summary>Указывает, соответствует ли идентификатору GUID, указанному в <paramref name="ServiceID" /> параметре, текущей настроенной службе.</summary>
         <returns><b>Boolean</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Research.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Research.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -176,6 +182,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Query([in]string ServiceID, [in]string QueryString, [in]valuetype Microsoft.Office.Interop.Word.WdLanguageID QueryLanguage, [in]bool UseSelection, [in]bool LaunchQuery) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Research.Query(System.String,System.String,Microsoft.Office.Interop.Word.WdLanguageID,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Query (ServiceID As String, Optional QueryString As String = &quot;&quot;, Optional QueryLanguage As WdLanguageID = Microsoft.Office.Interop.Word.WdLanguageID.wdLanguageNone, Optional UseSelection As Boolean = false, Optional LaunchQuery As Boolean = false) As Object" />
+      <MemberSignature Language="F#" Value="abstract member Query : string * string * Microsoft.Office.Interop.Word.WdLanguageID * bool * bool -&gt; obj" Usage="research.Query (ServiceID, QueryString, QueryLanguage, UseSelection, LaunchQuery)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -213,6 +220,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Research.SetLanguagePair(Microsoft.Office.Interop.Word.WdLanguageID,Microsoft.Office.Interop.Word.WdLanguageID)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetLanguagePair (LanguageFrom As WdLanguageID, LanguageTo As WdLanguageID) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ SetLanguagePair(Microsoft::Office::Interop::Word::WdLanguageID LanguageFrom, Microsoft::Office::Interop::Word::WdLanguageID LanguageTo);" />
+      <MemberSignature Language="F#" Value="abstract member SetLanguagePair : Microsoft.Office.Interop.Word.WdLanguageID * Microsoft.Office.Interop.Word.WdLanguageID -&gt; obj" Usage="research.SetLanguagePair (LanguageFrom, LanguageTo)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

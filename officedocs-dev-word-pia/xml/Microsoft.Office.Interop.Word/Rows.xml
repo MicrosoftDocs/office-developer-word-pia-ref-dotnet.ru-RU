@@ -1,9 +1,10 @@
 <Type Name="Rows" FullName="Microsoft.Office.Interop.Word.Rows">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="692ba17be6d8254b9f6cc3026ef3363c48d90ec8" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144045" /></Metadata><TypeSignature Language="C#" Value="public interface Rows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6eb9ced3762b82d0c29fb348cd977c835c42c6aa" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924489" /></Metadata><TypeSignature Language="C#" Value="public interface Rows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Rows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Rows" />
   <TypeSignature Language="VB.NET" Value="Public Interface Rows&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Rows : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Rows = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,7 +26,7 @@
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Row" /> объектов, представляющих строки таблицы в указанном выделении, диапазоне или таблице.</summary>
     <remarks><para>Используйте свойство <b>Rows</b> , чтобы возвратить коллекцию <b>Rows</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Rows.Add(System.Object@)" /> метод, чтобы добавить строку в таблицу.</para>
-      <para>Используйте <b>строки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Row</b> . Номер индекса представляет положение строки в выделенном фрагменте, диапазоне или таблице.</para>
+      <para>Используйте <b>строки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Row</b> . Номер индекса представляет положение строки в выделенном фрагменте, диапазоне или таблице.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -34,6 +35,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Row Add([in]object&amp; BeforeRow) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.Add(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Optional ByRef BeforeRow As Object) As Row" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj -&gt; Microsoft.Office.Interop.Word.Row" Usage="rows.Add BeforeRow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -48,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Row</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="BeforeRow" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="BeforeRow" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="BeforeRow">Необязательный <b>объект</b>. Объект <b>Row</b> , представляющий строку, которая будет отображаться сразу после новой строки.</param>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Alignment" />
       <MemberSignature Language="VB.NET" Value="Public Property Alignment As WdRowAlignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdRowAlignment Alignment { Microsoft::Office::Interop::Word::WdRowAlignment get(); void set(Microsoft::Office::Interop::Word::WdRowAlignment value); };" />
+      <MemberSignature Language="F#" Value="member this.Alignment : Microsoft.Office.Interop.Word.WdRowAlignment with get, set" Usage="Microsoft.Office.Interop.Word.Rows.Alignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -105,6 +108,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.AllowBreakAcrossPages" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowBreakAcrossPages As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int AllowBreakAcrossPages { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowBreakAcrossPages : int with get, set" Usage="Microsoft.Office.Interop.Word.Rows.AllowBreakAcrossPages" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -138,6 +142,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.AllowOverlap" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowOverlap As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int AllowOverlap { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowOverlap : int with get, set" Usage="Microsoft.Office.Interop.Word.Rows.AllowOverlap" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -162,7 +167,7 @@
         <value>To be added.</value>
         <remarks><para>Это свойство возвращает <b>вдундефинед</b> , если указанные строки включают в себя перекрывающиеся строки и неперекрывающиеся строки.</para>
           <para>Для свойства можно задать значение <b>true</b> или <b>false</b>.</para>
-          <para>Если для параметра <b></b> <b>аллововерлап</b> задано <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> значение true, устанавливается <b>значение true</b>. <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> Значение <b>false</b> также задает для <b>аллововерлап</b> <b>значение false</b>.</para>
+          <para>Если для параметра <b>аллововерлап</b> задано <b>значение true</b> , устанавливается <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> <b>значение true</b>. Значение <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> <b>false</b> также задает для <b>аллововерлап</b> <b>значение false</b>.</para>
           <para>Так как HTML не поддерживает перекрывающиеся таблицы или фигуры, <b>аллововерлап</b> игнорируется в режиме веб-документа.</para>
           <para> </para></remarks>
       </Docs>
@@ -173,6 +178,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Rows.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -201,6 +207,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Borders" />
       <MemberSignature Language="VB.NET" Value="Public Property Borders As Borders" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Borders ^ Borders { Microsoft::Office::Interop::Word::Borders ^ get(); void set(Microsoft::Office::Interop::Word::Borders ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Borders : Microsoft.Office.Interop.Word.Borders with get, set" Usage="Microsoft.Office.Interop.Word.Rows.Borders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -231,6 +238,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Range ConvertToText([in]object&amp; Separator, [in]object&amp; NestedTables) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.ConvertToText(System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function ConvertToText (Optional ByRef Separator As Object, Optional ByRef NestedTables As Object) As Range" />
+      <MemberSignature Language="F#" Value="abstract member ConvertToText : obj * obj -&gt; Microsoft.Office.Interop.Word.Range" Usage="rows.ConvertToText (Separator, NestedTables)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -245,12 +253,12 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Separator" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="NestedTables" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Separator" Type="System.Object" RefType="ref" />
+        <Parameter Name="NestedTables" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Separator">Необязательный <b>объект</b>. Символ, ограничивающий преобразуемые столбцы (знаки абзаца разделяют преобразованные строки). Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> следующих констант:<b>вдсепаратебикоммас</b><b>вдсепаратебидефаултлистсепаратор</b><b>вдсепаратебипараграфс</b><b>вдсепаратебитабс</b> (по умолчанию)</param>
-        <param name="NestedTables">Необязательный <b>объект</b>. <b>Имеет значение true</b> , если вложенные таблицы преобразуются в текст. Этот аргумент игнорируется, <paramref name="Separator" /> если не <b>вдсепаратебипараграфс</b>. Значение по умолчанию — <b>True</b>.</param>
+        <param name="Separator">Необязательный <b>объект</b>. Символ, ограничивающий преобразуемые столбцы (знаки абзаца разделяют преобразованные строки). Может быть любой из <see cref="T:Microsoft.Office.Interop.Word.WdTableFieldSeparator" /> следующих констант<b>: вдсепаратебикоммас</b><b>вдсепаратебидефаултлистсепаратор</b><b>вдсепаратебипараграфс</b><b>вдсепаратебитабс</b> (по умолчанию)</param>
+        <param name="NestedTables">Необязательный <b>объект</b>. <b>Имеет значение true</b> , если вложенные таблицы преобразуются в текст. Этот аргумент игнорируется, если <paramref name="Separator" /> не <b>вдсепаратебипараграфс</b>. Значение по умолчанию — <b>True</b>.</param>
         <summary>Преобразует таблицу в текст и возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий текст с разделителями.</summary>
         <returns>To be added.</returns>
         <remarks><para>Когда вы применяете метод <b>конверттотекст</b> к <see cref="T:Microsoft.Office.Interop.Word.Table" /> объекту, объект удаляется. Чтобы сохранить ссылку на преобразованное содержимое таблицы, необходимо присвоить <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, возвращаемый методом <b>конверттотекст</b> , новой переменной объекта.</para>
@@ -262,6 +270,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Range ConvertToTextOld([in]object&amp; Separator) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.ConvertToTextOld(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function ConvertToTextOld (Optional ByRef Separator As Object) As Range" />
+      <MemberSignature Language="F#" Value="abstract member ConvertToTextOld : obj -&gt; Microsoft.Office.Interop.Word.Range" Usage="rows.ConvertToTextOld Separator" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -279,7 +288,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Range</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Separator" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Separator" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Separator">To be added.</param>
@@ -294,6 +303,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Rows.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -322,6 +332,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Rows.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -352,6 +363,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="rows.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -377,6 +389,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.DistanceBottom" />
       <MemberSignature Language="VB.NET" Value="Public Property DistanceBottom As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float DistanceBottom { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.DistanceBottom : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.DistanceBottom" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -399,7 +412,7 @@
       <Docs>
         <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и нижним краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+        <remarks><para>Это свойство не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -409,6 +422,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.DistanceLeft" />
       <MemberSignature Language="VB.NET" Value="Public Property DistanceLeft As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float DistanceLeft { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.DistanceLeft : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.DistanceLeft" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -431,7 +445,7 @@
       <Docs>
         <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и левым краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+        <remarks><para>Это свойство не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -441,6 +455,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.DistanceRight" />
       <MemberSignature Language="VB.NET" Value="Public Property DistanceRight As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float DistanceRight { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.DistanceRight : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.DistanceRight" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -463,7 +478,7 @@
       <Docs>
         <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и правым краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+        <remarks><para>Это свойство не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -473,6 +488,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.DistanceTop" />
       <MemberSignature Language="VB.NET" Value="Public Property DistanceTop As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float DistanceTop { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.DistanceTop : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.DistanceTop" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -495,7 +511,7 @@
       <Docs>
         <summary>Возвращает или задает расстояние (в пунктах) между текстом документа и верхним краем указанной таблицы.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+        <remarks><para>Это свойство не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -505,6 +521,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.DistributeHeight" />
       <MemberSignature Language="VB.NET" Value="Public Sub DistributeHeight ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DistributeHeight();" />
+      <MemberSignature Language="F#" Value="abstract member DistributeHeight : unit -&gt; unit" Usage="rows.DistributeHeight " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -530,6 +547,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.First" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property First As Row" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Row ^ First { Microsoft::Office::Interop::Word::Row ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.First : Microsoft.Office.Interop.Word.Row" Usage="Microsoft.Office.Interop.Word.Rows.First" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -558,6 +576,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="rows.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -590,6 +609,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.HeadingFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property HeadingFormat As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int HeadingFormat { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.HeadingFormat : int with get, set" Usage="Microsoft.Office.Interop.Word.Rows.HeadingFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -624,6 +644,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Height" />
       <MemberSignature Language="VB.NET" Value="Public Property Height As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Height { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Height : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.Height" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -646,7 +667,7 @@
       <Docs>
         <summary>Возвращает или задает высоту указанной строки или строк в таблице.</summary>
         <value>To be added.</value>
-        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Rows.HeightRule" /> свойство указанных строк имеет значение <b>вдровхеигхтауто</b>, <b>Height</b> возвращает <b>вдундефинед</b>; Установка свойства <b>Height</b> устанавливает для <b>хеигхтруле</b> значение <b>вдровхеигхтатлеаст</b>.</para>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Rows.HeightRule" /> свойство указанных строк имеет значение <b>вдровхеигхтауто</b>, <b>Height</b> возвращает <b>вдундефинед</b>; установка свойства <b>Height</b> устанавливает значение <b>хеигхтруле</b> для <b>вдровхеигхтатлеаст</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -656,6 +677,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.HeightRule" />
       <MemberSignature Language="VB.NET" Value="Public Property HeightRule As WdRowHeightRule" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdRowHeightRule HeightRule { Microsoft::Office::Interop::Word::WdRowHeightRule get(); void set(Microsoft::Office::Interop::Word::WdRowHeightRule value); };" />
+      <MemberSignature Language="F#" Value="member this.HeightRule : Microsoft.Office.Interop.Word.WdRowHeightRule with get, set" Usage="Microsoft.Office.Interop.Word.Rows.HeightRule" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -698,6 +720,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.HorizontalPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property HorizontalPosition As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float HorizontalPosition { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.HorizontalPosition : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.HorizontalPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -720,8 +743,8 @@
       <Docs>
         <summary>Возвращает или задает расстояние по горизонтали между краем строк и элементом, указанным <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeHorizontalPosition" /> свойством.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>хоризоналпоситион</b> может быть числом, указывающим единицу измерения в пунктах, или может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdTablePosition" /> констант: <b>вдтаблелефт</b>, <b>вдтаблеригхт</b>, <b>вдтаблецентер</b>, <b>вдтаблеинсиде</b>или <b> Вдтаблеаутсиде</b>.</para>
-          <para>Это свойство не оказывает никакого действия, <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> если имеет <b>значение false</b>.</para>
+        <remarks><para>Свойство <b>хоризоналпоситион</b> может быть числом, указывающим единицу измерения в пунктах, или может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdTablePosition" /> констант: <b>вдтаблелефт</b>, <b>Вдтаблеригхт</b>, <b>вдтаблецентер</b>, <b>вдтаблеинсиде</b>или <b>вдтаблеаутсиде</b>.</para>
+          <para>Это свойство не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" /> имеет <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -731,6 +754,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Row" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Row ^ default[int] { Microsoft::Office::Interop::Word::Row ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Row" Usage="Microsoft.Office.Interop.Word.Rows.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -763,6 +787,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Last" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Last As Row" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Row ^ Last { Microsoft::Office::Interop::Word::Row ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Last : Microsoft.Office.Interop.Word.Row" Usage="Microsoft.Office.Interop.Word.Rows.Last" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -780,7 +805,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Row</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает последний элемент в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> коллекции в качестве <see cref="T:Microsoft.Office.Interop.Word.Row" /> объекта.</summary>
+        <summary>Возвращает последний элемент в коллекции в <see cref="T:Microsoft.Office.Interop.Word.Rows" /> качестве <see cref="T:Microsoft.Office.Interop.Word.Row" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -791,6 +816,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.LeftIndent" />
       <MemberSignature Language="VB.NET" Value="Public Property LeftIndent As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float LeftIndent { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.LeftIndent : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.LeftIndent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -822,6 +848,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.NestingLevel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestingLevel As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NestingLevel { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.NestingLevel : int" Usage="Microsoft.Office.Interop.Word.Rows.NestingLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -851,6 +878,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Rows.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -879,6 +907,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.RelativeHorizontalPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property RelativeHorizontalPosition As WdRelativeHorizontalPosition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdRelativeHorizontalPosition RelativeHorizontalPosition { Microsoft::Office::Interop::Word::WdRelativeHorizontalPosition get(); void set(Microsoft::Office::Interop::Word::WdRelativeHorizontalPosition value); };" />
+      <MemberSignature Language="F#" Value="member this.RelativeHorizontalPosition : Microsoft.Office.Interop.Word.WdRelativeHorizontalPosition with get, set" Usage="Microsoft.Office.Interop.Word.Rows.RelativeHorizontalPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -924,6 +953,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.RelativeVerticalPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property RelativeVerticalPosition As WdRelativeVerticalPosition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdRelativeVerticalPosition RelativeVerticalPosition { Microsoft::Office::Interop::Word::WdRelativeVerticalPosition get(); void set(Microsoft::Office::Interop::Word::WdRelativeVerticalPosition value); };" />
+      <MemberSignature Language="F#" Value="member this.RelativeVerticalPosition : Microsoft.Office.Interop.Word.WdRelativeVerticalPosition with get, set" Usage="Microsoft.Office.Interop.Word.Rows.RelativeVerticalPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -969,6 +999,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.Select" />
       <MemberSignature Language="VB.NET" Value="Public Sub Select ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Select();" />
+      <MemberSignature Language="F#" Value="abstract member Select : unit -&gt; unit" Usage="rows.Select " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -985,7 +1016,7 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный объект.</summary>
-        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство.</para>
+        <remarks><para>После использования этого метода <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> для работы с выбранными элементами используйте свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -995,6 +1026,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.SetHeight(System.Single,Microsoft.Office.Interop.Word.WdRowHeightRule)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetHeight (RowHeight As Single, HeightRule As WdRowHeightRule)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetHeight(float RowHeight, Microsoft::Office::Interop::Word::WdRowHeightRule HeightRule);" />
+      <MemberSignature Language="F#" Value="abstract member SetHeight : single * Microsoft.Office.Interop.Word.WdRowHeightRule -&gt; unit" Usage="rows.SetHeight (RowHeight, HeightRule)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1014,7 +1046,7 @@
       </Parameters>
       <Docs>
         <param name="RowHeight">Обязательное <b>одно</b>. Высота строки или строк в пунктах.</param>
-        <param name="HeightRule">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" />. Правило для определения высоты указанных строк. Может быть одной из следующих констант <b>вдровхеигхтруле</b> : <b>вдровхеигхтатлеаст</b><b>вдровхеигхтексактли</b><b>вдровхеигхтауто</b></param>
+        <param name="HeightRule">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRowHeightRule" /> . Правило для определения высоты указанных строк. Может быть одной из следующих констант <b>вдровхеигхтруле</b> : <b>вдровхеигхтатлеаст</b><b>вдровхеигхтексактли</b><b>вдровхеигхтауто</b></param>
         <summary>Задает высоту строк таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1025,6 +1057,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Rows.SetLeftIndent(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetLeftIndent (LeftIndent As Single, RulerStyle As WdRulerStyle)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetLeftIndent(float LeftIndent, Microsoft::Office::Interop::Word::WdRulerStyle RulerStyle);" />
+      <MemberSignature Language="F#" Value="abstract member SetLeftIndent : single * Microsoft.Office.Interop.Word.WdRulerStyle -&gt; unit" Usage="rows.SetLeftIndent (LeftIndent, RulerStyle)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1044,7 +1077,7 @@
       </Parameters>
       <Docs>
         <param name="LeftIndent">Обязательное <b>одно</b>. Расстояние (в пунктах) между текущим левым краем заданных строк или строк и требуемым левым краем.</param>
-        <param name="RulerStyle">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" />. Управляет тем, как Microsoft Word настраивает таблицу при изменении отступа слева. Может быть одной из следующих констант <b>вдрулерстиле</b> : <b>вдаджустноне</b> — регулирует левый край строки или строк, сохраняя ширину всех столбцов путем их сдвига влево или вправо. Это значение используется по умолчанию. <b>вдаджустсамевидс</b> — настраивает левую границу первого столбца, сохраняя положение правого края таблицы, устанавливая ширину всех ячеек в заданных строках или строках с одинаковым значением. <b>вдаджустфирстколумн</b> — настраивает левый край только первого столбца, сохраняя позиции других столбцов и правого края таблицы. <b>вдаджустпропортионал</b> — настраивает левый край первого столбца, сохраняя положение правого края таблицы пропорционально, пропорционально изменив ширину всех ячеек в указанной строке или строках.</param>
+        <param name="RulerStyle">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> . Управляет тем, как Microsoft Word настраивает таблицу при изменении отступа слева. Может быть одной из следующих констант <b>вдрулерстиле</b> : <b>вдаджустноне</b> — регулирует левый край строки или строк, сохраняя ширину всех столбцов путем их сдвига влево или вправо. Это значение используется по умолчанию. <b>вдаджустсамевидс</b> — настраивает левую границу первого столбца, сохраняя положение правого края таблицы, устанавливая ширину всех ячеек в заданных строках или строках с одинаковым значением. <b>вдаджустфирстколумн</b> — настраивает левый край только первого столбца, сохраняя позиции других столбцов и правого края таблицы. <b>вдаджустпропортионал</b> — настраивает левый край первого столбца, сохраняя положение правого края таблицы пропорционально, пропорционально изменив ширину всех ячеек в указанной строке или строках.</param>
         <summary>Задает отступ для строки или строк в таблице.</summary>
         <remarks><para>Описанное выше поведение <b>вдрулерстиле</b> относится к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в таких случаях метод <b>сетлефтиндент</b> следует использовать с осторожностью.</para>
           <para> </para></remarks>
@@ -1056,6 +1089,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.Shading" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shading As Shading" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Shading ^ Shading { Microsoft::Office::Interop::Word::Shading ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Shading : Microsoft.Office.Interop.Word.Shading" Usage="Microsoft.Office.Interop.Word.Rows.Shading" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1084,6 +1118,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.SpaceBetweenColumns" />
       <MemberSignature Language="VB.NET" Value="Public Property SpaceBetweenColumns As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float SpaceBetweenColumns { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.SpaceBetweenColumns : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.SpaceBetweenColumns" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1115,6 +1150,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.TableDirection" />
       <MemberSignature Language="VB.NET" Value="Public Property TableDirection As WdTableDirection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdTableDirection TableDirection { Microsoft::Office::Interop::Word::WdTableDirection get(); void set(Microsoft::Office::Interop::Word::WdTableDirection value); };" />
+      <MemberSignature Language="F#" Value="member this.TableDirection : Microsoft.Office.Interop.Word.WdTableDirection with get, set" Usage="Microsoft.Office.Interop.Word.Rows.TableDirection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1155,6 +1191,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.VerticalPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property VerticalPosition As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float VerticalPosition { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.VerticalPosition : single with get, set" Usage="Microsoft.Office.Interop.Word.Rows.VerticalPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1177,7 +1214,7 @@
       <Docs>
         <summary>Возвращает или задает расстояние по вертикали между краем строк и элементом, указанным <see cref="P:Microsoft.Office.Interop.Word.Rows.RelativeVerticalPosition" /> свойством.</summary>
         <value>To be added.</value>
-        <remarks><para>Возвращаемое значение может быть числом, указывающим единицу измерения в пунктах, или может быть <see cref="T:Microsoft.Office.Interop.Word.WdFramePosition" /> любой допустимой константы.</para>
+        <remarks><para>Возвращаемое значение может быть числом, указывающим единицу измерения в пунктах, или может быть любой допустимой <see cref="T:Microsoft.Office.Interop.Word.WdFramePosition" /> константы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1187,6 +1224,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Rows.WrapAroundText" />
       <MemberSignature Language="VB.NET" Value="Public Property WrapAroundText As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int WrapAroundText { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.WrapAroundText : int with get, set" Usage="Microsoft.Office.Interop.Word.Rows.WrapAroundText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1211,7 +1249,7 @@
         <value>To be added.</value>
         <remarks><para>Возвращает <b>вдундефинед</b> , если для некоторых из указанных строк включена функция переноса.</para>
           <para>Для свойства можно задать значение <b>true</b> или <b>false</b>.</para>
-          <para>Если задать <b></b> для свойства Врапараундтекст <b>значение false</b> , <see cref="P:Microsoft.Office.Interop.Word.Rows.AllowOverlap" /> свойству также присваивается <b>значение false</b>. Если задать <b></b> для свойства Аллововерлап <b>значение true</b> , свойство <b>врапараундтекст</b> также будет установлено равным <b>true</b>.</para>
+          <para>Если задать <b>WrapAroundText</b> для свойства Врапараундтекст <b>значение false</b> , свойству также присваивается <see cref="P:Microsoft.Office.Interop.Word.Rows.AllowOverlap" /> <b>значение false</b>. Если задать <b>AllowOverlap</b> для свойства Аллововерлап <b>значение true</b> , свойство <b>врапараундтекст</b> также будет установлено равным <b>true</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

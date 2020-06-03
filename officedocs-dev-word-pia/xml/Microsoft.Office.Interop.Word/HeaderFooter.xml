@@ -1,9 +1,10 @@
 <Type Name="HeaderFooter" FullName="Microsoft.Office.Interop.Word.HeaderFooter">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a143517844b5f5cef61ab0c3f18904999b976958" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146733" /></Metadata><TypeSignature Language="C#" Value="public interface HeaderFooter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cf317e38d3b61ea6e8f6e3cfad892ab0f6159bd0" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924020" /></Metadata><TypeSignature Language="C#" Value="public interface HeaderFooter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HeaderFooter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.HeaderFooter" />
   <TypeSignature Language="VB.NET" Value="Public Interface HeaderFooter" />
   <TypeSignature Language="C++ CLI" Value="public interface class HeaderFooter" />
+  <TypeSignature Language="F#" Value="type HeaderFooter = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
   <Docs>
     <summary>Представляет один верхний или нижний колонтитул.</summary>
     <remarks><para>Объект <b>HeaderFooter</b> является членом <see cref="T:Microsoft.Office.Interop.Word.HeadersFooters" /> коллекции. Коллекция <b>HeadersFooters</b> включает все верхние и нижние колонтитулы в указанном разделе документа.</para>
-      <para>Используйте <b></b>верхние<paramref name="index" />или нижние колонтитулы<paramref name="index" />(), <paramref name="index" /> где — одна из <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" /> констант (<b>вдхеадерфутеревенпажес</b>, <b>вдхеадерфутерфирстпаже</b>или <b>вдхеадерфутерпримари</b>), чтобы вернуть один объект <b></b> <b> Объект HeaderFooter</b> .</para>
+      <para>Используйте <b>верхние</b> <paramref name="index" /> или <b>нижние колонтитулы</b>( <paramref name="index" /> ), где <paramref name="index" /> — одна из <see cref="T:Microsoft.Office.Interop.Word.WdHeaderFooterIndex" /> констант (<b>вдхеадерфутеревенпажес</b>, <b>вдхеадерфутерфирстпаже</b>или <b>вдхеадерфутерпримари</b>), чтобы вернуть один объект <b>HeaderFooter</b> .</para>
       <para>Вы также можете вернуть один объект <b>HeaderFooter</b> , используя <see cref="P:Microsoft.Office.Interop.Word.Selection.HeaderFooter" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объектом.</para>
       <para>
         <b>Note</b>: невозможно добавить объекты <b>HeaderFooter</b> в коллекцию <b>HeadersFooters</b> .</para>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Exists" />
       <MemberSignature Language="VB.NET" Value="Public Property Exists As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Exists { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Exists : bool with get, set" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Exists" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -114,9 +118,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> указанный объект существует.</summary>
+        <summary><b>Значение true</b> , если указанный <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объект существует.</summary>
         <value>To be added.</value>
-        <remarks><para>Основной верхний и нижний колонтитулы по умолчанию существуют во всех новых документах. Используйте этот метод, чтобы определить, существует ли верхний или нижний колонтитул первой или нечетной страницы. Кроме того, можно использовать <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> свойство <see cref="P:Microsoft.Office.Interop.Word.PageSetup.OddAndEvenPagesHeaderFooter" /> или для возврата или задания количества верхних и нижних колонтитулов в указанном документе или разделе.</para>
+        <remarks><para>Основной верхний и нижний колонтитулы по умолчанию существуют во всех новых документах. Используйте этот метод, чтобы определить, существует ли верхний или нижний колонтитул первой или нечетной страницы. Кроме того, можно использовать <see cref="P:Microsoft.Office.Interop.Word.PageSetup.DifferentFirstPageHeaderFooter" /> <see cref="P:Microsoft.Office.Interop.Word.PageSetup.OddAndEvenPagesHeaderFooter" /> свойство или для возврата или задания количества верхних и нижних колонтитулов в указанном документе или разделе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -126,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Index" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As WdHeaderFooterIndex" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdHeaderFooterIndex Index { Microsoft::Office::Interop::Word::WdHeaderFooterIndex get(); };" />
+      <MemberSignature Language="F#" Value="member this.Index : Microsoft.Office.Interop.Word.WdHeaderFooterIndex" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Index" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -154,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.IsHeader" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsHeader As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsHeader { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsHeader : bool" Usage="Microsoft.Office.Interop.Word.HeaderFooter.IsHeader" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -171,7 +177,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> указанный объект является заголовком.</summary>
+        <summary><b>Значение true</b> , если указанный <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объект является заголовком.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,6 +188,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" />
       <MemberSignature Language="VB.NET" Value="Public Property LinkToPrevious As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool LinkToPrevious { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.LinkToPrevious : bool with get, set" Usage="Microsoft.Office.Interop.Word.HeaderFooter.LinkToPrevious" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -215,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.PageNumbers" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PageNumbers As PageNumbers" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::PageNumbers ^ PageNumbers { Microsoft::Office::Interop::Word::PageNumbers ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PageNumbers : Microsoft.Office.Interop.Word.PageNumbers" Usage="Microsoft.Office.Interop.Word.HeaderFooter.PageNumbers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -243,6 +251,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -271,6 +280,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Range" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Range As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ default { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Range : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Range" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -300,6 +310,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.HeaderFooter.Shapes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shapes As Shapes" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Shapes ^ Shapes { Microsoft::Office::Interop::Word::Shapes ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Shapes : Microsoft.Office.Interop.Word.Shapes" Usage="Microsoft.Office.Interop.Word.HeaderFooter.Shapes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -319,7 +330,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекцию, которая представляет все <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объекты в заданном заголовке или нижнем колонтитуле. Эта коллекция может содержать чертежи, фигуры, изображения, объекты OLE, элементы управления ActiveX, текстовые объекты и выноски.</summary>
         <value>To be added.</value>
-        <remarks><para>При применении к <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекту свойство Shapes <b></b> возвращает все объекты <b>Shape</b> , найденные во всех верхних и нижних колонтитулах документа.</para>
+        <remarks><para>При применении к <see cref="T:Microsoft.Office.Interop.Word.HeaderFooter" /> объекту свойство <b>Shapes</b> возвращает все объекты <b>Shape</b> , найденные во всех верхних и нижних колонтитулах документа.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,9 +1,10 @@
 <Type Name="MailMerge" FullName="Microsoft.Office.Interop.Word.MailMerge">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6af9ade1b4ba89c72ee01b49396483c2c4e1bb64" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146187" /></Metadata><TypeSignature Language="C#" Value="public interface MailMerge" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="24894ad53e4886da7790c54fc1177addf6f42e1d" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43925249" /></Metadata><TypeSignature Language="C#" Value="public interface MailMerge" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract MailMerge" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.MailMerge" />
   <TypeSignature Language="VB.NET" Value="Public Interface MailMerge" />
   <TypeSignature Language="C++ CLI" Value="public interface class MailMerge" />
+  <TypeSignature Language="F#" Value="type MailMerge = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.MailMerge.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.Check" />
       <MemberSignature Language="VB.NET" Value="Public Sub Check ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Check();" />
+      <MemberSignature Language="F#" Value="abstract member Check : unit -&gt; unit" Usage="mailMerge.Check " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateDataSource([in]object&amp; Name, [in]object&amp; PasswordDocument, [in]object&amp; WritePasswordDocument, [in]object&amp; HeaderRecord, [in]object&amp; MSQuery, [in]object&amp; SQLStatement, [in]object&amp; SQLStatement1, [in]object&amp; Connection, [in]object&amp; LinkToSource) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.CreateDataSource(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CreateDataSource (Optional ByRef Name As Object, Optional ByRef PasswordDocument As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef HeaderRecord As Object, Optional ByRef MSQuery As Object, Optional ByRef SQLStatement As Object, Optional ByRef SQLStatement1 As Object, Optional ByRef Connection As Object, Optional ByRef LinkToSource As Object)" />
+      <MemberSignature Language="F#" Value="abstract member CreateDataSource : obj * obj * obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.CreateDataSource (Name, PasswordDocument, WritePasswordDocument, HeaderRecord, MSQuery, SQLStatement, SQLStatement1, Connection, LinkToSource)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -95,26 +99,26 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Name" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="HeaderRecord" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="MSQuery" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement1" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Connection" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="LinkToSource" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Name" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="HeaderRecord" Type="System.Object" RefType="ref" />
+        <Parameter Name="MSQuery" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement1" Type="System.Object" RefType="ref" />
+        <Parameter Name="Connection" Type="System.Object" RefType="ref" />
+        <Parameter Name="LinkToSource" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">Необязательный <b>объект</b>. Путь и имя файла для нового источника данных.</param>
         <param name="PasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для открытия нового источника данных.</param>
         <param name="WritePasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для сохранения изменений в источнике данных.</param>
         <param name="HeaderRecord">Необязательный <b>объект</b>. Имена полей для записи заголовка. Если этот аргумент опущен, используется стандартная запись заголовка: "Title, FirstName, LastName, JobTitle, Company, Address1, Address2, City, штат, PostalCode, Country, HomePhone, Воркфоне". Чтобы разделить имена полей, используйте разделитель элементов списка, указанный в региональных параметрах панели управления.</param>
-        <param name="MSQuery">Необязательный <b>объект</b>. <b>Значение true</b> для запуска Microsoft Query (если он установлен). Аргументы <paramref name="Name" />, <paramref name="PasswordDocument" />и, <paramref name="HeaderRecord" /> а также игнорируются.</param>
+        <param name="MSQuery">Необязательный <b>объект</b>. <b>Значение true</b> для запуска Microsoft Query (если он установлен). <paramref name="Name" />Аргументы, <paramref name="PasswordDocument" /> и, а также <paramref name="HeaderRecord" /> игнорируются.</param>
         <param name="SQLStatement">Необязательный <b>объект</b>. Определяет параметры запроса для получения данных.</param>
         <param name="SQLStatement1">Необязательный <b>объект</b>. Если длина строки запроса превышает 255 символов, <paramref name="SQLStatement" /> задает первую часть строки и <paramref name="SQLStatement1" /> задает вторую часть.</param>
-        <param name="Connection">Необязательный <b>объект</b>. Диапазон, в котором будет выполняться запрос, <paramref name="SQLStatement" /> указанный в параметре. Способ указания диапазона зависит от способа получения данных. Например: при получении данных через ODBC необходимо указать строку подключения. При получении данных из Microsoft Excel с помощью динамического обмена данными (DDE) вы указываете именованный диапазон. <b>Безопасность</b>  Динамический обмен данными (DDE) это старая небезопасная технология. Если это возможно, используйте более безопасную альтернативу DDE. При получении данных из Microsoft Access указывается слово "Table" или "Query", за которым следует имя таблицы или запроса.</param>
-        <param name="LinkToSource">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы выполнить запрос, <paramref name="Connection" /> заданный и <paramref name="SQLStatement" /> при каждом открытии основного документа.</param>
+        <param name="Connection">Необязательный <b>объект</b>. Диапазон, в котором будет выполняться запрос, указанный в параметре <paramref name="SQLStatement" /> . Способ указания диапазона зависит от способа получения данных. Например: при получении данных через ODBC необходимо указать строку подключения. При получении данных из Microsoft Excel с помощью динамического обмена данными (DDE) вы указываете именованный диапазон. <b>Безопасность</b>  Динамический обмен данными (DDE) это старая небезопасная технология. Если это возможно, используйте более безопасную альтернативу DDE. При получении данных из Microsoft Access указывается слово "Table" или "Query", за которым следует имя таблицы или запроса.</param>
+        <param name="LinkToSource">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы выполнить запрос, заданный <paramref name="Connection" /> и при <paramref name="SQLStatement" /> каждом открытии основного документа.</param>
         <summary>Создает документ Microsoft Word, в котором используется таблица для хранения данных слияния.</summary>
         <remarks><para>Новый источник данных присоединяется к указанному документу, который становится основным документом, если он еще не существует.</para>
           <para>Избегайте использования в приложениях жестко заданных паролей. Если в процедуре требуется пароль, запросите пароль у пользователя, сохраните его в переменной, а затем используйте эту переменную в коде.</para>
@@ -126,6 +130,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateHeaderSource([in]string Name, [in]object&amp; PasswordDocument, [in]object&amp; WritePasswordDocument, [in]object&amp; HeaderRecord) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.CreateHeaderSource(System.String,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CreateHeaderSource (Name As String, Optional ByRef PasswordDocument As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef HeaderRecord As Object)" />
+      <MemberSignature Language="F#" Value="abstract member CreateHeaderSource : string * obj * obj * obj -&gt; unit" Usage="mailMerge.CreateHeaderSource (Name, PasswordDocument, WritePasswordDocument, HeaderRecord)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -141,9 +146,9 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="HeaderRecord" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="HeaderRecord" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Путь и имя файла для нового источника заголовков.</param>
@@ -163,6 +168,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.MailMerge.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -193,6 +199,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.DataSource" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataSource As MailMergeDataSource" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::MailMergeDataSource ^ DataSource { Microsoft::Office::Interop::Word::MailMergeDataSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataSource : Microsoft.Office.Interop.Word.MailMergeDataSource" Usage="Microsoft.Office.Interop.Word.MailMerge.DataSource" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -221,6 +228,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.Destination" />
       <MemberSignature Language="VB.NET" Value="Public Property Destination As WdMailMergeDestination" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdMailMergeDestination Destination { Microsoft::Office::Interop::Word::WdMailMergeDestination get(); void set(Microsoft::Office::Interop::Word::WdMailMergeDestination value); };" />
+      <MemberSignature Language="F#" Value="member this.Destination : Microsoft.Office.Interop.Word.WdMailMergeDestination with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.Destination" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -265,6 +273,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.EditDataSource" />
       <MemberSignature Language="VB.NET" Value="Public Sub EditDataSource ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EditDataSource();" />
+      <MemberSignature Language="F#" Value="abstract member EditDataSource : unit -&gt; unit" Usage="mailMerge.EditDataSource " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -294,6 +303,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.EditHeaderSource" />
       <MemberSignature Language="VB.NET" Value="Public Sub EditHeaderSource ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EditHeaderSource();" />
+      <MemberSignature Language="F#" Value="abstract member EditHeaderSource : unit -&gt; unit" Usage="mailMerge.EditHeaderSource " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -320,6 +330,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.EditMainDocument" />
       <MemberSignature Language="VB.NET" Value="Public Sub EditMainDocument ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EditMainDocument();" />
+      <MemberSignature Language="F#" Value="abstract member EditMainDocument : unit -&gt; unit" Usage="mailMerge.EditMainDocument " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -345,6 +356,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute([in]object&amp; Pause) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.Execute(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Execute (Optional ByRef Pause As Object)" />
+      <MemberSignature Language="F#" Value="abstract member Execute : obj -&gt; unit" Usage="mailMerge.Execute Pause" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -359,7 +371,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Pause" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Pause" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Pause">Необязательный <b>объект</b>. <b>Значение true</b> для Microsoft Word приостанавливает и отображает диалоговое окно устранения неполадок, если обнаружена ошибка слияния почты; <b>Значение false</b> , чтобы сообщать об ошибках в новом документе.</param>
@@ -373,6 +385,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.Fields" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Fields As MailMergeFields" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::MailMergeFields ^ Fields { Microsoft::Office::Interop::Word::MailMergeFields ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Fields : Microsoft.Office.Interop.Word.MailMergeFields" Usage="Microsoft.Office.Interop.Word.MailMerge.Fields" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -401,6 +414,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.HighlightMergeFields" />
       <MemberSignature Language="VB.NET" Value="Public Property HighlightMergeFields As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HighlightMergeFields { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HighlightMergeFields : bool with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.HighlightMergeFields" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -433,6 +447,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.MailAddressFieldName" />
       <MemberSignature Language="VB.NET" Value="Public Property MailAddressFieldName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MailAddressFieldName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MailAddressFieldName : string with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.MailAddressFieldName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -464,6 +479,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.MailAsAttachment" />
       <MemberSignature Language="VB.NET" Value="Public Property MailAsAttachment As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool MailAsAttachment { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.MailAsAttachment : bool with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.MailAsAttachment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -496,6 +512,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.MailFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property MailFormat As WdMailMergeMailFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdMailMergeMailFormat MailFormat { Microsoft::Office::Interop::Word::WdMailMergeMailFormat get(); void set(Microsoft::Office::Interop::Word::WdMailMergeMailFormat value); };" />
+      <MemberSignature Language="F#" Value="member this.MailFormat : Microsoft.Office.Interop.Word.WdMailMergeMailFormat with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.MailFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -524,7 +541,7 @@
             <b>вдмаилформастмл</b> Отправляет документы электронной почты с слиянием в формате HTML.</para>
           <para>
             <b>вдмаилформатплаинтекст</b> Отправка документов электронной почты слиянием с использованием обычного текста.</para>
-          <para>Свойство <b>MailFormat</b> игнорируется, если для <see cref="P:Microsoft.Office.Interop.Word.MailMerge.MailAsAttachment" /> свойства задано <b>значение true</b>.</para>
+          <para>Свойство <b>MailFormat</b> игнорируется, если <see cref="P:Microsoft.Office.Interop.Word.MailMerge.MailAsAttachment" /> для свойства задано <b>значение true</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -534,6 +551,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.MailSubject" />
       <MemberSignature Language="VB.NET" Value="Public Property MailSubject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MailSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MailSubject : string with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.MailSubject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -565,6 +583,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.MainDocumentType" />
       <MemberSignature Language="VB.NET" Value="Public Property MainDocumentType As WdMailMergeMainDocType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdMailMergeMainDocType MainDocumentType { Microsoft::Office::Interop::Word::WdMailMergeMainDocType get(); void set(Microsoft::Office::Interop::Word::WdMailMergeMainDocType value); };" />
+      <MemberSignature Language="F#" Value="member this.MainDocumentType : Microsoft.Office.Interop.Word.WdMailMergeMainDocType with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.MainDocumentType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -621,6 +640,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenDataSource([in]string Name, [in]object&amp; Format, [in]object&amp; ConfirmConversions, [in]object&amp; ReadOnly, [in]object&amp; LinkToSource, [in]object&amp; AddToRecentFiles, [in]object&amp; PasswordDocument, [in]object&amp; PasswordTemplate, [in]object&amp; Revert, [in]object&amp; WritePasswordDocument, [in]object&amp; WritePasswordTemplate, [in]object&amp; Connection, [in]object&amp; SQLStatement, [in]object&amp; SQLStatement1, [in]object&amp; OpenExclusive, [in]object&amp; SubType) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.OpenDataSource(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OpenDataSource (Name As String, Optional ByRef Format As Object, Optional ByRef ConfirmConversions As Object, Optional ByRef ReadOnly As Object, Optional ByRef LinkToSource As Object, Optional ByRef AddToRecentFiles As Object, Optional ByRef PasswordDocument As Object, Optional ByRef PasswordTemplate As Object, Optional ByRef Revert As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef WritePasswordTemplate As Object, Optional ByRef Connection As Object, Optional ByRef SQLStatement As Object, Optional ByRef SQLStatement1 As Object, Optional ByRef OpenExclusive As Object, Optional ByRef SubType As Object)" />
+      <MemberSignature Language="F#" Value="abstract member OpenDataSource : string * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.OpenDataSource (Name, Format, ConfirmConversions, ReadOnly, LinkToSource, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate, Connection, SQLStatement, SQLStatement1, OpenExclusive, SubType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -636,39 +656,39 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="Format" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ConfirmConversions" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ReadOnly" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="LinkToSource" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="AddToRecentFiles" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Revert" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Connection" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement1" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="OpenExclusive" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SubType" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Format" Type="System.Object" RefType="ref" />
+        <Parameter Name="ConfirmConversions" Type="System.Object" RefType="ref" />
+        <Parameter Name="ReadOnly" Type="System.Object" RefType="ref" />
+        <Parameter Name="LinkToSource" Type="System.Object" RefType="ref" />
+        <Parameter Name="AddToRecentFiles" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Revert" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Connection" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement1" Type="System.Object" RefType="ref" />
+        <Parameter Name="OpenExclusive" Type="System.Object" RefType="ref" />
+        <Parameter Name="SubType" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Имя файла источника данных. Можно указать файл Microsoft Query (qry) вместо указания источника данных, строки подключения и строки запроса.</param>
-        <param name="Format">Необязательный <b>объект</b>. Конвертер файлов, используемый для открытия документа. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> констант. Чтобы указать формат внешнего файла, используйте <see cref="P:Microsoft.Office.Interop.Word.FileConverter.OpenFormat" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектом, чтобы определить значение, которое будет использоваться с этим аргументом. <b>Вдопенформат</b> может быть одной из следующих констант:<b>вдопенформаталлворд</b><b>вдопенформатауто Default.</b> <b>вдопенформатдокумент</b> <b>вдопенформатенкодедтекст</b> <b>вдопенформатртф</b> <b>вдопенформаттемплате</b> <b>вдопенформаттекст</b> <b>вдопенформатуникодетекст</b> <b>вдопенформатвебпажес</b> <b>вдопенформатксмл</b></param>
+        <param name="Format">Необязательный <b>объект</b>. Конвертер файлов, используемый для открытия документа. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> констант. Чтобы указать формат внешнего файла, используйте <see cref="P:Microsoft.Office.Interop.Word.FileConverter.OpenFormat" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектом, чтобы определить значение, которое будет использоваться с этим аргументом.<b> Вдопенформат</b> может быть одной из следующих констант:<b>Вдопенформаталлворд</b><b>вдопенформатауто Default.</b> <b>вдопенформатдокумент</b><b>вдопенформатенкодедтекст</b><b>вдопенформатртф</b><b>вдопенформаттемплате</b><b>wdOpenFormatText</b><b>wdOpenFormatUnicodeText</b><b>wdOpenFormatWebPages</b><b>wdOpenFormatXML</b></param>
         <param name="ConfirmConversions">Необязательный <b>объект</b>. <b>Значение true</b> для отображения диалогового окна преобразования файла, если он не является форматом Microsoft Word.</param>
         <param name="ReadOnly">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы открыть источник данных на основе только для чтения.</param>
-        <param name="LinkToSource">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы выполнить запрос, <paramref name="Connection" /> заданный и <paramref name="SQLStatement" /> при каждом открытии основного документа.</param>
+        <param name="LinkToSource">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы выполнить запрос, заданный <paramref name="Connection" /> и при <paramref name="SQLStatement" /> каждом открытии основного документа.</param>
         <param name="AddToRecentFiles">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить имя файла в список недавно использовавшихся файлов в нижней части меню файл.</param>
         <param name="PasswordDocument">Необязательный <b>объект</b>. Пароль, используемый для открытия источника данных. (См. примечания ниже).</param>
         <param name="PasswordTemplate">Необязательный <b>объект</b>. Пароль, используемый для открытия шаблона. (См. примечания ниже).</param>
-        <param name="Revert">Необязательный <b>объект</b>. Определяет, что происходит <paramref name="Name" /> , если это имя файла открытого документа. <b>Значение true</b> для отмены всех несохраненных изменений в открытом документе и повторного открытия файла; <b>Значение false</b> , чтобы активировать открытый документ.</param>
+        <param name="Revert">Необязательный <b>объект</b>. Определяет, что происходит, если <paramref name="Name" /> это имя файла открытого документа. <b>Значение true</b> для отмены всех несохраненных изменений в открытом документе и повторного открытия файла; <b>Значение false</b> , чтобы активировать открытый документ.</param>
         <param name="WritePasswordDocument">Необязательный <b>объект</b>. Пароль, используемый для сохранения изменений в документе. (См. примечания ниже).</param>
         <param name="WritePasswordTemplate">Необязательный объект. Пароль, используемый для сохранения изменений в шаблоне. (См. примечания ниже).</param>
-        <param name="Connection">Необязательный <b>объект</b>. Диапазон, в котором выполняется запрос, указанный <paramref name="SQLStatement" /> в параметре. (См. примечания ниже). Способ указания диапазона зависит от способа получения данных. Например: при получении данных с помощью ODBC необходимо указать строку подключения. При получении данных из Microsoft Excel с помощью динамического обмена данными (DDE) вы указываете именованный диапазон. Динамический обмен данными (DDE) это старая небезопасная технология. Если это возможно, используйте более безопасную альтернативу DDE. При получении данных из Microsoft Access указывается слово "Table" или "Query", за которым следует имя таблицы или запроса.</param>
+        <param name="Connection">Необязательный <b>объект</b>. Диапазон, в котором выполняется запрос, указанный в параметре <paramref name="SQLStatement" /> . (См. примечания ниже). Способ указания диапазона зависит от способа получения данных. Например: при получении данных с помощью ODBC необходимо указать строку подключения. При получении данных из Microsoft Excel с помощью динамического обмена данными (DDE) вы указываете именованный диапазон. Динамический обмен данными (DDE) это старая небезопасная технология. Если это возможно, используйте более безопасную альтернативу DDE. При получении данных из Microsoft Access указывается слово "Table" или "Query", за которым следует имя таблицы или запроса.</param>
         <param name="SQLStatement">Необязательный <b>объект</b>. Определяет параметры запроса для получения данных. (См. примечания ниже).</param>
         <param name="SQLStatement1">Необязательный <b>объект</b>. Если длина строки запроса превышает 255 символов, <paramref name="SQLStatement" /> задает первую часть строки и <paramref name="SQLStatement1" /> задает вторую часть. (См. примечания ниже).</param>
         <param name="OpenExclusive">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы открыть только монопольный доступ.</param>
-        <param name="SubType">Необязательный <b>объект</b>. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdMergeSubType" /> констант: Вдмержесубтипеакцесс 1WdMergeSubTypeOAL 2WdMergeSubTypeOLEDBText 5WdMergeSubTypeOLEDBWord 3wdMergeSubTypeOther 0WdMergeSubTypeOutlook 6wdMergeSubTypeWord 7wdMergeSubTypeWord2000 8wdMergeSubTypeWorks 4</param>
+        <param name="SubType">Необязательный <b>объект</b>. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdMergeSubType" /> констант: Вдмержесубтипеакцесс 1WdMergeSubTypeOAL 2WdMergeSubTypeOLEDBText 5WdMergeSubTypeOLEDBWord 3WdMergeSubTypeOther 0wdMergeSubTypeOutlook 6wdMergeSubTypeWord 7WdMergeSubTypeWord2000 8wdMergeSubTypeWorks 4</param>
         <summary>Присоединяет источник данных к указанному документу, который становится основным документом, если он еще не существует.</summary>
         <remarks><para>Чтобы определить подключение ODBC и строки запроса, задайте параметры запроса вручную и используйте <see cref="P:Microsoft.Office.Interop.Word.MailMergeDataSource.QueryString" /> свойство, чтобы вернуть строку подключения. В приведенной ниже таблице перечислены некоторые из часто используемых ключевых слов SQL.</para>
           <list type="table">
@@ -704,6 +724,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenDataSource2000([in]string Name, [in]object&amp; Format, [in]object&amp; ConfirmConversions, [in]object&amp; ReadOnly, [in]object&amp; LinkToSource, [in]object&amp; AddToRecentFiles, [in]object&amp; PasswordDocument, [in]object&amp; PasswordTemplate, [in]object&amp; Revert, [in]object&amp; WritePasswordDocument, [in]object&amp; WritePasswordTemplate, [in]object&amp; Connection, [in]object&amp; SQLStatement, [in]object&amp; SQLStatement1) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.OpenDataSource2000(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OpenDataSource2000 (Name As String, Optional ByRef Format As Object, Optional ByRef ConfirmConversions As Object, Optional ByRef ReadOnly As Object, Optional ByRef LinkToSource As Object, Optional ByRef AddToRecentFiles As Object, Optional ByRef PasswordDocument As Object, Optional ByRef PasswordTemplate As Object, Optional ByRef Revert As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef WritePasswordTemplate As Object, Optional ByRef Connection As Object, Optional ByRef SQLStatement As Object, Optional ByRef SQLStatement1 As Object)" />
+      <MemberSignature Language="F#" Value="abstract member OpenDataSource2000 : string * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.OpenDataSource2000 (Name, Format, ConfirmConversions, ReadOnly, LinkToSource, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate, Connection, SQLStatement, SQLStatement1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -722,19 +743,19 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="Format" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ConfirmConversions" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ReadOnly" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="LinkToSource" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="AddToRecentFiles" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Revert" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Connection" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="SQLStatement1" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Format" Type="System.Object" RefType="ref" />
+        <Parameter Name="ConfirmConversions" Type="System.Object" RefType="ref" />
+        <Parameter Name="ReadOnly" Type="System.Object" RefType="ref" />
+        <Parameter Name="LinkToSource" Type="System.Object" RefType="ref" />
+        <Parameter Name="AddToRecentFiles" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Revert" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Connection" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement" Type="System.Object" RefType="ref" />
+        <Parameter Name="SQLStatement1" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">To be added.</param>
@@ -760,6 +781,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenHeaderSource([in]string Name, [in]object&amp; Format, [in]object&amp; ConfirmConversions, [in]object&amp; ReadOnly, [in]object&amp; AddToRecentFiles, [in]object&amp; PasswordDocument, [in]object&amp; PasswordTemplate, [in]object&amp; Revert, [in]object&amp; WritePasswordDocument, [in]object&amp; WritePasswordTemplate, [in]object&amp; OpenExclusive) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.OpenHeaderSource(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OpenHeaderSource (Name As String, Optional ByRef Format As Object, Optional ByRef ConfirmConversions As Object, Optional ByRef ReadOnly As Object, Optional ByRef AddToRecentFiles As Object, Optional ByRef PasswordDocument As Object, Optional ByRef PasswordTemplate As Object, Optional ByRef Revert As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef WritePasswordTemplate As Object, Optional ByRef OpenExclusive As Object)" />
+      <MemberSignature Language="F#" Value="abstract member OpenHeaderSource : string * obj * obj * obj * obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.OpenHeaderSource (Name, Format, ConfirmConversions, ReadOnly, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate, OpenExclusive)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -775,26 +797,26 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="Format" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ConfirmConversions" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ReadOnly" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="AddToRecentFiles" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Revert" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="OpenExclusive" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Format" Type="System.Object" RefType="ref" />
+        <Parameter Name="ConfirmConversions" Type="System.Object" RefType="ref" />
+        <Parameter Name="ReadOnly" Type="System.Object" RefType="ref" />
+        <Parameter Name="AddToRecentFiles" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Revert" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="OpenExclusive" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Имя файла источника заголовков.</param>
-        <param name="Format">Необязательный <b>объект</b>. Конвертер файлов, используемый для открытия документа. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> констант. Чтобы указать формат внешнего файла, используйте <see cref="P:Microsoft.Office.Interop.Word.FileConverter.OpenFormat" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектом, чтобы определить значение, которое будет использоваться с этим аргументом. <b>Вдопенформат</b> может быть одной из следующих констант:<b>вдопенформаталлворд</b><b>вдопенформатауто Default.</b> <b>вдопенформатдокумент</b> <b>вдопенформатенкодедтекст</b> <b>вдопенформатртф</b> <b>вдопенформаттемплате</b> <b>вдопенформаттекст</b> <b>вдопенформатуникодетекст</b> <b>вдопенформатвебпажес</b> <b>вдопенформатксмл</b></param>
+        <param name="Format">Необязательный <b>объект</b>. Конвертер файлов, используемый для открытия документа. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdOpenFormat" /> констант. Чтобы указать формат внешнего файла, используйте <see cref="P:Microsoft.Office.Interop.Word.FileConverter.OpenFormat" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.FileConverter" /> объектом, чтобы определить значение, которое будет использоваться с этим аргументом.<b> Вдопенформат</b> может быть одной из следующих констант:<b>Вдопенформаталлворд</b><b>вдопенформатауто Default.</b> <b>вдопенформатдокумент</b><b>вдопенформатенкодедтекст</b><b>вдопенформатртф</b><b>вдопенформаттемплате</b><b>wdOpenFormatText</b><b>wdOpenFormatUnicodeText</b><b>wdOpenFormatWebPages</b><b>wdOpenFormatXML</b></param>
         <param name="ConfirmConversions">Необязательный <b>объект</b>. <b>Значение true</b> для отображения диалогового окна преобразования файла, если он не является форматом Microsoft Word.</param>
         <param name="ReadOnly">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы открыть источник заголовка на основе только для чтения.</param>
         <param name="AddToRecentFiles">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить имя файла в список недавно использовавшихся файлов в нижней части меню файл.</param>
         <param name="PasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для открытия документа источника заголовков. (См. примечания ниже).</param>
         <param name="PasswordTemplate">Необязательный <b>объект</b>. Пароль, необходимый для открытия шаблона источника заголовков. (См. примечания ниже).</param>
-        <param name="Revert">Необязательный <b>объект</b>. Определяет, что происходит <paramref name="Name" /> , если это имя файла открытого документа. <b>Значение true</b> для отмены всех несохраненных изменений в открытом документе и повторного открытия файла; <b>Значение false</b> , чтобы активировать открытый документ.</param>
+        <param name="Revert">Необязательный <b>объект</b>. Определяет, что происходит, если <paramref name="Name" /> это имя файла открытого документа. <b>Значение true</b> для отмены всех несохраненных изменений в открытом документе и повторного открытия файла; <b>Значение false</b> , чтобы активировать открытый документ.</param>
         <param name="WritePasswordDocument">Необязательный <b>объект</b>. Пароль, необходимый для сохранения изменений в источнике данных документа. (См. примечания ниже).</param>
         <param name="WritePasswordTemplate">Необязательный <b>объект</b>. Пароль, необходимый для сохранения изменений в источнике данных шаблона. (См. примечания ниже).</param>
         <param name="OpenExclusive">Необязательный <b>объект</b>. Значение true, чтобы открыть только монопольный доступ.</param>
@@ -809,6 +831,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenHeaderSource2000([in]string Name, [in]object&amp; Format, [in]object&amp; ConfirmConversions, [in]object&amp; ReadOnly, [in]object&amp; AddToRecentFiles, [in]object&amp; PasswordDocument, [in]object&amp; PasswordTemplate, [in]object&amp; Revert, [in]object&amp; WritePasswordDocument, [in]object&amp; WritePasswordTemplate) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.OpenHeaderSource2000(System.String,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OpenHeaderSource2000 (Name As String, Optional ByRef Format As Object, Optional ByRef ConfirmConversions As Object, Optional ByRef ReadOnly As Object, Optional ByRef AddToRecentFiles As Object, Optional ByRef PasswordDocument As Object, Optional ByRef PasswordTemplate As Object, Optional ByRef Revert As Object, Optional ByRef WritePasswordDocument As Object, Optional ByRef WritePasswordTemplate As Object)" />
+      <MemberSignature Language="F#" Value="abstract member OpenHeaderSource2000 : string * obj * obj * obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.OpenHeaderSource2000 (Name, Format, ConfirmConversions, ReadOnly, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -827,15 +850,15 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Name" Type="System.String" />
-        <Parameter Name="Format" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ConfirmConversions" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ReadOnly" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="AddToRecentFiles" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="PasswordTemplate" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Revert" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordDocument" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="WritePasswordTemplate" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Format" Type="System.Object" RefType="ref" />
+        <Parameter Name="ConfirmConversions" Type="System.Object" RefType="ref" />
+        <Parameter Name="ReadOnly" Type="System.Object" RefType="ref" />
+        <Parameter Name="AddToRecentFiles" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="PasswordTemplate" Type="System.Object" RefType="ref" />
+        <Parameter Name="Revert" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordDocument" Type="System.Object" RefType="ref" />
+        <Parameter Name="WritePasswordTemplate" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Name">To be added.</param>
@@ -858,6 +881,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.MailMerge.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -886,6 +910,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.ShowSendToCustom" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowSendToCustom As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ShowSendToCustom { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowSendToCustom : string with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.ShowSendToCustom" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -917,6 +942,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowWizard([in]object&amp; InitialState, [in]object&amp; ShowDocumentStep, [in]object&amp; ShowTemplateStep, [in]object&amp; ShowDataStep, [in]object&amp; ShowWriteStep, [in]object&amp; ShowPreviewStep, [in]object&amp; ShowMergeStep) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.ShowWizard(System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowWizard (ByRef InitialState As Object, Optional ByRef ShowDocumentStep As Object, Optional ByRef ShowTemplateStep As Object, Optional ByRef ShowDataStep As Object, Optional ByRef ShowWriteStep As Object, Optional ByRef ShowPreviewStep As Object, Optional ByRef ShowMergeStep As Object)" />
+      <MemberSignature Language="F#" Value="abstract member ShowWizard : obj * obj * obj * obj * obj * obj * obj -&gt; unit" Usage="mailMerge.ShowWizard (InitialState, ShowDocumentStep, ShowTemplateStep, ShowDataStep, ShowWriteStep, ShowPreviewStep, ShowMergeStep)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -931,13 +957,13 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="InitialState" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowDocumentStep" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowTemplateStep" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowDataStep" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowWriteStep" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowPreviewStep" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="ShowMergeStep" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="InitialState" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowDocumentStep" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowTemplateStep" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowDataStep" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowWriteStep" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowPreviewStep" Type="System.Object" RefType="ref" />
+        <Parameter Name="ShowMergeStep" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="InitialState">Обязательный <b>объект</b>. Номер шага мастера слияния почты, который необходимо отобразить.</param>
@@ -957,6 +983,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As WdMailMergeState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdMailMergeState State { Microsoft::Office::Interop::Word::WdMailMergeState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Office.Interop.Word.WdMailMergeState" Usage="Microsoft.Office.Interop.Word.MailMerge.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1004,6 +1031,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.SuppressBlankLines" />
       <MemberSignature Language="VB.NET" Value="Public Property SuppressBlankLines As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SuppressBlankLines { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.SuppressBlankLines : bool with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.SuppressBlankLines" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1036,6 +1064,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.MailMerge.UseAddressBook(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub UseAddressBook (Type As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void UseAddressBook(System::String ^ Type);" />
+      <MemberSignature Language="F#" Value="abstract member UseAddressBook : string -&gt; unit" Usage="mailMerge.UseAddressBook Type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1067,6 +1096,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.ViewMailMergeFieldCodes" />
       <MemberSignature Language="VB.NET" Value="Public Property ViewMailMergeFieldCodes As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ViewMailMergeFieldCodes { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ViewMailMergeFieldCodes : int with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.ViewMailMergeFieldCodes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1090,7 +1120,7 @@
         <summary>Определяет, отображаются ли имена полей слияния в основном документе слияния почты.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство возвращает <b>значение true</b> , если имена полей слияния отображаются в основном документе слияния, и <b>false</b> , если отображается информация из текущей записи данных.</para>
-          <para>Если активный документ не является основным документом слияния почты, это свойство вызывает ошибку. Чтобы просмотреть имена полей слияния или их результаты, задайте для <see cref="P:Microsoft.Office.Interop.Word.View.ShowFieldCodes" /> свойства <b>значение false</b>.</para>
+          <para>Если активный документ не является основным документом слияния почты, это свойство вызывает ошибку. Чтобы просмотреть имена полей слияния или их результаты, задайте <see cref="P:Microsoft.Office.Interop.Word.View.ShowFieldCodes" /> для свойства <b>значение false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1100,6 +1130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.MailMerge.WizardState" />
       <MemberSignature Language="VB.NET" Value="Public Property WizardState As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int WizardState { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.WizardState : int with get, set" Usage="Microsoft.Office.Interop.Word.MailMerge.WizardState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

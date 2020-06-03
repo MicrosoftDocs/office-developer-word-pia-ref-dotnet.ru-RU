@@ -1,9 +1,10 @@
 <Type Name="FreeformBuilder" FullName="Microsoft.Office.Interop.Word.FreeformBuilder">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f7da0a16c045e6dc0d03c5438ac63fb5b3f441a0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148049" /></Metadata><TypeSignature Language="C#" Value="public interface FreeformBuilder" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="db9db2782b2a0206181c5868db7aa403ea6c180e" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924132" /></Metadata><TypeSignature Language="C#" Value="public interface FreeformBuilder" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FreeformBuilder" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FreeformBuilder" />
   <TypeSignature Language="VB.NET" Value="Public Interface FreeformBuilder" />
   <TypeSignature Language="C++ CLI" Value="public interface class FreeformBuilder" />
+  <TypeSignature Language="F#" Value="type FreeformBuilder = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddNodes([in]valuetype Microsoft.Office.Core.MsoSegmentType SegmentType, [in]valuetype Microsoft.Office.Core.MsoEditingType EditingType, [in]float32 X1, [in]float32 Y1, [in]float32 X2, [in]float32 Y2, [in]float32 X3, [in]float32 Y3) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddNodes (SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, Optional X2 As Single = 0, Optional Y2 As Single = 0, Optional X3 As Single = 0, Optional Y3 As Single = 0)" />
+      <MemberSignature Language="F#" Value="abstract member AddNodes : Microsoft.Office.Core.MsoSegmentType * Microsoft.Office.Core.MsoEditingType * single * single * single * single * single * single -&gt; unit" Usage="freeformBuilder.AddNodes (SegmentType, EditingType, X1, Y1, X2, Y2, X3, Y3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -52,14 +54,14 @@
         <Parameter Name="Y3" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип добавляемого сегмента.</param>
-        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit для вершины. Если <paramref name="SegmentType" /> это <b>мсосегментлине</b>, <paramref name="EditingType" /> должен быть <b>мсоедитингауто</b>.</param>
-        <param name="X1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
-        <param name="Y1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
-        <param name="X2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="Y2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="X3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
-        <param name="Y3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" /> . Тип добавляемого сегмента.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" /> . Свойство Edit для вершины. Если <paramref name="SegmentType" /> это <b>мсосегментлине</b>, <paramref name="EditingType" /> должен быть <b>мсоедитингауто</b>.</param>
+        <param name="X1">Обязательное <b>одно</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="Y1">Обязательное <b>одно</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый узел — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="X2">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y2">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="X3">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y3">Необязательный параметр <b>Single</b>. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. Если <paramref name="EditingType" /> новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
         <summary>Вставляет новый сегмент в конец создаваемой полилинии и добавляет узлы, определяющие сегмент.</summary>
         <remarks><para>Этот метод можно использовать столько раз, сколько вы хотите добавить узлы для полилинии, которую вы создаете. Когда вы завершите Добавление узлов, используйте <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" /> метод, чтобы создать только что заданную полилинию. Чтобы добавить узлы в полилинию после создания, используйте <see cref="M:Microsoft.Office.Interop.Word.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод <see cref="T:Microsoft.Office.Interop.Word.ShapeNodes" /> коллекции.</para>
           <para> </para></remarks>
@@ -71,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FreeformBuilder.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.FreeformBuilder.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -98,6 +101,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Shape ConvertToShape([in]object&amp; Anchor) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.FreeformBuilder.ConvertToShape(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function ConvertToShape (Optional ByRef Anchor As Object) As Shape" />
+      <MemberSignature Language="F#" Value="abstract member ConvertToShape : obj -&gt; Microsoft.Office.Interop.Word.Shape" Usage="freeformBuilder.ConvertToShape Anchor" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -112,13 +116,13 @@
         <ReturnType>Microsoft.Office.Interop.Word.Shape</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Anchor" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Anchor" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="Anchor">Необязательный <b>объект</b>. <see cref="T:Microsoft.Office.Interop.Word.Range" /> Объект, представляющий текст, к которому привязана фигура. Если <paramref name="Anchor" /> указан, то привязка располагается в начале первого абзаца в диапазоне привязки. Если этот аргумент опущен, диапазон привязки выбирается автоматически, а фигура располагается относительно верхнего и левого краев страницы.</param>
+        <param name="Anchor">Необязательный <b>объект</b>. <see cref="T:Microsoft.Office.Interop.Word.Range" />Объект, представляющий текст, к которому привязана фигура. Если <paramref name="Anchor" /> указан, то привязка располагается в начале первого абзаца в диапазоне привязки. Если этот аргумент опущен, диапазон привязки выбирается автоматически, а фигура располагается относительно верхнего и левого краев страницы.</param>
         <summary>Создает фигуру, которая имеет геометрические характеристики указанного объекта. Возвращает <see cref="T:Microsoft.Office.Interop.Word.Shape" /> объект, представляющий новую фигуру.</summary>
         <returns>To be added.</returns>
-        <remarks><para><see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> Метод необходимо применить к <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекту по крайней мере один раз, прежде чем использовать метод <b>конверттошапе</b> .</para>
+        <remarks><para>Метод необходимо применить <see cref="M:Microsoft.Office.Interop.Word.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> к <see cref="T:Microsoft.Office.Interop.Word.FreeformBuilder" /> объекту по крайней мере один раз, прежде чем использовать метод <b>конверттошапе</b> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -128,6 +132,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FreeformBuilder.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.FreeformBuilder.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -158,6 +163,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FreeformBuilder.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.FreeformBuilder.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

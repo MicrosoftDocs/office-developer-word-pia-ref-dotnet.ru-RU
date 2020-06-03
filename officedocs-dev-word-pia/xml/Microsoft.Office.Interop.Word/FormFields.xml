@@ -1,9 +1,10 @@
 <Type Name="FormFields" FullName="Microsoft.Office.Interop.Word.FormFields">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="89a396030811c12cb95f62e8636d76407d533478" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34148084" /></Metadata><TypeSignature Language="C#" Value="public interface FormFields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cb28763f9f7c58dcdb4a3b8e5f7f54e004819c37" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924167" /></Metadata><TypeSignature Language="C#" Value="public interface FormFields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormFields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.FormFields" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormFields&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class FormFields : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type FormFields = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,7 +26,7 @@
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объектов, представляющих все поля формы в выделении, диапазоне или документе.</summary>
     <remarks><para>Используйте свойство <b>FormFields</b> , чтобы возвратить коллекцию <b>FormFields</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" /> метод с объектом <b>FormFields</b> для добавления поля формы.</para>
-      <para>Используйте <b>FormFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>FormField</b> .</para>
+      <para>Используйте <b>FormFields</b>( <paramref name="index" /> ), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>FormField</b> .</para>
       <para>Номер индекса представляет положение поля формы в выделенном фрагменте, диапазоне или документе.</para>
       <para> </para></remarks>
   </Docs>
@@ -34,7 +35,9 @@
       <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.FormField Add (Microsoft.Office.Interop.Word.Range Range, Microsoft.Office.Interop.Word.WdFieldType Type);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.FormField Add([in]class Microsoft.Office.Interop.Word.Range Range, [in]valuetype Microsoft.Office.Interop.Word.WdFieldType Type) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.FormFields.Add(Microsoft.Office.Interop.Word.Range,Microsoft.Office.Interop.Word.WdFieldType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (Range As Range, Type As WdFieldType) As FormField" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::FormField ^ Add(Microsoft::Office::Interop::Word::Range ^ Range, Microsoft::Office::Interop::Word::WdFieldType Type);" />
+      <MemberSignature Language="F#" Value="abstract member Add : Microsoft.Office.Interop.Word.Range * Microsoft.Office.Interop.Word.WdFieldType -&gt; Microsoft.Office.Interop.Word.FormField" Usage="formFields.Add (Range, Type)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -54,7 +57,7 @@
       </Parameters>
       <Docs>
         <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект. Диапазон, в который требуется добавить поле формы. Если диапазон не свернут, поле формы заменит диапазон.</param>
-        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" />. Тип добавляемого поля формы.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Word.WdFieldType" /> . Тип добавляемого поля формы.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.FormField" /> объект, представляющий новое поле формы, добавленное в диапазон.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.FormFields.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -94,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.FormFields.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -122,6 +127,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.FormFields.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -152,6 +158,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.FormFields.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="formFields.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -184,6 +191,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As FormField" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::FormField ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::FormField ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.FormField" Usage="Microsoft.Office.Interop.Word.FormFields.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -201,7 +209,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.FormField</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -216,6 +224,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.FormFields.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -244,6 +253,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.FormFields.Shaded" />
       <MemberSignature Language="VB.NET" Value="Public Property Shaded As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Shaded { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Shaded : bool with get, set" Usage="Microsoft.Office.Interop.Word.FormFields.Shaded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

@@ -1,9 +1,10 @@
 <Type Name="Sections" FullName="Microsoft.Office.Interop.Word.Sections">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="fe2cba10cfbd345cb511c3cbdb748c5431925b9f" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144066" /></Metadata><TypeSignature Language="C#" Value="public interface Sections : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="900d395ddce14b1b5390b96fe390d089a50d3c55" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43924468" /></Metadata><TypeSignature Language="C#" Value="public interface Sections : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Sections implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Sections" />
   <TypeSignature Language="VB.NET" Value="Public Interface Sections&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Sections : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Sections = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -23,9 +24,9 @@
   </Attributes>
   <Docs>
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Section" /> объектов в выделенном фрагменте, диапазоне или документе.</summary>
-    <remarks><para>Используйте свойство <b>Sections</b> объекта a <see cref="T:Microsoft.Office.Interop.Word.Selection" />, <see cref="T:Microsoft.Office.Interop.Word.Range" />или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта, чтобы вернуть коллекцию <b>Sections</b> .</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> метод, чтобы добавить новый раздел в документ.</para>
-      <para>Используйте <b>разделы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>section</b> .</para>
+    <remarks><para>Используйте свойство <b>Sections</b> объекта a <see cref="T:Microsoft.Office.Interop.Word.Selection" /> , <see cref="T:Microsoft.Office.Interop.Word.Range" /> или <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта, чтобы вернуть коллекцию <b>Sections</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" /> метод или метод, <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertBreak(System.Object@)" /> чтобы добавить новый раздел в документ.</para>
+      <para>Используйте <b>разделы</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>section</b> .</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -34,6 +35,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Section Add([in]object&amp; Range, [in]object&amp; Start) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Sections.Add(System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Optional ByRef Range As Object, Optional ByRef Start As Object) As Section" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * obj -&gt; Microsoft.Office.Interop.Word.Section" Usage="sections.Add (Range, Start)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -48,12 +50,12 @@
         <ReturnType>Microsoft.Office.Interop.Word.Section</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Range" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Start" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Range" Type="System.Object" RefType="ref" />
+        <Parameter Name="Start" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Range">Необязательный <b>объект</b>. Диапазон, перед которым необходимо вставить разрыв раздела. Если этот аргумент опущен, разрыв раздела вставляется в конце документа.</param>
-        <param name="Start">Необязательный <b>объект</b>. Тип разрыва раздела, который требуется добавить. Может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdSectionStart" /> <b> </b>следующих констант: <b>вдсектионконтинуаус</b>, <b>вдсектионевенпаже</b>, <b>вдсектионневколумн</b>, <b>вдсектионневпаже</b>или <b>вдсектионоддпаже</b>. Если этот аргумент опущен, добавляется разрыв раздела на следующей странице.</param>
+        <param name="Start">Необязательный <b>объект</b>. Тип разрыва раздела, который требуется добавить. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Word.WdSectionStart" /> <b></b> констант: <b>вдсектионконтинуаус</b>, <b>вдсектионевенпаже</b>, <b>вдсектионневколумн</b>, <b>вдсектионневпаже</b>или <b>вдсектионоддпаже</b>. Если этот аргумент опущен, добавляется разрыв раздела на следующей странице.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Section" /> объект, представляющий новый раздел, добавленный в документ.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Sections.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Sections.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Sections.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -151,6 +156,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.First" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property First As Section" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Section ^ First { Microsoft::Office::Interop::Word::Section ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.First : Microsoft.Office.Interop.Word.Section" Usage="Microsoft.Office.Interop.Word.Sections.First" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Sections.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="sections.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -211,6 +218,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Section" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Section ^ default[int] { Microsoft::Office::Interop::Word::Section ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Section" Usage="Microsoft.Office.Interop.Word.Sections.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -243,6 +251,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Last" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Last As Section" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Section ^ Last { Microsoft::Office::Interop::Word::Section ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Last : Microsoft.Office.Interop.Word.Section" Usage="Microsoft.Office.Interop.Word.Sections.Last" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -260,7 +269,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Section</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает последний элемент в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> коллекции в качестве <see cref="T:Microsoft.Office.Interop.Word.Section" /> объекта.</summary>
+        <summary>Возвращает последний элемент в коллекции в <see cref="T:Microsoft.Office.Interop.Word.Sections" /> качестве <see cref="T:Microsoft.Office.Interop.Word.Section" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,6 +280,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.PageSetup" />
       <MemberSignature Language="VB.NET" Value="Public Property PageSetup As PageSetup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::PageSetup ^ PageSetup { Microsoft::Office::Interop::Word::PageSetup ^ get(); void set(Microsoft::Office::Interop::Word::PageSetup ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PageSetup : Microsoft.Office.Interop.Word.PageSetup with get, set" Usage="Microsoft.Office.Interop.Word.Sections.PageSetup" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -302,6 +312,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Sections.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Sections.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

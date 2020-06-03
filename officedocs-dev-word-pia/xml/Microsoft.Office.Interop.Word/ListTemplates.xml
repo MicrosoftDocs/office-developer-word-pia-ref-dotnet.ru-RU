@@ -1,9 +1,10 @@
 <Type Name="ListTemplates" FullName="Microsoft.Office.Interop.Word.ListTemplates">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8a116bd1e716c5b1c23d5751a9411b77f6343408" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146159" /></Metadata><TypeSignature Language="C#" Value="public interface ListTemplates : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="68b42d43db83bb78e91f6e1edc2ea1946f59a4cc" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43925263" /></Metadata><TypeSignature Language="C#" Value="public interface ListTemplates : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListTemplates implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ListTemplates" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListTemplates&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class ListTemplates : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type ListTemplates = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,11 +26,11 @@
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объектов, представляющих семь предопределенных форматов списков на каждой вкладке в диалоговом окне "маркеры и нумерация".</summary>
     <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.ListTemplates" /> свойство, чтобы возвратить коллекцию <b>ListTemplates</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> метод, чтобы добавить шаблон списка в коллекцию в заданном документе или шаблоне.</para>
-      <para>Используйте <b>ListTemplates</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 7, чтобы вернуть один шаблон списка из коллекции списков.</para>
+      <para>Используйте <b>ListTemplates</b>( <paramref name="index" /> ), где <paramref name="index" /> — это число от 1 до 7, чтобы вернуть один шаблон списка из коллекции списков.</para>
       <para>
-        <b>Note</b>: некоторые свойства и методы, <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" />, например, не будут работать с шаблонами списков, к которым можно получить доступ из коллекции списков. Вы можете изменить эти шаблоны списков, но не можете изменить тип коллекции списков (<b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>).</para>
+        <b>Note</b>: некоторые свойства и методы, <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> и <see cref="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" /> , например, не будут работать с шаблонами списков, к которым можно получить доступ из коллекции списков. Вы можете изменить эти шаблоны списков, но не можете изменить тип коллекции списков (<b>вдбуллетгаллери</b>, <b>вднумбергаллери</b>или <b>вдаутлиненумбергаллери</b>).</para>
       <para>Чтобы определить, содержит ли указанный шаблон списка форматирование, встроенное в Microsoft Word, используйте <see cref="P:Microsoft.Office.Interop.Word.ListGallery.Modified(System.Int32)" /> свойство с <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объектом. Чтобы сбросить форматирование к исходному формату списка, используйте <see cref="M:Microsoft.Office.Interop.Word.ListGallery.Reset(System.Int32)" /> метод для объекта <b>ListGallery</b> .</para>
-      <para>После возвращения объекта <b>ListTemplate</b> используйте <b>ListLevels</b>(<paramref name="index" />), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объект. С помощью объекта <b>ListLevel</b> вы можете получить доступ ко всем свойствам форматирования для указанного уровня списка, например <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" />, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" />,,, и. <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /></para>
+      <para>После возвращения объекта <b>ListTemplate</b> используйте <b>ListLevels</b>( <paramref name="index" /> ), где <paramref name="index" /> — это число от 1 до 9, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.ListLevel" /> объект. С помощью объекта <b>ListLevel</b> вы можете получить доступ ко всем свойствам форматирования для указанного уровня списка, например,,,, <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Alignment" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.Font" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberPosition" /> <see cref="P:Microsoft.Office.Interop.Word.ListLevel.NumberStyle" /> и <see cref="P:Microsoft.Office.Interop.Word.ListLevel.TrailingCharacter" /> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.ListTemplate.Convert(System.Object@)" /> метод для преобразования шаблона списка с несколькими уровнями в шаблон с одним уровнем.</para>
       <para> </para></remarks>
   </Docs>
@@ -39,6 +40,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.ListTemplate Add([in]object&amp; OutlineNumbered, [in]object&amp; Name) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ListTemplates.Add(System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Optional ByRef OutlineNumbered As Object, Optional ByRef Name As Object) As ListTemplate" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * obj -&gt; Microsoft.Office.Interop.Word.ListTemplate" Usage="listTemplates.Add (OutlineNumbered, Name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -53,15 +55,15 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplate</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="OutlineNumbered" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Name" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="OutlineNumbered" Type="System.Object" RefType="ref" />
+        <Parameter Name="Name" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="OutlineNumbered">Необязательный <b>объект</b>. <b>Значение true</b> используется для применения многоуровневой нумерации к новому шаблону списка.</param>
         <param name="Name">Необязательный <b>объект</b>. Необязательное имя, используемое для связывания шаблона списка с полем LISTNUM. Вы не можете использовать это имя для индексирования шаблона списка в коллекции.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект, представляющий новый шаблон списка.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Нельзя использовать метод <b>Add</b> для <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> объектов, возвращаемых из <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объекта. Однако вы можете изменить существующие шаблоны списков в галереях.</para>
+        <remarks><para>Нельзя использовать метод <b>Add</b> для объектов, <see cref="T:Microsoft.Office.Interop.Word.ListTemplates" /> возвращаемых из <see cref="T:Microsoft.Office.Interop.Word.ListGallery" /> объекта. Однако вы можете изменить существующие шаблоны списков в галереях.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -71,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplates.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.ListTemplates.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -99,6 +102,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplates.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.ListTemplates.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -127,6 +131,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplates.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.ListTemplates.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -157,6 +162,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.ListTemplates.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="listTemplates.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -189,6 +195,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplates.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As ListTemplate" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ListTemplate ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::ListTemplate ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.ListTemplate" Usage="Microsoft.Office.Interop.Word.ListTemplates.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -206,7 +213,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.ListTemplate</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -221,6 +228,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.ListTemplates.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.ListTemplates.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
