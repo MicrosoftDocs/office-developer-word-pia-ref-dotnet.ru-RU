@@ -1,9 +1,10 @@
 <Type Name="XMLSchemaReferences" FullName="Microsoft.Office.Interop.Word.XMLSchemaReferences">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="94efe895c3428319116ab8be0f25073c91b0326b" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142616" /></Metadata><TypeSignature Language="C#" Value="public interface XMLSchemaReferences : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="62e2b1f2426e3030958a12a8e19dbe48a8f92934" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43926691" /></Metadata><TypeSignature Language="C#" Value="public interface XMLSchemaReferences : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLSchemaReferences implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLSchemaReferences" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLSchemaReferences&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class XMLSchemaReferences : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type XMLSchemaReferences = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.XMLSchemaReference Add([in]object&amp; NamespaceURI, [in]object&amp; Alias, [in]object&amp; FileName, [in]bool InstallForAllUsers) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLSchemaReferences.Add(System.Object@,System.Object@,System.Object@,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Optional ByRef NamespaceURI As Object, Optional ByRef Alias As Object, Optional ByRef FileName As Object, Optional InstallForAllUsers As Boolean = false) As XMLSchemaReference" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * obj * obj * bool -&gt; Microsoft.Office.Interop.Word.XMLSchemaReference" Usage="xMLSchemaReferences.Add (NamespaceURI, Alias, FileName, InstallForAllUsers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -46,16 +48,16 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLSchemaReference</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="NamespaceURI" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Alias" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="FileName" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="NamespaceURI" Type="System.Object" RefType="ref" />
+        <Parameter Name="Alias" Type="System.Object" RefType="ref" />
+        <Parameter Name="FileName" Type="System.Object" RefType="ref" />
         <Parameter Name="InstallForAllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="NamespaceURI">Необязательная <b>строка</b>. Имя схемы, как определено в схеме. Параметр <paramref name="Namespace" /> чувствителен к регистру и должен быть задан в точности так, как он отображается в схеме. Если указанное пространство имен не удается найти ни в одной из схем, вложенных в документ, отображается сообщение об ошибке.</param>
+        <param name="NamespaceURI">Необязательная <b>строка</b>. Имя схемы, как определено в схеме. <paramref name="Namespace" />Параметр чувствителен к регистру и должен быть задан в точности так, как он отображается в схеме. Если указанное пространство имен не удается найти ни в одной из схем, вложенных в документ, отображается сообщение об ошибке.</param>
         <param name="Alias">Необязательная <b>строка</b>. Имя схемы, отображаемое на вкладке схемы в диалоговом окне Шаблоны и надстройки.</param>
         <param name="FileName">Необязательная <b>строка</b>. Путь и имя файла схемы. Это может быть локальный путь к файлу, сетевой путь или адрес в Интернете.</param>
-        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. По умолчанию используется значение <b>False</b>.</param>
+        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. Значение по умолчанию - <b>false</b>.</param>
         <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Word.XMLSchemaReference" /> , представляющий схему, примененную к документу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.AllowSaveAsXMLWithoutValidation" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowSaveAsXMLWithoutValidation As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowSaveAsXMLWithoutValidation { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowSaveAsXMLWithoutValidation : bool with get, set" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.AllowSaveAsXMLWithoutValidation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -104,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -132,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.AutomaticValidation" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticValidation As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticValidation { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticValidation : bool with get, set" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.AutomaticValidation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -169,6 +174,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -197,6 +203,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -227,6 +234,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLSchemaReferences.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="xMLSchemaReferences.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -259,6 +267,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.HideValidationErrors" />
       <MemberSignature Language="VB.NET" Value="Public Property HideValidationErrors As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HideValidationErrors { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HideValidationErrors : bool with get, set" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.HideValidationErrors" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -290,6 +299,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.IgnoreMixedContent" />
       <MemberSignature Language="VB.NET" Value="Public Property IgnoreMixedContent As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IgnoreMixedContent { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IgnoreMixedContent : bool with get, set" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.IgnoreMixedContent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -310,7 +320,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>логическое значение</b> , которое указывает, выполняет ли Microsoft Word проверку для текстовых узлов, имеющих родственные элементы элементов, и указывает, сохраняются ли эти текстовые узлы <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSaveDataOnly" /> в XML, если свойство имеет <b>значение true</b>.</summary>
+        <summary>Возвращает <b>логическое значение</b> , которое указывает, выполняет ли Microsoft Word проверку для текстовых узлов, имеющих родственные элементы элементов, и указывает, сохраняются ли эти текстовые узлы в XML, если <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSaveDataOnly" /> свойство имеет <b>значение true</b>.</summary>
         <value>To be added.</value>
         <remarks><para>
             <b>Значение true</b> приводит к тому, что Word игнорирует нарушения схемы, вызванные текстовыми узлами, имеющими одноуровневые элементы. Это также предотвращает сохранение этих текстовых узлов в XML, если свойство <b>XMLSaveDataOnly</b> имеет <b>значение true</b>, что помогает предотвратить сохранение текста, вставленного с помощью расширяемого преобразования языка таблиц стилей (кслст), в составе данных. <b>False</b> вызывает ошибки проверки на текстовых узлах с одноуровневыми элементами одного уровня.</para>
@@ -323,6 +333,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As XMLSchemaReference" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::XMLSchemaReference ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::XMLSchemaReference ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.XMLSchemaReference" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -340,7 +351,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLSchemaReference</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -355,6 +366,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -383,6 +395,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLSchemaReferences.ShowPlaceholderText" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowPlaceholderText As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowPlaceholderText { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowPlaceholderText : bool with get, set" Usage="Microsoft.Office.Interop.Word.XMLSchemaReferences.ShowPlaceholderText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -414,6 +427,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLSchemaReferences.Validate" />
       <MemberSignature Language="VB.NET" Value="Public Sub Validate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Validate();" />
+      <MemberSignature Language="F#" Value="abstract member Validate : unit -&gt; unit" Usage="xMLSchemaReferences.Validate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -430,7 +444,7 @@
       <Parameters />
       <Docs>
         <summary>Проверяет отдельный элемент XML или весь документ по отношению к присоединенной схеме XML или схемам.</summary>
-        <remarks><para>Используйте метод <b>проверки</b> с свойствами <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> и <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> , чтобы определить, является ли элемент XML допустимым для примененной схемы, а также какой текст ошибки отобразить для пользователя. Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод, чтобы переопределить нарушения схемы с пользовательскими ошибками проверки.</para>
+        <remarks><para>Используйте метод <b>проверки</b> с <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationStatus" /> свойствами и, <see cref="P:Microsoft.Office.Interop.Word.XMLNode.ValidationErrorText(System.Boolean)" /> чтобы определить, является ли элемент XML допустимым для примененной схемы, а также какой текст ошибки отобразить для пользователя. Используйте <see cref="M:Microsoft.Office.Interop.Word.XMLNode.SetValidationError(Microsoft.Office.Interop.Word.WdXMLValidationStatus,System.Object@,System.Boolean)" /> метод, чтобы переопределить нарушения схемы с пользовательскими ошибками проверки.</para>
           <para>При запуске метода <b>проверки</b> Microsoft Word заполняет <see cref="P:Microsoft.Office.Interop.Word._Document.XMLSchemaViolations" /> коллекцию узлами XML с ошибками проверки.</para>
           <para> </para></remarks>
       </Docs>

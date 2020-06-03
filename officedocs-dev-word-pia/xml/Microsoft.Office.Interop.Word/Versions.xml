@@ -1,9 +1,10 @@
 <Type Name="Versions" FullName="Microsoft.Office.Interop.Word.Versions">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="77d68bb41e562599683947b60a2a34bd29554998" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34143730" /></Metadata><TypeSignature Language="C#" Value="public interface Versions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0cadf8e58598dbf37d08a11b46112a264329d77d" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43925984" /></Metadata><TypeSignature Language="C#" Value="public interface Versions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Versions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Versions" />
   <TypeSignature Language="VB.NET" Value="Public Interface Versions&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Versions : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Versions = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,7 +26,7 @@
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Version" /> объектов, представляющих все версии документа. Соответствует элементам, перечисленным в диалоговом окне "версии" (меню "файл").</summary>
     <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Versions" /> свойство, чтобы возвратить коллекцию <b>версий</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Versions.Save(System.Object@)" /> метод, чтобы добавить элемент в коллекцию <b>Versions</b> .</para>
-      <para>Используйте <b></b>Versions<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>Version</b> . Номер индекса представляет положение версии в коллекции <b>версий</b> . Первая версия, добавленная в <b></b> коллекцию Versions, — индекс 1.</para>
+      <para>Используйте <b>Versions</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>Version</b> . Номер индекса представляет положение версии в коллекции <b>версий</b> . Первая версия, добавленная в коллекцию <b>Versions</b> , — индекс 1.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Versions.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.AutoVersion" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoVersion As WdAutoVersions" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdAutoVersions AutoVersion { Microsoft::Office::Interop::Word::WdAutoVersions get(); void set(Microsoft::Office::Interop::Word::WdAutoVersions value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoVersion : Microsoft.Office.Interop.Word.WdAutoVersions with get, set" Usage="Microsoft.Office.Interop.Word.Versions.AutoVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -94,7 +97,7 @@
             <b>вдаутоверсиононклосе</b>
           </para>
           <para>
-            <b>Note (Примечание</b> )  Если для <b></b> свойства автоversion задано значение <b>вдаутоверсиононклосе</b>, версия документа автоматически сохраняется при закрытии документа.</para>
+            <b>Note (Примечание</b> )  Если для свойства <b>автоversion</b> задано значение <b>вдаутоверсиононклосе</b>, версия документа автоматически сохраняется при закрытии документа.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -104,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Versions.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -132,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Versions.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -162,6 +167,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Versions.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="versions.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -194,6 +200,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Version" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Version ^ default[int] { Microsoft::Office::Interop::Word::Version ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Version" Usage="Microsoft.Office.Interop.Word.Versions.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -226,6 +233,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Versions.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Versions.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -253,6 +261,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save([in]object&amp; Comment) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Versions.Save(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (Optional ByRef Comment As Object)" />
+      <MemberSignature Language="F#" Value="abstract member Save : obj -&gt; unit" Usage="versions.Save Comment" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -267,7 +276,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Comment" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Comment" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Comment">Необязательный <b>объект</b>.</param>

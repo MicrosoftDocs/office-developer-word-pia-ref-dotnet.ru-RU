@@ -1,9 +1,10 @@
 <Type Name="Style" FullName="Microsoft.Office.Interop.Word.Style">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="74f93bf5a3bfe99659200d0b7c65cb0b82d3670e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146117" /></Metadata><TypeSignature Language="C#" Value="public interface Style" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="faf86e8d27e6707440672052a3c4a4675dc8c0ab" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43926236" /></Metadata><TypeSignature Language="C#" Value="public interface Style" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Style" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Style" />
   <TypeSignature Language="VB.NET" Value="Public Interface Style" />
   <TypeSignature Language="C++ CLI" Value="public interface class Style" />
+  <TypeSignature Language="F#" Value="type Style = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
   <Docs>
     <summary>Представляет один встроенный или определенный пользователем стиль.</summary>
     <remarks><para>Объект <b>Style</b> включает атрибуты стиля (шрифт, начертание шрифта, интервалы между абзацами и т. д.), а также свойства объекта <b>Style</b> . Объект <b>Style</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Styles" /> коллекции. Коллекция <b>styles</b> включает все стили в указанном документе.</para>
-      <para>Используйте <b></b>Styles<paramref name="index" />(), <paramref name="index" /> где — это имя стиля, <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или номер индекса, чтобы вернуть один объект <b>Style</b> . Необходимо точно совпадать с написанием и интервалом имени стиля, но не обязательно заменять его прописными буквами.</para>
+      <para>Используйте <b>styles</b>( <paramref name="index" /> ), где <paramref name="index" /> — это имя стиля, <see cref="T:Microsoft.Office.Interop.Word.WdBuiltinStyle" /> константа или номер индекса, чтобы вернуть один объект <b>Style</b> . Необходимо точно совпадать с написанием и интервалом имени стиля, но не обязательно заменять его прописными буквами.</para>
       <para>Номер индекса стиля представляет положение стиля в алфавитно отсортированном списке имен стилей.</para>
       <para>Чтобы применить стиль к диапазону, абзацу или нескольким абзацам, задайте для свойства <b>Style</b> значение, заданное пользователем или встроенное имя стиля.</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word._Application.OrganizerCopy(System.String,System.String,System.String,Microsoft.Office.Interop.Word.WdOrganizerObject)" /> метод для копирования стилей между документами и шаблонами. С помощью <see cref="M:Microsoft.Office.Interop.Word._Document.UpdateStyles" /> метода обновите стили в активном документе, чтобы они были согласованы с определениями стилей в присоединенном шаблоне. Используйте <see cref="M:Microsoft.Office.Interop.Word.Template.OpenAsDocument" /> метод, чтобы открыть шаблон в виде документа, чтобы можно было изменять стили шаблонов.</para>
@@ -33,6 +34,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Style.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -61,6 +63,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.AutomaticallyUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticallyUpdate As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticallyUpdate { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticallyUpdate : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.AutomaticallyUpdate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.BaseStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property BaseStyle As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ BaseStyle { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.BaseStyle : obj with get, set" Usage="Microsoft.Office.Interop.Word.Style.BaseStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -125,6 +129,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Borders" />
       <MemberSignature Language="VB.NET" Value="Public Property Borders As Borders" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Borders ^ Borders { Microsoft::Office::Interop::Word::Borders ^ get(); void set(Microsoft::Office::Interop::Word::Borders ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Borders : Microsoft.Office.Interop.Word.Borders with get, set" Usage="Microsoft.Office.Interop.Word.Style.Borders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -156,6 +161,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.BuiltIn" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuiltIn As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool BuiltIn { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.BuiltIn : bool" Usage="Microsoft.Office.Interop.Word.Style.BuiltIn" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -185,6 +191,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Style.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -215,6 +222,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Style.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="style.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -240,6 +248,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Description" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string" Usage="Microsoft.Office.Interop.Word.Style.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -269,6 +278,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Font" />
       <MemberSignature Language="VB.NET" Value="Public Property Font As Font" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Font ^ Font { Microsoft::Office::Interop::Word::Font ^ get(); void set(Microsoft::Office::Interop::Word::Font ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Font : Microsoft.Office.Interop.Word.Font with get, set" Usage="Microsoft.Office.Interop.Word.Style.Font" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -301,6 +311,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Frame" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Frame As Frame" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Frame ^ Frame { Microsoft::Office::Interop::Word::Frame ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Frame : Microsoft.Office.Interop.Word.Frame" Usage="Microsoft.Office.Interop.Word.Style.Frame" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -329,6 +340,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Hidden" />
       <MemberSignature Language="VB.NET" Value="Public Property Hidden As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Hidden { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Hidden : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.Hidden" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -366,6 +378,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.InUse" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InUse As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool InUse { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.InUse : bool" Usage="Microsoft.Office.Interop.Word.Style.InUse" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -395,6 +408,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.LanguageID" />
       <MemberSignature Language="VB.NET" Value="Public Property LanguageID As WdLanguageID" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdLanguageID LanguageID { Microsoft::Office::Interop::Word::WdLanguageID get(); void set(Microsoft::Office::Interop::Word::WdLanguageID value); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageID : Microsoft.Office.Interop.Word.WdLanguageID with get, set" Usage="Microsoft.Office.Interop.Word.Style.LanguageID" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -428,6 +442,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.LanguageIDFarEast" />
       <MemberSignature Language="VB.NET" Value="Public Property LanguageIDFarEast As WdLanguageID" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdLanguageID LanguageIDFarEast { Microsoft::Office::Interop::Word::WdLanguageID get(); void set(Microsoft::Office::Interop::Word::WdLanguageID value); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageIDFarEast : Microsoft.Office.Interop.Word.WdLanguageID with get, set" Usage="Microsoft.Office.Interop.Word.Style.LanguageIDFarEast" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -461,6 +476,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Linked" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Linked As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Linked { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Linked : bool" Usage="Microsoft.Office.Interop.Word.Style.Linked" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -491,6 +507,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.LinkStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property LinkStyle As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ LinkStyle { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.LinkStyle : obj with get, set" Usage="Microsoft.Office.Interop.Word.Style.LinkStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -521,6 +538,8 @@
       <MemberSignature Language="C#" Value="public void LinkToListTemplate (Microsoft.Office.Interop.Word.ListTemplate ListTemplate, ref object ListLevelNumber);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LinkToListTemplate([in]class Microsoft.Office.Interop.Word.ListTemplate ListTemplate, [in]object&amp; ListLevelNumber) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Style.LinkToListTemplate(Microsoft.Office.Interop.Word.ListTemplate,System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub LinkToListTemplate (ListTemplate As ListTemplate, Optional ByRef ListLevelNumber As Object)" />
+      <MemberSignature Language="F#" Value="abstract member LinkToListTemplate : Microsoft.Office.Interop.Word.ListTemplate * obj -&gt; unit" Usage="style.LinkToListTemplate (ListTemplate, ListLevelNumber)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -536,7 +555,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="ListTemplate" Type="Microsoft.Office.Interop.Word.ListTemplate" />
-        <Parameter Name="ListLevelNumber" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="ListLevelNumber" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="ListTemplate">Обязательный <see cref="T:Microsoft.Office.Interop.Word.ListTemplate" /> объект. Шаблон списка, с которым будет связан стиль.</param>
@@ -551,6 +570,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.ListLevelNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListLevelNumber As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ListLevelNumber { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ListLevelNumber : int" Usage="Microsoft.Office.Interop.Word.Style.ListLevelNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -579,6 +599,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.ListTemplate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListTemplate As ListTemplate" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ListTemplate ^ ListTemplate { Microsoft::Office::Interop::Word::ListTemplate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ListTemplate : Microsoft.Office.Interop.Word.ListTemplate" Usage="Microsoft.Office.Interop.Word.Style.ListTemplate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -609,6 +630,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Locked" />
       <MemberSignature Language="VB.NET" Value="Public Property Locked As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Locked { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Locked : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.Locked" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -640,6 +662,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.NameLocal" />
       <MemberSignature Language="VB.NET" Value="Default Public Property NameLocal As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NameLocal : string with get, set" Usage="Microsoft.Office.Interop.Word.Style.NameLocal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -672,6 +695,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.NextParagraphStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property NextParagraphStyle As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ NextParagraphStyle { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NextParagraphStyle : obj with get, set" Usage="Microsoft.Office.Interop.Word.Style.NextParagraphStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -704,6 +728,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.NoProofing" />
       <MemberSignature Language="VB.NET" Value="Public Property NoProofing As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NoProofing { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.NoProofing : int with get, set" Usage="Microsoft.Office.Interop.Word.Style.NoProofing" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -735,6 +760,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.NoSpaceBetweenParagraphsOfSameStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property NoSpaceBetweenParagraphsOfSameStyle As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NoSpaceBetweenParagraphsOfSameStyle { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.NoSpaceBetweenParagraphsOfSameStyle : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.NoSpaceBetweenParagraphsOfSameStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -766,6 +792,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.ParagraphFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property ParagraphFormat As ParagraphFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ParagraphFormat ^ ParagraphFormat { Microsoft::Office::Interop::Word::ParagraphFormat ^ get(); void set(Microsoft::Office::Interop::Word::ParagraphFormat ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ParagraphFormat : Microsoft.Office.Interop.Word.ParagraphFormat with get, set" Usage="Microsoft.Office.Interop.Word.Style.ParagraphFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -797,6 +824,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Style.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -825,6 +853,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Priority" />
       <MemberSignature Language="VB.NET" Value="Public Property Priority As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Priority { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Priority : int with get, set" Usage="Microsoft.Office.Interop.Word.Style.Priority" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -856,6 +885,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.QuickStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property QuickStyle As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool QuickStyle { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.QuickStyle : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.QuickStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -887,6 +917,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Shading" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shading As Shading" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Shading ^ Shading { Microsoft::Office::Interop::Word::Shading ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Shading : Microsoft.Office.Interop.Word.Shading" Usage="Microsoft.Office.Interop.Word.Style.Shading" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -915,6 +946,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Table" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Table As TableStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::TableStyle ^ Table { Microsoft::Office::Interop::Word::TableStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Table : Microsoft.Office.Interop.Word.TableStyle" Usage="Microsoft.Office.Interop.Word.Style.Table" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -943,6 +975,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As WdStyleType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdStyleType Type { Microsoft::Office::Interop::Word::WdStyleType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Interop.Word.WdStyleType" Usage="Microsoft.Office.Interop.Word.Style.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -960,7 +993,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdStyleType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип стиля. Только <see cref="T:Microsoft.Office.Interop.Word.Style" />для чтения.</summary>
+        <summary>Возвращает тип стиля. Только для чтения <see cref="T:Microsoft.Office.Interop.Word.Style" /> .</summary>
         <value>To be added.</value>
         <remarks><para>
             <b>Вдстилетипе</b> может быть одной из следующих констант:</para>
@@ -985,6 +1018,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.UnhideWhenUsed" />
       <MemberSignature Language="VB.NET" Value="Public Property UnhideWhenUsed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UnhideWhenUsed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UnhideWhenUsed : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.UnhideWhenUsed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1005,8 +1039,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Установите <b>значение true</b> , чтобы <see cref="P:Microsoft.Office.Interop.Word.Style.Hidden" /> очистить свойство при использовании этого стиля.</summary>
-        <value>Boolean</value>
+        <summary>Установите <b>значение true</b> , чтобы очистить <see cref="P:Microsoft.Office.Interop.Word.Style.Hidden" /> свойство при использовании этого стиля.</summary>
+        <value>Логический</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1016,6 +1050,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Style.Visibility" />
       <MemberSignature Language="VB.NET" Value="Public Property Visibility As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Visibility { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visibility : bool with get, set" Usage="Microsoft.Office.Interop.Word.Style.Visibility" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

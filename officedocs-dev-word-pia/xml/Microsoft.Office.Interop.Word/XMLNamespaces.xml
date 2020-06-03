@@ -1,9 +1,10 @@
 <Type Name="XMLNamespaces" FullName="Microsoft.Office.Interop.Word.XMLNamespaces">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d9eb0ff72d7f177eb7bd98e5edbe17f3467652a3" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142635" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNamespaces : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="17ad762bd94413ee58d71733dca9438fafc163ec" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43926740" /></Metadata><TypeSignature Language="C#" Value="public interface XMLNamespaces : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLNamespaces implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.XMLNamespaces" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLNamespaces&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class XMLNamespaces : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type XMLNamespaces = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -24,7 +25,7 @@
   <Docs>
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объектов, представляющая всю коллекцию схем в библиотеке схем.</summary>
     <remarks><para>В Microsoft Word можно открыть библиотеку схемы на вкладке Схема XML в диалоговом окне Шаблоны и надстройки. Библиотека схем представляет схемы, установленные на компьютере пользователя, который пользователь применил к документу Word или который явно добавлен в библиотеку схем с помощью диалогового окна "Библиотека схем".</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNamespaces.Item(System.Object@)" /> свойство коллекции <b>XMLNamespaces</b> , чтобы возвратить отдельный объект <b>XmlNamespace</b> . Значение индекса свойства <b>Item</b> может быть <b>целым числом</b>, указывающим положение схемы в библиотеке схем, или <b>строкой</b>, которая представляет имя схемы, возвращаемой с помощью <see cref="P:Microsoft.Office.Interop.Word.XMLNamespace.URI" /> свойства ( Параметр TargetNamespace, определенный в схеме).</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.XMLNamespaces.Item(System.Object@)" /> свойство коллекции <b>XMLNamespaces</b> , чтобы возвратить отдельный объект <b>XmlNamespace</b> . Значение индекса свойства <b>Item</b> может быть <b>целым числом</b>, указывающим положение схемы в библиотеке схем, или <b>строкой</b>, которая представляет имя схемы, возвращаемой с помощью <see cref="P:Microsoft.Office.Interop.Word.XMLNamespace.URI" /> Свойства (параметр TargetNamespace определен в схеме).</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -33,6 +34,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.XMLNamespace Add([in]string Path, [in]object&amp; NamespaceURI, [in]object&amp; Alias, [in]bool InstallForAllUsers) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLNamespaces.Add(System.String,System.Object@,System.Object@,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Path As String, Optional ByRef NamespaceURI As Object, Optional ByRef Alias As Object, Optional InstallForAllUsers As Boolean = false) As XMLNamespace" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * obj * obj * bool -&gt; Microsoft.Office.Interop.Word.XMLNamespace" Usage="xMLNamespaces.Add (Path, NamespaceURI, Alias, InstallForAllUsers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -48,15 +50,15 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Path" Type="System.String" />
-        <Parameter Name="NamespaceURI" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="Alias" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="NamespaceURI" Type="System.Object" RefType="ref" />
+        <Parameter Name="Alias" Type="System.Object" RefType="ref" />
         <Parameter Name="InstallForAllUsers" Type="System.Boolean" />
       </Parameters>
       <Docs>
         <param name="Path">Обязательный атрибут типа <b>String</b>. Путь и имя файла схемы. Это может быть локальный путь к файлу, сетевой путь или адрес в Интернете.</param>
-        <param name="NamespaceURI">Необязательная <b>строка</b>. Индикатор универсального ресурса пространства имен, как указано в схеме. Параметр <paramref name="NamespaceURI" /> чувствителен к регистру и должен задаваться точно так же, как и в схеме.</param>
+        <param name="NamespaceURI">Необязательная <b>строка</b>. Индикатор универсального ресурса пространства имен, как указано в схеме. <paramref name="NamespaceURI" />Параметр чувствителен к регистру и должен задаваться точно так же, как и в схеме.</param>
         <param name="Alias">Необязательная <b>строка</b>. Имя схемы, отображаемое на вкладке схемы в диалоговом окне Шаблоны и надстройки.</param>
-        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. По умолчанию используется значение <b>False</b>.</param>
+        <param name="InstallForAllUsers">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , если все пользователи, которые входят на компьютер, могут получить доступ к новой схеме и использовать ее. Значение по умолчанию - <b>false</b>.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.XMLNamespace" /> объект, представляющий схему, которая добавляется в библиотеку схемы и становится доступной пользователям в Microsoft Word.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -68,6 +70,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLNamespaces.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.XMLNamespaces.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLNamespaces.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.XMLNamespaces.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLNamespaces.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.XMLNamespaces.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -154,6 +159,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLNamespaces.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="xMLNamespaces.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -185,6 +191,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InstallManifest([in]string Path, [in]bool InstallForAllUsers) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.XMLNamespaces.InstallManifest(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub InstallManifest (Path As String, Optional InstallForAllUsers As Boolean = false)" />
+      <MemberSignature Language="F#" Value="abstract member InstallManifest : string * bool -&gt; unit" Usage="xMLNamespaces.InstallManifest (Path, InstallForAllUsers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -216,6 +223,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLNamespaces.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As XMLNamespace" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::XMLNamespace ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::XMLNamespace ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.XMLNamespace" Usage="Microsoft.Office.Interop.Word.XMLNamespaces.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -233,7 +241,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.XMLNamespace</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -248,6 +256,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.XMLNamespaces.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.XMLNamespaces.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
