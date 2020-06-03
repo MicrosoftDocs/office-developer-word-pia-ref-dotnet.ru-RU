@@ -1,9 +1,10 @@
 <Type Name="Cells" FullName="Microsoft.Office.Interop.Word.Cells">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5f1f919c60f50e8edbe09241cd688bb7b561fc76" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147356" /></Metadata><TypeSignature Language="C#" Value="public interface Cells : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ca0ac51867187dca9935c854b619334da7088135" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922635" /></Metadata><TypeSignature Language="C#" Value="public interface Cells : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Cells implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Cells" />
   <TypeSignature Language="VB.NET" Value="Public Interface Cells&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Cells : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Cells = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -23,9 +24,9 @@
   </Attributes>
   <Docs>
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Cell" /> объектов в столбце таблицы, строке таблицы, выделенном фрагменте или диапазоне.</summary>
-    <remarks><para>Чтобы получить коллекцию Cells, используйте <b></b> свойство <b>Cells</b> .</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Cells.Add(System.Object@)" /> метод, чтобы добавить объект <b>Cell</b> в коллекцию <b>Cells</b> . Для вставки новых ячеек можно <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertCells(System.Object@)" /> также использовать метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта.</para>
-      <para>Используйте <b>ячейку</b>(<paramref name="row" />, <paramref name="column" />), где <paramref name="row" /> — это номер строки, <paramref name="column" /> а — номер столбца, или <b>ячейки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Cell</b> .</para>
+    <remarks><para>Чтобы получить коллекцию <b>Cells</b> , используйте свойство <b>Cells</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Cells.Add(System.Object@)" /> метод, чтобы добавить объект <b>Cell</b> в коллекцию <b>Cells</b> . <see cref="M:Microsoft.Office.Interop.Word.Selection.InsertCells(System.Object@)" />Для вставки новых ячеек можно также использовать метод <see cref="T:Microsoft.Office.Interop.Word.Selection" /> объекта.</para>
+      <para>Используйте <b>ячейку</b>( <paramref name="row" /> , <paramref name="column" /> ), где <paramref name="row" /> — это номер строки, а <paramref name="column" /> — номер столбца, или <b>ячейки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Cell</b> .</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -34,6 +35,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Cell Add([in]object&amp; BeforeCell) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.Add(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (Optional ByRef BeforeCell As Object) As Cell" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj -&gt; Microsoft.Office.Interop.Word.Cell" Usage="cells.Add BeforeCell" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -48,10 +50,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.Cell</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="BeforeCell" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="BeforeCell" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="BeforeCell"><see cref="T:Microsoft.Office.Interop.Word.Cell" /> Объект, представляющий ячейку, которая будет отображаться непосредственно справа от указанных ячеек.</param>
+        <param name="BeforeCell"><see cref="T:Microsoft.Office.Interop.Word.Cell" />Объект, представляющий ячейку, которая будет отображаться непосредственно справа от указанных ячеек.</param>
         <summary>Добавляет ячейку в таблицу.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Cells.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -91,6 +94,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.AutoFit" />
       <MemberSignature Language="VB.NET" Value="Public Sub AutoFit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AutoFit();" />
+      <MemberSignature Language="F#" Value="abstract member AutoFit : unit -&gt; unit" Usage="cells.AutoFit " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -117,6 +121,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Borders" />
       <MemberSignature Language="VB.NET" Value="Public Property Borders As Borders" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Borders ^ Borders { Microsoft::Office::Interop::Word::Borders ^ get(); void set(Microsoft::Office::Interop::Word::Borders ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Borders : Microsoft.Office.Interop.Word.Borders with get, set" Usage="Microsoft.Office.Interop.Word.Cells.Borders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -148,6 +153,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Cells.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -176,6 +182,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Cells.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -205,6 +212,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete([in]object&amp; ShiftCells) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.Delete(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete (Optional ByRef ShiftCells As Object)" />
+      <MemberSignature Language="F#" Value="abstract member Delete : obj -&gt; unit" Usage="cells.Delete ShiftCells" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -219,7 +227,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="ShiftCells" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="ShiftCells" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="ShiftCells">Направление сдвига оставшихся ячеек. Может быть любой <see cref="T:Microsoft.Office.Interop.Word.WdDeleteCells" /> константой. Если этот параметр опущен, ячейки справа от последней удаленной ячейки сдвигаются влево.</param>
@@ -233,6 +241,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.DistributeHeight" />
       <MemberSignature Language="VB.NET" Value="Public Sub DistributeHeight ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DistributeHeight();" />
+      <MemberSignature Language="F#" Value="abstract member DistributeHeight : unit -&gt; unit" Usage="cells.DistributeHeight " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -258,6 +267,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.DistributeWidth" />
       <MemberSignature Language="VB.NET" Value="Public Sub DistributeWidth ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DistributeWidth();" />
+      <MemberSignature Language="F#" Value="abstract member DistributeWidth : unit -&gt; unit" Usage="cells.DistributeWidth " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -283,6 +293,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="cells.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -315,6 +326,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Height" />
       <MemberSignature Language="VB.NET" Value="Public Property Height As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Height { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Height : single with get, set" Usage="Microsoft.Office.Interop.Word.Cells.Height" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -337,7 +349,7 @@
       <Docs>
         <summary>Возвращает или задает высоту заданных ячеек в таблице.</summary>
         <value>To be added.</value>
-        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Row.HeightRule" /> свойство указанной строки имеет значение <b>вдровхеигхтауто</b>, то <b>Height</b> возвращает <b>вдундефинед</b>; Установка свойства <b>Height</b> устанавливает для <b>хеигхтруле</b> значение <b>вдровхеигхтатлеаст</b>.</para>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Word.Row.HeightRule" /> свойство указанной строки имеет значение <b>вдровхеигхтауто</b>, <b>Height</b> возвращает <b>вдундефинед</b>; установка свойства <b>Height</b> устанавливает значение <b>хеигхтруле</b> для <b>вдровхеигхтатлеаст</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -347,6 +359,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.HeightRule" />
       <MemberSignature Language="VB.NET" Value="Public Property HeightRule As WdRowHeightRule" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdRowHeightRule HeightRule { Microsoft::Office::Interop::Word::WdRowHeightRule get(); void set(Microsoft::Office::Interop::Word::WdRowHeightRule value); };" />
+      <MemberSignature Language="F#" Value="member this.HeightRule : Microsoft.Office.Interop.Word.WdRowHeightRule with get, set" Usage="Microsoft.Office.Interop.Word.Cells.HeightRule" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -379,6 +392,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Cell" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Cell ^ default[int] { Microsoft::Office::Interop::Word::Cell ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Cell" Usage="Microsoft.Office.Interop.Word.Cells.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -411,6 +425,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.Merge" />
       <MemberSignature Language="VB.NET" Value="Public Sub Merge ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Merge();" />
+      <MemberSignature Language="F#" Value="abstract member Merge : unit -&gt; unit" Usage="cells.Merge " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -437,6 +452,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.NestingLevel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NestingLevel As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NestingLevel { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.NestingLevel : int" Usage="Microsoft.Office.Interop.Word.Cells.NestingLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -466,6 +482,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Cells.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -494,6 +511,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.PreferredWidth" />
       <MemberSignature Language="VB.NET" Value="Public Property PreferredWidth As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float PreferredWidth { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.PreferredWidth : single with get, set" Usage="Microsoft.Office.Interop.Word.Cells.PreferredWidth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -525,6 +543,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.PreferredWidthType" />
       <MemberSignature Language="VB.NET" Value="Public Property PreferredWidthType As WdPreferredWidthType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdPreferredWidthType PreferredWidthType { Microsoft::Office::Interop::Word::WdPreferredWidthType get(); void set(Microsoft::Office::Interop::Word::WdPreferredWidthType value); };" />
+      <MemberSignature Language="F#" Value="member this.PreferredWidthType : Microsoft.Office.Interop.Word.WdPreferredWidthType with get, set" Usage="Microsoft.Office.Interop.Word.Cells.PreferredWidthType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -556,6 +575,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.SetHeight(System.Object@,Microsoft.Office.Interop.Word.WdRowHeightRule)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetHeight (ByRef RowHeight As Object, HeightRule As WdRowHeightRule)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetHeight(System::Object ^ % RowHeight, Microsoft::Office::Interop::Word::WdRowHeightRule HeightRule);" />
+      <MemberSignature Language="F#" Value="abstract member SetHeight : obj * Microsoft.Office.Interop.Word.WdRowHeightRule -&gt; unit" Usage="cells.SetHeight (RowHeight, HeightRule)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -570,7 +590,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="RowHeight" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="RowHeight" Type="System.Object" RefType="ref" />
         <Parameter Name="HeightRule" Type="Microsoft.Office.Interop.Word.WdRowHeightRule" />
       </Parameters>
       <Docs>
@@ -587,6 +607,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetWidth (ColumnWidth As Single, RulerStyle As WdRulerStyle)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetWidth(float ColumnWidth, Microsoft::Office::Interop::Word::WdRulerStyle RulerStyle);" />
+      <MemberSignature Language="F#" Value="abstract member SetWidth : single * Microsoft.Office.Interop.Word.WdRulerStyle -&gt; unit" Usage="cells.SetWidth (ColumnWidth, RulerStyle)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -608,7 +629,7 @@
         <param name="ColumnWidth">Ширина указанного столбца (в пунктах).</param>
         <param name="RulerStyle">Управляет тем, как Microsoft Word регулирует ширину ячеек.</param>
         <summary>Задает ширину ячеек в таблице.</summary>
-        <remarks><para>Описанное выше <see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" /> поведение относится к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в этих случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> метод следует использовать с осторожностью.</para>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.WdRulerStyle" />Описанное выше поведение относится к таблицам с выравниванием по левому краю. Поведение <b>вдрулерстиле</b> для таблиц с выравниванием по центру и по правому краю может быть неожиданным; в этих случаях <see cref="M:Microsoft.Office.Interop.Word.Cell.SetWidth(System.Single,Microsoft.Office.Interop.Word.WdRulerStyle)" /> метод следует использовать с осторожностью.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -618,6 +639,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Shading" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Shading As Shading" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Shading ^ Shading { Microsoft::Office::Interop::Word::Shading ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Shading : Microsoft.Office.Interop.Word.Shading" Usage="Microsoft.Office.Interop.Word.Cells.Shading" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -645,6 +667,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Split([in]object&amp; NumRows, [in]object&amp; NumColumns, [in]object&amp; MergeBeforeSplit) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Cells.Split(System.Object@,System.Object@,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Split (Optional ByRef NumRows As Object, Optional ByRef NumColumns As Object, Optional ByRef MergeBeforeSplit As Object)" />
+      <MemberSignature Language="F#" Value="abstract member Split : obj * obj * obj -&gt; unit" Usage="cells.Split (NumRows, NumColumns, MergeBeforeSplit)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -659,9 +682,9 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="NumRows" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="NumColumns" Type="System.Object&amp;" RefType="ref" />
-        <Parameter Name="MergeBeforeSplit" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="NumRows" Type="System.Object" RefType="ref" />
+        <Parameter Name="NumColumns" Type="System.Object" RefType="ref" />
+        <Parameter Name="MergeBeforeSplit" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="NumRows">Количество строк, на которые нужно разделить группу ячеек.</param>
@@ -677,6 +700,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.VerticalAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Property VerticalAlignment As WdCellVerticalAlignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdCellVerticalAlignment VerticalAlignment { Microsoft::Office::Interop::Word::WdCellVerticalAlignment get(); void set(Microsoft::Office::Interop::Word::WdCellVerticalAlignment value); };" />
+      <MemberSignature Language="F#" Value="member this.VerticalAlignment : Microsoft.Office.Interop.Word.WdCellVerticalAlignment with get, set" Usage="Microsoft.Office.Interop.Word.Cells.VerticalAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -708,6 +732,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Cells.Width" />
       <MemberSignature Language="VB.NET" Value="Public Property Width As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Width { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Width : single with get, set" Usage="Microsoft.Office.Interop.Word.Cells.Width" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

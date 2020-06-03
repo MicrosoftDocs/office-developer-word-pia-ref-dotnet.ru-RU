@@ -1,9 +1,10 @@
 <Type Name="LegendEntries" FullName="Microsoft.Office.Interop.Word.LegendEntries">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f1b454addfaa2286a2fa2af265ff5ee75f6ba419" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147921" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntries : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="60ab8854fbf17d7840eb22d83f185b566bca9d6a" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43923894" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntries : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LegendEntries implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.LegendEntries" />
   <TypeSignature Language="VB.NET" Value="Public Interface LegendEntries&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class LegendEntries : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type LegendEntries = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -26,7 +27,7 @@
     <remarks><para>Каждая запись условного обозначения состоит из двух частей: текста записи, представляющего собой имя ряда или линии тренда, связанной с записью легенды; и маркер записи, визуально связывающий запись легенды со связанной с ней серией или линией тренда в диаграмме. Свойства форматирования для маркера записи и связанного с ним ряда или линии тренда включены в <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> объект.</para>
       <para> </para></remarks>
     <example><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Legend.LegendEntries(System.Object)" /> метод, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> коллекцию. В приведенном ниже примере выполняется циклическая коллекция записей условных обозначений для первой диаграммы в активном документе и изменяется цвет шрифта.</para>
-      <para>Используйте <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> (<paramref name="index" />), где <paramref name="index" /> — это номер индекса для записи условных обозначений, <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> чтобы вернуть один объект. Вы не можете возвращать записи условных обозначений по имени.</para>
+      <para>Используйте <see cref="T:Microsoft.Office.Interop.Word.LegendEntries" /> ( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса для записи условных обозначений, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.LegendKey" /> объект. Вы не можете возвращать записи условных обозначений по имени.</para>
       <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries (1) находится в верхней части условных обозначений; LegendEntries (LegendEntries. Count) находится в нижней части страницы.</para></example>
   </Docs>
   <Members>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.LegendEntries._Default(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function _Default (Index As Object) As LegendEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::LegendEntry ^ _Default(System::Object ^ Index);" />
+      <MemberSignature Language="F#" Value="abstract member _Default : obj -&gt; Microsoft.Office.Interop.Word.LegendEntry" Usage="legendEntries._Default Index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -68,6 +70,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.LegendEntries.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : obj" Usage="Microsoft.Office.Interop.Word.LegendEntries.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.LegendEntries.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.LegendEntries.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.LegendEntries.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.LegendEntries.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -153,6 +158,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.LegendEntries.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="legendEntries.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -185,6 +191,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.LegendEntries.Item(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Object) As LegendEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::LegendEntry ^ default[System::Object ^] { Microsoft::Office::Interop::Word::LegendEntry ^ get(System::Object ^ Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.LegendEntry" Usage="Microsoft.Office.Interop.Word.LegendEntries.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -217,6 +224,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.LegendEntries.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.LegendEntries.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

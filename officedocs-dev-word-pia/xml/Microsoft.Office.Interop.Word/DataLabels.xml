@@ -1,9 +1,10 @@
 <Type Name="DataLabels" FullName="Microsoft.Office.Interop.Word.DataLabels">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="849af9e318dead8239cad6dd722fca3def9aadf0" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147118" /></Metadata><TypeSignature Language="C#" Value="public interface DataLabels : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ce37e91a913444cf08d59aa326bb1ae76672139b" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922257" /></Metadata><TypeSignature Language="C#" Value="public interface DataLabels : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DataLabels implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.DataLabels" />
   <TypeSignature Language="VB.NET" Value="Public Interface DataLabels&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class DataLabels : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type DataLabels = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -26,7 +27,7 @@
     <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект представляет метку данных для точки или линии тренда. Для ряда без заданных точек (например, для ряда областей) <see cref="T:Microsoft.Office.Interop.Word.DataLabels" /> коллекция содержит одну метку данных.</para>
       <para> </para></remarks>
     <example><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Series.DataLabels(System.Object)" /> метод, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Word.DataLabels" /> коллекцию. В приведенном ниже примере задается формат номера для подписей данных в первом ряду первой диаграммы в активном документе.</para>
-      <para>Используйте <see cref="T:Microsoft.Office.Interop.Word.DataLabels" /> (<paramref name="Index" />), где <paramref name="Index" /> — это номер индекса метки данных, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект.</para></example>
+      <para>Используйте <see cref="T:Microsoft.Office.Interop.Word.DataLabels" /> ( <paramref name="Index" /> ), где <paramref name="Index" /> — это номер индекса метки данных, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объект.</para></example>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.DataLabels._Default(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function _Default (Index As Object) As DataLabel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::DataLabel ^ _Default(System::Object ^ Index);" />
+      <MemberSignature Language="F#" Value="abstract member _Default : obj -&gt; Microsoft.Office.Interop.Word.DataLabel" Usage="dataLabels._Default Index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Application { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : obj" Usage="Microsoft.Office.Interop.Word.DataLabels.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.AutoScaleFont" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoScaleFont As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ AutoScaleFont { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoScaleFont : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.AutoScaleFont" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -132,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.AutoText" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoText As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoText { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoText : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.AutoText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -154,7 +159,7 @@
       <Docs>
         <summary>Задайте значение <b>true</b> , если все объекты в коллекции автоматически создают соответствующий текст на основе контекста. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>При задании значения этого свойства задается <see cref="P:Microsoft.Office.Interop.Word.DataLabel.AutoText" /> свойство всех <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объектов, хранящихся в коллекции. Это свойство возвращает <b>значение true</b> , только <see cref="P:Microsoft.Office.Interop.Word.DataLabel.AutoText" /> если свойство для <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> всех объектов, включенных в коллекцию, имеет значение <b>true</b>; в противном случае это свойство возвращает <b>значение false</b>. </para>
+        <remarks><para>При задании значения этого свойства задается <see cref="P:Microsoft.Office.Interop.Word.DataLabel.AutoText" /> свойство всех <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объектов, хранящихся в коллекции. Это свойство возвращает <b>значение true</b> , только если <see cref="P:Microsoft.Office.Interop.Word.DataLabel.AutoText" /> свойство для всех <see cref="T:Microsoft.Office.Interop.Word.DataLabel" /> объектов, хранящихся в коллекции, имеет значение <b>true</b>; в противном случае это свойство возвращает <b>значение false</b>. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -164,6 +169,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Border" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Border As ChartBorder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ChartBorder ^ Border { Microsoft::Office::Interop::Word::ChartBorder ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Border : Microsoft.Office.Interop.Word.ChartBorder" Usage="Microsoft.Office.Interop.Word.DataLabels.Border" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -195,6 +201,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.DataLabels.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -223,6 +230,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.DataLabels.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -252,6 +260,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.DataLabels.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Function Delete () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; obj" Usage="dataLabels.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -278,6 +287,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Fill" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Fill As ChartFillFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ChartFillFormat ^ Fill { Microsoft::Office::Interop::Word::ChartFillFormat ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Fill : Microsoft.Office.Interop.Word.ChartFillFormat" Usage="Microsoft.Office.Interop.Word.DataLabels.Fill" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -309,6 +319,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Font" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Font As ChartFont" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ChartFont ^ Font { Microsoft::Office::Interop::Word::ChartFont ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Font : Microsoft.Office.Interop.Word.ChartFont" Usage="Microsoft.Office.Interop.Word.DataLabels.Font" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -340,6 +351,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Format" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Format As ChartFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::ChartFormat ^ Format { Microsoft::Office::Interop::Word::ChartFormat ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Format : Microsoft.Office.Interop.Word.ChartFormat" Usage="Microsoft.Office.Interop.Word.DataLabels.Format" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -358,7 +370,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает для объекта форматирование линии, заливки и применения.
-Только <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" />для чтения.</summary>
+Только для чтения <see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Word.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -369,6 +381,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.DataLabels.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="dataLabels.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -401,6 +414,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.HorizontalAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Property HorizontalAlignment As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ HorizontalAlignment { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HorizontalAlignment : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.HorizontalAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -434,6 +448,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Interior" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Interior As Interior" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Interior ^ Interior { Microsoft::Office::Interop::Word::Interior ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Interior : Microsoft.Office.Interop.Word.Interior" Usage="Microsoft.Office.Interop.Word.DataLabels.Interior" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -465,6 +480,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Item(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Object) As DataLabel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::DataLabel ^ default[System::Object ^] { Microsoft::Office::Interop::Word::DataLabel ^ get(System::Object ^ Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.DataLabel" Usage="Microsoft.Office.Interop.Word.DataLabels.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -497,6 +513,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.DataLabels.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -525,6 +542,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property NumberFormat As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ NumberFormat { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NumberFormat : string with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.NumberFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -557,6 +575,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormatLinked" />
       <MemberSignature Language="VB.NET" Value="Public Property NumberFormatLinked As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NumberFormatLinked { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.NumberFormatLinked : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.NumberFormatLinked" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -588,6 +607,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormatLocal" />
       <MemberSignature Language="VB.NET" Value="Public Property NumberFormatLocal As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ NumberFormatLocal { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NumberFormatLocal : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.NumberFormatLocal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -610,7 +630,7 @@
       <Docs>
         <summary>Возвращает или задает значение <b>объекта</b> , представляющее код формата для объекта в виде строки на языке пользователя.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Функция <b>Format</b> использует разные строки кода формата, <see cref="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormat" /> чем свойства и. <see cref="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormatLocal" /></para>
+        <remarks><para>Функция <b>Format</b> использует разные строки кода формата, чем <see cref="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormat" /> <see cref="P:Microsoft.Office.Interop.Word.DataLabels.NumberFormatLocal" /> Свойства и.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -620,6 +640,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Orientation" />
       <MemberSignature Language="VB.NET" Value="Public Property Orientation As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Orientation { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Orientation : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.Orientation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -652,6 +673,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.DataLabels.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -680,6 +702,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Position" />
       <MemberSignature Language="VB.NET" Value="Public Property Position As XlDataLabelPosition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::XlDataLabelPosition Position { Microsoft::Office::Interop::Word::XlDataLabelPosition get(); void set(Microsoft::Office::Interop::Word::XlDataLabelPosition value); };" />
+      <MemberSignature Language="F#" Value="member this.Position : Microsoft.Office.Interop.Word.XlDataLabelPosition with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.Position" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -711,6 +734,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.DataLabels.Propagate(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Propagate (Index As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Propagate(System::Object ^ Index);" />
+      <MemberSignature Language="F#" Value="abstract member Propagate : obj -&gt; unit" Usage="dataLabels.Propagate Index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -740,6 +764,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ReadingOrder" />
       <MemberSignature Language="VB.NET" Value="Public Property ReadingOrder As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ReadingOrder { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ReadingOrder : int with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ReadingOrder" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -771,6 +796,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.DataLabels.Select" />
       <MemberSignature Language="VB.NET" Value="Public Function Select () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Select();" />
+      <MemberSignature Language="F#" Value="abstract member Select : unit -&gt; obj" Usage="dataLabels.Select " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -797,6 +823,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Separator" />
       <MemberSignature Language="VB.NET" Value="Public Property Separator As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Separator { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Separator : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.Separator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -829,6 +856,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Shadow" />
       <MemberSignature Language="VB.NET" Value="Public Property Shadow As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Shadow { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Shadow : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.Shadow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -860,6 +888,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowBubbleSize" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowBubbleSize As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowBubbleSize { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowBubbleSize : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowBubbleSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -891,6 +920,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowCategoryName" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowCategoryName As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowCategoryName { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowCategoryName : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowCategoryName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -922,6 +952,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowLegendKey" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowLegendKey As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowLegendKey { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowLegendKey : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowLegendKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -953,6 +984,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowPercentage" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowPercentage As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowPercentage { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowPercentage : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowPercentage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -984,6 +1016,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowRange" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowRange As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowRange { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowRange : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowRange" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1015,6 +1048,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowSeriesName" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowSeriesName As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowSeriesName { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowSeriesName : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowSeriesName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1046,6 +1080,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.ShowValue" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowValue As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowValue { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowValue : bool with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.ShowValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1077,6 +1112,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.Type" />
       <MemberSignature Language="VB.NET" Value="Public Property Type As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Type { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Type : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -1114,6 +1150,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.DataLabels.VerticalAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Property VerticalAlignment As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ VerticalAlignment { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.VerticalAlignment : obj with get, set" Usage="Microsoft.Office.Interop.Word.DataLabels.VerticalAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

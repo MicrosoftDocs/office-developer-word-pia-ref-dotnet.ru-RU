@@ -1,9 +1,10 @@
 <Type Name="Diagram" FullName="Microsoft.Office.Interop.Word.Diagram">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="bc06f6c988452cbcd9040e790955deac67b02537" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147105" /></Metadata><TypeSignature Language="C#" Value="public interface Diagram" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bc16b63a69bed0e98f5228bd78e55009a1797d9b" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922229" /></Metadata><TypeSignature Language="C#" Value="public interface Diagram" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Diagram" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Diagram" />
   <TypeSignature Language="VB.NET" Value="Public Interface Diagram" />
   <TypeSignature Language="C++ CLI" Value="public interface class Diagram" />
+  <TypeSignature Language="F#" Value="type Diagram = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
   <Docs>
     <summary>Представляет одну схему в документе.</summary>
     <remarks><para>Объект <b>Diagram</b> является элементом <see cref="T:Microsoft.Office.Interop.Word.Shapes" /> коллекции.</para>
-      <para><see cref="P:Microsoft.Office.Interop.Word.Shape.Diagram" /> Используйте свойство объекта <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" />, <see cref="T:Microsoft.Office.Interop.Word.Shape" />и <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> объекты, чтобы вернуть один объект <b>схемы</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.Diagram.Convert(Microsoft.Office.Core.MsoDiagramType)" /> метод для изменения схемы с одного типа на другой.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Shape.Diagram" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Word.DiagramNode" /> , <see cref="T:Microsoft.Office.Interop.Word.Shape" /> и объекты, <see cref="T:Microsoft.Office.Interop.Word.ShapeRange" /> чтобы вернуть один объект <b>схемы</b> . Используйте <see cref="M:Microsoft.Office.Interop.Word.Diagram.Convert(Microsoft.Office.Core.MsoDiagramType)" /> метод для изменения схемы с одного типа на другой.</para>
       <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Diagram.Reverse" /> свойство, чтобы отразить порядок узлов в схеме.</para>
       <para> </para></remarks>
   </Docs>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Diagram.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -59,6 +61,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.AutoFormat" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoFormat As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState AutoFormat { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoFormat : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.Diagram.AutoFormat" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.AutoLayout" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoLayout As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState AutoLayout { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoLayout : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.Diagram.AutoLayout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Diagram.Convert(Microsoft.Office.Core.MsoDiagramType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Convert (Type As MsoDiagramType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Convert(Microsoft::Office::Core::MsoDiagramType Type);" />
+      <MemberSignature Language="F#" Value="abstract member Convert : Microsoft.Office.Core.MsoDiagramType -&gt; unit" Usage="diagram.Convert Type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -138,7 +143,7 @@
         <Parameter Name="Type" Type="Microsoft.Office.Core.MsoDiagramType" />
       </Parameters>
       <Docs>
-        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoDiagramType" />. Тип схемы, для которой необходимо выполнить преобразование.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoDiagramType" /> . Тип схемы, для которой необходимо выполнить преобразование.</param>
         <summary>Преобразует схему одного типа в схему другого типа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Diagram.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Diagram.FitText" />
       <MemberSignature Language="VB.NET" Value="Public Sub FitText ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void FitText();" />
+      <MemberSignature Language="F#" Value="abstract member FitText : unit -&gt; unit" Usage="diagram.FitText " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -205,6 +212,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Nodes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Nodes As DiagramNodes" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::DiagramNodes ^ Nodes { Microsoft::Office::Interop::Word::DiagramNodes ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Nodes : Microsoft.Office.Interop.Word.DiagramNodes" Usage="Microsoft.Office.Interop.Word.Diagram.Nodes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -233,6 +241,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Diagram.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -261,6 +270,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Reverse" />
       <MemberSignature Language="VB.NET" Value="Public Property Reverse As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState Reverse { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.Reverse : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.Diagram.Reverse" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Diagram.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As MsoDiagramType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoDiagramType Type { Microsoft::Office::Core::MsoDiagramType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Core.MsoDiagramType" Usage="Microsoft.Office.Interop.Word.Diagram.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

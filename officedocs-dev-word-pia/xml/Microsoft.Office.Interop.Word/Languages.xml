@@ -1,9 +1,10 @@
 <Type Name="Languages" FullName="Microsoft.Office.Interop.Word.Languages">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1baf8eae7e14a2522bca48a798cc4d1874daefdf" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146656" /></Metadata><TypeSignature Language="C#" Value="public interface Languages : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="24211fe4ed1fc4c42f6c69e7ef0b05df51945920" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43923916" /></Metadata><TypeSignature Language="C#" Value="public interface Languages : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Languages implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Languages" />
   <TypeSignature Language="VB.NET" Value="Public Interface Languages&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Languages : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Languages = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -24,8 +25,8 @@
   <Docs>
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Language" /> объектов, представляющих языки, используемые для проверки правописания или форматирования в Microsoft Word.</summary>
     <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.Languages" /> свойство, чтобы возвратить коллекцию <b>Languages</b> .</para>
-      <para>Используйте <b></b>Languages<paramref name="index" />(), чтобы вернуть один объект <b>Language</b> , <paramref name="index" /> где может быть <see cref="P:Microsoft.Office.Interop.Word.Language.Name" /> значением свойства, <see cref="P:Microsoft.Office.Interop.Word.Language.NameLocal" /> значением свойства, одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант или одной из <see cref="T:Microsoft.Office.Core.MsoLanguageID" /> констант.</para>
-      <para><see cref="P:Microsoft.Office.Interop.Word.Languages.Count" /> Свойство возвращает число языков, для которых можно пометить текст (языки, для которых доступны средства проверки правописания). Для проверки правописания необходимо установить соответствующие инструменты для каждого языка, который необходимо проверить. Для каждого из следующих компонентов требуется файл. dll и файл. Лекс: тезаурус, средство проверки правописания, средство проверки грамматики и средства расстановки переносов.</para>
+      <para>Используйте <b>Languages</b>( <paramref name="index" /> ), чтобы вернуть один объект <b>Language</b> , где <paramref name="index" /> может быть значением <see cref="P:Microsoft.Office.Interop.Word.Language.Name" /> свойства, значением <see cref="P:Microsoft.Office.Interop.Word.Language.NameLocal" /> свойства, одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант или одной из <see cref="T:Microsoft.Office.Core.MsoLanguageID" /> констант.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Languages.Count" />Свойство возвращает число языков, для которых можно пометить текст (языки, для которых доступны средства проверки правописания). Для проверки правописания необходимо установить соответствующие инструменты для каждого языка, который необходимо проверить. Для каждого из следующих компонентов требуется файл. dll и файл. Лекс: тезаурус, средство проверки правописания, средство проверки грамматики и средства расстановки переносов.</para>
       <para>Если вы пометите текст как <b>вднопруфинг</b>, Word пропускает отмеченный текст при проверке орфографии или грамматики. Чтобы пометить текст для указанного языка или без проверки правописания, используйте команду "задать язык" (меню "Сервис", подменю "язык").</para>
       <para> </para></remarks>
   </Docs>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Languages.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Languages.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Languages.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Languages.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Languages.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Languages.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -122,6 +126,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Languages.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="languages.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -154,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Languages.Item(System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(ByRef Index As Object) As Language" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Language ^ default[System::Object ^ %] { Microsoft::Office::Interop::Word::Language ^ get(System::Object ^ % Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.Word.Language" Usage="Microsoft.Office.Interop.Word.Languages.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -171,7 +177,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Language</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="Index" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Index" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Index"><b>Объект</b> , указывающий порядковое положение или строку, представляющую имя отдельного объекта.</param>
@@ -186,6 +192,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Languages.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Languages.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

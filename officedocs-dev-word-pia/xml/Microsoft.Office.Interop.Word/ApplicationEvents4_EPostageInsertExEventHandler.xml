@@ -1,9 +1,10 @@
 <Type Name="ApplicationEvents4_EPostageInsertExEventHandler" FullName="Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertExEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="94af4b0a8aa74cc409913103a77c2efdb8781bff" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144829" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_EPostageInsertExEventHandler(Document Doc, int cpDeliveryAddrStart, int cpDeliveryAddrEnd, int cpReturnAddrStart, int cpReturnAddrEnd, int xaWidth, int yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, out bool fCancel);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="331d53c164e959ad23e12bf8cc9384160647bf50" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43923040" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_EPostageInsertExEventHandler(Document Doc, int cpDeliveryAddrStart, int cpDeliveryAddrEnd, int cpReturnAddrStart, int cpReturnAddrEnd, int xaWidth, int yaHeight, string bstrPrinterName, string bstrPaperFeed, bool fPrint, out bool fCancel);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ApplicationEvents4_EPostageInsertExEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ApplicationEvents4_EPostageInsertExEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ApplicationEvents4_EPostageInsertExEventHandler(Doc As Document, cpDeliveryAddrStart As Integer, cpDeliveryAddrEnd As Integer, cpReturnAddrStart As Integer, cpReturnAddrEnd As Integer, xaWidth As Integer, yaHeight As Integer, bstrPrinterName As String, bstrPaperFeed As String, fPrint As Boolean, ByRef fCancel As Boolean)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void ApplicationEvents4_EPostageInsertExEventHandler(Document ^ Doc, int cpDeliveryAddrStart, int cpDeliveryAddrEnd, int cpReturnAddrStart, int cpReturnAddrEnd, int xaWidth, int yaHeight, System::String ^ bstrPrinterName, System::String ^ bstrPaperFeed, bool fPrint, [Runtime::InteropServices::Out] bool % fCancel);" />
+  <TypeSignature Language="F#" Value="type ApplicationEvents4_EPostageInsertExEventHandler = delegate of Document * int * int * int * int * int * int * string * string * bool * bool -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -30,13 +31,13 @@
     <Parameter Name="bstrPrinterName" Type="System.String" />
     <Parameter Name="bstrPaperFeed" Type="System.String" />
     <Parameter Name="fPrint" Type="System.Boolean" />
-    <Parameter Name="fCancel" Type="System.Boolean&amp;" RefType="out" />
+    <Parameter Name="fCancel" Type="System.Boolean" RefType="out" />
   </Parameters>
   <ReturnValue>
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="Doc">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Document" />. Документ, в который добавляется электронная марка.</param>
+    <param name="Doc">Обязательный <see cref="T:Microsoft.Office.Interop.Word.Document" /> . Документ, в который добавляется электронная марка.</param>
     <param name="cpDeliveryAddrStart"><b>Целое число</b>. Начальная позиция в документе для адреса доставки. Положение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.Start" /> свойства для <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекта.</param>
     <param name="cpDeliveryAddrEnd"><b>Целое число</b>. Конечное положение в документе для адреса доставки. Положение соответствует значению <see cref="P:Microsoft.Office.Interop.Word.Range.End" /> свойства для объекта <b>Range</b> .</param>
     <param name="cpReturnAddrStart"><b>Целое число</b>. Начальная позиция в документе для обратного адреса. Положение соответствует значению свойства <b>Start</b> объекта <b>Range</b> .</param>
@@ -46,8 +47,8 @@
     <param name="bstrPrinterName"><b>Строка</b>. Имя принтера, указанное на вкладке Параметры печати в диалоговом окне Параметры конверта.</param>
     <param name="bstrPaperFeed"><b>Строка</b>. Метод веб-канала, указанный на вкладке "Параметры печати" диалогового окна "Параметры конверта".</param>
     <param name="fPrint"><b>Логическое значение</b>. <b>Значение true</b> , если пользователь указал, что печатает конверт. <b>False</b> , если пользователь задает вставку конверта в документ.</param>
-    <param name="fCancel"><b>Логическое значение</b>. <b>Значение true</b> отменяет действие, указанное пользователем, как указано <paramref name="fPrint" /> в параметре.</param>
-    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.EPostageInsertEx" /> для события. Событие <b>епостажеинсертекс</b> происходит, когда пользователь вставляет электронную почтовые марку в документ.</summary>
+    <param name="fCancel"><b>Логическое значение</b>. <b>Значение true</b> отменяет действие, указанное пользователем, как указано в <paramref name="fPrint" /> параметре.</param>
+    <summary>Тип <b>делегата</b> , который используется для добавления обработчика событий для <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.EPostageInsertEx" /> события. Событие <b>епостажеинсертекс</b> происходит, когда пользователь вставляет электронную почтовые марку в документ.</summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

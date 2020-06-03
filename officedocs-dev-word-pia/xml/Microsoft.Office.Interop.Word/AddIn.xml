@@ -1,9 +1,10 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Interop.Word.AddIn">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="695249a505a14baf5625853d5db3725ed54c358e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144675" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="834391be669fe404d74b4ac56273a8b1154ee8ba" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43921886" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AddIn" />
   <TypeSignature Language="VB.NET" Value="Public Interface AddIn" />
   <TypeSignature Language="C++ CLI" Value="public interface class AddIn" />
+  <TypeSignature Language="F#" Value="type AddIn = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
   <Docs>
     <summary>Представляет одну надстройку: установлена или не установлена.</summary>
     <remarks><para>Объект <b>ADDIN</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции. Коллекция <b>AddIns</b> содержит все надстройки, доступные в Microsoft Word, независимо от того, загружены ли они в данный момент. Коллекция <b>AddIns</b> включает в себя глобальные шаблоны или библиотеки надстроек Word (вллс), отображаемые в диалоговом окне Шаблоны и надстройки (меню Сервис).</para>
-      <para>Используйте <b>надстройки</b>(<paramref name="index" />), где <paramref name="index" /> — это имя надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в диалоговом окне Шаблоны и надстройки.</para>
+      <para>Используйте <b>надстройки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это имя надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в диалоговом окне Шаблоны и надстройки.</para>
       <para>Номер индекса представляет положение надстройки в списке надстроек в диалоговом окне Шаблоны и надстройки.</para>
       <para>С помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода добавьте надстройку в список доступных надстроек и (необязательно) установите ее с помощью <paramref name="Install" /> аргумента.</para>
       <para>Чтобы установить надстройку, отображаемую в списке доступных надстроек, используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> свойство.</para>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.AddIn.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Autoload" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Autoload As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Autoload { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Autoload : bool" Usage="Microsoft.Office.Interop.Word.AddIn.Autoload" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -91,6 +94,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Compiled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compiled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Compiled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Compiled : bool" Usage="Microsoft.Office.Interop.Word.AddIn.Compiled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.AddIn.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -150,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.AddIn.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="addIn.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -175,6 +181,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Index" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Index { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Index : int" Usage="Microsoft.Office.Interop.Word.AddIn.Index" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -203,6 +210,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Installed" />
       <MemberSignature Language="VB.NET" Value="Public Property Installed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Installed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Installed : bool with get, set" Usage="Microsoft.Office.Interop.Word.AddIn.Installed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -226,7 +234,7 @@
         <summary>Возвращает или задает значение <b>true</b> , если указанная надстройка установлена (загружена).</summary>
         <value>To be added.</value>
         <remarks><para>Загруженные надстройки выбираются в диалоговом окне Шаблоны и надстройки (меню "Сервис").</para>
-          <para>В <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию включены неустановленные надстройки. Чтобы удалить шаблон или переключать из коллекции <b>AddIns</b> , примените к <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекту метод (имя надстройки будет удалено из диалогового окна шаблоны и надстройки). Чтобы выгрузить все шаблоны и Вллс, <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> примените метод к коллекции <b>AddIns</b> .</para>
+          <para>В коллекцию включены неустановленные надстройки <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> . Чтобы удалить шаблон или переключать из коллекции <b>AddIns</b> , примените <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> к объекту метод <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> (имя надстройки будет удалено из диалогового окна шаблоны и надстройки). Чтобы выгрузить все шаблоны и Вллс, примените <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> метод к коллекции <b>AddIns</b> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -236,6 +244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Name" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.AddIn.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -264,6 +273,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.AddIn.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Path" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.Office.Interop.Word.AddIn.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -311,7 +322,7 @@
       <Docs>
         <summary>Возвращает значение, указывающее URL-адрес указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>Путь не включает замыкающую косую черту вперед, например "http://MyServer". Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления знака замыкающей косой черты, несмотря на то, что свойство <b>пассепаратор</b> по умолчанию имеет\)обратную косую черту (.</para>
+        <remarks><para>Путь не включает замыкающую косую черту вперед, например " http://MyServer ". Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления знака замыкающей косой черты, несмотря на то, что свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту ( \) .</para>
           <para> </para></remarks>
       </Docs>
     </Member>

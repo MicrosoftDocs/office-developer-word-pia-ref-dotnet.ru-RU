@@ -1,9 +1,10 @@
 <Type Name="Comments" FullName="Microsoft.Office.Interop.Word.Comments">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e889768b79d325f4fa4910b0f457ac3a01ccde03" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147223" /></Metadata><TypeSignature Language="C#" Value="public interface Comments : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4f0a5432a7d30a1d7e487520018036ac53809490" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922341" /></Metadata><TypeSignature Language="C#" Value="public interface Comments : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Comments implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Comments" />
   <TypeSignature Language="VB.NET" Value="Public Interface Comments&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Comments : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Comments = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,7 +26,7 @@
     <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Word.Comment" /> объектов, представляющих комментарии в выделении, диапазоне или документе.</summary>
     <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Word._Document.Comments" /> свойство, чтобы возвратить коллекцию <b>комментариев</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод, чтобы добавить комментарий в указанный диапазон.</para>
-      <para>Используйте <b></b>Comments<paramref name="index" />(), <paramref name="index" /> где — это номер индекса, чтобы вернуть один объект <b>comment</b> . Номер индекса представляет положение комментария в указанном фрагменте, диапазоне или документе.</para>
+      <para>Используйте <b>Comments</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы вернуть один объект <b>comment</b> . Номер индекса представляет положение комментария в указанном фрагменте, диапазоне или документе.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -33,6 +34,8 @@
       <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Word.Comment Add (Microsoft.Office.Interop.Word.Range Range, ref object Text);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Comment Add([in]class Microsoft.Office.Interop.Word.Range Range, [in]object&amp; Text) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Comments.Add(Microsoft.Office.Interop.Word.Range,System.Object@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (Range As Range, Optional ByRef Text As Object) As Comment" />
+      <MemberSignature Language="F#" Value="abstract member Add : Microsoft.Office.Interop.Word.Range * obj -&gt; Microsoft.Office.Interop.Word.Comment" Usage="comments.Add (Range, Text)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -48,7 +51,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Word.Range" />
-        <Parameter Name="Text" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="Text" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Range">Обязательный объект <b>Range</b> . Диапазон, к которому добавляется комментарий.</param>
@@ -64,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Comments.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -92,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Comments.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -120,6 +125,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Comments.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -150,6 +156,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Comments.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="comments.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -182,6 +189,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Comment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Comment ^ default[int] { Microsoft::Office::Interop::Word::Comment ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Comment" Usage="Microsoft.Office.Interop.Word.Comments.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -214,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Comments.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -242,6 +251,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Comments.ShowBy" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ShowBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowBy : string with get, set" Usage="Microsoft.Office.Interop.Word.Comments.ShowBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

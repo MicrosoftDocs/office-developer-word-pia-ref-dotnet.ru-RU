@@ -1,9 +1,10 @@
 <Type Name="Bookmark" FullName="Microsoft.Office.Interop.Word.Bookmark">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="4d16f348543910c5ebcb48db2c87d1c11e3f73c5" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146348" /></Metadata><TypeSignature Language="C#" Value="public interface Bookmark" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="45d5d4707500f4f9a0319be2eed91416b120f4d0" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922725" /></Metadata><TypeSignature Language="C#" Value="public interface Bookmark" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Bookmark" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Bookmark" />
   <TypeSignature Language="VB.NET" Value="Public Interface Bookmark" />
   <TypeSignature Language="C++ CLI" Value="public interface class Bookmark" />
+  <TypeSignature Language="F#" Value="type Bookmark = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -20,8 +21,8 @@
   <Docs>
     <summary>Представляет одну закладку.</summary>
     <remarks><para>Объект <b>Bookmark</b> является членом <see cref="T:Microsoft.Office.Interop.Word.Bookmarks" /> коллекции. Коллекция закладок включает все закладки, перечисленные в диалоговом окне "закладки" (меню "Вставка").</para>
-      <para>Используйте <b>закладки</b>(<paramref name="index" />), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>закладки</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени закладки.</para>
-      <para>Номер индекса представляет положение закладки в объекте <see cref="T:Microsoft.Office.Interop.Word.Selection" /> или. <see cref="T:Microsoft.Office.Interop.Word.Range" /> Для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта номер индекса представляет положение закладки в алфавитном списке закладок в диалоговом окне "закладки" (щелкните имя, чтобы отсортировать список закладок в алфавитном порядке).</para>
+      <para>Используйте <b>закладки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это имя закладки или номер индекса, чтобы вернуть один объект <b>закладки</b> . Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени закладки.</para>
+      <para>Номер индекса представляет положение закладки в <see cref="T:Microsoft.Office.Interop.Word.Selection" /> <see cref="T:Microsoft.Office.Interop.Word.Range" /> объекте или. Для <see cref="T:Microsoft.Office.Interop.Word.Document" /> объекта номер индекса представляет положение закладки в алфавитном списке закладок в диалоговом окне "закладки" (щелкните имя, чтобы отсортировать список закладок в алфавитном порядке).</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Bookmarks.Add(System.String,System.Object@)" /> метод, чтобы добавить закладку в диапазон документов.</para>
       <para>Используйте <see cref="P:Microsoft.Office.Interop.Word.Range.BookmarkID" /> свойство с объектом Range или Selection, чтобы возвратить номер индекса объекта <b>закладки</b> в коллекции <b>закладок</b> .</para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.Bookmarks.Exists(System.String)" /> метод, чтобы определить, существует ли закладка в выделенном фрагменте, диапазоне или документе.</para>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Bookmark.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Column" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Column As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Column { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Column : bool" Usage="Microsoft.Office.Interop.Word.Bookmark.Column" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Bookmark.Copy(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Copy (Name As String) As Bookmark" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::Word::Bookmark ^ Copy(System::String ^ Name);" />
+      <MemberSignature Language="F#" Value="abstract member Copy : string -&gt; Microsoft.Office.Interop.Word.Bookmark" Usage="bookmark.Copy Name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -119,6 +123,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Bookmark.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Bookmark.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="bookmark.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -174,6 +180,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Empty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Empty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Empty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Empty : bool" Usage="Microsoft.Office.Interop.Word.Bookmark.Empty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -204,6 +211,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.End" />
       <MemberSignature Language="VB.NET" Value="Public Property End As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int End { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.End : int with get, set" Usage="Microsoft.Office.Interop.Word.Bookmark.End" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -226,7 +234,7 @@
       <Docs>
         <summary>Возвращает или задает позицию конечного символа закладки.</summary>
         <value>To be added.</value>
-        <remarks><para>У <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объекта есть начальная и конечная позиции. Конечное положение — это самое далекое место от начала статьи.</para>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.Bookmark" />У объекта есть начальная и конечная позиции. Конечное положение — это самое далекое место от начала статьи.</para>
           <para>Это свойство возвращает позицию конечного знака относительно начала статьи. Основная статья документа (<b>вдмаинтекстстори</b>) начинается с позиции 0 (ноль). Вы можете изменить размер закладки, задав это свойство.</para>
           <para>Если для этого свойства задано значение меньше, чем у <see cref="P:Microsoft.Office.Interop.Word.Bookmark.Start" /> свойства, свойству <b>Start</b> присвоено одинаковое значение (то есть, <b>Start</b> и <see cref="P:Microsoft.Office.Interop.Word.Bookmark.End" /> Property равны).</para>
           <para> </para></remarks>
@@ -238,6 +246,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Name" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.Bookmark.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -266,6 +275,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Bookmark.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -294,6 +304,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Range" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Range As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ Range { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Range : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.Bookmark.Range" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -313,7 +324,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Word.Range" /> объект, представляющий часть документа, содержащуюся в указанном <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объекте.</summary>
         <value>To be added.</value>
-        <remarks><para>Сведения о том, как возвратить диапазон из документа, можно <see cref="M:Microsoft.Office.Interop.Word.DocumentClass.Range(System.Object@,System.Object@)" /> узнать в методе.</para>
+        <remarks><para>Сведения о том, как возвратить диапазон из документа, можно узнать в <see cref="M:Microsoft.Office.Interop.Word.DocumentClass.Range(System.Object@,System.Object@)" /> методе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -323,6 +334,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Bookmark.Select" />
       <MemberSignature Language="VB.NET" Value="Public Sub Select ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Select();" />
+      <MemberSignature Language="F#" Value="abstract member Select : unit -&gt; unit" Usage="bookmark.Select " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -339,7 +351,7 @@
       <Parameters />
       <Docs>
         <summary>Выбирает указанный <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объект.</summary>
-        <remarks><para>После использования этого метода для работы с <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> выбранными элементами используйте свойство. </para>
+        <remarks><para>После использования этого метода <see cref="P:Microsoft.Office.Interop.Word._Application.Selection" /> для работы с выбранными элементами используйте свойство. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -349,6 +361,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.Start" />
       <MemberSignature Language="VB.NET" Value="Public Property Start As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Start { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Start : int with get, set" Usage="Microsoft.Office.Interop.Word.Bookmark.Start" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -371,7 +384,7 @@
       <Docs>
         <summary>Возвращает или задает позицию начального символа закладки.</summary>
         <value>To be added.</value>
-        <remarks><para>У <see cref="T:Microsoft.Office.Interop.Word.Bookmark" /> объекта есть начальная и конечная позиции. Конечное положение — это самое далекое место от начала статьи.</para>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Word.Bookmark" />У объекта есть начальная и конечная позиции. Конечное положение — это самое далекое место от начала статьи.</para>
           <para>Это свойство возвращает позицию конечного знака относительно начала статьи. Основная статья документа (<b>вдмаинтекстстори</b>) начинается с позиции 0 (ноль). Вы можете изменить размер закладки, задав это свойство.</para>
           <para>Если для этого свойства задано значение, превышающее значение <see cref="P:Microsoft.Office.Interop.Word.Bookmark.End" /> свойства, свойству <b>End</b> присваивается то же значение, что и <see cref="P:Microsoft.Office.Interop.Word.Bookmark.Start" /> свойство.</para>
           <para> </para></remarks>
@@ -383,6 +396,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Bookmark.StoryType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StoryType As WdStoryType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdStoryType StoryType { Microsoft::Office::Interop::Word::WdStoryType get(); };" />
+      <MemberSignature Language="F#" Value="member this.StoryType : Microsoft.Office.Interop.Word.WdStoryType" Usage="Microsoft.Office.Interop.Word.Bookmark.StoryType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

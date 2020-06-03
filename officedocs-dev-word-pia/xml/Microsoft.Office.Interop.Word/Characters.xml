@@ -1,9 +1,10 @@
 <Type Name="Characters" FullName="Microsoft.Office.Interop.Word.Characters">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3ed2d642991aec68ae45afbf33e3cbb38e71bb89" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34142322" /></Metadata><TypeSignature Language="C#" Value="public interface Characters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="dc09052777c8ce9350ed3537ce5a5b767f7c78b7" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922628" /></Metadata><TypeSignature Language="C#" Value="public interface Characters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Characters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Characters" />
   <TypeSignature Language="VB.NET" Value="Public Interface Characters&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class Characters : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Characters = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -25,9 +26,9 @@
     <summary>Коллекция символов в выделенном фрагменте, диапазоне или документе.</summary>
     <remarks><para>Объект <b>character</b> отсутствует; Вместо этого каждый элемент в коллекции <b>символов</b> является <see cref="T:Microsoft.Office.Interop.Word.Range" /> объектом, представляющим один символ.</para>
       <para>Чтобы получить коллекцию <b>символов</b> , используйте свойство <b>characters</b> .</para>
-      <para>Используйте <b>знаки</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Range</b> , представляющий один символ. Номер индекса представляет положение символа в коллекции <b>символов</b> .</para>
-      <para><see cref="P:Microsoft.Office.Interop.Word.Characters.Count" /> Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</para>
-      <para>Метод <b>Add</b> недоступен для коллекции Characters. Вместо этого используйте метод <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> для добавления символов в объект <b>Range</b> .</para>
+      <para>Используйте <b>знаки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса, чтобы возвратить объект <b>Range</b> , представляющий один символ. Номер индекса представляет положение символа в коллекции <b>символов</b> .</para>
+      <para><see cref="P:Microsoft.Office.Interop.Word.Characters.Count" />Свойство этой коллекции в документе возвращает количество элементов только в основной статье. Чтобы подсчитать количество элементов в других статьях, используйте коллекцию с объектом <b>Range</b> .</para>
+      <para>Метод <b>Add</b> недоступен для коллекции Characters. Вместо этого используйте <see cref="M:Microsoft.Office.Interop.Word.Range.InsertAfter(System.String)" /> метод или <see cref="M:Microsoft.Office.Interop.Word.Range.InsertBefore(System.String)" /> для добавления символов в объект <b>Range</b> .</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -37,6 +38,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Characters.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.Word.Characters.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Characters.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -123,6 +127,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.First" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property First As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ First { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.First : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.Characters.First" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -151,6 +156,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Characters.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="characters.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -183,6 +189,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(Index As Integer) As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ default[int] { Microsoft::Office::Interop::Word::Range ^ get(int Index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.Characters.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -215,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Last" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Last As Range" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Range ^ Last { Microsoft::Office::Interop::Word::Range ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Last : Microsoft.Office.Interop.Word.Range" Usage="Microsoft.Office.Interop.Word.Characters.Last" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -243,6 +251,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Characters.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Characters.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

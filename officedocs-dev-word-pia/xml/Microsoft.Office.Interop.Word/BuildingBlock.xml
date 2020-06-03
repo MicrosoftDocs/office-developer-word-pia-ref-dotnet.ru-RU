@@ -1,9 +1,10 @@
 <Type Name="BuildingBlock" FullName="Microsoft.Office.Interop.Word.BuildingBlock">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ca9bed40f87117ccf911469b9c1d874a575c9129" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34146229" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlock" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2c9b2e5436ba2864a5dad62aa444a46e005baf56" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922614" /></Metadata><TypeSignature Language="C#" Value="public interface BuildingBlock" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract BuildingBlock" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.BuildingBlock" />
   <TypeSignature Language="VB.NET" Value="Public Interface BuildingBlock" />
   <TypeSignature Language="C++ CLI" Value="public interface class BuildingBlock" />
+  <TypeSignature Language="F#" Value="type BuildingBlock = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -19,13 +20,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет стандартный блок в шаблоне.  Стандартный блок — это встроенный контент, похожий на Автотекст, который может содержать текст, изображения и форматирование.</summary>
-    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом коллекции <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> и. <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> Стандартные блоки хранятся в шаблонах Microsoft Office Word.  Таким образом, для доступа к стандартным блокам, доступным для документа, необходимо получить доступ к присоединенному шаблону.  Встроенные стандартные блоки хранятся в шаблоне под названием "компоновочные блоки. dotx".</para>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Word.BuildingBlock" /> объект является членом <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockEntries" /> коллекции и. Стандартные блоки хранятся в шаблонах Microsoft Office Word.  Таким образом, для доступа к стандартным блокам, доступным для документа, необходимо получить доступ к присоединенному шаблону.  Встроенные стандартные блоки хранятся в шаблоне под названием "компоновочные блоки. dotx".</para>
       <para>
-        <b>Note</b>: используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> метод коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции, чтобы возвратить отдельный Стандартный блок. В зависимости от того, как вы получите доступ к коллекции, возвращаемая коллекция может измениться.  Например, если вы обращаетесь к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией "Общие", возвращаемая коллекция может отличаться от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом Category <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> "Custom". Он также отличается от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией "Общие". Таким образом, первый элемент коллекции, к которому получен доступ из коллекции <b>BuildingBlockEntries</b> , может отличаться от первого элемента коллекции, к которому получен доступ из коллекции <b>BuildingBlocks</b> .</para>
+        <b>Note</b>: используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlocks.Item(System.Object@)" /> метод коллекции или <see cref="T:Microsoft.Office.Interop.Word.BuildingBlocks" /> коллекции, чтобы возвратить отдельный Стандартный блок. В зависимости от того, как вы получите доступ к коллекции, возвращаемая коллекция может измениться.  Например, если вы обращаетесь к коллекции стандартных блоков, используя тип <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> с категорией "Общие", возвращаемая коллекция может отличаться от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeAutoText" /> "Custom". Он также отличается от коллекции, возвращаемой при доступе к коллекции стандартных блоков с типом <see cref="F:Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustomAutoText" /> с категорией "Общие". Таким образом, первый элемент коллекции, к которому получен доступ из коллекции <b>BuildingBlockEntries</b> , может отличаться от первого элемента коллекции, к которому получен доступ из коллекции <b>BuildingBlocks</b> .</para>
       <para>Для создания нового стандартного блока можно использовать метод <b>Add</b> для коллекции <b>BuildingBlockEntries</b> или коллекции <b>BuildingBlocks</b> .  Однако рекомендуемый способ создания нового стандартного блока — использование <see cref="M:Microsoft.Office.Interop.Word.BuildingBlockEntries.Add(System.String,Microsoft.Office.Interop.Word.WdBuildingBlockTypes,System.String,Microsoft.Office.Interop.Word.Range,System.Object@,Microsoft.Office.Interop.Word.WdDocPartInsertOptions)" /> метода для коллекции <b>BuildingBlockEntries</b> . </para>
       <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" /> метод для вставки нового стандартного блока в документ. Используйте <see cref="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" /> метод для удаления стандартного блока из шаблона.</para>
-      <para>Стандартные блоки организованы по категориям и типам.  Используйте эту <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекцию для доступа к <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> отдельным объектам. Используйте эту <see cref="T:Microsoft.Office.Interop.Word.Categories" /> коллекцию для доступа к <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> отдельным объектам. Затем используйте надлежащее <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> . </para>
-      <para>Каждый стандартный блок имеет свойства, которые содержат сведения, применимые к нему уникальным образом <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />например <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />,, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />, и.</para>
+      <para>Стандартные блоки организованы по категориям и типам.  Используйте эту <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockTypes" /> коллекцию для доступа к отдельным <see cref="T:Microsoft.Office.Interop.Word.BuildingBlockType" /> объектам. Используйте эту <see cref="T:Microsoft.Office.Interop.Word.Categories" /> коллекцию для доступа к отдельным <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" /> объектам. Затем используйте надлежащее <b>BuildingBlocks</b> для доступа к коллекции <b>BuildingBlocks</b> для объекта <b>Category</b> . </para>
+      <para>Каждый стандартный блок имеет свойства, которые содержат сведения, применимые к нему уникальным образом, например,,, <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" /> <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" /> <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" /> и <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" /> .</para>
       <para>Дополнительные сведения о стандартных блоках см <a href="HV10120827">в разделе Работа с строительными блоками</a></para>
       <para> </para></remarks>
   </Docs>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Category" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Category As Category" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Category ^ Category { Microsoft::Office::Interop::Word::Category ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Category : Microsoft.Office.Interop.Word.Category" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Category" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -113,7 +117,7 @@
         <value><b>Integer</b></value>
         <remarks><para>Если объект был создан в Microsoft Word, свойство <b>Creator</b> возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".  Это свойство изначально предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Word есть код создателя МСВД. Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</para>
           <para>
-            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" />.</para>
+            <b>Note</b>: это значение также может быть представлено константой <see cref="F:Microsoft.Office.Interop.Word.WdConstants.wdCreatorCode" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -123,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.BuildingBlock.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="buildingBlock.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -148,6 +153,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Description" />
       <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ID As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ID { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ID : string" Usage="Microsoft.Office.Interop.Word.BuildingBlock.ID" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -198,7 +205,7 @@
       <Docs>
         <summary>Возвращает внутренний идентификационный номер для стандартного блока. Только для чтения.</summary>
         <value><b>String</b></value>
-        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" /> Свойство возвращает строку идентификации в виде идентификатора GUID.</para>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.ID" />Свойство возвращает строку идентификации в виде идентификатора GUID.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -208,6 +215,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Index" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Index { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Index : int" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Index" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -235,6 +243,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.Interop.Word.Range Insert([in]class Microsoft.Office.Interop.Word.Range Where, [in]object&amp; RichText) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.BuildingBlock.Insert(Microsoft.Office.Interop.Word.Range,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Function Insert (Where As Range, Optional ByRef RichText As Object) As Range" />
+      <MemberSignature Language="F#" Value="abstract member Insert : Microsoft.Office.Interop.Word.Range * obj -&gt; Microsoft.Office.Interop.Word.Range" Usage="buildingBlock.Insert (Where, RichText)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -250,7 +259,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="Where" Type="Microsoft.Office.Interop.Word.Range" />
-        <Parameter Name="RichText" Type="System.Object&amp;" RefType="ref" />
+        <Parameter Name="RichText" Type="System.Object" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="Where">Место размещения содержимого стандартного блока.</param>
@@ -266,6 +275,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" />
       <MemberSignature Language="VB.NET" Value="Public Property InsertOptions As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int InsertOptions { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.InsertOptions : int with get, set" Usage="Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -288,7 +298,7 @@
       <Docs>
         <summary>Возвращает или задает <b>целое число</b> , представляющее способ вставки содержимого стандартного блока в документ. Для чтения и записи.</summary>
         <value><b>Integer</b></value>
-        <remarks><para>Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любым из значений <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> перечисления.</para>
+        <remarks><para>Значение <see cref="P:Microsoft.Office.Interop.Word.BuildingBlock.InsertOptions" /> свойства может быть любым из <see cref="T:Microsoft.Office.Interop.Word.WdDocPartInsertOptions" /> значений перечисления.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -298,6 +308,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -329,6 +340,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -357,6 +369,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As BuildingBlockType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::BuildingBlockType ^ Type { Microsoft::Office::Interop::Word::BuildingBlockType ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Interop.Word.BuildingBlockType" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -385,6 +398,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.BuildingBlock.Value" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Value As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Value : string with get, set" Usage="Microsoft.Office.Interop.Word.BuildingBlock.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>

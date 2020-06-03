@@ -1,9 +1,10 @@
 <Type Name="CalloutFormat" FullName="Microsoft.Office.Interop.Word.CalloutFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3e225a3d98b4c368d5c9c0b464dfefb3fd25e89a" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147328" /></Metadata><TypeSignature Language="C#" Value="public interface CalloutFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ca057147289138dd738cdaf129377d28b3b0dcd9" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922579" /></Metadata><TypeSignature Language="C#" Value="public interface CalloutFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalloutFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.CalloutFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalloutFormat" />
   <TypeSignature Language="C++ CLI" Value="public interface class CalloutFormat" />
+  <TypeSignature Language="F#" Value="type CalloutFormat = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Accent" />
       <MemberSignature Language="VB.NET" Value="Public Property Accent As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState Accent { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.Accent : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Accent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -60,6 +62,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Angle" />
       <MemberSignature Language="VB.NET" Value="Public Property Angle As MsoCalloutAngleType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoCalloutAngleType Angle { Microsoft::Office::Core::MsoCalloutAngleType get(); void set(Microsoft::Office::Core::MsoCalloutAngleType value); };" />
+      <MemberSignature Language="F#" Value="member this.Angle : Microsoft.Office.Core.MsoCalloutAngleType with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Angle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoAttach As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState AutoAttach { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoAttach : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -149,8 +154,8 @@
       <Docs>
         <summary>Возвращает или задает значение, указывающее, изменяется ли место выноски линии выноски в текстовом поле выноски, в зависимости от того, находится ли источник линии выноски (где указывает выноску) слева или справа от текстового поля выноски.</summary>
         <value>To be added.</value>
-        <remarks><para>Если значение этого свойства равно <b>true</b>, то пустое значение (вертикальное расстояние от края текстового поля выноски до того места, где находится линия выноски) измеряется от верхнего края текстового поля, когда текстовое поле находится справа от начала координат , и он измеряется от нижнего края текстового поля, когда текстовое поле находится слева от начала координат. Если для этого свойства задано значение <b>false</b>, то пустое значение всегда измеряется от верхнего края текстового поля, независимо от относительного положения текстового поля и источника. Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение Drop, и используйте <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> свойство для возврата значения сброса.</para>
-          <para>Задание этого свойства влияет на выноску только в том случае, если у него явно задано пустое значение, то есть <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /> если значение свойства равно <b>мсокаллаутдропкустом</b>. По умолчанию выноски явно задают значения перетаскивания при их создании.</para>
+        <remarks><para>Если значение этого свойства равно <b>true</b>, то значение (вертикальное расстояние от края текстового поля выноски до того места, где присоединяется линия выноски) измеряется от верхнего края текстового поля, когда текстовое поле находится справа от начала координат, и оно измеряется от нижней границы текстового поля, когда текстовое поле находится слева от начала координат. Если для этого свойства задано значение <b>false</b>, то пустое значение всегда измеряется от верхнего края текстового поля, независимо от относительного положения текстового поля и источника. Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение Drop, и используйте <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> свойство для возврата значения сброса.</para>
+          <para>Задание этого свойства влияет на выноску только в том случае, если у него явно задано пустое значение, то есть если значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /> свойства равно <b>мсокаллаутдропкустом</b>. По умолчанию выноски явно задают значения перетаскивания при их создании.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -160,6 +165,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutoLength As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState AutoLength { Microsoft::Office::Core::MsoTriState get(); };" />
+      <MemberSignature Language="F#" Value="member this.AutoLength : Microsoft.Office.Core.MsoTriState" Usage="Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -179,7 +185,7 @@
       <Docs>
         <summary>Возвращает значение, которое указывает, следует ли автоматически устанавливать длину линии выноски.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы присвоить этому свойству значение <b>мсотруе</b>, <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> и используйте метод, чтобы задать для этого свойства значение <b>мсофалсе</b>.</para>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы присвоить этому свойству значение <b>мсотруе</b>, и используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы задать для этого свойства значение <b>мсофалсе</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -189,6 +195,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" />
       <MemberSignature Language="VB.NET" Value="Public Sub AutomaticLength ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AutomaticLength();" />
+      <MemberSignature Language="F#" Value="abstract member AutomaticLength : unit -&gt; unit" Usage="calloutFormat.AutomaticLength " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -219,6 +226,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Border" />
       <MemberSignature Language="VB.NET" Value="Public Property Border As MsoTriState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoTriState Border { Microsoft::Office::Core::MsoTriState get(); void set(Microsoft::Office::Core::MsoTriState value); };" />
+      <MemberSignature Language="F#" Value="member this.Border : Microsoft.Office.Core.MsoTriState with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Border" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -250,6 +258,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -280,6 +289,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CustomDrop (Drop As Single)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CustomDrop(float Drop);" />
+      <MemberSignature Language="F#" Value="abstract member CustomDrop : single -&gt; unit" Usage="calloutFormat.CustomDrop Drop" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -299,8 +309,8 @@
       <Docs>
         <param name="Drop">Шаг перетаскивания в пунктах.</param>
         <summary>Задает расстояние по вертикали (в пунктах) от края ограничительной рамки текста до того места, где выноски прикрепляется к текстовому полю.</summary>
-        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> если для свойства не задано <b>значение true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска); в этом случае расстояние между перетаскиванием измеряется снизу текстового поля.</para>
-          <para>Если <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод использовался ранее для установки параметра Drop для указанной выноски, вызовите метод <b>пресетдроп</b> еще раз с помощью аргумента <b>мсокаллаутдропкустом</b> , прежде чем использовать метод <b>кустомдроп</b> , чтобы пользовательский параметр DROP применялся вступают.</para>
+        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, если <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойство не имеет значение <b>true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска), в результате чего расстояние между ними измеряется в нижней части текстового поля.</para>
+          <para>Если метод использовался <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> ранее для установки параметра Drop для указанной выноски, вызовите метод <b>пресетдроп</b> еще раз с помощью аргумента <b>мсокаллаутдропкустом</b> , прежде чем использовать метод <b>кустомдроп</b> , чтобы применить пользовательский параметр DROP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -310,6 +320,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomLength(System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CustomLength (Length As Single)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CustomLength(float Length);" />
+      <MemberSignature Language="F#" Value="abstract member CustomLength : single -&gt; unit" Usage="calloutFormat.CustomLength Length" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -330,7 +341,7 @@
         <param name="Length">Длина первого сегмента выноски в пунктах.</param>
         <summary>Указывает, что первый сегмент линии выноски (сегмент, присоединенный к текстовому полю выноски) сохраняет фиксированную длину при перемещении выноски.</summary>
         <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.AutomaticLength" /> метод, чтобы указать, что первый сегмент линии выноски должен масштабироваться автоматически при перемещении выноски. Применяется только к выноскам, строки которых состоят из нескольких сегментов (Types <b>мсокаллаутсри</b> и <b>мсокаллаутфаур</b>).</para>
-          <para>При <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> применении этого метода свойству присваивается значение <b>false</b> , <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> а свойству присваивается значение, <paramref name="Length" /> заданное для аргумента.</para>
+          <para>При применении этого метода <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoLength" /> свойству присваивается значение <b>false</b> , а <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" /> свойству присваивается значение, заданное для <paramref name="Length" /> аргумента.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -340,6 +351,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Drop As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Drop { float get(); };" />
+      <MemberSignature Language="F#" Value="member this.Drop : single" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Drop" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -359,7 +371,7 @@
       <Docs>
         <summary>Для выносок с явно заданным значением Drop это свойство возвращает расстояние по вертикали (в пунктах) от края ограничительной рамки текста до того места, где линия выноски присоединяется к текстовому полю.</summary>
         <value>To be added.</value>
-        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> если для свойства не задано <b>значение true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска); в этом случае расстояние между перетаскиванием измеряется снизу текстового поля.</para>
+        <remarks><para>Это расстояние измеряется от верхнего края текстового поля, если <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойство не имеет значение <b>true</b> , а текстовое поле находится слева от источника линии выноски (место, на которое указывает выноска), в результате чего расстояние между ними измеряется в нижней части текстового поля.</para>
           <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы задать значение этого свойства.</para>
           <para>Значение этого свойства точно отражает положение вложения линии выноски в текстовом поле, только если выноски имеет явно заданное значение Drop (то есть если значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" /> свойства равно <b>мсокаллаутдропкустом</b>). Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод с аргументом <b>мсокаллауткустомдроп</b> , чтобы присвоить свойству <b>дроптипе</b> значение <b>мсокаллаутдропкустом</b>.</para>
           <para> </para></remarks>
@@ -371,6 +383,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.DropType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DropType As MsoCalloutDropType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoCalloutDropType DropType { Microsoft::Office::Core::MsoCalloutDropType get(); };" />
+      <MemberSignature Language="F#" Value="member this.DropType : Microsoft.Office.Core.MsoCalloutDropType" Usage="Microsoft.Office.Interop.Word.CalloutFormat.DropType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -390,7 +403,7 @@
       <Docs>
         <summary>Возвращает значение, которое указывает, когда линия выноски присоединяется к текстовому полю выноски.</summary>
         <value>To be added.</value>
-        <remarks><para>Если тип перетаскивания выноски — <b>мсокаллаутдропкустом</b>, то значения свойств <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> , <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> и относительное положение текстового поля выноски и начала линии выноски (места, на который указывает выноску) используются для определения места выноски. Строка подсоединяется к текстовому полю.</para>
+        <remarks><para>Если тип перетаскивания выноски — <b>мсокаллаутдропкустом</b>, то <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> для определения места присоединения линии выноски к текстовому полю используются значения свойств и и относительного положения текстового поля выноски и начала линии выноски (места, на которые указывают выноски).</para>
           <para>Используйте <see cref="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" /> метод, чтобы задать значение этого свойства.</para>
           <para> </para></remarks>
       </Docs>
@@ -401,6 +414,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Gap" />
       <MemberSignature Language="VB.NET" Value="Public Property Gap As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Gap { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Gap : single with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Gap" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -432,6 +446,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Length { float get(); };" />
+      <MemberSignature Language="F#" Value="member this.Length : single" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Length" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -462,6 +477,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -490,6 +506,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.CalloutFormat.PresetDrop(Microsoft.Office.Core.MsoCalloutDropType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub PresetDrop (DropType As MsoCalloutDropType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PresetDrop(Microsoft::Office::Core::MsoCalloutDropType DropType);" />
+      <MemberSignature Language="F#" Value="abstract member PresetDrop : Microsoft.Office.Core.MsoCalloutDropType -&gt; unit" Usage="calloutFormat.PresetDrop DropType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -509,7 +526,7 @@
       <Docs>
         <param name="DropType">Начальная позиция линии выноски относительно ограничительной рамки текста.</param>
         <summary>Указывает, подсоединяется ли линия выноски к верхнему, нижнему или центру текстового поля выноски или к точке с указанным расстоянием от верхнего или нижнего края текстового поля.</summary>
-        <remarks><para>Если для <paramref name="DropType" /> параметра задано значение <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> <b>мсокаллаутдропкустом</b> , значения <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> свойств, и относительные положения текстового поля выноски и начала линии выноски (места, на которые указывает выноску) используются для определения где линия выноски присоединяется к текстовому полю.</para>
+        <remarks><para>Если для параметра задано значение <b>мсокаллаутдропкустом</b> <paramref name="DropType" /> , то для <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.Drop" /> <see cref="P:Microsoft.Office.Interop.Word.CalloutFormat.AutoAttach" /> определения места присоединения линии выноски к текстовому полю используются значения свойств и относительного положения текстового поля выноски и начала линии выноски (места, на которые указывают выноски).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -519,6 +536,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.CalloutFormat.Type" />
       <MemberSignature Language="VB.NET" Value="Public Property Type As MsoCalloutType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Core::MsoCalloutType Type { Microsoft::Office::Core::MsoCalloutType get(); void set(Microsoft::Office::Core::MsoCalloutType value); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Core.MsoCalloutType with get, set" Usage="Microsoft.Office.Interop.Word.CalloutFormat.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
