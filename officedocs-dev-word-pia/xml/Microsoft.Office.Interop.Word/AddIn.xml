@@ -1,9 +1,10 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Interop.Word.AddIn">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="695249a505a14baf5625853d5db3725ed54c358e" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144675" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="834391be669fe404d74b4ac56273a8b1154ee8ba" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43921886" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.AddIn" />
   <TypeSignature Language="VB.NET" Value="Public Interface AddIn" />
   <TypeSignature Language="C++ CLI" Value="public interface class AddIn" />
+  <TypeSignature Language="F#" Value="type AddIn = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -18,13 +19,13 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="06db2-101">Представляет одну надстройку: установлена или не установлена.</span><span class="sxs-lookup"><span data-stu-id="06db2-101">Represents a single add-in, either installed or not installed.</span></span></summary>
-    <remarks><para><span data-ttu-id="06db2-102">Объект <b>ADDIN</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="06db2-102">The <b>AddIn</b> object is a member of the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span> <span data-ttu-id="06db2-103">Коллекция <b>AddIns</b> содержит все надстройки, доступные в Microsoft Word, независимо от того, загружены ли они в данный момент.</span><span class="sxs-lookup"><span data-stu-id="06db2-103">The <b>AddIns</b> collection contains all the add-ins available to Microsoft Word, regardless of whether or not they're currently loaded.</span></span> <span data-ttu-id="06db2-104">Коллекция <b>AddIns</b> включает в себя глобальные шаблоны или библиотеки надстроек Word (вллс), отображаемые в диалоговом окне Шаблоны и надстройки (меню Сервис).</span><span class="sxs-lookup"><span data-stu-id="06db2-104">The <b>AddIns</b> collection includes global templates or Word add-in libraries (WLLs) displayed in the Templates and Add-ins dialog box (Tools menu).</span></span></para>
-      <para><span data-ttu-id="06db2-105">Используйте <b>надстройки</b>(<paramref name="index" />), где <paramref name="index" /> — это имя надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> .</span><span class="sxs-lookup"><span data-stu-id="06db2-105">Use <b>AddIns</b>(<paramref name="index" />), where <paramref name="index" /> is the add-in name or index number, to return a single <b>AddIn</b> object.</span></span> <span data-ttu-id="06db2-106">Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в диалоговом окне Шаблоны и надстройки.</span><span class="sxs-lookup"><span data-stu-id="06db2-106">You must exactly match the spelling (but not necessarily the capitalization) of the name, as it's shown in the Templates and Add-Ins dialog box.</span></span></para>
-      <para><span data-ttu-id="06db2-107">Номер индекса представляет положение надстройки в списке надстроек в диалоговом окне Шаблоны и надстройки.</span><span class="sxs-lookup"><span data-stu-id="06db2-107">The index number represents the position of the add-in in the list of add-ins in the Templates and Add-ins dialog box.</span></span></para>
-      <para><span data-ttu-id="06db2-108">С помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода добавьте надстройку в список доступных надстроек и (необязательно) установите ее с помощью <paramref name="Install" /> аргумента.</span><span class="sxs-lookup"><span data-stu-id="06db2-108">Use the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> method to add an add-in to the list of available add-ins and (optionally) install it using the <paramref name="Install" /> argument.</span></span></para>
-      <para><span data-ttu-id="06db2-109">Чтобы установить надстройку, отображаемую в списке доступных надстроек, используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> свойство.</span><span class="sxs-lookup"><span data-stu-id="06db2-109">To install an add-in shown in the list of available add-ins, use the <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> property.</span></span></para>
-      <para><span data-ttu-id="06db2-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> свойство, чтобы определить, является ли объект <b>ADDIN</b> шаблоном или общедоступным.</span><span class="sxs-lookup"><span data-stu-id="06db2-110">Use the <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> property to determine whether an <b>AddIn</b> object is a template or a WLL.</span></span></para>
+    <summary><span data-ttu-id="7c6bd-101">Представляет одну надстройку: установлена или не установлена.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-101">Represents a single add-in, either installed or not installed.</span></span></summary>
+    <remarks><para><span data-ttu-id="7c6bd-102">Объект <b>ADDIN</b> является членом <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-102">The <b>AddIn</b> object is a member of the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span> <span data-ttu-id="7c6bd-103">Коллекция <b>AddIns</b> содержит все надстройки, доступные в Microsoft Word, независимо от того, загружены ли они в данный момент.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-103">The <b>AddIns</b> collection contains all the add-ins available to Microsoft Word, regardless of whether or not they're currently loaded.</span></span> <span data-ttu-id="7c6bd-104">Коллекция <b>AddIns</b> включает в себя глобальные шаблоны или библиотеки надстроек Word (вллс), отображаемые в диалоговом окне Шаблоны и надстройки (меню Сервис).</span><span class="sxs-lookup"><span data-stu-id="7c6bd-104">The <b>AddIns</b> collection includes global templates or Word add-in libraries (WLLs) displayed in the Templates and Add-ins dialog box (Tools menu).</span></span></para>
+      <para><span data-ttu-id="7c6bd-105">Используйте <b>надстройки</b>( <paramref name="index" /> ), где <paramref name="index" /> — это имя надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> .</span><span class="sxs-lookup"><span data-stu-id="7c6bd-105">Use <b>AddIns</b>(<paramref name="index" />), where <paramref name="index" /> is the add-in name or index number, to return a single <b>AddIn</b> object.</span></span> <span data-ttu-id="7c6bd-106">Необходимо точно соответствовать орфографии (но не обязательно заменяется регистром букв) имени, как показано в диалоговом окне Шаблоны и надстройки.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-106">You must exactly match the spelling (but not necessarily the capitalization) of the name, as it's shown in the Templates and Add-Ins dialog box.</span></span></para>
+      <para><span data-ttu-id="7c6bd-107">Номер индекса представляет положение надстройки в списке надстроек в диалоговом окне Шаблоны и надстройки.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-107">The index number represents the position of the add-in in the list of add-ins in the Templates and Add-ins dialog box.</span></span></para>
+      <para><span data-ttu-id="7c6bd-108">С помощью <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> метода добавьте надстройку в список доступных надстроек и (необязательно) установите ее с помощью <paramref name="Install" /> аргумента.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-108">Use the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Add(System.String,System.Object@)" /> method to add an add-in to the list of available add-ins and (optionally) install it using the <paramref name="Install" /> argument.</span></span></para>
+      <para><span data-ttu-id="7c6bd-109">Чтобы установить надстройку, отображаемую в списке доступных надстроек, используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> свойство.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-109">To install an add-in shown in the list of available add-ins, use the <see cref="P:Microsoft.Office.Interop.Word.AddIn.Installed" /> property.</span></span></para>
+      <para><span data-ttu-id="7c6bd-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> свойство, чтобы определить, является ли объект <b>ADDIN</b> шаблоном или общедоступным.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-110">Use the <see cref="P:Microsoft.Office.Interop.Word.AddIn.Compiled" /> property to determine whether an <b>AddIn</b> object is a template or a WLL.</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.AddIn.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -51,7 +53,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-111">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="06db2-111">Returns an <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the creator of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-111">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий создателя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-111">Returns an <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the creator of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Autoload" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Autoload As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Autoload { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Autoload : bool" Usage="Microsoft.Office.Interop.Word.AddIn.Autoload" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -79,9 +82,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-112">Возвращает значение, указывающее, загружается ли указанная надстройка автоматически при запуске Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="06db2-112">Returns a value indicating whether the specified add-in is automatically loaded when Microsoft Word is started.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-112">Возвращает значение, указывающее, загружается ли указанная надстройка автоматически при запуске Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-112">Returns a value indicating whether the specified add-in is automatically loaded when Microsoft Word is started.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="06db2-113">Надстройки, расположенные в папке автозагрузки в папке Word Program, загружаются автоматически.</span><span class="sxs-lookup"><span data-stu-id="06db2-113">Add-ins located in the Startup folder in the Word program folder are automatically loaded.</span></span></para>
+        <remarks><para><span data-ttu-id="7c6bd-113">Надстройки, расположенные в папке автозагрузки в папке Word Program, загружаются автоматически.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-113">Add-ins located in the Startup folder in the Word program folder are automatically loaded.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -91,6 +94,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Compiled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Compiled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Compiled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Compiled : bool" Usage="Microsoft.Office.Interop.Word.AddIn.Compiled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -108,9 +112,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-114">Возвращает значение, указывающее, является ли указанная надстройка библиотекой надстроек Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="06db2-114">Returns a value indicating whether the specified add-in is a Microsoft Word add-in library (WLL).</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-114">Возвращает значение, указывающее, является ли указанная надстройка библиотекой надстроек Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-114">Returns a value indicating whether the specified add-in is a Microsoft Word add-in library (WLL).</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="06db2-115">Если указанная надстройка не является общедоступной, то она является шаблоном.</span><span class="sxs-lookup"><span data-stu-id="06db2-115">If the specified add-in is not a WLL, then it is a template.</span></span></para>
+        <remarks><para><span data-ttu-id="7c6bd-115">Если указанная надстройка не является общедоступной, то она является шаблоном.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-115">If the specified add-in is not a WLL, then it is a template.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.AddIn.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -137,10 +142,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-116">Возвращает значение, указывающее приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="06db2-116">Returns a value that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-116">Возвращает значение, указывающее приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-116">Returns a value that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="06db2-117">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="06db2-117">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="06db2-118">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="06db2-118">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="06db2-119">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="06db2-119">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="06db2-120">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="06db2-120">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="06db2-121">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="06db2-121">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="7c6bd-117">Если указанный объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="7c6bd-117">If the specified object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="7c6bd-118">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-118">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="7c6bd-119">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-119">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="7c6bd-120">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-120">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="7c6bd-121">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-121">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -150,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.AddIn.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="addIn.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -165,7 +171,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="06db2-122">Удаляет указанный <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объект.</span><span class="sxs-lookup"><span data-stu-id="06db2-122">Deletes the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-122">Удаляет указанный <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объект.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-122">Deletes the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -175,6 +181,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Index" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Index As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Index { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Index : int" Usage="Microsoft.Office.Interop.Word.AddIn.Index" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -192,7 +199,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-123">Возвращает значение, представляющее положение элемента в <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="06db2-123">Returns a value that represents the position of an item in a <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-123">Возвращает значение, представляющее положение элемента в <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекции.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-123">Returns a value that represents the position of an item in a <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -203,6 +210,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Installed" />
       <MemberSignature Language="VB.NET" Value="Public Property Installed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Installed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Installed : bool with get, set" Usage="Microsoft.Office.Interop.Word.AddIn.Installed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -223,10 +231,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-124">Возвращает или задает значение <b>true</b> , если указанная надстройка установлена (загружена).</span><span class="sxs-lookup"><span data-stu-id="06db2-124">Returns or sets a value indicating <b>True</b> if the specified add-in is installed (loaded).</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-124">Возвращает или задает значение <b>true</b> , если указанная надстройка установлена (загружена).</span><span class="sxs-lookup"><span data-stu-id="7c6bd-124">Returns or sets a value indicating <b>True</b> if the specified add-in is installed (loaded).</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="06db2-125">Загруженные надстройки выбираются в диалоговом окне Шаблоны и надстройки (меню "Сервис").</span><span class="sxs-lookup"><span data-stu-id="06db2-125">Add-ins that are loaded are selected in the Templates and Add-ins dialog box (Tools menu).</span></span></para>
-          <para><span data-ttu-id="06db2-126">В <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> коллекцию включены неустановленные надстройки.</span><span class="sxs-lookup"><span data-stu-id="06db2-126">Uninstalled add-ins are included in the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span> <span data-ttu-id="06db2-127">Чтобы удалить шаблон или переключать из коллекции <b>AddIns</b> , примените к <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекту метод (имя надстройки будет удалено из диалогового окна шаблоны и надстройки).</span><span class="sxs-lookup"><span data-stu-id="06db2-127">To remove a template or WLL from the <b>AddIns</b> collection, apply the <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> method to the <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object (the add-in name is removed from the Templates and Add-ins dialog box).</span></span> <span data-ttu-id="06db2-128">Чтобы выгрузить все шаблоны и Вллс, <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> примените метод к коллекции <b>AddIns</b> .</span><span class="sxs-lookup"><span data-stu-id="06db2-128">To unload all templates and WLLs, apply the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> method to the <b>AddIns</b> collection.</span></span></para>
+        <remarks><para><span data-ttu-id="7c6bd-125">Загруженные надстройки выбираются в диалоговом окне Шаблоны и надстройки (меню "Сервис").</span><span class="sxs-lookup"><span data-stu-id="7c6bd-125">Add-ins that are loaded are selected in the Templates and Add-ins dialog box (Tools menu).</span></span></para>
+          <para><span data-ttu-id="7c6bd-126">В коллекцию включены неустановленные надстройки <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> .</span><span class="sxs-lookup"><span data-stu-id="7c6bd-126">Uninstalled add-ins are included in the <see cref="T:Microsoft.Office.Interop.Word.AddIns" /> collection.</span></span> <span data-ttu-id="7c6bd-127">Чтобы удалить шаблон или переключать из коллекции <b>AddIns</b> , примените <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> к объекту метод <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> (имя надстройки будет удалено из диалогового окна шаблоны и надстройки).</span><span class="sxs-lookup"><span data-stu-id="7c6bd-127">To remove a template or WLL from the <b>AddIns</b> collection, apply the <see cref="M:Microsoft.Office.Interop.Word.AddIn.Delete" /> method to the <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object (the add-in name is removed from the Templates and Add-ins dialog box).</span></span> <span data-ttu-id="7c6bd-128">Чтобы выгрузить все шаблоны и Вллс, примените <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> метод к коллекции <b>AddIns</b> .</span><span class="sxs-lookup"><span data-stu-id="7c6bd-128">To unload all templates and WLLs, apply the <see cref="M:Microsoft.Office.Interop.Word.AddIns.Unload(System.Boolean)" /> method to the <b>AddIns</b> collection.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -236,6 +244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Name" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.AddIn.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -253,7 +262,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-129">Возвращает значение, которое указывает имя указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="06db2-129">Returns a value that indicates the name of the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-129">Возвращает значение, которое указывает имя указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-129">Returns a value that indicates the name of the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -264,6 +273,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.AddIn.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -281,7 +291,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-130">Возвращает значение, представляющее родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="06db2-130">Returns a value that represents the parent object of the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-130">Возвращает значение, представляющее родительский объект указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-130">Returns a value that represents the parent object of the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.AddIn.Path" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.Office.Interop.Word.AddIn.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -309,9 +320,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="06db2-131">Возвращает значение, указывающее URL-адрес указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="06db2-131">Returns a value that indicates the URL to the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
+        <summary><span data-ttu-id="7c6bd-131">Возвращает значение, указывающее URL-адрес указанного <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> объекта.</span><span class="sxs-lookup"><span data-stu-id="7c6bd-131">Returns a value that indicates the URL to the specified <see cref="T:Microsoft.Office.Interop.Word.AddIn" /> object.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="06db2-132">Путь не включает замыкающую косую черту вперед, например "http://MyServer".</span><span class="sxs-lookup"><span data-stu-id="06db2-132">The path doesn't include a trailing forward slash character—for example, "http://MyServer".</span></span> <span data-ttu-id="06db2-133">Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления знака замыкающей косой черты, несмотря на то, что свойство <b>пассепаратор</b> по умолчанию имеет\)обратную косую черту (.</span><span class="sxs-lookup"><span data-stu-id="06db2-133">Use the <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> property to add a trailing forward slash character even though the <b>PathSeparator</b> property defaults to a backslash (\).</span></span></para>
+        <remarks><para><span data-ttu-id="7c6bd-132">Путь не включает замыкающую косую черту вперед, например " http://MyServer ".</span><span class="sxs-lookup"><span data-stu-id="7c6bd-132">The path doesn't include a trailing forward slash character—for example, "http://MyServer".</span></span> <span data-ttu-id="7c6bd-133">Используйте <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> свойство для добавления знака замыкающей косой черты, несмотря на то, что свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту ( \) .</span><span class="sxs-lookup"><span data-stu-id="7c6bd-133">Use the <see cref="P:Microsoft.Office.Interop.Word.ApplicationClass.PathSeparator" /> property to add a trailing forward slash character even though the <b>PathSeparator</b> property defaults to a backslash (\).</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>

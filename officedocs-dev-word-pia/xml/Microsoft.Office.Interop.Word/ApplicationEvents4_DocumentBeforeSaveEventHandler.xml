@@ -1,9 +1,10 @@
 <Type Name="ApplicationEvents4_DocumentBeforeSaveEventHandler" FullName="Microsoft.Office.Interop.Word.ApplicationEvents4_DocumentBeforeSaveEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6eca58009994f8a8b087f5cb587701db958296d6" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34144871" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_DocumentBeforeSaveEventHandler(Document Doc, ref bool SaveAsUI, out bool Cancel);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8947ab3841eb630df4d59aab6a35cdca804773ee" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43923082" /></Metadata><TypeSignature Language="C#" Value="public delegate void ApplicationEvents4_DocumentBeforeSaveEventHandler(Document Doc, ref bool SaveAsUI, out bool Cancel);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ApplicationEvents4_DocumentBeforeSaveEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.ApplicationEvents4_DocumentBeforeSaveEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ApplicationEvents4_DocumentBeforeSaveEventHandler(Doc As Document, ByRef SaveAsUI As Boolean, ByRef Cancel As Boolean)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void ApplicationEvents4_DocumentBeforeSaveEventHandler(Document ^ Doc, bool % SaveAsUI, [Runtime::InteropServices::Out] bool % Cancel);" />
+  <TypeSignature Language="F#" Value="type ApplicationEvents4_DocumentBeforeSaveEventHandler = delegate of Document * bool * bool -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -21,17 +22,17 @@
   </Attributes>
   <Parameters>
     <Parameter Name="Doc" Type="Microsoft.Office.Interop.Word.Document" />
-    <Parameter Name="SaveAsUI" Type="System.Boolean&amp;" RefType="ref" />
-    <Parameter Name="Cancel" Type="System.Boolean&amp;" RefType="out" />
+    <Parameter Name="SaveAsUI" Type="System.Boolean" RefType="ref" />
+    <Parameter Name="Cancel" Type="System.Boolean" RefType="out" />
   </Parameters>
   <ReturnValue>
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="Doc"><span data-ttu-id="1b414-101">Сохраняемый документ.</span><span class="sxs-lookup"><span data-stu-id="1b414-101">The document that's being saved.</span></span></param>
-    <param name="SaveAsUI"><span data-ttu-id="1b414-102"><b>Значение true</b> , чтобы отобразить диалоговое окно "Сохранить как".</span><span class="sxs-lookup"><span data-stu-id="1b414-102"><b>True</b> to display the Save As dialog box.</span></span></param>
-    <param name="Cancel"><span data-ttu-id="1b414-103"><b>False</b> при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="1b414-103"><b>False</b> when the event occurs.</span></span> <span data-ttu-id="1b414-104">Если процедура события устанавливает для аргумента <b>значение true</b>, документ не сохраняется по завершении процедуры.</span><span class="sxs-lookup"><span data-stu-id="1b414-104">If the event procedure sets this argument to <b>True</b>, the document isn't saved when the procedure is finished.</span></span></param>
-    <summary><span data-ttu-id="1b414-105">Тип <b>делегата</b> , который используется для добавления обработчика событий <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave" /> для события.</span><span class="sxs-lookup"><span data-stu-id="1b414-105">A <b>Delegate</b> type used to add an event handler for the <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave" /> event.</span></span> <span data-ttu-id="1b414-106">Событие <b>документбефоресаве</b> возникает перед сохранением любого открытого документа.</span><span class="sxs-lookup"><span data-stu-id="1b414-106">The <b>DocumentBeforeSave</b> event occurs before any open document is saved.</span></span></summary>
+    <param name="Doc"><span data-ttu-id="077df-101">Сохраняемый документ.</span><span class="sxs-lookup"><span data-stu-id="077df-101">The document that's being saved.</span></span></param>
+    <param name="SaveAsUI"><span data-ttu-id="077df-102"><b>Значение true</b> , чтобы отобразить диалоговое окно "Сохранить как".</span><span class="sxs-lookup"><span data-stu-id="077df-102"><b>True</b> to display the Save As dialog box.</span></span></param>
+    <param name="Cancel"><span data-ttu-id="077df-103"><b>False</b> при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="077df-103"><b>False</b> when the event occurs.</span></span> <span data-ttu-id="077df-104">Если процедура события устанавливает для аргумента <b>значение true</b>, документ не сохраняется по завершении процедуры.</span><span class="sxs-lookup"><span data-stu-id="077df-104">If the event procedure sets this argument to <b>True</b>, the document isn't saved when the procedure is finished.</span></span></param>
+    <summary><span data-ttu-id="077df-105">Тип <b>делегата</b> , который используется для добавления обработчика событий для <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave" /> события.</span><span class="sxs-lookup"><span data-stu-id="077df-105">A <b>Delegate</b> type used to add an event handler for the <see cref="E:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave" /> event.</span></span> <span data-ttu-id="077df-106">Событие <b>документбефоресаве</b> возникает перед сохранением любого открытого документа.</span><span class="sxs-lookup"><span data-stu-id="077df-106">The <b>DocumentBeforeSave</b> event occurs before any open document is saved.</span></span></summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

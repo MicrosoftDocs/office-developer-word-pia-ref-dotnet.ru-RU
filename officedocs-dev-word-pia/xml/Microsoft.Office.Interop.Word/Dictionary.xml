@@ -1,9 +1,10 @@
 <Type Name="Dictionary" FullName="Microsoft.Office.Interop.Word.Dictionary">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7eb1c3a125004711f709d1a46bde81b4b66d431c" /><Meta Name="ms.sourcegitcommit" Value="9a6162e1f2c2145e95970c1fdb1ddcac1366d42f" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="05/17/2019" /><Meta Name="ms.locfileid" Value="34147055" /></Metadata><TypeSignature Language="C#" Value="public interface Dictionary" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7cd7215c062770ab4726b7b42ab7149362963eb9" /><Meta Name="ms.sourcegitcommit" Value="655244c9d9a99d41d118f4fa57b5d74d46c410d7" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/03/2020" /><Meta Name="ms.locfileid" Value="43922215" /></Metadata><TypeSignature Language="C#" Value="public interface Dictionary" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Dictionary" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Word.Dictionary" />
   <TypeSignature Language="VB.NET" Value="Public Interface Dictionary" />
   <TypeSignature Language="C++ CLI" Value="public interface class Dictionary" />
+  <TypeSignature Language="F#" Value="type Dictionary = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -18,16 +19,16 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary><span data-ttu-id="16c43-101">Представляет словарь.</span><span class="sxs-lookup"><span data-stu-id="16c43-101">Represents a dictionary.</span></span></summary>
-    <remarks><para><span data-ttu-id="16c43-102">Объекты 
-        <b>Dictionary</b> , представляющие настраиваемые словари, входят <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> в коллекцию.</span><span class="sxs-lookup"><span data-stu-id="16c43-102">
-        <b>Dictionary</b> objects that represent custom dictionaries are members of the <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> collection.</span></span> <span data-ttu-id="16c43-103">Другие объекты Dictionary возвращаются свойствами <see cref="T:Microsoft.Office.Interop.Word.Language" /> коллекции; к <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />ним относятся свойства <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />, и <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> .</span><span class="sxs-lookup"><span data-stu-id="16c43-103">Other dictionary objects are returned by properties of the <see cref="T:Microsoft.Office.Interop.Word.Language" /> collection; these include the <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />, and <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> properties.</span></span> <span data-ttu-id="16c43-104">Вы можете использовать эти свойства для каждого языка, для которого установлены средства проверки правописания.</span><span class="sxs-lookup"><span data-stu-id="16c43-104">You can use these properties for each language for which proofing tools are installed.</span></span></para>
-      <para><span data-ttu-id="16c43-105">Используйте <b>кустомдиктионариес</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса или строковое имя словаря, чтобы получить один объект <b>Dictionary</b> , представляющий пользовательский словарь.</span><span class="sxs-lookup"><span data-stu-id="16c43-105">Use <b>CustomDictionaries</b>(<paramref name="index" />), where <paramref name="index" /> is an index number or the string name for the dictionary, to return a single <b>Dictionary</b> object that represents a custom dictionary.</span></span></para>
-      <para><span data-ttu-id="16c43-106">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> свойство, чтобы задать в коллекции настраиваемый словарь правописания, в который добавляются новые слова.</span><span class="sxs-lookup"><span data-stu-id="16c43-106">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> property to set the custom spelling dictionary in the collection to which new words are added.</span></span> <span data-ttu-id="16c43-107">Если вы попытаетесь установить для этого свойства словарь, который не является настраиваемым словарем, возникнет ошибка.</span><span class="sxs-lookup"><span data-stu-id="16c43-107">If you try to set this property to a dictionary that's not a custom dictionary, an error occurs.</span></span></para>
-      <para><span data-ttu-id="16c43-108">Используйте <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> метод, чтобы добавить новый словарь в коллекцию активных настраиваемых словарей.</span><span class="sxs-lookup"><span data-stu-id="16c43-108">Use the <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> method to add a new dictionary to the collection of active custom dictionaries.</span></span> <span data-ttu-id="16c43-109">Если файл с указанным именем отсутствует, Microsoft Word создает его.</span><span class="sxs-lookup"><span data-stu-id="16c43-109">If there's no file with the specified name, Microsoft Word creates it.</span></span></para>
-      <para><span data-ttu-id="16c43-110">Используйте свойство <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> и <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> для обнаружения любого из словарей.</span><span class="sxs-lookup"><span data-stu-id="16c43-110">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> and <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> property to locate any of the dictionaries.</span></span></para>
-      <para><span data-ttu-id="16c43-111">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойство, чтобы определить, может ли указанный вспомогательный словарь иметь определенный язык, назначенный ему со <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> свойством.</span><span class="sxs-lookup"><span data-stu-id="16c43-111">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> property to determine whether the specified custom dictionary can have a specific language assigned to it with the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> property.</span></span> <span data-ttu-id="16c43-112">Если словарь зависит от языка, он будет проверять только текст, отформатированный для указанного языка.</span><span class="sxs-lookup"><span data-stu-id="16c43-112">If the dictionary is language specific, it will verify only text that's formatted for the specified language.</span></span></para>
-      <para><span data-ttu-id="16c43-113"><see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" /> Свойство возвращает <b>значение true</b> для файлов Лекс (встроенные словари проверки правописания) и <b>false</b> для файлов. dic (настраиваемые словари правописания).</span><span class="sxs-lookup"><span data-stu-id="16c43-113">The <see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" /> property returns <b>True</b> for .lex files (built-in proofing dictionaries) and <b>False</b> for .dic files (custom spelling dictionaries).</span></span></para>
+    <summary><span data-ttu-id="c3367-101">Представляет словарь.</span><span class="sxs-lookup"><span data-stu-id="c3367-101">Represents a dictionary.</span></span></summary>
+    <remarks><para><span data-ttu-id="c3367-102">Объекты 
+        <b>Dictionary</b> , представляющие настраиваемые словари, входят в <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> коллекцию.</span><span class="sxs-lookup"><span data-stu-id="c3367-102">
+        <b>Dictionary</b> objects that represent custom dictionaries are members of the <see cref="T:Microsoft.Office.Interop.Word.Dictionaries" /> collection.</span></span> <span data-ttu-id="c3367-103">Другие объекты Dictionary возвращаются свойствами <see cref="T:Microsoft.Office.Interop.Word.Language" /> коллекции <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" /> , включая свойства,, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" /> <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" /> и <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> .</span><span class="sxs-lookup"><span data-stu-id="c3367-103">Other dictionary objects are returned by properties of the <see cref="T:Microsoft.Office.Interop.Word.Language" /> collection; these include the <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveSpellingDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveGrammarDictionary" />, <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveThesaurusDictionary" />, and <see cref="P:Microsoft.Office.Interop.Word.Language.ActiveHyphenationDictionary" /> properties.</span></span> <span data-ttu-id="c3367-104">Вы можете использовать эти свойства для каждого языка, для которого установлены средства проверки правописания.</span><span class="sxs-lookup"><span data-stu-id="c3367-104">You can use these properties for each language for which proofing tools are installed.</span></span></para>
+      <para><span data-ttu-id="c3367-105">Используйте <b>кустомдиктионариес</b>( <paramref name="index" /> ), где <paramref name="index" /> — это номер индекса или строковое имя словаря, чтобы получить один объект <b>Dictionary</b> , представляющий пользовательский словарь.</span><span class="sxs-lookup"><span data-stu-id="c3367-105">Use <b>CustomDictionaries</b>(<paramref name="index" />), where <paramref name="index" /> is an index number or the string name for the dictionary, to return a single <b>Dictionary</b> object that represents a custom dictionary.</span></span></para>
+      <para><span data-ttu-id="c3367-106">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> свойство, чтобы задать в коллекции настраиваемый словарь правописания, в который добавляются новые слова.</span><span class="sxs-lookup"><span data-stu-id="c3367-106">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionaries.ActiveCustomDictionary" /> property to set the custom spelling dictionary in the collection to which new words are added.</span></span> <span data-ttu-id="c3367-107">Если вы попытаетесь установить для этого свойства словарь, который не является настраиваемым словарем, возникнет ошибка.</span><span class="sxs-lookup"><span data-stu-id="c3367-107">If you try to set this property to a dictionary that's not a custom dictionary, an error occurs.</span></span></para>
+      <para><span data-ttu-id="c3367-108">Используйте <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> метод, чтобы добавить новый словарь в коллекцию активных настраиваемых словарей.</span><span class="sxs-lookup"><span data-stu-id="c3367-108">Use the <see cref="M:Microsoft.Office.Interop.Word.Dictionaries.Add(System.String)" /> method to add a new dictionary to the collection of active custom dictionaries.</span></span> <span data-ttu-id="c3367-109">Если файл с указанным именем отсутствует, Microsoft Word создает его.</span><span class="sxs-lookup"><span data-stu-id="c3367-109">If there's no file with the specified name, Microsoft Word creates it.</span></span></para>
+      <para><span data-ttu-id="c3367-110">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> свойство и <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> для обнаружения любого из словарей.</span><span class="sxs-lookup"><span data-stu-id="c3367-110">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> and <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Path" /> property to locate any of the dictionaries.</span></span></para>
+      <para><span data-ttu-id="c3367-111">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойство, чтобы определить, может ли указанный вспомогательный словарь иметь определенный язык, назначенный ему со <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> свойством.</span><span class="sxs-lookup"><span data-stu-id="c3367-111">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> property to determine whether the specified custom dictionary can have a specific language assigned to it with the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" /> property.</span></span> <span data-ttu-id="c3367-112">Если словарь зависит от языка, он будет проверять только текст, отформатированный для указанного языка.</span><span class="sxs-lookup"><span data-stu-id="c3367-112">If the dictionary is language specific, it will verify only text that's formatted for the specified language.</span></span></para>
+      <para><span data-ttu-id="c3367-113"><see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" />Свойство возвращает <b>значение true</b> для файлов Лекс (встроенные словари проверки правописания) и <b>false</b> для файлов. dic (настраиваемые словари правописания).</span><span class="sxs-lookup"><span data-stu-id="c3367-113">The <see cref="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" /> property returns <b>True</b> for .lex files (built-in proofing dictionaries) and <b>False</b> for .dic files (custom spelling dictionaries).</span></span></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -37,6 +38,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Application" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::Application ^ Application { Microsoft::Office::Interop::Word::Application ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Application : Microsoft.Office.Interop.Word.Application" Usage="Microsoft.Office.Interop.Word.Dictionary.Application" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -54,7 +56,7 @@
         <ReturnType>Microsoft.Office.Interop.Word.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-114">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="16c43-114">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
+        <summary><span data-ttu-id="c3367-114">Возвращает <see cref="T:Microsoft.Office.Interop.Word.Application" /> объект, представляющий приложение Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="c3367-114">Returns a <see cref="T:Microsoft.Office.Interop.Word.Application" /> object that represents the Microsoft Word application.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -65,6 +67,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Creator" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Creator { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Creator : int" Usage="Microsoft.Office.Interop.Word.Dictionary.Creator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -82,10 +85,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-115">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="16c43-115">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
+        <summary><span data-ttu-id="c3367-115">Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект.</span><span class="sxs-lookup"><span data-stu-id="c3367-115">Returns a 32-bit integer that indicates the application in which the specified object was created.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="16c43-116">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="16c43-116">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="16c43-117">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="16c43-117">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
-          <para><span data-ttu-id="16c43-118">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="16c43-118">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="16c43-119">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="16c43-119">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="16c43-120">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="16c43-120">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
+        <remarks><para><span data-ttu-id="c3367-116">Если объект был создан в Microsoft Word, это свойство возвращает шестнадцатеричное число 4D535744, представляющее строку "МСВД".</span><span class="sxs-lookup"><span data-stu-id="c3367-116">If the object was created in Microsoft Word, this property returns the hexadecimal number 4D535744, which represents the string "MSWD."</span></span> <span data-ttu-id="c3367-117">Это значение также может быть представлено константным <b>вдкреаторкоде</b>.</span><span class="sxs-lookup"><span data-stu-id="c3367-117">This value can also be represented by the constant <b>wdCreatorCode</b>.</span></span></para>
+          <para><span data-ttu-id="c3367-118">Свойство <b>Creator</b> в основном предназначено для использования в Macintosh, где каждое приложение содержит код создателя из четырех символов.</span><span class="sxs-lookup"><span data-stu-id="c3367-118">The <b>Creator</b> property was primarily designed to be used on the Macintosh, where each application has a four-character creator code.</span></span> <span data-ttu-id="c3367-119">Например, в Microsoft Word есть код создателя МСВД.</span><span class="sxs-lookup"><span data-stu-id="c3367-119">For example, Microsoft Word has the creator code MSWD.</span></span> <span data-ttu-id="c3367-120">Для получения дополнительных сведений об этом свойстве обратитесь к справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</span><span class="sxs-lookup"><span data-stu-id="c3367-120">For additional information about this property, consult the language reference Help included with Microsoft Office Macintosh Edition.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Word.Dictionary.Delete" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberSignature Language="F#" Value="abstract member Delete : unit -&gt; unit" Usage="dictionary.Delete " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -110,7 +114,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><span data-ttu-id="16c43-121">Удаляет указанный объект.</span><span class="sxs-lookup"><span data-stu-id="16c43-121">Deletes the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c3367-121">Удаляет указанный объект.</span><span class="sxs-lookup"><span data-stu-id="c3367-121">Deletes the specified object.</span></span></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.LanguageID" />
       <MemberSignature Language="VB.NET" Value="Public Property LanguageID As WdLanguageID" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdLanguageID LanguageID { Microsoft::Office::Interop::Word::WdLanguageID get(); void set(Microsoft::Office::Interop::Word::WdLanguageID value); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageID : Microsoft.Office.Interop.Word.WdLanguageID with get, set" Usage="Microsoft.Office.Interop.Word.Dictionary.LanguageID" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -140,10 +145,10 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdLanguageID</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-122">Возвращает или задает язык для указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="16c43-122">Returns or sets the language for the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c3367-122">Возвращает или задает язык для указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="c3367-122">Returns or sets the language for the specified object.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="16c43-123">Для настраиваемого словаря необходимо сначала задать для <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> свойства <b>значение true</b> , прежде чем указать свойство <b>LanguageID</b> .</span><span class="sxs-lookup"><span data-stu-id="16c43-123">For a custom dictionary, you must first set the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> property to <b>True</b> before specifying the <b>LanguageID</b> property.</span></span> <span data-ttu-id="16c43-124">Пользовательские словари, зависящие от конкретного языка, заносятся только на текст, отформатированный для этого языка.</span><span class="sxs-lookup"><span data-stu-id="16c43-124">Custom dictionaries that are language-specific only look at text formatted for that language.</span></span></para>
-          <para><span data-ttu-id="16c43-125">Свойство LanguageID может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант.</span><span class="sxs-lookup"><span data-stu-id="16c43-125">The LanguageID property can be one of the <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> constants.</span></span> <span data-ttu-id="16c43-126">Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</span><span class="sxs-lookup"><span data-stu-id="16c43-126">Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
+        <remarks><para><span data-ttu-id="c3367-123">Для настраиваемого словаря необходимо сначала задать <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> для свойства <b>значение true</b> , прежде чем указать свойство <b>LanguageID</b> .</span><span class="sxs-lookup"><span data-stu-id="c3367-123">For a custom dictionary, you must first set the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" /> property to <b>True</b> before specifying the <b>LanguageID</b> property.</span></span> <span data-ttu-id="c3367-124">Пользовательские словари, зависящие от конкретного языка, заносятся только на текст, отформатированный для этого языка.</span><span class="sxs-lookup"><span data-stu-id="c3367-124">Custom dictionaries that are language-specific only look at text formatted for that language.</span></span></para>
+          <para><span data-ttu-id="c3367-125">Свойство LanguageID может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> констант.</span><span class="sxs-lookup"><span data-stu-id="c3367-125">The LanguageID property can be one of the <see cref="T:Microsoft.Office.Interop.Word.WdLanguageID" /> constants.</span></span> <span data-ttu-id="c3367-126">Некоторые из этих констант могут быть недоступны, в зависимости от того, какая языковая поддержка (например, английский) выбрана или установлена.</span><span class="sxs-lookup"><span data-stu-id="c3367-126">Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you’ve selected or installed.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -153,6 +158,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" />
       <MemberSignature Language="VB.NET" Value="Public Property LanguageSpecific As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool LanguageSpecific { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageSpecific : bool with get, set" Usage="Microsoft.Office.Interop.Word.Dictionary.LanguageSpecific" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -173,7 +179,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-127"><b>Значение true</b> , если пользовательский словарь должен использоваться только с текстом, отформатированным для определенного языка.</span><span class="sxs-lookup"><span data-stu-id="16c43-127"><b>True</b> if the custom dictionary is to be used only with text formatted for a specific language.</span></span></summary>
+        <summary><span data-ttu-id="c3367-127"><b>Значение true</b> , если пользовательский словарь должен использоваться только с текстом, отформатированным для определенного языка.</span><span class="sxs-lookup"><span data-stu-id="c3367-127"><b>True</b> if the custom dictionary is to be used only with text formatted for a specific language.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -184,6 +190,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Name" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.Word.Dictionary.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -201,7 +208,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-128">Возвращает или задает имя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="16c43-128">Returns or sets the name of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c3367-128">Возвращает или задает имя указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="c3367-128">Returns or sets the name of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -212,6 +219,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : obj" Usage="Microsoft.Office.Interop.Word.Dictionary.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -229,7 +237,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-129">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="16c43-129">Returns an object that represents the parent object of the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c3367-129">Возвращает объект, представляющий родительский объект указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="c3367-129">Returns an object that represents the parent object of the specified object.</span></span></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,6 +248,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Path" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string" Usage="Microsoft.Office.Interop.Word.Dictionary.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -257,10 +266,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-130">Возвращает диск или веб-путь к указанному объекту.</span><span class="sxs-lookup"><span data-stu-id="16c43-130">Returns the disk or Web path to the specified object.</span></span></summary>
+        <summary><span data-ttu-id="c3367-130">Возвращает диск или веб-путь к указанному объекту.</span><span class="sxs-lookup"><span data-stu-id="c3367-130">Returns the disk or Web path to the specified object.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="16c43-131">Путь не включает замыкающий символ, например "К:\мсоффице" или "http://MyServer".</span><span class="sxs-lookup"><span data-stu-id="16c43-131">The path doesn't include a trailing character— for example, "C:\MSOffice" or "http://MyServer".</span></span> <span data-ttu-id="16c43-132">Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска.</span><span class="sxs-lookup"><span data-stu-id="16c43-132">Use the <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> property to add the character that separates folders and drive letters.</span></span> <span data-ttu-id="16c43-133">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> свойство, чтобы возвратить имя файла без пути.</span><span class="sxs-lookup"><span data-stu-id="16c43-133">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> property to return the file name without the path.</span></span></para>
-          <para><span data-ttu-id="16c43-134">Примечание для создания веб-адресов можно использовать свойство <b>пассепаратор</b> , несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту (\).</span><span class="sxs-lookup"><span data-stu-id="16c43-134">Note   You can use the <b>PathSeparator</b> property to build Web addresses even though they contain forward slashes (/) and the <b>PathSeparator</b> property defaults to a backslash (\).</span></span></para>
+        <remarks><para><span data-ttu-id="c3367-131">Путь не включает замыкающий символ, например "К:\мсоффице" или " http://MyServer ".</span><span class="sxs-lookup"><span data-stu-id="c3367-131">The path doesn't include a trailing character— for example, "C:\MSOffice" or "http://MyServer".</span></span> <span data-ttu-id="c3367-132">Используйте <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> свойство, чтобы добавить символ, разделяющий папки и буквы диска.</span><span class="sxs-lookup"><span data-stu-id="c3367-132">Use the <see cref="P:Microsoft.Office.Interop.Word._Application.PathSeparator" /> property to add the character that separates folders and drive letters.</span></span> <span data-ttu-id="c3367-133">Используйте <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> свойство, чтобы возвратить имя файла без пути.</span><span class="sxs-lookup"><span data-stu-id="c3367-133">Use the <see cref="P:Microsoft.Office.Interop.Word.Dictionary.Name" /> property to return the file name without the path.</span></span></para>
+          <para><span data-ttu-id="c3367-134">Примечание для создания веб-адресов можно использовать свойство <b>пассепаратор</b> , несмотря на то, что они содержат косую черту (/), а свойство <b>пассепаратор</b> по умолчанию имеет обратную косую черту ( \) .</span><span class="sxs-lookup"><span data-stu-id="c3367-134">Note   You can use the <b>PathSeparator</b> property to build Web addresses even though they contain forward slashes (/) and the <b>PathSeparator</b> property defaults to a backslash (\).</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -270,6 +279,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.ReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool" Usage="Microsoft.Office.Interop.Word.Dictionary.ReadOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -287,9 +297,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-135"><b>Значение true</b> , если указанный словарь не может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="16c43-135"><b>True</b> if the specified dictionary cannot be changed.</span></span></summary>
+        <summary><span data-ttu-id="c3367-135"><b>Значение true</b> , если указанный словарь не может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="c3367-135"><b>True</b> if the specified dictionary cannot be changed.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="16c43-136">Активные грамматика, расстановка переносов, Орфография и словари тезауруса доступны только для чтения.</span><span class="sxs-lookup"><span data-stu-id="16c43-136">The active grammar, hyphenation, spelling, and thesaurus dictionaries are read-only.</span></span> <span data-ttu-id="16c43-137">Настраиваемые словари доступны для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="16c43-137">Custom dictionaries are read/write.</span></span></para>
+        <remarks><para><span data-ttu-id="c3367-136">Активные грамматика, расстановка переносов, Орфография и словари тезауруса доступны только для чтения.</span><span class="sxs-lookup"><span data-stu-id="c3367-136">The active grammar, hyphenation, spelling, and thesaurus dictionaries are read-only.</span></span> <span data-ttu-id="c3367-137">Настраиваемые словари доступны для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="c3367-137">Custom dictionaries are read/write.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -299,6 +309,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Word.Dictionary.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As WdDictionaryType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Word::WdDictionaryType Type { Microsoft::Office::Interop::Word::WdDictionaryType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : Microsoft.Office.Interop.Word.WdDictionaryType" Usage="Microsoft.Office.Interop.Word.Dictionary.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.Word</AssemblyName>
@@ -316,9 +327,9 @@
         <ReturnType>Microsoft.Office.Interop.Word.WdDictionaryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><span data-ttu-id="16c43-138">Возвращает тип словаря.</span><span class="sxs-lookup"><span data-stu-id="16c43-138">Returns the dictionary type.</span></span></summary>
+        <summary><span data-ttu-id="c3367-138">Возвращает тип словаря.</span><span class="sxs-lookup"><span data-stu-id="c3367-138">Returns the dictionary type.</span></span></summary>
         <value>To be added.</value>
-        <remarks><para><span data-ttu-id="16c43-139">Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> констант.</span><span class="sxs-lookup"><span data-stu-id="16c43-139">The <b>Type</b> property can be one of the <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> constants.</span></span></para>
+        <remarks><para><span data-ttu-id="c3367-139">Свойство <b>Type</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> констант.</span><span class="sxs-lookup"><span data-stu-id="c3367-139">The <b>Type</b> property can be one of the <see cref="T:Microsoft.Office.Interop.Word.WdDictionaryType" /> constants.</span></span></para>
           <para> </para></remarks>
       </Docs>
     </Member>
